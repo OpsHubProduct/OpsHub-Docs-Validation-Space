@@ -17,7 +17,9 @@ To access systems deployed on HTTPS from **OpsHub Integration Manager**, downloa
 
 ## Mozilla Firefox
 
-![firefox](../assets/firefox.png)
+<p align="center">
+  <img src="../assets/firefox.png" />
+</p>
 
 1. Open the system URL in Firefox using HTTPS protocol.  
 2. Click the lock icon on the upper-left side of the address bar.  
@@ -33,7 +35,9 @@ To access systems deployed on HTTPS from **OpsHub Integration Manager**, downloa
 
 ## Internet Explorer
 
-![IE](../assets/IE.png)
+<p align="center">
+  <img src="../assets/IE.png" />
+</p>
 
 1. Open the system URL in Internet Explorer using HTTPS.  
 2. Click the lock icon on the right side of the address bar.  
@@ -50,7 +54,9 @@ To access systems deployed on HTTPS from **OpsHub Integration Manager**, downloa
 
 ## Google Chrome
 
-![chrome](../assets/chrome.png)
+<p align="center">
+  <img src="../assets/chrome.png" />
+</p>
 
 1. Open the system URL in Chrome using HTTPS protocol.  
 2. Click the lock icon on the upper-left of the address bar.  
