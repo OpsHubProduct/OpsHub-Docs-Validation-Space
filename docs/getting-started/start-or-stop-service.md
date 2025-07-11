@@ -28,23 +28,23 @@ To provide the rights to a particular user, admin just needs to follow the steps
 
 * Step 1: Edit default policy used by organization
 
-![Step 1](../assets/Start_Stop_Service_Image 1.png)
+![Step 1](../assets/Start_Stop_Service_Image_1.png)
 
 * Step 2: Open OpsHub Server Service properties window
 
-![Step 2](../assets/Start_Stop_Service_Image 2.png)
+![Step 2](../assets/Start_Stop_Service_Image_2.png)
 
 * Step 3: Define the policy setting for OpsHub Server Service
 
-![Step 3](../assets/Start_Stop_Service_Image 3.png)
+![Step 3](../assets/Start_Stop_Service_Image_3.png)
 
 * Step 4: Add User or Group so that they can access OpsHub Server Service
 
-![Step 4](../assets/Start_Stop_Service_Image 4.png)
+![Step 4](../assets/Start_Stop_Service_Image_4.png)
 
 * Step 5: Allow required permission to User or Group
 
-![Step 5](../assets/Start_Stop_Service_Image 5.png)
+![Step 5](../assets/Start_Stop_Service_Image_5.png)
 
 # Linux
 
@@ -60,19 +60,18 @@ If the application is installed on a Linux machine, here is the way to start and
 
 If you don't have requisite permission for accessing OpsHub Server Services in Linux, you will get an error while trying to execute OpsHub from the above commands from Terminal. Terminal will show the error: **Permission denied.**
 
-![Note](../assets/Note.jpg)  
-**To access OpsHub Server Services navigate to \etc\systemd\system**
+![Note](../assets/Note.jpg)  **To access OpsHub Server Services navigate to \etc\systemd\system**
 
 This section is useful in case user is not able to access the service as users does not have enough permissions.  
 To give permission to users follow the steps given below:
 
 Step 1: Access properties of OpsHub service
 
-![Step 6](../assets/Start Stop Service Image 6.png)
+![Step 6](../assets/Start_Stop_Service_Image_6.png)
 
 Step 2: Assign appropriate access to group
 
-![Step 7](../assets/Start Stop Service Image 7.png)
+![Step 7](../assets/Start_Stop_Service_Image_7.png)
 
 Required commands:
 
