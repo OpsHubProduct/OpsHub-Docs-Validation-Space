@@ -9,7 +9,9 @@ OpsHub Integration Manager requires one-time registration.
 * If you want to register after installation, select **Registration After Installation** option.
 
 <p align="center">
+ 
 ![Registration Mode Selection](../assets/Freemium_Registration_Mode_Selection_1.PNG)
+
 </p>
 
 ## New Registration
