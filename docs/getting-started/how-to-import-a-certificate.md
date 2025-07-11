@@ -173,19 +173,49 @@ openssl pkcs12 -export -in certificate.pem -inkey privatekey.pem -out keystore.p
 
 ## Configuration Using SAN and DNS
 
-**Generating a Key Pair**
+**Generating a Key Pair**  
+To generate a key pair with RSA algorithm and a keystore:
 
 ```sh
 keytool -genkeypair -alias <your-alias> -keyalg RSA -keysize 2048 -dname "CN=<your-domain>, OU=<your-department>, O=<your-organization>, L=<your-city>, ST=<your-state>, C=<your-country>, emailAddress=<your-email>" -ext "SAN=dns:<your-domain>" -keypass <your-key-password> -keystore <your-keystore-location> -storepass <your-keystore-password>
 ```
 
-**Generating a Certificate Signing Request (CSR)**
+**Parameters:**
+
+* `-alias <your-alias>`: The alias for the key pair in the keystore. Choose a descriptive alias to identify the key pair.
+* `-keyalg RSA`: Specifies the key algorithm to use. RSA is commonly used for SSL keys.
+* `-keysize 2048`: Defines the key size. A key size of 2048 bits is a typical and secure size.
+* `-dname`: The Distinguished Name (DN) fields describe the identity associated with the certificate.
+  * `CN`: Common Name (Domain name).
+  * `OU`: Organizational Unit (E.g., department name).
+  * `O`: Organization (Your company or organization).
+  * `L`: Locality (City).
+  * `ST`: State.
+  * `C`: Country (Use the two-letter country code).
+  * `emailAddress`: Your email address.
+* `-ext "SAN=dns:<your-domain>"`: Adds the Subject Alternative Name (SAN) extension to include additional domain names or IP addresses in the certificate.
+* `-keypass <your-key-password>`: Password for the private key (used to encrypt the key).
+* `-keystore <your-keystore-location>`: Path to the keystore file where the private key and certificate will be stored.
+* `-storepass <your-keystore-password>`: Password for the keystore.
+
+**Generating a Certificate Signing Request (CSR)**  
+To generate a CSR after creating the key pair:
 
 ```sh
 keytool -certreq -keyalg RSA -alias <your-alias> -file <path-to-output-csr-file> -keystore <your-keystore-location> -ext "SAN=dns:<your-domain>"
 ```
 
+**Parameters:**
+
+* `-certreq`: Specifies that a Certificate Signing Request (CSR) will be generated. This command is used to generate the CSR after the keystore and key pair have been created.
+* `-keyalg RSA`: Defines the key algorithm to use. In this case, it is RSA, which is commonly used for SSL/TLS certificates.
+* `-alias <your-alias>`: The alias for the key pair in the keystore. The alias is used to identify the key pair in the keystore. Replace `<your-alias>` with the alias that was used when generating the key pair.
+* `-file <path-to-output-csr-file>`: The path and file name where the output CSR will be saved. The CSR file will be submitted to a Certificate Authority (CA) to obtain the SSL certificate.
+* `-keystore <your-keystore-location>`: The location of the keystore that contains the private key for which the CSR is being generated.
+* `-ext "SAN=dns:<your-domain>"`: Specifies the Subject Alternative Name (SAN) extension for the certificate. SAN is used to add additional domain names (e.g., `www.example.com`) or IP addresses that will be included in the SSL certificate.
+
 For steps to importing the certificate, refer to [Importing Certificates](#steps-to-import-certificate-file) section.
+
 
 ## Configuration for the connection with endpoints over mTLS
 
