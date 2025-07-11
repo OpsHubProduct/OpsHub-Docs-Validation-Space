@@ -56,7 +56,7 @@
   `SELECT * FROM USER_SYS_PRIVS;`
 
 - Find the below screenshot which shows correct permission for CREATE USER privilege:  
-  ![OracleCreateUserPermission](../assets/OracleCreateUserPermission.png)
+  ![OracleCreateUserPermission](/assets/OracleCreateUserPermission.png)
 
 ---
 
