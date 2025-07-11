@@ -38,7 +38,7 @@
     - Grant certain permissions to these users (`opshub` and `reportsdb`) to connect with their database and create the required data in their database. Hence, `WITH ADMIN OPTION` is required.
     - Perform certain operations on the resources of these two users. Hence, it requires `ANY*` permissions.
 
-- In the advanced installation, if OpsHub Integration Manager is going to be installed with the option of the [manual creation of the database](installation.md#manual-creation-of-the-databases), then:
+- In the advanced installation, if OpsHub Integration Manager is going to be installed with the option of the [manual creation of the database](../getting-started/installation.md#manual-creation-of-the-databases), then:
   - One of the users (`opshub` or `reportsdb`) can be used to connect with the Oracle database and perform all the operations.
   - In this case, `CREATE USER` privilege can be omitted, and only `SELECT ANY TABLE` privilege would require `WITH ADMIN OPTION` during installation.
 
