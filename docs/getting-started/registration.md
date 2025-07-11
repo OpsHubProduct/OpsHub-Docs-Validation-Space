@@ -8,22 +8,38 @@ OpsHub Integration Manager requires one-time registration.
 * If you already have a verification code, select **Use an Existing Verification Code** option.
 * If you want to register after installation, select **Registration After Installation** option.
 
+<p align="center">
+
 ![Registration Mode Selection](../assets/Freemium_Registration_Mode_Selection_1.PNG)
+
+</p>
 
 ## New Registration
 
 Once you select **New registration**, you will see the screen shown below. Fill all required data and click Next.
 
+<p align="center">
+
 ![User Registration Page](../assets/Freemium_User_Registration_Page_1.PNG)
+
+</p>
 
 When you select **Next**, installer/migrator will register yourself with the registration server.  
 On successful registration, you will get a verification code on your registered business email address. Please enter the verification code in the screen shown below and continue installation/upgradation.
 
+<p align="center">
+
 ![Verify Email Online](../assets/Freemium_Verify_Email_Online_Registration_1.PNG)
+
+</p>
 
 If the installer/migrator is not able to connect to the registration server, you will get an option to register yourself using **Offline Registration** option as shown below. Click **OK** to continue the Offline Registration.
 
+<p align="center">
+
 ![Offline Registration Warning](../assets/Freemium_Offline_Registration_Warning.PNG)
+
+</p>
 
 > 📌 Installer/Migrator may not connect to registration server when you do not have Internet connectivity, or you are working behind a Proxy or when the Registration Server is down. Please proceed with **Offline Registration** in any of these cases.  
 
@@ -33,7 +49,11 @@ See [Offline Registration](#offline-registration) for offline registration proce
 
 Once you select **OK** in the screen shown above, installer/migrator will prepare `RegistrationDetails.zip` file at the installation directory.
 
+<p align="center">
+
 ![Offline Registration Warning](../assets/Freemium_Offline_Registration_Warning.PNG)
+
+</p>
 
 When you are using Offline Registration option, user can either send the user detials in encrypted format or in decrypted manner. To send the data in encrypted manner, refer to [Get Verification Code using Encrypted User Details](#get-verification-code-using-encrypted-details). If the user wants to know the exact details they are sending to OpsHub Integration Manager, they can use the decrypted registered details. Refer to [Get Verification Code using Decrypted User Details](#get-verification-code-using-decrypted-user-details).
 
@@ -42,7 +62,11 @@ When you are using Offline Registration option, user can either send the user de
 Send `RegistrationDetails.zip` on CommunityManagers@opshub.com. Verification Code will be then shared with you on your registered business email address.  
 Once you get the verification code, enter the code in the screen shown below and continue with the installation/upgrade.
 
+<p align="center">
+
 ![Verify Email Offline](../assets/Freemium_Verify_Email_Offline_Registration_1.PNG)
+
+</p>
 
 ## Get Verification Code using Decrypted User Details
 
@@ -75,11 +99,19 @@ Once you get the verification code, enter the code in the screen shown below and
 
 Once you get the verification code, enter the code in the screen shown below and continue with the installation/upgrade.
 
+<p align="center">
+
 ![Verify Email Offline](../assets/Freemium_Verify_Email_Offline_Registration_1.PNG)
+
+</p>
 
 You can close the installer/migrator and can register using the same existing code as described in [Registration using Existing Verification Code](#use-an-existing-verification-code).
 
+<p align="center">
+
 ![Verify Email Offline](../assets/Freemium_Verify_Email_Offline_Registration_1.PNG)
+
+</p>
 
 ## Use an Existing Verification Code
 
@@ -87,27 +119,47 @@ When you have valid verification code with you, You can proceed registration usi
 
 Select **Use an Existing Verification Code** option as shown in below screen.
 
+<p align="center">
+
 ![Registration Existing Code](../assets/Freemium_Registration_Mode_Existing_Code_1.PNG)
+
+</p>
 
 > 📌 When you are using this option for upgrading OpsHub Integration Manager, You should have the latest Application Backup as described [here](../manage/upgrade/taking-application-backup.md).
 
 Once you select **Use an Existing Verification Code** option, you will see the screen shown below. Enter the Verification code and continue installation/upgradation.
 
+<p align="center">
+
 ![Verify Email Existing Code](../assets/Freemium_Verify_Email_Existing_Code_1.PNG)
+
+</p>
 
 ## Registration After Installation
 
 Once you select **Registration After Installation**, the following screen will appear after installation:
 
+<p align="center">
+
 ![Post Install Registration Home](../assets/Post_Install_Registration_Home.PNG)
+
+</p>
 
 On selecting **Next**, OpsHub Integration Manager will have you register with the registration server. On successful registration, you will get a verification code on your registered email id. Enter the verification code as shown in the screenshot below:
 
+<p align="center">
+
 ![Post Install Registration Verification](../assets/Post_Install_Registration_Verification.PNG)
+
+</p>
 
 If the OpsHub Integration Manager is not able to connect to the registration server, you will get an option to register yourself using Offline mode by downloading `RegistrationDetails.zip` as shown below:
 
+<p align="center">
+
 ![Post Install Registration Offline](../assets/Post_Install_Registration_Offline.PNG)
+
+</p>
 
 ## Known Behavior
 
@@ -116,14 +168,22 @@ If the OpsHub Integration Manager is not able to connect to the registration ser
 # Silent Registration for Linux
 
 Here is a video on the silent registration of OIM on the Linux machine:  
+<p align="center">
+
 [![Silent Registration Video](../assets/Video.jpg)](https://videos.cdn.spotlightr.com/watch/MTY4ODc5OA==)
+
+</p>
 
 When you want to install/upgrade OpsHub Integration Manager on a Linux machine as described [here](installation.md#launch-the-installer-in-different-operating-systems), you need to register yourself by following the steps listed below before you proceed with the installation/upgradation.
 
 * Please download offline registration utility from [here](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EQHg8u3f96lCgBG78UOaLMwBXsfN-yl-Z7ou6KxHYXJMcA).
 * You will get the files as shown below:
 
+<p align="center">
+
 ![Offline Utility File Structure](../assets/Freemium_Offline_Utility_File_Structure.PNG)
+
+</p>
 
 * Fill the registration data in `Registration_Input.properties`: 
   * FirstName
