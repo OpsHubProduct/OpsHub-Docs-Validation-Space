@@ -180,4 +180,4 @@ When you want to install/upgrade OpsHub Integration Manager on a Linux machine a
 * On successful execution, utility will prepare `RegistrationDetails.zip` file at installation directory.
 
 Please send this file to CommunityManagers@opshub.com. Verification Code will be then shared with you at your registered business email address.  
-Once you receive the verification code, continue installation as described [here](installation.md#launch-the-installer-in-different-operating-systems).
+Once you receive the verification code, continue installation as described [here](installation.md#launch-the-installer-in-different-operating-systems)
