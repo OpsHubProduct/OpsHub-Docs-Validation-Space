@@ -1,7 +1,7 @@
 Let's see how you can get started with OpsHub Integration Manager.
 
 # Windows
-* On Logging in page: Once the installation is complete, OpsHub Integration Manager will be started automatically if you are doing installation on windows machine and you will be re-directed to the Getting started page in the default web browser. If the OpsHub Integration Manager is not started, you can start it manually as described [here](start-or-stop-application-service.md).
+* On Logging in page: Once the installation is complete, OpsHub Integration Manager will be started automatically if you are doing installation on windows machine and you will be re-directed to the Getting started page in the default web browser. If the OpsHub Integration Manager is not started, you can start it manually as described [here](start-or-stop-service.md).
 * For launching the application, click on the link **Launch OpsHub Integration Manager**. It will redirect to the login page.
 * Log in with the following credentials:
   - username: admin
