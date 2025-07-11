@@ -55,8 +55,10 @@
 - After the user is created, the permission should be verified with the following query:  
   `SELECT * FROM USER_SYS_PRIVS;`
 
-- Find the below screenshot which shows correct permission for CREATE USER privilege:  
-  ![OracleCreateUserPermission](/docs/assets/OracleCreateUserPermission.png)
+- Find the below screenshot which shows correct permission for CREATE USER privilege:
+  <p align="center">
+  <img src="/docs/assets/OracleCreateUserPermission.png" width="600"/>
+  </p>
 
 ---
 
