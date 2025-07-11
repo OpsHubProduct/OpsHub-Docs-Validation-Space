@@ -28,23 +28,23 @@ To provide the rights to a particular user, admin just needs to follow the steps
 
 * Step 1: Edit default policy used by organization
 
-![Step 1](../assets/Start Stop Service Image 1.png)
+![Step 1](../assets/Start_Stop_Service_Image 1.png)
 
 * Step 2: Open OpsHub Server Service properties window
 
-![Step 2](../assets/Start Stop Service Image 2.png)
+![Step 2](../assets/Start_Stop_Service_Image 2.png)
 
 * Step 3: Define the policy setting for OpsHub Server Service
 
-![Step 3](../assets/Start Stop Service Image 3.png)
+![Step 3](../assets/Start_Stop_Service_Image 3.png)
 
 * Step 4: Add User or Group so that they can access OpsHub Server Service
 
-![Step 4](../assets/Start Stop Service Image 4.png)
+![Step 4](../assets/Start_Stop_Service_Image 4.png)
 
 * Step 5: Allow required permission to User or Group
 
-![Step 5](../assets/Start Stop Service Image 5.png)
+![Step 5](../assets/Start_Stop_Service_Image 5.png)
 
 # Linux
 
