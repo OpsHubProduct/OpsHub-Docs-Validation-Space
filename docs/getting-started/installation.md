@@ -2,7 +2,7 @@
 
 The first screen when you launch the application will be this:
 
-\![Launching Installer Image 1bbn\](../assets/Launching%20Installer%20Image%201bbn.png)
+\![Launching Installer Image 1bbn\](../assets/Launching_Installer_Image_1bbn.png)
 
 ## Launch the installer in different Operating Systems
 
@@ -89,11 +89,11 @@ On launching the installer, you will see the license agreement window that conta
 
 If you agree with the license details, then only you can move to the next step i.e. Installation.  
   
-\![ Default_Installation_Image 1La\](../assets/Default_Installation_Image%201La.png)
+\![ Default_Installation_Image 1La\](../assets/Default_Installation_Image_1La.png)
 
 License Information window has the details of the trial license and the contact information to purchase the license.  
   
-\![Default_Installation_Image 2LH\](../assets/Default_Installation_Image%202LH.png)
+\![Default_Installation_Image 2LH\](../assets/Default_Installation_Image_2LH.png)
 
 ### Possible exceptions
 
@@ -201,7 +201,7 @@ Here is a video on how to install OpsHub Integration Manager on the Windows mach
 
 - You now have to select the installation directory. Before you select a directory, make sure the directory is empty. All the log files, configuration files, and servers are placed in this directory. If the directory is not available, you can create a directory as per your own specifications.
   
-\![Default_Installation_Image P3\](../assets/Default_Installation_Image%20P3.png)
+\![Default_Installation_Image P3\](../assets/Default_Installation_Image_P3.png)
 
 ## Registration
 
@@ -258,23 +258,23 @@ User can select his desired algorithm from the available list to ensure security
 
 The image below shows the overall progress of installation.
 
-\![Installer Image_8b\](../assets/Installer%20Image_8b.png)
+\![Installer Image_8b\](../assets/Installer_Image_8b.png)
 
 - Setup Shortcuts: It will add the application to the Windows program list if the operating system is Windows and will add the application to the Linux program list if the operating system is Linux. It will also create the OpsHub Integration Manager launcher.
 
-\![Installer Image_9Seta\](../assets/Installer%20Image_9Seta.png)
+\![Installer Image_9Seta\](../assets/Installer_Image_9Seta.png)
 
 ## Installation Success
 
 The image below shows a successful installation.
 
-\![Installer Image_10aa\](../assets/Installer%20Image_10aa.PNG)
+\![Installer Image_10aa\](../assets/Installer_Image_10aa.PNG)
 
 Once you have installed the application, click [Logging In](logging-in.md) to see how to get started.
 
 # SSL Certificate Configuration
 
-\![Advance Configuration Image 3SSLCa\](../assets/Advance%20Configuration%20Image%203SSLCa.png)
+\![Advance Configuration Image 3SSLCa\](../assets/Advance_Configuration_Image_3SSLCa.png)
 
 It is advisable to enter the server-host name in the given field, it might create problem with IP address in some cases. Alias of the certificate should be unique.
 
