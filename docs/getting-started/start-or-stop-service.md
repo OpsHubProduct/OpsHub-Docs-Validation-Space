@@ -23,7 +23,7 @@ This section is useful in case user is not able to access the service as user do
 
 To provide the rights to a particular user, admin just needs to follow the steps given below.
 
-> NOTE **To open Group Policy Management, Press Windows Logo Key + R to open RUN dialog box. Type gpmc.msc and click Ok.**
+> **Note**:  **To open Group Policy Management, Press Windows Logo Key + R to open RUN dialog box. Type gpmc.msc and click Ok.**
 
 * Step 1: Edit default policy used by organization
 
