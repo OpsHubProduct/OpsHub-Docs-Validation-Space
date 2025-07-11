@@ -42,9 +42,8 @@ OpsHub Integration Manager can be deployed with an embedded database; however, f
 
 ## 4. PostgreSQL Server
 {% include "../.gitbook/includes/posgres-preq.md" %}
-
-![Note](../assets/Note.jpg)  
-If default connection timeout parameter is changed for any database server, then it must be confirmed that sufficient connection timeout has been set.  
+ 
+> **Note**: If default connection timeout parameter is changed for any database server, then it must be confirmed that sufficient connection timeout has been set.  
 For example, for MySQL the default server-side connection timeout is 8 hours.  
 If it is changed and set to, say, 5 minutes, then the default server-side connection timeout must be updated accordingly.
 
