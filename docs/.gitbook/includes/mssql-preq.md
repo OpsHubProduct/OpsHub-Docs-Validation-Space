@@ -1,5 +1,5 @@
 
-> ![Note](../assets/Note.jpg) Azure SQL is an alias for MS SQL on cloud.
+> ![Note](/assets/Note.jpg) Azure SQL is an alias for MS SQL on cloud.
 
 - **Supported versions:** 2012 or above  
 - MS SQL version should support **TLS v1.2 protocol or above**  
@@ -31,7 +31,7 @@
 | Execute Procedure | EXECUTE | Yes | Yes | Yes |
 | Drop Procedure | ALTER | Yes | Yes | |
 
-> ![Note](../assets/Note.jpg) **ALTER** privilege also required along with other privileges for operation such as create table, create view, drop table/view/procedure, references, etc.
+> ![Note](/assets/Note.jpg) **ALTER** privilege also required along with other privileges for operation such as create table, create view, drop table/view/procedure, references, etc.
 
 Once the installation/up-gradation is complete for normal running of OIM, permissions required only for installation and upgradation can be revoked.
 
