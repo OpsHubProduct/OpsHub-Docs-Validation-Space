@@ -97,11 +97,11 @@ Criteria Configuration helps in integration of subset of entities based on some 
 
 - Click the icon shown in the image below for enabling **Criteria Configuration**.
 
-![Integration_Configuration_Image 5b.png](../../assests/Integration_Configuration_Image_5b.png)
+![Integration_Configuration_Image 5b.png](../assests/Integration_Configuration_Image_5b.png)
 
 2. A pop-up window - **Criteria Configuration** appears on the right. In this window, for a bidirectional mapping, sections specific to both systems involved in the integration will appear in backward and forward criteria configuration tabs. Fill the requisite details.
 
-![Integration_Configuration_Image 6a.png](../../assests/Integration_Configuration_Image_6a.png)
+![Integration_Configuration_Image 6a.png](../assests/Integration_Configuration_Image_6a.png)
 
 3. First, select **Yes** in the Configure Criteria drop-down list. Once you select **Yes** in the Configure Criteria drop-down list, two more fields, **Query** and **Select criteria storage type field**, appear. Note that it is mandatory to select values for these three fields.
 
