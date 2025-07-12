@@ -222,7 +222,7 @@ From the **Sync only current state** drop-down list, select:
 
 These fields are shown in the image below:
 
-	![Sync Current State](../assets/Integration_Configuration_Image_7a.png)
+![Sync Current State](../assets/Integration_Configuration_Image_7a.png)
 
 ---
 
@@ -331,7 +331,7 @@ Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Sele
 
 Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > Select **Override parameters for write operations (Destination)** > Go to **Search in Target Before Sync**.
 
-	![Integration_Configuration_Image 10a.png](../assets/Integration_Configuration_Image_10a.png)
+![Integration_Configuration_Image 10a.png](../assets/Integration_Configuration_Image_10a.png)
 
 **The Search In Target Before Sync** feature allows OpsHub Integration Manager to search whether the selected entities from the source system already exist in the target system, and if yes, then what is the course of action that should be followed.
 
@@ -379,7 +379,7 @@ Once you select **Yes**, the following fields will appear. You need to enter app
 
 Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > Select **Workflow Association**.
 
-	![Integration_Configuration_Image 11a.png](../assets/Integration_Configuration_Image_11a.png)
+![Integration_Configuration_Image 11a.png](../assets/Integration_Configuration_Image_11a.png)
 
 OpsHub Integration Manager provides default workflow, which comes with default installation. If you want a customized workflow, please contact your sales/support point of contact.
 
