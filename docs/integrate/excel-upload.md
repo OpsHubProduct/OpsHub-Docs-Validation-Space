@@ -5,7 +5,9 @@ User can synchronize data between two systems by providing the sheet name, sourc
 
 # Upload Excel
 * To upload the excel file, user must click on the below mentioned "Excel" icon in the sidebar on the integrate page of OpsHub Integration Manager.  
-  ![Excel Upload](../assets/Excel_Upload.png)
+<div align="center">
+  <img src="../assets/Excel_Upload.png" alt="Excel Upload" />
+</div>
 
 * To upload a new excel file, click on the plus sign given at the top right corner.  
   ![Upload New Excel](../assets/Excel_Upload2.png)
