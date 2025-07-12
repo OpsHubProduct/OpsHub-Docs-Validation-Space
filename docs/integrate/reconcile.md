@@ -33,7 +33,7 @@ An important point to remember is that Reconciliation is not Integration or Migr
 ## Change Default Setting
 
 - To change default setting click on ![Config Rule](../assets/configrule.png) to configure Reconciliation. A new window which displays all the mapped fields will come up.  
-  ![Mapping Fields](../assets/mapping.png)
+  ![Mapping Fields](../assets/Mapping.png)
 
 - **Configure Mismatch** option:  
   - This defines the strategy on which the field value is to be reconciled in case a mismatch is found between its value in the source entity and the target entity.  
