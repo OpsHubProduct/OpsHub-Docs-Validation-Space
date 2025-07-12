@@ -15,7 +15,7 @@ Refer to the following screenshot with Authentication Mode as Basic Authenticati
 
 Refer to the following screenshot with Authentication Mode as OAuth Access Token:
 
-![Zendesk System OAuth](../assets/Zendesk_System_2.png)
+![Zendesk System OAuth](../assets/Zendesk_system_2.png)
 
 Refer to the following screenshot with Authentication Mode as API Token:
 
