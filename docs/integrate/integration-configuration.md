@@ -4,21 +4,22 @@ In this section, you will learn how to configure a system onto OpsHub Integratio
 
 # Basic Integration  
 * The dashboard, by default, shows all integrations created so far on the selected instance.  
-
-  ![Integration Configuration](../assets/Integration_Configuration_Image_20F.png)
+<div align="center">
+  <img src="../assets/Integration_Configuration_Image_20F.png" alt="Integration_Configuration_Image_20F.png" />
+</div>
 
 * If the integration you want to use is not present in the list, follow the steps here:  
   * Click the **Integrate** button on the screen.  
-
+     
     ![Integrate Button](../assets/Integration_Configuration_Image_21C.png)
 
   * Click the plus icon **[+]** on the top right corner of the screen. You will be prompted to enter the **Integration Name** and names of the systems you want to integrate.
 
-![Add Integration](../assets/Integration_Configuration_Image_21C1.png)
+	![Add Integration](../assets/Integration_Configuration_Image_21C1.png)
 
 > ![Note](../assets/Note.jpg) You are free to choose any name for the integration; however, we advise you to choose a name that helps identify the systems involved in the integration.  
 
-![Integration Form](../assets/Integration_Configuration_Image_1a.png)
+	![Integration Form](../assets/Integration_Configuration_Image_1a.png)
 
 * Click the plus sign [+] adjacent to the System 1 and System 2 fields. You will be navigated to the System Configuration screen. Check the [System Configuration](system-configuration.md) steps here.
 
@@ -36,7 +37,7 @@ Click [Mapping Configuration](mapping-configuration.md) to learn the steps to cr
 
 * You can configure some global settings for the integration using the option shown in the image below. The Global Settings allows you define: Entity Id Field Name, Entity Link Name i.e. [Tracking Id and Link of Entities Across Systems](#tracking-id-and-link-of-entities-across-systems) for both systems, [Maximum Retry Count](#maximum-retry-count) and [Associate Schedule](#associate-schedule) for integration.  
 
-![Global Settings](../assets/Integration_Configuration_Image_23a.png)
+	![Global Settings](../assets/Integration_Configuration_Image_23a.png)
 
 * Polling time automatically set for the integration based on the system used for integration.  
   * For Build systems and Source Control Management systems, last updated|created changeset/revision will be set as start polling time. If source does not have any data created then by default, it will be set to **0**.
@@ -44,11 +45,11 @@ Click [Mapping Configuration](mapping-configuration.md) to learn the steps to cr
 
 * If you want to change the default polling time, then click the **Entity Level Mandatory Settings** button given beside entity mapping option.  
 
-![Edit Polling Time](../assets/Integration_Polling_Time_Edit1.png)
+	![Edit Polling Time](../assets/Integration_Polling_Time_Edit1.png)
 
 * To save the integration in active mode, slide the **Activate Integration** button to the right. Select **Yes** in the **Are you sure?** pop-up.  
 
-![Activate Integration](../assets/Integration_Configuration_Image_3a.png)
+	![Activate Integration](../assets/Integration_Configuration_Image_3a.png)
 
 * Click **Save** to save the integration. 
 
@@ -106,7 +107,7 @@ Criteria Configuration helps in integration of subset of entities based on some 
 
 - In the **Query** field, enter the condition that you want OpsHub Integration Manager to consider when it synchronizes the selected entity between the source system and the destination system. For example, if you enter `PRIORITY='High'` in the Query field for this integration, it means you are instructing to synchronize only those entities that are high priority.
 
-> ![Note](../../assests/Note.jpg)
+> **Note** :
 > The format in which you enter condition in the Query field will vary from one system to another. Refer the [Connectors](../connectors.md) section to learn more.
 
 - From the **Select criteria storage type** drop-down list, select whether you want to store the entities from the source system in the database, directly in the end system or select **No Storage** option. The default behavior is to store the data in the database.
@@ -147,11 +148,11 @@ The entity **CC1** and **CC2** are sibling to each other. In this case, **CC1** 
 
 The scenario mentioned above will be the expected behavior as entity **C2** does not exist in the target end system. The entity view in the target system will get corrected once the source entity **C2** fulfills the criteria, and is synchronized to the target end system.
 
-> ![Note](../../assests/Note.jpg)
+> **Note** :
 > **To keep entities 'once in sync always in sync', bidirectional integration should be configured in the same base integration.**
 > - With two different unidirectional integrations, you will not be able to sync the updates for non-criteria meeting entities synced by other way integration.
 
-> ![Note](../../assests/Note.jpg)
+> **Note** :
 > **If integration gets deleted and created with the same configuration, the older criteria data synced by deleted integration will not remain in sync.**
 
 # Advance Settings
@@ -165,9 +166,9 @@ These features help the user specify custom conditions during integration config
    When you select the **Backward Advance Settings** tab, you specify configuration settings for System 2.  
    Here you can define the following key parameters:
 
-![Advance Settings](../assets/Integration_Configuration_Image_19a.png)
+	![Advance Settings](../assets/Integration_Configuration_Image_19a.png)
 
-![Advance Settings Fields](../assets/Integration_Configuration_Image_24a.png)
+	![Advance Settings Fields](../assets/Integration_Configuration_Image_24a.png)
 
 ## Global Settings
 
@@ -195,7 +196,7 @@ In the given pop-up, the **Entity Id Field Name**, the **Link Field Name**, and 
 * **Associate Schedule:** Set an interval at which the data between the source and the target systems should be synchronized.  
   The default schedule is 1 Minute Schedule.
 
-![Global Config](../assets/Global_Level_Confg.png)
+	![Global Config](../assets/Global_Level_Confg.png)
 
 Once the Global level settings are configured, continue with other configurations.
 
@@ -221,7 +222,7 @@ From the **Sync only current state** drop-down list, select:
 
 These fields are shown in the image below:
 
-![Sync Current State](../assets/Integration_Configuration_Image_7a.png)
+	![Sync Current State](../assets/Integration_Configuration_Image_7a.png)
 
 ---
 
@@ -337,7 +338,7 @@ Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > 
 This feature is generally recommended when synchronization between systems being integrated was tried earlier either manually or by any other tool and user still wants to keep those synchronized entities in the integration with OpsHub Integration Manager without creating their duplicate entries.  
 Search can be configured to be done on any target system field which holds values similar to any one source system field or transformed fields from mapping. For example, entity id of source system is stored in **Original Entity ID** field in the target system, search can be configured on **Original Entity ID** field.
 
-> ![Note](../../assests/Note.jpg)  
+> **Note** :  
 > The priority will be given to the source system field value. If the field is not found in the source system, then the transformed fields from mapping will be used.
 
 If you select **No** from the **Search In Target Before Sync** drop-down field, then OpsHub Integration Manager will synchronize entities normally and create them on target if it was not already synchronized.  
@@ -399,7 +400,7 @@ Click the **Integrate** button to complete the integration process.
 **Supported Connectors**
 1. [**IBM Rational DOORS**](../IBM_Rational_Doors#Event_Detection_.26_Generation)
 
-> ![Note](../../assests/Note.jpg)
+> **Note** :
 > The feature will be visible only when DOORS is the source system in the integration.
 
 Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > Select **Override parameters for read operations**. In that screen, the below options will appear.
@@ -410,7 +411,7 @@ Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > 
 | Event Detection Field Name  | Yes is selected for 'Configure Event Detection' input| Select a field for event detection. If this field is modified, OpsHub Integration Manager will generate additional update on the entity.              |
 | Event Generation Field Name | Yes is selected for 'Configure Event Detection' input| Select a field to perform an update. OpsHub Integration Manager will update this field to generate the history for data sync. OIM will overwrite it. |
 
-> ![Note](../../assests/Note.jpg)
+> **Note** :
 > Additional user credentials are required if the integration runs on the **history based synchronization**. Please check the respective connectors' documentation to check the user inputs.
 
 ---
@@ -421,7 +422,7 @@ By default, OIM fetches complete entity details from the end system. When **Fetc
 
 **Note:** Enable this feature only when end system has 1000+ fields, and it slows down the end system when loading single entity.
 
-> ![Note](../../assests/Note.jpg)
+> **Note** :
 > Given feature is available only for selected connectors (Currently supported for [Jira](../connectors/jira.md#Integration_Configuration)) under additional license add-on. If you want to request for this feature, please contact your sales/support.
 
 **Enable Fetch Mapped Data Only**
@@ -467,7 +468,7 @@ Select a single integration, then click the **Options** button to perform the fo
 
 **Edit Integration**: Open the integration in a view mode and get an option to edit it
 
-> ![Note](../../assests/Note.jpg)  
+> **Note** :  
 > Always inactivate an integration to be able to edit it.
 
 ![Integration_Configuration_Image 27a.png](../../assests/Integration_Configuration_Image_27a.png)
@@ -511,6 +512,6 @@ The Bulk Edit supports the following settings:
 - [Sync](#sync-new-failed-or-both-events)
 - [Behaviour for absent fields](#behavior-for-absent-fields)
 
-> ![Note](../../assests/Note.jpg)  
+> **Note** :  
 > Only the settings that you change for the selected groups are committed.
 
