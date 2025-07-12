@@ -119,7 +119,7 @@ Steps to restore the application:
 
 ### MySQL Database Restore
 [Note: Restore both databases `opshub` and `reportsdb` which were provided while creating the database. If the database was manually created, the name would differ in that case.]  
-* Drop and create the database with same privileges. For this, refer to [manually creation of MySQL database](../getting-started/installation.md#queries-for-mysql-database).  
+* Drop and create the database with same privileges. For this, refer to [manually creation of MySQL database](../../getting-started/installation.md#queries-for-mysql-database).  
 [Note: Use database and schema name as same as you used previously.]  
 * Open Command Prompt and navigate to the `bin` directory of the MySQL server.  
 * Run the `mysql.exe` program with the following arguments:  
