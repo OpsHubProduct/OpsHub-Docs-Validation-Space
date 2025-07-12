@@ -12,22 +12,30 @@ Folder Management helps in organizing Integrations, Mappings, and Systems under 
 
 - Folders can be found on the top panel.
 
-![foldersview](../assets/foldersview.PNG)
+<div align="center">
+  <img src="../assets/foldersview.PNG" alt="foldersview" />
+</div>
 
 - "Default" is the root folder.
 - To create new folder, click the add icon as shown below.
 
-![addfolder](../assets/addfolder.png)
+<div align="center">
+  <img src="../assets/addfolder.png" alt="addfolder" />
+</div>
 
 - Multi-level hierarchy of a folder can be created based on set of integrations.
 
-![folderoverview1a](../assets/folderoverview1a.png)
+<div align="center">
+  <img src="../assets/folderoverview1a.png" alt="folderoverview1a" />
+</div>
 
 ## Include parent item
 
 From child folder, a user can view all the config done in parent folders, using the toggle button:
 
-![includeparent](../assets/includeparent.png)
+<div align="center">
+  <img src="../assets/includeparent.png" alt="includeparent" />
+</div>
 
 - Integrations, mappings, and systems created under parent folder will be accessible to the child folder.
 - Parent folder cannot access its child folder integrations, mapping, and systems.
@@ -35,20 +43,28 @@ From child folder, a user can view all the config done in parent folders, using 
 - Dashboard will include complete view of all integrations across the folders.
 - The assests below show all systems created in Default folder and Folder 1, which is the child folder of Default folder. 
 
-![Default Folder View](../assets/defaultview1b.png)
+<div align="center">
+  <img src="../assets/defaultview1b.png" alt="Default Folder View" />
+</div>
 
-![Folder1 View](../assets/folder2b.png)
+<div align="center">
+  <img src="../assets/folder2b.png" alt="Folder1 View" />
+</div>
 
 ## Move configuration
 
 - Integrations, mappings and systems can be moved from one folder to another folder across hierarchy.
 - To move an item from one folder to another folder, click on item, select move action as shown below.
 
-![foldermove](../assets/foldermove.png)
+<div align="center">
+  <img src="../assets/foldermove.png" alt="foldermove" />
+</div>
 
 - All the existing folder will be listed, select the folder, and click **Move**.
 
-![foldermoveselect](../assets/foldermoveselect.png)
+<div align="center">
+  <img src="../assets/foldermoveselect.png" alt="foldermoveselect" />
+</div>
 
 - Similarly, mappings and systems can be moved.
 
@@ -97,7 +113,9 @@ Create a model for arranging integrations to be configured in OpsHub Integration
 - Create systems at default level so that it can be accessed in child folders.
 - Create mappings and integration in folders as shown below.
 
-![systemcombinationexample1a](../assets/systemcombinationexample1a.png)
+<div align="center">
+  <img src="../assets/systemcombinationexample1a.png" alt="systemcombinationexample1a" />
+</div>
 
 **2. Dividing based on Team/Users under same organization**
 
@@ -106,7 +124,9 @@ Create a model for arranging integrations to be configured in OpsHub Integration
 
 Folder structure can be as follows:
 
-![teamwisecombination1a](../assets/teamwisecombination1a.png)
+<div align="center">
+  <img src="../assets/teamwisecombination1a.png" alt="teamwisecombination1a" />
+</div>
 
 **3. Dividing based on customer**
 
@@ -114,7 +134,9 @@ Folder structure can be as follows:
 - Create a separate folder for each customer integrations.
 - Here Systems, Mapping, and Integrations will be created under specific folder created for each customer (as different customer do not share systems).
 
-![customerwise1a](../assets/customerwise1a.png)
+<div align="center">
+  <img src="../assets/customerwise1a.png" alt="customerwise1a" />
+</div>
 
 > **Note** : Currently all the users will have access to all the folders.
 
@@ -124,4 +146,6 @@ Folder structure can be as follows:
 
 The sorting behavior for integration folder names is based on their ASCII values. Refer to the following ASCII values table for more information:
 
-![ASCII Table](../assets/ASCII-Table.png)
+<div align="center">
+  <img src="../assets/ASCII-Table.png" alt="ASCII Table" />
+</div>
