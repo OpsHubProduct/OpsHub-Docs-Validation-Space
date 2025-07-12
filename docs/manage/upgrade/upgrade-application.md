@@ -36,8 +36,8 @@ Given below are the migration steps:
 
 - Inactivate all the integrations.
 - Stop Server Service from services.ms
-- Take back up of the  database (refer to the [Taking Application Backup](taking-application-backup.md) page).
-- Take back up of the application folder (refer to the [Taking Application Backup](taking-application-backup.md) page).
+- Take back up of the  database (refer to the [Taking Application Backup](taking-application-backup.md#database-backup) page).
+- Take back up of the application folder (refer to the [Taking Application Backup](taking-application-backup.md#application-backup) page).
 - Extract OpsHubV<version>_Migrator_<OS>.zip and execute the migration file.
 - It will ask for existing installation path, give the same installation path where you have installed the application.
 - Click Next.
