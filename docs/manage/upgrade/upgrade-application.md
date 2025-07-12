@@ -4,7 +4,7 @@ Migration is required from current version to higher version as it includes supp
 
 Provide the permissions to database user as mentioned in the [Database Selection](../getting-started/installation.md#database-selection) section on the Installation Steps page.
 
-Follow instruction as mentioned in [Pre-Migration Checklist](pre-migration-checklist.md) before starting the upgradation process based on current version of OpsHub Integration Manager installed and version to which OpsHub Integration Manager will be upgraded. (If you do not have access to the [Pre-Migration Checklist](pre-migration-checklist), log a ticket on our customer portal if you have the access or get in touch with your point of contact (POC) for integration.)
+Follow instruction as mentioned in [Pre-Migration Checklist](pre-migration-checklist.md) before starting the upgradation process based on current version of OpsHub Integration Manager installed and version to which OpsHub Integration Manager will be upgraded. (If you do not have access to the [Pre-Migration Checklist](pre-migration-checklist.md), log a ticket on our customer portal if you have the access or get in touch with your point of contact (POC) for integration.)
 
 ## Best Practices for Memory Allocation in the Upgrade Process
 
