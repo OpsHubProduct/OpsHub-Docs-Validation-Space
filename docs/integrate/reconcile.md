@@ -19,9 +19,9 @@ An important point to remember is that Reconciliation is not Integration or Migr
   ![Reconcile Icon](../assets/Reconcileicon.png)
 
 - The window will come up for the given integration:  
-  ![Config](../assets/Config1.PNG)
+  ![Config](../assets/Config1.png)
 
-- User can select direction ![Direction](../assets/directionforreconcile.PNG) based on: the system or the entity type that is to be reconciled. Reconcile can be configured in one direction at a time.  
+- User can select direction ![Direction](../assets/directionforreconcile.png) based on: the system or the entity type that is to be reconciled. Reconcile can be configured in one direction at a time.  
   By default, all fields that are mapped in associated mapping for selected entity will be reconciled with source data being copied over to target.
 
 - Now, click on **Save Reconciliation** button to save the reconcile. Basic reconcile with default options will be created.
@@ -32,8 +32,8 @@ An important point to remember is that Reconciliation is not Integration or Migr
 
 ## Change Default Setting
 
-- To change default setting click on ![Config Rule](../assets/configrule.PNG) to configure Reconciliation. A new window which displays all the mapped fields will come up.  
-  ![Mapping Fields](../assets/mapping.PNG)
+- To change default setting click on ![Config Rule](../assets/configrule.png) to configure Reconciliation. A new window which displays all the mapped fields will come up.  
+  ![Mapping Fields](../assets/mapping.png)
 
 - **Configure Mismatch** option:  
   - This defines the strategy on which the field value is to be reconciled in case a mismatch is found between its value in the source entity and the target entity.  
@@ -50,9 +50,9 @@ An important point to remember is that Reconciliation is not Integration or Migr
 
 - If the user intends to have **Custom** rule as Mismatch Option, click on ![Edit Rule Icon](../assets/editruleicon.PNG) button.  
   Below window will appear to insert custom XSL rule:  
-  ![Custom Rule](../assets/editrule.PNG)
+  ![Custom Rule](../assets/editrule.png)
 
-> ![Note](../assets/Note.jpg) If user wants to define rules for reconciling field based on a condition, then custom rules can be defined.  
+> **Note** : If user wants to define rules for reconciling field based on a condition, then custom rules can be defined.  
 > For example: a user wants to reconcile priority in target system based on a condition as shown above.
 
 - Click **Save Reconcile Configuration** button to save reconcile rule changes.  
@@ -61,7 +61,7 @@ An important point to remember is that Reconciliation is not Integration or Migr
 # Configure Workflow
 
 - By default, **Default Reconcile Workflow** will be selected.  
-- To select customized workflow, click on ![Config Workflow](../assets/configworkflow.PNG) on Reconciliation page and select workflow for reconcile.
+- To select customized workflow, click on ![Config Workflow](../assets/configworkflow.png) on Reconciliation page and select workflow for reconcile.
 
 # Monitor Reconciliation
 
