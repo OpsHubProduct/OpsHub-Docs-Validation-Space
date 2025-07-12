@@ -6,12 +6,16 @@ In this section, you will learn how to configure a system onto OpsHub Integratio
 
 * While creating an integration on the Integration Configuration screen, click the the plus button [+] adjacent to System 1 and System 2 fields to access the System Configuration screen.  
 
-![System Configuration Image 10F](../assets/System_Configuration_Image_10F.png)
+<div align="center">
+  <img src="../assets/System_Configuration_Image_10F.png" alt="System Configuration Image 10F" />
+</div>
 
 * The System Configuration page will open. 
 * In the **Systems type** field, type the name of the system you want to create. The system name will appear in the drop-down options. For example, we type JIRA in the field and the JIRA system appears in the drop-down list.
 
-![System Configuration Image 4](../assets/System_Configuration_Image_4.png)
+<div align="center">
+  <img src="../assets/System_Configuration_Image_4.png" alt="System Configuration Image 4" />
+</div>
 
 * Select the system you want to integrate. A form requesting system details opens.
 * Fill the form with relevant details:
@@ -22,30 +26,42 @@ In this section, you will learn how to configure a system onto OpsHub Integratio
 
 > **Note** : If the end system uses the MySQL database connection, then use the MySQL Connector Jar `mysql-connector-java-5.1.38-bin.jar`. You need to place this jar in `<OIM Installation Path>\OpsHubServer\lib`. In case MySQL jar already exists, then replace that MySQL jar with `mysql-connector-java-5.1.38-bin.jar`. MySQL jar can already be available in the case, OIM is installed with MySQL database.  
 
-![System Configuration Image 5](../assets/System_Configuration_Image_5.png)
+<div align="center">
+  <img src="../assets/System_Configuration_Image_5.png" alt="System Configuration Image 5" />
+</div>
 
 * Click the **Save** button to save the details. 
 * Repeat the same instructions to add another system. 
 
-![Mapping Configuration Image 2a](../assets/Mapping_Configuration_Image_2a.png)
+<div align="center">
+  <img src="../assets/Mapping_Configuration_Image_2a.png" alt="Mapping Configuration Image 2a" />
+</div>
 
 You can also directly go to the System Configuration screen by clicking the System Configuration icon shown in the image below.
 
-![System Configuration Image 11F](../assets/System_Configuration_Image_11F.png)
+<div align="center">
+  <img src="../assets/System_Configuration_Image_11F.png" alt="System Configuration Image 11F" />
+</div>
 
 # Edit System Details
 
 * If the system you want to configure to OpsHub Integration Manager is already configured, but you want to update some configuration details, you can click the pencil icon shown adjacent to the system name after you enable the edit mode in integration by clicking the icon show below. 
 
-![System Configuration Image 12F](../assets/System_Configuration_Image_12F.png)
+<div align="center">
+  <img src="../assets/System_Configuration_Image_12F.png" alt="System Configuration Image 12F" />
+</div>
 
 * The form containing details will open. You will then get an option to edit the system details. 
 
-![Integration_Configuration_Image 16a](../assets/Integration_Configuration_Image_16a.png)
+<div align="center">
+  <img src="../assets/Integration_Configuration_Image_16a.png" alt="Integration_Configuration_Image 16a" />
+</div>
 
 * Update the details and click the **Save** button to save the details. You will receive a prompt when the system details are updated.  
 
-![System Configuration Image 7](../assets/System_Configuration_Image_7.png)
+<div align="center">
+  <img src="../assets/System_Configuration_Image_7.png" alt="System Configuration Image 7" />
+</div>
 
 ## Understanding Json Metadata Input
 
