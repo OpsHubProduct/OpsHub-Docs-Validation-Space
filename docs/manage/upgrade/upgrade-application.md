@@ -2,7 +2,7 @@ Migration is required from current version to higher version as it includes supp
 
 # Migration Pre-requiste for Windows and Linux
 
-Provide the permissions to database user as mentioned in the [Database Selection](../getting-started/installation.md#database-selection) section on the Installation Steps page.
+Provide the permissions to database user as mentioned in the [Database Selection](../../getting-started/installation.md#database-selection) section on the Installation Steps page.
 
 Follow instruction as mentioned in [Pre-Migration Checklist](pre-migration-checklist.md) before starting the upgradation process based on current version of OpsHub Integration Manager installed and version to which OpsHub Integration Manager will be upgraded. (If you do not have access to the [Pre-Migration Checklist](pre-migration-checklist.md), log a ticket on our customer portal if you have the access or get in touch with your point of contact (POC) for integration.)
 
@@ -41,7 +41,7 @@ Given below are the migration steps:
 - Extract OpsHubV<version>_Migrator_<OS>.zip and execute the migration file.
 - It will ask for existing installation path, give the same installation path where you have installed the application.
 - Click Next.
-- If you are migrating to version 7.12 or above, you need to register by following the steps mentioned [here](../getting-started/registration.md).
+- If you are migrating to version 7.12 or above, you need to register by following the steps mentioned [here](../../getting-started/registration.md).
 - Once you click Next, it will show the upgrade information "Product is already installed on given path". 
 - Click Next to start the product upgrade process.
 - Refer [Post Migration Steps](#post-migration-steps-for-windows-and-linux) for further steps.
@@ -58,23 +58,23 @@ Given below are the migration steps:
 - Take back up of the  database (refer to the [Taking Application Backup](taking-application-backup.md) page).
 - Take back up of the application folder (refer to the [Taking Application Backup](taking-application-backup.md) page).
 - Extract OpsHubV<version>_Migrator_<OS>.zip.
-- For Silent Migration user needs to register using external utility as described [here](../getting-started/registration.md#silent-registration-for-linux).
-- If you are migrating to version 7.19 or above, Please follow steps described in **Before Installation** section [here](../getting-started/install/installation-steps.md#launch-the-installer-in-different-operating-systems).
+- For Silent Migration user needs to register using external utility as described [here](../../getting-started/registration.md#silent-registration-for-linux).
+- If you are migrating to version 7.19 or above, Please follow steps described in **Before Installation** section [here](../../getting-started/install/installation-steps.md#launch-the-installer-in-different-operating-systems).
 
 ## Migrate with GUI Access
 - Make sure, you have performed the pre-migration steps as described [here](#pre-migration-steps).
 - Execute the migration file using command **sudo -E sh install.sh**
 - You will be prompted to enter the existing installation path. Give the same installation path where you have installed the application.
-- If you are migrating to version 7.12 or above, you need to register by following the steps mentioned [here](../getting-started/registration.md). 
+- If you are migrating to version 7.12 or above, you need to register by following the steps mentioned [here](../../getting-started/registration.md). 
 - Click Next.
 - Refer [Post Migration Steps](#post-migration-steps-for-windows-and-linux) for further steps.
 
 ## Migrate without GUI Access (Silent Migration)
 To upgrade OpsHub Integration Manager through terminal connection (i.e. Putty), follow the steps given below:
 - Make sure, you have performed the pre-migration steps as described [here](#pre-migration-steps).
-- Modify the external configuration file and export OPSHUB_AUTO_INSTALL variable as described at **To Run sh File from External File** section [here](../getting-started/installation.md#launch-the-installer-in-different-operating-systems).
+- Modify the external configuration file and export OPSHUB_AUTO_INSTALL variable as described at **To Run sh File from External File** section [here](../../getting-started/installation.md#launch-the-installer-in-different-operating-systems).
 - Execute the migration file using command **sudo -E sh install.sh**
-- Please refer [Possible Error](../getting-started/installation.md#possible-error-during-silent-installationupgradation) section for trouble shooting error(s) occurred during Upgradation.
+- Please refer [Possible Error](../../getting-started/installation.md#possible-error-during-silent-installationupgradation) section for trouble shooting error(s) occurred during Upgradation.
 - Refer [Post Migration Steps](#post-migration-steps-for-windows-and-linux) for further steps.
 
 # Post Migration Steps for Windows and Linux
@@ -83,4 +83,4 @@ To upgrade OpsHub Integration Manager through terminal connection (i.e. Putty), 
 - Follow the guidelines given in the [Post-Migration-Checklist](post-migration-checklist.md) once the migration process is complete.
 - Activate all the integrations.
 
-![Note](../assets/Note.jpg) For systems like Azure DevOps Server, OpenText ALM, or Enterprise Architect that require proxy, replace proxy files and re-register services. Refer to Section 2, "Upgrade system proxy," in the Post Migration Checklist.
+**Note** : For systems like Azure DevOps Server, OpenText ALM, or Enterprise Architect that require proxy, replace proxy files and re-register services. Refer to Section 2, "Upgrade system proxy," in the Post Migration Checklist.
