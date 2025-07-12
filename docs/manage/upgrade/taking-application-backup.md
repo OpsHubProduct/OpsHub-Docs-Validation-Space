@@ -147,7 +147,7 @@ $imp USERID=[username]/[password] FULL=Y File="[File Path along with filename]"
 ```
 (For example: `$imp USERID=system/root Full=Y File="C:\dumpFinal.dmp"`)
 
-![Note](../assets/Note.jpg) For detailed information, you can refer to official Oracle documentation. Refer: [11g](https://docs.oracle.com/cd/E11882_01/backup.112/e10642/rcmintro.htm#BRADV89341) or [12c](https://docs.oracle.com/database/121/BRADV/rcmintro.htm#BRADV89341) according to installed Oracle version.
+**Note** For detailed information, you can refer to official Oracle documentation. Refer: [11g](https://docs.oracle.com/cd/E11882_01/backup.112/e10642/rcmintro.htm#BRADV89341) or [12c](https://docs.oracle.com/database/121/BRADV/rcmintro.htm#BRADV89341) according to installed Oracle version.
 
 ### PostgreSQL Database
 
