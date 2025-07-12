@@ -16,10 +16,10 @@ An important point to remember is that Reconciliation is not Integration or Migr
 > - Workspace / Project / Entity type name with Unicode character is not supported.
 
 - To configure Reconciliation, navigate to the integration to be reconciled. Click on reconcile icon as shown below:  
-  ![Reconcile Icon](../assets/Reconcileicon.png)
+  ![Reconcile Icon](../assets/reconcileicon.png)
 
 - The window will come up for the given integration:  
-  ![Config](../assets/Config1.png)
+  ![Config](../assets/Config1.PNG)
 
 - User can select direction ![Direction](../assets/directionforreconcile.png) based on: the system or the entity type that is to be reconciled. Reconcile can be configured in one direction at a time.  
   By default, all fields that are mapped in associated mapping for selected entity will be reconciled with source data being copied over to target.
