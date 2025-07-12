@@ -15,11 +15,11 @@ In this section, you will learn how to configure a system onto OpsHub Integratio
 
   * Click the plus icon **[+]** on the top right corner of the screen. You will be prompted to enter the **Integration Name** and names of the systems you want to integrate.
 
-	![Add Integration](../assets/Integration_Configuration_Image_21C1.png)
+   ![Add Integration](../assets/Integration_Configuration_Image_21C1.png)
 
 > **Note**: You are free to choose any name for the integration; however, we advise you to choose a name that helps identify the systems involved in the integration.  
 
-	![Integration Form](../assets/Integration_Configuration_Image_1a.png)
+   ![Integration Form](../assets/Integration_Configuration_Image_1a.png)
 
 * Click the plus sign [+] adjacent to the System 1 and System 2 fields. You will be navigated to the System Configuration screen. Check the [System Configuration](system-configuration.md) steps here.
 
@@ -445,7 +445,7 @@ By default, OIM fetches complete entity details from the end system. When **Fetc
 
 Select a single integration, then click the **Options** button to perform the following actions on the integration:
 
-	![Integration_Configuration_Image_With_Export.png](../assets/Integration_Configuration_Image_With_Export.png)
+ ![Integration_Configuration_Image_With_Export.png](../assets/Integration_Configuration_Image_With_Export.png)
 
 - **Dump Integration Data**: You will get a zip file named **IntegrationDetails.zip**.  
   The zip file will contain the integration configurations, synchronization logs, mappings, and failure details. It will not include any sensitive data related to the integration user.
