@@ -11,15 +11,15 @@ Before you continue to the integration, you must first configure Zendesk. Click 
 
 Refer to the following screenshot with Authentication Mode as Basic Authentication:
 
-![Zendesk System Basic Auth](../assets/Zendesk_System_1.PNG)
+![Zendesk System Basic Auth](../assets/Zendesk_System_1.png)
 
 Refer to the following screenshot with Authentication Mode as OAuth Access Token:
 
-![Zendesk System OAuth](../assets/Zendesk_System_2.PNG)
+![Zendesk System OAuth](../assets/Zendesk_System_2.png)
 
 Refer to the following screenshot with Authentication Mode as API Token:
 
-![Zendesk System API Token](../assets/Zendesk_System_3.PNG)
+![Zendesk System API Token](../assets/Zendesk_System_3.png)
 
 **Zendesk System form details**
 
