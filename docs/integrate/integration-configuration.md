@@ -28,7 +28,7 @@ In this section, you will learn how to configure a system onto OpsHub Integratio
 
 * In the **Select Entities to Sync** section, select the entities (issue types) you want to synchronize between the systems. A list of entities that are common for both projects would appear for both systems. Click the ones you want to synchronize. You can synchronize multiple entities in one integration. To add more entities, click the plus sign [+] adjacent to **Select Entities to Sync**. 
 
-> ![Note](../assets/Note.jpg) Some systems will have entities that require special settings. These entities would appear on the right side of the screen.
+> **Note** : Some systems will have entities that require special settings. These entities would appear on the right side of the screen.
 
 * If the required mapping doesn't exist, click the the plus button [+] adjacent to **Select fields to be synced** (In one of the screenshots above, select fields to be synced section is populated with TFS-JIRA map). You will be navigated to Mapping Configuration screen.  
 
@@ -85,7 +85,7 @@ If you don't want certain project’s child project to be polled, then you can c
 **Scenario 5:**  
 If project mapping is done at mapping level, it will be prioritized over integration-level mapping.
 
-> ![Note](../assets/Note.jpg) For this feature to work properly, all the child projects must have the same permission as the parent project. i.e. all the prerequisites that are applicable for parent projects will also be applicable to child projects.
+> **Note** : For this feature to work properly, all the child projects must have the same permission as the parent project. i.e. all the prerequisites that are applicable for parent projects will also be applicable to child projects.
 
 ---
 
@@ -119,7 +119,7 @@ Criteria Configuration helps in integration of subset of entities based on some 
 
 To read in detail about Criteria information storage in end system, click [here](criteria-information-storage.md).
 
-> ![Note](../../assests/Note.jpg)
+> **Note** :
 > **Hierarchy Synchronization behavior when criteria is Configured in integration**:  
 > When criteria is configured, the position/order of the entity for hierarchy synchronization will be considered for the entities which are meeting the criteria at the time of synchronization. For example if some of the entities in the source end system view do not meet the criteria, then, in such cases, the target system view may be different in terms of position/order of the entities. Please check the below scenario for better understanding:
 
@@ -217,7 +217,7 @@ From the **Sync only current state** drop-down list, select:
 - **No** – if you want to synchronize the selected entity along with its history.
 - **Yes** – if you only want to synchronize the current state.
 
-> ![Note](../assets/Note.jpg) This feature is available only for selected connectors. If you want to request this feature, please contact your sales/support point of contact.
+> **Note**: This feature is available only for selected connectors. If you want to request this feature, please contact your sales/support point of contact.
 
 These fields are shown in the image below:
 
