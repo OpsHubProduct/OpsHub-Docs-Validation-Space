@@ -22,7 +22,7 @@ If you are creating an integration for the first time, you need to follow the st
 - Go to the System Configuration screen and configure the systems that you want to integrate. The details of how to configure a system can be accessed on the [System Configuration](system-configuration.md) page.
 - Then, select the project and entities that you want to synchronize between the systems. You will be prompted to create a mapping for the integration. The details of how to create a mapping can be accessed on the [Mapping Configuration](mapping-configuration.md) page.
 
-![Overview of Integration Image 3C](../assets/Overview_of_Integration_Image_3C.png)
+![Overview of Integration Image 3C](../assets/Overview_of_Integration_Image 3C.png)
 
 - You can then proceed with integration and set the polling time and define other advanced settings. Click [Integration Configuration](integration-configuration.md) to learn more.
 
