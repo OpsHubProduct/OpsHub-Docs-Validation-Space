@@ -4,7 +4,7 @@
 ## User Permissions
 
 * Basic-level access must be granted to the service account for synchronization as shown in the screenshot below.  
-![Tosca_User_Deatils](../assets/Tosca_User_Deatils.png)
+![Tosca_User_Deatils](../assets/Tosca_User_Deatils.PNG)
 * To know how to add a user, refer to [Add Users](#add-users) section in Appendix.
 
 ## Custom Field
@@ -231,7 +231,7 @@ Set polling time as the time after which the user wants to synchronize data betw
 
 * You can identify UI date format from one of the CreatedAt And ModifiedAt fields from Tosca Commander as shown below.
 * According to below example, date format will be **dd-MM-yyyy HH:mm:ss**  
-  ![Tosca_UI_Date_Format](../assets/Tosca_UI_Date_Format.png)
+  ![Tosca_UI_Date_Format](../assets/Tosca_UI_Date_Format.PNG)
 
 
 
