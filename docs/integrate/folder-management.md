@@ -12,22 +12,22 @@ Folder Management helps in organizing Integrations, Mappings, and Systems under 
 
 - Folders can be found on the top panel.
 
-![foldersview](../assests/foldersview.PNG)
+![foldersview](../assets/foldersview.PNG)
 
 - "Default" is the root folder.
 - To create new folder, click the add icon as shown below.
 
-![addfolder](../assests/addfolder.png)
+![addfolder](../assets/addfolder.png)
 
 - Multi-level hierarchy of a folder can be created based on set of integrations.
 
-![folderoverview1a](../assests/folderoverview1a.png)
+![folderoverview1a](../assets/folderoverview1a.png)
 
 ## Include parent item
 
 From child folder, a user can view all the config done in parent folders, using the toggle button:
 
-![includeparent](../assests/includeparent.png)
+![includeparent](../assets/includeparent.png)
 
 - Integrations, mappings, and systems created under parent folder will be accessible to the child folder.
 - Parent folder cannot access its child folder integrations, mapping, and systems.
@@ -35,20 +35,20 @@ From child folder, a user can view all the config done in parent folders, using 
 - Dashboard will include complete view of all integrations across the folders.
 - The assests below show all systems created in Default folder and Folder 1, which is the child folder of Default folder. 
 
-![Default Folder View](../assests/defaultview1b.png)
+![Default Folder View](../assets/defaultview1b.png)
 
-![Folder1 View](../assests/folder2b.png)
+![Folder1 View](../assets/folder2b.png)
 
 ## Move configuration
 
 - Integrations, mappings and systems can be moved from one folder to another folder across hierarchy.
 - To move an item from one folder to another folder, click on item, select move action as shown below.
 
-![foldermove](../assests/foldermove.png)
+![foldermove](../assets/foldermove.png)
 
 - All the existing folder will be listed, select the folder, and click **Move**.
 
-![foldermoveselect](../assests/foldermoveselect.png)
+![foldermoveselect](../assets/foldermoveselect.png)
 
 - Similarly, mappings and systems can be moved.
 
@@ -92,12 +92,12 @@ Create a model for arranging integrations to be configured in OpsHub Integration
   - VersionOne and TFS integrations 
   - TFS and HP ALM integration
 
-> ![Note](../assests/Note.jpg) It can be a bi-directional integration with multiple entities involved for each set of integration.
+> **Note**: It can be a bi-directional integration with multiple entities involved for each set of integration.
 
 - Create systems at default level so that it can be accessed in child folders.
 - Create mappings and integration in folders as shown below.
 
-![systemcombinationexample1a](../assests/systemcombinationexample1a.png)
+![systemcombinationexample1a](../assets/systemcombinationexample1a.png)
 
 **2. Dividing based on Team/Users under same organization**
 
@@ -106,7 +106,7 @@ Create a model for arranging integrations to be configured in OpsHub Integration
 
 Folder structure can be as follows:
 
-![teamwisecombination1a](../assests/teamwisecombination1a.png)
+![teamwisecombination1a](../assets/teamwisecombination1a.png)
 
 **3. Dividing based on customer**
 
@@ -114,9 +114,9 @@ Folder structure can be as follows:
 - Create a separate folder for each customer integrations.
 - Here Systems, Mapping, and Integrations will be created under specific folder created for each customer (as different customer do not share systems).
 
-![customerwise1a](../assests/customerwise1a.png)
+![customerwise1a](../assets/customerwise1a.png)
 
-> ![Note](../assests/Note.jpg) Currently all the users will have access to all the folders.
+> **Note** : Currently all the users will have access to all the folders.
 
 # Appendix
 
@@ -124,4 +124,4 @@ Folder structure can be as follows:
 
 The sorting behavior for integration folder names is based on their ASCII values. Refer to the following ASCII values table for more information:
 
-![ASCII Table](../assests/ASCII-Table.png)
+![ASCII Table](../assets/ASCII-Table.png)
