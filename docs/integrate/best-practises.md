@@ -15,7 +15,7 @@ Here are some best practices to consider when working with OpsHub Integration Ma
 | 500K to 1 million    | History State      | 150GB                   |
 | 500K to 1 million    | Current State      | 150GB to 250GB          |
 
-> ![](../assets/Note.jpg) Actual size depends on various factors, including the total count of work items, sync state, sync failures, number of attachments, links, and overall usage patterns. For small-scale implementations, starting with a minimum database size of 15GB is recommended to accommodate initial needs effectively.
+> **Note**: Actual size depends on various factors, including the total count of work items, sync state, sync failures, number of attachments, links, and overall usage patterns. For small-scale implementations, starting with a minimum database size of 15GB is recommended to accommodate initial needs effectively.
 
 ## RAM and Threads
 
@@ -25,7 +25,7 @@ Here are some best practices to consider when working with OpsHub Integration Ma
 | 50-150      | 16GB                 | 50             | 6            | 12GB       | 150GB-200GB         | Medium              |
 | 150-900     | 32GB                 | 100-150        | 8            | 28GB       | 300GB-350GB         | Large/Enterprise    |
 
-> ![](../assets/Note.jpg) The RAM data is estimated, as RAM requirements depend on several factors, including the number of integrations, thread count, and scheduling cycle settings.
+> **Note**: The RAM data is estimated, as RAM requirements depend on several factors, including the number of integrations, thread count, and scheduling cycle settings.
 
 ## Enable Monitoring for OpsHub Service, Database, and VM for Health Check
 
