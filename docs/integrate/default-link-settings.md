@@ -1,8 +1,8 @@
-## Default Link Settings
+# Default Link Settings
 
 `Default Link Settings` provide information about the default target entity that needs to be linked with the synced target entities (synced from source system) at the time of synchronization.
 
-### When to configure default link
+## When to configure default link
 
 - **Case 1**: **When the target system has any link type that must be added when the entity is created, and the source system may or may not have that corresponding link.**
   - For example: TFS Task to VersionOne Task integration  
@@ -16,7 +16,7 @@
 
   In TFS, Tasks can have a parent link, but it is not mandatory. In JIRA, there is no parent type link available for a Task. Taking an example of synchronization of Tasks from JIRA to TFS, if you want to assign the TFS tasks to some Problem or Requirement Work item, then, you can have a default link configuration stating that link the TFS tasks to a certain existing Problem or Requirement.
 
-### How to configure the default link
+## How to configure the default link
 
 ![Default Image 1](../assests/Default_Image_1.png)
 
@@ -54,15 +54,15 @@
 </xsl:for-each>
 ```
 
-> ![Note](../assests/Note.jpg) For the end system native query format, refer the **criteria configuration** section of the corresponding system.
+> **Note** : For the end system native query format, refer the **criteria configuration** section of the corresponding system.
 
 - Option: **Fail event if linked entity does not exist** set as 'true'. If the configured default link is not found in the target system then event processing results into failure, otherwise no default link is set to target entity.
 
-> ![Note](../assests/Note.jpg) If an incoming event from source has the corresponding link then precedence is given to the incoming link from source upon the default link.
+> **Note** : If an incoming event from source has the corresponding link then precedence is given to the incoming link from source upon the default link.
 
-### Appendix
+# Appendix
 
-#### Default Query Sample
+## Default Query Sample
 
 Lookup query can be given in 2 ways:
 
@@ -71,7 +71,7 @@ Lookup query can be given in 2 ways:
 
 For any of the query type, if your target system's native format expects `{` or `}` then `{` braces must be used as `{{` and `}` braces must be used as `}}`. Please refer to default link configuration for [Verisium Manager](../connectors/verisium-manager.md#default-link-configuration) end system for such example.
 
-##### Look-up query with fixed value / Static query
+### Look-up query with fixed value / Static query
 
 **TFS Task to Version One Task:** Default link for Parent link type of end system (VersionOne)
 
@@ -81,10 +81,10 @@ For any of the query type, if your target system's native format expects `{` or 
     - **Entity Type:** Defects
     - **Query:** `Workitem.Number='D-43478'`
 
-> ![Note](../assests/Note.jpg) Here, `Workitem.Number='<static value>'` is as per target end system's native query format whereas, `<static value>` is the static value with which you need to match field Workitem.Number.  
+> **Note**: Here, `Workitem.Number='<static value>'` is as per target end system's native query format whereas, `<static value>` is the static value with which you need to match field Workitem.Number.  
 > The above query will search for Defect 'D-43478' in VersionOne end system and will link all VersionOne tasks (synced from source system TFS) to the found target defect.
 
-##### Look-up query with evaluating expression within query / Dynamic query
+### Look-up query with evaluating expression within query / Dynamic query
 
 **TFS Task to Version One Task:** Default link for Parent link type of end system (VersionOne)
 
@@ -94,7 +94,7 @@ For any of the query type, if your target system's native format expects `{` or 
     - **Entity Type:** Defects
     - **Query:** `Workitem.Number='{SourceXML/updatedFields/Property/workitemid}'`
 
-> ![Note](../assests/Note.jpg) Here, `Workitem.Number='<evaluating expression>'` is as per target end system native query format whereas, `<evaluating expression>` is the dynamic part with which you want to match field Workitem.Number. The property path `SourceXML/updatedFields/Property/workitemid` refers to the source system field name i.e. Name of the field in which the Workitem id of target entity will be stored. The source field name is an internal field name which can be found from advance mapping XSL corresponding to the field mapped.
+> **Note**: Here, `Workitem.Number='<evaluating expression>'` is as per target end system native query format whereas, `<evaluating expression>` is the dynamic part with which you want to match field Workitem.Number. The property path `SourceXML/updatedFields/Property/workitemid` refers to the source system field name i.e. Name of the field in which the Workitem id of target entity will be stored. The source field name is an internal field name which can be found from advance mapping XSL corresponding to the field mapped.
 
 **JIRA Test Case to HP ALM Test Case:** Default link for Test_Instance link type of end system (HP ALM)
 
@@ -104,5 +104,5 @@ For any of the query type, if your target system's native format expects `{` or 
     - **Entity Type:** test-sets
     - **Query:** `name['{SourceXML/opshubProjectName}']`
 
-> ![Note](../assests/Note.jpg) Here, `name['<evaluating expression>']` is as per target system native query format whereas, `<evaluating expression>` is the dynamic part which you want to evaluate.  
+> **Note**: Here, `name['<evaluating expression>']` is as per target system native query format whereas, `<evaluating expression>` is the dynamic part which you want to evaluate.  
 > The above query fetches the first test-set matching the name equivalent to the incoming project name from JIRA. The property path `SourceXML/opshubProjectName` refers to the source system project name i.e. Name of the project to which incoming entity from system belongs to. Here, `opshubProjectName` is a source field. The source field name is an internal field name which can be found from advance mapping XSL corresponding to the field mapped.
