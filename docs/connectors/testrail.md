@@ -48,14 +48,14 @@ Refer to the screenshot given below.
 
 ![TRSystemMapping](../assets/TRSystemMapping.png)
 
-> ![Note](../assets/Note.jpg) **Mandatory links configuration**
+> Note: **Mandatory links configuration**
 
 * For **Run** entity, **Suite** Link need to be configured  
 * For **Result** entity, **Test**(entity) Link need to be configured  
 * For **Test** entity, **Test Run**(entity) Link and **Case**(entity) Link need to be configured  
 * For **Case** entity, **Section** field must be mapped  
 
-> ![Note](../assets/Note.jpg) **Mapping limitations**
+> Note **Mapping limitations**
 
 * Test entity:
   * Read operation and linkages with Case and Run entity are supported.
@@ -69,7 +69,7 @@ Refer to the screenshot given below.
 ## Mapping configuration for synchronization of Step field of Test Case
 
 * To sync Steps field to the TestRail as the target system, in the Test Case mapping, the default value needs to be set as **Test Case (Steps)** for 'Template' field.  
-  > ![Note](../assets/Note.jpg) User can also set the default value **Test Case (Steps)** for Template field from the TestRail UI itself. In that case, the above configuration will not be needed.
+  > Note: User can also set the default value **Test Case (Steps)** for Template field from the TestRail UI itself. In that case, the above configuration will not be needed.
 
 # Integration Configuration
 
@@ -97,7 +97,7 @@ To configure criteria in TestRail, integration needs to be created with TestRail
   **Sample Query:** Get cases created by either of these users. [TestUser, DemoUser, AutomationUser, AdminUser]  
   **Example Query:** `created_by=21,23,42,12` (Where 21,23,42,12 are a respective internal ID of users)
 
-> ![Note](../assets/Note.jpg) Only one field is allowed for criteria at one time.
+> Note Only one field is allowed for criteria at one time.
 
 Query field is similar to the filters available for that entity. Please click [filters](http://docs.gurock.com/testrail-api2/start) to check all the available supported filters.
 
