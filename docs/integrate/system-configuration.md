@@ -22,7 +22,7 @@ In this section, you will learn how to configure a system onto OpsHub Integratio
   * **System Name**: The name that you want to assign to the system you are configuring
   * **Version**: The version of the system that you are configuring
   * **Database Connection**: This field is for the systems that use database and for which OIM needs to have a connection with the database.
-  * Other system-specific details: We have dedicated section for each system we support. Refer to the specific System Configuration section under that [Connectors](../connectors.md) page.
+  * Other system-specific details: We have dedicated section for each system we support. Refer to the specific System Configuration section under that [Connectors](../connectors/connectors.md) page.
 
 > **Note** : If the end system uses the MySQL database connection, then use the MySQL Connector Jar `mysql-connector-java-5.1.38-bin.jar`. You need to place this jar in `<OIM Installation Path>\OpsHubServer\lib`. In case MySQL jar already exists, then replace that MySQL jar with `mysql-connector-java-5.1.38-bin.jar`. MySQL jar can already be available in the case, OIM is installed with MySQL database.  
 
