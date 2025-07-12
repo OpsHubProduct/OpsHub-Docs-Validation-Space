@@ -37,7 +37,7 @@ A query can be a **simple query** or a **complex query**. A simple query has onl
 }
 ```
 
-> ![Note](../assets/Note.jpg) For valid usages of **field** key with other keys, refer to section [Valid Query Usages](#valid-query-usages).
+> **Note** : For valid usages of **field** key with other keys, refer to section [Valid Query Usages](#valid-query-usages).
 
 ## Key - condition
 - The **condition** key represents the criteria operator which should be met by entities. It defines the operator which needs to be evaluated while searching for value(s) in the field.
@@ -66,7 +66,7 @@ A query can be a **simple query** or a **complex query**. A simple query has onl
 }
 ```
 
-> ![Note](../assets/Note.jpg) For valid usages of **condition** key with other keys, refer to section [Valid Query Usages](#valid-query-usages).
+> **Note** : For valid usages of **condition** key with other keys, refer to section [Valid Query Usages](#valid-query-usages).
 
 ## Key - value
 - The **value** key represents the static value or name of the lookup value in end system which is matched with the field value on the basis of the criteria given.
@@ -86,7 +86,7 @@ A query can be a **simple query** or a **complex query**. A simple query has onl
 }
 ```
 
-> ![Note](../assets/Note.jpg) For valid usages of **value** key with other keys, refer to section [Valid Query Usages](#valid-query-usages).
+> **Note**: For valid usages of **value** key with other keys, refer to section [Valid Query Usages](#valid-query-usages).
 
 ## Key - values
 - The **values** key represents the multiple static values or display name of multiple lookup values in end system which are to be matched with the field value.
@@ -106,7 +106,7 @@ A query can be a **simple query** or a **complex query**. A simple query has onl
 }
 ```
 
-> ![Note](../assets/Note.jpg) For valid usages of **values** key with other keys, refer to section [Valid Query Usages](#valid-query-usages).
+> **Note** : For valid usages of **values** key with other keys, refer to section [Valid Query Usages](#valid-query-usages).
 
 ## Key - criterias
 - The **criterias** key takes multiple criterias which needs to be applied in end system.
@@ -138,7 +138,7 @@ A query can be a **simple query** or a **complex query**. A simple query has onl
 }
 ```
 
-> ![Note](../assets/Note.jpg) For valid usages of **criterias** key with other keys, refer to section [Valid Query Usages](#valid-query-usages).
+> **Note** : For valid usages of **criterias** key with other keys, refer to section [Valid Query Usages](#valid-query-usages).
 
 # Valid Query Usages
 
