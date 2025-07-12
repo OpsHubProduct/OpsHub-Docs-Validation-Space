@@ -24,10 +24,10 @@ For Example: OpsHub is installed at path `C:\Program Files\OpsHub` then copy Ops
 * Using your Database Username and Password, simply login to your MS SQL server database.  
 * **Select the database >> Right-click >> Tasks >> Back Up**:  
 
-![Backup_Image 1](../assets/Backup_Image_1.png)
+![Backup_Image 1](../../assets/Backup_Image_1.png)
 
 * Once you click on the **Backup** the following Backup Database window will appear:  
-![Backup_Image 2](../assets/Backup_Image_2.png)
+![Backup_Image 2](../../assets/Backup_Image_2.png)
 
 : Select the following options:
 1. Backup type: Full  
@@ -105,15 +105,15 @@ Steps to restore the application:
 * Open your Microsoft SQL Server Management Studio Express and connect to your database. Using your Database Username and Password, simply login to your MSSQL server database.  
 * **Select the database >> Right-click >> Tasks >> Restore >> Database.**  
 
-![Backup_Image 3](../assets/Backup_Image_3.png)
+![Backup_Image 3](../../assets/Backup_Image_3.png)
 
 * The following "**Restore Database**" window will appear. Select "From device" mentioned under the "Source for restore" and click the button in front of that to specify the file location.  
 
-![Backup_Image 4](../assets/Backup_Image_4.png)
+![Backup_Image 4](../../assets/Backup_Image_4.png)
 
 * Select the option "Backup media as File" and click the **Add** button to add the backup file location.  
 
-![Backup_Image 5](../assets/Backup_Image_5.png)
+![Backup_Image 5](../../assets/Backup_Image_5.png)
 
 * Select the backup file you wish to restore and click the OK button.  
 
@@ -130,7 +130,7 @@ mysql.exe -u [username] -p -h [hostname] [database_name] < C:\[filename].sql
 * On clicking the enter button, it will ask for a password. Please provide the password.  
 
 ### Oracle Database Restore
-* Drop and create schema with same privileges which you gave previously at the installation time. For this, refer to [manually creation of Oracle database](../getting-started/installation.md#queries-for-oracle-database).  
+* Drop and create schema with same privileges which you gave previously at the installation time. For this, refer to [manually creation of Oracle database](../../getting-started/installation.md#queries-for-oracle-database).  
 * Open Command Prompt with Administrator privileges. Right click on cmd.exe and select "Run as Administrator".  
 * Navigate to the directory where Oracle is installed. For example:  
 ```
