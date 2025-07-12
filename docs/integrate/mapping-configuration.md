@@ -4,7 +4,7 @@ Mapping is the process of defining the fields that are to be integrated between 
 
 In this section, you will learn how to configure a mapping between two systems and how to update or edit the mapping after configuration, if required.  
 
-If the systems you want to map are not configured onto OpsHub Integration Manager, click the plus buttons [+] adjacent to System 1 and System 2 fields to configure the systems. Follow the steps given on [System Configuration](/system-configuration) page to learn the steps to configure a system.  
+If the systems you want to map are not configured onto OpsHub Integration Manager, click the plus buttons [+] adjacent to System 1 and System 2 fields to configure the systems. Follow the steps given on [System Configuration](system-configuration.md) page to learn the steps to configure a system.  
 
 In the image below, we show TFS and JIRA selected as the two systems.  
 
@@ -109,7 +109,7 @@ Here is how the mapping will look like:
 - Default Target Field Mapping is used to write the default value to the target field in case there is no relevant source field to map
 - For Default Target Field Mapping, "None" is used from the source endpoint.
   - After mapping "None" with the target field, the default value must be provided for that pair for field mapping using [Default Value Mapping](#default-value-mapping)
-  - As the value remains constant during the synchronization, it is recommended to enable the "Overwrite" option when such default target field mapping is done with the [Sync When?](/sync-when) setting options, i.e., "Update"/"Both" or "Soft Delete" in [Create-Update Mode](#create-update-mode) or [Delete Mode](#delete-mode) respectively.
+  - As the value remains constant during the synchronization, it is recommended to enable the "Overwrite" option when such default target field mapping is done with the [Sync When?](#sync-when) setting options, i.e., "Update"/"Both" or "Soft Delete" in [Create-Update Mode](#create-update-mode) or [Delete Mode](#delete-mode) respectively.
 
 # Value Mapping
 
@@ -961,7 +961,7 @@ A field named **OH Enable Rank** is required to be mapped in order to enable the
 > - Windchill RV&S system allows Multi Level Structure with Contains-Contained By relationship. The entity within this structure can have a particular Rank. Hence, the user can enable the Relationship configuration to maintain the relationship between the entities. Also, the user can enable Rank Synchronization to maintain the entity rank within the structure.
 > - R4J system allows Multi Level Structure with R4J Parent Link-R4J Child Link relationship. The entity within this structure can be in a particular Rank. Hence, the user can enable the [Relationship configuration](../connectors/jira.md#relationships) to maintain the relationship between the entities. Also, the user can enable Rank synchronization to maintain the entity rank within the structure.
 
-Refer to the [Relationship configuration](mapping-configuration#relationships) section to learn more about how to configure relationship.
+Refer to the [Relationship configuration](#relationships) section to learn more about how to configure relationship.
 
 ## Known Behavior and Limitations
 
@@ -1062,7 +1062,7 @@ Read in detail about Custom Conflict Resolution Strategy [here](custom-conflict-
 
 - Click System 1 or System 2 in the **Overwrite** column depending on the system on which you want to overwrite the data.
 
-## Sync When?
+## Sync When
 
 From the **Sync When?** drop-down list against a field in [Create-Update Mode](#create-update-mode):
 
