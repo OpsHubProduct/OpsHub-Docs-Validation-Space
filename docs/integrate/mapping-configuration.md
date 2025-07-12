@@ -208,7 +208,7 @@ You can map attachments, comments and relationships between System 1 and System 
 **Examples of values normalization:**
 
 * The source and target system contains value with a tab character. These values are mapped as follows:  
-  ![Special Character Tab](File:SpecialCharacter_Tab.png)
+  ![Special Character Tab](../assets/SpecialCharacter_Tab.png)
 
 * Following is the advanced XSLT for the above mapped field values:
 
