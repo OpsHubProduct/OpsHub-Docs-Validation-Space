@@ -9,17 +9,13 @@ Please refer to [Integration Prerequisites](integration-prerequisites.md) page t
 
 - In this video, we will learn how to configure a system onto and how to update the system details after configuration, if required
 
-![Note](../assets/Note.jpg)  
-Jira is the system that has been used for this video demonstration. The steps may vary slightly from one system to another.
+> **Note**: Jira is the system that has been used for this video demonstration. The steps may vary slightly from one system to another.
 
 ![Video](../assets/Video.jpg)
 
-![Note](../assets/Note.jpg)  
-During configuration or synchronization, connection-related errors might occur. There are couple of reasons for connection-related errors. Checkout the details [Common Error Solutions](../help-center/troubleshooting/errors/common.md).  
-![Note](../assets/Note.jpg)  
-If the system is behind a proxy server, then set up [Proxy Setting](../manage/administrator/proxy-settings.md) in OpsHub Integration Manager.  
-![Note](../assets/Note.jpg)  
-For details on how to configure systems, refer [System Configuration](system-configuration.md)
+> **Note**: During configuration or synchronization, connection-related errors might occur. There are couple of reasons for connection-related errors. Checkout the details [Common Error Solutions](../help-center/troubleshooting/errors/common.md).  
+> **Note**: If the system is behind a proxy server, then set up [Proxy Setting](../manage/administrator/proxy-settings.md) in OpsHub Integration Manager.  
+> **Note**: For details on how to configure systems, refer [System Configuration](system-configuration.md)
 
 ## Select Projects and Entities
 
@@ -53,16 +49,14 @@ Shown below is the Default Mapping pop-up, which opens on clicking the ![rotate]
 
 ![Image-11-2](../assets/Image-11-2.png)
 
-![Note](../assets/Note.jpg)  
-The default flow is bi-directional. None is generally used to put default values for fields on target side, which do not have relevant source field to be mapped.
+> **Note**: The default flow is bi-directional. None is generally used to put default values for fields on target side, which do not have relevant source field to be mapped.
 
 1. For user mapping, default value should be configured in form of user name or email as user name as expected by target end-point.  
 2. For user mapping, the default value will be written to target if  
    - The source value is missing or  
    - A matching user is not found in the target.
 
-![Note](../assets/Note.jpg)  
-For details on how to configure mappings, refer [Mapping Configuration](mapping-configuration.md)
+ > **Note**: For details on how to configure mappings, refer [Mapping Configuration](mapping-configuration.md)
 
 ## Configure Filter(s) (Optional)
 
@@ -72,11 +66,9 @@ Even after the entities are integrated, this synchronization based on defined cr
 
 ![Video](../assets/Video.jpg)
 
-![Note](../assets/Note.jpg)  
-The format in which you enter condition in the Query field will vary from one system to another.
+> **Note**: The format in which you enter condition in the Query field will vary from one system to another.
 
-![Note](../assets/Note.jpg)  
-For details on how to configure integrations, refer [Integration Configuration](integration-configuration.md)
+> **Note**: For details on how to configure integrations, refer [Integration Configuration](integration-configuration.md)
 
 ## Save and Activate Integration
 
@@ -84,8 +76,7 @@ You can now save and activate the integration.
 
 ![Video](../assets/Video.jpg)
 
-![Note](../assets/Note.jpg)  
-The Polling time is automatically set for the integration based on the system used for integration.
+> **Note**:The Polling time is automatically set for the integration based on the system used for integration.
 
 - For Build systems and Source Control Management systems, last updated created changeset/revision will be set as start polling time. If source system does not have any data created, then by default, it will be set to **0**.
 - For Application Lifecycle Management (ALM), Product Lifecycle Management (PLM), and Test Management systems, polling time is set to the last updated time on the selected source projects. If the project does not have data then polling time is set to the CurrentTime -26 hours.
@@ -100,16 +91,13 @@ You can also see the steps to manage an integration from this page [Managing Int
 
 ## Additional Configuration
 
-![Note](../assets/Note.jpg)  
-Please de-activate the integration to make these changes. You can save and activate the integration again after you have made the changes.
+> **Note**: Please de-activate the integration to make these changes. You can save and activate the integration again after you have made the changes.
 
 - Mapping more fields: Now that you have set the basic integration in place and checked that it is working as expected, you can edit the integration to add more fields.  
   User fields are mapped by email id. If e-mail ids of the users are same in both the systems, it will be mapped automatically, but if the email ids are not same, you will have to update the [Value Mapping using Excel sheet](mapping-configuration.md#value-mapping-using-excel-sheet) for user fields mapping.
 
-![Note](../assets/Note.jpg)  
-For user mapping, the default value should be configured in form of user name or email as user name as expected by target end-point.  
-![Note](../assets/Note.jpg)  
-For user mapping, the default value will not be written to target even if the matching user is not found in the target.  
+> **Note**: For user mapping, the default value should be configured in form of user name or email as user name as expected by target end-point.  
+> **Note**: For user mapping, the default value will not be written to target even if the matching user is not found in the target.  
 This will be done only if nothing is coming from the mapped source field.
 
 - At this stage, test the integration by trying to synchronize data between the specified System 1 and System 2 projects.
