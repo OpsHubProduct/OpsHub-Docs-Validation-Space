@@ -9,11 +9,15 @@ Custom Conflict Resolution Strategy assists user in making complex resolution de
 Given below are steps to provide XSLT for custom strategy:  
 * Click the edit adjacent to the **Custom Strategy** drop-down option. 
 
-![Custom Strategy Edit](../assets/XSLT1.png)
+<div align="center">
+  <img src="../assets/XSLT1.png" alt="Custom Strategy Edit" />
+</div>
 
 * Remove comments and provide XSLT in the open box.
 
-![XSLT Box](../assets/XSLT.png)
+<div align="center">
+  <img src="../assets/XSLT.png" alt="XSLT Box" />
+</div>
 
 ---
 
@@ -45,4 +49,3 @@ We can provide the script:
   </xsl:choose>
 </Title>
 ```
-
