@@ -72,7 +72,7 @@ Fields can be mapped for two different modes using the toggle button.
 
 > **Note** : In both modes, you can also filter the fields as "All Fields", "Mandatory Fields", "Read Only Fields", "Custom Fields", and "System Fields".
 
-![Mapping Configuration Image 4F1](../assets/Mapping%20Configuration%20Image%204F1.png)
+![Mapping Configuration Image 4F1](../assets/Mapping_Configuration_Image_4F1.png)
 
 Here is how the mapping will look like:  
 
@@ -113,7 +113,7 @@ Here is how the mapping will look like:
 
 # Value Mapping
 
-- Value Mapping is used to map the values for the Lookup Type fields. Click ![valuemapping](../assets/valuemapping.png) to define the value mapping for all **Lookup Type** fields. The Value Mapping pop-up opens.
+- Value Mapping is used to map the values for the Lookup Type fields. Click ![valuemapping](../assets/Valuemapping.png) to define the value mapping for all **Lookup Type** fields. The Value Mapping pop-up opens.
 - A lookup field displays a list of values from which the user can choose.
 - In the Value Mapping pop-up, select the relevant values for both the systems. Other actions that can be performed within Value Mapping tab are also listed in the image.
 
