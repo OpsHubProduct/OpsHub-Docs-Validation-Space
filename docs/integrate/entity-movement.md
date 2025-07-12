@@ -123,7 +123,7 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
 
 * Here, if the project of the Defect entity SE1 is updated to 'Project C' in Endpoint 1, **OpsHub Integration Manager** will synchronize this update to the Bug of Project B, i.e., TE1 in Endpoint 2 (instead of updating the project to Project D):
 
-![RetainCase_0](assets/RetainCase_0.png)
+![RetainCase_0](../assets/RetainCase_0.png)
 
 ## Known behaviors
 
@@ -150,7 +150,7 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
 
 * Here, if the project of the Defect entity SE1 is updated to 'Project C' in Endpoint 1, **OpsHub Integration Manager** will synchronize this update to the Bug entity of Project B, i.e. TE1 in Endpoint 2 by modifying the Entity Type to 'Story':
 
-![RetainCase_1](assets/RetainCase_1.png)
+![RetainCase_1](../assets/RetainCase_1.png)
 
 * If the Endpoint 2 does not support the "Entity Type" modification, then it will mark the Entity TE1 as deprecated and create a new entity TE2 in the Project B of Endpoint 2.
 
@@ -169,7 +169,7 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
 
 * Afterwards, if the Bug entity TE1 is updated in the Endpoint 2, it will create a new Defect entity in 'Project A' of Endpoint 1, i.e., SE2:
 
-![RetainCase_2](assets/RetainCase_2.png)
+![RetainCase_2](../assets/RetainCase_2.png)
 
 * Hence, for one Endpoint 2 entity, i.e., TE1, there will be two entities in Endpoint 1, i.e., SE1 and SE2.
 
@@ -192,7 +192,7 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
 
 * If the project of the Bug entity TE2 is updated to 'Project E', **OpsHub Integration Manager** will synchronize this update to Jira Defect entity SE2 of Project A in Endpoint 1 without modifying its project:
 
-![RetainCase_3](assets/RetainCase_3.png)
+![RetainCase_3](../assets/RetainCase_3.png)
 
 ### Single entity to multiple entities sync with project update restriction
 
@@ -208,7 +208,7 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
 
 * The Defect entity SE1 of the Project A in Endpoint 1 will be synchronized as a Bug entity TE1 in 'Project B' of Endpoint 2 via Integration 1 and Integration 2. So, there will be no entity corresponding to SE1 in the 'Project C' of the Endpoint 2:
 
-![RetainCase_4](assets/RetainCase_4.png)
+![RetainCase_4](../assets/RetainCase_4.png)
 
 ### Syncing the older entity to multiple entities with project update restriction
 
@@ -224,7 +224,7 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
 * Here, the Defect entity SE1 of Endpoint 1 will be synchronized in Endpoint 2 as Bug in Project B (TE1) and as a Problem entity in Project C (TE2).
 * If the project of the Defect entity SE1 is updated to 'Project D', **OpsHub Integration Manager** will synchronize this update to TE2 of Project C (the last updated entity) in Endpoint 2 by modifying the Entity Type from 'Problem' to 'Bug' and deprecate the older entity TE1 (to avoid orphan entities) in Endpoint 2:
 
-![RetainCase_5](assets/RetainCase_5.png)
+![RetainCase_5](../assets/RetainCase_5.png)
 
 * If the Endpoint 2 does not support the "Entity Type" modification, it will mark the Entity TE1 and TE2 as deprecated and create a new entity TE3 in the target project B.
 
@@ -234,7 +234,7 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
 
 * Configurations in **OpsHub Integration Manager** are as follows:
 
-![Child_Project_Mapping](assets/Child_Project_Mapping.png)
+![Child_Project_Mapping](../assets/Child_Project_Mapping.png)
 
 * Here, the entity SE1 of Child Project 1 is synchronized to 'Target Project 1' as TE1.
 * If the 'Child Project 1' is moved under 'Parent Project 2' in Endpoint 1, **OpsHub Integration Manager** will synchronize the SE1 either by updating the project of TE1 to 'Target Project 2' (if Endpoint 2 supports project update) or create a new entity TE2 in 'Target Project 2' and deprecate TE1 (if Endpoint 2 does not support project update).
@@ -243,7 +243,7 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
 
 * Configurations in **OpsHub Integration Manager** are as follows:
 
-![Flat_Project_Mapping](assets/Flat_Project_Mapping.png)
+![Flat_Project_Mapping](../assets/Flat_Project_Mapping.png)
 
 * Here, the entity SE1 of Child Project 1 is synchronized to 'Target Project' as TE1.
 * If 'Child Project 1' is moved under 'Parent Project 2', **OpsHub Integration Manager** will synchronize the SE1 to TE1 without updating its project (as the new transformed project is same as the previously synchronized project).
