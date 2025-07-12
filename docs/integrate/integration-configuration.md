@@ -17,7 +17,7 @@ In this section, you will learn how to configure a system onto OpsHub Integratio
 
 	![Add Integration](../assets/Integration_Configuration_Image_21C1.png)
 
-> ![Note](../assets/Note.jpg) You are free to choose any name for the integration; however, we advise you to choose a name that helps identify the systems involved in the integration.  
+> **Note**: You are free to choose any name for the integration; however, we advise you to choose a name that helps identify the systems involved in the integration.  
 
 	![Integration Form](../assets/Integration_Configuration_Image_1a.png)
 
@@ -290,7 +290,7 @@ Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Sele
 - Select 'Failed Event' when you only want to synchronize events that are failed.
 - Select 'Both (Failed and New Events)' when you only want to synchronize failed as well as new events.
 
-![Integration Configuration](Integration_Configuration_Image 8a.png)
+	![Integration Configuration](Integration_Configuration_Image 8a.png)
 
 ## Tracking Id and Link of Entities Across Systems
 
@@ -311,7 +311,7 @@ Suppose, a "Defect" with Id "D123" and navigation URL `systemA_url/project1/defe
 If a Wiki or HTML field is selected for **Remote Entity Link Field Name**, Remote Entity Link will be added as a hyperlink of Remote Entity Id.
 
 - Consider the following image where **Notes** (HTML field) is selected for **Remote Entity Link Field Name**:
-  ![Remote Link](Remote_link_as_hyperlink.png)
+  	![Remote Link](Remote_link_as_hyperlink.png)
 - Here, **ABC-123** is the Remote Entity Id. The Remote Entity Link (`http://www.jira.com/project/ABC-123`) is added as a hyperlink of Remote Entity Id.
 - On clicking **ABC-123**, you will be redirected to the Remote Entity having Id **ABC-123**.
 
@@ -325,21 +325,20 @@ Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Sele
 
 > 💡 Consider whether you are making this configuration for forward or backward settings. Source and Target will change accordingly.
 
-![Tracking Config](Integration_Configuration_Image 9a.png)
+	![Tracking Config](Integration_Configuration_Image 9a.png)
 
 ## Search in Target Before Sync
 
 Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > Select **Override parameters for write operations (Destination)** > Go to **Search in Target Before Sync**.
 
-![Integration_Configuration_Image 10a.png](../../assests/Integration_Configuration_Image_10a.png)
+	![Integration_Configuration_Image 10a.png](../../assests/Integration_Configuration_Image_10a.png)
 
 **The Search In Target Before Sync** feature allows OpsHub Integration Manager to search whether the selected entities from the source system already exist in the target system, and if yes, then what is the course of action that should be followed.
 
 This feature is generally recommended when synchronization between systems being integrated was tried earlier either manually or by any other tool and user still wants to keep those synchronized entities in the integration with OpsHub Integration Manager without creating their duplicate entries.  
 Search can be configured to be done on any target system field which holds values similar to any one source system field or transformed fields from mapping. For example, entity id of source system is stored in **Original Entity ID** field in the target system, search can be configured on **Original Entity ID** field.
 
-> **Note** :  
-> The priority will be given to the source system field value. If the field is not found in the source system, then the transformed fields from mapping will be used.
+> **Note** :  The priority will be given to the source system field value. If the field is not found in the source system, then the transformed fields from mapping will be used.
 
 If you select **No** from the **Search In Target Before Sync** drop-down field, then OpsHub Integration Manager will synchronize entities normally and create them on target if it was not already synchronized.  
 If you select **Yes**, you will have to define the course of action that OpsHub Integration Manager should take when matching entities are found in the source and the target systems.
@@ -380,7 +379,7 @@ Once you select **Yes**, the following fields will appear. You need to enter app
 
 Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > Select **Workflow Association**.
 
-![Integration_Configuration_Image 11a.png](../../assests/Integration_Configuration_Image_11a.png)
+	![Integration_Configuration_Image 11a.png](../../assests/Integration_Configuration_Image_11a.png)
 
 OpsHub Integration Manager provides default workflow, which comes with default installation. If you want a customized workflow, please contact your sales/support point of contact.
 
@@ -400,8 +399,7 @@ Click the **Integrate** button to complete the integration process.
 **Supported Connectors**
 1. [**IBM Rational DOORS**](../IBM_Rational_Doors#Event_Detection_.26_Generation)
 
-> **Note** :
-> The feature will be visible only when DOORS is the source system in the integration.
+> **Note** :The feature will be visible only when DOORS is the source system in the integration.
 
 Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > Select **Override parameters for read operations**. In that screen, the below options will appear.
 
@@ -411,8 +409,7 @@ Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > 
 | Event Detection Field Name  | Yes is selected for 'Configure Event Detection' input| Select a field for event detection. If this field is modified, OpsHub Integration Manager will generate additional update on the entity.              |
 | Event Generation Field Name | Yes is selected for 'Configure Event Detection' input| Select a field to perform an update. OpsHub Integration Manager will update this field to generate the history for data sync. OIM will overwrite it. |
 
-> **Note** :
-> Additional user credentials are required if the integration runs on the **history based synchronization**. Please check the respective connectors' documentation to check the user inputs.
+> **Note** : Additional user credentials are required if the integration runs on the **history based synchronization**. Please check the respective connectors' documentation to check the user inputs.
 
 ---
 
@@ -422,8 +419,7 @@ By default, OIM fetches complete entity details from the end system. When **Fetc
 
 **Note:** Enable this feature only when end system has 1000+ fields, and it slows down the end system when loading single entity.
 
-> **Note** :
-> Given feature is available only for selected connectors (Currently supported for [Jira](../connectors/jira.md#Integration_Configuration)) under additional license add-on. If you want to request for this feature, please contact your sales/support.
+> **Note** : Given feature is available only for selected connectors (Currently supported for [Jira](../connectors/jira.md#Integration_Configuration)) under additional license add-on. If you want to request for this feature, please contact your sales/support.
 
 **Enable Fetch Mapped Data Only**
 
@@ -449,7 +445,7 @@ By default, OIM fetches complete entity details from the end system. When **Fetc
 
 Select a single integration, then click the **Options** button to perform the following actions on the integration:
 
-![Integration_Configuration_Image_With_Export.png](../../assests/Integration_Configuration_Image_With_Export.png)
+	![Integration_Configuration_Image_With_Export.png](../../assests/Integration_Configuration_Image_With_Export.png)
 
 - **Dump Integration Data**: You will get a zip file named **IntegrationDetails.zip**.  
   The zip file will contain the integration configurations, synchronization logs, mappings, and failure details. It will not include any sensitive data related to the integration user.
@@ -460,7 +456,7 @@ Select a single integration, then click the **Options** button to perform the fo
 - **Activate/Inactivate Integration**: Activate or Inactivate the selected integration
 - **Execute Integration**: Click this to trigger the sync job for the selected integration manually
 - **Execute Delete Integration**: Click this to trigger the delete job for selected integration manually  
-  _Note: This button will only be visible when the integration is configured with delete sync._
+  > **Note**: This button will only be visible when the integration is configured with delete sync._
 
 ---
 
@@ -468,8 +464,7 @@ Select a single integration, then click the **Options** button to perform the fo
 
 **Edit Integration**: Open the integration in a view mode and get an option to edit it
 
-> **Note** :  
-> Always inactivate an integration to be able to edit it.
+> **Note** : Always inactivate an integration to be able to edit it.
 
 ![Integration_Configuration_Image 27a.png](../../assests/Integration_Configuration_Image_27a.png)
 
