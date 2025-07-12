@@ -9,7 +9,7 @@ An important point to remember is that Reconciliation is not Integration or Migr
 
 # Steps to Configure Reconciliation
 
-> ![Note](../assets/Note.jpg) Few things to know before reconciling data:  
+> **Note**: Few things to know before reconciling data:  
 > - Inactive the integration to be reconciled. If the integration is not inactivated, then it will be automatically inactivated once data reconciling starts.  
 > - When Reconciliation is configured on integration, all Failed Events currently associated with the integrations would be **deleted**.  
 > - **Remote Entity Id** and **Remote Entity Link** fields are not supported.  
@@ -26,7 +26,7 @@ An important point to remember is that Reconciliation is not Integration or Migr
 
 - Now, click on **Save Reconciliation** button to save the reconcile. Basic reconcile with default options will be created.
 
-> ![Note](../assets/Note.jpg) If you are getting a warning stating that **Reconciliation start date will be changed**, then you have some criteria configured in your integration and you do not have a valid Migration license.  
+> **Note** : If you are getting a warning stating that **Reconciliation start date will be changed**, then you have some criteria configured in your integration and you do not have a valid Migration license.  
 > If you click on Yes, then Reconciliation will start from the date shown in the message (which is 60 days before the day of your first valid license).  
 > If your reconcile is already created before this restriction, then you will see the same warning when you will activate your Reconciliation.
 
