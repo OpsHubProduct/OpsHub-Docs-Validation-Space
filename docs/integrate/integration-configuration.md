@@ -97,11 +97,11 @@ Criteria Configuration helps in integration of subset of entities based on some 
 
 - Click the icon shown in the image below for enabling **Criteria Configuration**.
 
-![Integration_Configuration_Image 5b.png](../assests/Integration_Configuration_Image_5b.png)
+![Integration_Configuration_Image 5b.png](../assets/Integration_Configuration_Image_5b.png)
 
 2. A pop-up window - **Criteria Configuration** appears on the right. In this window, for a bidirectional mapping, sections specific to both systems involved in the integration will appear in backward and forward criteria configuration tabs. Fill the requisite details.
 
-![Integration_Configuration_Image 6a.png](../assests/Integration_Configuration_Image_6a.png)
+![Integration_Configuration_Image 6a.png](../assets/Integration_Configuration_Image_6a.png)
 
 3. First, select **Yes** in the Configure Criteria drop-down list. Once you select **Yes** in the Configure Criteria drop-down list, two more fields, **Query** and **Select criteria storage type field**, appear. Note that it is mandatory to select values for these three fields.
 
@@ -290,7 +290,7 @@ Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Sele
 - Select 'Failed Event' when you only want to synchronize events that are failed.
 - Select 'Both (Failed and New Events)' when you only want to synchronize failed as well as new events.
 
-	![Integration Configuration](Integration_Configuration_Image 8a.png)
+	![Integration Configuration](../assets/Integration_Configuration_Image 8a.png)
 
 ## Tracking Id and Link of Entities Across Systems
 
@@ -311,7 +311,7 @@ Suppose, a "Defect" with Id "D123" and navigation URL `systemA_url/project1/defe
 If a Wiki or HTML field is selected for **Remote Entity Link Field Name**, Remote Entity Link will be added as a hyperlink of Remote Entity Id.
 
 - Consider the following image where **Notes** (HTML field) is selected for **Remote Entity Link Field Name**:
-  	![Remote Link](Remote_link_as_hyperlink.png)
+  	![Remote Link](../assets/Remote_link_as_hyperlink.png)
 - Here, **ABC-123** is the Remote Entity Id. The Remote Entity Link (`http://www.jira.com/project/ABC-123`) is added as a hyperlink of Remote Entity Id.
 - On clicking **ABC-123**, you will be redirected to the Remote Entity having Id **ABC-123**.
 
@@ -331,7 +331,7 @@ Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Sele
 
 Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > Select **Override parameters for write operations (Destination)** > Go to **Search in Target Before Sync**.
 
-	![Integration_Configuration_Image 10a.png](../../assests/Integration_Configuration_Image_10a.png)
+	![Integration_Configuration_Image 10a.png](../assets/Integration_Configuration_Image_10a.png)
 
 **The Search In Target Before Sync** feature allows OpsHub Integration Manager to search whether the selected entities from the source system already exist in the target system, and if yes, then what is the course of action that should be followed.
 
@@ -379,7 +379,7 @@ Once you select **Yes**, the following fields will appear. You need to enter app
 
 Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > Select **Workflow Association**.
 
-	![Integration_Configuration_Image 11a.png](../../assests/Integration_Configuration_Image_11a.png)
+	![Integration_Configuration_Image 11a.png](../assets/Integration_Configuration_Image_11a.png)
 
 OpsHub Integration Manager provides default workflow, which comes with default installation. If you want a customized workflow, please contact your sales/support point of contact.
 
@@ -419,7 +419,7 @@ By default, OIM fetches complete entity details from the end system. When **Fetc
 
 **Note:** Enable this feature only when end system has 1000+ fields, and it slows down the end system when loading single entity.
 
-> **Note** : Given feature is available only for selected connectors (Currently supported for [Jira](../connectors/jira.md#Integration_Configuration)) under additional license add-on. If you want to request for this feature, please contact your sales/support.
+> **Note** : Given feature is available only for selected connectors (Currently supported for [Jira](../connectors/jira.md#integration-configuration)) under additional license add-on. If you want to request for this feature, please contact your sales/support.
 
 **Enable Fetch Mapped Data Only**
 
@@ -445,7 +445,7 @@ By default, OIM fetches complete entity details from the end system. When **Fetc
 
 Select a single integration, then click the **Options** button to perform the following actions on the integration:
 
-	![Integration_Configuration_Image_With_Export.png](../../assests/Integration_Configuration_Image_With_Export.png)
+	![Integration_Configuration_Image_With_Export.png](../assets/Integration_Configuration_Image_With_Export.png)
 
 - **Dump Integration Data**: You will get a zip file named **IntegrationDetails.zip**.  
   The zip file will contain the integration configurations, synchronization logs, mappings, and failure details. It will not include any sensitive data related to the integration user.
@@ -466,7 +466,7 @@ Select a single integration, then click the **Options** button to perform the fo
 
 > **Note** : Always inactivate an integration to be able to edit it.
 
-![Integration_Configuration_Image 27a.png](../../assests/Integration_Configuration_Image_27a.png)
+![Integration_Configuration_Image 27a.png](../assets/Integration_Configuration_Image_27a.png)
 
 Some of these actions: Activate/Inactivate, Execute, Execute Delete, Merge Integration and Failure Notification can be performed as a bulk operation for multiple integrations. You can also select multiple integrations and move them to another folder.
 
@@ -476,11 +476,11 @@ Some of these actions: Activate/Inactivate, Execute, Execute Delete, Merge Integ
 
 On the Integrations page, select multiple integration groups and hover on the **Actions** button to open the action bar as seen in the image below:
 
-![IntegrationListScreen.png](../../assests/IntegrationListScreen.png)
+![IntegrationListScreen.png](../assets/IntegrationListScreen.png)
 
 You will see a **Bulk Edit** button on the right side of the action bar. Hovering over the Bulk Edit button will provide you with three options as seen in the image below:
 
-![BulkEditButtons.png](../../assests/BulkEditButtons.png)
+![BulkEditButtons.png](../assets/BulkEditButtons.png)
 
 - **Bulk Edit Backward**: Configure the bulk edit settings in backward direction for the selected integration groups.
 - **Bulk Edit Forward**: Configure the bulk edit settings in forward direction for the selected integration groups.
@@ -489,12 +489,12 @@ You will see a **Bulk Edit** button on the right side of the action bar. Hoverin
 
 Clicking the first three options will open the Bulk Edit Sidebar with your preferred direction selected for Bulk Edit operations.
 
-![BulkEditSidebar.png](../../assests/BulkEditSidebar.png)
+![BulkEditSidebar.png](../assets/BulkEditSidebar.png)
 
 On top of the sidebar, you can see the count of selected integration groups. You can click the  
-![infoButton.png](../../assests/infoButton.png) button to open a dialog box displaying the names of selected integration groups. Click the 'close' button to close the dialog box.
+![infoButton.png](../assets/infoButton.png) button to open a dialog box displaying the names of selected integration groups. Click the 'close' button to close the dialog box.
 
-![BulkEditIButtonList.png](../../assests/BulkEditIButtonList.png)
+![BulkEditIButtonList.png](../assets/BulkEditIButtonList.png)
 
 The Bulk Edit supports the following settings:
 
