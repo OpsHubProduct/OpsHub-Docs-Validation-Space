@@ -126,7 +126,7 @@ DELETE FROM reportsdb.ReportsDBVersion WHERE version='6.11.02.00.00';
 
 ## Provide additional permission for the Personal Access Token of Azure DevOps Services (Cloud Deployment)
 
-![TFS_GRAPH.png](../assets/TFS_GRAPH.png)
+![TFS_GRAPH.png](../../assets/TFS_GRAPH.png)
 
 **Applicable When:**
 - If Azure DevOps Services is configured as a target system and any user field is mapped for synchronization.
