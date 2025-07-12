@@ -22,8 +22,7 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
   - Refer to '[Delete Mode mapping configuration](mapping-configuration.md#delete-mode)' section for further details on "Delete Mode" mapping.
 - If the "Delete Mode" mapping is not configured, then deprecation will be reflected in the sync report of OpsHub Integration Manager only.
 
-> ![Note](../assets/Note.jpg)
-> To distinguish between "Logical Delete" performed on target entity due to source delete synchronization or deprecation performed due to source entity's "Entity type" and/or "Project" change, some advanced mapping configurations can be used. Refer to [Differentiating source delete synchronization and deprecation](#differentiating-source-delete-synchronization-and-deprecation) section for further details on the same.
+> **Note** : To distinguish between "Logical Delete" performed on target entity due to source delete synchronization or deprecation performed due to source entity's "Entity type" and/or "Project" change, some advanced mapping configurations can be used. Refer to [Differentiating source delete synchronization and deprecation](#differentiating-source-delete-synchronization-and-deprecation) section for further details on the same.
 
 # Known Behaviors
 
@@ -37,7 +36,7 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
 - OpsHub Integration Manager will perform the following operations:
   1. Previously synced entities will be marked deprecated based on the "Delete Mode" mapping configured of older "Entity type" and/or "Project"'s integration.
 
-    > ![Note](../assets/Note.jpg) If the integration associated with the older "Entity type" and/or "Project" is not available, then the delete mode mapping configured in the integration related to new "Entity type" and/or "Project" will be considered.
+    > **Note**: If the integration associated with the older "Entity type" and/or "Project" is not available, then the delete mode mapping configured in the integration related to new "Entity type" and/or "Project" will be considered.
 
   2. A new entity will be created based on the current data of the source entity.
     - If the comments are mapped in the mapping, ['OpsHub-020404' or 'OH-Connector-06201'](../help-center/troubleshooting/errors/common/oh-connector-06201.md) error will be observed temporarily in the sync.
