@@ -31,7 +31,7 @@ In this section, you will learn how to configure a system onto OpsHub Integratio
 
 You can also directly go to the System Configuration screen by clicking the System Configuration icon shown in the image below.
 
-![System Configuration Image 11F](../assets/System_Configuration_Image_11F.PNG)
+![System Configuration Image 11F](../assets/System_Configuration_Image_11F.png)
 
 # Edit System Details
 
