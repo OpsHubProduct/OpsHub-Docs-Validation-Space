@@ -31,7 +31,7 @@ In integration details window, the following information is shown:
   - **Last processed entity ID:** Last entity processed by integration.
   - **Health:** Shows failures, if any, logged in integration.
 
-> ![Note](../assets/Note.jpg) Graph gives complete view of all integrations across folders.
+> **Note** : Graph gives complete view of all integrations across folders.
 
 # Filtering the Dashboard by Various Functions
 
