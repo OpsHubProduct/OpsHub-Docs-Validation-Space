@@ -50,7 +50,7 @@
 **Actions**
 - Install .NET framework 4.7.2 on the machine where OpsHubEAWindowsService is configured.  
   - Check [software and hardware requirements](https://docs.microsoft.com/en-us/dotnet/framework/get-started/system-requirements) to install .NET Framework 4.7.2  
-  > ![Note](../assets/note.jpg) We recommend to uninstall any other .NET framework installed previously, to avoid any conflict.
+  > **Note** : We recommend to uninstall any other .NET framework installed previously, to avoid any conflict.
 
 **Reason**
 - .NET Framework version 4.0 is out of support. Therefore, dependency on .NET framework version 4.0 has also been removed.
@@ -59,7 +59,7 @@
 
 ## Workflow Change for Any Customized Workflow
 
-Pls refer, [How to identify between Custom and Default Workflows and their associated integrations?](../integrate/how-to-identify-between-custom-and-default-workflows-and-their-associated-integrations.md)
+Pls refer, [How to identify between Custom and Default Workflows and their associated integrations?](../../integrate/how-to-identify-between-custom-and-default-workflows-and-their-associated-integrations.md)
 
 **Applicable When**
 - The user has configured a customized workflow that is still in use.
@@ -159,7 +159,7 @@ This makes link names visible in OpsHub Integration Manager aligned with link na
 ### Applicable When
 
 - If integration is configured with qTest as source system for **Module** entity with criteria configuration:  
-  - To identify if criteria is configured for the integration, refer [Integration Criteria Configuration](../integrate/integration-configuration.md#criteria_configuration).
+  - To identify if criteria is configured for the integration, refer [Integration Criteria Configuration](../../integrate/integration-configuration.md#criteria-configuration).
 - If target lookup or default query is configured with qTest as target system for **Module** entity.
 
 ### Actions
@@ -188,7 +188,7 @@ This makes link names visible in OpsHub Integration Manager aligned with link na
 - Remove the **Release ID** field from the field mapping, as it is now redundant configuration after relationship mapping update.
 - For instance, if the **Release ID** was previously mapped with the default value `'1058'`, update the relationship configuration to utilize the default lookup query: `'id[=1058]'` for the corresponding linking release.
 
-![HPQC_Default_Link](../assets/HPQC_Default_Link.png)
+![HPQC_Default_Link](../../assets/HPQC_Default_Link.png)
 
 **Reason**
 - The Cycle entity now includes enhanced support for linking to its parent release through name, ID, or a custom field using lookup query. Given that the Release is a mandatory link for cycle entity, the relationship mapping needs to be updated, and it is recommended to remove the Release ID field from the mapping.
