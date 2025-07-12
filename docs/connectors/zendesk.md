@@ -21,20 +21,19 @@ Refer to the following screenshot with Authentication Mode as API Token:
 
 ![Zendesk System API Token](../assets/Zendesk_System_3.png)
 
-**Zendesk System form details**
+### **<span style="color:blue">Zendesk System form details</span>**
 
-| **Field Name** | **When field is visible on the System form** | **Description** |
-|----------------|----------------------------------------------|------------------|
-| **System Name** | Always | Provide System name |
-| **Version** | Always | Provide Zendesk system version |
-| **Instance URL** | Always | Provide Zendesk instance URL |
-| **Authentication Mode** | Always | Select the authentication mode you would like to use to communicate with the Zendesk server. If you have **single sign on** enabled for Zendesk server, select **API Token** as authentication mode. If you have **OAuth Client App** configured to communicate with APIs, select **OAuth Access Token** as the authentication mode. |
-| **User Name** | When Authentication Mode selected | Provide Zendesk system user with administrator privilege. |
-
-| **User Password** | Basic Authentication mode selected | Provide Zendesk system user's password. |
-| **API Token** | API Token mode selected | Provide Zendesk user API Token. Refer [this](https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-) for generating **API Token** in Zendesk server. |
-| **OAuth Access Token** | OAuth Access Token mode selected | Provide Zendesk OAuth Access Token. Refer [Generating OAuth Access Token Through UI](https://support.zendesk.com/hc/en-us/articles/4408845965210-Using-OAuth-authentication-with-your-application) or [Generating OAuth Access Token through API](https://developer.zendesk.com/documentation/ticketing/working-with-oauth/creating-and-using-oauth-tokens-with-the-api/) to generate **OAuth Access Token** in Zendesk server. |
-| **Zendesk Link Field Name** | Always | Provide the link field name that denotes the Parent - Child link. Refer to [#Determine the Parent - Child Link field name](#determine-the-parent---child-link-field-name) section |
+| **Field Name**            | **When field is visible on the System form**             | **Description**                                                                                                                                                                                                 |
+|---------------------------|-----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **System Name**           | Always                                                    | Provide System name                                                                                                                                                                                              |
+| **Version**               | Always                                                    | Provide Zendesk system version                                                                                                                                                                                   |
+| **Instance URL**          | Always                                                    | Provide Zendesk instance URL                                                                                                                                                                                     |
+| **Authentication Mode**   | Always                                                    | Select the authentication mode you would like to use to communicate with the Zendesk server. If you have **single sign on** enabled for Zendesk server, select **API Token** as authentication mode. If you have **OAuth Client App** configured to communicate with APIs, select **OAuth Access Token** as the authentication mode. |
+| **User Name**             | When Authentication Mode selected                         | Provide Zendesk system user with administrator privilege.                                                                                                                                                        |
+| **User Password**         | Basic Authentication mode selected                        | Provide Zendesk system user's password.                                                                                                                                                                          |
+| **API Token**             | API Token mode selected                                   | Provide Zendesk user API Token. Refer [this](https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token) for generating **API Token** in Zendesk server.                                |
+| **OAuth Access Token**    | OAuth Access Token mode selected                          | Provide Zendesk OAuth Access Token. Refer [Generating OAuth Access Token Through UI](https://support.zendesk.com/hc/en-us/articles/4408845965210-Using-OAuth-authentication-with-your-application) or [Generating OAuth Access Token through API](https://developer.zendesk.com/documentation/ticketing/working-with-oauth/creating-and-using-oauth-tokens-with-the-api/) to generate **OAuth Access Token** in Zendesk server. |
+| **Zendesk Link Field Name** | Always                                                  | Provide the link field name that denotes the Parent - Child link. Refer to [Determine the Parent - Child Link field name](#determine-the-parent---child-link-field-name) section                                 |
 
 If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
