@@ -325,7 +325,7 @@ Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Sele
 
 > 💡 Consider whether you are making this configuration for forward or backward settings. Source and Target will change accordingly.
 
-	![Tracking Config](Integration_Configuration_Image 9a.png)
+![Tracking Config](Integration_Configuration_Image_9a.png)
 
 ## Search in Target Before Sync
 
