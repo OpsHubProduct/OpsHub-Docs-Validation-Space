@@ -2,7 +2,9 @@
 
 The first screen when you launch the application will be this:
 
-![Launching Installer Image 1bbn\](../assets/Launching_Installer_Image_1bbn.png)
+<p align="center">
+  <img src="../assets/Launching_Installer_Image_1bbn.png" alt="Launching Installer Image 1bbn" />
+</p>
 
 ## Launch the installer in different Operating Systems
 
@@ -89,11 +91,14 @@ On launching the installer, you will see the license agreement window that conta
 
 If you agree with the license details, then only you can move to the next step i.e. Installation.  
   
-![ Default_Installation_Image 1La\](../assets/Default_Installation_Image_1La.png)
+<p align="center">
+  <img src="../assets/Default_Installation_Image_1La.png" alt="Default Installation Image 1La" />
+</p>
 
 License Information window has the details of the trial license and the contact information to purchase the license.  
-  
-![Default_Installation_Image 2LH\](../assets/Default_Installation_Image_2LH.png)
+<p align="center">
+  <img src="../assets/Default_Installation_Image_2LH.png" alt="Default Installation Image 2LH" />
+</p>
 
 ### Possible exceptions
 
@@ -200,8 +205,9 @@ Here is a video on how to install OpsHub Integration Manager on the Windows mach
 ## Select Installation Path
 
 - You now have to select the installation directory. Before you select a directory, make sure the directory is empty. All the log files, configuration files, and servers are placed in this directory. If the directory is not available, you can create a directory as per your own specifications.
-  
-![Default_Installation_Image P3\](../assets/Default_Installation_Image_P3.png)
+<p align="center">
+  <img src="../assets/Default_Installation_Image_P3.png" alt="Default Installation Image P3" />
+</p>
 
 ## Registration
 
@@ -215,7 +221,9 @@ Here is a video on how to install OpsHub Integration Manager on the Windows mach
 
 - Go through this section if you want to configure Advance Installation. Else, proceed to the [Installation Progress](#installation-progress) section.
 
-![Advance_Step_Installtion_Panel\](../assets/Advance_Step_Installtion_Panel.png)
+<p align="center">
+  <img src="../assets/Advance_Step_Installtion_Panel.png" alt="Advance Step Installtion Panel" />
+</p>
 
 Let's now learn about the steps for advance installation.
 
