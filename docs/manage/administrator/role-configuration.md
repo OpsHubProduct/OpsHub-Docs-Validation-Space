@@ -24,7 +24,7 @@ OpsHub Integration Manager provides with the following default roles:
 
 # Create Custom Roles
 - Navigate to **Role Management** screen under **Administration** tab and click on Create Role button on the top right corner as shown below:  
-  ![Create Role](../assets/CreateRole.png)
+  ![Create Role](../../assets/CreateRole.png)
 - Add Role Name, Description, Type and select permissions that a user want to associate with the role. For instance, if a role is to be configured for performing all system operations, select **Integration** under Role type and tick mark **write** permission checkbox as shown below:  
   ![System Supervisor Role](../../assets/System_Supervisor_Role.png)
 - Save the role and it will be accessible from **Role Management** screen as shown below:  
