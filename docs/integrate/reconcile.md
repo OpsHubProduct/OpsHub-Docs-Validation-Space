@@ -29,7 +29,7 @@ An important point to remember is that Reconciliation is not Integration or Migr
 
 - User can select direction  
   <p align="center">
-    <img src="../assets/directionforreconcile.png" alt="Direction" width="600"/>
+    <img src="../assets/directionforreconcile.png" alt="Direction" />
   </p>  
   based on: the system or the entity type that is to be reconciled. Reconcile can be configured in one direction at a time.  
   By default, all fields that are mapped in associated mapping for selected entity will be reconciled with source data being copied over to target.
@@ -44,7 +44,7 @@ An important point to remember is that Reconciliation is not Integration or Migr
 
 - To change default setting click on  
 <p align="center">
-  <img src="../assets/configrule.png" alt="Config Rule" width="600"/>
+  <img src="../assets/configrule.png" alt="Config Rule"/>
 </p>  
 to configure Reconciliation. A new window which displays all the mapped fields will come up.  
 
@@ -67,7 +67,7 @@ to configure Reconciliation. A new window which displays all the mapped fields w
 
 - If the user intends to have **Custom** rule as Mismatch Option, click on  
 <p align="center">
-  <img src="../assets/editruleicon.png" alt="Edit Rule Icon" width="600"/>
+  <img src="../assets/editruleicon.png" alt="Edit Rule Icon"/>
 </p>  
 button.  
 Below window will appear to insert custom XSL rule:  
