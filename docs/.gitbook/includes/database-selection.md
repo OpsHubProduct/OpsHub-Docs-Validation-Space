@@ -177,12 +177,12 @@ For Oracle 19c version, ojdbc8.jar or ojdbc10.jar is required.  The path of the 
 
 \* If the end systems to be configured in the OpsHub Integration Manager include characters beyond standard English or ASCII and are incompatible
 
-with the Latin1_General_CS_AS collation (default collation), consider [Advance Installation](installation.md#advance-installation) option.
+with the Latin1_General_CS_AS collation (default collation), consider [Advance Installation](../../getting-started/installation.md#advance-installation) option.
 
 
 - Mark the checkbox, "Check this if you will be creating databases manually" option during installation. The instructions to create databases are mentioned in the section [Manual creation of
 
-  databases](installation.md#manual-creation-of-databases).
+  databases](../../getting-started/installation.md#manual-creation-of-databases).
 
 <p align="center">
   <img src="../../assets/MSSQL_AuthMode_Windows.png" alt="MSSQL_AuthMode_Windows">
