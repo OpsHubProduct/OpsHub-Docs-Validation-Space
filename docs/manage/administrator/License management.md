@@ -4,7 +4,7 @@ This section covers how to install new licenses, renew licenses and uninstall li
 
 The License Management option will be shown under the Administration drop-down.  
 
-![License Management Dropdown](../assets/License%20Management%20Image%205.png)
+![License Management Dropdown](../assets/License_Management_Image_5.png)
 
 The License Management section contains your license details and information such as what kind of license you have, how many days are left for your license to expire, etc.
 
@@ -14,11 +14,11 @@ For detail about how to get a license issued, please refer the section [How to P
 
 * Navigate to the Administration section and select **License Management** from the drop-down options.  
 
-![License Upload Start](../assets/License%20Management%20Image%202F1.png)
+![License Upload Start](../assets/License_Management_Image_2F1.png)
 
 * Click the **Upload License** link. It will open install license window.  
 
-![Upload License](../assets/License%20Management%20Image%203C.png)
+![Upload License](../assets/License_Management_Image_3C.png)
 
 * You can drag & drop the license on **Drop license file here** box or upload the license file using the **Choose File** button.  
 * License updates will get populated in the form on the right.  
@@ -26,7 +26,7 @@ For detail about how to get a license issued, please refer the section [How to P
 
 After installing, refresh the browser.  
 
-![Note](../assets/Note.jpg) You can check the status of license and even delete the license from this window.
+**Note** : You can check the status of license and even delete the license from this window.
 
 # View License
 
@@ -34,19 +34,19 @@ After installing, refresh the browser.
 * You will see the **Licenses** screen.  
 * Click the eye icon against the License name for which you want to view the details.  
 
-![View License](../assets/License%20Management%20Image%204C.png)
+![View License](../assets/License_Management_Image_4C.png)
 
 A pop-up with **License Details** will open.  
 
-![License Details Popup](../assets/License%20Management%20Image%206C.png)
+![License Details Popup](../assets/License_Management_Image_6C.png)
 
-![Note](../assets/Note.jpg) See the Version [Example: QAOIMV6.16-U4B002] and Build [Example: QA2018Q1PH19_6_16_004_B002] details in the footer.
+**Note** See the Version [Example: QAOIMV6.16-U4B002] and Build [Example: QA2018Q1PH19_6_16_004_B002] details in the footer.
 
 # License Expiry Notification
 
 * **OpsHub Integration Manager UI Notifications**
   * On OpsHub Integration Manager, upon login, upcoming license expiry warning notifications will be shown for each license starting 60 days till its expiry date.
-  * ![Note](../assets/Note.jpg) No additional configuration is required to enable the same.
+  **Note** : No additional configuration is required to enable the same.
 
 * **Mail Notifications**
   * To get mail notifications regarding each upcoming license expiry, the SMTP mail server notifications can be configured
@@ -67,7 +67,7 @@ A pop-up with **License Details** will open.
 
 After uninstalling, refresh the browser.  
 
-![Note](../assets/Note.jpg) You will not be able to see the details for a trial license and you will not be able to uninstall it.
+**Note** You will not be able to see the details for a trial license and you will not be able to uninstall it.
 
 ## How to Procure and Renew Licenses
 
