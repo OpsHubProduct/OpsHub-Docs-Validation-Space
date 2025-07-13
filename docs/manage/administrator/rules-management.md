@@ -2,7 +2,10 @@
 
 To view Rules, go to Administration > Rules Management. This would lead to a page that lists multiple rules that are already configured for different systems integrated using OpsHub Integration Manager.
 
-![Rules Management](../../assets/Rules_Management.png)
+<p align="center">
+  <img src="../../assets/Rules_Management.png" alt="Rules Management" />
+</p>
+
 
 ## Filters
 
@@ -24,8 +27,9 @@ To upload a new rule, follow the steps given below:
 * Click on **"Administration"**
 * Click on ![Rules Management Icon](../../assets/Rules_Management_icon.png) given on the left panel. You can see the list of rules that are already uploaded
 * To upload a new rule, click on ![Plus](../../assets/Plus.png) given on the top right corner of the screen
-
-![Rules Management Upload](../../assets/Rules_Management_Upload.png)
+<p align="center">
+  <img src="../../assets/Rules_Management_Upload.png" alt="Rules Management Upload" />
+</p>
 
 * The Upload form will open. Fill the following details in the form: 
   * **System Name**: It gives option to select the system from all the SCM systems mentioned in the dropdown  
@@ -34,7 +38,9 @@ To upload a new rule, follow the steps given below:
   * **Weight**: It defines the priority of rule. Higher the weight, higher will be the priority given to the rule  
   * **Status**: It represents whether the rule is active or inactive
 
-![Rules Management Upload Form](../../assets/Rules_Management_UploadForm.png)
+<p align="center">
+  <img src="../../assets/Rules_Management_UploadForm.png" alt="Rules Management Upload Form" />
+</p>
 
 * Click on **"Save"**  
 * Click on **"Reset"** to fill the form again  
@@ -68,11 +74,15 @@ To upload a new rule, follow the steps given below:
 * To delete a rule, roll over the vertical ellipses icon ![Ellipses](../../assets/fa_vertical_ellipses1a.png) against the rule that you want to delete  
 * Click on ![Delete Icon](../../assets/Deletealldfailures.PNG)
 
-![Rules Management Delete](../../assets/Rules_Management_Delete.png)
+<p align="center">
+  <img src="../../assets/Rules_Management_Delete.png" alt="Rules Management Delete" />
+</p>
 
 * You will not be able to recover the rule once you delete it
 
-![Rules Management Delete Popup](../../assets/Rules_Management_DeletePopup.png)
+<p align="center">
+  <img src="../../assets/Rules_Management_DeletePopup.png" alt="Rules Management Delete Popup" />
+</p>
 
 * Click on **"Yes, delete it"** to delete the rule  
 * Click on **"Cancel"** to cancel the process
