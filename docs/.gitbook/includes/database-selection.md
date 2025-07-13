@@ -3,7 +3,6 @@ The user should select the Database type for installation from the dropdown list
 <p align="center">
   <img src="../../assets/Installation_DatabaseSelection.png" alt="Installation_DatabaseSelection">
 </p>
-
 Click the checkbox adjacent to **Advance configuration** option if you have one of the following requirements:
 
 {{#if productName == "OIM"}}
