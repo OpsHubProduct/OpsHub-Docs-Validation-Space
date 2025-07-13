@@ -16,7 +16,7 @@
 * Then select the date from the **Purge Audit Logs created before date** field.  
 
 <p align="center">
-  <img src="../../assets/purge.png" alt="Purge Selection" />
+  <img src="../../assets/Purge.png" alt="Purge Selection" />
 </p>
 
 * Click the **Purge** button to filter the information according to the specified inputs.
