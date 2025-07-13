@@ -48,7 +48,7 @@ If you want to give permission to these two OU's "Sales" and "Engineering" only 
 - **Use SSL Encryption**: Select YES if the connection to the LDAP Server is secured, otherwise select NO.
 - **Password**: Provide a password for the above given username.
 
-**Note** : For LDAPS, the certificates will be auto imported by OpsHub Integration Manager and if not, then user can manually import it as specified in [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md).
+**Note** : For LDAPS, the certificates will be auto imported by OpsHub Integration Manager and if not, then user can manually import it as specified in [Import SSL Certificates](../../getting-started/ssl-certificate-configuration.md).
 
 - **Allow Anonymous Login**: Select "Yes" if you want to allow Anonymous login. If the anonymous login feature is enabled on your remote LDAP server and this option is activated in the login server configuration, users can log in without a password.
 - Select **Test Connection Before Adding Server** when users want to test the connection before adding it to the records. Otherwise, it would only be added to the database but not validated.
