@@ -99,12 +99,7 @@ Select Login Server Type as SAML 2.0 and the form shown below would be displayed
   **Note:** In case of Azure SAML, refer to [Azure Active Directory Configuration](#azure-active-directory-configuration)
 
 - Once the server is configured, user needs to create equivalent SAML Users in OpsHub Integration Manager and then Activate the SAML login server, in order to authenticate with that server.
-
-<p align="center">
-  <img src="assets/Note.jpg" alt="Note" style="width:600px;" />
-</p>
-
-Refer to Create User section on [User Management](user-management.md) page to create SAML user.
+**Note** :Refer to Create User section on [User Management](user-management.md) page to create SAML user.
 
 ---
 
