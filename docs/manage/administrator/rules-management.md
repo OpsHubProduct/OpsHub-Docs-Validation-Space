@@ -46,7 +46,7 @@ To upload a new rule, follow the steps given below:
 * To edit a rule, follow the steps given below:
   * Click on **"Administration"**
   * Click on ![Rules Management Icon](../../assets/Rules_Management_icon.png) given on the left panel. You can see the list of rules that are already uploaded
-  * To edit a rule, roll over the vertical ellipses icon ![Ellipses](../../assets/Fa_vertical_ellipses1a.png) against the rule that you want to edit
+  * To edit a rule, roll over the vertical ellipses icon ![Ellipses](../../assets/fa_vertical_ellipses1a.png) against the rule that you want to edit
   * Click on ![Edit](../../assets/Edit_Image.png)
 
 ![Rules Management Edit](../../assets/Rules_Management_Edit.png)
