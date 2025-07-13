@@ -16,10 +16,10 @@ Select Login Server Type as LDAP and the form shown above would be displayed. Pr
 - **LDAP Domain String**: Enter the exact directory path (Distinguished Name) where LDAP users reside.
 
 If your company structure is as follows:  
-![Company Structure](../assets/CompanyStructure.png)
+![Company Structure](../../assets/CompanyStructure.png)
 
 Now, here if you want to give access to John Doe, follow the below configuration:  
-![LDAPS](../assets/Ldapsv2.png)
+![LDAPS](../../assets/Ldapsv2.png)
 
 Below are the three examples for constructing path:
 
@@ -44,7 +44,7 @@ If you want to give permission to these two OU's "Sales" and "Engineering" only 
 - **Use SSL Encryption**: Select YES if the connection to the LDAP Server is secured, otherwise select NO.
 - **Password**: Provide a password for the above given username.
 
-![Note](../assets/Note.jpg) For LDAPS, the certificates will be auto imported by OpsHub Integration Manager and if not, then user can manually import it as specified in [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md).
+**Note** : For LDAPS, the certificates will be auto imported by OpsHub Integration Manager and if not, then user can manually import it as specified in [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md).
 
 - **Allow Anonymous Login**: Select "Yes" if you want to allow Anonymous login. If the anonymous login feature is enabled on your remote LDAP server and this option is activated in the login server configuration, users can log in without a password.
 - Select **Test Connection Before Adding Server** when users want to test the connection before adding it to the records. Otherwise, it would only be added to the database but not validated.
@@ -57,7 +57,7 @@ After providing all the inputs, user can test or save the configuration.
 
 Once the server is configured, user needs to activate it to authenticate with that server.
 
-![Note](../assets/Note.jpg) To use OpsHub Integration Manager using LDAP user, we need to create LDAP user in OpsHub Integration Manager. Refer to Create User section on [User Management](user-management.md) page to create LDAP user.
+**Note** : To use OpsHub Integration Manager using LDAP user, we need to create LDAP user in OpsHub Integration Manager. Refer to Create User section on [User Management](user-management.md) page to create LDAP user.
 
 ---
 
@@ -76,7 +76,7 @@ Below information should be used for configuring OpsHub Integration Manager as a
 
 - **Audience URI** or **Service Provider Entity ID** → `opshubsaml`
 
-![Note](../assets/Note.jpg) The complete OpsHub Integration Manager SAML Service Provider metadata can be downloaded from:  
+**Note** : The complete OpsHub Integration Manager SAML Service Provider metadata can be downloaded from:  
 `<protocol>://<hostname>:<port>/OpsHubWS/saml/metadata`
 
 ## New SAML Login Server Configuration
@@ -85,7 +85,7 @@ For enabling SAML authentication, user needs to configure SAML server. For confi
 **Administration > Login Server Management > Add Login Server**.  
 Select Login Server Type as SAML 2.0 and the form shown below would be displayed:
 
-![SAML Server Form](../assets/SAML%20Server%201.png)
+![SAML Server Form](../../assets/SAML_Server_1.png)
 
 - Provide inputs to all the fields, as shown in the above image. Only after providing all the inputs, user can save the configuration.
 - The server would be added in Inactive state.
@@ -102,13 +102,13 @@ Select Login Server Type as SAML 2.0 and the form shown below would be displayed
 
 - **For downloading HTTPS Certificate:**
   1. Go to **Enterprise applications**  
-     ![Azure Services](../assets/Azure_Services.png)
+     ![Azure Services](../../assets/Azure_Services.png)
   2. Select your application from **All applications**  
-     ![Azure Application](../assets/Azure_Application.png)
+     ![Azure Application](../../assets/Azure_Application.png)
   3. Select **Single sign-on** from left panel  
-     ![Azure SSO](../assets/Azure_SingleSignOn.png)
+     ![Azure SSO](../../assets/Azure_SingleSignOn.png)
   4. Go to section **SAML Signing Certificate** and download 'Certificate (Base64)'  
-     ![Azure SAML Cert](../assets/Azure_SAMLSigningCertificate.png)
+     ![Azure SAML Cert](../../assets/Azure_SAMLSigningCertificate.png)
 
 - **For extracting the key credential from metadata XML file:**
   1. Open metadata URL in new browser window. It will open an XML file.
@@ -138,11 +138,11 @@ Select Login Server Type as SAML 2.0 and the form shown below would be displayed
 In the list of login servers, users can find a record for **Default Server** of type **OpsHub Integration Manager**.  
 Using this, users can login with the default credentials or the users configured in OpsHub Integration Manager itself fall in this category.
 
-![Default Server](../assets/LDAP_Image%203.png)
+![Default Server](../../assets/LDAP_Image_3.png)
 
 This server cannot be deleted.
 
-![Note](../assets/Note.jpg) If the Default Server is inactivated and OpsHub Integration Manager is unable to connect with any of the active LDAP servers, please contact sales/support representative.
+**Note** : If the Default Server is inactivated and OpsHub Integration Manager is unable to connect with any of the active LDAP servers, please contact sales/support representative.
 
 ---
 
@@ -153,7 +153,7 @@ It would lead to the page which allows managing multiple servers.
 
 This page displays all the configured login servers with a search tool in the first part.
 
-![Login Server View](../assets/LDAP_Image%202a.png)
+![Login Server View](../../assets/LDAP_Image_2a.png)
 
 One can search configured login servers using the search options available.
 
@@ -171,4 +171,4 @@ One can search configured login servers using the search options available.
   - **Activate/Inactivate**: User can change the status of the server as per their requirement.
   - **Delete**: User can delete the server configuration.
 
-![Note](../assets/Note.jpg) All servers cannot be inactivated at the same time. At any point of time, at least one server should be in Active state.
+**Note** All servers cannot be inactivated at the same time. At any point of time, at least one server should be in Active state.
