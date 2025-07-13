@@ -202,6 +202,7 @@ Here is a video on how to install OpsHub Integration Manager on the Windows mach
 
 {% embed url="https://www.youtube.com/watch?v=1a2b3c4d5e" %}
 
+
 ## Select Installation Path
 
 - You now have to select the installation directory. Before you select a directory, make sure the directory is empty. All the log files, configuration files, and servers are placed in this directory. If the directory is not available, you can create a directory as per your own specifications.
