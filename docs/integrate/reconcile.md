@@ -56,12 +56,8 @@ An important point to remember is that Reconciliation is not Integration or Migr
   - **Create** implies that the field is reconciled only in cases when reconciliation must create an entity on the destination side.  
   - **Update** implies that the field is only reconciled for the Update event.
 
-- If the user intends to have **Custom** rule as Mismatch Option, click on  
-<p align="center">
-  <img src="../assets/editruleicon.png" alt="Edit Rule Icon"/>
-</p>  
-button.  
-Below window will appear to insert custom XSL rule:  
+- If the user intends to have **Custom** rule as Mismatch Option, click on ![Edit Rule Icon](../assets/editruleicon.png) button.  
+- Below window will appear to insert custom XSL rule:  
 
 <p align="center">
   <img src="../assets/editrule.png" alt="Custom Rule" width="600"/>
