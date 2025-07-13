@@ -83,7 +83,7 @@ For successful installation/upgradation of OpsHub Integration Manager, following
 
 - **9001**: If you are installing OpsHub Integration Manager with HSQL database.  
 
-> **Note**: Apart from the above ports, some connectors require certain ports to be available. Please refer the [Connectors](../connectors.md) section to check ports used by specific connectors.
+> **Note**: Apart from the above ports, some connectors require certain ports to be available. Please refer the [Connectors](../connectors/connectors.md) section to check ports used by specific connectors.
 
 # Appendix
 
