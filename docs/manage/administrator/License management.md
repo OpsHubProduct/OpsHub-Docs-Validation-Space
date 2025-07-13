@@ -38,7 +38,9 @@ After installing, refresh the browser.
 
 A pop-up with **License Details** will open.  
 
-![License Details Popup](../../assets/License_Management_Image_6C.png)
+<p align="center">
+  <img src="../../assets/License_Management_Image_6C.png" alt="License Details Popup" style="width:600px;" />
+</p>
 
 **Note** See the Version [Example: QAOIMV6.16-U4B002] and Build [Example: QA2018Q1PH19_6_16_004_B002] details in the footer.
 
