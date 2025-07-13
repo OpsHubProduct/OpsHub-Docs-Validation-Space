@@ -4,14 +4,14 @@ This section will guide the users on how to register and edit the connectors.
 
 # Register Connectors
 
-- Connectors can be registered from administration page by clicking the "plug" icon ![RegisterConnectorIconOnly](../assets/RegisterConnectorIconOnly.png) present in left side bar as shown in the image below:
+- Connectors can be registered from administration page by clicking the "plug" icon ![RegisterConnectorIconOnly](../../assets/RegisterConnectorIconOnly.png) present in left side bar as shown in the image below:
 
-![AddButtonRegisterConnector](../assets/AddButtonRegisterConnector.png)
+![AddButtonRegisterConnector](../../assets/AddButtonRegisterConnector.png)
 
 - To register a connector, click the "+"[add image] icon on the top right corner of the "Registered Connectors" page.
 - The following page comes which requires two inputs as shown in the image below:
 
-![RegisterConnectorPage](../assets/RegisterConnectorPage.png)
+![RegisterConnectorPage](../../assets/RegisterConnectorPage.png)
 
 - Fill the form with relevant details:
   - **'''System Type Name '''**: The name that you want to assign to the connector you are registering. This name will be shown in the system type list on "Configure Systems" page.
@@ -20,28 +20,27 @@ This section will guide the users on how to register and edit the connectors.
 - All the URLs entered will be checked if they are implemented with the same connector's name and version or not.
 
 - After entering valid details, click the Save button to register the connector with the given name.
-
-![Note](../assets/Note.jpg) System Type Name must be unique as OpsHub Integration Manager won't allow you to use the same name for registering the connector.
+> **Note** : System Type Name must be unique as OpsHub Integration Manager won't allow you to use the same name for registering the connector.
 
 # View Connectors
 
 - The registered connectors are available in the form of list on the "Registered Connectors" page as shown in the image below:
 
-![RegisterConnectorList](../assets/RegisterConnectorList.png)
+![RegisterConnectorList](../../assets/RegisterConnectorList.png)
 
-- There is an audit icon ![AuditsIcon](../assets/AuditsIcon.png) present on the top right corner of the list. Clicking this icon will show all the audits related to the registered connectors.
+- There is an audit icon ![AuditsIcon](../../assets/AuditsIcon.png) present on the top right corner of the list. Clicking this icon will show all the audits related to the registered connectors.
 
 # Edit Connectors
 
 - Registered connectors can be edited by clicking the specific connector followed by clicking the pencil icon on the top right corner of the page.
 
-![EditButton](../assets/EditButton.png)
+![EditButton](../../assets/EditButton.png)
 
 - You can edit the system name, add or remove URLs. There is also a check box in case you want to refresh the metadata of the connector.
 
-![RefreshConnectorMetadataCheckBox](../assets/RefreshConnectorMetadataCheckBox.png)
+![RefreshConnectorMetadataCheckBox](../../assets/RefreshConnectorMetadataCheckBox.png)
 
-![Note](../../assets/Note.jpg) Edit register connector option will not allow you to remove the URL if it is already used in any system or in the integration of the systems. An error message will be displayed in case the URL that is already in use is deleted.
+> **Note** :  Edit register connector option will not allow you to remove the URL if it is already used in any system or in the integration of the systems. An error message will be displayed in case the URL that is already in use is deleted.
 
 ## Refresh Connector Metadata
 
@@ -51,8 +50,8 @@ Refresh Connector Metadata checkbox (as shown in the image above) can be selecte
 
 While editing the connector, if the refresh connector metadata is checked, a warning pops up as shown in the image below:
 
-![RefreshMetaData](../assets/RefreshMetaData.png)
+![RefreshMetaData](../../assets/RefreshMetaData.png)
 
-![Note](../assets/Note.jpg) If you want to refresh metadata for a connector, it is advisable to verify the systems and integrations that will be affected.
+> **Note**:  If you want to refresh metadata for a connector, it is advisable to verify the systems and integrations that will be affected.
 
 This warning box contains the instructions on how the systems and integrations created on the connector will be affected, if you choose to refresh the metadata of the connector. As shown in the image, this warning also shows the particular field that is removed and the screens affected by it.
