@@ -18,17 +18,17 @@ OpsHub Integration Manager provides with the following default roles:
 
 | **Role Name** | **Description** |
 |---------------|------------------|
-| Super Administrator | All administration permissions are available<br>![Super Administrator](../assets/Super_Administrator.png) |
-| Sync Administrator | All integration permissions are available<br>![Sync Administrator](../assets/Sync_Administrator.png) |
-| Sync Monitor | All read and sync action permissions are available<br>![Sync Monitor](../assets/Sync_Monitor.png) |
+| Super Administrator | All administration permissions are available<br>![Super Administrator](../../assets/Super_Administrator.png) |
+| Sync Administrator | All integration permissions are available<br>![Sync Administrator](../../assets/Sync_Administrator.png) |
+| Sync Monitor | All read and sync action permissions are available<br>![Sync Monitor](../../assets/Syn_Monitor.png) |
 
 # Create Custom Roles
 - Navigate to **Role Management** screen under **Administration** tab and click on Create Role button on the top right corner as shown below:  
   ![Create Role](../assets/Create_Role.png)
 - Add Role Name, Description, Type and select permissions that a user want to associate with the role. For instance, if a role is to be configured for performing all system operations, select **Integration** under Role type and tick mark **write** permission checkbox as shown below:  
-  ![System Supervisor Role](../assets/System_Supervisor_Role.png)
+  ![System Supervisor Role](../../assets/System_Supervisor_Role.png)
 - Save the role and it will be accessible from **Role Management** screen as shown below:  
-  ![Role saved successfully](../assets/Role_saved_successfully.png)
+  ![Role saved successfully](../../assets/Role_saved_successfully.png)
 
 # Standard Role Behaviors
 - In Integration type role, **read** permission is granted by default on all resources like System, Mapping, Folder, etc.
