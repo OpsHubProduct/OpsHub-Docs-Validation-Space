@@ -55,7 +55,9 @@ To upload a new rule, follow the steps given below:
   * To edit a rule, roll over the vertical ellipses icon ![Ellipses](../../assets/fa_vertical_ellipses1a.png) against the rule that you want to edit
   * Click on ![Edit](../../assets/Edit_Image.png)
 
-![Rules Management Edit](../../assets/Rules_Management_Edit.png)
+<p align="center">
+  <img src="../../assets/Rules_Management_Edit.png" alt="Rules Management Edit" />
+</p>
 
 * The Edit form will open. Edit the details in the form. Refer to the image below:
 
