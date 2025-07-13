@@ -27,12 +27,7 @@ An important point to remember is that Reconciliation is not Integration or Migr
   <img src="../assets/Config1.PNG" alt="Config" width="600"/>
 </p>
 
-- User can select direction  
-  <p align="center">
-    <img src="../assets/directionforreconcile.png" alt="Direction" />
-  </p>  
-  based on: the system or the entity type that is to be reconciled. Reconcile can be configured in one direction at a time.  
-  By default, all fields that are mapped in associated mapping for selected entity will be reconciled with source data being copied over to target.
+- User can select direction  ![Direction](../assets/directionforreconcile.png) based on: the system or the entity type that is to be reconciled. Reconcile can be configured in one direction at a time. By default, all fields that are mapped in associated mapping for selected entity will be reconciled with source data being copied over to target.
 
 - Now, click on **Save Reconciliation** button to save the reconcile. Basic reconcile with default options will be created.
 
@@ -42,11 +37,7 @@ An important point to remember is that Reconciliation is not Integration or Migr
 
 ## Change Default Setting
 
-- To change default setting click on  
-<p align="center">
-  <img src="../assets/configrule.png" alt="Config Rule"/>
-</p>  
-to configure Reconciliation. A new window which displays all the mapped fields will come up.  
+- To change default setting click on ![Config Rule](../assets/configrule.png) to configure Reconciliation. A new window which displays all the mapped fields will come up.  
 
 <p align="center">
   <img src="../assets/Mapping.png" alt="Mapping Fields" width="600"/>
@@ -85,11 +76,7 @@ Below window will appear to insert custom XSL rule:
 # Configure Workflow
 
 - By default, **Default Reconcile Workflow** will be selected.  
-- To select customized workflow, click on  
-<p align="center">
-  <img src="../assets/configworkflow.png" alt="Config Workflow" width="600"/>
-</p>  
-on Reconciliation page and select workflow for reconcile.
+- To select customized workflow, click on  ![Config Workflow](../assets/configworkflow.png) on Reconciliation page and select workflow for reconcile.
 
 # Monitor Reconciliation
 
