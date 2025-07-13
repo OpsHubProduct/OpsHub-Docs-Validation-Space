@@ -61,7 +61,7 @@ After providing all the inputs, user can test or save the configuration.
 
 Once the server is configured, user needs to activate it to authenticate with that server.
 
-**Note** : To use OpsHub Integration Manager using LDAP user, we need to create LDAP user in OpsHub Integration Manager. Refer to Create User section on [User Management](user-management.md) page to create LDAP user.
+**Note** : To use OpsHub Integration Manager using LDAP user, we need to create LDAP user in OpsHub Integration Manager. Refer to Create User section on [User Management](../user-management.md) page to create LDAP user.
 
 ---
 
@@ -95,11 +95,11 @@ Select Login Server Type as SAML 2.0 and the form shown below would be displayed
 
 - Provide inputs to all the fields, as shown in the above image. Only after providing all the inputs, user can save the configuration.
 - The server would be added in Inactive state.
-- SSL certificate needs to be imported when SAML Identity Server is on HTTPS. To import the SSL certificate, please follow the steps given on [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md).  
+- SSL certificate needs to be imported when SAML Identity Server is on HTTPS. To import the SSL certificate, please follow the steps given on [Import SSL Certificates](../../getting-started/ssl-certificate-configuration.md).  
   **Note:** In case of Azure SAML, refer to [Azure Active Directory Configuration](#azure-active-directory-configuration)
 
 - Once the server is configured, user needs to create equivalent SAML Users in OpsHub Integration Manager and then Activate the SAML login server, in order to authenticate with that server.
-**Note** :Refer to Create User section on [User Management](user-management.md) page to create SAML user.
+**Note** :Refer to Create User section on [User Management](../user-management.md) page to create SAML user.
 
 ---
 
@@ -134,7 +134,7 @@ Select Login Server Type as SAML 2.0 and the form shown below would be displayed
      -----END PKCS7-----
      ```
   5. Now import the key certificate file into `opshubSAMLKeyStore.jks`.  
-     Refer to [Import SSL Certificate](../getting-started/ssl-certificate-configuration.md) for steps. Use:
+     Refer to [Import SSL Certificate](../../getting-started/ssl-certificate-configuration.md) for steps. Use:
      - **Path:** `<<OpsHub_Installation_Directory>>\OpsHub_Resources\config\opshubSAMLKeyStore.jks`
      - **Password:** `int3gr@tion`
 
@@ -142,7 +142,7 @@ Select Login Server Type as SAML 2.0 and the form shown below would be displayed
 
 ## Known Behaviors
 
-- If OpsHub Integration Manager is behind the proxy server, and you want to configure SAML authentication, then after configuring proxy using [Proxy Setting](proxy-setting.md), you need to re-start the OpsHub Integration Manager server.
+- If OpsHub Integration Manager is behind the proxy server, and you want to configure SAML authentication, then after configuring proxy using [Proxy Setting](../proxy-setting.md), you need to re-start the OpsHub Integration Manager server.
 
 ---
 
