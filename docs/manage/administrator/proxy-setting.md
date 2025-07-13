@@ -4,21 +4,21 @@ You need to configure proxy settings to be able to access the external resources
 
 Watch the following video to learn how to configure proxy settings:
 
-![Note](../assets/Note.jpg) This video has no audio.
+> **Note:** This video has no audio.
 
 {% embed url="https://community.opshub.com/wp-content/uploads/2019/01/Proxy-Settings_Without-Audio.mp4" %}
 
 1. Navigate to the top right corner of the screen and click **Administration** as shown in the screenshot below:
 
-![Proxy Admin](../assets/Proxy_Management_Image%201F1.png)
+![Proxy Admin](../../assets/Proxy_Management_Image_1F1.png)
 
 2. Now, click the third icon on the left menu as shown in the screenshot below: 
 
-![Proxy Sidebar](../assets/Proxy_Management_Image%203E1.png)
+![Proxy Sidebar](../../assets/Proxy_Management_Image_3E1.png)
 
 The proxy settings form opens as shown in the screenshot below:
 
-![Proxy Form](../assets/Proxy%20Management%20Image%203C.png)
+![Proxy Form](../../assets/Proxy_Management_Image_3C.png)
 
 3. Fill the relevant details in the form: 
 
