@@ -10,15 +10,21 @@ Watch the following video to learn how to configure proxy settings:
 
 1. Navigate to the top right corner of the screen and click **Administration** as shown in the screenshot below:
 
-![Proxy Admin](../../assets/Proxy_Management_Image_1F1.png)
+<p align="center">
+  <img src="../../assets/Proxy_Management_Image_1F1.png" alt="Proxy Admin" />
+</p>
 
 2. Now, click the third icon on the left menu as shown in the screenshot below: 
 
-![Proxy Sidebar](../../assets/Proxy_Management_Image_3E1.png)
+<p align="center">
+  <img src="../../assets/Proxy_Management_Image_3E1.png" alt="Proxy Sidebar" />
+</p>
 
 The proxy settings form opens as shown in the screenshot below:
 
-![Proxy Form](../../assets/Proxy_Management_Image_3C.png)
+<p align="center">
+  <img src="../../assets/Proxy_Management_Image_3C.png" alt="Proxy Form" />
+</p>
 
 3. Fill the relevant details in the form: 
 
