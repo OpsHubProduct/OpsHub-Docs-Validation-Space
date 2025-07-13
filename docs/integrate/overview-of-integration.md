@@ -1,6 +1,6 @@
 # Quick Checks Before You Proceed With An Integration
 
-- Each system has its own set of prerequisites for successful configuration. Please refer to the system-specific pre-requisite section in the [Connectors](../connectors.md) section before you proceed.
+- Each system has its own set of prerequisites for successful configuration. Please refer to the system-specific pre-requisite section in the [Connectors](../connectors/connectors.md) section before you proceed.
 - Create one user dedicated to integration. User should not be used to do any operations from the system's user interface.
 
 ---
