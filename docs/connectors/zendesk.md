@@ -67,56 +67,82 @@ The steps given below explain how to make view in Zendesk for enabling criteria:
 
 **Make view in Zendesk for enabling criteria**
 
-* Login to Zendesk with integration user
+* Login to Zendesk with integration user  
 * Navigate to Admin → Views → Add View  
-  ![Zendesk Criteria Config 1](../assets/Zendesk_Criteria_Config_1.png)
+
+<div style="text-align: center;">
+  <img src="../assets/Zendesk_Criteria_Config_1.png" alt="Zendesk Criteria Config 1" style="width: 600px;" />
+</div>
 
 * Fill the view details  
   - Give appropriate name for View  
   - Select appropriate conditions as per your requirement  
     - If you specify condition(s) under 'Meet all of the following conditions' section then it will ensure that ticket will be synchronized only when all those conditions will be satisfied for this section  
     - If you specify condition(s) under 'Meet any of the following conditions' section then it will ensure that ticket will be synchronized if any one of the condition(s) will be satisfied for this section  
-  ![Zendesk Criteria Config 2](../assets/Zendesk_Criteria_Config_2.png)
+
+<div style="text-align: center;">
+  <img src="../assets/Zendesk_Criteria_Config_2.png" alt="Zendesk Criteria Config 2" style="width: 600px;" />
+</div>
 
 * Give appropriate access to integration user and create view  
   - Navigate to 'Available for' section and make sure that view is accessible to integration user. We will recommend to select 'Me only' option, which will ensure that no other user can accidentally modify it. If you are selecting 'Me only' option then ensure that you have currently logged on with integration user which is used for Zendesk in OpsHub Integration Manager.  
   - Finally click on 'Create View' to save the view.  
-  ![Zendesk Criteria Config 3](../assets/Zendesk_Criteria_Config_3.png)
+
+<div style="text-align: center;">
+  <img src="../assets/Zendesk_Criteria_Config_3.png" alt="Zendesk Criteria Config 3" style="width: 600px;" />
+</div>
 
 * Once you created view, then select appropriate option as per earlier access provided under 'Available For' section. In earlier step, if 'Me only' option is selected, then here select 'Personal Views', if 'All agents' option is selected, then here select 'Views shared with all agents' option.  
-  ![Zendesk Criteria Config 4](../assets/Zendesk_Criteria_Config_4.png)
+
+<div style="text-align: center;">
+  <img src="../assets/Zendesk_Criteria_Config_4.png" alt="Zendesk Criteria Config 4" style="width: 600px;" />
+</div>
 
 * Navigate to recently created view and click on it.  
-  ![Zendesk Criteria Config 5](../assets/Zendesk_Criteria_Config_5.png)
+
+<div style="text-align: center;">
+  <img src="../assets/Zendesk_Criteria_Config_5.png" alt="Zendesk Criteria Config 5" style="width: 600px;" />
+</div>
 
 * Navigate to browser address bar, here you will find view id. If you see URL like this `https://opshub.zendesk.com/agent/admin/views/123754` in browser, then view id is **123754**  
-  ![Zendesk Criteria Config 6](../assets/Zendesk_Criteria_Config_6.png)
+
+<div style="text-align: center;">
+  <img src="../assets/Zendesk_Criteria_Config_6.png" alt="Zendesk Criteria Config 6" style="width: 600px;" />
+</div>
 
 * Use this view id as criteria query for Zendesk system in OpsHub Integration Manager
 
 ## Sample Views
 
 **Synchronize tickets from specific organization and Status is Open**  
-![Zendesk Criteria Sample 1](../assets/Zendesk_Criteria_Sample_1.png)
+<div style="text-align: center;">
+  <img src="../assets/Zendesk_Criteria_Sample_1.png" alt="Zendesk Criteria Sample 1" style="width: 600px;" />
+</div>
 
 **Synchronize tickets from specific organization, Status is Open and Priority is High**  
-![Zendesk Criteria Sample 2](../assets/Zendesk_Criteria_Sample_2.png)
+<div style="text-align: center;">
+  <img src="../assets/Zendesk_Criteria_Sample_2.png" alt="Zendesk Criteria Sample 2" style="width: 600px;" />
+</div>
 
 **Synchronize tickets from any one of the specified organizations, Status is Open and Priority is High**  
-![Zendesk Criteria Sample 3](../assets/Zendesk_Criteria_Sample_3.png)
+<div style="text-align: center;">
+  <img src="../assets/Zendesk_Criteria_Sample_3.png" alt="Zendesk Criteria Sample 3" style="width: 600px;" />
+</div>
 
 # Appendix
 
 ## Add User
 
-* Login to Zendesk server. 
-* Click **Manage button icon** (bottom-left corner). 
-* Click **People** link on the left side bar. 
-* Click the user menu item present on the top-right corner in people screen. 
-* It will open a form to add new user. Enter username and email Id. 
+* Login to Zendesk server.  
+* Click **Manage button icon** (bottom-left corner).  
+* Click **People** link on the left side bar.  
+* Click the user menu item present on the top-right corner in people screen.  
+* It will open a form to add new user. Enter username and email Id.  
 * Click **Save** to add user.  
 
-![Zendesk Add User](../assets/Zendesk_Image 2a.png)
+<div style="text-align: center;">
+  <img src="../assets/Zendesk_Image 2a.png" alt="Zendesk Add User" style="width: 600px;" />
+</div>
 
 ## Organization Association to Ticket
 
@@ -135,13 +161,17 @@ The above behavior with OpsHub Integration Manager sync reflects the Zendesk API
 
 ## Determine the Parent - Child Link field name
 
-* Go to **App and integrations** → **App** → **Zendesk Support apps** in the admin window of Zendesk.
-* Select **Linked Ticket** plugin.
-* Copy the value under **Reference Field (Legacy)** field.
+* Go to **App and integrations** → **App** → **Zendesk Support apps** in the admin window of Zendesk.  
+* Select **Linked Ticket** plugin.  
+* Copy the value under **Reference Field (Legacy)** field.  
 
-![Zendesk Link Field 1](../assets/Zendesk_LinkField_1.png)
+<div style="text-align: center;">
+  <img src="../assets/Zendesk_LinkField_1.png" alt="Zendesk Link Field 1" style="width: 600px;" />
+</div>
 
-* Go to **Objects and rules** → **Tickets** → **Fields**.
+* Go to **Objects and rules** → **Tickets** → **Fields**.  
 * Search for the field id with copied value from **Reference Field (Legacy)** field. The display name of that field record is the Parent - Child Link field name.  
 
-![Zendesk Link Field 2](../assets/Zendesk_LinkField_2.png)
+<div style="text-align: center;">
+  <img src="../assets/Zendesk_LinkField_2.png" alt="Zendesk Link Field 2" style="width: 600px;" />
+</div>
