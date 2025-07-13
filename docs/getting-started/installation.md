@@ -250,39 +250,48 @@ Let's now learn about the steps for advance installation.
 User can select either of two options:
 
 - Generate a secret key: With this option, a secret key would be automatically generated, and user needs to select location, where he/she desires to store this key.
-
-![Advance_Configuration_Image_4c\](../assets/Advance_Configuration_Image_4c.png)
+<p align="center">
+  <img src="../assets/Advance_Configuration_Image_4c.png" alt="Advance Configuration Image 4c" />
+</p>
 
 - Use the existing secret key: If user already has secret key available,then user should select this option. User needs to select path where "opshub.key" file is available to use that key.
-
-![Advance_Configuration_Image_5c\](../assets/Advance_Configuration_Image_5c.png)
+<p align="center">
+  <img src="../assets/Advance_Configuration_Image_5c.png" alt="Advance Configuration Image 5c" />
+</p>
 
 **b) Configuration for algorithm to encrypt data**  
 User can select his desired algorithm from the available list to ensure security of data in application.
-
-![Advance_Configuration_Image_6c\](../assets/Advance_Configuration_Image_6c.png)
+<p align="center">
+  <img src="../assets/Advance_Configuration_Image_6c.png" alt="Advance Configuration Image 6c" />
+</p>
 
 ## Installation Progress
 
 The image below shows the overall progress of installation.
 
-![Installer Image_8b\](../assets/Installer_Image_8b.png)
+<p align="center">
+  <img src="../assets/Installer_Image_8b.png" alt="Installer Image 8b" />
+</p>
 
 - Setup Shortcuts: It will add the application to the Windows program list if the operating system is Windows and will add the application to the Linux program list if the operating system is Linux. It will also create the OpsHub Integration Manager launcher.
 
-![Installer Image_9Seta\](../assets/Installer_Image_9Seta.png)
+<p align="center">
+  <img src="../assets/Installer_Image_9Seta.png" alt="Installer Image 9Seta" />
+</p>
 
 ## Installation Success
 
 The image below shows a successful installation.
-
-![Installer Image_10aa\](../assets/Installer_Image_10aa.PNG)
+<p align="center">
+  <img src="../assets/Installer_Image_10aa.PNG" alt="Installer Image 10aa" />
+</p>
 
 Once you have installed the application, click [Logging In](logging-in.md) to see how to get started.
 
 # SSL Certificate Configuration
-
-![Advance Configuration Image 3SSLCa\](../assets/Advance_Configuration_Image_3SSLCa.png)
+<p align="center">
+  <img src="../assets/Advance_Configuration_Image_3SSLCa.png" alt="Advance Configuration Image 3SSLCa" />
+</p>
 
 It is advisable to enter the server-host name in the given field, it might create problem with IP address in some cases. Alias of the certificate should be unique.
 
@@ -293,7 +302,7 @@ It is advisable to enter the server-host name in the given field, it might creat
   e.g., "IN" for India, "US" for America, "AU" for Australia, etc.
 - Select the number of days till when the certificate should be valid.
 
-\![Note\](../assets/Note.jpg) - Please note with the above steps OpsHub Integration Manager will be installed with SSL configuration. But the corresponding SSL certificate imported will be self-signed. In case you want to install certificate signed by your CA authority then follow the steps given in this section [How To Import a Certificate](how-to-import-a-certificate.md) in appendix.
+>**Note** : Please note with the above steps OpsHub Integration Manager will be installed with SSL configuration. But the corresponding SSL certificate imported will be self-signed. In case you want to install certificate signed by your CA authority then follow the steps given in this section [How To Import a Certificate](how-to-import-a-certificate.md) in appendix.
 
 # Manual creation of databases
 {% include "../.gitbook/includes/manual-database-creation.md" %}
