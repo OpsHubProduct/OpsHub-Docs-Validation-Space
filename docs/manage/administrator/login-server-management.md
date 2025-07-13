@@ -61,7 +61,7 @@ After providing all the inputs, user can test or save the configuration.
 
 Once the server is configured, user needs to activate it to authenticate with that server.
 
-**Note** : To use OpsHub Integration Manager using LDAP user, we need to create LDAP user in OpsHub Integration Manager. Refer to Create User section on [User Management](../../user-management.md) page to create LDAP user.
+**Note** : To use OpsHub Integration Manager using LDAP user, we need to create LDAP user in OpsHub Integration Manager. Refer to Create User section on [User Management](../administrator/user-management.md) page to create LDAP user.
 
 ---
 
@@ -99,7 +99,7 @@ Select Login Server Type as SAML 2.0 and the form shown below would be displayed
   **Note:** In case of Azure SAML, refer to [Azure Active Directory Configuration](#azure-active-directory-configuration)
 
 - Once the server is configured, user needs to create equivalent SAML Users in OpsHub Integration Manager and then Activate the SAML login server, in order to authenticate with that server.
-**Note** :Refer to Create User section on [User Management](../../user-management.md) page to create SAML user.
+**Note** :Refer to Create User section on [User Management](../administrator/user-management.md) page to create SAML user.
 
 ---
 
@@ -142,7 +142,7 @@ Select Login Server Type as SAML 2.0 and the form shown below would be displayed
 
 ## Known Behaviors
 
-- If OpsHub Integration Manager is behind the proxy server, and you want to configure SAML authentication, then after configuring proxy using [Proxy Setting](../../proxy-setting.md), you need to re-start the OpsHub Integration Manager server.
+- If OpsHub Integration Manager is behind the proxy server, and you want to configure SAML authentication, then after configuring proxy using [Proxy Setting](../administrator/proxy-setting.md), you need to re-start the OpsHub Integration Manager server.
 
 ---
 
