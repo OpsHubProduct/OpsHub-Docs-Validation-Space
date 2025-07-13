@@ -12,9 +12,9 @@ To view Rules, go to Administration > Rules Management. This would lead to a pag
 ## Actions
 
 * **View rule's xml**: Click the rule's name to view the rule's xml  
-* **Export rules**: Roll over the vertical ellipses icon ![Ellipses](../../assets/Fa_vertical_ellipses1a.png) against the rule that you want to export and then select *Export rule*  
+* **Export rules**: Roll over the vertical ellipses icon ![Ellipses](../../assets/fa_vertical_ellipses1a.png) against the rule that you want to export and then select *Export rule*  
 * **Activate/Inactivate rules**: Select the *Status* button against the rule for which you want to toggle the status. The status will change from *Active* to *Inactive* or from *Inactive* to *Active*  
-* **Actions over multiple rules**: Select multiple rules and then roll over the cursor to point to the vertical ellipses icon ![Ellipses](../../assets/Fa_vertical_ellipses1a.png) on the table header to see the operations that you could perform on multiple selected rules.
+* **Actions over multiple rules**: Select multiple rules and then roll over the cursor to point to the vertical ellipses icon ![Ellipses](../../assets/fa_vertical_ellipses1a.png) on the table header to see the operations that you could perform on multiple selected rules.
 
 ---
 
@@ -65,7 +65,7 @@ To upload a new rule, follow the steps given below:
 
 * To delete the rule which is active, first you need to inactivate the rule
 
-* To delete a rule, roll over the vertical ellipses icon ![Ellipses](../../assets/Fa_vertical_ellipses1a.png) against the rule that you want to delete  
+* To delete a rule, roll over the vertical ellipses icon ![Ellipses](../../assets/fa_vertical_ellipses1a.png) against the rule that you want to delete  
 * Click on ![Delete Icon](../../assets/Deletealldfailures.PNG)
 
 ![Rules Management Delete](../../assets/Rules_Management_Delete.png)
