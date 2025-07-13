@@ -16,12 +16,22 @@ An important point to remember is that Reconciliation is not Integration or Migr
 > - Workspace / Project / Entity type name with Unicode character is not supported.
 
 - To configure Reconciliation, navigate to the integration to be reconciled. Click on reconcile icon as shown below:  
-  ![Reconcile Icon](../assets/reconcileicon.png)
+
+<p align="center">
+  <img src="../assets/reconcileicon.png" alt="Reconcile Icon" width="600"/>
+</p>
 
 - The window will come up for the given integration:  
-  ![Config](../assets/Config1.PNG)
 
-- User can select direction ![Direction](../assets/directionforreconcile.png) based on: the system or the entity type that is to be reconciled. Reconcile can be configured in one direction at a time.  
+<p align="center">
+  <img src="../assets/Config1.PNG" alt="Config" width="600"/>
+</p>
+
+- User can select direction  
+  <p align="center">
+    <img src="../assets/directionforreconcile.png" alt="Direction" width="600"/>
+  </p>  
+  based on: the system or the entity type that is to be reconciled. Reconcile can be configured in one direction at a time.  
   By default, all fields that are mapped in associated mapping for selected entity will be reconciled with source data being copied over to target.
 
 - Now, click on **Save Reconciliation** button to save the reconcile. Basic reconcile with default options will be created.
@@ -32,8 +42,15 @@ An important point to remember is that Reconciliation is not Integration or Migr
 
 ## Change Default Setting
 
-- To change default setting click on ![Config Rule](../assets/configrule.png) to configure Reconciliation. A new window which displays all the mapped fields will come up.  
-  ![Mapping Fields](../assets/Mapping.png)
+- To change default setting click on  
+<p align="center">
+  <img src="../assets/configrule.png" alt="Config Rule" width="600"/>
+</p>  
+to configure Reconciliation. A new window which displays all the mapped fields will come up.  
+
+<p align="center">
+  <img src="../assets/Mapping.png" alt="Mapping Fields" width="600"/>
+</p>
 
 - **Configure Mismatch** option:  
   - This defines the strategy on which the field value is to be reconciled in case a mismatch is found between its value in the source entity and the target entity.  
@@ -48,9 +65,16 @@ An important point to remember is that Reconciliation is not Integration or Migr
   - **Create** implies that the field is reconciled only in cases when reconciliation must create an entity on the destination side.  
   - **Update** implies that the field is only reconciled for the Update event.
 
-- If the user intends to have **Custom** rule as Mismatch Option, click on ![Edit Rule Icon](../assets/editruleicon.png) button.  
-  Below window will appear to insert custom XSL rule:  
-  ![Custom Rule](../assets/editrule.png)
+- If the user intends to have **Custom** rule as Mismatch Option, click on  
+<p align="center">
+  <img src="../assets/editruleicon.png" alt="Edit Rule Icon" width="600"/>
+</p>  
+button.  
+Below window will appear to insert custom XSL rule:  
+
+<p align="center">
+  <img src="../assets/editrule.png" alt="Custom Rule" width="600"/>
+</p>
 
 > **Note** : If user wants to define rules for reconciling field based on a condition, then custom rules can be defined.  
 > For example: a user wants to reconcile priority in target system based on a condition as shown above.
@@ -61,7 +85,11 @@ An important point to remember is that Reconciliation is not Integration or Migr
 # Configure Workflow
 
 - By default, **Default Reconcile Workflow** will be selected.  
-- To select customized workflow, click on ![Config Workflow](../assets/configworkflow.png) on Reconciliation page and select workflow for reconcile.
+- To select customized workflow, click on  
+<p align="center">
+  <img src="../assets/configworkflow.png" alt="Config Workflow" width="600"/>
+</p>  
+on Reconciliation page and select workflow for reconcile.
 
 # Monitor Reconciliation
 
