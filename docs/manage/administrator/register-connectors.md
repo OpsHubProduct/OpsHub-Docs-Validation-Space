@@ -50,7 +50,9 @@ Refresh Connector Metadata checkbox (as shown in the image above) can be selecte
 
 While editing the connector, if the refresh connector metadata is checked, a warning pops up as shown in the image below:
 
-![RefreshMetaData](../../assets/RefreshMetaData.png)
+<p align="center">
+  <img src="../../assets/RefreshMetaData.png" alt="RefreshMetaData" />
+</p>
 
 > **Note**:  If you want to refresh metadata for a connector, it is advisable to verify the systems and integrations that will be affected.
 
