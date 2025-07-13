@@ -66,7 +66,7 @@ To upload a new rule, follow the steps given below:
 * To delete the rule which is active, first you need to inactivate the rule
 
 * To delete a rule, roll over the vertical ellipses icon ![Ellipses](../../assets/Fa_vertical_ellipses1a.png) against the rule that you want to delete  
-* Click on ![Delete Icon](../../assets/Deletealldfailures.png)
+* Click on ![Delete Icon](../../assets/Deletealldfailures.PNG)
 
 ![Rules Management Delete](../../assets/Rules_Management_Delete.png)
 
