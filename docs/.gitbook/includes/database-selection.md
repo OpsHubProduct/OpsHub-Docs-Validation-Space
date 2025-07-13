@@ -1,7 +1,7 @@
 The user should select the Database type for installation from the dropdown list. Database connector jar is required to connect to the database. Refer [Download Database Connector jar](prerequisites.md#download-database-connector-jar) to get the download link of the database connector jar.
 
 <p align="center">
-  <img src="../assets/Installation_DatabaseSelection.png" alt="Installation_DatabaseSelection">
+  <img src="../../assets/Installation_DatabaseSelection.png" alt="Installation_DatabaseSelection">
 </p>
 
 Click the checkbox adjacent to **Advance configuration** option if you have one of the following requirements:
