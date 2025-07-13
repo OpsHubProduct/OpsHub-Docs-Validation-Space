@@ -25,7 +25,7 @@ To upload a new rule, follow the steps given below:
 * Click on ![Rules Management Icon](../../assets/Rules_Management_icon.png) given on the left panel. You can see the list of rules that are already uploaded
 * To upload a new rule, click on ![Plus](../../assets/Plus.png) given on the top right corner of the screen
 
-![Rules Management Upload](../assets/Rules_Management_Upload.png)
+![Rules Management Upload](../../assets/Rules_Management_Upload.png)
 
 * The Upload form will open. Fill the following details in the form: 
   * **System Name**: It gives option to select the system from all the SCM systems mentioned in the dropdown  
