@@ -37,11 +37,9 @@ To upload a new rule, follow the steps given below:
   * **Rule XML**: Upload the XML file using the *Choose File* option  
   * **Weight**: It defines the priority of rule. Higher the weight, higher will be the priority given to the rule  
   * **Status**: It represents whether the rule is active or inactive
-
 <p align="center">
   <img src="../../assets/Rules_Management_UploadForm.png" alt="Rules Management Upload Form" />
 </p>
-
 * Click on **"Save"**  
 * Click on **"Reset"** to fill the form again  
 
@@ -54,11 +52,9 @@ To upload a new rule, follow the steps given below:
   * Click on ![Rules Management Icon](../../assets/Rules_Management_icon.png) given on the left panel. You can see the list of rules that are already uploaded
   * To edit a rule, roll over the vertical ellipses icon ![Ellipses](../../assets/fa_vertical_ellipses1a.png) against the rule that you want to edit
   * Click on ![Edit](../../assets/Edit_Image.png)
-
 <p align="center">
   <img src="../../assets/Rules_Management_Edit.png" alt="Rules Management Edit" />
 </p>
-
 * The Edit form will open. Edit the details in the form. Refer to the image below:
 
 ![Edit Form 1](../../assets/Rules_Management_EditForm1.png)  
