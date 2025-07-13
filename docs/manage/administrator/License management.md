@@ -63,7 +63,7 @@ A pop-up with **License Details** will open.
 * You will see the **Licenses** screen.  
 * Click the cross icon against the License name which you want to delete.  
 
-![Uninstall License](../assets/License%20Management%20Image%207C.png)
+![Uninstall License](../assets/License_Management_Image_7C.png)
 
 After uninstalling, refresh the browser.  
 
