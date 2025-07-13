@@ -16,10 +16,14 @@ Select Login Server Type as LDAP and the form shown above would be displayed. Pr
 - **LDAP Domain String**: Enter the exact directory path (Distinguished Name) where LDAP users reside.
 
 If your company structure is as follows:  
-![Company Structure](../../assets/CompanyStructure.png)
+<p align="center">
+  <img src="../../assets/CompanyStructure.png" alt="Company Structure" style="width:600px;" />
+</p>
 
 Now, here if you want to give access to John Doe, follow the below configuration:  
-![LDAPS](../../assets/Ldapsv2.png)
+<p align="center">
+  <img src="../../assets/Ldapsv2.png" alt="LDAPS" style="width:600px;" />
+</p>
 
 Below are the three examples for constructing path:
 
@@ -85,7 +89,9 @@ For enabling SAML authentication, user needs to configure SAML server. For confi
 **Administration > Login Server Management > Add Login Server**.  
 Select Login Server Type as SAML 2.0 and the form shown below would be displayed:
 
-![SAML Server Form](../../assets/SAML_Server_1.png)
+<p align="center">
+  <img src="../../assets/SAML_Server_1.png" alt="SAML Server Form" style="width:600px;" />
+</p>
 
 - Provide inputs to all the fields, as shown in the above image. Only after providing all the inputs, user can save the configuration.
 - The server would be added in Inactive state.
@@ -94,7 +100,11 @@ Select Login Server Type as SAML 2.0 and the form shown below would be displayed
 
 - Once the server is configured, user needs to create equivalent SAML Users in OpsHub Integration Manager and then Activate the SAML login server, in order to authenticate with that server.
 
-![Note](assets/Note.jpg) Refer to Create User section on [User Management](user-management.md) page to create SAML user.
+<p align="center">
+  <img src="assets/Note.jpg" alt="Note" style="width:600px;" />
+</p>
+
+Refer to Create User section on [User Management](user-management.md) page to create SAML user.
 
 ---
 
@@ -102,13 +112,21 @@ Select Login Server Type as SAML 2.0 and the form shown below would be displayed
 
 - **For downloading HTTPS Certificate:**
   1. Go to **Enterprise applications**  
-     ![Azure Services](../../assets/Azure_Services.png)
+     <p align="center">
+       <img src="../../assets/Azure_Services.png" alt="Azure Services" style="width:600px;" />
+     </p>
   2. Select your application from **All applications**  
-     ![Azure Application](../../assets/Azure_Application.png)
+     <p align="center">
+       <img src="../../assets/Azure_Application.png" alt="Azure Application" style="width:600px;" />
+     </p>
   3. Select **Single sign-on** from left panel  
-     ![Azure SSO](../../assets/Azure_SingleSignOn.png)
+     <p align="center">
+       <img src="../../assets/Azure_SingleSignOn.png" alt="Azure SSO" style="width:600px;" />
+     </p>
   4. Go to section **SAML Signing Certificate** and download 'Certificate (Base64)'  
-     ![Azure SAML Cert](../../assets/Azure_SAMLSigningCertificate.png)
+     <p align="center">
+       <img src="../../assets/Azure_SAMLSigningCertificate.png" alt="Azure SAML Cert" style="width:600px;" />
+     </p>
 
 - **For extracting the key credential from metadata XML file:**
   1. Open metadata URL in new browser window. It will open an XML file.
@@ -138,7 +156,9 @@ Select Login Server Type as SAML 2.0 and the form shown below would be displayed
 In the list of login servers, users can find a record for **Default Server** of type **OpsHub Integration Manager**.  
 Using this, users can login with the default credentials or the users configured in OpsHub Integration Manager itself fall in this category.
 
-![Default Server](../../assets/LDAP_Image_3.png)
+<p align="center">
+  <img src="../../assets/LDAP_Image_3.png" alt="Default Server" style="width:600px;" />
+</p>
 
 This server cannot be deleted.
 
@@ -153,7 +173,9 @@ It would lead to the page which allows managing multiple servers.
 
 This page displays all the configured login servers with a search tool in the first part.
 
-![Login Server View](../../assets/LDAP_Image_2a.png)
+<p align="center">
+  <img src="../../assets/LDAP_Image_2a.png" alt="Login Server View" style="width:600px;" />
+</p>
 
 One can search configured login servers using the search options available.
 
