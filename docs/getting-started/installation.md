@@ -2,7 +2,7 @@
 
 The first screen when you launch the application will be this:
 
-\![Launching Installer Image 1bbn\](../assets/Launching_Installer_Image_1bbn.png)
+![Launching Installer Image 1bbn\](../assets/Launching_Installer_Image_1bbn.png)
 
 ## Launch the installer in different Operating Systems
 
@@ -89,11 +89,11 @@ On launching the installer, you will see the license agreement window that conta
 
 If you agree with the license details, then only you can move to the next step i.e. Installation.  
   
-\![ Default_Installation_Image 1La\](../assets/Default_Installation_Image_1La.png)
+![ Default_Installation_Image 1La\](../assets/Default_Installation_Image_1La.png)
 
 License Information window has the details of the trial license and the contact information to purchase the license.  
   
-\![Default_Installation_Image 2LH\](../assets/Default_Installation_Image_2LH.png)
+![Default_Installation_Image 2LH\](../assets/Default_Installation_Image_2LH.png)
 
 ### Possible exceptions
 
@@ -201,7 +201,7 @@ Here is a video on how to install OpsHub Integration Manager on the Windows mach
 
 - You now have to select the installation directory. Before you select a directory, make sure the directory is empty. All the log files, configuration files, and servers are placed in this directory. If the directory is not available, you can create a directory as per your own specifications.
   
-\![Default_Installation_Image P3\](../assets/Default_Installation_Image_P3.png)
+![Default_Installation_Image P3\](../assets/Default_Installation_Image_P3.png)
 
 ## Registration
 
@@ -215,7 +215,7 @@ Here is a video on how to install OpsHub Integration Manager on the Windows mach
 
 - Go through this section if you want to configure Advance Installation. Else, proceed to the [Installation Progress](#installation-progress) section.
 
-\![Advance_Step_Installtion_Panel\](../assets/Advance_Step_Installtion_Panel.png)
+![Advance_Step_Installtion_Panel\](../assets/Advance_Step_Installtion_Panel.png)
 
 Let's now learn about the steps for advance installation.
 
@@ -243,38 +243,38 @@ User can select either of two options:
 
 - Generate a secret key: With this option, a secret key would be automatically generated, and user needs to select location, where he/she desires to store this key.
 
-\![Advance_Configuration_Image_4c\](../assets/Advance_Configuration_Image_4c.png)
+![Advance_Configuration_Image_4c\](../assets/Advance_Configuration_Image_4c.png)
 
 - Use the existing secret key: If user already has secret key available,then user should select this option. User needs to select path where "opshub.key" file is available to use that key.
 
-\![Advance_Configuration_Image_5c\](../assets/Advance_Configuration_Image_5c.png)
+![Advance_Configuration_Image_5c\](../assets/Advance_Configuration_Image_5c.png)
 
 **b) Configuration for algorithm to encrypt data**  
 User can select his desired algorithm from the available list to ensure security of data in application.
 
-\![Advance_Configuration_Image_6c\](../assets/Advance_Configuration_Image_6c.png)
+![Advance_Configuration_Image_6c\](../assets/Advance_Configuration_Image_6c.png)
 
 ## Installation Progress
 
 The image below shows the overall progress of installation.
 
-\![Installer Image_8b\](../assets/Installer_Image_8b.png)
+![Installer Image_8b\](../assets/Installer_Image_8b.png)
 
 - Setup Shortcuts: It will add the application to the Windows program list if the operating system is Windows and will add the application to the Linux program list if the operating system is Linux. It will also create the OpsHub Integration Manager launcher.
 
-\![Installer Image_9Seta\](../assets/Installer_Image_9Seta.png)
+![Installer Image_9Seta\](../assets/Installer_Image_9Seta.png)
 
 ## Installation Success
 
 The image below shows a successful installation.
 
-\![Installer Image_10aa\](../assets/Installer_Image_10aa.PNG)
+![Installer Image_10aa\](../assets/Installer_Image_10aa.PNG)
 
 Once you have installed the application, click [Logging In](logging-in.md) to see how to get started.
 
 # SSL Certificate Configuration
 
-\![Advance Configuration Image 3SSLCa\](../assets/Advance_Configuration_Image_3SSLCa.png)
+![Advance Configuration Image 3SSLCa\](../assets/Advance_Configuration_Image_3SSLCa.png)
 
 It is advisable to enter the server-host name in the given field, it might create problem with IP address in some cases. Alias of the certificate should be unique.
 
