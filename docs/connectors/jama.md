@@ -96,14 +96,15 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 #### Entity type wise specific configuration
 
 * **Component and Set**  
-  ** Neither **Location** nor **Location Path** is mandatory.  
-  ** If either of them is mapped, then the Component or Set will be created under the specified location.  
-  ** If it's not mapped, then the Component or Set will be created under project.
+  * Neither **Location** nor **Location Path** is mandatory.  
+  * If either of them is mapped, then the Component or Set will be created under the specified location.  
+  * If it's not mapped, then the Component or Set will be created under project.
 * **Folder**  
-  ** Either of **Location** or **Location Path** should be mapped else it will result into error. **Location** field is by default a mandatory field but if you are mapping **Location Path**, you can ignore the warnings for **Location** field that you get while saving the mapping which states that mandatory fields are not mapped.
+  * Either of **Location** or **Location Path** should be mapped else it will result into error.  
+  * **Location** field is by default a mandatory field but if you are mapping **Location Path**, you can ignore the warnings for **Location** field that you get while saving the mapping which states that mandatory fields are not mapped.
 * **Other entity types**  
-  ** Either **Location** or **Location Path** or a combination of **Component**, **Set** and **Folder** with/without **Location Path**/**Location** should be mapped such that a valid path can be created from these fields, else it will result into error.  
-  ** **Location** field is, by default, mandatory. Still, if you are mapping **Location Path** or a combination of **Component**, **Set** and **Folder** fields with/without **Location Path**, in that case, you can ignore the warnings for the **Location** field you get while saving the mapping, which states that mandatory fields are not mapped.
+  * Either **Location** or **Location Path** or a combination of **Component**, **Set** and **Folder** with/without **Location Path**/**Location** should be mapped such that a valid path can be created from these fields, else it will result into error.  
+  * **Location** field is, by default, mandatory. Still, if you are mapping **Location Path** or a combination of **Component**, **Set** and **Folder** fields with/without **Location Path**, in that case, you can ignore the warnings for the **Location** field you get while saving the mapping, which states that mandatory fields are not mapped.
 
 #### Lookup configuration
 
