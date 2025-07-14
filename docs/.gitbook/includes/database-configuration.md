@@ -14,7 +14,7 @@
 
 # Create Connection
 
-![Connection1](../assets/Connection1.png)
+![Connection1](../../assets/Connection1.png)
 
 Steps for Creating Database Connection:
 
@@ -34,7 +34,7 @@ Steps for Creating Database Connection:
 
 # View Connections
 
-![Connection2](../assets/Connection2.png)
+![Connection2](../../assets/Connection2.png)
 
 Steps for viewing Database Connections:
 
@@ -44,7 +44,7 @@ Steps for viewing Database Connections:
 
 # Edit Connection
 
-![Connection3](../assets/Connection3.png)
+![Connection3](../../assets/Connection3.png)
 
 1. Navigate to **Administration -> Connection Management**.
 2. Click on **View Connections**.
