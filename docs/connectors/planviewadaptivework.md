@@ -2,7 +2,7 @@
 
 ## User Privileges
 * Create one user in Planview AdaptiveWork that is dedicated for OpsHub Integration Manager. This user shouldn't perform any other action from Planview AdaptiveWork's user interface. This user is referred as 'Integration User' in the document.
-* To synchronize entities from any system to Planview AdaptiveWork, the integration user must have **Super User**, **Admin User** & **Integration User** permissions [which can be configured on the People screen by the admin user]. Refer to [#grant-permissions-to-planview-adaptivework-user](#grant-permissions-to-planview-adaptivework-user) section for details on how to grant permissions to a Planview AdaptiveWork user.
+* To synchronize entities from any system to Planview AdaptiveWork, the integration user must have **Super User**, **Admin User** & **Integration User** permissions [which can be configured on the People screen by the admin user]. Refer to [grant-permissions-to-planview-adaptivework-user](#grant-permissions-to-planview-adaptivework-user) section for details on how to grant permissions to a Planview AdaptiveWork user.
 
 # System Configuration
 
@@ -23,7 +23,7 @@ Refer to the following screenshot:
 | **System Name**        | Provide the system's name |
 | **Instance URL**       | Provide API URL of the Planview AdaptiveWork instance. This URL will be used for communicating to Planview AdaptiveWork API. The format of the URL is: https://api.<instance_name>.com <br>Example: https://api.clerizentb.com |
 | **Authentication Type**| Select authentication type from **API Token** or **Session based Authentication**. |
-| **User Email**         | Provide the email id of the dedicated user who will communicate with the Planview AdaptiveWork API. This user should have all the required privileges to use the Planview AdaptiveWork API. For more details, refer to [#user-privileges](#user-privileges) section. |
+| **User Email**         | Provide the email id of the dedicated user who will communicate with the Planview AdaptiveWork API. This user should have all the required privileges to use the Planview AdaptiveWork API. For more details, refer to [user-privileges](#user-privileges) section. |
 | **Password**           | Provide the password generated in Planview AdaptiveWork for the user given in "User Email" field. This field is required when Authentication Type is selected as "Session based Authentication". |
 | **API Token**          | Provide the API Token generated in Planview AdaptiveWork for the user given in "User Email" field. This field is required when Authentication Type is selected as "API Token". Refer to [this section](https://success.planview.com/Planview_AdaptiveWork/API/API_Keys_Support#:~:text=1.-,In%20AdaptiveWork,-In%20the%20user%27s) for generating the API token. |
 
@@ -73,7 +73,7 @@ To overwrite the default behavior, **Poller Page Size** may be updated in the **
 
 ## Criteria Configuration
 
-If the user wants to specify conditions for synchronizing an entity from Planview AdaptiveWork (source system) to the target system, the criteria must be configured. Navigate to [Integration Configuration#Criteria Configuration](../integrate/integration-configuration.md#criteria-configuration) section on [Integration Configuration](integration-configuration.md) page for details. <br>
+If the user wants to specify conditions for synchronizing an entity from Planview AdaptiveWork (source system) to the target system, the criteria must be configured. Navigate to [Criteria Configuration](../integrate/integration-configuration.md#criteria-configuration) section on [Integration Configuration](../integrate/integration-configuration.md) page for details. <br>
 
 Set the **Query** as per Planview AdaptiveWork query format which is **CZQL**. Here, **API Name** from the **Field Properties** should be used in the query. Refer to [#steps-to-identify-the-api-name](#steps-to-identify-the-api-name) section for identifying the API name for the field. Given below are the sample snippets of how the Planview AdaptiveWork queries can be used as criteria query in OpsHub Integration Manager:
 
