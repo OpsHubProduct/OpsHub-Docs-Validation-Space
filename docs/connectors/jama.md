@@ -359,7 +359,7 @@ Jama query is based on **OR** condition when there are more than one field.
   - Synchronization of Status field is set to Current State.
 - When Jama is the target system:
   - If the attachment file name contains **Windows invalid file name characters** (`<`, `>`, `:`, `"`, `/`, `\\`, `|`, `?`, `*`), then the file will not be added in Jama. Consequently, the user will encounter a processing failure. To avoid this processing failure, it is recommended to follow file naming conventions as mentioned in [Microsoft File Naming Conventions](https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file#naming-conventions).  
-  Additionally, if the user still wants to synchronize attachments having Windows invalid file name characters, then the user needs to refer to [OH-Jama-0038](oh-jama-0038.md).
+  Additionally, if the user still wants to synchronize attachments having Windows invalid file name characters, then the user needs to refer to [OH-Jama-0038](../help-center/troubleshooting/errors/jama/oh-jama-0038.md).
   - If conflict detection is enabled on the TAGS field with manual conflict resolution strategy, then in the event of recovery, OpsHub Integration Manager will give a failure. To resolve this failure, conflict resolution strategy should be either of "Endpoint 1 Wins", "Endpoint 2 Wins" or "Custom Strategy".
   - Recovery is not guaranteed for Status field. 
   
