@@ -24,7 +24,7 @@ Before you continue to the integration, you must first configure Jenkins. Click 
   <img src="../assets/Jenkins_Image_3a.png" />
 </p>
 
-In order to get the Jenkins API token from Jenkins instance for a given user account, please follow the [#how-to-get-api-token-in-jenkins](#how-to-get-api-token-in-jenkins) section in appendix.
+In order to get the Jenkins API token from Jenkins instance for a given user account, please follow the [how-to-get-api-token-in-jenkins](#how-to-get-api-token-in-jenkins) section in appendix.
 
 If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
