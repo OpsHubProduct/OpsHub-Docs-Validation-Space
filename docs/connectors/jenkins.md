@@ -10,7 +10,7 @@
 
 ## Parameter configuration
 
-A special parameter needs to be created on all Jenkins projects that need to be synchronized with Jenkins as the target integration so that OpsHub Integration Manager can trigger the build on Jenkins. This parameter usage should be reserved to OpsHub Integration Manager use only. For creating parameter on Jenkins, You can refer the steps mentioned in [#how-to-add-parameter-on-jenkins](#how-to-add-parameter-on-jenkins) section in appendix. 
+A special parameter needs to be created on all Jenkins projects that need to be synchronized with Jenkins as the target integration so that OpsHub Integration Manager can trigger the build on Jenkins. This parameter usage should be reserved to OpsHub Integration Manager use only. For creating parameter on Jenkins, You can refer the steps mentioned in [how-to-add-parameter-on-jenkins](#how-to-add-parameter-on-jenkins) section in appendix. 
 
 | Parameter Name | Parameter Type |
 |----------------|----------------|
@@ -26,7 +26,7 @@ Before you continue to the integration, you must first configure Jenkins. Click 
 
 In order to get the Jenkins API token from Jenkins instance for a given user account, please follow the [#how-to-get-api-token-in-jenkins](#how-to-get-api-token-in-jenkins) section in appendix.
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from TEST MEDIAWIKI. Click [Import SSL Certificates](import-ssl-certificates.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 # Mapping Configuration
 
@@ -37,7 +37,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 
 # Integration Configuration
 
-Set a time to synchronize data between Jenkins and the other system to be integrated. Also, define parameters and conditions, if any, for integration. Click [Integration Configuration](integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
+Set a time to synchronize data between Jenkins and the other system to be integrated. Also, define parameters and conditions, if any, for integration. Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
 
 > **Note** : Set **Start Build Id** to the id from which OpsHub Integration Manager has to start polling from Jenkins. The OpsHub Integration Manager integration will use this as the start id to pull data from the source system to the destination system (all builds that were created previously will not be synchronized). 
 
