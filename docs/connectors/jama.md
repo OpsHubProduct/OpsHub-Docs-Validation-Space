@@ -6,14 +6,15 @@
 **Please refer to [Add Users](#add-users) section to determine how to create a user in Jama**
 
 * Below are the permissions required for this dedicated user:  
-  ** For all the supported jama versions, project 'Administration' permission for each project for which the data needs to be synchronized  
-  ** Additionally, below permissions required to access User's meta information for specific version(s)  
-    *** For Jama Cloud version 8.61:  
-    **** Users 'Administration' permission at the organization level to access user's meta information.  
-    *** For Jama Cloud version earlier then 8.61 and/or a self-hosted version earlier then to 8.62:  
-    **** 'Read' Access permission at the organization level to access user's meta information.
+  * For all the supported Jama versions, project **Administration** permission for each project for which the data needs to be synchronized  
+  * Additionally, below permissions are required to access User's meta information for specific version(s):  
+    * For Jama Cloud version 8.61:  
+      * Users **Administration** permission at the organization level to access user's meta information.  
+    * For Jama Cloud versions earlier than 8.61 and/or a self-hosted version earlier than 8.62:  
+      * **Read Access** permission at the organization level to access user's meta information.
 
-> [!NOTE] The behavior of the Rest API(s) was changed from Jama Cloud version 8.61 and self-hosted version 8.62. Hence, there are specific additional permissions required for older versions as mentioned above to access User's meta information.
+
+> **Note**: The behavior of the Rest API(s) was changed from Jama Cloud version 8.61 and self-hosted version 8.62. Hence, there are specific additional permissions required for older versions as mentioned above to access User's meta information.
 
 * Refer to [Grant Project Permissions](https://help.jamasoftware.com/ah/en/administration/project-administrator/view-project-users/grant-project-permissions.html) for details on how to grant project permissions.  
 * To validate the permission of the user being used in the OpsHub Integration Manager, please refer to [Access Permission of Jama users](#access-permission-of-jama-users) section.  
