@@ -20,7 +20,7 @@ Given below are the configuration parameters for the Redmine database to create 
 # System Configuration
 Before you continue to the integration, you must first configure Redmine. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system. Refer the screenshot given below for reference.
 
-<p align="center"><img src="../assets/Redmine_Image 1.png" alt="Redmine System Configuration"></p>
+<p align="center"><img src="../assets/Redmine_Image_1.png" alt="Redmine System Configuration"></p>
 
 <span style="color:blue">**Redmine System form details**</span>
 
@@ -33,7 +33,7 @@ Before you continue to the integration, you must first configure Redmine. Click 
 | **Redmine User Name**      | Always                                       | Provide the username of the Redmine user created for OpsHub Integration Manager. Please refer to  [User Privileges](#user-privileges) for more details. |
 | **Redmine User Password**  | Always                                       | Provide Redmine Users password |
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from TEST MEDIAWIKI. Click [Import SSL Certificates](import-ssl-certificates.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 # Mapping Configuration
 Map the fields between Redmine and the other system to be integrated to ensure that the data between both the systems synchronizes correctly. Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
@@ -132,7 +132,7 @@ Target LookUp configuration is similar to the Criteria Configuration where in th
 6. Check the **Administrator** box.  
 7. Click the **Create** button.
 
-<p align="center"><img src="../assets/Redmine_Image 2.png" alt="Add User"></p>
+<p align="center"><img src="../assets/Redmine_Image_2.png" alt="Add User"></p>
 
 ## Assigning User to Projects
 1. Log in as Administrator.  
@@ -141,17 +141,17 @@ Target LookUp configuration is similar to the Criteria Configuration where in th
 4. Select the user and assign the **Role**.  
 5. Click **Add**.
 
-<p align="center"><img src="../assets/Redmine_Image 3.png" alt="Assign User"></p>
+<p align="center"><img src="../assets/Redmine_Image_3.png" alt="Assign User"></p>
 
 ## Custom Field Configuration
 OpsHub Integration Manager needs special fields to track integration status.
 
-<p align="center"><img src="../assets/Redmine_Image 4.png" alt="Custom Field Config 1"></p>
+<p align="center"><img src="../assets/Redmine_Image_4.png" alt="Custom Field Config 1"></p>
 
 1. Log in as Administrator.  
 2. Click **Custom fields**.
 
-<p align="center"><img src="../assets/Redmine_Image 5.png" alt="Custom Field Config 2"></p>
+<p align="center"><img src="../assets/Redmine_Image_5.png" alt="Custom Field Config 2"></p>
 
 3. Click **+** to add a new custom field.  
 4. Enter field name, select format **Text**, set max length to 255.  
@@ -159,14 +159,14 @@ OpsHub Integration Manager needs special fields to track integration status.
 6. Check **For all Projects**, **Used as a Filter**, **Searchable**.  
 7. Click **Save**.
 
-<p align="center"><img src="../assets/Redmine_Image 6.png" alt="Custom Field Config 3"></p>
+<p align="center"><img src="../assets/Redmine_Image_6.png" alt="Custom Field Config 3"></p>
 
 ## Find Version
 1. Log in as Administrator.  
 2. Go to **Administration > Information**.  
 3. The version will be displayed.
 
-<p align="center"><img src="../assets/Redmine_Image 7.png" alt="Find Version"></p>
+<p align="center"><img src="../assets/Redmine_Image_7.png" alt="Find Version"></p>
 
 ## Redmine Configuration
 By default, **Enable REST API** is disabled.
@@ -178,4 +178,4 @@ To enable it:
 3. Check **Enable REST web service**.  
 4. Click **OK**.
 
-<p align="center"><img src="../assets/Redmine_Image 8.png" alt="Enable REST API"></p>
+<p align="center"><img src="../assets/Redmine_Image_8.png" alt="Enable REST API"></p>
