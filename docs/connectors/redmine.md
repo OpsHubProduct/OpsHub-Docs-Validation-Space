@@ -28,7 +28,7 @@ Before you continue to the integration, you must first configure Redmine. Click 
 |----------------------------|----------------------------------------------|-----------------|
 | **System Name**            | Always                                       | Provide system name |
 | **Version**                | Always                                       | Provide version like 3.1.2, 3.4.5. To know your version, refer to [How to find Redmine's version](#find-version) section. |
-| **Redmine Database Connection** | Always                                | Select an already created Database connection or if the Database connection is not configured for Redmine, then click the + sign and follow steps given on the [Database Configuration](database-configuration.md) page to create database connection. |
+| **Redmine Database Connection** | Always                                | Select an already created Database connection or if the Database connection is not configured for Redmine, then click the + sign and follow steps given on the [Database Configuration](../../database-configuration.md) page to create database connection. |
 | **Redmine URL**            | Always                                       | Format: [http/https]://[RedmineServerHost]/[RedmineServerPort] |
 | **Redmine User Name**      | Always                                       | Provide the username of the Redmine user created for OpsHub Integration Manager. Please refer to  [User Privileges](#user-privileges) for more details. |
 | **Redmine User Password**  | Always                                       | Provide Redmine Users password |
