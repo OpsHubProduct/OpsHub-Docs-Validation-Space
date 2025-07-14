@@ -75,7 +75,7 @@ To overwrite the default behavior, **Poller Page Size** may be updated in the **
 
 If the user wants to specify conditions for synchronizing an entity from Planview AdaptiveWork (source system) to the target system, the criteria must be configured. Navigate to [Criteria Configuration](../integrate/integration-configuration.md#criteria-configuration) section on [Integration Configuration](../integrate/integration-configuration.md) page for details. <br>
 
-Set the **Query** as per Planview AdaptiveWork query format which is **CZQL**. Here, **API Name** from the **Field Properties** should be used in the query. Refer to [#steps-to-identify-the-api-name](#steps-to-identify-the-api-name) section for identifying the API name for the field. Given below are the sample snippets of how the Planview AdaptiveWork queries can be used as criteria query in OpsHub Integration Manager:
+Set the **Query** as per Planview AdaptiveWork query format which is **CZQL**. Here, **API Name** from the **Field Properties** should be used in the query. Refer to [steps-to-identify-the-api-name](#steps-to-identify-the-api-name) section for identifying the API name for the field. Given below are the sample snippets of how the Planview AdaptiveWork queries can be used as criteria query in OpsHub Integration Manager:
 
 <span style="color:blue"> **Criteria samples:** </span>
 
