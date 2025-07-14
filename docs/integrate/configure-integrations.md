@@ -10,7 +10,7 @@ Please refer to [Integration Prerequisites](integration-prerequisites.md) page t
 - In this video, we will learn how to configure a system onto and how to update the system details after configuration, if required
 
 > **Note**: Jira is the system that has been used for this video demonstration. The steps may vary slightly from one system to another.
-<iframe width="640" height="360" src="https://youtu.be/-S6EsbZEmBw" frameborder="0" allowfullscreen></iframe>
+https://youtu.be/-S6EsbZEmBw
 
 > **Note**: During configuration or synchronization, connection-related errors might occur. There are couple of reasons for connection-related errors. Checkout the details [Common Error Solutions](../help-center/troubleshooting/errors/common.md).  
 > **Note**: If the system is behind a proxy server, then set up [Proxy Setting](../manage/administrator/proxy-settings.md) in OpsHub Integration Manager.  
