@@ -107,14 +107,13 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
   * **Location** field is, by default, mandatory. Still, if you are mapping **Location Path** or a combination of **Component**, **Set** and **Folder** fields with/without **Location Path**, in that case, you can ignore the warnings for the **Location** field you get while saving the mapping, which states that mandatory fields are not mapped.
 
 #### Lookup configuration
-
 * **Location field:**  
-  ** It internally works on Set/Component/Folder location id.  
-  ** The advantage of using **Location** field in the field mapping is that there is no further requirement of changing mapping when location name of Set/Component/Folder changes.  
-  ** For mapping **Location field values**, map the **Location** field.  
-  ** Here **Location field** is of type 'hierarchy', which means it will load all the projects.  
-  ** Click the project name for expanding it. It will show all the locations in the project.  
-  ** Now, you can select the location values for the value mapping.
+  * It internally works on Set/Component/Folder location id.  
+  * The advantage of using **Location** field in the field mapping is that there is no further requirement of changing mapping when location name of Set/Component/Folder changes.  
+  * For mapping **Location field values**, map the **Location** field.  
+  * Here **Location field** is of type 'hierarchy', which means it will load all the projects.  
+  * Click the project name for expanding it. It will show all the locations in the project.  
+  * Now, you can select the location values for the value mapping.
 
 <p align="center">
   <img src="../assets/JamaLocationField_1.png">
@@ -136,7 +135,6 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
     * Set the value to **Unlocked** to release the lock on the synced target item.  
     * Set the **No Change** value to avoid any modification on item's lock.  
   * If **OH Lock Status** field is mapped at the source side, it will give empty value.
-
 
 ## Set entity type Fields
 
@@ -243,7 +241,7 @@ Follow the steps given below to create the filter in Jama:
 - Create the filter in accordance with criteria storage type.  
   - For fields, **Location, Planned Release or Release**, creating a filter is not dependent on criteria storage type.  
 
-> 📝 Select the **Last Activity Date** and **Descending** option in **Sort order for results by** field for filter with any criteria storage type.
+> **Note**: Select the **Last Activity Date** and **Descending** option in **Sort order for results by** field for filter with any criteria storage type.
 
 ### Filter for Component/Set/Folder
 
@@ -282,7 +280,7 @@ Refer [Create Custom Field](#connector-specific-field-custom-field-configuration
   <img src="../assets/Jama_End_System_Criteria_Filter.png" />
 </p>
 
-> 📝 Make sure you are using the same custom field in filter that is used in "Select where criteria info is to be stored" during advance integration configuration.
+> **Note**: Make sure you are using the same custom field in filter that is used in "Select where criteria info is to be stored" during advance integration configuration.
 
 Click **Save** to save the filter.
 
