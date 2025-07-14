@@ -45,7 +45,7 @@ Refer the screenshot given below for reference.
 | **Jama Client Secret**  | Authentication type is OAuth Authentication  | Enter Client secret of the user added above. |
 | **Jama System Date Format** | Always                                  | Add the date format from 'Java Date Time Format' field in the System Properties > General Properties area tab in Root admin panel of Jama. Default value is MM/dd/yyyy hh:mm:ss a z". For more details, refer section [Setting up Date format field for System configuration](#setting-up-date-format-field-for-system-configuration) |
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from TEST MEDIAWIKI. Click [Import SSL Certificates](import-ssl-certificates.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 > **Note**: If you select OAuth for Jama Authentication Type, then you need to provide values for Jama Client Id and Jama Client Secret. Refer the steps in OAuth section of document **Setting up OAuth Credentials in Jama** [here](https://dev.jamasoftware.com/rest#auth) for generating Client Id and Client Secret for OAuth authentication.
 
@@ -66,25 +66,25 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 * We can use **Location** or **Location Path** fields to define which Set/Component/Folder the entity should go. Location field internally works on location ID, whereas Location Path internally works on location full path name. If the specified path is not found, an error is displayed, and field mapping must be updated.
 * By default, **Location** and **Location Path** fields cannot be mapped together.
 * For Non-Component, Non-Set and Non-Folder entities:
-  ** In addition to these **Location** and **Location Path** fields, **Location Related Fields** i.e. **Component**, **Set** and **Folder** fields can be mapped  
-  ** These can, with/ without **Location** and **Location Path** fields, combined to create a valid path for the Jama entity  
-  ** These three are relative fields, i.e. prior to the additional path, it will construct its relative path  
-  ** Precedence will be given to the **Location**/**Location Path** fields, followed by **Component**, then **Set**, and lastly the **Folder** field.  
-  ** Example:  
-    *** **Location Path**: /Component1, **Set**: /Set1, **Folder**: /Folder1/Folder2 → **Final Entity Location**: /Component1/Set1/Folder1/Folder2  
-    *** **Location Path**: /Component1, **Component**: /Component2, **Set**: /Set1, **Folder**: /Folder1 → **Final Entity Location**: /Component1/Component2/Set1/Folder1  
-    *** **Set**: /Set1 → **Final Entity Location**: /Set1  
-    *** **Component**: /Component1, **Set**: /Set1 → **Final Entity Location**: /Component1/Set1  
-  ** Few examples which will result into errors:  
-    *** **Location Path**: /Component1/Set1/Folder1, **Set**: /Set1, **Folder**: /Folder2 → **Error Cause**: Set1 cannot be found/ created under a folder in Jama hierarchy.  
-    *** **Component**: /Component1, **Folder**: /Folder1 → **Error Cause**: Folder1 cannot be found/ created directly under a component in Jama hierarchy.  
-  ** Additionally, data expected from such fields would also be relative, just as expected data for them is relative  
-  ** Check and Create Functionality for Location Related Fields:  
-    *** Behavior during create/update:  
-      **** If the provided Component/Set/Folder exists, entity will be added under final entity location  
-      **** If the provided Component/Set/Folder does not exist:  
-        ***** If checkAndCreate is enabled, the component/set/folder will be checked and created and entity will be added under the final entity location  
-        ***** If checkAndCreate is disabled, Processing failure will be observed with error code `[[OH-Jama-0102]]`
+  * In addition to these **Location** and **Location Path** fields, **Location Related Fields** i.e. **Component**, **Set** and **Folder** fields can be mapped  
+  * These can, with/without **Location** and **Location Path** fields, combined to create a valid path for the Jama entity  
+  * These three are relative fields, i.e. prior to the additional path, it will construct its relative path  
+  * Precedence will be given to the **Location**/**Location Path** fields, followed by **Component**, then **Set**, and lastly the **Folder** field.  
+  * Example:
+    * **Location Path**: /Component1, **Set**: /Set1, **Folder**: /Folder1/Folder2 → **Final Entity Location**: /Component1/Set1/Folder1/Folder2  
+    * **Location Path**: /Component1, **Component**: /Component2, **Set**: /Set1, **Folder**: /Folder1 → **Final Entity Location**: /Component1/Component2/Set1/Folder1  
+    * **Set**: /Set1 → **Final Entity Location**: /Set1  
+    * **Component**: /Component1, **Set**: /Set1 → **Final Entity Location**: /Component1/Set1  
+  * Few examples which will result into errors:
+    * **Location Path**: /Component1/Set1/Folder1, **Set**: /Set1, **Folder**: /Folder2 → **Error Cause**: Set1 cannot be found/created under a folder in Jama hierarchy.  
+    * **Component**: /Component1, **Folder**: /Folder1 → **Error Cause**: Folder1 cannot be found/created directly under a component in Jama hierarchy.  
+  * Additionally, data expected from such fields would also be relative, just as expected data for them is relative  
+  * Check and Create Functionality for Location Related Fields:
+    * Behavior during create/update:
+      * If the provided Component/Set/Folder exists, entity will be added under final entity location  
+      * If the provided Component/Set/Folder does not exist:
+        * If checkAndCreate is enabled, the component/set/folder will be checked and created and entity will be added under the final entity location  
+        * If checkAndCreate is disabled, Processing failure will be observed with error code `[[OH-Jama-0102]]`
 
 ```xml
 <OH_Set checkAndCreate="true">
@@ -93,7 +93,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 ```
 > **Note** : If for any of these Location Related fields or Location or Location Path, any change is detected from source system, for Jama as the target system, the whole relative will always be reconstructed from all these fields together.
 
-## Entity type wise specific configuration
+#### Entity type wise specific configuration
 
 * **Component and Set**  
   ** Neither **Location** nor **Location Path** is mandatory.  
@@ -105,7 +105,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
   ** Either **Location** or **Location Path** or a combination of **Component**, **Set** and **Folder** with/without **Location Path**/**Location** should be mapped such that a valid path can be created from these fields, else it will result into error.  
   ** **Location** field is, by default, mandatory. Still, if you are mapping **Location Path** or a combination of **Component**, **Set** and **Folder** fields with/without **Location Path**, in that case, you can ignore the warnings for the **Location** field you get while saving the mapping, which states that mandatory fields are not mapped.
 
-## Lookup configuration
+#### Lookup configuration
 
 * **Location field:**  
   ** It internally works on Set/Component/Folder location id.  
@@ -122,8 +122,20 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 > **Note** :The values mapped for location will be project specific. For example, in the image shown above, the location '/Defect' is selected only for '/DemoProject' project.
 
 * **Location Path field:**  
-  ** It internally works on Set/Component/Folder location path full name.  
-  ** This is**
+  * It internally works on Set/Component/Folder location path full name. This is specifically added for multiple projects using same field mapping. In this case, the location path mapped will be looked up in the target project and location id will be selected considering:  
+    a) the project and  
+    b) the location path mapped.  
+    If two paths have the same name, then the first one will be considered, and entity will be added at that location.  
+  * The disadvantage for using **Location Path field** in field mapping is that mapping will be impacted by the change in the name of any Set/Component/Folder that is part of the location path.
+
+* **Lock State Field**  
+  * To denote the status of lock on the item, **OH Lock Status** field is introduced in **OpsHub Integration Manager**.  
+  * This field can be used when a user wants to acquire or release the lock on item based on certain conditions, when Jama is configured at the target side in integration.  
+    * Set the value to **Locked** to acquire the lock on the synced target item.  
+    * Set the value to **Unlocked** to release the lock on the synced target item.  
+    * Set the **No Change** value to avoid any modification on item's lock.  
+  * If **OH Lock Status** field is mapped at the source side, it will give empty value.
+
 
 ## Set entity type Fields
 
@@ -310,7 +322,7 @@ Jama query is based on **OR** condition when there are more than one field.
 **Sample query:**  
 `"Custom_Text:@oh_internal_id@","Priority:@priority@"`
 
-> 📝 Target Search Query is not case sensitive. If there are multiple values having difference in only cases, then it will pick the first entity based on the input provided (in case the user has enabled the option "Continue with the first entity found")
+> **Note**: Target Search Query is not case sensitive. If there are multiple values having difference in only cases, then it will pick the first entity based on the input provided (in case the user has enabled the option "Continue with the first entity found")
 
 **The above mentioned target search query works for all the entities except the Test Group entity. For Test Group entity, refer to the below section.**
 
@@ -329,9 +341,8 @@ Jama query is based on **OR** condition when there are more than one field.
 - `"id:12345-67890"` where 12345 is Test Plan id and 67890 is Test Group id  
 - `"name:12345-default test group"` where 12345 is Test Plan id and 'default test group' is Test Group name
 
-> 📝 The above mentioned syntax can also be referred for **default link configuration in relationships mapping** for Test Group entity.
-
-> 📝 The above mentioned syntax is **case sensitive.**
+> **Note**: The above mentioned syntax can also be referred for **default link configuration in relationships mapping** for Test Group entity.
+> **Note**: The above mentioned syntax is **case sensitive.**
 
 ---
 
@@ -403,7 +414,7 @@ Jama query is based on **OR** condition when there are more than one field.
     - [" changed from "] - No impact on revision processing
     - [" to "] - If this token comes in the new value, no impact. But if it appears in the old value, then synchronization of the value may be incorrect.
 
-> 📝 In case, chances of such tokens is possible in your case, you can choose to have either [Only Current State = Yes configuration](../integrate/integration-configuration.md#sync-only-current-state) or [Overwrite=True](mapping_configuration.md#overwrite) in Field mapping for these fields. Otherwise the revisions and fields details will be synchronized properly when the fields are updated in a revision having the expected format.
+> **Note**: In case, chances of such tokens is possible in your case, you can choose to have either [Only Current State = Yes configuration](../integrate/integration-configuration.md#sync-only-current-state) or [Overwrite=True](mapping_configuration.md#overwrite) in Field mapping for these fields. Otherwise the revisions and fields details will be synchronized properly when the fields are updated in a revision having the expected format.
 
 ---
 
@@ -494,7 +505,7 @@ Jama query is based on **OR** condition when there are more than one field.
 
 ::Please enter appropriate details in this window and save it.
 
-> 📝 If the first name/last name details are empty, then revisions/history/user value might be lost during the synchronization.  
+> **Note**: If the first name/last name details are empty, then revisions/history/user value might be lost during the synchronization.  
 For proper synchronization, it is important to fill all the mandatory details while adding the user information in the system.
 
 ---
@@ -582,6 +593,6 @@ For changing date field display format in Jama end system, follow the steps give
 
 The recommended date format is the Jama system default date format i.e. `MM/dd/yyyy hh:mm:ss a z`. It is recommended that date format should include timezone.
 
-> 📝 Any changes in date format will be reflected in the later "Versions" and "Activities" of an entity in Jama. Any versions before date format changes remain unaffected.
+> **Note**: Any changes in date format will be reflected in the later "Versions" and "Activities" of an entity in Jama. Any versions before date format changes remain unaffected.
 
 
