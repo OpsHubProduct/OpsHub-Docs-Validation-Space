@@ -9,6 +9,7 @@ Please refer to [Integration Prerequisites](integration-prerequisites.md) page t
 
 - In this video, we will learn how to configure a system onto and how to update the system details after configuration, if required
 > **Note**: Jira is the system that has been used for this video demonstration. The steps may vary slightly from one system to another.
+
 {% embed url="https://www.youtube.com/watch?v=-S6EsbZEmBw" %}
 
 {% embed url="https://www.youtube.com/watch?v=AQeA7O4uld4&t=1s==" %}
