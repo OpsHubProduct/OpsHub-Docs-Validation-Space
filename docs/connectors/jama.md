@@ -11,7 +11,7 @@
     * For Jama Cloud version 8.61:  
       * Users **Administration** permission at the organization level to access user's meta information.  
     * For Jama Cloud versions earlier than 8.61 and/or a self-hosted version earlier than 8.62:  
-      * **Read Access** permission at the organization level to access user's meta information.
+      *  **Read Access** permission at the organization level to access user's meta information.
 
 
 > **Note**: The behavior of the Rest API(s) was changed from Jama Cloud version 8.61 and self-hosted version 8.62. Hence, there are specific additional permissions required for older versions as mentioned above to access User's meta information.
