@@ -2,7 +2,7 @@
 
 ## User Privileges
 
-1. Create a user in PagerDuty that is dedicated for OpsHub Integration Manager. This user shouldn't perform any other action from PagerDuty's user interface. We will refer to this user as IntegrationUser further in the document. For the steps to add user, please see [Steps to Add User](#adduser).
+1. Create a user in PagerDuty that is dedicated for OpsHub Integration Manager. This user shouldn't perform any other action from PagerDuty's user interface. We will refer to this user as IntegrationUser further in the document. For the steps to add user, please see [Steps to Add User](#steps-to-add-a-user).
 
 2. For authenticating the above user, we would need an API token. For the steps to generate an API token, please see [How to Generate API token](#how-to-generate-api-token) section.
 
@@ -17,11 +17,11 @@
 
 In PagerDuty, permissions can be assigned in either of the three ways:
 
-1. **Permission at Instance level**: If you want to assign permissions for the incidents of all the public services, please refer to [Permission at instance level](#readatinstancelevel) section for step-by-step guide on how to assign these permissions.
+1. **Permission at Instance level**: If you want to assign permissions for the incidents of all the public services, please refer to [Permission at instance level](#instance-level-permission) section for step-by-step guide on how to assign these permissions.
 
-2. **Permission at Service level**: If you want to assign permissions for incidents in a particular service, please refer to [Permission at service level](#readatservicelevel) section for step-by-step guide on how to assign these permissions.
+2. **Permission at Service level**: If you want to assign permissions for incidents in a particular service, please refer to [Permission at service level](#service-level-permission) section for step-by-step guide on how to assign these permissions.
 
-3. **Permission at Team Level**: If you want to group services into teams and assign permissions to the team instead of assigning the same permission at multiple services, please refer to [Permission at team level](#readatteamlevel) section for step-by-step guide on how to assign these permissions. Refer to [How to group services into teams](https://support.pagerduty.com/docs/teams) for help around grouping the services into teams.
+3. **Permission at Team Level**: If you want to group services into teams and assign permissions to the team instead of assigning the same permission at multiple services, please refer to [Permission at team level](#team-level-permission) section for step-by-step guide on how to assign these permissions. Refer to [How to group services into teams](https://support.pagerduty.com/docs/teams) for help around grouping the services into teams.
 
 # System Configuration
 
@@ -219,19 +219,19 @@ Login to the PagerDuty system with base role **Admin**, **Global Admin**, or **A
   <img src="../assets/PagerDuty7.png" />
 </p>
 
-## Service Level Permission
+### Service Level Permission
 
-### Read
+#### Read
 
 * To read incidents from a particular service, set **Observer** role at service level for the IntegrationUser.
 
-### Read & Write
+#### Read & Write
 
 * To read incidents from a particular service and to write to it, assign **Responder** role at service level for the IntegrationUser.
 
 *For better understanding of **User Roles** at service level from PagerDuty context, refer: [User roles at Service level](https://support.pagerduty.com/docs/advanced-permissions)*
 
-### Steps to Set a Role at Service Level
+#### Steps to Set a Role at Service Level
 
 1. Login to PagerDuty from an account having user role **Admin**, **Global Admin** or **Account Owner**
 
@@ -259,19 +259,19 @@ Login to the PagerDuty system with base role **Admin**, **Global Admin**, or **A
   <img src="../assets/PagerDuty10.png" />
 </p>
 
-## Team Level Permission
+### Team Level Permission
 
-### Read
+#### Read
 
 * To read incidents from a particular team, set **Observer** role at team level for the IntegrationUser.
 
-### Read & Write
+#### Read & Write
 
 * To read incidents from a particular team and to write to it, assign **Responder** role at team level for the IntegrationUser.
 
 *For better understanding of **User Roles** at team level from PagerDuty context, refer: [User roles at Team level](https://support.pagerduty.com/docs/advanced-permissions)*
 
-### Steps to set a role at Team Level
+#### Steps to set a role at Team Level
 
 1. Login to PagerDuty from an account having user role **Admin**, **Global Admin** or **Account Owner**
 
