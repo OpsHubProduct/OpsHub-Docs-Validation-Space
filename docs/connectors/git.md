@@ -14,10 +14,10 @@ Git must be installed on the machine where OpsHub Integration Manager server is 
 *Validate Git configuration: Some Git clients do not add branch information on Git clone repositories. In such cases, you need to add it manually after Git repository is cloned to validate this behavior.  
 
 Follow the steps given below to learn how to go about it:  
-* Steps for validating branch section:  
-  * Navigate to the cloned repository.  
-  * Go to the `.git` folder.  
-  * Open `config` file and if you find branch section like this:  
+*  Steps for validating branch section:  
+  *  Navigate to the cloned repository.  
+  *  Go to the `.git` folder.  
+  *  Open `config` file and if you find branch section like this:  
 
 [branch "master"]
 remote = origin
@@ -25,7 +25,8 @@ merge = refs/heads/master
 
 Here `"master"` is branch name, it could be other name as well depending on your clone repository path but if there is no section for branch then execute the command given below:  
 ```sh
-git branch -u origin/<branch_name> <branch_name>```
+git branch -u origin/<branch_name> <branch_name>
+```
 
 For example:  git branch -u origin/master master
 (If your branch name is master)
