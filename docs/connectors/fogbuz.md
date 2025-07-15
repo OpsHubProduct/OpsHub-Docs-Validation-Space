@@ -5,11 +5,11 @@
 * Create one user of FogBugz of type 'Normal' and set User Time Zone, dedicated to OpsHub Integration Manager. User should do any operations from FogBugz's user interface.  
 * For adding user and setting time zone in FogBugz, refer [Add User](#add-user) section in appendix.  
 * Ensure the user's time zone is set to UTC (also known as Coordinated Universal Time). Refer [Set User Time Zone](#set-user-time-zone) for details.
-* If you are not using SAAS instance of FogBugz, you might need to import SSL certificate to the server. To know how to import certificate, refer [Import HTTPS Certificate To Server](import-ssl-certificates.md) page.
+* If you are not using SAAS instance of FogBugz, you might need to import SSL certificate to the server. To know how to import certificate, refer [Import HTTPS Certificate To Server](../getting-started/ssl-certificate-configuration.md) page.
 
 # System Configuration
 
-Before you continue to the integration, you must first configure FogBugz. Click [System Configuration](../integrate/system-integration.md) to learn the step-by-step process to configure a system.  
+Before you continue to the integration, you must first configure FogBugz. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.  
 Refer the screenshot given below for reference.  
 
 <p align="center">
