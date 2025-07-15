@@ -204,19 +204,19 @@ Login to the PagerDuty system with base role **Admin**, **Global Admin**, or **A
 3. Click user which is used for synchronization and go to **Permissions and Teams** tab:
 
 <p align="center">
-  <img src="../assets/PagerDuty5a.PNG" />
+  <img src="../assets/PagerDuty5a.png" />
 </p>
 
 4. Select **Edit** option beside Base role:
 
 <p align="center">
-  <img src="../assets/PagerDuty6.PNG" />
+  <img src="../assets/PagerDuty6.png" />
 </p>
 
 5. Select **Observer** role under **flexible** roles and then **Save** the configuration. You can assign **Responder** role in the same way.
 
 <p align="center">
-  <img src="../assets/PagerDuty7.PNG" />
+  <img src="../assets/PagerDuty7.png" />
 </p>
 
 ## Service Level Permission
