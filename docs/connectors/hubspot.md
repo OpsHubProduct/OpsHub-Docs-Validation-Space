@@ -4,12 +4,11 @@
 * Create one user in HubSpot that is dedicated for OpsHub Integration Manager. This user shouldn't perform any other action from HubSpot's user interface. This user is referred as 'Integration User' in the documentation.
   * For this user to perform operations in HubSpot, various permission scopes are required, as outlined below. To know more about the permission scopes refer to [Manage Scopes in HubSpot](https://developers.hubspot.com/docs/guides/apps/authentication/scopes).
   * To know more about the User permissions in HubSpot refer to [HubSpot user permission guide](https://knowledge.hubspot.com/user-management/hubspot-user-permissions-guide).
-* Using the user created above, create a **Private App** in HubSpot to generate the **Access Token** and obtain the **Application Id** which is required in the system configuration form. Refer to [#create-private-app-in-hubspot](#create-private-app-in-hubspot) to know how to create private app in HubSpot.
+* Using the user created above, create a **Private App** in HubSpot to generate the **Access Token** and obtain the **Application Id** which is required in the system configuration form. Refer to [#create-private-app-in-hubspot](create-private-app-in-hubspot) to know how to create private app in HubSpot.
 
 ## Required Scope/Permission
 * When configuring a Private App to work with HubSpot, it’s important to assign only the necessary scopes based on the operations plan to perform as per business need. These scopes control what data can access or modify using private App.
-* To **add or remove scopes** in private app, refer to [#managing-permission-scopes-in-hubspot-private-app](#managing-permission-scopes-in-hubspot-private-app) section.
-
+* To **add or remove scopes** in private app, refer to [managing-permission-scopes-in-hubspot-private-app](#managing-permission-scopes-in-hubspot-private-app) section.
 > **Note** :If required scopes are missing or insufficient, the integration may fail. Always ensure the Private App has the necessary permissions before starting the integration setup.
 
 ### For Read
@@ -38,7 +37,7 @@
 
 * As you kickstart the integration, the user must first configure HubSpot system in OpsHub Integration Manager. Click [System Configuration](../integrate/system-configuration.md) to learn step-by-step process to configure a system. Refer to the following screenshot:
 
-![HubSpotSystemConfig](../assets/HubSpotSystemConfig.png)
+<p align="center"><img src="../assets/HubSpotSystemConfig.png" /></p>
 
 **HubSpot System form details**
 
@@ -46,16 +45,16 @@
 |--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **System Name**          | Provide the system's name                                                                                                                                       |
 | **API URL**              | Provide server URL of the HubSpot instance. This URL will be used for communicating with HubSpot system API. The example format of the URL would be: https://api.hubapi.com. |
-| **User Email**           | Provide the user email of a dedicated user who will be used for communicating with HubSpot API. This user should have the required privileges. Refer to [#user-privileges](#user-privileges). |
+| **User Email**           | Provide the user email of a dedicated user who will be used for communicating with HubSpot API. This user should have the required privileges. Refer to [user-privileges](#user-privileges). |
 | **Access Token**         | Provide the HubSpot private app access token for the specified user. This token must have sufficient permissions to enable communication with the HubSpot API.  |
-| **Application Id**       | Provide the Application ID set up for the specified dedicated user to connect with the HubSpot API. Refer to [#prerequisites](#prerequisites) for how to get it. |
+| **Application Id**       | Provide the Application ID set up for the specified dedicated user to connect with the HubSpot API. Refer to [prerequisites](#prerequisites) for how to get it. |
 | **Base URL for Remote Link** | Provide a different instance URL of the HubSpot instance. This URL will be used for generating the Remote Link.                                          |
 
 # Mapping Configuration
 
 Map the fields between HubSpot and the other system to be integrated to ensure that the data between both the systems synchronize correctly. Refer to the following screenshot:
 
-![HubSpotMappingConfiguration](../assets/HubSpotMappingConfiguration.png)
+<p align="center"><img src="../assets/HubSpotMappingConfiguration.png" /></p>
 
 Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
@@ -66,11 +65,11 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 * In HubSpot, whenever an attachment is added to one of the common entities mentioned above, a separate **Note** is created and associated with that entity. This Note contains the added attachment. So, if the user has configured Notes to be synced as an entity, these Notes created for attachments will also be synced to the end system.
 * Apart from this, if HubSpot is configured as the target system, each attachment added from the source system will create a new Note associated with the synced entity, containing the attachment.
 
-![HubSpotCommentConfiguration](../assets/HubSpotCommentConfiguration.png)
+<p align="center"><img src="../assets/HubSpotCommentConfiguration.png" /></p>
 
 * Refer to the screenshot below:
 
-![HubSpotAttachmentConfig](../assets/HubSpotAttachmentConfig.png)
+<p align="center"><img src="../assets/HubSpotAttachmentConfig.png" /></p>
 
 ## Mandatory Links
 
@@ -80,13 +79,13 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 
 Set a time to synchronize data between HubSpot and the other system to be integrated. Also, define parameters and conditions (if any) for integration. Refer to [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure the integration between two systems.
 
-![HubSpotIntegrationConfig](../assets/HubSpotIntegrationConfig.png)
+<p align="center"><img src="../assets/HubSpotIntegrationConfig.png" /></p>
 
 ## Criteria Configuration
 
 If the user wants to specify conditions for synchronizing an entity from HubSpot as source system to the other system, the criteria must be configured. Navigate to Criteria Configuration section on [Integration Configuration](../integrate/integration-configuration.md) page to learn in detail about Criteria Configuration.
 
-Set the **Query** as per {{SITENAME}}'s Native query format. While adding the criteria, user needs to add the internal names of the fields on which the criteria have to be applied. Given below are the sample snippets of how the HubSpot queries can be used as criteria query in {{SITENAME}}:
+Set the **Query** as per OpsHub Integration Manager's Native query format. While adding the criteria, user needs to add the internal names of the fields on which the criteria have to be applied. Given below are the sample snippets of how the HubSpot queries can be used as criteria query in OpsHub Integration Manager:
 
 **Criteria samples:**
 
@@ -142,7 +141,7 @@ Set the **Query** as per {{SITENAME}}'s Native query format. While adding the cr
 * In HubSpot, user mention is only supported in the entities of type Notes, Emails, Calls, Meetings, Tasks.
 * Grouping of criteria like - (condition1 and condition2) or (condition1 and condition3) is not supported in criteria as well as Target LookUp.
 * Hierarchy sync is not supported in HubSpot.
-* While applying criteria configuration, note that HubSpot's Search API accepts only 5 filters. Since {{SITENAME}} applies two of these filters internally, users can add a maximum of 3 additional filters to define the criteria.
+* While applying criteria configuration, note that HubSpot's Search API accepts only 5 filters. Since OpsHub Integration Manager applies two of these filters internally, users can add a maximum of 3 additional filters to define the criteria.
 * While using a query for criteria or target lookup, if a text-type field is used, the query will not execute if the field value is null.  
   For example: `[{"condition":"EQUALS","field":"dealname","value":null}]` – this query will not be executed as HubSpot API expects a value in text fields.
 * For Comment synchronization:
@@ -177,25 +176,25 @@ Set the **Query** as per {{SITENAME}}'s Native query format. While adding the cr
 
 2. Click on the **Settings** icon at the top right corner.
 
-![HubSpotSettings](../assets/HubSpotSettings.png)
+<p align="center"><img src="../assets/HubSpotSettings.png" /></p>
 
 3. In the left sidebar, navigate to **Users & Teams**.
 
 4. Click on the **Create User** button at the top right.
 
-![HubSpotUserCreation](../assets/HubSpotUserCreation.png)
+<p align="center"><img src="../assets/HubSpotUserCreation.png" /></p>
 
 5. Enter the **email address** of the user to invite.
 
-![HubSpotAddUserEmail](../assets/HubSpotAddUserEmail.png)
+<p align="center"><img src="../assets/HubSpotAddUserEmail.png" /></p>
 
 6. Click **Next**, review the invite, and click **Send**.
 
-![Note](../assets/Note.jpg)
+> **Note** :
 * The user will receive an invitation email to join HubSpot.
 * You can later modify the user’s permissions via **Users & Teams**.
 
-![HubSpotUserPermissionEdit](../assets/HubSpotUserPermissionEdit.png)
+<p align="center"><img src="../assets/HubSpotUserPermissionEdit.png" /></p>
 
 * See [#user-privileges](#user-privileges) for required permissions for different actions.
 
@@ -204,20 +203,20 @@ Set the **Query** as per {{SITENAME}}'s Native query format. While adding the cr
 1. Log in to your HubSpot Account with Admin privileges using the same user that you want to use as Integration User.
 2. Navigate to **Settings → Integrations → Private Apps**.
 
-![HubSpotPrivateApp](../assets/HubSpotPrivateApp.png)
+<p align="center"><img src="../assets/HubSpotPrivateApp.png" /></p>
 
 3. Click **Create a Private App**.
-4. Provide the App's Name (e.g., "{{SITENAME}} Integration").
+4. Provide the App's Name (e.g., "OpsHub Integration Manager Integration").
 
-![HubSpotCreatePrivateApp](../assets/HubSpotCreatePrivateApp.png)
+<p align="center"><img src="../assets/HubSpotCreatePrivateApp.png" /></p>
 
 5. Under **Scopes**, provide required scopes mentioned in [#privileges](#privileges).
 
-![HubSpotPrivateAppScopesAndName](../assets/HubSpotPrivateAppScopesAndName.png)
+<p align="center"><img src="../assets/HubSpotPrivateAppScopesAndName.png" /></p>
 
 6. Click **Create App**.
 7. Copy the Access Token (Auth Token).  
-   * This token will be used in the **API Token** field during system configuration in {{SITENAME}}.
+   * This token will be used in the **API Token** field during system configuration in OpsHub Integration Manager.
    * Refer to [#steps-to-get-the-application-id-for-hubspot](#steps-to-get-the-application-id-for-hubspot) for details.
 
 [HubSpot Private App Documentation](https://developers.hubspot.com/docs/guides/apps/private-apps/overview)
@@ -230,7 +229,8 @@ Set the **Query** as per {{SITENAME}}'s Native query format. While adding the cr
 2. The last part of the URL represents the **Application ID**.
    * Example: `https://app.hubspot.com/private-apps/45105664/2851633` → `2851633` is the Application ID.
 
-![HubSpotPrivateAppId](../assets/HubSpotPrivateAppId.png)
+<p align="center"><img src="../assets/HubSpotPrivateAppId.png" /></p>
+
 
 ## Managing Permission Scopes in HubSpot Private App
 
@@ -238,19 +238,18 @@ Set the **Query** as per {{SITENAME}}'s Native query format. While adding the cr
 2. Go to **Settings → Account → Integrations → Private Apps**.
 3. From the list of Private Apps, **select the Private App** you want to update.
 
-![HubSpotPrivateApp](../assets/HubSpotPrivateApp.png)
+<p align="center"><img src="../assets/HubSpotPrivateApp.png" /></p>
 
 4. Click **Edit** and go to the **Scopes** tab.
 
-![HubSpotEdit](../assets/HubSpotEdit.png)
+<p align="center"><img src="../assets/HubSpotEdit.png" /></p>
 
 5. **Add or remove scopes** by checking/unchecking permissions.
-
-![HubSpotScopes](../assets/HubSpotScopes.png)
+<p align="center"><img src="../assets/HubSpotScopes.png" /></p>
 
 6. Click **Save** to apply changes.
 
-![Note](../assets/Note.jpg)
+> **Note** :
 * Changing scopes **will invalidate the existing access token**. A new token needs to be generated after saving.
 * Assign only necessary scopes to follow best security practices.
 
@@ -265,11 +264,11 @@ In HubSpot, each property (field) of an entity (like Contacts, Companies, Deals,
 1. Log in to your HubSpot account.
 2. Navigate to **Settings → Data Management → Objects**. Choose the entity (e.g., Deals).
 
-![HubSpotPropertyDeal](../assets/HubSpotPropertyDeal.png)
+<p align="center"><img src="../assets/HubSpotPropertyDeal.png" /></p>
 
 3. Click **Manage Deal Properties** to view all deal entity fields.
 
-![HubSpotManageProperty](../assets/HubSpotManageProperty.png)
+<p align="center"><img src="../assets/HubSpotManageProperty.png" /></p>.
 
 4. Click any property to view its details.
 
@@ -278,8 +277,7 @@ In HubSpot, each property (field) of an entity (like Contacts, Companies, Deals,
 * **Label**: User-friendly display name.
 * **Internal Name**: Actual key used in API requests (e.g., `dealname`, `company_size`).
 
-![HubSpotDealPropertyInformation](../assets/HubSpotDealPropertyInformation.png)
-
+<p align="center"><img src="../assets/HubSpotDealPropertyInformation.png" /></p>
 ## Lookup Values
 
 * If the property is a **dropdown (enumeration)** or **association/lookup**, its internal name will be shown.
