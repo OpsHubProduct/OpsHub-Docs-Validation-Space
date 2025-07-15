@@ -2,9 +2,9 @@
 
 ## User Privileges
 
-1. Create a user in PagerDuty that is dedicated for OpsHub Integration Manager. This user shouldn't perform any other action from PagerDuty's user interface. We will refer to this user as IntegrationUser further in the document. For the steps to add user, please see [Steps to Add User](#stepstoadduser).
+1. Create a user in PagerDuty that is dedicated for OpsHub Integration Manager. This user shouldn't perform any other action from PagerDuty's user interface. We will refer to this user as IntegrationUser further in the document. For the steps to add user, please see [Steps to Add User](#adduser).
 
-2. For authenticating the above user, we would need an API token. For the steps to generate an API token, please see [How to Generate API token](#generateapitoken) section.
+2. For authenticating the above user, we would need an API token. For the steps to generate an API token, please see [How to Generate API token](#how-to-generate-api-token) section.
 
 ### Roles and Permissions
 
@@ -135,7 +135,7 @@ In PagerDuty, Target Lookup can be configured on 3 fields: **Incident Number**, 
 * **Criteria** is not fully supported in PagerDuty. An entity is considered as qualified only if it meets the criteria and is **created** after the polling time.
 
 **When PagerDuty is Target**
-* **Description** cannot be updated. So, to avoid failure, keep the 'Sync When?' to 'Create' while mapping from other end point to PagerDuty in **Advanced Settings**. To learn about Advanced Settings, refer: [Advanced Settings](mapping-configuration.md#advance-settings)
+* **Description** cannot be updated. So, to avoid failure, keep the 'Sync When?' to 'Create' while mapping from other end point to PagerDuty in **Advanced Settings**. To learn about Advanced Settings, refer: [Advanced Settings](../integrate/mapping-configuration.md#advance-settings)
 * **Status** cannot be changed from ‘Acknowledged’ to ‘Triggered’ through integration. If it is tried to be changed, then failure would be generated.
 * **Conference** fields unset is not possible. If user tries to unset it, then no failure occurs, but it will not be unset as well.
 
