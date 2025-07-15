@@ -24,7 +24,7 @@ Before configuring the integration, user must first configure Gerrit. Refer to [
 | **Password**                 | Always                        | Provide the password of the user added in **Username**. This would be the password generated from **HTTP Credentials** section of user settings in Gerrit. Refer to [HTTP Password Generation](#http-password-generation). |
 | **Review Labels**            | Always                        | Provide the Review Labels that are configured in Gerrit in JSON format. "Code-Review" label is added by default. Refer to [Review Labels](#review-labels) section for more information. |
 | **Base URL for Remote Link** | Always                        | Provide a different instance URL for the Gerrit instance. This URL will be used to generate the Remote Link. For instance, if the original instance URL is http://opshub:1234/ or any API node URL, the Remote Link should be generated using a different instance URL, such as http://domain:8081/.  
-> **Note** : If the "Base URL for Remote Link" field is empty, the system will use the configured instance/server URL to generate the Remote Link.</p> |
+> **Note** : If the "Base URL for Remote Link" field is empty, the system will use the configured instance/server URL to generate the Remote Link.</p> 
 
 ## Review Labels
 
