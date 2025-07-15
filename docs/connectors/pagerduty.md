@@ -32,7 +32,7 @@ Click [System Configuration](../integrate/system-configuration.md) to learn the 
 Refer to the screenshot given below:
 
 <p align="center">
-  <img src="../assets/PagerDuty1a.png" />
+  <img src="../assets/PagerDuty1a.PNG" />
 </p>
 
 | **Field Name**       | **When field is visible on the System form** | **Description**                                                                                                                                            |
