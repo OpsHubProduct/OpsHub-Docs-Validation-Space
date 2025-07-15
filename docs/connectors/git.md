@@ -18,16 +18,13 @@ Follow the steps given below to learn how to go about it:
   *  Navigate to the cloned repository.  
   *  Go to the `.git` folder.  
   *  Open `config` file and if you find branch section like this:  
-
-[branch "master"]
-remote = origin
-merge = refs/heads/master
-
+ [branch "master"]
+ remote = origin
+ merge = refs/heads/master
 Here `"master"` is branch name, it could be other name as well depending on your clone repository path but if there is no section for branch then execute the command given below:  
 ```sh
 git branch -u origin/<branch_name> <branch_name>
 ```
-
 For example:  git branch -u origin/master master
 (If your branch name is master)
 
@@ -59,19 +56,12 @@ If the system is deployed on HTTPS and a self-signed certificate is used, then y
 * **EOT** is the Effort required to check-in the code. It can be provided runtime by the check-in user.
 * **Reviewer** attribute accepts the name of the reviewer who reviewed the files going to be checked-in.
 * **Status** symbolizes the status of the **Requirement** to be changed once the code is checked-in.
-
-<p align="center">
-  <img src="../assets/Note.jpg" width="30px">
-</p>
-To know the version of Git you are using, refer [Find Version](#find-version) in Appendix.
-
+> **Note** :To know the version of Git you are using, refer [Find Version](#find-version) in Appendix.
 * Set SCM Repository Path Separator to `/` if OpsHub Integration Manager is installed on Linux and set `\\` if OpsHub Integration Manager is installed on Windows.
 * Leave ALM System set to 'Select' by default. In case, you need to configure any pre-commit rules before checking-in the files in the SCM system, you need to specify the ALM system from the drop-down list.
 > **Note**: For specifying the ALM system, create an ALM system. All the rules such as Bug id verification, etc. will be validated by the data existing in the specified ALM system.
-
 * Leave **Entity Type** blank by default. In case, the above ALM system option specifies any ALM system, provide the name of the entity against which the rules are configured. For example, Defect, Requirement, etc.
 > **Note**: The entity type accepts the internal name of the entity. Kindly contact your sales/support POC for getting the internal name of the entity. This input is required only when you want to enable policy enforcement rules.
-
 * Set Pre-Commit Parse to `Template` or `Regex`. Default selection is `Template`.
   * Pre-Commit Parse value should be set to `Template` when commit message follows the SCM Commit Template configured on the Git.
   * Pre-Commit Parse value should be set to `Regex` when commit message needs to be customized, once you set this option then you can set regex in SCM Commit Template configured on the Git.
@@ -91,16 +81,13 @@ To know the version of Git you are using, refer [Find Version](#find-version) in
 * To setup SSH Key for RSA authentication, refer to [SetUp SSH Key for RSA authentication](#setup-ssh-key-for-rsa-authentication) section under Appendix.
 > **Note** :Clone the Repository using SSH clone.  
 > **Note** :If you have selected RSAAuthentication and OpsHub Integration Manager is running with the service, set the Windows user/password in service LogOn. For that refer [Set Windows User/Password in Service](#set-windows-userpassword-in-service) under Appendix.
-
 * Click on **Save** button to save the System Configuration form.
 * To enable SCM check-in policy, refer [Git Hook Configuration](#git-hook-configuration) section under Appendix.
 
 # Mapping Configuration
-
 Please contact your support/sales POC for Git mapping.
 
 # Integration Configuration
-
 Set a time to synchronize data between Git and the other system to be integrated. Also, define parameters and conditions, if any, for integration. Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.  
 > **Note** :Select Git **Entity Type** to Git **Commit Information**.  
 > **Note** :Set **Start Processing Event Id** to the **Checked in changeset Id** from where the Integration will start (Events with checked-in changeset Id less than this will not be synchronized).
@@ -108,17 +95,13 @@ Set a time to synchronize data between Git and the other system to be integrated
 To find the **Event Id** (Commit Id) in Git repository, refer [Find Commit Id](#find-commit-id) section under Appendix.
 
 # Appendix
-
 ## Find version
-
 Following are the steps to know the version of a Git instance.  
 * Open command prompt and fire command `git --version`.  
 > **Note** :For Linux, fire the command on terminal.  
-
 * This will display the version of the server installed on your machine.
 
 ## Git hook configuration
-
 * Navigate to `<OpsHub_Installation_Directory>\Other_Resources\Hooks` directory.
 * Extract `Hooks_Git.zip` from above directory to some directory.
 * Configuring server hook:
@@ -137,7 +120,6 @@ Following are the steps to know the version of a Git instance.
   * Edit `template.txt` file in hooks folder to define default commit template message
 
 ## Configuring client hook
-
 ### Pre-requisite
 If you commit using Git repository through eclipse, then you need to follow the below-mentioned pre-requisites.  
 * EGIT (Eclipse plugin for git) version should be 4.3.1 or greater.
@@ -157,7 +139,6 @@ If you commit using Git repository through eclipse, then you need to follow the 
 * Edit `template.txt` file in `.git/hooks/` folder to define default commit template message
 
 ### Set Windows user/password in service
-
 * To set Windows user/password in service:  
   Go to **Services**, in the services, select **OpsHub Integration Manager Server Service → Properties → Log On tab → Log on as: This account → add Windows user and its Password → Apply → Ok**.
 * After this, restart the server service.
@@ -167,21 +148,17 @@ If you commit using Git repository through eclipse, then you need to follow the 
 </p>
 
 ### Find Commit Id
-
 * To find the Commit Id for a particular repository, open Git Bash at the location of the cloned repository.  
   Example: `C:\Git_Testing\FORClientusage\DevlopmentRepo`  
   Now, fire command:
 ```sh
 git log
 ```
-
 This will show all the commits.
 * Choose the desired Commit Id.
-
 <p align="center">
 <img src="../assets/Git_Image_4.png">
 </p>
-
 > **Note** : If you want only last commit information you can fire:
 ```sh
 git log -1
@@ -193,7 +170,6 @@ In Git Bash, use the following command:
 ```sh
 ssh-keygen -t rsa -b 4096 -C "your_email@domain.com"
 ```
-
 Press Enter to accept default location or choose another.  
 If prompted to overwrite, enter `y` or `n`.  
 Provide passphrase when prompted.
@@ -207,22 +183,18 @@ ssh-keygen -p -f ~/.ssh/id_rsa -m pem
 **Copy public key**:  
 If key pair is new, use:
 clip < ~/.ssh/id_rsa.pub
-
 Paste into Git Provider.
 
 ### Configuration python 2.6.0
-
 Download, install, and configure Python 2.6.0 with SOAPpy, fpconst and PyXml.
 
 #### Download links
-
 * Python 2.6.6: http://www.python.org/download/releases/2.6.6/
 * PyXML-0.8.4: ftp://mirror.rit.edu/gentoo/distfiles/PyXML-0.8.4.tar.gz
 * SOAPPy0.12.0: http://sourceforge.net/projects/pywebsvcs/files/SOAP.py/0.12.0_rc1/
 * fpconst-0.7.2: http://pypi.python.org/pypi/fpconst
 
 #### Installation instruction
-
 **Install Python 2.6.2 1.1**  
 Set environment variable: `classpath='c:\\python26'`
 
@@ -245,7 +217,6 @@ Run:
 ```sh
 python setup.py install
 ```
-
 #### Verifications
 
 Open Python shell and verify:
