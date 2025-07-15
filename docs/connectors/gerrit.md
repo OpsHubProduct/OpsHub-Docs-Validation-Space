@@ -28,7 +28,7 @@ Before configuring the integration, user must first configure Gerrit. Refer to [
 
 ## Review Labels
 
-Review Labels configured in Gerrit can be given in the system form if required to synchronize. Review Labels mentioned here will be visible on [Mapping Configuration](../integrate/mapping-configuration) screen. The "Code-Review" label will be added by default in {{SITENAME}}. Refer to [this documentation](https://gerrit-review.googlesource.com/Documentation/config-labels.html) for more details.  
+Review Labels configured in Gerrit can be given in the system form if required to synchronize. Review Labels mentioned here will be visible on [Mapping Configuration](../integrate/mapping-configuration) screen. The "Code-Review" label will be added by default in OpsHub Integration Manager. Refer to [this documentation](https://gerrit-review.googlesource.com/Documentation/config-labels.html) for more details.  
 A sample JSON for Review Label is given below:
 
 ```json
