@@ -9,11 +9,11 @@
 ### Roles and Permissions
 
 * **When PagerDuty is only source end point (Only Read)**  
-  ** Assign **Observer** role to IntegrationUser.  
-  ** If you want to configure [Remote Entity Fields](../integrate/integration-configuration.md#tracking-id-and-link-of-entities-across-systems), please refer to **Read & Write** section below.
+ ** Assign **Observer** role to IntegrationUser.  
+ ** If you want to configure [Remote Entity Fields](../integrate/integration-configuration.md#tracking-id-and-link-of-entities-across-systems), please refer to **Read & Write** section below.
 
 * **When PagerDuty is destination end point (Read & Write)**  
-  ** Assign **Responder** role to IntegrationUser.
+ ** Assign **Responder** role to IntegrationUser.
 
 In PagerDuty, permissions can be assigned in either of the three ways:
 
