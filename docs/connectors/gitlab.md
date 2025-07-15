@@ -9,7 +9,7 @@ Refer [Generating Personal Access Token](#generating-personal-access-token) in a
 
 Before you proceed to the integration, you must first configure GitLab onto OpsHub Integration Manager.  
 
-Click [System Configuration](../integrate/system-integration.md) to learn the step-by-step process to configure a system.  
+Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.  
 
 Refer to the screenshot given below for reference:
 
