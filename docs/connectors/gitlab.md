@@ -64,7 +64,7 @@ For example, if your commit message is: "commiting against TEST-123, added login
 And the related workitem ID on which you want to synchronize commit information is TEST-123, then RegEx for your input will be:  
 `[A-Za-z]+-\d+`
 
-* Use Case 1 - Create/Update against specific workitem: If you want to commit against a workitem ID in your target system, then you will need to specify a [Target Lookup Query](integrate/integration-configuration.md#search-in-target-before-sync) for your target system. The parameter of specifying Related Workitem ID is @Related Workitem Id(s)@.
+* Use Case 1 - Create/Update against specific workitem: If you want to commit against a workitem ID in your target system, then you will need to specify a [Target Lookup Query](../integrate/integration-configuration.md#search-in-target-before-sync) for your target system. The parameter of specifying Related Workitem ID is @Related Workitem Id(s)@.
   * Update against existing workitem: This query will search the Related WorkItem ID (for which you specified a RegEx) and will add the commit information to TEST-123 according to the field mappings configured. If the entity is found, then commit information will be updated on that entity according to the field mapping.
   * Create new workitem then update: If this entity is not found in your target system and if you want integration to create this entity first and then synchronize commit information to it, then you can set the "If no entity found matching above query?" option in Target Lookup Query to "Create new entity in target".
 * Use Case 2 - Create new workitem everytime: If you want integration to synchronize and create an entity in your target system for every commit information, then provide an incorrect RegEx which will not match your workitem ID in your commit message. For example, you can provide RegEx as $OpsHub$. Since $OpsHub$ will not match your workitem ID, the integration will create a new entity in your target system according to the mapping configured. There is no need to enter a Target Lookup Query in this case.
@@ -149,7 +149,7 @@ Set 'Query' as given below. For Example:
 ## Commit Information
 
 * GitLab as a source system:
-  * {{SITENAME}} cannot synchronize commits older than 1 year for a specific project.
+  * OpsHub Integration Manager cannot synchronize commits older than 1 year for a specific project.
     * Reason: GitLab removes pushed commit events older than 1 year from their records for performance reasons.
   * Criteria configuration is not supported.
   * Synchronization of Commit Discussions are not supported.
@@ -173,12 +173,7 @@ For generating Personal Access Token, follow the steps given below:
 5. Choose the desired scopes. **api** must be selected in scope for enabling full access to GitLab and its projects.
 6. Click the **Create personal access token** button.
 7. Save the personal access token somewhere safe.  
-
-<p align="center">
-  <img src="../assets/Note.jpg" width="30px">
-</p>
-
-Once you leave or refresh the page, you will not be able to access the Personal Access Token again.
+> **Note** : you leave or refresh the page, you will not be able to access the Personal Access Token again.
 
 <p align="center">
   <img src="../assets/personal_access_token1.png">
