@@ -229,7 +229,7 @@ Set polling time as the time after which the user wants to synchronize data betw
   <img src="../assets/Aras_Custom_entity_4.png" width="1250px" />
 </p>
 
-> Refer to [[#Create custom property|Create custom property]] to add properties after creating ItemType.
+> Refer to [Create custom property](#create-custom-property) to add properties after creating ItemType.
 
 ## <div id="Item Number">Set Item Number for Custom Entity</div>
 
