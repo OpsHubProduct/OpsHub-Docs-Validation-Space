@@ -87,7 +87,7 @@ Map the fields between Aha! and the other system to be integrated to ensure that
 
 Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
-In Aha!, entity type selection in mapping configuration depends on the project/product selection. For more details, please refer to [Project Selection](project-selection) section.
+In Aha!, entity type selection in mapping configuration depends on the project/product selection. For more details, please refer to [Project Selection](#project-selection) section.
 
 > **Note**: In OpsHub Integration Manager, for the sync of Parking lots, the Release entity needs to be seleted at mapping level {as Parking lots are considered as Release by OpsHub Integration Manager}.
 
