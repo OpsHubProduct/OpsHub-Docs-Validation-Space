@@ -311,13 +311,14 @@ If you are getting an **Internal Server Error** with **Status Code: 500**, then 
 2. Navigate to the **Developer** section.  
 <p align="center">
   <img src="../assets/aha_api_token_2.png">
-</p>
+</p>  
 3. In the API keys section, click **Generate API key**.  
 <p align="center">
   <img src="../assets/aha_api_token_3.png">
-</p>
+</p>  
 4. Give name to the key and click on Generate API key.  
 <p align="center">
   <img src="../assets/aha_api_token_4.png">
-</p>
+</p>  
 5. Copy the generated API key and save it for future reference.
+
