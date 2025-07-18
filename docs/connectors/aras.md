@@ -279,7 +279,7 @@ Set polling time as the time after which the user wants to synchronize data betw
 > Refer to the screenshot below for reference:
 
 <p align="center">
-  <img src="../assets/Aras_Administration_Tab_1.png" width="1250px" />
+  <img src="../assets/Aras_Administration_Tab_1.png"/>
 </p>
 
 
