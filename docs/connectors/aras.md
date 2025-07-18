@@ -6,11 +6,11 @@
 
 | **Permission Types**              | **Justification**                                                                                                                                      | **Needed When**                                                                                                      | **How To**                                                                                                                                                            |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Get                              | To get values of each field for particular item of 'item type' to be integrated                                                                       | Aras Innovator is source system,target system or both.                                                              | To learn how to provide user with the Get permission, refer to [[#Give Necessary Permissions to User for Itemtype|Give Necessary Permissions to User for Itemtype]] section. |
-| Can Discover                     | To get the list of items present for a given itemtype.                                                                                                 | Aras Innovator is source system,target system or both.                                                              | To learn how to provide user with the Can Discover permission, refer to [[#Give Necessary Permissions to User for Itemtype|Give Necessary Permissions to User for Itemtype]] section. |
-| Update                           | To update an item.                                                                                                                                     | Aras Innovator is target system. Also,when Aras Innovator is source system and Update Permission is required for Remote Id or Remote Link configuration in Integration .Please check '''Tracking Id and Link of Entities Across Systems''' section on [[Integration Configuration]] page to learn about Remote Id and Remote Link. | To learn how to provide user with the Update permission, refer to [[#Give Necessary Permissions to User for Itemtype|Give Necessary Permissions to User for Itemtype]] section. |
-| Can Add                          | To create an item: The user is allowed to create record from the Aras Innovator System (through the UI and API both) only when the user's identity is allowed in the "Can Add" tab | Aras Innovator is target system.                                                                                    | To learn how to assign "Can Add" permission to user's identity on particular itemtype, refer to [[#Assign Identity on Item Type|Allow Can Add permission to User]] section. |
-| Life Cycle State Transition      | To update the state during transition, the role in Life Cycle transition needs to be set as '''Administrators''' for the Integration User [configured in the OpsHub Integration Manager]. | When Aras is the target system.                                                                                      | To learn how to provide user with the Lifecycle State Transition permission, refer to [[#Assign Life Cycle State Transition Permissions for Item Type |Assign Life Cycle Transition Permission for Item Type]] section. |
+| Get                              | To get values of each field for particular item of 'item type' to be integrated                                                                       | Aras Innovator is source system,target system or both.                                                              | To learn how to provide user with the Get permission, refer to [Give Necessary Permissions to User for Itemtype](#give-necessary-permissions-to-user-for-itemtype) section. |
+| Can Discover                     | To get the list of items present for a given itemtype.                                                                                                 | Aras Innovator is source system,target system or both.                                                              | To learn how to provide user with the Can Discover permission, refer to [Give Necessary Permissions to User for Itemtype](#give-necessary-permissions-to-user-for-itemtype) section. |
+| Update                           | To update an item.                                                                                                                                     | Aras Innovator is target system. Also,when Aras Innovator is source system and Update Permission is required for Remote Id or Remote Link configuration in Integration .Please check '''Tracking Id and Link of Entities Across Systems''' section on [Integration Configuration](../integrate/integration-configuration.md) page to learn about Remote Id and Remote Link. | To learn how to provide user with the Update permission, refer to [Give Necessary Permissions to User for Itemtype](#give-necessary-permissions-to-user-for-itemtype) section. |
+| Can Add                          | To create an item: The user is allowed to create record from the Aras Innovator System (through the UI and API both) only when the user's identity is allowed in the "Can Add" tab | Aras Innovator is target system.                                                                                    | To learn how to assign "Can Add" permission to user's identity on particular itemtype, refer to [Allow Can Add permission to User](#assign-identity-on-item-type) section. |
+| Life Cycle State Transition      | To update the state during transition, the role in Life Cycle transition needs to be set as '''Administrators''' for the Integration User [configured in the OpsHub Integration Manager]. | When Aras is the target system.                                                                                      | To learn how to provide user with the Lifecycle State Transition permission, refer to [Assign Life Cycle Transition Permission for Item Type](#assign-life-cycle-state-transition-permissions-for-item-type) section. |
 
 ## Versionable Item Type<br>
 
@@ -22,12 +22,12 @@ Follow [Make Item Type Versionable](#make-item-type-versionable) in the Appendix
 
 OpsHub Integration Manager requires this service to communicate with Aras Innovator server. It acts as a communication layer between Aras Innovator and OpsHub Integration Manager.
 
-## System Prerequisites
+### System Prerequisites
 * Configure OpsHub Integration Manager Aras Service on a machine that has .NET Framework version 4.7.2 or a higher version installed.
 * Please refer to the following link for information on software and hardware requirements for installing .NET Framework 4.7.2 :  
 https://docs.microsoft.com/en-us/dotnet/framework/get-started/system-requirements
 
-## Installation Steps
+### Installation Steps
 {{Aras_Installation_Steps}}
 
 # System Configuration<br>
@@ -94,20 +94,20 @@ Set polling time as the time after which the user wants to synchronize data betw
 * Target Look Up Query based on internal id of source itemtype:  
   **Example query:** [ECR].custom_text='@oh_internal_id@'
 
-# Known Behaviors
+## Known Behaviors
 **Remote ID Synchronization**  
 * In Aras, custom entity types don't have Item Number (which stores Display Id) field by default. Hence, in such cases, OpsHub Integration Manager will use entity's Internal Id as Remote Id to be synchronized to the other end system.  
 * To show the 'Display Id' as Remote Id, it is required to add the Item Number field in Aras.  
   Refer to [Add Item Number Field](#set-item-number-for-custom-entity) for more details.
 
-# Known Limitations
+## Known Limitations
 * Only English alphabets(A-Z,a-z), numeric digits(0-9) and special characters (Example:- :,<,?,>,],[,!,@ etc.) are supported for Criteria Configuration.  
 * Attachment as a field is not supported.  
 * "No Related" Relationship Type is not supported.  
 * For Aras Innovator as Target System, if the attachment filename contains Windows special characters (/,\,",:,*,?,<,>), then file will not be added in Aras Innovator. As a result, the user will encounter a processing failure. This is because Aras Innovator does not support Windows special characters in filename.  
   Please check [[OH-Aras-1502|Synchronise file with Windows special characters]] to find how to synchronise attachment with Windows special characters in filename.
 
-## Limitations to be Resolved in Upcoming Releases of OpsHub Integration Manager
+### Limitations to be Resolved in Upcoming Releases of OpsHub Integration Manager
 
 * To synchronise File as Attachment to Itemtype being synchronised, there should be unique relationship type between Itemtype and File.  
 * Comments with attachments are not supported.  
