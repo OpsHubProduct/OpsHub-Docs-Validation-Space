@@ -69,7 +69,7 @@ https://admhelp.microfocus.com/octane/en/16.1.100-16.1.200/Online/Content/API/qu
 * ALM Octane supports a hierarchy depth of only 3 levels. Application module is checked, created, and separated based on `\` separator. If an entity with a hierarchy greater than 3 levels is coming from the source system, due to the imposed limitation of ALM Octane, the entity will be created at the 3rd hierarchy level.
 * No testrun-link-to-defect support at Run Manual steps level (Run Manual entity level support exists for the mentioned items).
 * When Octane is the target system, the link between **Run Manual** and **Run Suite** will not be synced.  
-  **Reason:** The required API is not available.
+  * **Reason:** The required API is not available.
 * The **Script** field of a Gherkin Test entity will be synced as **plain text only**.  
   > **Note** : Formatting in the **Script** field will not be synced due to API limitations.
 * To synchronize the **Add Call Step**, a customized workflow is required. Please reach out to the opshub support team for assistance in setting this up.
