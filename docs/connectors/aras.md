@@ -32,7 +32,7 @@ https://docs.microsoft.com/en-us/dotnet/framework/get-started/system-requirement
 
 # System Configuration<br>
 
-Before the user continues with the integration, he/she must first configure Aras Innovator System. Refer to [System Configuration](../integrtae/system-configuration.md) to learn step-by-step process to configure a system. See the screenshot given below for reference:
+Before the user continues with the integration, he/she must first configure Aras Innovator System. Refer to [System Configuration](../integrate/system-configuration.md) to learn step-by-step process to configure a system. See the screenshot given below for reference:
 
 <p align="center">
   <img src="../assets/Aras_System_config_6.png" width="1100px" />
@@ -44,7 +44,7 @@ Before the user continues with the integration, he/she must first configure Aras
 | **Version**                         | Provide versin for Aras Innovator Instance. Check [Get Aras Innovator Version](#get-aras-innovator-version) in the Appendix section to learn how to get Aras Innovator version |
 | **Aras Innovator Instance URL**     | Provide URL for Aras Innovator Instance.Example:- <hostname>/InnovatorServer/Server/InnovatorServer.aspx                                                            |
 | **Aras Innovator User Name**        | Provide username of the user dedicated for OpsHub Integration Manager. Please ensure that user has the necessary permissions. Refer to [User privileges](#user-privileges)
-for permissions required by user identity. |
+for permissions required by user identity.                                                                                                                                                                   |
 | **Aras Innovator User Password**    | Provide password of user dedicated for OpsHub Integration Manager.                                                                                                   |
 | **Aras Innovator Database name**    | Provide Aras Innovator Database name to which the connection needs to be done. Refer to [Get Database Name](#get-database-name) in the Appendix section to learn how to get Database name |
 | **Aras Innovator Web Service URL**  | Provide URL for the hosted OpsHubArasService. Refer to [Hosting opshub Aras service](#hosting-opshub-aras-service) to learn how to host OpsHub Integration Manager Aras Webservice |
@@ -73,7 +73,7 @@ Set polling time as the time after which the user wants to synchronize data betw
 * If the user wants to specify conditions for synchronizing an entity between Aras Innovator and the other system to be integrated, he/she can use the **Criteria Configuration** feature.  
 * To configure criteria in Aras Innovator, integration needs to be created with Aras Innovator as the source system. The user can set a query on a particular ItemType.  
 * Go to Criteria Configuration section on [Integration Configuration](../integrate/integration-configuration.md) page to learn in detail about Criteria Configuration.  
-* Aras Innovator Query format is **[ItemType].<field_internal_name>='<value>'**  
+* Aras Innovator Query format is **[ItemType].<field_internal_name>='`<value>`'**  
 
 <span style="color:blue">**Criteria samples**</span>
 
