@@ -32,10 +32,7 @@ Refer to the following screenshot for reference:
 | **User Email** | Provide the email Id of a dedicated user who will be used for communicating with Aha! API. This user should have the required privileges to use the Aha! API. For more details on the required privileges, please refer to [User privileges](#user-privileges) section. |
 | **API Token** | Provide the bearer API Token generated in Aha! for the user given in "User Email" field. Please refer to [Steps for generating the API token](#steps-for-generating-the-api-token) section for generating the API token. |
 | **Metadata Details** | This data is pre-populated in JSON format based on our knowledge of system metadata (entity type, field names, lookup...). The user can edit entity types based on his/her Aha! instance details for system metadata. For the format and guidance related to filling these details in JSON form, please refer to [Understanding JSON Input](#understanding-json-input) section. |
-| **Base URL for Remote Link** | Provide different Instance URL of the Aha! instance. This URL is used for generating the Remote Link. E.g., if the Instance URL is https://opshubTest33.aha.io/ or any API node URL, but Remote Link needs to be generated with a different Instance URL such as https://opshubTest.aha.io/.  
-> **Note** : If "Base URL for Remote Link" is empty, it will use Instance/Server URL to generate Remote Link if configured on Integration. 
-
-<br>
+| **Base URL for Remote Link** | Provide different Instance URL of the Aha! instance. This URL is used for generating the Remote Link. E.g., if the Instance URL is https://opshubTest33.aha.io/ or any API node URL, but Remote Link needs to be generated with a different Instance URL such as https://opshubTest.aha.io/. **Note** : If "Base URL for Remote Link" is empty, it will use Instance/Server URL to generate Remote Link if configured on Integration. 
 
 **Understanding JSON Input**
 
@@ -121,7 +118,7 @@ In Aha!, Record links and Reference fields will be supported as relationships.
 * For Requirement type of entities, Feature is a mandatory relationship linkage as requirements can only be created inside the feature.
 * For To-do type of entities, the Parent is a mandatory relationship linkage as we support the creation of a to-do entity inside the other entity only. Here, the parent entity can be any other entity.
 
-## Reference Fields
+### Reference Fields
 
 * Reference fields are the fields that refer to some other Aha! entity we support.
 * Reference fields[System/Custom fields] will be synchronized through relationships. For references, the names of the Reference fields will be shown in link type mapping of the Relationship Configuration, as shown in the screenshot below:
@@ -192,10 +189,9 @@ Set the **Query** as per Aha! encoded query format. Criteria is only applicable 
 # Known Limitations
 
 * Below Custom fields are not supported by OpsHub Integration Manager:
-  **Score card field  
-  Table field  
-  Worksheet field**
-
+  * Score card field  
+  * Table field  
+  * Worksheet field
 * Limitations due to the lack of Aha! API:
   * Entities will be synced without history.
   * Metadata is not available for the system fields. So, we are providing static metadata in the system itself. Here, the user can change the display name of the entity. User can provide the entity name using the JSON input, and if any user doesn't provide any JSON input, an inbuild entity display name will be considered.
@@ -222,7 +218,7 @@ If you are getting an **Internal Server Error** with **Status Code: 500**, then 
 ## Add User
 
 1. Login to Aha! using the user with privileges to create a new user.  
-2. Navigate to Settings given at the top right corner and go to **Account** section.  
+2. Navigate to Settings given at the top right corner and go to **Account** section.
 <p align="center">
   <img src="../assets/aha_add_user_1.png">
 </p>
