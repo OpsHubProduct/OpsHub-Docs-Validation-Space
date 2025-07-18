@@ -33,7 +33,7 @@ Refer to the following screenshot for reference:
 | **API Token** | Provide the bearer API Token generated in Aha! for the user given in "User Email" field. Please refer to [Steps for generating the API token](#steps-for-generating-the-api-token) section for generating the API token. |
 | **Metadata Details** | This data is pre-populated in JSON format based on our knowledge of system metadata (entity type, field names, lookup...). The user can edit entity types based on his/her Aha! instance details for system metadata. For the format and guidance related to filling these details in JSON form, please refer to [Understanding JSON Input](#understanding-json-input) section. |
 | **Base URL for Remote Link** | Provide different Instance URL of the Aha! instance. This URL is used for generating the Remote Link. E.g., if the Instance URL is https://opshubTest33.aha.io/ or any API node URL, but Remote Link needs to be generated with a different Instance URL such as https://opshubTest.aha.io/.  
-> **Note** : If "Base URL for Remote Link" is empty, it will use Instance/Server URL to generate Remote Link if configured on Integration. |
+> **Note** : If "Base URL for Remote Link" is empty, it will use Instance/Server URL to generate Remote Link if configured on Integration. 
 
 <br>
 
@@ -87,7 +87,7 @@ Map the fields between Aha! and the other system to be integrated to ensure that
 
 Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
-In Aha!, entity type selection in mapping configuration depends on the project/product selection. For more details, please refer to [Project Selection](../integrate/aha.md#project-selection) section.
+In Aha!, entity type selection in mapping configuration depends on the project/product selection. For more details, please refer to [Project Selection](project-selection) section.
 
 > **Note**: In OpsHub Integration Manager, for the sync of Parking lots, the Release entity needs to be seleted at mapping level {as Parking lots are considered as Release by OpsHub Integration Manager}.
 
@@ -161,7 +161,7 @@ Set the **Query** as per Aha! encoded query format. Criteria is only applicable 
 
 * Go to **Search in Target Before Sync** section on [Integration Configuration](../integrate/integration-configuration.md) page to learn in detail about how to configure Target LookUp.
 
-* Overall, Target LookUp Query is similar to [Criteria Configuration](../integrate/aha.md#criteria-configuration), except that the value part contains a field name with '@' instead of static value.
+* Overall, Target LookUp Query is similar to [Criteria Configuration](#criteria-configuration), except that the value part contains a field name with '@' instead of static value.
 
 **Target LookUp query samples:**
 
