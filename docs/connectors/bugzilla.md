@@ -99,11 +99,11 @@ Example: `status=RESOLVED&priority=High`
 * The below mentioned fields are supported as 'Text' type fields in the synchronization:
   * Orig.Est, Hours Worked, Hours Left, %Complete
 * Synchronization of 'Comment Link' [i.e., mentioned as 'Comment 1' in the below image] is not supported.  
-  <div align="center">![](../assets/Comment_link.png)</div>
+  <p align="center"><img src="../assets/Comment_link.png"></p>
 * Only the comments added by user will be synchronized and not the system generated comments.  
-  <div align="center">![](../assets/Comment_worklog.png)</div>
+  <p align="center"><img src="../assets/Comment_worklog.png"></p>
 * Only the comment added by user while adding attachment will be synchronized and not the system generated comment.  
-  <div align="center">![](../assets/Comment_attachment.png)</div>
+  <p align="center"><img src="../assets/Comment_attachment.png"></p>
 * OpsHub Integration Manager supports synchronization of Comments, within which if you have provided the Comment mentions, Bug mentions or Hyperlink, then those details will be synchronized as 'plain text' to the target.
 * When BugZilla is the **source** system:
   * For Bugzilla version **greater than 5.0**: Synchronization will always be 'History' based [except for Attachments].
@@ -131,167 +131,120 @@ Example: `status=RESOLVED&priority=High`
   * User Mentions, Inline Images, HTML formatting for Fields/Comments
 
 # Appendix
-
 ## How to add or edit user with privileges
 
-For adding an existing user to the `editbugs` and `canconfirm` groups, follow the steps below:
+For adding the existing user as a group of 'editbug' and 'canconfirm', follow the steps given below:
+<p align="center"><img src="../assets/Bugzilla_Image_1a.png" /></p>  
+**Bugzilla User Privilege Step 1**  
 
-<p align="center">
-  <img src="../assets/Bugzilla_Image_1a.png" alt="Bugzilla User Privilege Step 1">
-</p>
+<p align="center"><img src="../assets/Bugzilla_Image_2.jpg"  /></p>  
+**Bugzilla User Privilege Step 2**  
 
-**Bugzilla User Privilege Step 1**
+<p align="center"><img src="../assets/Bugzilla_Image_3.jpg"  /></p>  
+**Bugzilla User Privilege Step 3**  
 
-<p align="center">
-  <img src="../assets/Bugzilla_Image_2.jpg" alt="Bugzilla User Privilege Step 2">
-</p>
+* Log in into Bugzilla with the administrator user.
+* Navigate to **Administration** link on the top of the page. (Bugzilla User Privilege Step 1)
+* Click **Users** link on the left side of the page. (Bugzilla User Privilege Step 1)
+* Search for the user for which you want to edit the groups by typing the username in the 'matching' field. (Bugzilla User Privilege Step 2)
+* In the search results found, click the username link under **Edit User…** column.
+* Tick mark the check boxes against the 'canconfirm' and 'editbugs' fields. (Bugzilla User Privilege Step 3)
+> **Note** :If a particular user needs to given privileges of these group, then tick mark both the checkboxes else just tick the second column checkbox for both the fields.
 
-**Bugzilla User Privilege Step 2**
+* Now, go to the bottom of the page & click the **Save Changes** button. The changes will reflect now. (Bugzilla User Privilege Step 3).
 
-<p align="center">
-  <img src="../assets/Bugzilla_Image_3.jpg" alt="Bugzilla User Privilege Step 3">
-</p>
+For creating a new user as a group of 'editbug' and 'canconfirm', follow the steps given below: 
 
-**Bugzilla User Privilege Step 3**
+* Log in into Bugzilla with the administrator user.
+* Navigate to **Administration** link on the top of the page. (User Privilege Step 1)
+* Click **Users** link on the left side of the page. (Bugzilla User Privilege Step 1)
+* Click **Add a New User** link. (Bugzilla User Privilege Step 2).
+* Provide the Login name, real name and password for the particular user.
+* Click the **Add** button.
+* In Group access, tick mark the check boxes against the 'canconfirm' and 'editbugs' fields. (Bugzilla User Privilege Step 3)
 
-Steps:
+> **Note** :If a particular user needs to given privileges of these group, then tick mark both the checkboxes else just tick the second column checkbox for both the fields.
 
-- Log in to Bugzilla with the administrator account.
-- Navigate to **Administration** at the top of the page. (Step 1)
-- Click **Users** on the left side. (Step 1)
-- Search for the user by entering the username in the *matching* field. (Step 2)
-- In the search results, click the username under the **Edit User…** column.
-- Tick the checkboxes for **canconfirm** and **editbugs**. (Step 3)
-
-> 📝 *If the user needs both privileges, tick both checkboxes. If only partial access is needed, select the appropriate box.*
-
-- Scroll to the bottom and click **Save Changes**.
-
-For **creating a new user** with the `editbugs` and `canconfirm` groups:
-
-- Log in to Bugzilla with the administrator account.
-- Navigate to **Administration**.
-- Click **Users** → **Add a New User**.
-- Enter the login name, real name, and password.
-- Click **Add**.
-- In *Group access*, tick **canconfirm** and **editbugs**. (Step 3)
-
-> 📝 *If the user needs both privileges, tick both checkboxes. Otherwise, choose accordingly.*
-
-- Scroll down and click **Save Changes**.
-
----
+* Now, go to the bottom of the page & click the **Save Changes** button. The changes will reflect now. (Bugzilla User Privilege Step 3).
 
 ## How to enable Anonymous login
 
-To enable Anonymous login:
+**For enabling Anonymous login, follow the steps given below:**
 
-- Log in with an administrator account.
-- Click **Administration** at the top.
-- Click **Parameters**.
+* Log in into Bugzilla with the administrator user;
+* Click on **Administration** option on the top of the page as shown in the screenshot.
+* Click on **Parameters** on the Administration page as shown in the screenshot below:
 
-<p align="center">
-  <img src="../assets/Bugzilla_Administration_Parameters.png" alt="Bugzilla Administration Parameters">
-</p>
+<p align="center"><img src="../assets/Bugzilla_Administration_Parameters.png" /></p>
 
-- Select **User Authentication** from the left menu.
+* Click on **User Authentication** on the left pane as shown in the screenshot below:
 
-<p align="center">
-  <img src="../assets/Bugzilla_User_Authentication.png" alt="User Authentication">
-</p>
+<p align="center"><img src="../assets/Bugzilla_User_Authentication.png"  /></p>
 
-- Scroll to the **requirelogin** option and select **off**.
+* Scroll down to **requirelogin** option and select **off** as shown in the screenshot below:
 
-<p align="center">
-  <img src="../assets/Bugzilla_requirelogin.png" alt="Require Login Off">
-</p>
+<p align="center"><img src="../assets/Bugzilla_requirelogin.png" /></p>
 
-- Click **Save Changes**.
-
----
+* Scroll down to the bottom on the page and click on the **Save Changes** button.
 
 ## Custom Fields
 
-To add a custom field:
+Refer the steps given below to add custom field:
 
-<p align="center">
-  <img src="../assets/Bugzilla_Image_4.jpg" alt="Custom Field Config">
-</p>
+<p align="center"><img src="../assets/Bugzilla_Image_4.jpg"  /></p>
 
-<p align="center">
-  <img src="../assets/Bugzilla_Image_5.jpg" alt="Custom Field Creation">
-</p>
+<p align="center"><img src="../assets/Bugzilla_Image_5.jpg"  /></p>
 
-- Log in as administrator.
-- Go to **Administration**.
-- Click **Custom Fields**.
-- Click **Add a new custom field**.
-- Fill in the name and description.
-- Select the field type.
-- Click **Create**.
-
-Repeat for each custom field required.
-
----
+* Log in into Bugzilla with the administrator user.
+* Navigate to **Administration** link on the top of the page.
+* From the page displayed, click on **Custom Field** link on the top right of the page.
+* It will show list of custom fields if any configured with a link to **Add a new custom field** at the end.
+* To create new Custom field, click on link **Add a new custom field.** Above window will get open. Please provide Name and description for custom field.
+* Select Type as shown in Custom Field Configuration.
+* After setting the parameters, click on the Create button for creating the custom field. Like this create all the custom fields mentioned in Custom Field Configuration.
 
 ## How to know field name used in Mapping
 
-Bugzilla’s API uses **internal names**, not display names.
+In Bugzilla, the API works on internal name and not the display name, so to know the internal name for system filed refer [https://wiki.mozilla.org/Bugzilla:REST_API:Objects#Bug](https://wiki.mozilla.org/Bugzilla:REST_API:Objects#Bug).  
+For custom field, the internal name will be displayed in Administration section. Following are the steps to know the custom field's internal name.
 
-To find custom field internal names:
+* Navigate to the Administration section with admin privileges.
+* Then, click on Custom Fields section, which will show all the custom fields configured.
 
-- Go to **Administration**.
-- Click **Custom Fields** – all configured fields are listed here.
-
-<p align="center">
-  <img src="../assets/Bugzilla_Image_6a.png" alt="Custom Field Internal Name">
-</p>
-
-For system fields, refer to: [Bugzilla REST API Objects – Bug](https://wiki.mozilla.org/Bugzilla:REST_API:Objects#Bug)
-
----
+<p align="center"><img src="../assets/Bugzilla_Image_6a.png"  /></p>
 
 ## Find Version
 
-- Log in to Bugzilla.
-- On the **Home** tab, the Bugzilla version appears at the top-right.
+* Login into Bugzilla Web.
+* Click on Home tab, the Bugzilla Version will be visible on top right corner.
 
-<p align="center">
-  <img src="../assets/Bugzilla_Image_7.jpg" alt="Bugzilla Version Info">
-</p>
-
----
+<p align="center"><img src="../assets/Bugzilla_Image_7.jpg"  /></p>
 
 ## Custom Field Internal Name
 
-- Log in as administrator.
-- Go to **Administration** → **Custom Fields**.
-- The internal name is shown in **Edit Custom Field** view.
-
----
+* Log in into Bugzilla with the administrator user.
+* Navigate to **Administration** link on the top of the page.
+* From the page displayed, click the **Custom Field** link on the top right of the page.
+* It will show the list of custom fields if any of them is configured with a link to **Add a new custom field** at the end. **Edit Custom Field** shows custom fields' internal Name.
 
 ## Find Email Suffix
 
-- Log in with admin credentials.
-- Go to **Administration** → **Parameters**.
-- Select **User Authentication** from the left panel.
-- You’ll see the `emailsuffix` configuration:
+* Log in into Bugzilla with the administrator user credentials.
+* Navigate to the **Administration** link on the top of the page.
+* Navigate to the **Parameters** link on the top right of the page and click the link.
+* From the left panel, select **User Authentication**.
+* It will show **emailsuffix configuration parameter** as shown in image below.
 
-<p align="center">
-  <img src="../assets/Bugzilla_Image_8a.png" alt="Email Suffix Configuration">
-</p>
-
----
+<p align="center"><img src="../assets/Bugzilla_Image_8a.png"  /></p>
 
 ## Mapping checkpoints for Bugzilla as the target system
 
-The following **mandatory fields** must be hardcoded into mappings when Bugzilla is the **target system**:
+Following fields will be hardcoded into mappings where Bugzilla is the target system as these fields are mandatory for Bugzilla:
 
-- `Product`
-- `Component`
-- `Version`
-- `op_sys`
-- `Platform`
+* Product
+* Component
+* Version
+* op_sys
+* Platform
 
-> ✅ Use correct values according to your Bugzilla instance configuration.
-
+Put the correct values as per your Bugzilla instance.
