@@ -34,7 +34,7 @@ For Bugzilla versions below 5.0, the REST API Version 1.3 should be enabled. For
 
 ## System Configuration
 
-Before you continue to the integration, you must first configure Bugzilla. Click [System Configuration](system-configuration) to learn the step-by-step process to configure a system.  
+Before you continue to the integration, you must first configure Bugzilla. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.  
 Refer the screenshot given below for reference.
 
 <div align="center">![](../assets/Bugzilla_Image_9a.png)</div>
