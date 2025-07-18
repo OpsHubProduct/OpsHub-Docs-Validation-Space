@@ -218,19 +218,19 @@ If you are getting an **Internal Server Error** with **Status Code: 500**, then 
 ## Add User
 
 1. Login to Aha! using the user with privileges to create a new user.  
-2. Navigate to Settings given at the top right corner and go to **Account** section.
+2. Navigate to Settings given at the top right corner and go to Account section.
 <p align="center">
   <img src="../assets/aha_add_user_1.png">
 </p>
-3. Navigate to **Users**  
+3. Navigate to Users  
 <p align="center">
   <img src="../assets/aha_add_user_2.png">
 </p>
-4. Click on the **Add User** button given at the top right corner of the users' list.  
+4. Click on the Add User button given at the top right corner of the users' list.  
 <p align="center">
   <img src="../assets/aha_add_user_3.png">
 </p>
-5. Fill the details regarding the user. For the **Administration Role** and **Permissions** for different workspaces, select the roles having permissions mentioned in [User privileges](#user-privileges) section.
+5. Fill the details regarding the user. For the Administration Role and Permissions for different workspaces, select the roles having permissions mentioned in [User privileges](#user-privileges) section.
  
 <p align="center">
   <img src="../assets/aha_add_user_4.png">
@@ -245,7 +245,7 @@ If you are getting an **Internal Server Error** with **Status Code: 500**, then 
 <p align="center">
   <img src="../assets/aha_change_user_permission_1.png">
 </p>
-4. Select **Administrator roles** and **Permissions** for different workspaces you want to give to integration user.  
+4. Select Administrator roles and Permissions for different workspaces you want to give to integration user.  
 <p align="center">
   <img src="../assets/aha_change_user_permission_2.png">
 </p>
@@ -253,19 +253,19 @@ If you are getting an **Internal Server Error** with **Status Code: 500**, then 
 
 ## Add Custom Fields
 
-1. Navigate to Settings given at the top right corner and go to **Personal** section.  
+1. Navigate to Settings given at the top right corner and go to Personal section.  
 <p align="center">
   <img src="../assets/aha_api_token_1.png">
 </p>
-2. Navigate to **Custom fields** section.  
+2. Navigate to Custom fields section.  
 <p align="center">
   <img src="../assets/aha_add_custom_field_1.png">
 </p>
-3. Select the entity for which you want to create the custom field, and click **Add custom field**.  
+3. Select the entity for which you want to create the custom field, and click Add custom field.  
 <p align="center">
   <img src="../assets/aha_add_custom_field_2.png">
 </p>
-4. Choose custom field type from the list and click **Next**.  
+4. Choose custom field type from the list and click Next.  
 <p align="center">
   <img src="../assets/aha_add_custom_field_3.png">
 </p>
@@ -276,15 +276,15 @@ If you are getting an **Internal Server Error** with **Status Code: 500**, then 
 
 ## Add Custom Layout
 
-1. Navigate to Settings given at the top right corner and go to **Personal** section.  
+1. Navigate to Settings given at the top right corner and go to Personal section.  
 <p align="center">
   <img src="../assets/aha_api_token_1.png">
 </p>
-2. Navigate to **Custom layouts** section.  
+2. Navigate to Custom layouts section.  
 <p align="center">
   <img src="../assets/aha_add_custom_layout_1.png">
 </p>
-3. Select the entity for which you want to create the custom layout, and click **Add custom layout**.  
+3. Select the entity for which you want to create the custom layout, and click Add custom layout.  
 <p align="center">
   <img src="../assets/aha_add_custom_layout_2.png">
 </p>
@@ -304,15 +304,15 @@ If you are getting an **Internal Server Error** with **Status Code: 500**, then 
 
 ## Steps for generating the API token
 
-1. Navigate to Settings given at the top right corner and go to **Personal** section.  
+1. Navigate to Settings given at the top right corner and go to Personal section.  
 <p align="center">
   <img src="../assets/aha_api_token_1.png">
 </p>
-2. Navigate to the **Developer** section.  
+2. Navigate to the Developer section.  
 <p align="center">
   <img src="../assets/aha_api_token_2.png">
 </p>  
-3. In the API keys section, click **Generate API key**.  
+3. In the API keys section, click Generate API key.  
 <p align="center">
   <img src="../assets/aha_api_token_3.png">
 </p>  
