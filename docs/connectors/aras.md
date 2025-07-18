@@ -38,16 +38,15 @@ Before the user continues with the integration, he/she must first configure Aras
   <img src="../assets/Aras_System_config_6.png" width="1100px" />
 </p>
 
-| **Field Name**                       | **Description**                                                                                                                                                      |
-|-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **System Name**                     | Provide a unique name to the Aras Innovator System                                                                                                                   |
-| **Version**                         | Provide versin for Aras Innovator Instance. Check [Get Aras Innovator Version](#get-aras-innovator-version) in the Appendix section to learn how to get Aras Innovator version |
-| **Aras Innovator Instance URL**     | Provide URL for Aras Innovator Instance.Example:- <hostname>/InnovatorServer/Server/InnovatorServer.aspx                                                            |
-| **Aras Innovator User Name**        | Provide username of the user dedicated for OpsHub Integration Manager. Please ensure that user has the necessary permissions. Refer to [User privileges](#user-privileges)
-for permissions required by user identity.                                                                                                                                                                   |
-| **Aras Innovator User Password**    | Provide password of user dedicated for OpsHub Integration Manager.                                                                                                   |
-| **Aras Innovator Database name**    | Provide Aras Innovator Database name to which the connection needs to be done. Refer to [Get Database Name](#get-database-name) in the Appendix section to learn how to get Database name |
-| **Aras Innovator Web Service URL**  | Provide URL for the hosted OpsHubArasService. Refer to [Hosting opshub Aras service](#hosting-opshub-aras-service) to learn how to host OpsHub Integration Manager Aras Webservice |
+| **Field Name**                      | **Description**                                                                                                                                                                                                 |
+|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **System Name**                    | Provide a unique name to the Aras Innovator System.                                                                                                                                                             |
+| **Version**                        | Provide version for Aras Innovator Instance. Check [Get Aras Innovator Version](#get-aras-innovator-version) in the Appendix section to learn how to get Aras Innovator version.                              |
+| **Aras Innovator Instance URL**    | Provide URL for Aras Innovator Instance. Example: `<hostname>/InnovatorServer/Server/InnovatorServer.aspx`                                                                                                     |
+| **Aras Innovator User Name**       | Provide username of the user dedicated for OpsHub Integration Manager. Please ensure that user has the necessary permissions. Refer to [User privileges](#user-privileges) for permissions required by user identity. |
+| **Aras Innovator User Password**   | Provide password of user dedicated for OpsHub Integration Manager.                                                                                                                                              |
+| **Aras Innovator Database name**   | Provide Aras Innovator Database name to which the connection needs to be done. Refer to [Get Database Name](#get-database-name) in the Appendix section to learn how to get Database name.                     |
+| **Aras Innovator Web Service URL** | Provide URL for the hosted OpsHubArasService. Refer to [Hosting opshub Aras service](#hosting-opshub-aras-service) to learn how to host OpsHub Integration Manager Aras Webservice.                            |
 
 * If the system is deployed on HTTPS and a self-signed certificate is used, then the user should import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Check [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
