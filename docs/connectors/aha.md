@@ -173,7 +173,7 @@ Set the **Query** as per Aha! encoded query format. Criteria is only applicable 
 * From Aha! UI, the entity can be deleted. However, for Aha! as the source system, the deleted entity will not sync by OpsHub Integration Manager. The corresponding target entity will remain orphan in target system on Aha! entity deletion. Also, Aha! entity deletion is not supported by OpsHub Integration Manager, when Aha! is the target system.
 * To update the "Progress" field through synchronization, the progress source must be set to "manual" (from Aha! UI or field mapping of OpsHub Integration Manager) due to Aha! API behavior.
 * Goals and Initiative System fields will be available as lookup fields in the field mapping, even though they are not available in Aha! Develop UI.
-  **The above fields are available in Aha! Develop UI when the Aha! Develop instance is combined with Aha! Roadmap.**
+  * **The above fields are available in Aha! Develop UI when the Aha! Develop instance is combined with Aha! Roadmap.**
 * Hierarchy sync is not supported. Hence, the synchronization of ranking the requirements and to-dos will not be supported.
 
 ## Project Selection
@@ -183,7 +183,7 @@ Set the **Query** as per Aha! encoded query format. Criteria is only applicable 
 ## API Rate Limitation in Aha!
 
 * Aha! has limitation on API access per minute for a single user. Due to this, OpsHub Integration Manager can access Aha! API within a limit. When the limit exceeds, the Aha! API stops responding for certain amount of time, and no API calls can be done by OpsHub Integration Manager during that time until Aha! resets the limit for that user.
-  **Up to 300 requests per minute and 20 requets per second are allowed in Aha!.**
+  *  **Up to 300 requests per minute and 20 requets per second are allowed in Aha!.**
 * To address this issue, wait time (given by Aha! API) will be considered for entity synchronization. Thus, there might be some delay in synchronization in case of API rate limit issue.
 
 # Known Limitations
@@ -230,7 +230,8 @@ If you are getting an **Internal Server Error** with **Status Code: 500**, then 
 <p align="center">
   <img src="../assets/aha_add_user_3.png">
 </p>
-5. Fill the details regarding the user. For the **Administration Role** and **Permissions** for different workspaces, select the roles having permissions mentioned in [User privileges](#user-privileges) section.  
+5. Fill the details regarding the user. For the **Administration Role** and **Permissions** for different workspaces, select the roles having permissions mentioned in [User privileges](#user-privileges) section.
+ 
 <p align="center">
   <img src="../assets/aha_add_user_4.png">
 </p>
