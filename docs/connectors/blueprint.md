@@ -91,7 +91,7 @@ For more details on writing query please refer Blueprint Search Query API.
 **Sample Query**
 
 * An example of criteria with one 'Lookup field
-*   Example: `property-Priority eq ('Medium')`
+  * Example: `property-Priority eq ('Medium')`
 * An example of criteria with one 'Lookup field
 
 # Appendix
