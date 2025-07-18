@@ -32,14 +32,14 @@ For Bugzilla versions below 5.0, the REST API Version 1.3 should be enabled. For
 
 > **Note** : Do not use ',' in field value for multi-select and drop-down options.
 
-## System Configuration
+# System Configuration
 
 Before you continue to the integration, you must first configure Bugzilla. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.  
 Refer the screenshot given below for reference.
 
-<div align="center">![](../assets/Bugzilla_Image_9a.png)</div>
+<p align="center"><img src="../assets/Bugzilla_Image_9a.png"></p>
 
-<span style="color:blue">**Bugzilla System form details**</span>
+**Bugzilla System form details**
 
 | **Field Name** | **When field is required/visible on the System form** | **Description** |
 |----------------|--------------------------------------------------------|------------------|
