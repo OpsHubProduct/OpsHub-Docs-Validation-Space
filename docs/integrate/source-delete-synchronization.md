@@ -13,7 +13,7 @@
   - In the "Soft Delete", the target entity will be deleted in the target, which can go to the recycle bin of the corresponding systems.  
     - Currently, the "Soft Delete" is supported for the Rally, Team Foundation Server, VersionOne, Doors, Salesforce, and Codebeamer systems in **OpsHub Integration Manager**. For further details on the same, please refer to connector documentation of systems.
   - In the "Archive operation", target entity will be archived in the corresponding systems.  
-    - Currently, "Archive" is supported in Jira data center system.
+    - Currently, "Archive" is supported in **Jira data center** system.
 
 # Configuration Steps
 
@@ -60,5 +60,5 @@
   - TE1 and TE2 will be deleted in the target, and the sync report will be updated with the "Not Accessible" state for these entities.
   - Updates on the SE3 and SE4 will be synchronized to the target entities TE3 and TE4 respectively via Task and Story integration.
   - TE5 (as SE5 fails to meet the criteria of Story integration) and TE6 (as the configuration related to Feature is missing in **OpsHub Integration Manager**) will be soft deleted or archived in the target as per the configuration, and the sync report will be updated with the "Not Applicable" state for this entity.
-
+    
 ![DeleteActions](../assets/DeleteActions.png)
