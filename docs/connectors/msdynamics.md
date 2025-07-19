@@ -203,7 +203,7 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 ## Common
 
 * From MS Dynamics Customer Service Hub UI, user can change the entity type.  
-  ** In this case, OpsHub Integration Manager will create a new entity in the target and the previous one gets orphaned. 
+  * In this case, OpsHub Integration Manager will create a new entity in the target and the previous one gets orphaned. 
 
 * User can add custom entities in the end system. To sync that entity with OpsHub Integration Manager, user needs to enable "Appear in search results" in the entity settings. Refer to [Enable Search Result](#enable-search-result) section to know how to enable an entity for synchronization with OpsHub Integration Manager.
 
@@ -214,9 +214,9 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 * User needs to enable the audit history in the end system for entity and fields to perform the history-based sync. Refer to [Enable Audit History](#enable-audit-history) section to know how to enable the audit history. 
 * If the audit history is disabled, entities will be synced in the current state only.
 * MS Dynamics 365 as source system:  
-  ** When the user turns on the audit history for any entity from the end system settings after starting the sync, conflicts can be generated if the conflict detection setting is enabled in the OpsHub Integration Manager mapping.
+  * When the user turns on the audit history for any entity from the end system settings after starting the sync, conflicts can be generated if the conflict detection setting is enabled in the OpsHub Integration Manager mapping.
 * MS Dynamics 365 as target system:  
-  ** When the user turns off the audit history for any entity from the end system settings after starting the sync, the recovery will not be handled for the entities [which are synced before enabling the history].
+  * When the user turns off the audit history for any entity from the end system settings after starting the sync, the recovery will not be handled for the entities [which are synced before enabling the history].
 
 > **Note**: It is recommended to enable the history in MS Dynamics 365 before starting the sync.
 
@@ -234,33 +234,33 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 ## Common
 
 * The following type of entities and the reference fields related to these entities are not supported by OpsHub Integration Manager:  
-  ** Activity  
-  ** Virtual  
-  ** Elastic
+  * Activity
+  * Virtual
+  * Elastic
 
 * The following field type is not supported by OpsHub Integration Manager:  
-  ** Formula type field
+  * Formula type field
 
 * Field type of attachments with size greater than 128 MB are not supported by OpsHub Integration Manager.  
-  ** If more than 128 MB sized attachment is coming for the sync, then the processing failure will be observed in the attachment sync due to dynamics API limitation.
+  * If more than 128 MB sized attachment is coming for the sync, then the processing failure will be observed in the attachment sync due to dynamics API limitation.
 
 * For comment & attachment synchronization, when the user add/modify any comment/attachment, the user needs to update one field [System/Custom field] to sync the comment & the attachment.  
-  ** Reason: In MS Dynamics 365, entity modified time does not get updated with inline image/attachment addition in Note or when a Note is added.
+  * Reason: In MS Dynamics 365, entity modified time does not get updated with inline image/attachment addition in Note or when a Note is added.
 
 * Integration is configured with history, the configured entity supports history however for its any X field the history is not enabled separately:  
-  ** If X field [history is disabled] gets changed then it will not synced till any other field [history is enabled] gets changed by dynamics user. 
+  * If X field [history is disabled] gets changed then it will not synced till any other field [history is enabled] gets changed by dynamics user. 
 
 ## Entity Specific
 
 ### Case
 
 * The Resolved type of fields will be synchronized without history.  
-  ** Reason - Dynamics 365 API limitation.
+  * Reason - Dynamics 365 API limitation.
 
 ### Opportunity
 
 * The Closed type of fields will be synchronized without history.  
-  ** Reason - Dynamics 365 API limitation.
+  * Reason - Dynamics 365 API limitation.
 
 # Appendix
 
