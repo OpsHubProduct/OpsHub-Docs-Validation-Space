@@ -72,7 +72,7 @@ Below is the example of the JSON input:
 }
 ```
 
-## Mapping Configuration
+# Mapping Configuration
 
 Map the fields between Verisium Manager and the other system to be integrated to ensure that the data between both the systems synchronize correctly.
 
@@ -520,12 +520,12 @@ can be found. From the response, we can determine that "Attr Name" corresponding
 * Select "Projects" pane under the "System Settings".  
   ![vmgr_project_identifier_2](../assets/vmgr_project_identifier_2.png)
 
-## Glossary
+# Glossary
 
-### [Section[(Sub Type)]]
+## [Section[(Sub Type)]]
 
 It refers to the "Section" Entity of the Verisium Manager **with or without Sub Type**
 
-### [Metrics Port[(Sub Type)]]
+## [Metrics Port[(Sub Type)]]
 
 It refers to the "Metrics Port" Entity of the Verisium Manager **with or without Sub Type**
