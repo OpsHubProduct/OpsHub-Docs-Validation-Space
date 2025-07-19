@@ -76,7 +76,7 @@ Below is the example of the JSON input:
 
 Map the fields between Verisium Manager and the other system to be integrated to ensure that the data between both the systems synchronize correctly.
 
-Refer [Mapping Configuration] to learn the step-by-step process to configure the mapping between the systems.
+Refer [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure the mapping between the systems.
 
 Refer to the screenshot given below :
 
@@ -86,7 +86,7 @@ Refer to the screenshot given below :
 
 ![VMGR_parameters.png](../assets/VMGR_parameters.png)
 
-### Sub Types in Verisium Manager
+## Sub Types in Verisium Manager
 
 - Verisium Manager supports user defined Sub Types for "Section" and "Metrics Port" entity.  
 - In OpsHub Integration Manager, these Sub types are supported as separate Entity Types for synchronization, so that user can use it in synchronization for better modelling with other end systems.  
@@ -96,19 +96,22 @@ Refer to the screenshot given below :
 
 > **Note**: Here, Entity type "Section" and "Metrics Port" refer to Verisium Manager Section and Metrics Port entity without Sub Type.
 
-### Relationships
+## Relationships
 
 For the [Section[(Sub Type)]](#Section.5B.28Sub_Type.29.5D) entity, **Parent**, **Child**, **Reference to** and **Reference By** relationships are supported.
 
-Refer [Relationship Configuration](Mapping_Configuration#Relationships) to learn the step-by-step process to configure Relationships.
+Refer [Relationship Configuration](../integrate/mapping-configuration.md#relationships) to learn the step-by-step process to configure Relationships.
 
 > **Note**: "Reference to" relationship for the [Section[(Sub Type)]](#Section.5B.28Sub_Type.29.5D) entity represents the entities linked via "Reference Entity" in the Verisium Manager.
 
-![VMGR_ref_to_link.png](../assets/VMGR_ref_to_link.png)
+<p align="center">
+  <img src="../assets/VMGR_ref_to_link.png" >
+</p>
 
-It is mandatory to configure Child relationship in Relationship Configuration for [Reference entity](#Reference_Entity). Due to API limitation, Child relationship can only be added at the time of Reference entity creation. Hence, the Child relationship of Reference entity can not be updated/deleted.
 
-#### Supported Relationships
+It is mandatory to configure Child relationship in Relationship Configuration for [Reference entity](#reference-entity). Due to API limitation, Child relationship can only be added at the time of Reference entity creation. Hence, the Child relationship of Reference entity can not be updated/deleted.
+
+### Supported Relationships
 
 | **Mapped Entity Type** [Link From]               | **Entity Type in Relationship Configuration** [Link To] | **Link Type**   | **Cross vPlan Support** |
 |--------------------------------------------------|----------------------------------------------------------|-----------------|--------------------------|
@@ -131,37 +134,37 @@ It is mandatory to configure Child relationship in Relationship Configuration fo
 - **N/A** means that the link is not supported by the Verisium Manager.  
 - **No** means that the link is supported by the Verisium Manager but not by the OpsHub Integration Manager due to API limitation.
 
-### Rank
+## Rank
 
 - Verisium Manager allows to organize the entities in tree structure through **Parent** and **Child** relationships.  
-- To synchronize the entities maintaining the tree structure in Verisium Manager, the user can configure the **Parent** and **Child** relationship as per the standard [relationship configuration](Mapping_Configuration#Relationships). Within this structure, to maintain the rank of entities, the user should enable the Rank Synchronization as described in [Rank configuration](Mapping_Configuration#Configuration) section.  
+- To synchronize the entities maintaining the tree structure in Verisium Manager, the user can configure the **Parent** and **Child** relationship as per the standard [relationship configuration](../integrate/mapping-configuration.md#relationships). Within this structure, to maintain the rank of entities, the user should enable the Rank Synchronization as described in [Rank configuration](../integrate/mapping-configuration#configuration) section.  
 
-### Mapping for Soft Delete Configuration
+## Mapping for Soft Delete Configuration
 
-- When Verisium Manager is the target system, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](Source_Delete_Synchronization).  
+- When Verisium Manager is the target system, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md).  
 - After the Soft Delete operation is performed by OpsHub Integration Manager in Verisium Manager, the entity will be deleted in the Verisium Manager, and it can be found in the "Deleted Entities" of the corresponding project, where it existed earlier.  
-- To only enable the logical delete operation in the target, "OH Soft Delete" field shall be mapped with the default value "No" in the [Delete Mode](Mapping_Configuration#Delete_Mode) mapping.
+- To only enable the logical delete operation in the target, "OH Soft Delete" field shall be mapped with the default value "No" in the [Delete Mode](../integrate/mapping-configuration,md#delete-mode) mapping.
 
-## Integration Configuration
+# Integration Configuration
 
 In this step, set a time to synchronize data between Verisium Manager and the other system to be integrated. Also, define parameters and conditions, if any, for integration.
 
-Refer [Integration Configuration] to learn the step-by-step process to configure the integration between two systems.
+Refer [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure the integration between two systems.
 
 Refer to the screenshot given below :
 
 ![VMGR_integration_page.png](../assets/VMGR_integration_page.png)
 
-### Project Specific Entity Information
+## Project Specific Entity Information
 
 In Verisium Manager, vPlan can be created under the Verisium Manager Project. Hence, Verisium Manager Project is treated as a Parent-project whereas vPlan is treated as a child-project. The vPlan is listed as a child-project under the corresponding Parent-project (Verisium Manager Project) in the OpsHub Integration Manager configuration.  
 [Section[(Sub Type)]]/#Section.5B.28Sub_Type.29.5D / [Metrics Port[(Sub Type)]](#Metrics_Port.5B.28Sub_Type.29.5D) entity can be created only under the vPlan. As a result, the [Section[(Sub Type)]](#Section.5B.28Sub_Type.29.5D)/[Metrics Port[(Sub Type)]](#Metrics_Port.5B.28Sub_Type.29.5D) can be configured in OpsHub Integration Manager, if child-project(vPlan) is selected in Mapping Configuration or Integration Configuration section.
 
-### Criteria Configuration
+## Criteria Configuration
 
 If you want to specify conditions for synchronizing an entity between Verisium Manager and the other system to be integrated, you can use the Criteria Configuration feature.
 
-Go to Criteria Configuration section on [Integration Configuration] page to learn about Criteria Configuration in detail.
+Go to Criteria Configuration section on [Integration Configuration](../integrate/integration-configuration.md) page to learn about Criteria Configuration in detail.
 
 To configure criteria in Verisium Manager, integration needs to be created with Verisium Manager as the source system. Set the **Query** as per the JSON format given below :
 
@@ -203,13 +206,13 @@ The explanation of all the **Query Parameters** used in the above criteria queri
 
 **Description**: It represents the query, which will select only those entities, whose "priority" field value is "High" or "verification_domain" field value is "BOTH".  
 
-### Target LookUp Configuration
+## Target LookUp Configuration
 
 Provide Query in Target Search Query field so that it is possible to search the entity in the Verisium Manager when it is a target system.
 
 In the target search query field, you can provide a placeholder for the source system's field value in-between '@'
 
-Go to **Search in Target Before Sync** section on [Integration Configuration](#) page to learn in detail about how to configure target lookup.
+Go to **Search in Target Before Sync** section on [Integration Configuration](../integrate/integration-configuration.md) page to learn in detail about how to configure target lookup.
 
 Target LookUp Configuration is similar to the [Criteria Configuration](#criteria-configuration), except for the facts given below :
 - Replace "@c" with "@@c".
@@ -254,7 +257,7 @@ For configuring the [Default Link Settings](default link) using target lookup qu
 
 ---
 
-## Known Behaviour
+# Known Behaviour
 
 * The **Toggle Flag** (OpsHub Sync Flag / ALM_SYNC flag) will be updated on the Verisium Manager UI based on every **Write** (create/update/link) operation on `Section[(Sub Type)]` / `Metrics Port[(Sub Type)]` entities.
 * In the Integration Configuration with `Metrics Port[(Sub Type)]`, **bidirectional synchronization** of the **Mapping Pattern** is supported.
@@ -315,7 +318,7 @@ Below are the commonly known limitations for the [Section[(Sub Type)]](#section5
 - When the Rich Text Editor field is updated, the last updated time of [Section[(Sub Type)]](#section5b28sub_type295d)/[Metrics Port[(Sub Type)]](#metrics_port5b28sub_type295d)/Reference Entity doesn't get updated. So, to synchronize such fields, an additional update on any other mapped field is required.
 - Due to API limitation, the Rich Text Editor field can't be unset. Hence, a single blank space (`" "`) is used to unset Rich Text Editor field.
 
-### Section[(Sub Type)] Entity
+## Section[(Sub Type)] Entity
 
 Below are the specific limitations for the [Section[(Sub Type)]](#Section.5B.28Sub_Type.29.5D) entity. Additionally, there exists few common limitations for [Section[(Sub Type)]/Metrics Port[(Sub Type)]/Reference](#Common Limitations).
 
@@ -337,7 +340,7 @@ Below are the specific limitations for the [Section[(Sub Type)]](#Section.5B.28S
       Here only the last Parameter ("AdminUser")'s value is set and for the first Parameter ("LogonUser"), the value is set to the default value, which is `["testuser","demouser","syncuser"]`
 - If "Parameters" and/or "Parameter condition" are mapped in the Integration Configuration, Toggle Flag (OpsHub Sync Flag) will not be updated on the Verisium Manager UI because of write operation on "Parameters" and/or "Parameter condition"
 
-### Metrics Port[(Sub Type)] Entity
+## Metrics Port[(Sub Type)] Entity
 
 Below are the specific limitations for [Metrics Port[(Sub Type)]](#Metrics_Port.5B.28Sub_Type.29.5D) entity. Additionally, there exists few common limitations for [Section[(Sub Type)]/Metrics Port[(Sub Type)]/Reference](#Common Limitations).
 
