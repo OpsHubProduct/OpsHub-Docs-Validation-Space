@@ -219,8 +219,7 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 * MS Dynamics 365 as target system:  
   ** When the user turns off the audit history for any entity from the end system settings after starting the sync, the recovery will not be handled for the entities [which are synced before enabling the history].
 
-<p align="center"><img src="../assets/Note.jpg" width="30px" /></p>  
-It is recommended to enable the history in MS Dynamics 365 before starting the sync.
+> **Note**: It is recommended to enable the history in MS Dynamics 365 before starting the sync.
 
 ## Entity Specific
 
@@ -229,8 +228,7 @@ It is recommended to enable the history in MS Dynamics 365 before starting the s
 * Whenever a Knowledge Article entity is created from Dynamics 365 UI, the system creates an extra Root Knowledge article. Due to such behavior of Dynamics 365, OpsHub Integration Manager will create two Knowledge Articles for a single source entity when Dynamics 365 is the target system.
 * To avoid such behavior when Dynamics 365 is target system, "Root Article" field can be mapped in OpsHub Integration Manager with value true which would ensure that only single root knowledge article is created.
 
-<p align="center"><img src="../assets/Note.jpg" width="30px" /></p>  
-By default, the above field value is false and OpsHub Integration Manager will follow the default behavior of Dynamics 365, if this field is not mapped.
+> **Note**: By default, the above field value is false and OpsHub Integration Manager will follow the default behavior of Dynamics 365, if this field is not mapped.
 
 # Known Limitations
 
