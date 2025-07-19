@@ -194,6 +194,96 @@ Following types of fields are not supported:
 
 # Appendix
 
+## Assign membership and role
+
+To assign membership and role to integration user in project area follow the steps given below:
+
+* Log in to CCM admin (https://<host>:<port>/ccm/admin).  
+* Navigate to the Project Areas menu.  
+* In Active Project Areas, select project area for synchronization.  
+* Move to the Overview tab and in section Members, click 'Add'.  
+
+<p align="center">
+  <img src="../assets/RTC_Image_8.png">
+</p>
+
+* In the pop-up search and select integration user. Then, click 'Add'.  
+* After the selected user appears as a member, click the 'Process Roles' image (appears on hover).  
+
+<p align="center">
+  <img src="../assets/RTC_Image_9.png" >
+</p>
+
+* In the dialog box (as displayed), select roles from the available roles and click 'OK'.
+
+## User privileges 
+
+For giving privileges to integration user, follow the steps given below:  
+* Log in to CCM admin (https://<host>:<port>/ccm/admin).  
+* Navigate to the Project Areas menu.  
+* In Active Project Areas, select the project area for synchronization.  
+* Move to the 'Permissions' tab.  
+* In 'Configuration' select Team Configuration.  
+* In Roles: section under Details, select role of the integration user.  
+
+<p align="center">
+  <img src="../assets/RTC_Image_10a.png">
+</p>
+
+* Check-in Permitted Actions: Work Items and Item Connectors are checked, if not then check it.
+
+For assigning Client Access Licenses and Repository Permissions, follow the steps given below:  
+* Log in to CCM admin (https://<host>:<port>/ccm/admin).  
+* Navigate to **Users** menu.  
+* From Active Users, select integration user.  
+* In **Repository Permissions** section, check at least one of the **JazzUsers**, **JazzProjectAdmins** and **JazzAdmins**.  
+* The Integration User must have at least one out of 'Contributor Client Access License', 'Developer Client Access License' and 'Stakeholder Client Access License' to be able to create/modify work items (details of licenses can be read from tool-tip appearing on hover).  
+
+<p align="center">
+  <img src="../assets/RTC_Image_11b.png">
+</p>
+
+## Custom field configuration
+
+A few special fields must be defined on the entity that is being synchronized. These must be set up so that the integration status of each item can be tracked.  
+* Log in to CCM admin (https://<host>:<port>/ccm/admin).  
+* Navigate to the Project Areas menu.  
+* In Active Project Areas, select the project area for synchronization.  
+* Go to the **Work Items** tab.  
+* In Types and Attributes, select **Work Item Type** for which integration need to be configured.  
+* In the **Attributes section** click the **Add...** link.  
+
+<p align="center">
+  <img src="../assets/RTC_Image_12.png">
+</p>
+
+## Find version
+
+For getting EWM version, follow the steps given below:  
+* Log in to CCM admin (https://<host>:<port>/ccm/admin).  
+
+<p align="center">
+  <img src="../assets/RTC_Image_13.png">
+</p>
+
+* After successful login, version should be displayed as in above screen.  
+
+<p align="center">
+  <img src="../assets/RTC_Image_14a.png">
+</p>
+
+## Entity mention detection configuration
+
+* To mention an entity in the EWM system, the user must write an entity type and the entity id that they want to mention.  
+<p align="center">
+  <img src="../assets/RTC_Image_18.png">
+</p>
+
+* When EWM is configured as a source system, the user must provide keywords that could be used to mention an entity. As seen in the above screenshot, 'Defect' is used to mention an entity with id 123.  
+* The user is required to provide those keywords in JSON format. The project key should be the key and the string array list of the keywords should be the value in the JSON map. Refer to the example below:  
+
+# Appendix
+
 ## OAuth configuration
 
 ### Steps for OAuth token generation
