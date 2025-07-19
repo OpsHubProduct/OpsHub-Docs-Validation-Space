@@ -63,8 +63,7 @@
   <img src="../assets/MSD_User_Impersonation_Mapping.png" />
 </p>
 
-* Refer to the following documentation link of Dynamics 365 system for details:  
-  [Add Dynamics Impersonation Documentation](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/impersonate-another-user)
+* Refer to the following documentation link of Dynamics 365 system for details:  [Add Dynamics Impersonation Documentation](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/impersonate-another-user)
 
 # System Configuration
 
