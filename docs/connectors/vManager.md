@@ -361,8 +361,101 @@ Below are the specific limitations for **Reference** entity. Additionally, there
 - Due to API limitation, parent relationship from Reference to Referenced Section/Metrics Port/Reference is not supported. Only [Section[(Sub Type)]](#section5b28sub_type29) can be added as parent of a Reference entity.
 - Synchronization of `Parameters` and `Logical Instances` is not supported.
 
+# Appendix
 
-#### Import csv file
+## Add User
+
+* Go to Verisium Manager Web Client, i.e. please visit `https://<Verisium Manager Server IP>:<Port Number>/web/vmgr` in the browser  
+* Login with the Admin User  
+* Go to **Administration** section  
+* Select "System Configurations" -> "Security" -> "System Users" -> "New"  
+![VMGR_create_user_navigation](../assets/VMGR_create_user_navigation.png)  
+* In "Create a new user" window, please provide "UserName" and click "Create" button  
+![VMGR_create_user_window](../assets/VMGR_create_user_window.png)  
+> **Note**: "Internal User" can also be created, but in case of "Internal User", password needs to be provided in "Create a new user" window.  
+* Created user will be available in the list of "Users" under "System Users". To determine the access levels of the created Verisium Manager User for the specific Verisium Manager Porject, please refer to [Add User in Project with Permissions](#add-user-in-project-with-permissions)  
+![VMGR_user_list](../assets/VMGR_user_list.png)  
+
+## Add User in Project with Permissions
+
+There are three ways to add the user in the project with the permissions for accessing **Verisium Manager instance APIs**:  
+1. [Disable authorization and access control](#disable-authorization-and-access-control)  
+2. [Add User with Access Control](#add-user-with-access-control)  
+3. [Add User to a System Group](#add-user-to-a-system-group)  
+
+### Disable authorization and access control
+
+If the security setting: **Enable authorization and access control (All authentication channels must be enabled** is disabled for the Verisium Manager Project that is going to be used in the Integration Configuration, then by default, the user will have the permission to access the Verisium Manager instance APIs for that project. To validate the same, please follow the steps given below:  
+* Go to Verisium Manager Web Client, i.e. please visit `https://<Verisium Manager Server IP>:<Port Number>/web/vmgr` in the browser;  
+* Login with the Admin User and select the Verisium Manager Project that is going to be used in the Integration Configuration;  
+* Go to **Administration** section;  
+* Select "Project Configurations" -> "Security" -> "Configuration" -> "ENABLE /DISABLE SECURITY";  
+* Setting : "Enable authorization and access control (All authentication channels must be enabled)" shall be disabled.  
+![vmgr_project_security_configuration](../assets/vmgr_project_security_configuration.png)  
+> **Note**: If you want to keep this setting enabled, then please refer to [Add User with Access Control](#add-user-with-access-control) to add the user in the project and, set the required access control.  
+
+### Add User with Access Control
+
+* Go to Verisium Manager Web Client, i.e. please visit `https://<Verisium Manager Server IP>:<Port Number>/web/vmgr` in the browser  
+* Login with the Admin User and select the Verisium Manager Project that is going to be used in the Integration Configuration  
+* Go to **Administration** section  
+* Select "Project Configurations" -> "Security" -> "Access Control"  
+* Select "Add" in "Users with access to project <Verisium Manager Project Name>"  
+![vmgr_project_user](../assets/vmgr_project_user.png)  
+* Select the User from the "Users" and click "Add Selected"  
+![vmgr_add_user](../assets/vmgr_add_user.png)  
+* Select the User from the "Users with access to project <Verisium Manager Project Name>" and click "Project Permissions"  
+![vmgr_select_user](../assets/vmgr_select_user.png)  
+* Select "vPlan Read", "vPlan Write" and "vPlan Controlled_Sections", permissions from "Available" list and click on "Confirm" button  
+![vmgr_permissions](../assets/vmgr_permissions.png)  
+: * "vPlan Read" permission is required to perform "Read" operation on the entities of vPlan. Permission is needed when Verisium Manager is either source or target system in the Integration Configuration.  
+: * "vPlan Write" permission is required to perform a "Write" operation on the entities of vPlan. Permission is required when Verisium Manager is the target system in the Integration Configuration or "Remote Entity Id Field Name"/"Remote Entity Link Field Name" is configured in advanced configuration of Integration.  
+: * "vPlan Controlled_Sections" permission is required to perform a "Write" operation on the Controlled [Section[(Sub Type)]](#section5b28sub_type295d) of vPlan. Permission is required when Verisium Manager is the target system in the Integration configuration, and the [Section[(Sub Type)]](#section5b28sub_type295d) entities used in the Integration are the Controlled [Section[(Sub Type)]](#section5b28sub_type295d)  
+
+### Add User to a System Group
+
+In this configuration, the user not having permission to access the specific project is added to a **System Group**. The **System Group** is then added as a Group having access to that particular project.  
+* Go to Verisium Manager Web Client, i.e. please visit `https://<Verisium Manager Server IP>:<Port Number>/web` in the browser.  
+* Login with the User that has permissions to change System Security Configurations.  
+* Select "Configurations" -> "System Level" -> "Security".  
+  ![vmgr_project_identifier_1](../assets/vmgr_project_identifier_1.png)  
+* Select "System Groups" tab under "System Security Configurations".  
+* Select "New" in "Groups".  
+  ![vmgr_create_group](../assets/vmgr_create_group.png)  
+* In "Create a new group" window, provide "GroupName" and click "Create" button.  
+* Select the newly created <Group Name> in "Groups".  
+* Select "Add" in "Users of group <Group Name>".  
+  ![vmgr_add_user_in_group](../assets/vmgr_add_user_in_group.png)  
+* In "Select the users you want to add for group <Group Name>" window, select the {{SITENAME}} user and click "Add Selected".  
+* Under the "Configurations" pane, Select "Project Configurations" -> "Security".  
+* Select "Access Control" tab under "Project Security Configurations".  
+* Select "Add" in "Groups with access to project <Verisium Manager Project Name>". Select the newly created <Group Name> and click "Add Selected".  
+  ![vmgr_add_group_project](../assets/vmgr_add_group_project.png)  
+
+## Project Configuration
+
+* Go to Verisium Manager Web Client, i.e. please visit `https://<Verisium Manager Server IP>:<Port Number>/web/vmgr` in the browser  
+* Login with the Admin User and select the Verisium Manager Project that is going to be used in the Integration Configuration  
+* Go to **Administration** section  
+* Select "Project Configurations" -> "Security" -> "Configuration" -> "ADVANCED SETTINGS"  
+* Setting: "Block vAPI/Web from serving non-administration requests" must be disabled  
+![vmgr_project](../assets/vmgr_project.png)  
+
+## Add Custom Field
+
+In Verisium Manager, the Custom Field can be created in two steps :  
+1. [Create csv file for Custom Field](#create-csv-file-for-custom-field)  
+2. [Import csv file](#import-csv-file)  
+
+### Create csv file for Custom Field
+
+Create a csv file with details given below, and save it with a suitable name in the **Verisium Manager Server** directory.  
+![VMGR_uda](../assets/VMGR_uda.png)  
+> **Note**: Above csv file can also be created in any Text Editor with contents given below :  
+NAME ,DISPLAY_NAME ,DESCRIPTION ,VALID_CONTAINER_NAMES ,TYPE ,DEFAULT_VALUE ,SHOULD_PROPAGATE ,VALID_VALUES ,IS_GRADE_ATTRIBUTE ,CALCULATION_SCRIPT ,VPLAN_MODIFIABLE,MODIFIABLE
+OH_Last_Update,OH_Last_Update,Last Update by the OpsHub,section;,ATTRIBUTE_TYPE_STRING,,TRUE,,FALSE,,TRUE,TRUE
+
+### Import csv file
 
 * Open Verisium Manager Desktop Client in the administration mode. i.e. Launch Verisium Manager desktop client by using `Verisium Manager -admin` command in the Command Prompt of the machine where **Verisium Manager client** is configured  
 * Login with the Admin User, if client asks for the UserName and Password  
@@ -374,7 +467,7 @@ Below are the specific limitations for **Reference** entity. Additionally, there
 * Now the added Custom field can be seen in the **User Defined Attributes** section  
   ![VMGR_add_uda_2](../assets/VMGR_add_uda_2.png)
 
-### How to determine the Attr Name
+## How to determine the Attr Name
 
 * Go to Verisium Manager Web Client, i.e. visit `https://<Verisium Manager Server IP>:<Port Number>/web/vmgr` in the browser  
 * Login with the Admin User and select the Verisium Manager Project that is going to be used in the Integration Configuration  
@@ -415,7 +508,7 @@ Below are the specific limitations for **Reference** entity. Additionally, there
 * Please find the "Display Name" for which "Attr Name" needs to be determined. The value of "Attr Name" corresponding to the "Display Name" is the "Attr Name" to be used in the Criteria Configuration, i.e. If "Attr Name" for Name field is to be determined then in the response, find "Name" Display Name. In the response:
 can be found. From the response, we can determine that "Attr Name" corresponding to the Name field is name. Hence, name is the "Attr Name" for the field display name Name.
 
-### How to determine the Project Identifier
+## How to determine the Project Identifier
 
 * Go to Verisium Manager Web Client, i.e., visit `https://<Verisium Manager Server IP>:<Port Number>/web` in the browser.  
 * Login with the User that has permissions to change System Security Configurations.  
