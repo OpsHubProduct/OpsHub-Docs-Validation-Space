@@ -1,4 +1,4 @@
-<span style="color:#DE413A;"> Formerly known as vManager</span>
+**Formerly known as vManager**
 
 # Prerequisites
 
