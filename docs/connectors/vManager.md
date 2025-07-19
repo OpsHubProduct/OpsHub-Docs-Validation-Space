@@ -82,19 +82,19 @@ Refer to the screenshot given below :
 
 ![VMGR_mapping.png](../assets/VMGR_mapping.png)
 
-> ![Note.jpg](../assets/Note.jpg) If you want to synchronize the Parameters of the [Section[(Sub Type)]](#Section.5B.28Sub_Type.29.5D) entity then, please select **Parameters** from the list of the Verisium Manager fields.
+> **Note**: If you want to synchronize the Parameters of the [Section[(Sub Type)]](#Section.5B.28Sub_Type.29.5D) entity then, please select **Parameters** from the list of the Verisium Manager fields.
 
 ![VMGR_parameters.png](../assets/VMGR_parameters.png)
 
 ### Sub Types in Verisium Manager
 
 - Verisium Manager supports user defined Sub Types for "Section" and "Metrics Port" entity.  
-- In {{SITENAME}}, these Sub types are supported as separate Entity Types for synchronization, so that user can use it in synchronization for better modelling with other end systems.  
-- For example, Let's assume we have defined Sub Type "Functional Verification" for "Section", and "Assertion Verification" for "Metrics Port" in Verisium Manager. Hence, in {{SITENAME}} integration/mapping configuration, you will be able to create/update integrations/mapping for any of the below entity types:
+- In OpsHub Integration Manager, these Sub types are supported as separate Entity Types for synchronization, so that user can use it in synchronization for better modelling with other end systems.  
+- For example, Let's assume we have defined Sub Type "Functional Verification" for "Section", and "Assertion Verification" for "Metrics Port" in Verisium Manager. Hence, in OpsHub Integration Manager integration/mapping configuration, you will be able to create/update integrations/mapping for any of the below entity types:
 
 ![VMGR_subtype_list.png](../assets/VMGR_subtype_list.png)
 
-> ![Note.jpg](../assets/Note.jpg) Here, Entity type "Section" and "Metrics Port" refer to Verisium Manager Section and Metrics Port entity without Sub Type.
+> **Note**: Here, Entity type "Section" and "Metrics Port" refer to Verisium Manager Section and Metrics Port entity without Sub Type.
 
 ### Relationships
 
@@ -102,7 +102,7 @@ For the [Section[(Sub Type)]](#Section.5B.28Sub_Type.29.5D) entity, **Parent**, 
 
 Refer [Relationship Configuration](Mapping_Configuration#Relationships) to learn the step-by-step process to configure Relationships.
 
-> ![Note.jpg](../assets/Note.jpg) "Reference to" relationship for the [Section[(Sub Type)]](#Section.5B.28Sub_Type.29.5D) entity represents the entities linked via "Reference Entity" in the Verisium Manager.
+> **Note**: "Reference to" relationship for the [Section[(Sub Type)]](#Section.5B.28Sub_Type.29.5D) entity represents the entities linked via "Reference Entity" in the Verisium Manager.
 
 ![VMGR_ref_to_link.png](../assets/VMGR_ref_to_link.png)
 
@@ -129,7 +129,7 @@ It is mandatory to configure Child relationship in Relationship Configuration fo
 *In the above table:*  
 - All the **Link Types** are supported for entities in the same vPlan. Refer the above table for cross vPlan support of different **Link Types** between entities.  
 - **N/A** means that the link is not supported by the Verisium Manager.  
-- **No** means that the link is supported by the Verisium Manager but not by the {{SITENAME}} due to API limitation.
+- **No** means that the link is supported by the Verisium Manager but not by the OpsHub Integration Manager due to API limitation.
 
 ### Rank
 
@@ -139,7 +139,7 @@ It is mandatory to configure Child relationship in Relationship Configuration fo
 ### Mapping for Soft Delete Configuration
 
 - When Verisium Manager is the target system, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](Source_Delete_Synchronization).  
-- After the Soft Delete operation is performed by {{SITENAME}} in Verisium Manager, the entity will be deleted in the Verisium Manager, and it can be found in the "Deleted Entities" of the corresponding project, where it existed earlier.  
+- After the Soft Delete operation is performed by OpsHub Integration Manager in Verisium Manager, the entity will be deleted in the Verisium Manager, and it can be found in the "Deleted Entities" of the corresponding project, where it existed earlier.  
 - To only enable the logical delete operation in the target, "OH Soft Delete" field shall be mapped with the default value "No" in the [Delete Mode](Mapping_Configuration#Delete_Mode) mapping.
 
 ## Integration Configuration
@@ -154,8 +154,8 @@ Refer to the screenshot given below :
 
 ### Project Specific Entity Information
 
-In Verisium Manager, vPlan can be created under the Verisium Manager Project. Hence, Verisium Manager Project is treated as a Parent-project whereas vPlan is treated as a child-project. The vPlan is listed as a child-project under the corresponding Parent-project (Verisium Manager Project) in the {{SITENAME}} configuration.  
-[Section[(Sub Type)]]/#Section.5B.28Sub_Type.29.5D / [Metrics Port[(Sub Type)]](#Metrics_Port.5B.28Sub_Type.29.5D) entity can be created only under the vPlan. As a result, the [Section[(Sub Type)]](#Section.5B.28Sub_Type.29.5D)/[Metrics Port[(Sub Type)]](#Metrics_Port.5B.28Sub_Type.29.5D) can be configured in {{SITENAME}}, if child-project(vPlan) is selected in Mapping Configuration or Integration Configuration section.
+In Verisium Manager, vPlan can be created under the Verisium Manager Project. Hence, Verisium Manager Project is treated as a Parent-project whereas vPlan is treated as a child-project. The vPlan is listed as a child-project under the corresponding Parent-project (Verisium Manager Project) in the OpsHub Integration Manager configuration.  
+[Section[(Sub Type)]]/#Section.5B.28Sub_Type.29.5D / [Metrics Port[(Sub Type)]](#Metrics_Port.5B.28Sub_Type.29.5D) entity can be created only under the vPlan. As a result, the [Section[(Sub Type)]](#Section.5B.28Sub_Type.29.5D)/[Metrics Port[(Sub Type)]](#Metrics_Port.5B.28Sub_Type.29.5D) can be configured in OpsHub Integration Manager, if child-project(vPlan) is selected in Mapping Configuration or Integration Configuration section.
 
 ### Criteria Configuration
 
@@ -293,8 +293,8 @@ uart_ctrl_top (scope default) [HDL] [TYPE] [BLOCK_CUMULATIVE, STATEMENT_CUMULATI
 Below are the commonly known limitations for the [Section[(Sub Type)]](#section5b28sub_type295d)/[Metrics Port[(Sub Type)]](#metrics_port5b28sub_type295d)/Reference entity. Additionally, there exists few specific limitations for [Section[(Sub Type)] entity](#section5b28sub_type295d-entity), [Metrics Port[(Sub Type)] entity](#metrics_port5b28sub_type295d-entity) and [Reference entity](#reference-entity).
 
 - There is a configuration in the Advanced Setting of Integration Configuration where the "Remote Entity Link" can be configured. However, the [Section[(Sub Type)]](#section5b28sub_type295d)/[Metrics Port[(Sub Type)]](#metrics_port5b28sub_type295d)/Reference entity is supported in the Verisium Manager Desktop Client, and so the "Remote Entity Link" is not being supported.
-- Integration is supported only for vPlans in the database of the Verisium Manager. The synchronization of the vPlan available in the file system is not supported by {{SITENAME}}. However, the file system vPlans can be imported to the database and used in the integration.
-- For any [Section[(Sub Type)]](#section5b28sub_type295d) entity, if its "vPlan Full Path" field contains `;/\` (for the Verisium Manager version prior to 23.09) or `"` or ends with `.` (for any supported Verisium Manager version), then that [Section[(Sub Type)]](#section5b28sub_type295d) entity cannot be set as "Parent" entity for any other [Section[(Sub Type)]](#section5b28sub_type295d)/[Metrics Port[(Sub Type)]](#metrics_port5b28sub_type295d)/Reference entity. Also, "Reference to" link cannot be created from that entity to any other entity. Additionally, other linked [Section[(Sub Type)]](#section5b28sub_type295d)/[Metrics Port[(Sub Type)]](#metrics_port5b28sub_type295d)/Reference entity with this entity cannot be fetched due to API limitation. Hence, when Verisium Manager is the source system in the integration configuration in {{SITENAME}}, then fetching relationships for such entities will be skipped with the warning in the {{SITENAME}} logs.
+- Integration is supported only for vPlans in the database of the Verisium Manager. The synchronization of the vPlan available in the file system is not supported by OpsHub Integration Manager. However, the file system vPlans can be imported to the database and used in the integration.
+- For any [Section[(Sub Type)]](#section5b28sub_type295d) entity, if its "vPlan Full Path" field contains `;/\` (for the Verisium Manager version prior to 23.09) or `"` or ends with `.` (for any supported Verisium Manager version), then that [Section[(Sub Type)]](#section5b28sub_type295d) entity cannot be set as "Parent" entity for any other [Section[(Sub Type)]](#section5b28sub_type295d)/[Metrics Port[(Sub Type)]](#metrics_port5b28sub_type295d)/Reference entity. Also, "Reference to" link cannot be created from that entity to any other entity. Additionally, other linked [Section[(Sub Type)]](#section5b28sub_type295d)/[Metrics Port[(Sub Type)]](#metrics_port5b28sub_type295d)/Reference entity with this entity cannot be fetched due to API limitation. Hence, when Verisium Manager is the source system in the integration configuration in OpsHub Integration Manager, then fetching relationships for such entities will be skipped with the warning in the OpsHub Integration Manager logs.
 
 > **Note:** "vPlan Full Path" may contain special characters ;"/\ because these characters are present in the [Section[(Sub Type)]](#section5b28sub_type295d) entity name and/or Plan entity name. Hence, having such characters in vPlan name or [Section[(Sub Type)]](#section5b28sub_type295d) name should be avoided for the vPlan is being configured for synchronization.
 
@@ -302,7 +302,7 @@ Below are the commonly known limitations for the [Section[(Sub Type)]](#section5
 - If valid values for the Enum/Multi-Enum attribute/field is updated from the "Verisium Manager Desktop client" for any [Section[(Sub Type)]](#section5b28sub_type295d)/[Metrics Port[(Sub Type)]](#metrics_port5b28sub_type295d)/Reference entity, the update in the values of such attributes/fields doesn't get reflected in API response immediately, and so the updated values of the attributes/fields will not be reflected in the value mapping of such attributes/fields in the Mapping Configuration immediately.
 - Synchronization of the Grade attributes/fields is not supported.
 
-> **Note:** To synchronize Grade attributes/fields in {{SITENAME}}, refer to [Verisium Manager Scripts](https:///vManager/VManagerScripts.zip)
+> **Note:** To synchronize Grade attributes/fields in OpsHub Integration Manager, refer to [Verisium Manager Scripts](https:///vManager/VManagerScripts.zip)
 
 - Due to API limitation, the "Reference to" relationship between the entities of the different vPlan is not supported for the Verisium Manager version prior to 21.01.
 - The "Reference by" relationship between the entities of the different vPlan is not supported.
@@ -325,7 +325,7 @@ Below are the specific limitations for the [Section[(Sub Type)]](#Section.5B.28S
 
 *When Verisium Manager is the target system in the integration:*
 - "Parameter condition" can be synchronized only if the "Parameters" are mapped and synchronized since in the Verisium Manager, the "Parameter condition" field is dependent upon the "Parameters"
-- When "Parameters" field is mapped in the Integration Configuration and due to some abnormal situation if {{SITENAME}} server fails after adding the "Parameters" to the Verisium Manager but before reflecting back this change to {{SITENAME}}, then there is a chance of incorrect conflict detection. Hence, it is recommended to disable the conflict for the "Parameters" field
+- When "Parameters" field is mapped in the Integration Configuration and due to some abnormal situation if OpsHub Integration Manager server fails after adding the "Parameters" to the Verisium Manager but before reflecting back this change to OpsHub Integration Manager, then there is a chance of incorrect conflict detection. Hence, it is recommended to disable the conflict for the "Parameters" field
 - For the Verisium Manager version prior to 21.02  
   - Due to API limitation, at any point of time, the "Parameter condition" can be set for only a single Parameter, during which all other Parameters' condition will be set to default values. At the time of synchronization of the "Parameter condition", only one Parameter's condition will be set in the Verisium Manager based on the current value of mapped field of source system with the "Parameter condition". Meanwhile, all other Parameters' condition, will be set to the default values  
     - If in the Verisium Manager there are two Parameters i.e.  
@@ -344,24 +344,20 @@ Below are the specific limitations for [Metrics Port[(Sub Type)]](#Metrics_Port.
 - Synchronization of "Parameters" and "Logical Instances" are not supported
 
 *When Verisium Manager is the target system in the integration:*
-- Write operation on "Parameter condition" and "Bin Filter" is not supported. So, these attributes/fields are treated as read-only fields in the Mapping Configuration of {{SITENAME}}
+- Write operation on "Parameter condition" and "Bin Filter" is not supported. So, these attributes/fields are treated as read-only fields in the Mapping Configuration of OpsHub Integration Manager
 - If "Metrics Port Kind" attribute/field is not mapped or no value is given at the time of [Metrics Port[(Sub Type)]](#Metrics_Port.5B.28Sub_Type.29.5D) entity creation, then [Metrics Port[(Sub Type)]](#Metrics_Port.5B.28Sub_Type.29.5D) entity will be created with the value **"Coverage"** for "Metrics Port Kind" attribute/field. Therefore, such a [Metrics Port[(Sub Type)]](#Metrics_Port.5B.28Sub_Type.29.5D) will be "Coverage" port kind in Verisium Manager.
 
-<p align="center">
-  <img src="../assets/Note.jpg" alt="Note" width="30px">
-</p>
-
-If the conflict is enabled for this attribute/field then, due to this behavior, there is a chance of incorrect conflict detection. Hence, it is recommended to provide [default value mapping](Mapping Configuration#Default Mapping) for the "Metrics Port Kind" attribute/field.
+> **Note**If the conflict is enabled for this attribute/field then, due to this behavior, there is a chance of incorrect conflict detection. Hence, it is recommended to provide [default value mapping](Mapping Configuration#Default Mapping) for the "Metrics Port Kind" attribute/field.
 
 ## Reference Entity
 
 Below are the specific limitations for **Reference** entity. Additionally, there exist a few common limitations for [Section[(Sub Type)]/Metrics Port[(Sub Type)]/Reference](#common-limitations) entity.
 
 - **When Verisium Manager is the target system in the integration:**
-  - Write operation on `Parameter setting` and `Reference to` are not supported. So, these fields are treated as **read-only** in the Mapping Configuration of {{SITENAME}}.
+  - Write operation on `Parameter setting` and `Reference to` are not supported. So, these fields are treated as **read-only** in the Mapping Configuration of OpsHub Integration Manager.
   - Write operation on `Creator` is not supported by Verisium Manager version 23.03.
-    - However, the `Creator` field is loaded as a writable field in {{SITENAME}}'s mapping configuration due to API limitation. **Please avoid mapping this field when Verisium Manager is configured as the target system.**
-- If `Reference To/Reference By` relationship is mapped in Relationship Configuration, then delete operation of Reference entity is supported. The Reference entity must **not** be created by a user dedicated to {{SITENAME}}.
+    - However, the `Creator` field is loaded as a writable field in OpsHub Integration Manager's mapping configuration due to API limitation. **Please avoid mapping this field when Verisium Manager is configured as the target system.**
+- If `Reference To/Reference By` relationship is mapped in Relationship Configuration, then delete operation of Reference entity is supported. The Reference entity must **not** be created by a user dedicated to OpsHub Integration Manager.
 - Due to API limitation, parent relationship from Reference to Referenced Section/Metrics Port/Reference is not supported. Only [Section[(Sub Type)]](#section5b28sub_type29) can be added as parent of a Reference entity.
 - Synchronization of `Parameters` and `Logical Instances` is not supported.
 
@@ -430,10 +426,10 @@ can be found. From the response, we can determine that "Attr Name" corresponding
 
 ## Glossary
 
-### [Section[(Sub Type)]](#section5b28subtype295d)
+### [Section[(Sub Type)]]
 
 It refers to the "Section" Entity of the Verisium Manager **with or without Sub Type**
 
-### [Metrics Port[(Sub Type)]](#metrics_port5b28subtype295d)
+### [Metrics Port[(Sub Type)]]
 
 It refers to the "Metrics Port" Entity of the Verisium Manager **with or without Sub Type**
