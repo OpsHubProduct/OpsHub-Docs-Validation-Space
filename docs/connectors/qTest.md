@@ -25,7 +25,7 @@ If the system is deployed on HTTPS and a self-signed certificate is used, then y
 
 Map the fields between Tricentis qTest and the other system to be integrated to ensure that the data between both the systems synchronizes correctly. Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
-### Mapping for Soft Delete Configuration
+## Mapping for Soft Delete Configuration
 
 - When Tricentis qTest is the target system in the integration, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md).
 - After the Soft Delete operation is performed by **OpsHub Integration Manager** in Tricentis qTest, the entity will be deleted in Salesforce. The deleted entity goes to the "Recycle Bin".
