@@ -135,7 +135,7 @@ Example of XSLT for GitHub commit information to Change Set Changes:
   * Rally do not have different tag format for the entity mention tag, rather rally support the insertion of entity link in rich text field.
   * OpsHub Integration Manager will translate and synchronize those entity link references which are matching text `/#/?detail=/{entityType}/{entityId}&fdp=true` as per mention sync option configured in mapping.
     * Description: "Sample text https://{rally-server-url}/#/?detail=/defect/722340630099&fdp=true
-* Click on [**Mention Sync Setting**](mapping-configuration.md#mention-setting) to know more about entity mention mapping and synchronization behavior in general.
+* Click on [**Mention Sync Setting**](../integrate/mapping-configuration.md#mention-setting) to know more about entity mention mapping and synchronization behavior in general.
 
 ## Relationship Configuration
 
