@@ -77,7 +77,7 @@ For Test Case Result, it is mandatory to specify the test case under which the r
 
 Changes field is collection of changes. Change is an entity that contains Action, Base, Extension, PathAndFilename (Required), Uri.
 
-The user needs to do advanced mapping for field changes. Advanced mapping uses [XSLT](Mapping_Configuration#View.2FEdit_XSLT_Configurations_options) to fetch required data from SourceXML and perform required operations on it.
+The user needs to do advanced mapping for field changes. Advanced mapping uses [XSLT](../integrate/mapping-configuration.md#view-edit-xslt-configurations-options) to fetch required data from SourceXML and perform required operations on it.
 
 ### XSLT for fetching data from SourceXML
 
@@ -124,9 +124,6 @@ Example of XSLT for GitHub commit information to Change Set Changes:
 </Changes>
 ```
 
-> Above XSL creates `<change_n>` tag for each file in changes with all required values.
-> - CommitId and Branch space name are present at the parent node (../../)
-> - The repository’s address must be replaced in the above XSL manually.
 
 ## Mapping for Soft Delete Configuration
 
