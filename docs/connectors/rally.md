@@ -125,7 +125,7 @@ Example of XSLT for GitHub commit information to Change Set Changes:
 
 * When Rally is the target system in the integration, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md)  
 * After the soft delete operation is performed by OpsHub Integration Manager in Rally, the entity will be deleted in the Rally, and it can be found in the "Recycle bin" of the corresponding project, where it existed earlier.
-* To only enable the logical delete operation in the target, "Recycled" field shall be mapped with the default value "No" in the [Delete Mode](../integrate/mpping-configuration.md#delete-mode)
+* To only enable the logical delete operation in the target, "Recycled" field shall be mapped with the default value "No" in the [Delete Mode](../integrate/mapping-configuration.md#delete-mode)
 
 ## Mapping for Entity mention field
 
