@@ -16,6 +16,7 @@
 ## Workitem prerequisite
 
 Workitems in the Rally project to be integrated should not contain the following substrings in any field:
+
 "], " , " changed from [" , " added [" , "removed [" , "RANK moved up," , "RANK moved down,"
 
 ## Test Case Result prerequisite
@@ -26,7 +27,7 @@ Integration requires the user-defined field given below to be configured in the 
 |-------------------|----------|
 | OHLastUpdate      | String   |
 
-For more details on adding custom fields, refer to the section [Custom Fields](#custom-fields).
+For more details on adding custom fields, refer to the section [Custom Fields](#create-custom-field).
 
 
 # System Configuration
