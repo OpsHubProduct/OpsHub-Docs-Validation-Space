@@ -11,7 +11,7 @@
   - If Rally is the source system, then 'Read only' grant is required for the API key. If the user wants to write back the Remote Link/ID to Rally, then 'Full Access' grant is required.
   - If Rally is the target system, then 'Full Access' grant is required for the API key.
 
-> **Note**: Please refer to the section [How to generate Rally API key](#how-to-generate-ca-agile/rallydev-api-key).
+> **Note**: Please refer to the section [How to generate Rally API key](#how-to-generate-rally-api-key).
 
 ## Workitem prerequisite
 
