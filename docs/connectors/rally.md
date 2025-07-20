@@ -265,7 +265,7 @@ If the parent project is mapped, then the child project should not be mapped in 
 - **Milestone** entity of Rally is an exception for the above-mentioned case. Since the scope for the Milestone is Workspace rather than the project, it will be synchronized even if it is associated with only a closed project.  
   **However**, the associated projects field will only have a list of open projects, as Rally API doesn't provide any information regarding closed projects.
 - For Rally as the target system, if the source system has the rich text type of Wiki, then font color, background color, font family & font size will not be synced to the rich text (HTML type) fields (such as Description).  
-  **Reason:** Rally API limitation for the rich text field.
+  * **Reason:** Rally API limitation for the rich text field.
 - To sync the above type of formatting, the below advanced mapping needs to be configured in the OpsHub Integration Manager:
 
 ```xml
@@ -278,18 +278,17 @@ If the parent project is mapped, then the child project should not be mapped in 
 ```
 
 - If the mapping configuration includes portfolio items as linked entity types in the relationship configuration in OpsHub Integration Manager, the workspace of the projects to be integrated in the integration configuration must be same as the workspace of the project used in the mapping configuration.  
-  **Reason:** Portfolio Items are defined at the workspace level in Rally.
+  * **Reason:** Portfolio Items are defined at the workspace level in Rally.
 
 ## Milestone synchronization
 
 - When Rally is configured as one of the systems and Milestone is configured in the integration, do not club any other entity in the same Milestone entity integration.  
-  **Reason:** Milestone is a workspace level entity and other entities are project level entities which requires project to be selected at the integration level. For the Milestone entity, workspace needs to be selected at the integration level.
+  * **Reason:** Milestone is a workspace level entity and other entities are project level entities which requires project to be selected at the integration level. For the Milestone entity, workspace needs to be selected at the integration level.
 
 - When Rally is configured as one of the systems and Milestone is configured in the integration, do not enable the child project sync in the integration.  
-  **Reason:** Milestone is a workspace level entity and Rally does not have the child workspace concept.
+  * **Reason:** Milestone is a workspace level entity and Rally does not have the child workspace concept.
 
 # Appendix
-
 ## Adding permission to user
 
 For giving privileges to a user, follow the steps given below:
@@ -313,7 +312,6 @@ For giving privileges to a user, follow the steps given below:
 ## Create custom field
 
 Integration requires a few special fields to be defined on the workitem that is being synchronized. These must be set up so that integration can track the integration status of each item.
-
 - Log into Rally instance with **Administrator** privileges.
 - Navigate to **Setup** link on top right of Rally web interface.
 
