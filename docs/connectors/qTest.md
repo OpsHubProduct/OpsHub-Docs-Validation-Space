@@ -177,12 +177,13 @@ To configure an integration based on criteria, follow the steps given below:
 * Open Tricentis qTest.
 * Go to **Site Administration** window.
 * Go to **License   Users** tab and click **Invite** to send invitation to new user to be added.
-* 
+  
   <p align="center">
   <img src="../assets/qTest_Image1B.png" width="800px" />
 </p>
 * After adding new user, add the user to project.
 * Go to Project tab.  
+
  <p align="center">
   <img src="../assets/qTest_Image2.png" width="800px" />
 </p>
@@ -199,6 +200,7 @@ For creating custom field in Tricentis qTest, follow the steps given below:
 <p align="center">
   <img src="../assets/qTest_Image3a.PNG" width="800px" />
 </p>
+
 * In Field Settings, click the entity type to which custom field is to be added (Example: Requirement). Click on **Add Custom Field** button to add new custom field.  
 
  <p align="center">
