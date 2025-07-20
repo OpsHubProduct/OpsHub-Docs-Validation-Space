@@ -47,7 +47,7 @@ If the system is deployed on HTTPS and a self-signed certificate is used, then y
 
 Map the fields between Rally and the other system to be integrated to ensure that the data between both the systems synchronizes correctly.<br>
 
-Click [Mapping Configuration](Mapping_Configuration) to learn the step-by-step process to configure mapping between the systems.
+Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
 ## Mapping Web Link type custom fields
 
@@ -66,12 +66,10 @@ When Rally is the source system, the value for the same will be in above format.
 For Test Case Result, it is mandatory to specify the test case under which the result needs to be added. Mapping provides two ways to do that:
 
 * Search by name and add:
-
-  :: You need to provide the name of test case under the mapping field 'Test Case'. Integration will look for the test case with the given name and will add test case result under that ::test case. If multiple test cases are found with the same name, then first name from the list will be picked.
+  * You need to provide the name of test case under the mapping field 'Test Case'. Integration will look for the test case with the given name and will add test case result under that ::test case. If multiple test cases are found with the same name, then first name from the list will be picked.
 
 * Search by OpsHub event id:
-
-  :: To link a test case by event id, map the field 'Test Case.OpsHubEventId' with the eventid of the test case you want to synchronize.
+   * To link a test case by event id, map the field 'Test Case.OpsHubEventId' with the eventid of the test case you want to synchronize.
 
 ## Map Changes field for Change Set
 
@@ -127,7 +125,7 @@ Example of XSLT for GitHub commit information to Change Set Changes:
 
 * When Rally is the target system in the integration, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md)  
 * After the soft delete operation is performed by OpsHub Integration Manager in Rally, the entity will be deleted in the Rally, and it can be found in the "Recycle bin" of the corresponding project, where it existed earlier.
-* To only enable the logical delete operation in the target, "Recycled" field shall be mapped with the default value "No" in the [Delete Mode](../integrate/mpping-configuration.md#delete-mode mapping)
+* To only enable the logical delete operation in the target, "Recycled" field shall be mapped with the default value "No" in the [Delete Mode](../integrate/mpping-configuration.md#delete-mode)
 
 ## Mapping for Entity mention field
 
