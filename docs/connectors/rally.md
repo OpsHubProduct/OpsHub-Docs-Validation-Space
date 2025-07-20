@@ -16,7 +16,7 @@
 ## Workitem prerequisite
 
 Workitems in the Rally project to be integrated should not contain the following substrings in any field:
-
+"], " , " changed from [" , " added [" , "removed [" , "RANK moved up," , "RANK moved down,"
 
 ## Test Case Result prerequisite
 
