@@ -236,8 +236,8 @@ If the parent project is mapped, then the child project should not be mapped in 
 ## Accommodate Subscription, Workspace, or User (configured in Rally system/ Integration override user of OpsHub Integration Manager) updates in Rally
 
 - In case the Rally subscription, or workspace, or user (configured in the Rally system/integration override user in OpsHub Integration Manager) is updated. To reflect these changes in OpsHub Integration Manager, the configured Rally system [in which changes have been made] in OpsHub Integration Manager needs to be edited.  
-  **Reason:** OIM cached the above type of data for optimized performance. To accommodate the above Rally updates [for example, any new Workspace addition/Subscription name changed/user attributes' change], this data needs to be refreshed via editing the Rally system in OpsHub Integration Manager.  
-  ***Note:** If multiple systems are configured against the same Rally instance, any one of the systems can be updated in this scenario.
+  * **Reason:** OIM cached the above type of data for optimized performance. To accommodate the above Rally updates [for example, any new Workspace addition/Subscription name changed/user attributes' change], this data needs to be refreshed via editing the Rally system in OpsHub Integration Manager.  
+  * **Note:** If multiple systems are configured against the same Rally instance, any one of the systems can be updated in this scenario.
 
 # Limitations
 
