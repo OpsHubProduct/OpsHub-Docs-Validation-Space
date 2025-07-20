@@ -181,6 +181,7 @@ To configure an integration based on criteria, follow the steps given below:
   <p align="center">
   <img src="../assets/qTest_Image1B.png" width="800px" />
 </p>
+
 * After adding new user, add the user to project.
 * Go to Project tab.  
 
