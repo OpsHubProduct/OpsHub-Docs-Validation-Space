@@ -5,7 +5,7 @@
 - Create one Tricentis qTest user for Project Admin role to the project which needs to be integrated. User should be dedicated to **OpsHub Integration Manager** and should not be used to do any operations from system's User-Interface.
 - User should have access to all the entities that need to be synchronized.
 
-### Fields Pre-requisites
+## Fields Pre-requisites
 
 - For the synchronization of the Requirements and Defects, the below field types need to be created in the qTest.
   - OH_Last_Update: Text box type
@@ -16,7 +16,7 @@
 Before you continue to the integration, you must first configure Tricentis qTest system. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system. Refer the screenshot given below for reference.
 
 <p align="center">
-  <img src="../assets/qTest_Image5.png">
+  <img src="../assets/qTest_Image5.png" width="600px" />
 </p>
 
 If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from **OpsHub Integration Manager**. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
@@ -177,11 +177,14 @@ To configure an integration based on criteria, follow the steps given below:
 * Open Tricentis qTest.
 * Go to **Site Administration** window.
 * Go to **License   Users** tab and click **Invite** to send invitation to new user to be added.  
-  ![qTest_Image1B.png](../assets/qTest_Image1B.png)
-
+  <p align="center">
+  <img src="../assets/qTest_Image1B.png" width="600px" />
+</p>
 * After adding new user, add the user to project.
 * Go to Project tab.  
-  ![qTest_Image2.png](../assets/qTest_Image2.png)
+ <p align="center">
+  <img src="../assets/qTest_Image2.png" width="600px" />
+</p>
 
 * Click on the project name in which user needs to be added and add user in **Assign Project Admin** field.
 
@@ -191,9 +194,12 @@ For creating custom field in Tricentis qTest, follow the steps given below:
 
 * Navigate to project where you want to create a custom field.
 * Click on **Settings** dropdown menu (as shown in the image below) and select **Field Settings**.  
-  ![qTest_Image3a.PNG](../assets/qTest_Image3a.PNG)
-
+<p align="center">
+  <img src="../assets/qTest_Image3a.PNG" width="600px" />
+</p>
 * In Field Settings, click the entity type to which custom field is to be added (Example: Requirement). Click on **Add Custom Field** button to add new custom field.  
-  ![qTest_Image4a.PNG](../assets/qTest_Image4a.PNG)
+ <p align="center">
+  <img src="../assets/qTest_Image4a.PNG" width="600px" />
+</p>
 
 * Save the changes.
