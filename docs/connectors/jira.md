@@ -112,9 +112,9 @@ For attachment synchronization, the attachment field must be visible while creat
 </p>
 
 * **Synchronize Relationships** <br>For relationship synchronization of common link types, the Issue Linking settings must be enabled. To check this, please follow the steps given below:  
-  ** In Jira, go to **Settings** > Click **Issues** > Click **Issue Linking** > **Issue Linking is currently ON** [This message should come].  
-  ** Click **Activate** if that message does not appear.  
-  ** Other special link types, i.e., Epic Link, Sprint Link, etc., will still sync even if the setting is disabled.
+  * In Jira, go to **Settings** > Click **Issues** > Click **Issue Linking** > **Issue Linking is currently ON** [This message should come].  
+  * Click **Activate** if that message does not appear.
+  *  Other special link types, i.e., Epic Link, Sprint Link, etc., will still sync even if the setting is disabled.
   
 <p align="center">
   <img src="../assets/JiraIssueLinking.png">
@@ -603,54 +603,54 @@ OpsHub Integration Manager supports synchronization for R4J links [R4J Child Lin
   </xsl:for-each>
 </OHEntityReferences>
 ```
-'''Key Points to be Noted for advance relationship mapping'''
-* The URL of the incoming entity of Jama needs to be formed with appropriate projectID under the element name '''LinkedID'''
-** Replace the text '''https://hostname.jamacloud.com/''' with your instance URL of Jama.
-** Replace the text '''/?projectId=60''' with your project Id i.e, '''/?projectId=<ProjectID>'''
-** Please note that entityInternalId will be automatically picked up. There is no need to explicitly specify it.
-* In order to consider the incoming link as external link, it is mandatory to set property with element name '''IsExternalLink''' to true.
-* Jira expects a title for URL. This can be mentioned under the element name '''EntityLinkComment'''. In case if this property is not provided then url itself will be considered as title of the Web Link.
+**Key Points to be Noted for advance relationship mapping**
+* The URL of the incoming entity of Jama needs to be formed with appropriate projectID under the element name **LinkedID**
+  * Replace the text **https://hostname.jamacloud.com/** with your instance URL of Jama.
+  * Replace the text **/?projectId=60** with your project Id i.e, **/?projectId=<ProjectID>**
+  * Please note that entityInternalId will be automatically picked up. There is no need to explicitly specify it.
+* In order to consider the incoming link as external link, it is mandatory to set property with element name **IsExternalLink** to true.
+* Jira expects a title for URL. This can be mentioned under the element name **EntityLinkComment**. In case if this property is not provided then url itself will be considered as title of the Web Link.
 * Properties mentioned in [https://developer.atlassian.com/server/jira/platform/using-fields-in-remote-issue-links/ field's list] can be processed via advance configuration.
-* Properties in advance configuration are mentioned in '''dot(.)''' notation according to JSON Key property as per above mentioned documentation.
-* For eg. to set '''Application Name''' field, find the corresponding JSON Key and replace '''Jama''' to the desired value in advance configuration.
+* Properties in advance configuration are mentioned in **dot(.)** notation according to JSON Key property as per above mentioned documentation.
+* For eg. to set **Application Name** field, find the corresponding JSON Key and replace **Jama** to the desired value in advance configuration.
 
-'''Known Behaviour'''
+**Known Behaviour**
 * Web Link is not supported for Jira Version < 5.0 and won't be supported for below entities, reason being Jira itself not supporting it.
-**Worklog, Folder(r4j), Zephyr Test Cycle, Zephyr Test Execution, Zephyr Folder, Xray Test Execution, Xray Pre-Condition and Sprint.
-*Comment handling in case of Web Link is general and not specific to Web Link.
+  * Worklog, Folder(r4j), Zephyr Test Cycle, Zephyr Test Execution, Zephyr Folder, Xray Test Execution, Xray Pre-Condition and Sprint.
+* Comment handling in case of Web Link is general and not specific to Web Link.
 
-'''Known Limitations'''
-* If any additional property apart from Link Title and Link URL has to be updated, then along with the additional property any one of Link Title or Link URL needs to be updated.
-** This needs to done because Link Title and Link URL combined, defines a unique key for Web Link in {{ spaceName }}
+**Known Limitations**
+* If any additional property apart from Link Title and Link URL has to be updated, then along with the additional property any one of Link Title or Link URL needs to be updated
+  * This needs to done because Link Title and Link URL combined, defines a unique key for Web Link in {{ spaceName }}
 * Default Link Feature won't be supported in case of Weblink.
-*For Weblink synchronization, in Relationship mapping   User needs to map at least one Entity Type pair as its mandatory. This Entity Type mapping won’t have any impact on Web Link synchronization.
-*Relationship Mapping for Web Link (as Source) to Standard Link (as Target) won't be supported. [{{fullurl:OH-Connector-0078}} Link To Error Doc ]
+* For Weblink synchronization, in Relationship mapping   User needs to map at least one Entity Type pair as its mandatory. This Entity Type mapping won’t have any impact on Web Link synchronization.
+* Relationship Mapping for Web Link (as Source) to Standard Link (as Target) won't be supported. [{{fullurl:OH-Connector-0078}} Link To Error Doc ]
 
 ### Stagil Assets Link
-'''Overview'''
-*{{ spaceName }} supports Stagil Assets links bidirectional synchronization.
-*In relationship mapping, Stagil Assets link types need to be mapped for link synchronization.
+**Overview**
+* {{ spaceName }} supports Stagil Assets links bidirectional synchronization.
+* In relationship mapping, Stagil Assets link types need to be mapped for link synchronization.
 
-'''Known behavior'''
+**Known behavior**
 * From Jira UI, the Stagil Assets links are visible in custom fields. However, these custom fields are supported as link types in {{ spaceName }}.
 * The Stagil Assets links will be synchronized based on current state only.
-** Reason: API limitation.
+ * Reason: API limitation.
 
 ## Rank (R4J Plugin)
-*Jira R4j Plugin allows to organize the issues in tree structure through '''R4J Child Link''' and '''R4j Parent Link''' relationships. The '''R4J Child Link''' relationship represents the child issues of the issue and '''R4J Parent Link''' represents the immediate parent of an issue in Jira R4J view.
-*To synchronize the issues maintaining the above structure, the user can configure the '''R4j Child Link''' and '''R4j Parent Link''' relationship as per the standard [relationship configuration](..integrate/mapping-configuration.md#relationships). Within this structure, to maintain the rank of issues, the user should enable the Rank Synchronization as described in [[Mapping Configuration#Configuration | Rank configuration]] section.
+* Jira R4j Plugin allows to organize the issues in tree structure through **R4J Child Link** and **R4j Parent Link** relationships. The **R4J Child Link** relationship represents the child issues of the issue and **R4J Parent Link** represents the immediate parent of an issue in Jira R4J view.
+* To synchronize the issues maintaining the above structure, the user can configure the **R4j Child Link** and **R4j Parent Link** relationship as per the standard [relationship configuration](..integrate/mapping-configuration.md#relationships). Within this structure, to maintain the rank of issues, the user should enable the Rank Synchronization as described in [[Mapping Configuration#Configuration | Rank configuration]] section.
 
-'''Known Limitations''': <br>
+**Known Limitations**: <br>
 * The 'Folder' entity(which is part of structure within Jira R4j) is not supported as of now.
-** Hence, the tree structure will be considered except for the 'Folder' entity. Although, that structure will be considered, which is within the 'Folder' entity.
-** Therefore, the Rank Synchronization feature is supported for all Jira issues except for the 'Folder' entity.
+  * Hence, the tree structure will be considered except for the 'Folder' entity. Although, that structure will be considered, which is within the 'Folder' entity.
+  *  Therefore, the Rank Synchronization feature is supported for all Jira issues except for the 'Folder' entity.
 
 * When Jira is source end system in synchronization:
-** In Jira R4j, when a rank is changed for any issue, neither its '''Updated''' time is changed nor revision gets generated. Once the operation of the rank change is performed, it is reflected in the target end system upon the next update on the issue, which leads to the change in the '''Updated''' time of the issue.
+  * In Jira R4j, when a rank is changed for any issue, neither its **Updated** time is changed nor revision gets generated. Once the operation of the rank change is performed, it is reflected in the target end system upon the next update on the issue, which leads to the change in the **Updated** time of the issue.
 
 ## Mapping for Archive Configuration
-*When Jira Data Center is the target system, the Archive operation is performed by default in the synchronization of the [Source Delete event](source-delete-Synchronization.md).
-*After the Archive operation is performed by {{ spaceName }} in Jira, the entity will be archived in Jira. 
+* When Jira Data Center is the target system, the Archive operation is performed by default in the synchronization of the [Source Delete event](source-delete-Synchronization.md).
+* After the Archive operation is performed by {{ spaceName }} in Jira, the entity will be archived in Jira. 
 * To only enable the Logical Delete operation in the target, "OH Archive" field should be mapped with the default value, "No" in the [Delete Mode](../integrate/mapping-configuration.md#delete-mode) mapping.
 
 ## Mapping limitations
@@ -669,7 +669,7 @@ If any text type field is mapped for entities which do not support history in a 
 *To resolve this issue, the text field should be trimmed in advance mapping configuration while writing to Jira.*
 
 If you have enabled either Zephyr or Xray Plugin for Jira either as source or target system in {{ spaceName }} and mapped field of type **steps/iterations** during field mapping, then you should be aware of the following limitation:  
-*For fields of data type **steps/iterations**, {{ spaceName }} does not support an auto conversion of rich text content like HTML or Wiki content as per data type of target mapped field unlike supports for HTML or Wiki type of field(s). Hence when this type of field is mapped either as the source or target end point, then {{ spaceName }} shows the following warning "Rich text content of HTML or Wiki type of field will not be synchronized to target end point in the correct format." It means that the formatted text is either sync in target along with tag or is rendered in a different format. So, to retain the Rich Text content in the target end point, it is required to perform an advance mapping for the content of steps that could be of types like HTML or Wiki. Advance mapping differs as per the content type of source and target end system for the mapped field.*
+* For fields of data type **steps/iterations**, {{ spaceName }} does not support an auto conversion of rich text content like HTML or Wiki content as per data type of target mapped field unlike supports for HTML or Wiki type of field(s). Hence when this type of field is mapped either as the source or target end point, then {{ spaceName }} shows the following warning "Rich text content of HTML or Wiki type of field will not be synchronized to target end point in the correct format." It means that the formatted text is either sync in target along with tag or is rendered in a different format. So, to retain the Rich Text content in the target end point, it is required to perform an advance mapping for the content of steps that could be of types like HTML or Wiki. Advance mapping differs as per the content type of source and target end system for the mapped field.*
 
 1. Given below is a **sample advanced mapping** from Jira to RALLY for synchronizing **Manual Steps** of **Xray entity** along with formatting:
 
@@ -1007,7 +1007,7 @@ Go to **Fetch Mapped Data Only** section on [Integration Configuration](../integ
 - In Jira, if the project key of the project [configured for synchronization] has been changed, **{{ spaceName }}** server needs to be restarted.
 - When Jira is the source system and Jira's deployment mode is **Cloud**:
   - Synchronization of **Child issues** link type is not supported.
-    - *Reason: API limitation*
+    - Reason: API limitation
 
 # Entity specific information
 
@@ -1057,26 +1057,18 @@ In case of Sprint entity:
 
 Below functionality is not available for Folder(R4J) on end system itself, hence they are not supported for synchronization:
 
-- **Comment**
-
-Synchronization of below functionality is not supported due to API limitations/issues:
-
+Comment
+ - Synchronization of below functionality is not supported due to API limitations/issues:
 - History/Revisions, Criteria-based synchronization, Inline image, Numbering values  
   (*To understand what does numbering mean for a folder please refer [R4J Folder numbering](#r4j-folder-numbering)*).
-
 - Target Lookup is supported only on Folder internal ID and `=` operator.  
   For more information refer [Target lookup query for R4J Folder Entity](#target-lookup-query-for-r4j-folder-entity).
-
 Limitations of relationship between Folder(R4J) entity and Jira issues:
-
 - From Issues synchronization, **Cross Project relationship is not supported**.  
   So if an Issue is added/linked into a Folder of a different Project, synchronization will consider the folder of same project [Corresponding ID of same project will be considered].  
   To avoid such issue, you can synchronize the relationship from Folder synchronization.
-
 - For synchronization of Relationship from Issues, the Issue needs to be updated.
-
 Other Limitations:
-
 - The statistics of child issues status and issue types available within folder is not supported currently.
 
 ---
@@ -1101,7 +1093,7 @@ If you want to sync worklog as fields of the parent entity, then use the followi
 | Worklog Date Created        | Date          | Yes               | Date when Worklog was created                    |
 | Worklog Date Updated        | Date          | Yes               | Date when Worklog was updated                    |
 
-> 📝 Turn off the **Conflict Detection** flag for these fields and turn on the **Overwrite** flag when configuring field mapping.
+> **Note**: Turn off the **Conflict Detection** flag for these fields and turn on the **Overwrite** flag when configuring field mapping.
 
 **Known Limitation of this approach**
 
@@ -1148,13 +1140,11 @@ If you want to sync worklog as a different entity then use the following fields 
 ---
 
 ### Synchronize Deleted Worklogs
-
 Create a separate field mapping for synchronizing deleted worklogs with only one field, such as **Time Spent**. Please do not map other fields. Change the workflow related configuration of the integration by going to **Workflow Association** of **Entity level mandatory settings** as shown in the screenshot below.
 
 ![WorkFlowForDeletedEventJ](../assets/WorkFlowForDeletedEventJ.PNG)
 
 ---
-
 ### Known Limitation of this Approach
 
 - Worklogs do not support Criteria configuration.
@@ -1176,7 +1166,7 @@ Create a separate field mapping for synchronizing deleted worklogs with only one
 
 - {{ spaceName }} supports three Zephyr entities: Test, Test Cycle, Test Execution, Folder.  
 - The supported versions of Zephyr plugin with ZAPI plugin are specified in [Systems Supported List](../systemsupported/systems-supported-list.md)).  
-> 📝 For Zephyr Cloud, ZAPI plugin is not required.
+> **Note** For Zephyr Cloud, ZAPI plugin is not required.
 
 ### Prerequisites
 
@@ -1211,7 +1201,7 @@ Below are the supported relationships for **Zephyr** entities:
 | **Folder (Zephyr)**                  | Test Cycle                                                  | Parent **(Mandatory)**              |
 |                                      | Test                                                        | Test-Case Linkage                   |
 
-> 📝 Test entity and either Test Cycle or Folder (Zephyr) entity linkages must be configured to synchronize the Test Execution entity.
+> **Note**: Test entity and either Test Cycle or Folder (Zephyr) entity linkages must be configured to synchronize the Test Execution entity.
 
 ---
 
@@ -1452,12 +1442,12 @@ For Target Lookup Configuration of Zephyr entities, refer to [Target lookup for 
 }
 ```
 
-* Please refer to [System Configuration > Understanding Json Metadata Input](../integrate/system-configuration.md#understanding-json-metadata-input) section for more details on the JSON input.
+* Please refer to  [Understanding Json Metadata Input](../integrate/system-configuration.md#understanding-json-metadata-input) section for more details on the JSON input.
 
 ### Test Steps  
-*To synchronize custom fields of Test Steps (field of Test entity), custom field id should be provided in the advance mapping of the Zephyr Teststep field.  
-**Refer to [Find Zephyr Custom Field Id](#find-zephyr-custom-field-id) section for the custom field id.  
-*Given below is a sample advance mapping from Jira to Jira for synchronizing Zephyr Teststep field, including its custom fields:
+* To synchronize custom fields of Test Steps (field of Test entity), custom field id should be provided in the advance mapping of the Zephyr Teststep field.  
+ * Refer to [Find Zephyr Custom Field Id](#find-zephyr-custom-field-id) section for the custom field id.  
+* Given below is a sample advance mapping from Jira to Jira for synchronizing Zephyr Teststep field, including its custom fields:
 
 ```xml
 <Zephyr-space-Teststep>
@@ -1543,56 +1533,56 @@ For Target Lookup Configuration of Zephyr entities, refer to [Target lookup for 
 	</xsl:for-each>
 </Zephyr-space-Teststep>
 ```
-### Known Limitations ###  
-*When Zephyr plugin is enabled, please ensure you do not have issue-types with the names '''Test Execution''' or '''Test Cycle''' or '''Folder(Zephyr)''' in Jira as they conflict with Zephyr entities name.  
-*For changes in the test steps to get synchronized, update some basic fields in Jira such as '''Summary'''.  
-*Synchronization of attachment of Test Steps (field of Test entity) is not supported.  
-*For Zephyr as the target system, if the attachment filename contains Windows special characters(/,\,",:,*,?,<,>,|), then attachment will not be added in Zephyr. As a result, the user will encounter a processing failure. This is because Zephyr does not support Windows special characters in filename.  
-*When Jira's deployment type is '''Self-Managed''':  
-**Synchronization of custom fields of Test Execution entity and Test Steps (field of Test entity) is not supported.  
-*When Jira's deployment type is '''Cloud''':  
-**Synchronization of attachments of '''Test Execution''' entity is not supported. This feature will be supported in the upcoming versions of {{ spaceName }}.  
-**Write side support for attachments in the '''Step Results''' field (part of the '''Test Execution''' entity) is not available.  
-**To synchronize custom fields in Zephyr Cloud, custom field id is required.  
-***'''Reason''': Zephyr doesn't provide an API to get the custom field details. Therefore, user needs to provide custom field id to synchronize custom fields. Refer to [Find Zephyr Custom Field Id](#find-zephyr-custom-field-id) section for the custom field ids.  
-**To synchronize custom fields of Test Execution entity, refer to [[#Test Execution|Synchronize Custom Fields of Test Execution]] section.  
-**To synchronize custom fields of Test Steps (field of Test entity), refer to [Synchronize Custom Fields of Test Steps](#test-steps) section.  
-**Due to API limitation, if the project configured in integration has more than 10000 Test Execution entities, {{ spaceName }} will only synchronize the first 10000 entities based on creation date of the Test Execution entity.  
-**'''Folder(Zephyr) entity'''  
-***Target lookup is not supported for Jira cloud. Criteria, Target and Remote Link sync are not supported for Jira on premise.  
-****Reason: Zephyr API unavailability.  
-***Default Link Configuration for link type '''Test Cycle Linkage''' is not supported.  
-***'''Sprint Id''' field synchronization is not supported.  
-***Folders can be moved across different Test Cycles in Zephyr. However, the synchronization of the movement is not supported by {{ spaceName }}. Hence, if any folder movement will occur, then the synchronization will be failed.  
+### Known Limitations  
+* When Zephyr plugin is enabled, please ensure you do not have issue-types with the names **Test Execution** or **Test Cycle** or **Folder(Zephyr)** in Jira as they conflict with Zephyr entities name.  
+* For changes in the test steps to get synchronized, update some basic fields in Jira such as **Summary**.  
+* Synchronization of attachment of Test Steps (field of Test entity) is not supported.  
+* For Zephyr as the target system, if the attachment filename contains Windows special characters(/,\,",:,*,?,<,>,|), then attachment will not be added in Zephyr. As a result, the user will encounter a processing failure. This is because Zephyr does not support Windows special characters in filename.  
+* When Jira's deployment type is **Self-Managed**:  
+ * Synchronization of custom fields of Test Execution entity and Test Steps (field of Test entity) is not supported.  
+* When Jira's deployment type is **Cloud**:  
+ * Synchronization of attachments of **Test Execution** entity is not supported. This feature will be supported in the upcoming versions of {{ spaceName }}.  
+ * Write side support for attachments in the **Step Results** field (part of the **Test Execution** entity) is not available.
+ * To synchronize custom fields in Zephyr Cloud, custom field id is required.  
+  * **Reason**: Zephyr doesn't provide an API to get the custom field details. Therefore, user needs to provide custom field id to synchronize custom fields. Refer to [Find Zephyr Custom Field Id](#find-zephyr-custom-field-id) section for the custom field ids.  
+ * To synchronize custom fields of Test Execution entity, refer to [[#Test Execution|Synchronize Custom Fields of Test Execution]] section.  
+ * To synchronize custom fields of Test Steps (field of Test entity), refer to [Synchronize Custom Fields of Test Steps](#test-steps) section.  
+ * Due to API limitation, if the project configured in integration has more than 10000 Test Execution entities, {{ spaceName }} will only synchronize the first 10000 entities based on creation date of the Test Execution entity.  
+ * **Folder(Zephyr) entity**  
+  * Target lookup is not supported for Jira cloud. Criteria, Target and Remote Link sync are not supported for Jira on premise.  
+    * Reason: Zephyr API unavailability.
+ * Default Link Configuration for link type **Test Cycle Linkage** is not supported.
+ *  **Sprint Id** field synchronization is not supported.
+ * Folders can be moved across different Test Cycles in Zephyr. However, the synchronization of the movement is not supported by {{ spaceName }}. Hence, if any folder movement will occur, then the synchronization will be failed.  
 
 ## Xray plugin entities
 
-*{{ spaceName }} supports following Xray entities:  
-**For self-managed system: Test, Test Set, Test Plan, Test Execution, Sub Test Execution, Pre-Condition. <br>  
-**For cloud system: Xray Test, Test Set, Test Plan, Test Execution, Test Run, Precondition. <br>  
-*The supported versions of Xray plugin are specified in [Systems Supported List](../systemsupported/systems-supported-list.md). <br>  
+* {{ spaceName }} supports following Xray entities:  
+ * For self-managed system: Test, Test Set, Test Plan, Test Execution, Sub Test Execution, Pre-Condition. <br>
+ * For cloud system: Xray Test, Test Set, Test Plan, Test Execution, Test Run, Precondition. <br>  
+* The supported versions of Xray plugin are specified in [Systems Supported List](../systemsupported/systems-supported-list.md). <br>  
 
 ### Jira Self-managed Instance 
 #### Test Entity
 
-*In Jira Xray, the [https://docs.getxray.app/display/XRAY/Test test] is a test case. It may either be manual or automated, composed of multiple steps, actions and expected results.  
+* In Jira Xray, the [https://docs.getxray.app/display/XRAY/Test test] is a test case. It may either be manual or automated, composed of multiple steps, actions and expected results.  
 
 <h6> <span style="color:darkblue">&nbsp;&nbsp;Test Repository Path field </span></h6>  
 
-:*Xray v3.0 introduces the [https://docs.getxray.app/display/XRAY/Test+Repository Test Repository] concept that enables the organizing tests in test repositories(which are same as folders) within a project.  
-:*User can synchronize the tests inside specific test repositories by mapping 'Test Repository Path' field in the mapping configuration. If this field is mapped, the test will be synchronized within selected test repository.  
-:*For the location of Test within test repository, user can map 'Test Repository Path' field in mapping configuration. If Jira [Xray] is the target system, the Test will be synchronized within the selected test repository path when the 'Test Repository Path' field is mapped.  
+* Xray v3.0 introduces the [https://docs.getxray.app/display/XRAY/Test+Repository Test Repository] concept that enables the organizing tests in test repositories(which are same as folders) within a project.  
+* User can synchronize the tests inside specific test repositories by mapping 'Test Repository Path' field in the mapping configuration. If this field is mapped, the test will be synchronized within selected test repository.  
+* For the location of Test within test repository, user can map 'Test Repository Path' field in mapping configuration. If Jira [Xray] is the target system, the Test will be synchronized within the selected test repository path when the 'Test Repository Path' field is mapped.  
 
 :*The behavior details of 'Test Repository Path' with reference to configuration and synchronization are given below:  
-:*'''1-1 value mapping:'''  
+:***1-1 value mapping:**  
 :**The user can do one to one mapping of source and target repositories by configuring the [value mapping](../integrate/mapping-configuratio.md#view-edit-xslt-configurations-options) of Test Repository Path field.  
-:*'''When Jira[Xray] is the source system''', 'Test Repository Path' will contain the test repository full path with '\' for hierarchy.  
-:*'''When Jira[Xray] is the target''', the test will get synchronized to the selected test repository if it exists in Xray. If it does not exists on Xray side, it will be automatically created by {{ spaceName }}. This is default behavior of Xray plugin which can be changed using the advanced mapping as described [[#.C2.A0.C2.A0Turn_off_Auto-Creation_of_Folders.2FRepository|below]].  
+:***When Jira[Xray] is the source system**, 'Test Repository Path' will contain the test repository full path with '\' for hierarchy.  
+:***When Jira[Xray] is the target**, the test will get synchronized to the selected test repository if it exists in Xray. If it does not exists on Xray side, it will be automatically created by {{ spaceName }}. This is default behavior of Xray plugin which can be changed using the advanced mapping as described [[#.C2.A0.C2.A0Turn_off_Auto-Creation_of_Folders.2FRepository|below]].  
 
-:'''Turn off Auto-Creation of Folders/Repository'''  
+**Turn off Auto-Creation of Folders/Repository**  
 
-:*If the user wants to turn off the auto-creation of the repository in the target system, he/she needs to make a few changes in the [advanced xsl](..integrate/mapping-configuration.md#view-edit-xslt-configurations-options). Scenarios and steps applicable for each scenario are mentioned below:  
-:*'''Scenario 1:''' For turning off the auto-creation of test repositories, the user can check if the test repository path exists on Jira(Xray) side or not. Based on that, the user can set the value for test repository path. On the contrary, if the path does not exist, the user can use the default repository path. A sample [Advance mapping](../integrate/mapping-configuration.md#view-edit-xslt-configurations-options) for similar case that can be tweaked as required is given below:
+*If the user wants to turn off the auto-creation of the repository in the target system, he/she needs to make a few changes in the [advanced xsl](..integrate/mapping-configuration.md#view-edit-xslt-configurations-options). Scenarios and steps applicable for each scenario are mentioned below:  
+:***Scenario 1:** For turning off the auto-creation of test repositories, the user can check if the test repository path exists on Jira(Xray) side or not. Based on that, the user can set the value for test repository path. On the contrary, if the path does not exist, the user can use the default repository path. A sample [Advance mapping](../integrate/mapping-configuration.md#view-edit-xslt-configurations-options) for similar case that can be tweaked as required is given below:
 
 ```xml
 <Test-space-Repository-space-Path xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -2597,18 +2587,18 @@ If you overwrite a field data type used in mappings, you must **remap** that fie
   ** The Project keys, Entity type names and Field names are all case sensitive. Their case should be exactly seen as it is on the Jira UI.
   ** Field Metadata Configuration:
     *** Only three data types are supported to be overwritten as of now: html, wiki and text.
-    *** The '''fields''' in json structure supports two field metadata nodes:
-      **** '''system''': This node contains metadata for system fields that are standard fields within Jira.
-      **** '''custom''': This node contains metadata for custom fields created specifically for a Jira instance.
-    *** The '''system''' or '''custom''' JSON node can contain only the field's "displayName", "dataType", and "mandatory" information.
+    *** The **fields** in json structure supports two field metadata nodes:
+      **** **system**: This node contains metadata for system fields that are standard fields within Jira.
+      **** **custom**: This node contains metadata for custom fields created specifically for a Jira instance.
+    *** The **system** or **custom** JSON node can contain only the field's "displayName", "dataType", and "mandatory" information.
   ** Link Metadata Configuration:
-    *** The '''relationship''' node is used to mark the specific link types as mandatory.
+    *** The **relationship** node is used to mark the specific link types as mandatory.
     *** Overwrite is allowed only for standard Jira link types, including Epic Link, Parent Link, Sprint Link and Jira issue linkage (e.g. cloned, is cloned by, blocks, is blocked by). > **Note**
     The JSON input does not support Jira plugin-based links for marking them as mandatory.
-    *** If the '''skipForIssueTypes''' field is specified, issue linking will be skipped only for the mentioned archived issue types when the end system returns an error during linking; if it is not specified, the skipping behavior will apply to all issue types by default in such cases.
-* At least one key, either entity type or project is mandatory in each '''specific''' JSON key node. Notice how in the above example, in all 3 '''specific''' child nodes, there is at least '''entityType''' key or Project Key '''present'''.
-  ** If either of the nodes, '''common''' or '''specific''' is not required then one of them can be omitted.
-  ** Metadata configuration provided in the '''specific''' node will overwrite the metadata specified in the '''common''' node. For example, if the Description field is using a Wiki renderer in all projects but is using a HTML renderer for a specific project, then the user can keep the data type for Description as wiki in the '''common''' node and as html in the '''specific''' node for the respective projects.
+    *** If the **skipForIssueTypes** field is specified, issue linking will be skipped only for the mentioned archived issue types when the end system returns an error during linking; if it is not specified, the skipping behavior will apply to all issue types by default in such cases.
+* At least one key, either entity type or project is mandatory in each **specific** JSON key node. Notice how in the above example, in all 3 **specific** child nodes, there is at least **entityType** key or Project Key **present**.
+  ** If either of the nodes, **common** or **specific** is not required then one of them can be omitted.
+  ** Metadata configuration provided in the **specific** node will overwrite the metadata specified in the **common** node. For example, if the Description field is using a Wiki renderer in all projects but is using a HTML renderer for a specific project, then the user can keep the data type for Description as wiki in the **common** node and as html in the **specific** node for the respective projects.
 * Here are a few JSON inputs for some use cases as examples:
 
 | **Scenario** | **JSON** | **Minified JSON to Input** |
