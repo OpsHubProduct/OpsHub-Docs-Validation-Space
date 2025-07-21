@@ -1587,21 +1587,19 @@ For Target Lookup Configuration of Zephyr entities, refer to [Target lookup for 
 ```
 
 Description
-The XSL mentioned above will synchronize the Test entity in the repository with the same name as that of the source repository only when the repository with the same name and path also exists in the target project, otherwise it will synchronize the Test entity in a repository called "Default Folder".
+* The XSL mentioned above will synchronize the Test entity in the repository with the same name as that of the source repository only when the repository with the same name and path also exists in the target project, otherwise it will synchronize the Test entity in a repository called "Default Folder".
 
 Also, the user can rename the "Default Folder" as per his/her liking.
-Scenario 2:
+* Scenario 2:
 The user wants to synchronize tests of specific repository and the Tests of remaining repositories should be synchronized to a default repository. For example, the user has configured one-to-one [value mapping](../integrate/mapping-configuration.md#value-mapping) of a few repositories, and the tests that are a part of repositories which are not mapped should move to the default repository.
 
-To do so, the user can simply set a default repository in the [Default value configuration](../integrate/mapping-configuration.md#default-mapping).
+* To do so, the user can simply set a default repository in the [Default value configuration](../integrate/mapping-configuration.md#default-mapping).
 
 #### Manual Test Steps field
-
-: In the Test entity of Xray, the user can add [test steps](https://docs.getxray.app/pages/viewpage.action?pageId=62267955) which specify the steps to be performed while executing the test case. To synchronize test steps using {{ spaceName }}, the user can map the 'Manual Test Steps' field.
+* In the Test entity of Xray, the user can add [test steps](https://docs.getxray.app/pages/viewpage.action?pageId=62267955) which specify the steps to be performed while executing the test case. To synchronize test steps using {{ spaceName }}, the user can map the 'Manual Test Steps' field.
 
 **Changes required to synchronize Manual Test Steps**
-
-: When Jira is the source system, a change is required in the advanced mapping of the Manual Test Steps field to synchronize test steps attachments. The steps are given below:
+* When Jira is the source system, a change is required in the advanced mapping of the Manual Test Steps field to synchronize test steps attachments. The steps are given below:
 
 1. Click the ![XSLT icon](File:XSLT_icon_blue.png) icon of Test Repository Path field to open its [advanced xsl](../integrate/mapping-configuration.md#view-edit-xslt-configurations-options).
 2. Replace the following line:
