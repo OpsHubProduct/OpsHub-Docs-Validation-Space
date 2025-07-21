@@ -626,7 +626,7 @@ OpsHub Integration Manager supports synchronization for R4J links [R4J Child Lin
 
 ## Rank (R4J Plugin)
 * Jira R4j Plugin allows to organize the issues in tree structure through **R4J Child Link** and **R4j Parent Link** relationships. The **R4J Child Link** relationship represents the child issues of the issue and **R4J Parent Link** represents the immediate parent of an issue in Jira R4J view.
-* To synchronize the issues maintaining the above structure, the user can configure the **R4j Child Link** and **R4j Parent Link** relationship as per the standard [relationship configuration](..integrate/mapping-configuration.md#relationships) Within this structure, to maintain the rank of issues, the user should enable the Rank Synchronization as described in [Rank configuration](../integrate/mapping-configuration.md#configuration) section.
+* To synchronize the issues maintaining the above structure, the user can configure the **R4j Child Link** and **R4j Parent Link** relationship as per the standard [relationship configuration](../integrate/mapping-configuration.md#relationships) Within this structure, to maintain the rank of issues, the user should enable the Rank Synchronization as described in [Rank configuration](../integrate/mapping-configuration.md#configuration) section.
 
 **Known Limitations**: <br>
 * The 'Folder' entity(which is part of structure within Jira R4j) is not supported as of now.
@@ -637,7 +637,7 @@ OpsHub Integration Manager supports synchronization for R4J links [R4J Child Lin
   * In Jira R4j, when a rank is changed for any issue, neither its **Updated** time is changed nor revision gets generated. Once the operation of the rank change is performed, it is reflected in the target end system upon the next update on the issue, which leads to the change in the **Updated** time of the issue.
 
 ## Mapping for Archive Configuration
-* When Jira Data Center is the target system, the Archive operation is performed by default in the synchronization of the [Source Delete event](source-delete-synchronization.md).
+* When Jira Data Center is the target system, the Archive operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md).
 * After the Archive operation is performed by {{ spaceName }} in Jira, the entity will be archived in Jira. 
 * To only enable the Logical Delete operation in the target, "OH Archive" field should be mapped with the default value, "No" in the [Delete Mode](../integrate/mapping-configuration.md#delete-mode) mapping.
 
