@@ -273,7 +273,7 @@ The base element type name of `Block` type is `Class`. If we create configuratio
 
 * Some of the stereotypes can have properties associated with them. For example, stereotype "allocated" of profile "SysML 1.1" have properties "allocatedFrom" and "allocatedTo".   
 
-*To map the properties of stereotypes you need to do the following:  
+* To map the properties of stereotypes you need to do the following:  
 1. [Edit mapping XSLT](../integrate/mapping-configuration.md#view-edit-xslt-configurations-options) to map the required property. The property must be added under XSLT of any custom property.  
 2. Select "Sync" option under [Behavior for Absent Fields](../integrate/integration-configuration.md#behavior-for-absent-fields) in the integration settings.  
 
@@ -296,7 +296,7 @@ When Enterprise Architect is the target system and the property to be synchroniz
   <img src="../assets/EA_Image_11.png">
 </p>
 
-<p><img src="../assets/Note.jpg" width="20px"> For Enterprise Architect, there must be an update in the field other than properties of stereotypes to sync changes in these properties.</p>
+> **Note**: For Enterprise Architect, there must be an update in the field other than properties of stereotypes to sync changes in these properties.</p>
 
 Reason: The modified time of entity in Enterprise Architect does not change for these types of properties.
 
