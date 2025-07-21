@@ -2603,8 +2603,6 @@ If you overwrite a field data type used in mappings, you must **remap** that fie
 }
 ```
 
----
-
 | **Scenario** | **Minified JSON to Input** |
 |--------------|-----------------------------|
 | **Change data type for a specific entity type for all projects** | `{"common":{},"specific":[{"entityType":"Bug","fields":{"system":[{"dataType":"html","displayName":"Description"},{"dataType":"html","displayName":"Comments"}]}}]}` |
