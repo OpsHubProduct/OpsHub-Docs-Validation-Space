@@ -293,7 +293,7 @@ When Enterprise Architect is the target system and the property to be synchroniz
 ```
 
 <p align="center">
-  <img src="../assets/EA_Image 11.png">
+  <img src="../assets/EA_Image_11.png">
 </p>
 
 <p><img src="../assets/Note.jpg" width="20px"> For Enterprise Architect, there must be an update in the field other than properties of stereotypes to sync changes in these properties.</p>
