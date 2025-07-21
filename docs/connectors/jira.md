@@ -350,7 +350,7 @@ With this option, {{ spaceName }} makes the required intermediate status transit
 
 Jira allows user/role base transition(s) configuration. Use this configuration to configure any-to-any transition(s) for the integration user on Jira. Workflow transition(s) mapping is not required to be configured in {{ spaceName }} if any-to-any transition(s) is configured.  
 With this option, {{ spaceName }} will be able to perform direct transition of the state field to the desired state as this option works when any-to-any transition is configured for an integration user.  
-For step-by-step instructions for configuring any-to-any transition refer: [Configuration to allow all transitions](#Configuration to allow all transitions).
+For step-by-step instructions for configuring any-to-any transition refer: [Configuration to allow all transitions](#configuration-to-allow-all-transitions).
 
 ### Known Limitation
 
@@ -626,7 +626,7 @@ OpsHub Integration Manager supports synchronization for R4J links [R4J Child Lin
 
 ## Rank (R4J Plugin)
 * Jira R4j Plugin allows to organize the issues in tree structure through **R4J Child Link** and **R4j Parent Link** relationships. The **R4J Child Link** relationship represents the child issues of the issue and **R4J Parent Link** represents the immediate parent of an issue in Jira R4J view.
-* To synchronize the issues maintaining the above structure, the user can configure the **R4j Child Link** and **R4j Parent Link** relationship as per the standard [relationship configuration](..integrate/mapping-configuration.md.md#relationships). Within this structure, to maintain the rank of issues, the user should enable the Rank Synchronization as described in [Rank configuration](../integrate/mapping-configuration.md#configuration) section.
+* To synchronize the issues maintaining the above structure, the user can configure the **R4j Child Link** and **R4j Parent Link** relationship as per the standard [relationship configuration](..integrate/mapping-configuration.md#relationships) Within this structure, to maintain the rank of issues, the user should enable the Rank Synchronization as described in [Rank configuration](../integrate/mapping-configuration.md#configuration) section.
 
 **Known Limitations**: <br>
 * The 'Folder' entity(which is part of structure within Jira R4j) is not supported as of now.
