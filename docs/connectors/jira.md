@@ -2566,22 +2566,22 @@ If you overwrite a field data type used in mappings, you must **remap** that fie
 ```
 
 * There are a few things to be taken care of while inputting the JSON data:
-  ** As shown in the example, the project should be provided in form of Project Key. The user can get the project Key of a Project in Jira by looking at any entity's ID created in a Project. Let's say there is an entity called WP-23, then the Project Key for that project will be WP.
-  ** The Project keys, Entity type names and Field names are all case sensitive. Their case should be exactly seen as it is on the Jira UI.
-  ** Field Metadata Configuration:
-    *** Only three data types are supported to be overwritten as of now: html, wiki and text.
-    *** The **fields** in json structure supports two field metadata nodes:
-      **** **system**: This node contains metadata for system fields that are standard fields within Jira.
-      **** **custom**: This node contains metadata for custom fields created specifically for a Jira instance.
-    *** The **system** or **custom** JSON node can contain only the field's "displayName", "dataType", and "mandatory" information.
-  ** Link Metadata Configuration:
-    *** The **relationship** node is used to mark the specific link types as mandatory.
-    *** Overwrite is allowed only for standard Jira link types, including Epic Link, Parent Link, Sprint Link and Jira issue linkage (e.g. cloned, is cloned by, blocks, is blocked by). > **Note**
+  * As shown in the example, the project should be provided in form of Project Key. The user can get the project Key of a Project in Jira by looking at any entity's ID created in a Project. Let's say there is an entity called WP-23, then the Project Key for that project will be WP.
+  * The Project keys, Entity type names and Field names are all case sensitive. Their case should be exactly seen as it is on the Jira UI.
+  * Field Metadata Configuration:
+    * Only three data types are supported to be overwritten as of now: html, wiki and text.
+    * The **fields** in json structure supports two field metadata nodes:
+      * **system**: This node contains metadata for system fields that are standard fields within Jira.
+      * **custom**: This node contains metadata for custom fields created specifically for a Jira instance.
+      * The **system** or **custom** JSON node can contain only the field's "displayName", "dataType", and "mandatory" information.
+  * Link Metadata Configuration:
+    * The **relationship** node is used to mark the specific link types as mandatory.
+    * Overwrite is allowed only for standard Jira link types, including Epic Link, Parent Link, Sprint Link and Jira issue linkage (e.g. cloned, is cloned by, blocks, is blocked by). > **Note**
     The JSON input does not support Jira plugin-based links for marking them as mandatory.
-    *** If the **skipForIssueTypes** field is specified, issue linking will be skipped only for the mentioned archived issue types when the end system returns an error during linking; if it is not specified, the skipping behavior will apply to all issue types by default in such cases.
+    * If the **skipForIssueTypes** field is specified, issue linking will be skipped only for the mentioned archived issue types when the end system returns an error during linking; if it is not specified, the skipping behavior will apply to all issue types by default in such cases.
 * At least one key, either entity type or project is mandatory in each **specific** JSON key node. Notice how in the above example, in all 3 **specific** child nodes, there is at least **entityType** key or Project Key **present**.
-  ** If either of the nodes, **common** or **specific** is not required then one of them can be omitted.
-  ** Metadata configuration provided in the **specific** node will overwrite the metadata specified in the **common** node. For example, if the Description field is using a Wiki renderer in all projects but is using a HTML renderer for a specific project, then the user can keep the data type for Description as wiki in the **common** node and as html in the **specific** node for the respective projects.
+  * If either of the nodes, **common** or **specific** is not required then one of them can be omitted.
+  * Metadata configuration provided in the **specific** node will overwrite the metadata specified in the **common** node. For example, if the Description field is using a Wiki renderer in all projects but is using a HTML renderer for a specific project, then the user can keep the data type for Description as wiki in the **common** node and as html in the **specific** node for the respective projects.
 * Here are a few JSON inputs for some use cases as examples:
 | **Scenario** | **Minified JSON to Input** |
 |--------------|-----------------------------|
