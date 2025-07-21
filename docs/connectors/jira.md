@@ -1564,7 +1564,7 @@ For Target Lookup Configuration of Zephyr entities, refer to [Target lookup for 
 * **1-1 value mapping:**  
   * The user can do one to one mapping of source and target repositories by configuring the [value mapping](../integrate/mapping-configuratio.md#view-edit-xslt-configurations-options) of Test Repository Path field.  
 * **When Jira[Xray] is the source system**, 'Test Repository Path' will contain the test repository full path with '\' for hierarchy.  
-* **When Jira[Xray] is the target**, the test will get synchronized to the selected test repository if it exists in Xray. If it does not exists on Xray side, it will be automatically created by {{ spaceName }}. This is default behavior of Xray plugin which can be changed using the advanced mapping as described [[#.C2.A0.C2.A0Turn_off_Auto-Creation_of_Folders.2FRepository|below]].  
+* **When Jira[Xray] is the target**, the test will get synchronized to the selected test repository if it exists in Xray. If it does not exists on Xray side, it will be automatically created by {{ spaceName }}. This is default behavior of Xray plugin which can be changed using the advanced mapping as described [below](#turn-off-auto-creation-of-folders-repository) .  
 
 **Turn off Auto-Creation of Folders/Repository**  
 
