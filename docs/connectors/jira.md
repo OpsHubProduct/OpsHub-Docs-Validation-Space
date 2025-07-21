@@ -1559,18 +1559,17 @@ For Target Lookup Configuration of Zephyr entities, refer to [Target lookup for 
 
 * Xray v3.0 introduces the [https://docs.getxray.app/display/XRAY/Test+Repository Test Repository] concept that enables the organizing tests in test repositories(which are same as folders) within a project.  
 * User can synchronize the tests inside specific test repositories by mapping 'Test Repository Path' field in the mapping configuration. If this field is mapped, the test will be synchronized within selected test repository.  
-* For the location of Test within test repository, user can map 'Test Repository Path' field in mapping configuration. If Jira [Xray] is the target system, the Test will be synchronized within the selected test repository path when the 'Test Repository Path' field is mapped.  
-
-:*The behavior details of 'Test Repository Path' with reference to configuration and synchronization are given below:  
-:***1-1 value mapping:**  
-:**The user can do one to one mapping of source and target repositories by configuring the [value mapping](../integrate/mapping-configuratio.md#view-edit-xslt-configurations-options) of Test Repository Path field.  
-:***When Jira[Xray] is the source system**, 'Test Repository Path' will contain the test repository full path with '\' for hierarchy.  
-:***When Jira[Xray] is the target**, the test will get synchronized to the selected test repository if it exists in Xray. If it does not exists on Xray side, it will be automatically created by {{ spaceName }}. This is default behavior of Xray plugin which can be changed using the advanced mapping as described [[#.C2.A0.C2.A0Turn_off_Auto-Creation_of_Folders.2FRepository|below]].  
+* For the location of Test within test repository, user can map 'Test Repository Path' field in mapping configuration. If Jira [Xray] is the target system, the Test will be synchronized within the selected test repository path when the 'Test Repository Path' field is mapped.
+* The behavior details of 'Test Repository Path' with reference to configuration and synchronization are given below:  
+* **1-1 value mapping:**  
+  * The user can do one to one mapping of source and target repositories by configuring the [value mapping](../integrate/mapping-configuratio.md#view-edit-xslt-configurations-options) of Test Repository Path field.  
+* **When Jira[Xray] is the source system**, 'Test Repository Path' will contain the test repository full path with '\' for hierarchy.  
+* **When Jira[Xray] is the target**, the test will get synchronized to the selected test repository if it exists in Xray. If it does not exists on Xray side, it will be automatically created by {{ spaceName }}. This is default behavior of Xray plugin which can be changed using the advanced mapping as described [[#.C2.A0.C2.A0Turn_off_Auto-Creation_of_Folders.2FRepository|below]].  
 
 **Turn off Auto-Creation of Folders/Repository**  
 
 *If the user wants to turn off the auto-creation of the repository in the target system, he/she needs to make a few changes in the [advanced xsl](..integrate/mapping-configuration.md#view-edit-xslt-configurations-options). Scenarios and steps applicable for each scenario are mentioned below:  
-:***Scenario 1:** For turning off the auto-creation of test repositories, the user can check if the test repository path exists on Jira(Xray) side or not. Based on that, the user can set the value for test repository path. On the contrary, if the path does not exist, the user can use the default repository path. A sample [Advance mapping](../integrate/mapping-configuration.md#view-edit-xslt-configurations-options) for similar case that can be tweaked as required is given below:
+* **Scenario 1:** For turning off the auto-creation of test repositories, the user can check if the test repository path exists on Jira(Xray) side or not. Based on that, the user can set the value for test repository path. On the contrary, if the path does not exist, the user can use the default repository path. A sample [Advance mapping](../integrate/mapping-configuration.md#view-edit-xslt-configurations-options) for similar case that can be tweaked as required is given below:
 
 ```xml
 <Test-space-Repository-space-Path xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -1587,16 +1586,14 @@ For Target Lookup Configuration of Zephyr entities, refer to [Target lookup for 
 </Test-space-Repository-space-Path>
 ```
 
-::: Description:
-::::
+Description
 The XSL mentioned above will synchronize the Test entity in the repository with the same name as that of the source repository only when the repository with the same name and path also exists in the target project, otherwise it will synchronize the Test entity in a repository called "Default Folder".
 
 Also, the user can rename the "Default Folder" as per his/her liking.
-
-: Scenario 2:
+Scenario 2:
 The user wants to synchronize tests of specific repository and the Tests of remaining repositories should be synchronized to a default repository. For example, the user has configured one-to-one [value mapping](../integrate/mapping-configuration.md#value-mapping) of a few repositories, and the tests that are a part of repositories which are not mapped should move to the default repository.
 
-:: To do so, the user can simply set a default repository in the [Default value configuration](../integrate/mapping-configuration.md#default-mapping).
+To do so, the user can simply set a default repository in the [Default value configuration](../integrate/mapping-configuration.md#default-mapping).
 
 #### Manual Test Steps field
 
