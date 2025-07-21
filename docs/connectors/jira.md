@@ -1891,7 +1891,7 @@ Following are the relationships supported for **AIO** entities:
     "list": [5002, 5612, 5650, 5651]
   }
 }
-
+```
 ### AIO Test Cycle
 
 * The criteria query can be applied on the fields mentioned in the below snippet. Users can take the required field on which they want to apply the criteria as shown in the below snippet:
