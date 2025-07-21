@@ -274,7 +274,7 @@ The base element type name of `Block` type is `Class`. If we create configuratio
 * Some of the stereotypes can have properties associated with them. For example, stereotype "allocated" of profile "SysML 1.1" have properties "allocatedFrom" and "allocatedTo".   
 
 *To map the properties of stereotypes you need to do the following:  
-1. [[Mapping_Configuration#View.2FEdit_XSLT_Configurations_options |Edit mapping XSLT]] to map the required property. The property must be added under XSLT of any custom property.  
+1. [Edit mapping XSLT](../integrate/mapping-configuration.md#view-edit-xslt-configurations-options) to map the required property. The property must be added under XSLT of any custom property.  
 2. Select "Sync" option under [Behavior for Absent Fields](../integrate/integration-configuration.md#behavior-for-absent-fields) in the integration settings.  
 
 When Enterprise Architect is the source system and the property to be synchronized from source is "allocatedFrom", the XSLT will be:
@@ -562,7 +562,7 @@ In the image below, the inputs given will create a new field named “OH_Last_Up
   - "Run only when user is logged on"
   - "Run with highest privileges"
 
-![EA_TaskScheduler_GeneralTab](../assets/EA_TaskScheduler_GeneralTab.png)
+![](../assets/EA_TaskScheduler_GeneralTab.png)
 
 - In the Triggers tab, click New to create a new trigger. In the new trigger window, select "At startup" from the "Begin the task" drop-down option.
 - In the advance settings of the new trigger, enable "Delay task for" checkbox and specify "3 minutes" in the textbox. Click OK to save the trigger.
