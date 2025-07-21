@@ -138,7 +138,7 @@ For attachment synchronization, the attachment field must be visible while creat
 | **For Version >= 5.0 and <6.2** | Text Field (< 255 characters) | OH_Created_By |
 | **For Version >= 6.2** |  | No such fields needs to be added as part of prerequisite |
 
-Refer [Custom field for Jira version < 6.2 section](#custom-field-for-jira-version-62) in appendix for details on how to create custom fields.
+Refer [Custom field for Jira version < 6.2 section](#custom-field-for-jira-version-less-than-6.2) in appendix for details on how to create custom fields.
 
 **Synchronize changes in Issue Type**
 
@@ -156,42 +156,47 @@ Refer the screenshot given below for reference:
 </p>
 
 ## **Jira System form details**
-
 | **Field Name** | **When field is visible on the System form** | **Description** |
-|----------------|----------------------------------------------|-----------------|
+|---|---|---|
 | **System Name** | Always | Provide System name |
 | **Deployment Type** | Always | Select Deployment Type as per the deployed instance. For on-premises instance, you need to select **Self-Managed** and for SaaS (on-demand) instance, you need to select **Cloud** from the list. |
-| **Version** | Only when Jira is on premise | Provide Version like 5.1, 6.7, 7.0. For knowing your version refer: [Finding Jira's version](#How-to-find-Jira's-version) |
+| **Version** | Only when Jira is on premise | Provide Version like 5.1, 6.7, 7.0. For knowing your version refer: [Finding Jira's version](#how-to-find-jiras-version) |
 | **Agile Plugin Version** | Only when Jira is on premise with version less than 7.0 | If the Jira instance has an Agile plugin installed, provide agile plugin version here. For example: 6.7.7 |
-| **Server URL** | Only when Jira is a Cloud instance or an On-Premise instance with a version greater than or equal to 5.0 | Format when On-Premises Instance: `http://[JiraServerHost]:[JiraServerPort]`, Format when On-Demand Instance: `https://[nameOfYourJiraInstance].atlassian.net/`. Refer [Server URL](#Server-URL) in appendix to get the server URL. |
-| **Base URL for Remote Link** | Always | Provide different Instance URL of the Jira instance. This URL is used for generating the Remote Link. For example, if the Instance URL is `http://10.11.156.129:8080/` or any API node URL, but Remote Link needs to be generated with a different Instance URL such as `http://domain.com:8080/`.<br>![Note](File:Note.jpg) If "Base URL for Remote Link" is empty, It will use Instance/Server URL to generate Remote Link if configured on Integration. |
+| **Server URL** | Only when Jira is a Cloud instance or an On-Premise instance with a version greater than or equal to 5.0 | Format when On-Premises Instance: `http://[JiraServerHost]:[JiraServerPort]`, Format when On-Demand Instance: `https://[nameOfYourJiraInstance].atlassian.net/`. Refer [Server URL](#server-url) in appendix to get the server URL. |
+| **Base URL for Remote Link** | Always | Provide different Instance URL of the Jira instance. This URL is used for generating the Remote Link. For example, if the Instance URL is `http://10.11.156.129:8080/` or any API node URL, but Remote Link needs to be generated with a different Instance URL such as `http://domain.com:8080/`.  
+> ℹ️ If "Base URL for Remote Link" is empty, It will use Instance/Server URL to generate Remote Link if configured on Integration. |
 | **Jira Web-service URL** | Only when Jira is on premise with version less than 5.0 | Format: `http://[JiraServerHost]:[JiraServerPort]/rpc/soap/jirasoapservice-v2` |
 | **Authentication Mode** | Only when Jira is 'Self-managed' | 
-*For authenticating through API Token, select 'API Token'  
-*For authenticating through user password, select 'Basic Authentication' or 'Cookie-based Authentication'.  
+- For authenticating through API Token, select `API Token`  
+- For authenticating through user password, select `Basic Authentication` or `Cookie-based Authentication`.  
 **Advantage of 'Cookie-based Authentication' over 'Basic Authentication':**  
-***If 'Basic Authentication' is selected, Jira will internally generate a login request on every API call integration sends.***  
-***If 'Cookie-based Authentication' is selected, one-time cookie session will be generated, that will be used for following API requests. This reduces load on Jira on the subsequent API calls.***  
-> ![Note](File:Note.jpg) From Jira version 10.2.x, refer to [enable cookie based authentication](#Enable-Cookie-Based-Authentication). |
+  - If `Basic Authentication` is selected, Jira will internally generate a login request on every API call integration sends.  
+  - If `Cookie-based Authentication` is selected, one-time cookie session will be generated, that will be used for following API requests. This reduces load on Jira on the subsequent API calls.  
+> ℹ️ From Jira version 10.2.x, refer to [enable cookie based authentication](#enable-cookie-based-authentication). |
 | **User Name** | Only when Jira is on premise | Jira User should have administrator privilege to use the Jira API. Please provide the Username of user and not the email id. |
 | **User Password** | Only when Jira is on premise | Provide Jira Users' password |
 | **User Email** | Only when Jira is On-Demand | Jira User Email should have administrator privilege to use the Jira API. Please provide the UserEmail of user. |
-| **API Token** | When Jira is On-Demand or Jira is Self-managed and 'Authentication Mode' is selected as 'API Token' | Please provide API Token generated for the Integration user. Please refer to [API Token](#API_Token) section for information on how to generate API Token. |
-| **Test Management Plugin** | Always | Select a Jira plugin for which the test entities are to be synchronized. Test management plugin currently supported by {{ spaceName }} are 'Zephyr' and 'Xray'. |
+| **API Token** | When Jira is On-Demand or Jira is Self-managed and 'Authentication Mode' is selected as 'API Token' | Please provide API Token generated for the Integration user. Please refer to [API Token](#api_token) section for information on how to generate API Token. |
+| **Test Management Plugin** | Always | Select a Jira plugin for which the test entities are to be synchronized. Test management plugin currently supported by {{SITENAME}} are 'Zephyr' and 'Xray'. |
 | **ZAPI Plugin Version** | Only when Zephyr is selected as the Test Management plugin | Provide the plugin version for ZAPI here. For example: 2.1 |
 | **ZAPI Rest URL** | Only when Zephyr is selected as the Test Management plugin | For example: `http://localhost:8080/rest/zapi/1.0/` |
-| **Overwriting Meta** | Always | You can customize field behavior by providing a minified JSON input to overwrite data types, mark fields or links as mandatory, and skip linking archived entities for specific link types. Refer to [Overwriting Meta](#Overwriting-Meta) for details. |
-| **Plugin fields display name (Beta)** | Always | Consider this input only if you want to add additional third-party plugin fields for mapping. Provide the input as [Comma-Separated Values](#Comma-Separated_Values.28CSV.29).<br><br>Please note: Read support for these fields having base type as string, number and datetime are supported for now. |
+| **Overwriting Meta** | Always | You can customize field behavior by providing a minified JSON input to overwrite data types, mark fields or links as mandatory, and skip linking archived entities for specific link types. Refer to [Overwriting Meta](#overwriting-meta) for details. |
+| **Plugin fields display name (Beta)** | Always | Consider this input only if you want to add additional third-party plugin fields for mapping. Provide the input as [Comma-Separated Values](#comma-separated_values.28csv.29).  
+Please note: Read support for these fields having base type as string, number and datetime are supported for now. |
 | **R4J Plugin** | Only when Jira is on premise | Enabled when R4J is required during sync. |
 | **Xray Plugin Version** | Only when Xray is selected as the Test Management plugin and Jira is on premise | Provide the plugin version for Xray here. For example: 3.6.0 |
-| **Access Key** | Only when Jira's deployment type is Cloud and Zephyr is selected as the test management plugin | Provide the Access Key generated for the user (mentioned in the **User Email** field of system configuration) here. The steps to generate the Access Key in Zephyr are mentioned [here](https://support.smartbear.com/zephyr-squad-cloud/docs/api/api-keys.html). |
-| **Secret Key** | Only when Jira's deployment type is Cloud and Zephyr is selected as the test management plugin | Provide the Secret Key generated for the user (mentioned in the **User Email** field of system configuration) here. The steps to generate the Secret Key in Zephyr are mentioned [here](https://support.smartbear.com/zephyr-squad-cloud/docs/api/api-keys.html). |
-| **Metadata Details** | Only when Jira's deployment type is Cloud and Zephyr is selected as the test management plugin | This data is pre-populated in JSON format according to our knowledge of system metadata (entity type, field names, lookup...). The user can edit it based on the Zephyr instance details for system/custom metadata. For the format and guidance related to filling these details in JSON form, please refer to [Understanding JSON Input](#Understanding-JSON-Input) section. |
+| **Access Key** | Only when Jira's deployment type is Cloud and Zephyr is selected as the test management plugin | Provide the Access Key generated for the user (mentioned in the **User Email** field of system configuration). The steps to generate the Access Key in Zephyr are mentioned [here](https://support.smartbear.com/zephyr-squad-cloud/docs/api/api-keys.html). |
+| **Secret Key** | Only when Jira's deployment type is Cloud and Zephyr is selected as the test management plugin | Provide the Secret Key generated for the user (mentioned in the **User Email** field of system configuration). The steps to generate the Secret Key in Zephyr are mentioned [here](https://support.smartbear.com/zephyr-squad-cloud/docs/api/api-keys.html). |
+| **Metadata Details** | Only when Jira's deployment type is Cloud and Zephyr is selected as the test management plugin | This data is pre-populated in JSON format according to our knowledge of system metadata (entity type, field names, lookup...). The user can edit it based on the Zephyr instance details for system/custom metadata. For the format and guidance related to filling these details in JSON form, please refer to [Understanding JSON Input](#understanding-json-input) section. |
 | **AIO API Token** | Only when Jira's deployment type is Cloud and AIO is selected as the test management plugin | Provide the **AIO API Token** generated for the user (mentioned in the **User Email** field of system configuration). The steps to generate the API Token in AIO are mentioned [here](https://aiosupport.atlassian.net/wiki/spaces/NAT/pages/1900879166/Access+Token). |
 | **Client Id** | Only when Jira's deployment type is Cloud and Xray is selected as the test management plugin | Provide the **Client Id** generated for the user (mentioned in the **User Email** field of system configuration). The steps to generate the Client Id for Xray are mentioned [here](https://docs.getxray.app/display/XRAYCLOUD/Global+Settings%3A+API+Keys). |
 | **Client Secret** | Only when Jira's deployment type is Cloud and Xray is selected as the test management plugin | Provide the **Client Secret** generated for the user (mentioned in the **User Email** field of system configuration). The steps to generate the Client Secret for Xray are mentioned [here](https://docs.getxray.app/display/XRAYCLOUD/Global+Settings%3A+API+Keys). |
-| **Xray API Endpoint** | Only when Jira's deployment type is Cloud and Xray is selected as the test management plugin | Provide the Xray GraphQL API endpoint for API requests. By default, `https://xray.cloud.getxray.app` API endpoint will be used. The URL must have a prefix for the location where Xray data is hosted. The locations, according to the [XRay documentation](https://docs.getxray.app/display/XRAYCLOUD/Data+Residency#DataResidency-XrayLocations), can be US, Europe, and Australia. Hence, the API URL can be one of these: `https://us.xray.cloud.getxray.app`, `https://eu.xray.cloud.getxray.app`, or `https://au.xray.cloud.getxray.app`. |
-| **Xray Entity Names** | Only when Jira's deployment type is Cloud and Xray is selected as the test management plugin | If any Xray entity is renamed, provide the updated display name in the JSON input. Refer to [Xray entity names](#Xray-Entity-Names) section for details. |
+| **Xray API Endpoint** | Only when Jira's deployment type is Cloud and Xray is selected as the test management plugin | Provide the Xray GraphQL API endpoint for API requests. By default, `https://xray.cloud.getxray.app` API endpoint will be used. The URL must have a prefix for the location where Xray data is hosted. The locations, according to the [XRay documentation](https://docs.getxray.app/display/XRAYCLOUD/Data+Residency#DataResidency-XrayLocations), can be US, Europe, and Australia. Hence, the API URL can be one of these:  
+- `https://us.xray.cloud.getxray.app`  
+- `https://eu.xray.cloud.getxray.app`  
+- `https://au.xray.cloud.getxray.app` |
+| **Xray Entity Names** | Only when Jira's deployment type is Cloud and Xray is selected as the test management plugin | If any Xray entity is renamed, provide the updated display name in the JSON input. Refer to [Xray entity names](#xray-entity-names) section for details. |
+
 
 # Mapping Configuration
 
@@ -283,7 +288,7 @@ Advance mapping can be done by following the steps given below:
 * Save.
 
 This field will be considered as an array of String that holds the primary and child values in ordered position where index 0 will hold the primary value and index 1 will hold the child value.
-
+In this example 'TargetField' is a hierarchy (cascade) field in the target system that accepts array of String.'SourceField' is a hierarchy (cascade) field of source system that accepts array of String.
 ### Example: hierarchy (cascade) field to hierarchy (cascade) field
 
 ```xml
@@ -297,6 +302,8 @@ This field will be considered as an array of String that holds the primary and c
 ```
 
 ### Example: hierarchy (cascade) field to text field
+In this example 'TargetField' is a text field of the target system that accepts String.'SourceField' is a hierarchy (cascade) field of the source system that accepts array of String. Multiple source values will be concatenated using '-' separator on the target side. You can change the separator as per your needs.
+
 ```xml
 <TargetField xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:for-each select="SourceXML/updatedFields/Property/SourceField/string">
@@ -313,6 +320,8 @@ This field will be considered as an array of String that holds the primary and c
 ```
 
 ### Example: text field to hierarchy (cascade) field
+In this example 'TargetField' is a text field of the target system that accepts array of String. 'SourceField' is a String field of the source system that accepts String. Multiple source values will be split using '-' separator from the source side. You can change the separator as per your needs.
+
 ```xml
 <TargetField xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:variable name="tokenizedLine" select="tokenize(SourceXML/updatedFields/Property/SourceField, '-')" />
@@ -331,8 +340,9 @@ This field will be considered as an array of String that holds the primary and c
 To understand the need for handling workflow transition in Jira, let us take an example: A 'Defect' in Jira, when created should be in 'New' state. It can then be moved to 'Open' state and then to 'Resolved' state, but it cannot be directly marked as 'Resolved' from 'New' state because of the state transition constraints enforced through Jira workflow configuration.
 
 Here is the diagram for this example:  
-![JiraWorkflowExample](../assets/JiraWorkflowExample.png)
-<p align="center"></p>
+<p align="center">
+  <img src="../assets/JiraWorkflowExample.png">
+</p>
 
 In such scenarios, simply mapping State field and their look-up values can cause failure(s). The possible scenarios in which the failure can happen are listed below.  
 Scenario 1: If user tries to create a Jira Issue with 'Open' status, user will get an error that this status transition is not possible and any Jira Issue can only be created in 'New' state.  
