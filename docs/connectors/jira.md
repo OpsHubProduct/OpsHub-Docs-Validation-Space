@@ -1353,7 +1353,7 @@ For Target Lookup Configuration of Zephyr entities, refer to [Target lookup for 
 }
 ```
 
-* Please refer to [System Configuration > Understanding Json Metadata Input](../integrate/system-configuration.md#understanding-json-metadata-input) section for more details on the JSON input.
+* Please refer to [Understanding Json Metadata Input](../integrate/system-configuration.md#understanding-json-metadata-input) section for more details on the JSON input.
 
 #### Synchronize Custom Fields
 
@@ -2583,10 +2583,10 @@ If you overwrite a field data type used in mappings, you must **remap** that fie
   ** If either of the nodes, **common** or **specific** is not required then one of them can be omitted.
   ** Metadata configuration provided in the **specific** node will overwrite the metadata specified in the **common** node. For example, if the Description field is using a Wiki renderer in all projects but is using a HTML renderer for a specific project, then the user can keep the data type for Description as wiki in the **common** node and as html in the **specific** node for the respective projects.
 * Here are a few JSON inputs for some use cases as examples:
+| **Scenario** | **Minified JSON to Input** |
+|--------------|-----------------------------|
+| **Change data type for all projects and entity types** | `{"common":{"fields":{"system":[{"dataType":"html","displayName":"Description"}]}},"specific":[]}` |
 
-| **Scenario** | **JSON** | **Minified JSON to Input** |
-|--------------|----------|-----------------------------|
-| Change data type for all projects and entity types | 
 ```json
 {
   "common": {
@@ -2601,9 +2601,14 @@ If you overwrite a field data type used in mappings, you must **remap** that fie
   },
   "specific": []
 }
-``` 
-| `{"common":{"fields":{"system":[{"dataType":"html","displayName":"Description"}]}},"specific":[]}` |
-| Change data type for a specific entity type for all projects | 
+```
+
+---
+
+| **Scenario** | **Minified JSON to Input** |
+|--------------|-----------------------------|
+| **Change data type for a specific entity type for all projects** | `{"common":{},"specific":[{"entityType":"Bug","fields":{"system":[{"dataType":"html","displayName":"Description"},{"dataType":"html","displayName":"Comments"}]}}]}` |
+
 ```json
 {
   "common": {},
@@ -2625,67 +2630,75 @@ If you overwrite a field data type used in mappings, you must **remap** that fie
     }
   ]
 }
-``` 
-| `{"common":{},"specific":[{"entityType":"Bug","fields":{"system":[{"dataType":"html","displayName":"Description"},{"dataType":"html","displayName":"Comments"}]}}]}` |
-| Change data type of field for a specific entity type of a specific project | 
+```
+
+---
+
+| **Scenario** | **Minified JSON to Input** |
+|--------------|-----------------------------|
+| **Change data type of field for a specific entity type of a specific project** | `{"common":{},"specific":[{"entityType":"Story","project":"AUT","fields":{"system":[{"dataType":"html","displayName":"Description"},{"dataType":"html","displayName":"Environment"}]}}]}` |
+
 ```json
 {
-    "common": {
-    },
-    "specific": [
-        {
-            "entityType": "Story",
-            "fields": {
-                "system": [
-                    {
-                        "dataType": "html",
-                        "displayName": "Description"
-                    },
-                    {
-                        "dataType": "html",
-                        "displayName": "Environment"
-                    }
-                ]
-            },
-            "project": "AUT"
-        }
-    ]
+  "common": {},
+  "specific": [
+    {
+      "entityType": "Story",
+      "fields": {
+        "system": [
+          {
+            "dataType": "html",
+            "displayName": "Description"
+          },
+          {
+            "dataType": "html",
+            "displayName": "Environment"
+          }
+        ]
+      },
+      "project": "AUT"
+    }
+  ]
 }
-``` 
-| `{"common":{},"specific":[{"entityType":"Story","project":"AUT","fields":{"system":[{"dataType":"html","displayName":"Description"},{"dataType":"html","displayName":"Environment"}]}}]}` |
-| Mark link as mandatory for a specific entity type for all projects | 
+```
+
+---
+
+| **Scenario** | **Minified JSON to Input** |
+|--------------|-----------------------------|
+| **Mark link as mandatory for a specific entity type for all projects** | `{"common":{},"specific":[{"entityType":"Bug","fields":{"system":[{"dataType":"html","displayName":"Description"},{"dataType":"html","displayName":"Comments"}]},"relationship":{"linkTypes":[{"linkType":"Parent Link","mandatory":true}]}}]}` |
+
 ```json
 {
-    "common": {
-    },
-    "specific": [
-        {
-            "entityType": "Bug",
-            "fields": {
-                "system": [
-                    {
-                        "dataType": "html",
-                        "displayName": "Description"
-                    },
-                    {
-                        "dataType": "html",
-                        "displayName": "Comments"
-                    }
-                ]
-            },
-            "relationship": {
-                "linkTypes": [
-                    {
-                        "linkType": "Parent Link",
-                        "mandatory": true
-                    }
-                ]
-            }
-        }
-    ]
+  "common": {},
+  "specific": [
+    {
+      "entityType": "Bug",
+      "fields": {
+        "system": [
+          {
+            "dataType": "html",
+            "displayName": "Description"
+          },
+          {
+            "dataType": "html",
+            "displayName": "Comments"
+          }
+        ]
+      },
+      "relationship": {
+        "linkTypes": [
+          {
+            "linkType": "Parent Link",
+            "mandatory": true
+          }
+        ]
+      }
+    }
+  ]
 }
-``` 
-| `{"common":{},"specific":[{"entityType":"Bug","fields":{"system":[{"dataType":"html","displayName":"Description"},{"dataType":"html","displayName":"Comments"}]},"relationship":{"linkTypes":[{"linkType":"Parent Link","mandatory":true}]}}]}` |
+```
+
 
 ## Xray Entity Names
 
