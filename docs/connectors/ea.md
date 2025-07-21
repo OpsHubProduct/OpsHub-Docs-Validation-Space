@@ -133,7 +133,7 @@ When Enterprise Architect is a source system and the user wants to synchronize t
   * Map the Diagram Image field to any target field. This field should not be used anywhere else in the mapping.
   * Edit the Advanced XSLT for this field mapping. Remove existing XSLT and paste the following XSLT:
 
-````xml
+```xml
 <OHAttachments>
     <xsl:for-each xmlns:xsl="http://www.w3.org/1999/XSL/Transform" select="SourceXML/updatedFields/Property/OHAttachments/OHAttachment">
         <xsl:element name="{concat('attachment_',position())}">
