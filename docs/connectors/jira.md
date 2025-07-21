@@ -91,8 +91,8 @@ Below are the cases where there is a need to generate an API Token:
     - If the user is using **Jira native API Token generation**, refer [this](https://confluence.atlassian.com/enterprise/using-personal-access-tokens-1026032365.html) link for generating Jira API Token.
     - If the user is using **third party plugin for API Token generation**, please refer to the documentation of the third-party plugin for generating the API Token. For example, if the API Token provider is 'API Token Authentication Jira', the documentation for API Token generation is present in their [guide](https://www.resolution.de/post/how-to-create-api-tokens-for-jira-server-s-rest-api/).
       - There are different ways in which the API Token can be generated and used for communication with Jira API through third-party plugins. To check whether the API Token provided by the third-party plugin is supported in {{ spaceName }} or not, please check if API Token is authenticated through any of these two 'Authorization' header formats:
-        - Authorization **Basic <credentials>** - where **<credentials>** is the base64 encoding of username: API Token (token generated through third-party plugin).
-        - Authorization **Bearer <API token>** - where **<API token>** is the API Token generated through third-party plugin.
+        - Authorization **Basic `<credentials>`** - where **`<credentials>`** is the base64 encoding of username: API Token (token generated through third-party plugin).
+        - Authorization **Bearer `<API token>`** - where **`<API token>`** is the API Token generated through third-party plugin.
 
 ## Other prerequisites
 
@@ -100,10 +100,7 @@ Below are the cases where there is a need to generate an API Token:
 For synchronization of a user field or user mention in rich text fields and comments, the user email must be visible to integration user through API. For this, all the concerning users mentioned in such fields that needs to be synchronized must set their email visibility to public. To check this, please follow the steps given below:
 - In Jira cloud instance, go to **Your profile and settings** > **Manage Account** > Select **Profile and visibility** tab
 - Go to **Contact** section > For **Email Address** set **Who can see this?** to **Anyone**
-
-**Note**
-
-Alternatively, if the user doesn't want to set email visibility to public, use advanced mapping for one-to-one mapping of user using Excel-based lookup.
+> **Note**: Alternatively, if the user doesn't want to set email visibility to public, use advanced mapping for one-to-one mapping of user using Excel-based lookup.
 
 **Synchronize an attachment**  
 For attachment synchronization, the attachment field must be visible while creating or updating an issue. To check this, please follow the steps given below:
@@ -113,7 +110,6 @@ For attachment synchronization, the attachment field must be visible while creat
 <p align="center">
   <img src="../assets/jira_attachment_show1A.png">
 </p>
-
 
 * **Synchronize Relationships** <br>For relationship synchronization of common link types, the Issue Linking settings must be enabled. To check this, please follow the steps given below:  
   ** In Jira, go to **Settings** > Click **Issues** > Click **Issue Linking** > **Issue Linking is currently ON** [This message should come].  
@@ -126,9 +122,9 @@ For attachment synchronization, the attachment field must be visible while creat
 
 * When synchronizing **Sprint** as an entity, specific board should have filter query with **"ORDER BY RANK ASC"** in it. If rank is disabled for any of the boards, entities will not be polled from or written to such boards.
 
-*Seamless synchronization of 'Status' field can be achieved through these two ways:  
-  **Workflow transition XML configuration  
-  **Alternative to workflow transition xml configuration<br>. For more details refer: [Advance Workflow Transition](#advance-workflow-transition)
+* Seamless synchronization of 'Status' field can be achieved through these two ways:  
+  * Workflow transition XML configuration
+  * Alternative to workflow transition xml configuration<br>. For more details refer: [Advance Workflow Transition](#advance-workflow-transition)
 
 * For Jira as target if you are synchronizing both the fields **Original Estimate** and **Remaining Estimate** which is part of **Time Tracking** feature of Jira then the **Legacy Mode** for this field should be **disabled**. This is because in Legacy Mode, the Original Estimate and Remaining Estimate are linked and only one value can be updated at a time. Refer section [Disabling Legacy Mode](#disabling-legacy-mode) in the Appendix for knowing the steps relating to disabling the Legacy Mode.
 
