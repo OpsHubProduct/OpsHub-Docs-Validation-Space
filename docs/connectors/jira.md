@@ -202,11 +202,11 @@ Refer the screenshot given below for reference:
 Map the fields between Jira and the other system to be integrated to ensure that the data between both the systems synchronizes correctly.
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_2F.png" alt="Mapping Configuration Image 2F">
+  <img src="../assets/Mapping_Configuration_Image_2F.png" >
 </p>
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_3.png" alt="Mapping Configuration Image 3">
+  <img src="../assets/Mapping_Configuration_Image_3.png" >
 </p>
 
 Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.  
@@ -394,13 +394,13 @@ Above mapping will preserve other wiki formatting as well.
 * While synchronizing inline images having duplicate names from any system to Jira, actual images will be uploaded in attachments, but the images referred in the field will refer to the image that was uploaded later (out of the images with duplicate names) since Jira allows uploading files having duplicate names but doesn't distinguish between them.  
 
 In the image below, inline image added in description field has been added as attachment.  
-<p align="center"><img src="../assets/Jira_duplicate_attachment_1.png" alt="Jira_duplicate_attachment_1" /></p>
+<p align="center"><img src="../assets/Jira_duplicate_attachment_1.png" /></p>
 
 In the image below, another image has been added as inline image in description field having same name. So that image is also added as attachment.  
-<p align="center"><img src="../assets/Jira_duplicate_attachment.png" alt="Jira_duplicate_attachment" /></p>
+<p align="center"><img src="../assets/Jira_duplicate_attachment.png"  /></p>
 
 In the image below, inline image added previously in the description field replaced with the latest one having the same name.  
-<p align="center"><img src="../assets/Jira_duplicate_inline_images.png" alt="Jira_duplicate_inline_images" /></p>
+<p align="center"><img src="../assets/Jira_duplicate_inline_images.png"  /></p>
 
 * While synchronizing inline images from Jira to another system, images are visible with their actual size in target synchronized field content, irrespective of their size visible in Jira field content.  
 * While synchronizing inline images from other systems to Jira, images are visible with their actual size in Jira synchronized field content, irrespective of their size visible in source field content.  
@@ -437,7 +437,7 @@ OpsHub Integration Manager supports synchronization for R4J links [R4J Child Lin
     - For example, Target Lookup query for Default Link Configuration would be `id=@r4j_folder_id@`. Where the "r4j_folder_id" should contain the internal id of the folder which needs to be looked up. In case of root folder the id should be set to `-1_ROOT`.
 
 <p align="center">
-  <img src="../assets/DefaultLinkConfigurationForR4jCloud.png" alt="DefaultLinkConfigurationForR4jCloud">
+  <img src="../assets/DefaultLinkConfigurationForR4jCloud.png" >
 </p>
 
   - If entity is to be deleted from R4J view through synchronization, that entity will be shifted to Root folder [i.e., a top most folder which is generally having same name as project name] within R4J view rather than its deletion from view. The removal from R4J view will remove the entity along with all its children from the view. If the user wants to add the removed entity back to the view, they will have to re-add all its child entities again. Hence, adding entity to Root level can save this trouble for user.
@@ -451,7 +451,7 @@ OpsHub Integration Manager supports synchronization for R4J links [R4J Child Lin
 - In Relationship Mapping, **Web Link** link type needs to be selected for External Link Synchronization.
 
 <p align="center">
-  <img src="../assets/WebLinkTypeConfiguration.png" alt="WebLinkTypeConfiguration">
+  <img src="../assets/WebLinkTypeConfiguration.png" >
 </p>
 
 **Advance UseCase**  
@@ -882,7 +882,7 @@ Set a time to synchronize data between Jira and the other system to be integrate
 Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
 
 <p align="center">
-  <img src="../assets/Integration_Configuration_Image_1.png" alt="Integration Configuration" />
+  <img src="../assets/Integration_Configuration_Image_1.png"  />
 </p>
 
 ## Criteria Configuration
@@ -2100,7 +2100,7 @@ The known limitations for Jira Service Desk are:
 * Live text and snapshot text fields are considered as lookup fields in {{ spaceName }}. To configure value mappings of these type of fields, enable "include field values in /createmeta response" option from the field's advanced configuration of Elements Connect.
 
 <p align="center">
-  <img src="../assets/Elements Connect Advanced Config.png" alt="Elements Connect Advanced Config" width="700px">
+  <img src="../assets/Elements Connect Advanced Config.png"  width="700px">
 </p>
 
 * If the above option is not enabled in Jira, the fields can still be mapped in {{ spaceName }}, but value mapping cannot be done. In such cases, {{ spaceName }} will sync the exact same value as it is retrieved from the end system.
@@ -2180,7 +2180,7 @@ The known limitations for Jira Service Desk are:
   * For example, here there are two issue link types 'Relates' and 'is related to' and both link type shared 'relates to' in inward/outward description
 
 <p align="center">
-  <img src="../assets/JIRA_IssueLinks.png" alt="JIRA Issue Links">
+  <img src="../assets/JIRA_IssueLinks.png" >
 </p>
 
 * In this case following things are expected:
@@ -2753,13 +2753,13 @@ If you overwrite a field data type used in mappings, you must **remap** that fie
 ## R4J Folder numbering
 
 * In R4J tree, numbering of folders is present in each folder name. The synchronization of this numbering is not supported due to API unavailability. For information on numbering please refer. In the following image, '1)' and '1.1)' numbers will not get synchronized.  
-<p align="center"><img src="../assets/withlkp.PNG" alt="withlkp" /></p>
+<p align="center"><img src="../assets/withlkp.PNG" /></p>
 
 ## Find Zephyr Custom Field Id
 
 * Log in into Jira with a user having the Jira administrator's global permissions.
 * Click Settings -> Apps. Under **Zephyr Squad** section, click **Custom Fields**.  
-<p align="center"><img src="../assets/Zephyr_Custom_Fields.png" alt="Zephyr_Custom_Fields" /></p>
+<p align="center"><img src="../assets/Zephyr_Custom_Fields.png" /></p>
 * Press F12 to open the developer tools window and switch to **Network** tab. Reload the web page.
 * To find custom field id of Test Execution entity:
   * There should be a request named **customField?entity=EXECUTION** under the **Name** section in the developer tools window.
@@ -2767,7 +2767,7 @@ If you overwrite a field data type used in mappings, you must **remap** that fie
   * Click on the **Test Steps** section.
   * There should be a request named **customField?entity=TESTSTEP** under the **Name** section in the developer tools window.
 * Select the request and switch to **Response** tab.  
-<p align="center"><img src="../assets/Zephyr_Custom_Fields_Response.png" alt="Zephyr_Custom_Fields_Response" /></p>
+<p align="center"><img src="../assets/Zephyr_Custom_Fields_Response.png" /></p>
 * This would be a JSON response of the custom field details. Here is an example:
 
 ```json
@@ -2790,7 +2790,7 @@ If you overwrite a field data type used in mappings, you must **remap** that fie
 * Create a Test entity and add it to the Test Cycle whose internal id is required.
 * On the **Cycle Summary** window, click the **Detail** view highlighted in the image below.
 * Click the Test Cycle **name** highlighted in the image below:  
-<p align="center"><img src="../assets/Zephyr_Find_CycleId.png" alt="Zephyr_Find_CycleId" /></p>
+<p align="center"><img src="../assets/Zephyr_Find_CycleId.png"  /></p>
 * Test Cycle id should be available in the URL of the browser as the value of **cycle.id** parameter. Here is an example of the URL:
 
 ```
