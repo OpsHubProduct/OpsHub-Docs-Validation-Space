@@ -2583,9 +2583,11 @@ If you overwrite a field data type used in mappings, you must **remap** that fie
   * If either of the nodes, **common** or **specific** is not required then one of them can be omitted.
   * Metadata configuration provided in the **specific** node will overwrite the metadata specified in the **common** node. For example, if the Description field is using a Wiki renderer in all projects but is using a HTML renderer for a specific project, then the user can keep the data type for Description as wiki in the **common** node and as html in the **specific** node for the respective projects.
 * Here are a few JSON inputs for some use cases as examples:
+  
 | **Scenario** | **Minified JSON to Input** |
 |--------------|-----------------------------|
-| **Change data type for all projects and entity types** | `{"common":{"fields":{"system":[{"dataType":"html","displayName":"Description"}]}},"specific":[]}` |
+| **Change data type for all projects and entity types** | `{"common":{"fields":{"system":[{"dataType":"html","displayName":"Description"}]}},
+"specific":[]} |
 
 ```json
 {
