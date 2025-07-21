@@ -4,7 +4,7 @@
 
 - Create one administrator user of Enterprise Architect System , dedicated to OpsHub Integration Manager, only if the projects which will be used for synchronization have enabled security settings in Enterprise Architect System. This dedicated user should not do any operations from the system’s user interface.
 - User should have access to all the projects that need to be synchronized.  
-> **Note**:) The Enterprise Architect app must **NOT** be configured to 'Run this program as an Administrator'. If the user is facing the error, 'Retrieving the COM class factory for component with CLSID {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} failed due to the following error: 800702e4. The requested operation requires elevation.', then check if Enterprise Architect is configured to run as administrator. Uncheck this option if selected in the Compatibility tab in its Properties.  
+> **Note**: The Enterprise Architect app must **NOT** be configured to 'Run this program as an Administrator'. If the user is facing the error, 'Retrieving the COM class factory for component with CLSID {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} failed due to the following error: 800702e4. The requested operation requires elevation.', then check if Enterprise Architect is configured to run as administrator. Uncheck this option if selected in the Compatibility tab in its Properties.  
 
 ## Proxy Service Prerequisites
 
@@ -12,8 +12,7 @@
 - OpsHubEAWindowsService must be installed on the same machine where Enterprise Architect application has been installed and should have .NET framework 4.7.2 or higher version installed on it.
 - It is recommended to install OpsHubEAWindowsService on a machine having quad-core processor, 4GB RAM (minimum) and 4GB disk space (minimum).
 - OpsHubEAWindowsService is configurable for Enterprise Architect installed on Windows 64-bit Operating System.
-
-> **Note**:) This prerequisite is compulsory regardless of the version of Enterprise Architect that the user is trying to integrate.  
+> **Note**: This prerequisite is compulsory regardless of the version of Enterprise Architect that the user is trying to integrate.  
 Client Profile versions of .NET framework are not supported. It is recommended that the user installs the full version of the .NET framework.
 
 ## Setting up OpsHubEAWindowsService
@@ -28,10 +27,8 @@ Client Profile versions of .NET framework are not supported. It is recommended t
 - Go to `<OpsHub Integration Manager_INSTALLATION_PATH>\OpsHubEAService` folder, and run `EAService.exe` in administrator mode to start OpsHubEAWindowsService.
 - Test the web service by opening this URL in browser: `http://<hostname>:9393/EAService`.  
   E.g. `http://localhost:9393/EAService`
-
-> **Note**:) After system restarts, OpsHubEAWindowsService needs to be restarted. To configure the OpsHubEAWindowsService to auto-start at system startup, refer to [Auto start OpsHubEAWindowsService on system startup](#auto-start-opshubeawindowsservice-on-system-startup) section.  
-
-> **Note**:) It is recommended that OpsHubEAWindowsService be stopped by pressing the enter key and not directly using the close button to release EA connections made through OpsHub Integration Manager.
+> **Note**: After system restarts, OpsHubEAWindowsService needs to be restarted. To configure the OpsHubEAWindowsService to auto-start at system startup, refer to [Auto start OpsHubEAWindowsService on system startup](#auto-start-opshubeawindowsservice-on-system-startup) section.  
+> **Note**: It is recommended that OpsHubEAWindowsService be stopped by pressing the enter key and not directly using the close button to release EA connections made through OpsHub Integration Manager.
 
 ## Register OpsHub's Extension for EA
 
@@ -46,18 +43,29 @@ Client Profile versions of .NET framework are not supported. It is recommended t
 4. Open **Command Prompt as Administrator** and navigate to the extracted folder location of `OpsHubEAAddIn`.
 5. Execute the `RegisterOpsHubEAAddIn.bat` here by entering its name.
 6. After executing the `RegisterOpsHubEAAddIn.bat`, select the Enterprise Architect (EA) version.  
-   ![EA Version Selection](../assets/EA_VERSION_SELECTION.png)
+<p align="center">
+  <img src="../assets/EA_VERSION_SELECTION.png" width="600">
+</p>
 
 To identify the EA version, go to **Start** → **Help** → **About EA** to know about the EA version.  
-![EA Help](../assets/EA_HELP_SECTION.png)  
-![EA Details](../assets/EA_DETAILS.png)
+<p align="center">
+  <img src="../assets/EA_HELP_SECTION.png" width="600">
+</p>
+<p align="center">
+  <img src="../assets/EA_DETAILS.png" width="600">
+</p>
+
 
 While executing if it's prompted with `Value exists, overwrite(Yes/No)?` Please type **Yes**.  
-![EA Addin Register](../assets/EA_ADDIN_REGISTER.png)
+<p align="center">
+  <img src="../assets/EA_ADDIN_REGISTER.png" width="600">
+</p>
 
 After the bat file is executed, open or restart the Enterprise Architect (EA) and go to **Specialize** section and see the **Manage Addin**, You will find OpsHub's extension added in the Available Add-Ins list with status Enabled.  
 - Note: Status will show activated only when project present in the Enterprise Architect (EA).  
-  ![EA Addin Found](../assets/EA_ADDIN_FIND.png)
+ <p align="center">
+  <img src="../assets/EA_ADDIN_FIND.png" width="600">
+</p>
 
 **Limitation of OpsHub's Extension**
 
