@@ -1545,9 +1545,9 @@ For Target Lookup Configuration of Zephyr entities, refer to [Target lookup for 
 
 ## Xray plugin entities
 
-* {{ spaceName }} supports following Xray entities:  
- * For self-managed system: Test, Test Set, Test Plan, Test Execution, Sub Test Execution, Pre-Condition. <br>
- * For cloud system: Xray Test, Test Set, Test Plan, Test Execution, Test Run, Precondition. <br>  
+* {{ spaceName }} supports following Xray entities:
+  * For self-managed system: Test, Test Set, Test Plan, Test Execution, Sub Test Execution, Pre-Condition. <br>
+  * For cloud system: Xray Test, Test Set, Test Plan, Test Execution, Test Run, Precondition. <br>  
 * The supported versions of Xray plugin are specified in [Systems Supported List](../systemsupported/systems-supported-list.md). <br>  
 
 ### Jira Self-managed Instance 
