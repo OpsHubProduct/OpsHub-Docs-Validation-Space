@@ -2586,8 +2586,7 @@ If you overwrite a field data type used in mappings, you must **remap** that fie
   
 | **Scenario** | **Minified JSON to Input** |
 |--------------|-----------------------------|
-| **Change data type for all projects and entity types** | `{"common":{"fields":{"system":[{"dataType":"html","displayName":"Description"}]}},
-"specific":[]} |
+| **Change data type for all projects and entity types** | `{"common":{"fields":{"system":[{"dataType":"html","displayName":"Description"}]}},"specific":[]} |
 
 ```json
 {
