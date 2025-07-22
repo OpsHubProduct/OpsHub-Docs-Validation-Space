@@ -52,13 +52,13 @@ Refer to the following screenshot for reference:
 | **Field Name**                     | **When field is visible on the System form** | **Description** |
 |-----------------------------------|---------------------------------------------|-----------------|
 | **System Name**                   | Always                                      | Provide codebeamer/codebeamerX System Name |
-| **Version**                       | Always                                      | Provide the version for the codebeamer/codebeamerX system. Refer to section [Find version of codebeamer/codebeamerX Instance](#find-version-of-codebeamer/codebeamerx-instance), to determine the version of codebeamer/codebeamerX system. |
+| **Version**                       | Always                                      | Provide the version for the codebeamer/codebeamerX system. Refer to section [Find version of codebeamer/codebeamerX Instance](#find-version-of-codebeamercodebeamerx-instance), to determine the version of codebeamer/codebeamerX system. |
 | **Instance URL**                  | Always                                      | Provide Server URL of the codebeamer/codebeamerX instance. This URL will be used for communicating with codebeamer/codebeamerX system API. The format of the URL would be: `http://[host name]:[port no]/cb` or `http://[your_domain_name]/cb`. Example: `http://10.13.27.200:8080/cb` or `http://10.13.27.208:8080/cb`. |
 | **Base URL for Remote Link**      | Always                                      | Provide different Instance URL of the codebeamer/codebeamerX instance. This URL is used for generating the Remote Link. For example, if the Instance URL is `http://10.11.152.136:8080/cb` or any API node URL, but Remote Link needs to be generated with a different Instance URL such as `http://domain.com:8080/cb`. <br>**Note**:If "Base URL for Remote Link" is empty, It will use Instance/Server URL to generate Remote Link if configured on Integration. |
 | **User Name**                     | Always                                      | Provide the username of a dedicated user who will be used for communicating with codebeamer/codebeamerX API. This user should have the required privileges as mentioned in section, [User privileges](#user-privileges). |
 | **User Password**                 | Always                                      | Enter password of the user added above. |
 | **Instance Time Zone**            | Always                                      | Provide the codebeamer/codebeamerX instance's timezone. <br>**Note**:The instance's timezone and the service user's timezone should be same. To verify the user's timezone, navigate to `System Administration / Server Status Dashboard / JVM system properties / user.timezone`. |
-| **Formatting support for Wiki fields** | Always | Select **True** if you want to enable synchronization of formatting for the 'Wiki' fields of codebeamer/codebeamerX instances.  * This step involves an additional action of placing a JAR file on the codebeamer/codebeamerXs' server.  * To obtain this JAR, there are two approaches outlined below:   * **Approach 1**: Use the JAR already built by OpsHub. Click [here] to Download.  * **Approach 2**: Build your own JAR. Refer to the steps for [How to generate conversion JAR](#how_to_generate_the_html_to_jspwiki_conversion_jar).  * Copy the JAR file to the `<CB_INSTALLATION>/tomcat/webapps/cb/WEB-INF/lib` folder, and then restart the codebeamer/codebeamerX server to apply the changes.  * Select **False** if you do not want to enable the synchronization of formatting for Wiki fields. In this case, the Wiki field's value will be displayed as plain text when synchronizing the Wiki fields to codebeamer/codebeamerX. For more details, please refer to [Known Limitations/Behavior](#known-limitationsbehavior). |
+| **Formatting support for Wiki fields** | Always | Select **True** if you want to enable synchronization of formatting for the 'Wiki' fields of codebeamer/codebeamerX instances.  * This step involves an additional action of placing a JAR file on the codebeamer/codebeamerXs' server.  * To obtain this JAR, there are two approaches outlined below:   * **Approach 1**: Use the JAR already built by OpsHub. Click [here] to Download.  * **Approach 2**: Build your own JAR. Refer to the steps for [How to generate conversion JAR](#how-to-generate-the-html-to-jspwiki-conversion-jar).  * Copy the JAR file to the `<CB_INSTALLATION>/tomcat/webapps/cb/WEB-INF/lib` folder, and then restart the codebeamer/codebeamerX server to apply the changes.  * Select **False** if you do not want to enable the synchronization of formatting for Wiki fields. In this case, the Wiki field's value will be displayed as plain text when synchronizing the Wiki fields to codebeamer/codebeamerX. For more details, please refer to [Known Limitations/Behavior](#known-limitationsbehavior). |
 
 # Mapping Configuration
 
@@ -162,7 +162,7 @@ In codebeamer/codebeamerX, Associations and Reference fields will be supported a
 ## Mapping for Entity mention field
 
 * When codebeamer/codebeamerX is configured as source system in the integration and its field/comment type is rich text (HTML), then the entity mention synchronization is supported.
-* Click on [Mention_Setting](../integrate/mapping-configuration.md#mention-setting) to know more about entity mention mapping and synchronization behavior in general.
+* Click on [Mention-Setting](../integrate/mapping-configuration.md#mention-setting) to know more about entity mention mapping and synchronization behavior in general.
 
 ## Advance Workflow Transition
 
@@ -180,7 +180,7 @@ This issue can be resolved by following any of these approaches:
 
 **1. Add/Edit Workflow transition XML in Mapping configuration of {{ spaceName }}**
 
-Click [Workflow Transition](../integrate/mapping-configuration#workflow-transition) to learn when and how to configure workflow transition xml mapping.  
+Click [Workflow Transition](../integrate/mapping-configuration.md#workflow-transition) to learn when and how to configure workflow transition xml mapping.  
 With this option, {{ spaceName }} makes the required intermediate status transition automatically as per the transition(s) configuration on the end system.
 
 **2. Add State Transitions in codebeamer/codebeamerX**  
@@ -197,8 +197,8 @@ For step-by-step instructions for configuring any-to-any transition refer: [Conf
 ## Rank
 
 * Codebeamer allows to organize the tracker items in tree structure. To synchronize the tracker items maintaining the tree structure, below configurations need to be performed in {{ spaceName }}.
-  * Configure the **Hierarchy Child** and **Hierarchy Parent** relationship as per the standard [relationship configuration](../integrate/mapping-configurationmd#relationships).
-  * Enable the rank synchronization, as described in [Rank configuration](../integrate/mapping-configuration#configuration) section.
+  * Configure the **Hierarchy Child** and **Hierarchy Parent** relationship as per the standard [relationship configuration](../integrate/mapping-configuration.md#relationships).
+  * Enable the rank synchronization, as described in [Rank configuration](../integrate/mapping-configuration.md#configuration) section.
     * Here make sure, the overwrite option is enabled for the Codebeamer system for OH ENABLE RANK field.
 
 **Known Limitations**:  
