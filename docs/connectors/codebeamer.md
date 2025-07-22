@@ -33,10 +33,19 @@ Before you continue with the integration, you must first configure codebeamer/co
 Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.
 
 Refer to the following screenshot for reference:
+**codebeamer**
 
 <p align="center">
-  <img src="../assets/Codebeamer_Image_qw21c_new.png" />
+  <img src="../assets/Codebeamer_Image_1c_new.png" />
 </p>
+
+**codebeamer X**
+
+<p align="center">
+  <img src="../assets/CodebeamerX_Image_1c_new.png" />
+</p>
+
+
 
 ## codebeamer/codebeamerX System Form Details
 
@@ -153,7 +162,7 @@ In codebeamer/codebeamerX, Associations and Reference fields will be supported a
 ## Mapping for Entity mention field
 
 * When codebeamer/codebeamerX is configured as source system in the integration and its field/comment type is rich text (HTML), then the entity mention synchronization is supported.
-* Click on [Mapping_Configuration#Mention_Setting](../integrate/mapping-configuration.md#mention-setting) to know more about entity mention mapping and synchronization behavior in general.
+* Click on [Mention_Setting](../integrate/mapping-configuration.md#mention-setting) to know more about entity mention mapping and synchronization behavior in general.
 
 ## Advance Workflow Transition
 
