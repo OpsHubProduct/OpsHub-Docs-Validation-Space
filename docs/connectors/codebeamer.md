@@ -38,19 +38,18 @@ Refer to the following screenshot for reference:
   <img src="../assets/Codebeamer_Image 1c_new.png" />
 </p>
 
-### codebeamer/codebeamerX System Form Details
+## codebeamer/codebeamerX System Form Details
 
 | **Field Name**                     | **When field is visible on the System form** | **Description** |
 |-----------------------------------|---------------------------------------------|-----------------|
 | **System Name**                   | Always                                      | Provide codebeamer/codebeamerX System Name |
 | **Version**                       | Always                                      | Provide the version for the codebeamer/codebeamerX system. Refer to section [Find version of codebeamer/codebeamerX Instance](#find-version-of-codebeamer/codebeamerx-instance), to determine the version of codebeamer/codebeamerX system. |
 | **Instance URL**                  | Always                                      | Provide Server URL of the codebeamer/codebeamerX instance. This URL will be used for communicating with codebeamer/codebeamerX system API. The format of the URL would be: `http://[host name]:[port no]/cb` or `http://[your_domain_name]/cb`. Example: `http://10.13.27.200:8080/cb` or `http://10.13.27.208:8080/cb`. |
-| **Base URL for Remote Link**      | Always                                      | Provide different Instance URL of the codebeamer/codebeamerX instance. This URL is used for generating the Remote Link. For example, if the Instance URL is `http://10.11.152.136:8080/cb` or any API node URL, but Remote Link needs to be generated with a different Instance URL such as `http://domain.com:8080/cb`. <br><img src="../assets/Note.jpg" width="20px" /> If "Base URL for Remote Link" is empty, It will use Instance/Server URL to generate Remote Link if configured on Integration. |
+| **Base URL for Remote Link**      | Always                                      | Provide different Instance URL of the codebeamer/codebeamerX instance. This URL is used for generating the Remote Link. For example, if the Instance URL is `http://10.11.152.136:8080/cb` or any API node URL, but Remote Link needs to be generated with a different Instance URL such as `http://domain.com:8080/cb`. <br>**Note**:If "Base URL for Remote Link" is empty, It will use Instance/Server URL to generate Remote Link if configured on Integration. |
 | **User Name**                     | Always                                      | Provide the username of a dedicated user who will be used for communicating with codebeamer/codebeamerX API. This user should have the required privileges as mentioned in section, [User privileges](#user-privileges). |
 | **User Password**                 | Always                                      | Enter password of the user added above. |
-| **Instance Time Zone**            | Always                                      | Provide the codebeamer/codebeamerX instance's timezone. <br><img src="../assets/Note.jpg" width="20px" /> The instance's timezone and the service user's timezone should be same. To verify the user's timezone, navigate to `System Administration / Server Status Dashboard / JVM system properties / user.timezone`. |
-| **Formatting support for Wiki fields** | Always | 
-* Select **True** if you want to enable synchronization of formatting for the 'Wiki' fields of codebeamer/codebeamerX instances.  
+| **Instance Time Zone**            | Always                                      | Provide the codebeamer/codebeamerX instance's timezone. <br>**Note**:The instance's timezone and the service user's timezone should be same. To verify the user's timezone, navigate to `System Administration / Server Status Dashboard / JVM system properties / user.timezone`. |
+| **Formatting support for Wiki fields** | Always | Select **True** if you want to enable synchronization of formatting for the 'Wiki' fields of codebeamer/codebeamerX instances.  
   * This step involves an additional action of placing a JAR file on the codebeamer/codebeamerXs' server.  
   * To obtain this JAR, there are two approaches outlined below:  
     * **Approach 1**: Use the JAR already built by OpsHub. Click [here] to Download.  
@@ -62,9 +61,9 @@ Refer to the following screenshot for reference:
 
 Map the fields between codebeamer/codebeamer X and the other system to be integrated to ensure that the data between both the systems synchronize correctly.
 
-Click [Mapping Configuration](Mapping Configuration) to learn the step-by-step process to configure mapping between the systems.
+Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
-### Test Step Field Configuration
+## Test Step Field Configuration
 
 For mapping additional fields for test steps like 'Critical' and other custom fields, advance XSLT will be modified. Add the following sample xslt in default xslt to map additional fields:
 
@@ -119,11 +118,11 @@ For mapping additional fields for test steps like 'Critical' and other custom fi
 </Repro-space-Steps>
 ```
 
-<p align="center"><img src="../assets/Note.jpg" width="30px" /></p>
+> **Note**:
 
 In the advanced mapping, the emoji image will be replaced by the target format of specified emoji image. For multiple image occurances, they all must be replaced by target format of emojis.
 
-### Comments and Attachments Configuration
+## Comments and Attachments Configuration
 
 Comments and Attachments do not exist independently. These are added through a section on a tracker named ï¿½Comments/Attachmentsï¿½.
 
@@ -131,7 +130,7 @@ Comments and Attachments do not exist independently. These are added through a s
 * If only comments are mapped in Mapping Configuration, then only comments will be synchronized along with inline images inside comments. If there are comments which have attachments, but they are not inline, then they will not be synchronized.
 * If only attachments are mapped in Mapping Configuration then no comments will be synchronized. Only attachments will synchronize to the target system.
 
-### Relationship Configuration
+## Relationship Configuration
 
 In codebeamer/codebeamerX, Associations and Reference fields will be supported as relationships.
 
@@ -145,7 +144,7 @@ In codebeamer/codebeamerX, Associations and Reference fields will be supported a
 <p align="center"><img src="../assets/Codebeamer_Image 3_2_a.png" /></p>
 <p align="center"><img src="../assets/Codebeamer_Image 3_b.png" /></p>
 
-#### Reference fields
+## Reference fields
 
 * Reference fields are the fields that refer to some other codebeamer/codebeamerX entity.
 * Reference fields will be synchronized through relationships. For references, the names of the Reference fields will be shown in link type mapping of the Relationship Configuration, as shown in screenshot below:
@@ -157,13 +156,13 @@ In codebeamer/codebeamerX, Associations and Reference fields will be supported a
 
 <p align="center"><img src="../assets/Codebeamer_Image 3_c.png" /></p>
 
-<p align="center"><img src="../assets/Note.jpg" width="30px" /></p>
+> **Note**:
 Reference fields in field mapping will be read-only fields.
 
-### <div id="EntityMentionSync">Mapping for Entity mention field</div>
+## <div id="EntityMentionSync">Mapping for Entity mention field</div>
 
 * When codebeamer/codebeamerX is configured as source system in the integration and its field/comment type is rich text (HTML), then the entity mention synchronization is supported.
-* Click on [Mapping_Configuration#Mention_Setting](Mapping_Configuration#Mention_Setting) to know more about entity mention mapping and synchronization behavior in general.
+* Click on [Mapping_Configuration#Mention_Setting](../integrate/mapping-configuration.md#mention-setting) to know more about entity mention mapping and synchronization behavior in general.
 
 ## Advance Workflow Transition
 
@@ -275,7 +274,7 @@ To configure criteria in codebeamer/codebeamerX, integration needs to be created
 
 # Known Limitations/Behavior
 
-1. Once the tracker is configured in the {{SITENAME}}, it must not be renamed or else the integration configured for that tracker item would be invalid.
+1. Once the tracker is configured in the {{ spaceName }}, it must not be renamed or else the integration configured for that tracker item would be invalid.
 
 2. Following tracker item types/entities will not be supported:  
    - **Working Sets** (earlier known as Branches): Synchronize is only applicable for Master Branch. All the revisions which are done on the tracker item in the master (merge operations or normal revisions) will be synchronized.
@@ -288,9 +287,9 @@ To configure criteria in codebeamer/codebeamerX, integration needs to be created
 
 4. Adding an association does not change the modified time of the entity. Hence, entity's associations will not synchronize until the next update on the entity updates its modified time.
 
-5. JSPWiki fields will be shown as HTML in {{SITENAME}}.
+5. JSPWiki fields will be shown as HTML in {{ spaceName }}.
 
-6. When codebeamer/codebeamer X is the source system in {{SITENAME}}, and the content or name of inline image/file in JSPWiki field contains special characters like:
+6. When codebeamer/codebeamer X is the source system in {{ spaceName }}, and the content or name of inline image/file in JSPWiki field contains special characters like:
    â€¢, â‚¬, Â£, Â¥, Â©, Â®, ™, Âµ, α, β, π, Ω, Σ, °, Δ, ☺, ♥, ₹, ¿, ¡, …, À, à, Â, Ã, Ä, Å, Æ, Ç, È, É, Ê, Ë, Ì, ì, Î, ì, Ñ, Ò, Ó, Ô, Õ, Ö, Ù, Ú, Û, Ü, ß, à, á, â, ã, ä, å, æ, ç, è, é, ê, ë, ì, í, î, ï, ñ, ò, ó, ô, õ, ö, ù, ú, û, ü, ÿ, Ğ, ğ, İ, ı, Œ, œ, Ş, ş, Ÿ  
    then due to API limitations, such characters might get lost during the synchronization. Additionally, formatting of the content will also not be preserved.
 
@@ -366,11 +365,17 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 
 **codebeamer:**
 
-![Codebeamer Version](../assets/Codebeamer_Version.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Version.png" />
+</p>
+
 
 **codebeamer X:**
 
-![CodebeamerX Version](../assets/CodebeamerX_Version.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Version.png" />
+</p>
+
 
 ---
 
@@ -384,80 +389,124 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 
 **codebeamer:**
 
-![Codebeamer User Groups](../assets/Codebeamer_Image 5a.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image_5a.png" />
+</p>
+
 
 **codebeamer X:**
 
-![CodebeamerX User Groups](../assets/CodebeamerX_Image 5a.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Image_5a.png" />
+</p>
+
 
 * Click on **New Group** link as shown in the screenshots below:
 
 **codebeamer:**
 
-![Codebeamer New Group](../assets/Codebeamer_Image 5b.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image_5b.png" />
+</p>
+
 
 **codebeamer X:**
 
-![CodebeamerX New Group](../assets/CodebeamerX_Image 5b.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Image_5b.png" />
+</p>
+
 
 * Fill in the details for the new user group. This user group should have the required privileges as mentioned in section, [User privileges](#user-privileges).
 
 **codebeamer:**
 
-![Codebeamer Group Details](../assets/Codebeamer_Image 5_2_a.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image 5_2_a.png" />
+</p>
+
 
 **codebeamer X:**
 
-![CodebeamerX Group Details](../assets/CodebeamerX_Image 5_2_a.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Image 5_2_a.png" />
+</p>
+
 
 * Click on **Save** button.
 
 ---
 
-## Add User Account
+### Add User Account
 
 * Login to codebeamer / codebeamer X with the Admin User.
 * Select **System Admin** tab.
 * Select **User Accounts** link as shown in the screenshots below:
 
 **codebeamer:**
+<p align="center">
+  <img src="../assets/Codebeamer_Image_5d.png" />
+</p>
 
-![Codebeamer User Accounts](../assets/Codebeamer_Image 5d.png)
 
 **codebeamer X:**
 
-![CodebeamerX User Accounts](../assets/CodebeamerX_Image 5d.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Image_5d.png" />
+</p>
+
 
 * Click on **New Account** link as shown in the screenshots below:
 
 **codebeamer:**
 
-![Codebeamer New Account](../assets/Codebeamer_Image 5e.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image_5e.png" />
+</p>
 
 **codebeamer X:**
 
-![CodebeamerX New Account](../assets/CodebeamerX_Image 5e.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Image_5e.png" />
+</p>
+
 
 * Fill in the details for new user account and click on **Save** button as shown in the screenshots below:
 
 **codebeamer:**
 
-![Codebeamer Account Details A](../assets/Codebeamer_Image 5_3_a.png)  
-![Codebeamer Account Details B](../assets/Codebeamer_Image 5_3_b.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image 5_3_a.png" />
+</p>
+
+<p align="center">
+  <img src="../assets/Codebeamer_Image 5_3_b.png" />
+</p>
 
 **codebeamer X:**
 
-![CodebeamerX Account Details A](../assets/CodebeamerX_Image 5_3_a.png)  
-![CodebeamerX Account Details B](../assets/CodebeamerX_Image 5_3_b.png)  
-![CodebeamerX Account Details C](../assets/CodebeamerX_Image 5_3_c.png)  
-![CodebeamerX Account Details D](../assets/CodebeamerX_Image 5_3_d.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Image 5_3_a.png" />
+</p>
 
-## Add Project Member
+<p align="center">
+  <img src="../assets/CodebeamerX_Image 5_3_b.png" />
+</p>
 
-### Project Admin can directly add Project Members
+<p align="center">
+  <img src="../assets/CodebeamerX_Image 5_3_c.png" />
+</p>
+
+<p align="center">
+  <img src="../assets/CodebeamerX_Image 5_3_d.png" />
+</p>
+
+### Add Project Member
+
+#### Project Admin can directly add Project Members
 
 * Login to codebeamer / codebeamer X with user having the project administrator role for the project in which you want to add member.
-* Open a **project** (codebeamer) / **workspace** (codebeamer X) in which you want to add member.
+ cg* Open a **project** (codebeamer) / **workspace** (codebeamer X) in which you want to add member.
 * Click the **three dots** (codebeamer) / **dropdown** (codebeamer X) beside Admin tab.
 * Click **Members** (codebeamer) / **Members & roles** (codebeamer X) option.
 
@@ -480,10 +529,10 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 
 ---
 
-### Members added by Project Admin via User's Join Request (Only for codebeamer)
+#### Members added by Project Admin via User's Join Request (Only for codebeamer)
 
 * If project membership is **Public with join approval**, then any user can request to join, but project administrators must approve each join request.
-* Login as user who wants to become a member and follow the steps mentioned in the section, [Make Join Request for a Project](#make-join-request-for-a-project) for further details.
+* Login as user who wants to become a member and follow the steps mentioned in the section, [hbMake Join Request for a Project](#make-join-request-for-a-project) for further details.
 * Login as Project Administrator and follow the steps below to approve the join request:
   * Open a project for which you want to approve join request for Users.
   * Click the three dots provided beside the Admin tab.
@@ -505,24 +554,29 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 
 ---
 
-### Joining a public project without further approval (Only for codebeamer)
+#### Joining a public project without further approval (Only for codebeamer)
 
 * If project Membership is **Public**, then any user can join any time, without further approval.
 * Login as user who wants to become Member and follow the steps mentioned in section [Make Join Request for a Project](#make-join-request-for-a-project)
 
 ---
 
-### Make Join Request for a Project (Only for codebeamer)
+#### Make Join Request for a Project (Only for codebeamer)
 
 * Click on "Projects" tab.
 * Click on "Available to Join" tab.
 * Click on the Project link for which you want to make a join request as shown in the screenshot below:
 
-![Join Project](../assets/Codebeamer_Image 5_7_a.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image 5_7_a.png" />
+</p>
 
 * Enter joining comment and click on Submit button as shown in the screenshot below:
 
-![Submit Join Request](../assets/Codebeamer_Image 5_7_b.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image 5_7_b.png" />
+</p>
+
 
 ---
 
@@ -619,7 +673,7 @@ For creating custom field in codebeamer / codebeamer X, follow the steps given b
 
 **codebeamer:**
 
-![Codebeamer Show Property Name](../assets/Codebeamer_Image 3b.png)
+![Codebeamer Show Property Name](../assets/Codebeamer_Image_3b.png)
 
 **codebeamer X:**
 
@@ -629,11 +683,11 @@ For creating custom field in codebeamer / codebeamer X, follow the steps given b
 
 **codebeamer:**
 
-![Codebeamer Property Name](../assets/Codebeamer_Image 3c.png)
+![Codebeamer Property Name](../assets/Codebeamer_Image_3c.png)
 
 **codebeamer X:**
 
-![CodebeamerX Property Name](../assets/CodebeamerX_Image 3c.png)
+![CodebeamerX Property Name](../assets/CodebeamerX_Image_3c.png)
 
 ---
 
@@ -687,11 +741,17 @@ Following are the steps to configure any-to-any transition:
 
 **codebeamer:**
 
-![Codebeamer State Transition Tab](../assets/Codebeamer_State_Transition_Tab.png)
+<p align="center">
+  <img src="../assets/Codebeamer_State_Transition_Tab.png">
+</p>
+
 
 **codebeamer X:**
 
-![CodebeamerX State Transition Tab](../assets/CodebeamerX_State_Transition_Tab.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_State_Transition_Tab.png">
+</p>
+
 
 * Look at the existing State Transitions. The possible transitions are:
   - New to Verified  
@@ -700,28 +760,43 @@ Following are the steps to configure any-to-any transition:
   - Verified to In progress  
   - In progress to Closed
 
-![State Transition Flowchart](../assets/Codebeamer_Status_Transition_Flowchart.PNG)
+<p align="center">
+  <img src="../assets/Codebeamer_Status_Transition_Flowchart.PNG">
+</p>
+
 
 * Here, no direct transition is possible from Verified to Closed. To add this state transition, click on **More fields...** (codebeamer) / **More...** (codebeamer X) drop-down list.
 * Select **State Transition** option.
 
 **codebeamer:**
 
-![Codebeamer Add Transition Dropdown](../assets/Codebeamer_Add_Transition_Dropdown.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Add_Transition_Dropdown.png">
+</p>
+
 
 **codebeamer X:**
 
-![CodebeamerX Add Transition Dropdown](../assets/CodebeamerX_Add_Transition_Dropdown.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Add_Transition_Dropdown.png">
+</p>
+
 
 * Provide the details.
 
 **codebeamer:**
 
-![Codebeamer Add Transition Form](../assets/Codebeamer_Add_Transition_Form.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Add_Transition_Form.png">
+</p>
+
 
 **codebeamer X:**
 
-![CodebeamerX Add Transition Form](../assets/CodebeamerX_Add_Transition_Form.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Add_Transition_Form.png">
+</p>
+
 
 * Click on **OK** and **Save** buttons to save the changes.
 
@@ -739,7 +814,7 @@ Following are the steps to configure any-to-any transition:
 
    to generate the build files.
 
-> ![Note](../assets/Note.jpg) After running the command mentioned above, a `build` folder will be generated inside the extracted folder.
+> **Note**: After running the command mentioned above, a `build` folder will be generated inside the extracted folder.
 
 4. Now, navigate to the `build` folder, and you will find a file named:
 
