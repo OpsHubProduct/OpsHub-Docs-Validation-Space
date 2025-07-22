@@ -35,7 +35,7 @@ Click [System Configuration](../integrate/system-configuration.md) to learn th
 Refer to the following screenshot for reference:
 
 <p align="center">
-  <img src="../assets/Codebeamer_Image 1c_new.png" />
+  <img src="../assets/Codebeamer_Image_qw21c_new.png" />
 </p>
 
 ## codebeamer/codebeamerX System Form Details
@@ -49,13 +49,7 @@ Refer to the following screenshot for reference:
 | **User Name**                     | Always                                      | Provide the username of a dedicated user who will be used for communicating with codebeamer/codebeamerX API. This user should have the required privileges as mentioned in section, [User privileges](#user-privileges). |
 | **User Password**                 | Always                                      | Enter password of the user added above. |
 | **Instance Time Zone**            | Always                                      | Provide the codebeamer/codebeamerX instance's timezone. <br>**Note**:The instance's timezone and the service user's timezone should be same. To verify the user's timezone, navigate to `System Administration / Server Status Dashboard / JVM system properties / user.timezone`. |
-| **Formatting support for Wiki fields** | Always | Select **True** if you want to enable synchronization of formatting for the 'Wiki' fields of codebeamer/codebeamerX instances.  
-  * This step involves an additional action of placing a JAR file on the codebeamer/codebeamerXs' server.  
-  * To obtain this JAR, there are two approaches outlined below:  
-    * **Approach 1**: Use the JAR already built by OpsHub. Click [here] to Download.  
-    * **Approach 2**: Build your own JAR. Refer to the steps for [How to generate conversion JAR](#how_to_generate_the_html_to_jspwiki_conversion_jar).  
-  * Copy the JAR file to the `<CB_INSTALLATION>/tomcat/webapps/cb/WEB-INF/lib` folder, and then restart the codebeamer/codebeamerX server to apply the changes.  
-* Select **False** if you do not want to enable the synchronization of formatting for Wiki fields. In this case, the Wiki field's value will be displayed as plain text when synchronizing the Wiki fields to codebeamer/codebeamerX. For more details, please refer to [Known Limitations/Behavior](#known-limitationsbehavior). |
+| **Formatting support for Wiki fields** | Always | Select **True** if you want to enable synchronization of formatting for the 'Wiki' fields of codebeamer/codebeamerX instances.  * This step involves an additional action of placing a JAR file on the codebeamer/codebeamerXs' server.  * To obtain this JAR, there are two approaches outlined below:   * **Approach 1**: Use the JAR already built by OpsHub. Click [here] to Download.  * **Approach 2**: Build your own JAR. Refer to the steps for [How to generate conversion JAR](#how_to_generate_the_html_to_jspwiki_conversion_jar).  * Copy the JAR file to the `<CB_INSTALLATION>/tomcat/webapps/cb/WEB-INF/lib` folder, and then restart the codebeamer/codebeamerX server to apply the changes.  * Select **False** if you do not want to enable the synchronization of formatting for Wiki fields. In this case, the Wiki field's value will be displayed as plain text when synchronizing the Wiki fields to codebeamer/codebeamerX. For more details, please refer to [Known Limitations/Behavior](#known-limitationsbehavior). |
 
 # Mapping Configuration
 
@@ -118,13 +112,11 @@ For mapping additional fields for test steps like 'Critical' and other custom fi
 </Repro-space-Steps>
 ```
 
-> **Note**:
-
-In the advanced mapping, the emoji image will be replaced by the target format of specified emoji image. For multiple image occurances, they all must be replaced by target format of emojis.
+> **Note**:In the advanced mapping, the emoji image will be replaced by the target format of specified emoji image. For multiple image occurances, they all must be replaced by target format of emojis.
 
 ## Comments and Attachments Configuration
 
-Comments and Attachments do not exist independently. These are added through a section on a tracker named ï¿½Comments/Attachmentsï¿½.
+Comments and Attachments do not exist independently. These are added through a section on a tracker named **Comments/Attachments**
 
 * If both comments and attachments are mapped in Mapping Configuration, then inline image inside comments will be synchronized to target along with attachments.
 * If only comments are mapped in Mapping Configuration, then only comments will be synchronized along with inline images inside comments. If there are comments which have attachments, but they are not inline, then they will not be synchronized.
@@ -134,32 +126,31 @@ Comments and Attachments do not exist independently. These are added through a s
 
 In codebeamer/codebeamerX, Associations and Reference fields will be supported as relationships.
 
-#### Associations
+### Associations
 
 * All associations will be synchronized as links to the target system.
 * On {{ spaceName }} User Interface, for every association type, two link types will be shown.
 * Associations added by marking Reverse Order check box on codebeamer/codebeamerX User Interface (refer to the following screenshot) will be marked as "<association_name> (reverse order)" on {{ spaceName }} User Interface.
 * Associations added without marking Reverse Order check box on codebeamer/codebeamerX User Interface will be marked as "<association_name>" on {{ spaceName }} User Interface.
 
-<p align="center"><img src="../assets/Codebeamer_Image 3_2_a.png" /></p>
-<p align="center"><img src="../assets/Codebeamer_Image 3_b.png" /></p>
+<p align="center"><img src="../assets/Codebeamer_Image_3_2_a.png" /></p>
+<p align="center"><img src="../assets/Codebeamer_Image_3_b.png" /></p>
 
 ## Reference fields
 
 * Reference fields are the fields that refer to some other codebeamer/codebeamerX entity.
 * Reference fields will be synchronized through relationships. For references, the names of the Reference fields will be shown in link type mapping of the Relationship Configuration, as shown in screenshot below:
 
-<p align="center"><img src="../assets/Codebeamer_Image 2a.png" /></p>
+<p align="center"><img src="../assets/Codebeamer_Image_2a.png" /></p>
 
 * Custom reference field's name would also be shown in the link types.
 * For synchronizing reference fields value, map the reference field as links, as shown in screenshot below:
 
-<p align="center"><img src="../assets/Codebeamer_Image 3_c.png" /></p>
+<p align="center"><img src="../assets/Codebeamer_Image_3_c.png" /></p>
 
-> **Note**:
-Reference fields in field mapping will be read-only fields.
+> **Note**: Reference fields in field mapping will be read-only fields.
 
-## <div id="EntityMentionSync">Mapping for Entity mention field</div>
+## Mapping for Entity mention field
 
 * When codebeamer/codebeamerX is configured as source system in the integration and its field/comment type is rich text (HTML), then the entity mention synchronization is supported.
 * Click on [Mapping_Configuration#Mention_Setting](../integrate/mapping-configuration.md#mention-setting) to know more about entity mention mapping and synchronization behavior in general.
@@ -197,7 +188,7 @@ For step-by-step instructions for configuring any-to-any transition refer: [Conf
 ## Rank
 
 * Codebeamer allows to organize the tracker items in tree structure. To synchronize the tracker items maintaining the tree structure, below configurations need to be performed in {{ spaceName }}.
-  * Configure the **Hierarchy Child** and **Hierarchy Parent** relationship as per the standard [relationship configuration](Mapping Configuration#Relationships).
+  * Configure the **Hierarchy Child** and **Hierarchy Parent** relationship as per the standard [relationship configuration](../integrate/mapping-configurationmd#relationships).
   * Enable the rank synchronization, as described in [Rank configuration](../integrate/mapping-configuration#configuration) section.
     * Here make sure, the overwrite option is enabled for the Codebeamer system for OH ENABLE RANK field.
 
@@ -212,7 +203,7 @@ In this step, set a time to synchronize data between codebeamer/codebeamerX and 
 
 Refer to [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure the integration between two systems.
 
-<p align="center"><img src="../assets/Codebeamer_Image 3a.png" /></p>
+<p align="center"><img src="../assets/Codebeamer_Image_3a.png" /></p>
 
 ## Criteria Configuration
 
@@ -223,10 +214,10 @@ Go to Criteria Configuration section in [Integration Configuration](../integrate
 To configure criteria in codebeamer/codebeamerX, integration needs to be created with codebeamer/codebeamerX as the source system. Set the **Query** as per cbQL Format.
 
 * If field is of lookup type, then criteria query will be like `projectId.trackerId.fieldName = 'field-value'` or `workspaceId.trackerId.fieldName = 'field-value'`.
-* To find out Tracker ID, refer to section [How to find Tracker Id](#How to find Tracker Id).
+* To find out Tracker ID, refer to section [How to find Tracker Id](#how-to-find-tracker-id).
 * For custom fields: `trackerTypeId.customFieldPropertyName = 'field-value'`
 * For custom Choice fields: `projectId.trackerTypeId.customFieldPropertyName = 'field-value'` or `workspaceId.trackerTypeId.customFieldPropertyName = 'field-value'`
-  * To find out custom field property name, refer to section [Find Custom Field Property Name](#Find Custom Field Property Name)
+  * To find out custom field property name, refer to section [Find Custom Field Property Name](#find-custom-field-property-name)
 * To know more about cbQL query in codebeamer/codebeamerX, refer to: [cbQL in codebeamer/codebeamerX](https://codebeamer.com/cb/wiki/871101)
 
 **Criteria samples**
@@ -422,14 +413,14 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 **codebeamer:**
 
 <p align="center">
-  <img src="../assets/Codebeamer_Image 5_2_a.png" />
+  <img src="../assets/Codebeamer_Image_5_2_a.png" />
 </p>
 
 
 **codebeamer X:**
 
 <p align="center">
-  <img src="../assets/CodebeamerX_Image 5_2_a.png" />
+  <img src="../assets/CodebeamerX_Image_5_2_a.png" />
 </p>
 
 
@@ -476,29 +467,29 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 **codebeamer:**
 
 <p align="center">
-  <img src="../assets/Codebeamer_Image 5_3_a.png" />
+  <img src="../assets/Codebeamer_Image_5_3_a.png" />
 </p>
 
 <p align="center">
-  <img src="../assets/Codebeamer_Image 5_3_b.png" />
+  <img src="../assets/Codebeamer_Image_5_3_b.png" />
 </p>
 
 **codebeamer X:**
 
 <p align="center">
-  <img src="../assets/CodebeamerX_Image 5_3_a.png" />
+  <img src="../assets/CodebeamerX_Image_5_3_a.png" />
 </p>
 
 <p align="center">
-  <img src="../assets/CodebeamerX_Image 5_3_b.png" />
+  <img src="../assets/CodebeamerX_Image_5_3_b.png" />
 </p>
 
 <p align="center">
-  <img src="../assets/CodebeamerX_Image 5_3_c.png" />
+  <img src="../assets/CodebeamerX_Image_5_3_c.png" />
 </p>
 
 <p align="center">
-  <img src="../assets/CodebeamerX_Image 5_3_d.png" />
+  <img src="../assets/CodebeamerX_Image_5_3_d.png" />
 </p>
 
 ### Add Project Member
@@ -512,17 +503,17 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 
 **codebeamer X:**
 
-![CodebeamerX Members & Roles](../assets/CodebeamerX_Image 5g_2.png)
+![CodebeamerX Members & Roles](../assets/CodebeamerX_Image_5g_2.png)
 
 * Click "**Add New Member**" (codebeamer) / "**New Member**" (codebeamer X) link as shown in screenshot below:
 
 **codebeamer:**
 
-![Codebeamer Add Member](../assets/Codebeamer_Image 5g.png)
+![Codebeamer Add Member](../assets/Codebeamer_Image_5g.png)
 
 **codebeamer X:**
 
-![CodebeamerX Add Member](../assets/CodebeamerX_Image 5g_1.png)
+![CodebeamerX Add Member](../assets/CodebeamerX_Image_5g_1.png)
 
 * For further steps, refer to the codebeamer / codebeamer X documentation for adding a project member:  
 [Add new Member](https://codebeamer.com/cb/wiki/11113#section-Add+or+invite+members)
@@ -538,19 +529,19 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
   * Click the three dots provided beside the Admin tab.
   * Click on the Members option.
 
-![Join Request - Members](../assets/Codebeamer_Image 5_5_a.png)
+![Join Request - Members](../assets/Codebeamer_Image_5_5_a.png)
 
 * Click three blue dots and select "Join Requests" option as shown in the screenshot below:
 
-![Join Requests Option](../assets/Codebeamer_Image 5_5_b.png)
+![Join Requests Option](../assets/Codebeamer_Image_5_5_b.png)
 
 * Click the green check mark to approve the request and red mark to decline as shown in the screenshot below:
 
-![Approve/Reject Request](../assets/Codebeamer_Image 5_5_c.png)
+![Approve/Reject Request](../assets/Codebeamer_Image_5_5_c.png)
 
 * Provide Notification Comment and select Accept/Reject button accordingly as shown in the screenshot below:
 
-![Accept/Reject with Comment](../assets/Codebeamer_Image 5_5_d.png)
+![Accept/Reject with Comment](../assets/Codebeamer_Image_5_5_d.png)
 
 ---
 
@@ -568,13 +559,13 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 * Click on the Project link for which you want to make a join request as shown in the screenshot below:
 
 <p align="center">
-  <img src="../assets/Codebeamer_Image 5_7_a.png" />
+  <img src="../assets/Codebeamer_Image_5_7_a.png" />
 </p>
 
 * Enter joining comment and click on Submit button as shown in the screenshot below:
 
 <p align="center">
-  <img src="../assets/Codebeamer_Image 5_7_b.png" />
+  <img src="../assets/Codebeamer_Image_5_7_b.png" />
 </p>
 
 
@@ -589,21 +580,21 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 
 **codebeamer:**
 
-![Codebeamer Configure Tracker](../assets/Codebeamer_Image 5_9_a.png)
+![Codebeamer Configure Tracker](../assets/Codebeamer_Image_5_9_a.png)
 
 **codebeamer X:**
 
-![CodebeamerX Configure Tracker](../assets/CodebeamerX_Image 5_9_a.png)
+![CodebeamerX Configure Tracker](../assets/CodebeamerX_Image_5_9_a.png)
 
 * Select "Permissions" tab as shown in the screenshot below:
 
 **codebeamer:**
 
-![Codebeamer Tracker Permission](../assets/Codebeamer_Image 5_8_a.png)
+![Codebeamer Tracker Permission](../assets/Codebeamer_Image_5_8_a.png)
 
 **codebeamer X:**
 
-![CodebeamerX Tracker Permission](../assets/CodebeamerX_Image 5_8_a.png)
+![CodebeamerX Tracker Permission](../assets/CodebeamerX_Image_5_8_a.png)
 
 * Provide permissions mentioned in [User privileges](#user-privileges) section for the role assigned to the user.
 
@@ -633,32 +624,32 @@ For creating custom field in codebeamer / codebeamer X, follow the steps given b
 
 **codebeamer:**
 
-![Codebeamer Configure Tracker](../assets/Codebeamer_Image 5_9_a.png)
+![Codebeamer Configure Tracker](../assets/Codebeamer_Image_5_9_a.png)
 
 **codebeamer X:**
 
-![CodebeamerX Configure Tracker](../assets/CodebeamerX_Image 5_9_a.png)
+![CodebeamerX Configure Tracker](../assets/CodebeamerX_Image_5_9_a.png)
 
 * Select **Fields** tab as shown in the screenshot below:
 
 **codebeamer:**
 
-![Codebeamer Fields Tab](../assets/Codebeamer_Image 5_9_b.png)
+![Codebeamer Fields Tab](../assets/Codebeamer_Image_5_9_b.png)
 
 **codebeamer X:**
 
-![CodebeamerX Fields Tab](../assets/CodebeamerX_Image 5_9_b.png)
+![CodebeamerX Fields Tab](../assets/CodebeamerX_Image_5_9_b.png)
 
 * Scroll down to extreme bottom of the page and click on **More fields...** (codebeamer) / **New Choice Field** (codebeamer X) drop-down list.
 * Select **New Choice Field** option to add a choice type field or **New Custom Field** option to add other types of custom fields.
 
 **codebeamer:**
 
-![Codebeamer New Field Options](../assets/Codebeamer_Image 5_9_c.png)
+![Codebeamer New Field Options](../assets/Codebeamer_Image_5_9_c.png)
 
 **codebeamer X:**
 
-![CodebeamerX New Field Options](../assets/CodebeamerX_Image 5_9_c.png)
+![CodebeamerX New Field Options](../assets/CodebeamerX_Image_5_9_c.png)
 
 * Fill in the details for new field to be added.
 * Click on **OK** and **Save** buttons to save the changes.
@@ -677,7 +668,7 @@ For creating custom field in codebeamer / codebeamer X, follow the steps given b
 
 **codebeamer X:**
 
-![CodebeamerX Show Property Name](../assets/CodebeamerX_Image 3b.png)
+![CodebeamerX Show Property Name](../assets/CodebeamerX_Image_3b.png)
 
 * Highlighted text in the image below shows property name for custom field "Custom Text".
 
@@ -701,22 +692,22 @@ For creating custom field in codebeamer / codebeamer X, follow the steps given b
 
 **codebeamer:**
 
-![Codebeamer Member ID](../assets/Codebeamer_Image 5_10_b.png)
+![Codebeamer Member ID](../assets/Codebeamer_Image_5_10_b.png)
 
 **codebeamer X:**
 
-![CodebeamerX Member ID](../assets/CodebeamerX_Image 5_10_b.png)  
-![CodebeamerX Member ID Details](../assets/Codebeamer_Image 5_10_c.png)
+![CodebeamerX Member ID](../assets/CodebeamerX_Image_5_10_b.png)  
+![CodebeamerX Member ID Details](../assets/Codebeamer_Image_5_10_c.png)
 
 * Account ID is the required user ID as shown in the screenshot below:
 
 **codebeamer:**
 
-![Codebeamer User ID](../assets/Codebeamer_Image 5_10_a.png)
+![Codebeamer User ID](../assets/Codebeamer_Image_5_10_a.png)
 
 **codebeamer X:**
 
-![CodebeamerX User ID](../assets/CodebeamerX_Image 5_10_a.png)
+![CodebeamerX User ID](../assets/CodebeamerX_Image_5_10_a.png)
 
 ---
 
@@ -731,11 +722,11 @@ Following are the steps to configure any-to-any transition:
 
 **codebeamer:**
 
-![Codebeamer Configure Tracker](../assets/Codebeamer_Image 5_9_a.png)
+![Codebeamer Configure Tracker](../assets/Codebeamer_Image_5_9_a.png)
 
 **codebeamer X:**
 
-![CodebeamerX Configure Tracker](../assets/CodebeamerX_Image 5_9_a.png)
+![CodebeamerX Configure Tracker](../assets/CodebeamerX_Image_5_9_a.png)
 
 * Select **State Transitions** tab as shown in the screenshot below:
 
