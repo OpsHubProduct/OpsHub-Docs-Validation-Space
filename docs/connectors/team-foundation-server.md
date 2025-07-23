@@ -271,7 +271,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn 
 * In Azure DevOps, if any lookup field contains the value which is same as one of the  values of "State" field [case is not same], the lookup field value will not sync to the target. For example, if one of the states is "In Progress" and lookup field value is also "in progress", then the "In Progress" (instead of "in progress") will be present in the mapping of lookup field. Hence, the lookup field value "in progress" will not sync to the target.  
 > **Note**: For the above mentioned case, if the lookup field of Azure DevOps is mapped to the mandatory field of the target, the processing failure will be generated during the synchronization.
 
-*The images below show that value list of State field and one of the lookup fields. In both the lists, the "In progress" option is common but alphabetical case is different.  
+* The images below show that value list of State field and one of the lookup fields. In both the lists, the "In progress" option is common but alphabetical case is different.  
 <p align="center">
   <img src="../assets/Mapping_Configuration_TFS_LookupFieldConf_1.png" />
 </p>  
@@ -279,7 +279,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn 
   <img src="../assets/Mapping_Configuration_TFS_LookupFieldConf_2.png" />
 </p>
 
-*The images below depicts the sample mapping which will be generated, when the lookup field contains the  "in progress" option. The "In Progress" value is visible in the mapping.  
+* The images below depicts the sample mapping which will be generated, when the lookup field contains the  "in progress" option. The "In Progress" value is visible in the mapping.  
 <p align="center">
   <img src="../assets/Mapping_Configuration_TFS_LookupFieldConf_3.png" />
 </p>  
@@ -301,15 +301,15 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn 
 ## Relationship Configuration
 
 ### Git Commit/Branch Link Configuration
-* To synchronize '''Git Commit/Branch''' links of an entity to other systems,  the Commit/Branch links need to be mapped in {{ spaceName }} relationship mapping.
-* When the '''Git Commit/Branch''' links are mapped in {{ spaceName }}:
- * While synchronizing a workitem, if any GIT artifact's project or repository is not found in the target system, this artifact will get skipped by {{ spaceName }}.
- * If any GIT artifact is missing in target repository, workitem's artifact link will be synced with the missing object. On syncing delta changes, those links will be re-establised with an artifact object if it is found in target repository.
+* To synchronize **Git Commit/Branch** links of an entity to other systems,  the Commit/Branch links need to be mapped in {{ spaceName }} relationship mapping.
+* When the **Git Commit/Branch** links are mapped in {{ spaceName }}:
+  * While synchronizing a workitem, if any GIT artifact's project or repository is not found in the target system, this artifact will get skipped by {{ spaceName }}.
+  * If any GIT artifact is missing in target repository, workitem's artifact link will be synced with the missing object. On syncing delta changes, those links will be re-establised with an artifact object if it is found in target repository.
   * To sync delta changes from source repository to target repository, refer to this link for more details: https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository#mirroring-a-repository.
-* For syncing the link '''Git Commit/Branch''' with a workitem to target [TFS/VSTS] systems, you must import source repository into target repository to bring all the Git commit and branch links into target repository.
+* For syncing the link **Git Commit/Branch** with a workitem to target [TFS/VSTS] systems, you must import source repository into target repository to bring all the Git commit and branch links into target repository.
 * If Commit/Branch link has a different project name or  a different repository name:
- * Provide the respective project's name or repository's name using advance XSLT.
- * For example, if source commit is found in project, 'project-xyz' and repository, 'repository-xyz', corresponding in target this commit is found in project, 'project-abc' and repository, 'repository-abc'. Therefore, to sync commit link of an entity, update the advance XSLT from this:
+  * Provide the respective project's name or repository's name using advance XSLT.
+  * For example, if source commit is found in project, 'project-xyz' and repository, 'repository-xyz', corresponding in target this commit is found in project, 'project-abc' and repository, 'repository-abc'. Therefore, to sync commit link of an entity, update the advance XSLT from this:
  ```xml 
  <xsl:for-each select="linkProps/Property">
   <xsl:for-each select="*">
@@ -352,14 +352,13 @@ to this:
 * Click on [Rank configuration](../integrate/mapping-configuration.md#configuration) to know more about entity mention mapping and synchronization behavior in general.
 
 ## Mapping for Soft Delete Configuration
-*When Team Foundation Server is the target system, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md).
-*After the Soft Delete operation is performed by OpsHub Integration Manager in Team Foundation Server, the entity will be deleted in the Team Foundation Server, and it can be found in the "Recycle bin" of the corresponding project, where it existed earlier.
+* When Team Foundation Server is the target system, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md).
+* After the Soft Delete operation is performed by OpsHub Integration Manager in Team Foundation Server, the entity will be deleted in the Team Foundation Server, and it can be found in the "Recycle bin" of the corresponding project, where it existed earlier.
 * To only enable the logical delete operation in the target, "OH Soft Delete" field shall be mapped with the default value "No" in the [Delete Mode](../integrate/mapping-configuration.md#delete-mode) mapping.
 
 > **Note**: The above behavior is supported only for Workitems. Additionally it is supported from Team Foundation Server 2017 and above.<br><br>
 
-
-## Kanban Board Field Configuration<
+## Kanban Board Field Configuration
 
 * To sync the Kanban Board field, advanced mapping is required in {{ spaceName }}.
 * Below is the sample advanced mapping for syncing Kanban Board field between Azure DevOps to Azure DevOps systems.
@@ -699,17 +698,17 @@ If not provided, {{ spaceName }} uses a default JSON.
 
 The JSON input consists of the following sections:
 
-* **'''generic'''**: Defines a set of default reference rules for widgets that do not have specific configurations in the JSON input. Each object in this section contains:  
-  **'''referenceTypes'''** (array of strings): Specifies the types of referenced items (e.g., "Query", "Team"). Other than the entities synced by {{ spaceName }}, it can have following values - Release (for Release Pipelines), Project, Repository (for Git Repos).  
-  **'''jsonPath'''** (string): A valid JSON Path expression to locate values in the API response. Either **'''jsonPath'''** or **'''regex'''** must be provided.  
-  **'''regex'''** (string): A regular expression to search for referenced IDs within the API response. When combined with **'''jsonPath'''**, the search is confined to values found at the specified path.
+* **generic**: Defines a set of default reference rules for widgets that do not have specific configurations in the JSON input. Each object in this section contains:  
+  **referenceTypes** (array of strings): Specifies the types of referenced items (e.g., "Query", "Team"). Other than the entities synced by {{ spaceName }}, it can have following values - Release (for Release Pipelines), Project, Repository (for Git Repos).  
+  **jsonPath** (string): A valid JSON Path expression to locate values in the API response. Either **jsonPath** or **regex** must be provided.  
+  **regex** (string): A regular expression to search for referenced IDs within the API response. When combined with **jsonPath**, the search is confined to values found at the specified path.
 
-* **'''widgetSpecific'''**: Defines widget-specific reference rules for certain widget types. Each object in this section contains:  
-  **'''widgetType'''** (string): Specifies the widget type, corresponding to the contributionId key in the widget API response.  
-  **'''referenceInformation'''** (array of objects): A list of reference rules specific to this widget type. Each object in this list contains:  
-  - **'''referenceTypes'''** (array of strings): Same as described above.  
-  - **'''regex'''** (string): Same as described above.  
-  - **'''jsonPath'''** (string): Same as described above.
+* **widgetSpecific**: Defines widget-specific reference rules for certain widget types. Each object in this section contains:  
+  **widgetType** (string): Specifies the widget type, corresponding to the contributionId key in the widget API response.  
+  **referenceInformation** (array of objects): A list of reference rules specific to this widget type. Each object in this list contains:  
+  - **referenceTypes** (array of strings): Same as described above.  
+  - **regex** (string): Same as described above.  
+  - **jsonPath** (string): Same as described above.
 
 > **Note** :Using jsonPath is preferred for accurate transformation of referenced IDs.
 
@@ -747,17 +746,16 @@ A sample snippet of JSON is given below:
 
 
 # Appendix
-
 ## Query Synchronization
 
-* The Query entity has a field **'''WIQL'''** that represents the actual criteria that has been given in the Query. The **'''WIQL'''** follows a specific format for which you can refer to [https://docs.microsoft.com/en-us/azure/devops/boards/queries/wiql-syntax?view=azure-devops WIQL syntax].  
+* The Query entity has a field **WIQL** that represents the actual criteria that has been given in the Query. The **WIQL** follows a specific format for which you can refer to [https://docs.microsoft.com/en-us/azure/devops/boards/queries/wiql-syntax?view=azure-devops WIQL syntax].  
   As WIQL is an internal format of Team Foundation Server/Azure DevOps, it will contain details of source end point in a pre-defined format.  
-  **'''For example -'''** field names being in form of [System.Id] and user values being in form of 'automationsyncuser <automationsyncuser@opshub.com>'.  
+  **For example** field names being in form of [System.Id] and user values being in form of 'automationsyncuser <automationsyncuser@opshub.com>'.  
   With the synchronization, such details need to be transformed to the corresponding detail of target end point for the fields and user. Below is the detailed information around this transformation.
 
 ### **Field names in WIQL**
-* Team Foundation Server/Azure DevOps End point Format - [Field internal name]. **'''Example :'''** [System.ID]
-* Format being used for processing/synchronization - [Field display name]. **'''Example :'''** [ID]
+* Team Foundation Server/Azure DevOps End point Format - [Field internal name]. **Example :** [System.ID]
+* Format being used for processing/synchronization - [Field display name]. **Example :** [ID]
 
 **For example**  
 Consider a WIQL:  
@@ -845,8 +843,6 @@ Here, "1234" is the source workitem id and "6789" is the corresponding target wo
 <p align="center">
   <img src="../assets/TFS_CREATE_TOKEN_3.png" />
 </p>
-
-<br>
 
 ## Proxy settings for the Service
 
@@ -976,7 +972,7 @@ For Team Foundation Server click on "Settings". <br>
 ![ ](../assets/TFS_Save_User_In_User_Group_Edit_2.png)
 </p>
 
-### Add User or Service Principal in Project Administration Group====
+### Add User or Service Principal in Project Administration Group
 1. Login into Azure DevOps with the user having administrative rights.<br>
 2. Navigate to the project. Then click on "Settings" icon and select "Security" option.<br>
 <p align="center">
@@ -984,13 +980,13 @@ For Team Foundation Server click on "Settings". <br>
 ![ ](../assets/TFS_Project_Security_Settings_Edit1.png)
 </p>
 3. Select "Project Administration" group and select members.<br>
-4. Follow number 5 to 7 point of section '''''Add User in Collection Administration Group''''' to add a User or Service Principal in "Project Administration".
+4. Follow number 5 to 7 point of section Add User in Collection Administration Group to add a User or Service Principal in "Project Administration".
 
 ## Secret key & Certificate in Microsoft Entra (Azure Active Directory)
 ### Generate Secret key in Microsoft Entra (Azure Active Directory)
 1. Log into Microsoft Entra (Azure Active Directory) with the administrative user.<br>
-2. Navigate to '''Microsoft Entra Id''' -> '''Applications''' and select application added as Service Principal in Azure DevOps collection -> '''Certificates & secrets'''.<br>
-3. Navigate to '''Client secrets''' tab and add a new client secret.  
+2. Navigate to **Microsoft Entra Id** -> **Applications** and select application added as Service Principal in Azure DevOps collection -> **Certificates & secrets**.<br>
+3. Navigate to **Client secrets** tab and add a new client secret.  
 <p align="center">
 
 ![ ](../assets/VSTS_SP_Secret.png)
@@ -998,17 +994,17 @@ For Team Foundation Server click on "Settings". <br>
 
 ### Upload Certificate in Microsoft Entra (Azure Active Directory)
 1. Log into Microsoft Entra (Azure Active Directory) with the administrative user.<br>
-2. Navigate to '''Microsoft Entra Id''' -> '''Applications''' and select application added as Service Principal in Azure DevOps collection -> '''Certificates & secrets'''.<br>
-3. Navigate to '''Certificates''' tab and upload a new certificate.  
+2. Navigate to **Microsoft Entra Id** -> **Applications** and select application added as Service Principal in Azure DevOps collection -> **Certificates & secrets**.<br>
+3. Navigate to **Certificates** tab and upload a new certificate.  
 <p align="center">
 
 ![ ](../assets/VSTS_SP_Certificate.png)
 </p>
 
-### How to find Team Foundation Server's version
+## How to find Team Foundation Server's version
 
 please follow given steps fo find Team Foundation Server version.
-* Open '''Team Foundation Server Administration Console'''.
+* Open **Team Foundation Server Administration Console**.
 * You can see the Team Foundation Server instance version detila in right side of panel. Please refere given screenshot for reference.
 
 <p align="center">
