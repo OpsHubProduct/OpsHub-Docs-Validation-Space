@@ -848,9 +848,9 @@ Here, "1234" is the source workitem id and "6789" is the corresponding target wo
 
 <br>
 
-### Proxy settings for the Service
+## Proxy settings for the Service
 
-1. Click [Proxy Setting](../manage/administrator/proxy-settings.md) to see step by step details about how to configure proxy in {{ spaceName }}. After configuring the proxy in {{ spaceName }} please follow given steps.
+1. Click [Proxy Setting](../manage/administrator/proxy-setting.md) to see step by step details about how to configure proxy in {{ spaceName }}. After configuring the proxy in {{ spaceName }} please follow given steps.
 
 2. Open file explorer and navigate to the service installation folder (Ex: `<OPSHUB_INSTALLATION_PATH>\Other_Resources\Resources\OpsHubTFSService`) and open file named **OpsHubTFSService.exe.config** in any text editor. Un-comment the following code from **OpsHubTFSService.exe.config** file:  
    ```xml
@@ -871,7 +871,7 @@ Here, "1234" is the source workitem id and "6789" is the corresponding target wo
 
 <br>
 
-### <div id="FieldRefName">Find Reference name of field</div>
+## Find Reference name of field
 
 1. Log in Team Foundation Server with a user having administrative rights.
 
@@ -942,8 +942,8 @@ Here, "1234" is the source workitem id and "6789" is the corresponding target wo
 </p>
 5. Click "Ok".<br>
 
-## <div id="AddUserInTFSGroup">How to add user or Service Principal in group</div>===
-###Add User or Service Principal in Collection Administration Group====
+## How to add user or Service Principal in group
+### Add User or Service Principal in Collection Administration Group
 1. Login into Azure DevOps with the user having administrative rights.<br>
 2. For Azure DevOps system click on the "Organization Settings".<br>
 <p align="center">
@@ -1054,7 +1054,7 @@ for sending Web Hook request to valid OpsHub instance. Provide the URL of OpsHub
 
 ![TFS4](../assets/TFS4.png)
 
-##Bypass Rule with User Impersonation
+## Bypass Rule with User Impersonation
 
 * If an integration is configured to Azure DevOps from any other system with 'Bypass Rule' option enabled, {{ spaceName }} will consider the audit revision's author as the user on the basis of which impersonation is to be performed.  
 * Link impersonation will be supported between Azure DevOps systems. When two entities are linked then on Azure DevOps side, only one entity will contain actual linked added by user while on another entity link will be added by default integration user.  
