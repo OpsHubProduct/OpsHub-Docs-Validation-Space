@@ -26,7 +26,7 @@ Refer the screenshot given below for reference.
 | **Version** | Deployment type is On-Premises | Put the version for the Team Foundation Server. Refer section [How to find Team Foundation Server's version](#how-to-find-team-foundation-servers-version) to learn how to find version of installed Team Foundation Server. |
 | **Server URL** | Always | In case of On-Premises deployment, set the URL to: `http://<host name>:<port no>/tfs`; in case of Visual Studio Team Services (VSTS On-Cloud) instance, set the URL to: `https://<instance name>.visualstudio.com`; and for a new Azure DevOps (On-Cloud) instance, set the URL to: `https://dev.azure.com/<organization name>`. |
 | **Authentication Mode** | Always | Select the authentication mode you would like to use for communicating with Azure DevOps systems API. |
-| **User Name** | Deployment type is On-Premises | Enter a primary username with the user domain (if there is any). User must have administrator privileges in Project Administrators user group or Project Collection Administrators user group. Please make sure this user has a unique display name across the instance. Refer to the [Add User in Group](#add-user-in-group) section to learn how to add user in user group list. |
+| **User Name** | Deployment type is On-Premises | Enter a primary username with the user domain (if there is any). User must have administrator privileges in Project Administrators user group or Project Collection Administrators user group. Please make sure this user has a unique display name across the instance. Refer to the [Add User in Group](#how-to-add-user-or-service-principal-in-group) section to learn how to add user in user group list. |
 | **User Email** | Deployment type is On-Cloud | Enter User Email Address. User must have administrator privileges in Project Administrators user group or Project Collection Administrators user group. |
 | **User Password** | Authentication mode is Basic | In On-Premises deployed server, enter the primary password. |
 | **Personal Access Token** | Authentication mode is Personal Access Token | Enter the Personal Access Token generated for the integration user in the Azure DevOps. Refer [Create Personal Access Token](#create-personal-access-token) section to learn about how to create Personal Access Token. |
@@ -348,7 +348,7 @@ to this:
 ## Mapping for Entity mention field
 
 * When Team Foundation Server ALM/Azure Devops service is configured as source system in the integration and its field/comment type is rich text (HTML), then the entity mention synchronization is supported.
-* Click on [**Known Behaviors & Limitation**](#known-behaviors-&-limitation) to know about entity mention sync limitation for this system.
+* Click on [**Known Behaviors & Limitation**](#known-behaviors-and-limitations) to know about entity mention sync limitation for this system.
 * Click on [Rank configuration](../integrate/mapping-configuration.md#configuration) to know more about entity mention mapping and synchronization behavior in general.
 
 ## Mapping for Soft Delete Configuration
