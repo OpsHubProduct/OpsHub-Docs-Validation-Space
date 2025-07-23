@@ -404,7 +404,7 @@ to this:
 </variables>
 ```
 
-{% if spaceName == "OpsHub Migrator for Microsoft Azure DevOps" %}
+{% if spaceName != "OpsHub Migrator for Microsoft Azure DevOps" %}
 
 ## Comments Field Advance Mapping Configuration for Pipeline Entity
 
@@ -479,7 +479,7 @@ To know the reference name of Azure DevOps work-item fields refer section [Find 
 
 > **Note**: Table Sample Criteria Examples include examples for all work-items except Test Suite (TFS<2013), Build entity and Pull Request for which separate tables have been included below.
 
-## Sample Criteria Examples
+### Sample Criteria Examples
 
 | **Field Type**       | **Criteria Description**                                                   | **Criteria Snippet**                                                  |
 |----------------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------|
@@ -489,7 +489,7 @@ To know the reference name of Azure DevOps work-item fields refer section [Find 
 | User                 | Synchronize all entities which are created by 'user@domain.com' user       | `[System.CreatedBy] = 'user@domain.com'`                              |
 | Lookup and User      | Synchronize all entities which are created by 'user@domain.com' user and primary as '1' | `[System.AssignedTo] = 'user@domain.com' and [Microsoft.VSTS.Common.Priority] = '1'` |
 
-## Sample Criteria Examples for 'Test Suite' entity (Team Foundation Server version < 2013)
+### Sample Criteria Examples for 'Test Suite' entity (Team Foundation Server version < 2013)
 
 | **Field Type** | **Criteria Description**                                      | **Criteria Snippet**                   |
 |----------------|--------------------------------------------------------------|----------------------------------------|
@@ -932,7 +932,7 @@ Here, "1234" is the source workitem id and "6789" is the corresponding target wo
 
 5. Enter the name of the user and then click "Check Names" to check user existence.  
    <p align="center">
-  <img src="../assets/Check_name.png" width="600"/>
+  <img src="../assets/Check_name.png" width="700"/>
    </p>
 
 6. Click "Ok". This will add the user in the selected collection.
