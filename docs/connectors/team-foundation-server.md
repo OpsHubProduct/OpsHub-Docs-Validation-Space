@@ -1148,11 +1148,11 @@ Particular field "customblock" is required in the end system when state is chang
 
 ### **Test Point does not exist failure**
 
-* For detailed understanding of Test Point, please refer to [Test Point Advance Mapping Configuration](#test-point-advance-config) section.
+* For detailed understanding of Test Point, please refer to [Test Point Advance Mapping Configuration](#test-point-advance-mapping-configuration) section.
 * _Some possible scenarios that may cause this failure_:
 
   1. **Test point is yet not synchronized in target system**
-     * To resolve this issue do following. Let first TestCase then TestSuite sync with **Test-Case linkage** configuration prior to Test Run sync or failure retry. For synchronizing configuration/tester with **Test-Case linkage** advance mapping is required. For advance mapping, please refer [Test Point Advance Mapping Configuration](#test-point-advance-config) section.
+     * To resolve this issue do following. Let first TestCase then TestSuite sync with **Test-Case linkage** configuration prior to Test Run sync or failure retry. For synchronizing configuration/tester with **Test-Case linkage** advance mapping is required. For advance mapping, please refer [Test Point Advance Mapping Configuration](#test-point-advance-mapping-configuration) section.
   
   2. **TestPoint is deleted from Target System**
      * TestPoint can be deleted with either of following ways:
