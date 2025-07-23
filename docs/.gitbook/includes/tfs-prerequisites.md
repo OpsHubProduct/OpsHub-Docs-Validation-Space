@@ -123,9 +123,9 @@ Follow the steps given below for installation:
 * Test the web service by opening this URL in browser: `http://<hostname>:<port>/TFSService`.  
   E.g. `http://localhost:9090/TFSService`. For Troubleshooting, refer [Service Troubleshooting](../../connectors/service-troubleshooting.md) section.  
 
-In case the machine on which {{ spaceName }} installed is behind the proxy (network proxy), then perform the steps mentioned in the [Proxy settings](../../manage/administrator/proxy-settings.md) section.  
+In case the machine on which {{ spaceName }} installed is behind the proxy (network proxy), then perform the steps mentioned in the [Proxy settings](../../manage/administrator/proxy-setting.md) section.  
 
-It is also required to configure the proxy settings for {{ spaceName }} Service, refer to [Proxy settings](../../connectors/team-foundation-server.md#proxy-settings) in appendix section for the {{ spaceName }} Service to learn the configuration steps.  
+It is also required to configure the proxy settings for {{ spaceName }} Service, refer to [Proxy settings](../../connectors/team-foundation-server.md#proxy-settings-for-the-service) in appendix section for the {{ spaceName }} Service to learn the configuration steps.  
 
 {% endif %}
 
