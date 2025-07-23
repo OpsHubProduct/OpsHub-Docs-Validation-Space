@@ -230,8 +230,6 @@ To configure criteria in codebeamer/codebeamerX, integration needs to be created
 * To know more about cbQL query in codebeamer/codebeamerX, refer to: [cbQL in codebeamer/codebeamerX](https://codebeamer.com/cb/wiki/871101)
 
 **Criteria samples**
-
- '''Criteria samples''' 
 | **Field Type** | **Criteria Description** | **Criteria snippet** |
 |----------------|---------------------------|------------------------|
 | **Lookup** | Synchronizes all the entities having priority as "High". Here, 1 is codebeamer/codebeamer X's project/workspace id and 2 is tracker's id. | `'1.2.priority' = 'High'` |
@@ -360,7 +358,7 @@ To configure criteria in codebeamer/codebeamerX, integration needs to be created
 
 # Appendix
 
-## Find version of codebeamer / codebeamer X Instance
+## Find version of codebeamer/codebeamer X Instance
 
 To find the codebeamer / codebeamer X version, follow the steps given below:
 
