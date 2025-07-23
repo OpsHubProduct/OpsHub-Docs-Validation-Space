@@ -873,17 +873,24 @@ Here, "1234" is the source workitem id and "6789" is the corresponding target wo
 
 2. Select the **'Open WIT from Server'** menu item under the Tools > Process Editor > Work Item Types menu.  
    Note : Please make sure Microsoft Visual Studio has been installed with extension **'Process Template Editor'** to see above options.  
-   ![TFS_WORK_ITEMS_OPTIONS](../assets/TFS_WORK_ITEMS_OPTIONS.png)
+<p align="center">
+  <img src="../assets/TFS_WORK_ITEMS_OPTIONS.png" width="600"/>
+</p>
 
 3. Select the Team Foundation Server collection which contains the project to synchronize.
 
 4. Expand the project and then select the entity which is used for synchronization(in this case Bug).
 
 5. Click **'OK'** to open the Work Item Type Fields screen.  
-   ![TFS_WORK_ITEMS](../assets/TFS_WORK_ITEMS.png)
+ <p align="center">
+  <img src="../assets/TFS_WORK_ITEMS.png" width="600"/>
+</p>
 
 6. Here the user will see the list of all the fields with it's data-type and reference name for selected work-item.  
-   ![TFS_Field_Ref_Name_Edit1](../assets/TFS_Field_Ref_Name_Edit1.png)
+  <p align="center">
+  <img src="../assets/TFS_Field_Ref_Name_Edit1.png" width="600"/>
+</p>
+
 
 ---
 
@@ -892,13 +899,16 @@ Here, "1234" is the source workitem id and "6789" is the corresponding target wo
 * Open file explorer and navigate to the service installation folder (Ex: C:\Program Files\OpsHub\Other_Resources\Resources\OpsHubTFSService).  
 * Open the file named "opshubtfsservice.exe.config" in any text editor.  
 * Search **`<baseAddresses>`** tag in the file. In **`<add baseAddress`** tag change the **<9090>** with the port on which you want to deploy service. Save the changes. Refer the image below for reference.  
-  ![TFS_SERVICE_PORT_CHANGE](../assets/TFS_SERVICE_PORT_CHANGE.png)
+<p align="center">
+  <img src="../assets/TFS_SERVICE_PORT_CHANGE.png" width="600"/>
+</p>
+
 * Open the command prompt as **'Run As Administrator'** and navigate to the service installation folder (Sample Path: C:\Program Files\OpsHub\Other_Resources\Resources\OpsHubTFSService).  
 * Run "registerTFSWCFService.bat".  
 * Once the command is executed, go to Windows Services and look for a service with the name "OpsHubTFSService". Check if the service has started or not. If it has not started, then start the service.  
 * Test the web service by opening this URL in browser: `http://<hostname>:<port>/TFSService`.  
   E.g. `http://localhost:<port>/TFSService`.  
-  For Troubleshooting, refer [Service Troubleshooting](TFS Service Troubleshooting) section.
+  For Troubleshooting, refer [Service Troubleshooting](service-troubleshooting.md) section.
 
 ---
 
@@ -908,14 +918,22 @@ Here, "1234" is the source workitem id and "6789" is the corresponding target wo
 
 1. Open Team Foundation Server Administration Console.  
 2. Click "Team Foundation Collection" under "Application Tier".  
-3. Select Collection and click "Administer Security".  
-   ![Select_collection](../assets/Select_collection.png)
+3. Select Collection and click "Administer Security".
+   
+  <p align="center">
+  <img src="../assets/Select_collection.png" width="600"/>
+  </p>
 
-4. Under "Add Users and Groups", select "Windows User or Group" option and Click "Add".  
-   ![Add_user_tfs](../assets/Add_user_tfs.png)
+4. Under "Add Users and Groups", select "Windows User or Group" option and Click "Add".
+    
+<p align="center">
+  <img src="../assets/Add_user_tfs.png" width="600"/>
+</p>
 
 5. Enter the name of the user and then click "Check Names" to check user existence.  
-   ![Check_name](../assets/Check_name.png)
+   <p align="center">
+  <img src="../assets/Check_name.png" width="600"/>
+   </p>
 
 6. Click "Ok". This will add the user in the selected collection.
 
