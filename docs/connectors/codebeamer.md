@@ -706,7 +706,6 @@ For creating custom field in codebeamer / codebeamer X, follow the steps given b
 **codebeamer X:**
 
 ![CodebeamerX Member ID](../assets/CodebeamerX_Image_5_10_b.png)  
-![CodebeamerX Member ID Details](../assets/Codebeamer_Image_5_10_c.png)
 
 * Account ID is the required user ID as shown in the screenshot below:
 
