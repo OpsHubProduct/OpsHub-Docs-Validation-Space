@@ -124,7 +124,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn 
 
 - **Test Point** is an association between Test Suite and Test Case with configuration and tester. This association is synchronized by configuring the **Test-Case linkage** with Test Suite integration.  
 <p align="center">
-  <img src="TFSTestPoint.png">
+  <img src="../assets/TFSTestPoint.png">
 </p>
 
 - The **Advance Mapping** required for synchronizing configuration/tester with **Test-Case linkage** is given in the snippet below:
