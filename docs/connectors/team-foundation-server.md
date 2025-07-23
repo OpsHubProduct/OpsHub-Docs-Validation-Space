@@ -23,7 +23,7 @@ Refer the screenshot given below for reference.
 |----------------|---------------------------------------------|------------------|
 | **System Name** | Always | Provide Azure DevOps System Name |
 | **Deployment Mode** | Always | Choose the deployment type of server. |
-| **Version** | Deployment type is On-Premises | Put the version for the Team Foundation Server. Refer section [How to find Team Foundation Server's version](#how-to-find-team-foundation-server's-version) to learn how to find version of installed Team Foundation Server. |
+| **Version** | Deployment type is On-Premises | Put the version for the Team Foundation Server. Refer section [How to find Team Foundation Server's version](#how-to-find-team-foundation-servers-version) to learn how to find version of installed Team Foundation Server. |
 | **Server URL** | Always | In case of On-Premises deployment, set the URL to: `http://<host name>:<port no>/tfs`; in case of Visual Studio Team Services (VSTS On-Cloud) instance, set the URL to: `https://<instance name>.visualstudio.com`; and for a new Azure DevOps (On-Cloud) instance, set the URL to: `https://dev.azure.com/<organization name>`. |
 | **Authentication Mode** | Always | Select the authentication mode you would like to use for communicating with Azure DevOps systems API. |
 | **User Name** | Deployment type is On-Premises | Enter a primary username with the user domain (if there is any). User must have administrator privileges in Project Administrators user group or Project Collection Administrators user group. Please make sure this user has a unique display name across the instance. Refer to the [Add User in Group](#add-user-in-group) section to learn how to add user in user group list. |
