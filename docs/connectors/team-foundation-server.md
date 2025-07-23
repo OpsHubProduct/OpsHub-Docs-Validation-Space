@@ -269,7 +269,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn 
 ## Lookup Fields Configuration
 
 * In Azure DevOps, if any lookup field contains the value which is same as one of the  values of "State" field [case is not same], the lookup field value will not sync to the target. For example, if one of the states is "In Progress" and lookup field value is also "in progress", then the "In Progress" (instead of "in progress") will be present in the mapping of lookup field. Hence, the lookup field value "in progress" will not sync to the target.  
-**Note: For the above mentioned case, if the lookup field of Azure DevOps is mapped to the mandatory field of the target, the processing failure will be generated during the synchronization.
+> **Note**: For the above mentioned case, if the lookup field of Azure DevOps is mapped to the mandatory field of the target, the processing failure will be generated during the synchronization.
 
 *The images below show that value list of State field and one of the lookup fields. In both the lists, the "In progress" option is common but alphabetical case is different.  
 <p align="center">
@@ -755,11 +755,11 @@ A sample snippet of JSON is given below:
   **'''For example -'''** field names being in form of [System.Id] and user values being in form of 'automationsyncuser <automationsyncuser@opshub.com>'.  
   With the synchronization, such details need to be transformed to the corresponding detail of target end point for the fields and user. Below is the detailed information around this transformation.
 
-### '''Field names in WIQL'''
+### **Field names in WIQL**
 * Team Foundation Server/Azure DevOps End point Format - [Field internal name]. **'''Example :'''** [System.ID]
 * Format being used for processing/synchronization - [Field display name]. **'''Example :'''** [ID]
 
-**'''For example -'''**  
+**For example**  
 Consider a WIQL:  
 `select [System.Id], [System.WorkItemType], [System.Assigned To] from WorkItems where [System.TeamProject] = @project and [System.RemoteLink] = '[System.TestField]'`  
 This will be transformed internally to:  
@@ -770,14 +770,14 @@ for processing.
 
 > **Note**: If field name is present in WIQL, which is not in this format, then {{ spaceName }} will not do any transformation and the details will be available as stated in the "Team Foundation Server/Azure DevOps End point Format" only. In such case, if any transformation is needed, you can do it with the help of advance mapping as per the expected format.
 
-* **'''What happens when the source field is not present in target system -'''**  
+* **What happens when the source field is not present in target system**  
   During synchronization, failures will occur for the entities to which the missing target field is referred.  
   To resolve these failures, any one of the following configurations can be done:
   * Create the missing field with the same datatype in any unused template in the target system.  
     For adding the field, refer to [https://docs.microsoft.com/en-us/azure/devops/organizations/settings/work/add-custom-field?view=azure-devops-2020 Add custom field].
   * Replace the missing field names with the matching existing field name of the same datatype using advanced XSLT.
 
-````xml
+```xml
 <wiql>
 	<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="wiqlUpdatedValue" select="SourceXML/updatedFields/Property/wiql"/>
 	<xsl:value-of xmlns:xsl="http://www.w3.org/1999/XSL/Transform" select="replace(replace(replace(replace(replace($wiqlUpdatedValue,'\[Custom_Field\]','[ID]'),'\[Custom_Date_Field\]','[ID]'),'\[Custom_Integer_Field\]','[ID]'),'\[Custom Date 2\]','[ID]'),'\[Custom Field\]','[ID]'),"/>
