@@ -15,7 +15,7 @@ These are the common privileges for **user**. To know specific privileges requir
 
 * User can use **Basic** Authentication or **Personal Access Token** authentication method to communicate with API for Azure DevOps.  
   * In case of **Personal Access Token** authentication, please check [Personal Access Token Permission](../../connectors/team-foundation-server#personal-access-token-permission) section for the required permission details. Personal Access Token is supported for Team foundation Server On-Premise (TFS instance with **HTTPS** installation only) with version 2017 and above and Azure DevOps.  
-  * For On-Premises deployment, either Basic authentication or PAT authentication needs to be enabled on server. Please refer to [Internet Information Services(IIS) Configurations](internet-information-services28iis29-configurations) to learn more about enabling the Basic/PAT authentication in IIS.
+  * For On-Premises deployment, either Basic authentication or PAT authentication needs to be enabled on server. Please refer to [Internet Information Services(IIS) Configurations](internet-information-services-iis-configurations) to learn more about enabling the Basic/PAT authentication in IIS.
 
 * In case user want to synchronize User type fields of Azure DevOps with any other system with default {{ spaceName }} generated mapping, it is necsessary that all users have their preferred e-mail address set in Azure DevOps.
 
@@ -85,18 +85,18 @@ Refer [Create Personal Access Token](../../connectors/team-foundation-server.md#
 
 {% if spaceName == "OpsHub Migrator for Microsoft Azure DevOps" %}
 
-### Service Principal Privileges
+## Service Principal Privileges
 
 * It is applicable when the authentication mode is set to **Service Principal - Client Secret** or **Service Principal - Client Certificate**.
 * These authentication types are only supported for **on-cloud deployment** for which the available entity types are **Work Items** & **Build**.
 * Azure DevOps collection must be connected to Microsoft Entra (Azure Active Directory) for which Service Principal is being used.
 * Refer to [Secret key & Certificate](../../connectors/team-foundation-server.md#secret-key-&-certificate) section to generate **Secret key** or to upload **Certificate** in Microsoft Entra (Azure Active Directory).
 
-## Service configuration
+# Service configuration
 
 {{ spaceName }} requires this service to communicate with the Azure DevOps. It acts as a translation layer between Azure DevOps and {{ spaceName }} and must be configured for synchronization with Azure DevOps.
 
-### Service pre-requisites
+## Service pre-requisites
 
 * Operating System (Tested On): Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows 7, Windows 8, Windows 8.1, Windows 10
 * It is recommended to install Service on a machine having quad-core processor and minimum 4 GB RAM.
