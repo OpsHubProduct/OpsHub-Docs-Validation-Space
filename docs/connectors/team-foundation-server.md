@@ -13,24 +13,23 @@ Refer the screenshot given below for reference.
 <p align="center">
   <img src="../assets/Team_Foundation_Server_Image_System_Configuration_Edit4.png" />
 </p>
-<div style='text-align: center;'>System template with <b>Personal Access Token</b> authentication mode</div>
 
 <p align="center">
   <img src="../assets/VSTS_SP_system.png" width="800" />
 </p>
-<div style='text-align: center;'>System template with <b>Service Principal - Client Certificate</b> authentication mode</div>
 
+**Azure DevOps System Form Details**
 | **Field Name** | **When field is visible on the System form** | **Description** |
 |----------------|---------------------------------------------|------------------|
 | **System Name** | Always | Provide Azure DevOps System Name |
 | **Deployment Mode** | Always | Choose the deployment type of server. |
-| **Version** | Deployment type is On-Premises | Put the version for the Team Foundation Server. Refer section [How to find Team Foundation Server's version](#findtfsversion) to learn how to find version of installed Team Foundation Server. |
+| **Version** | Deployment type is On-Premises | Put the version for the Team Foundation Server. Refer section [How to find Team Foundation Server's version](#how-to-find-team-foundation-server's-version) to learn how to find version of installed Team Foundation Server. |
 | **Server URL** | Always | In case of On-Premises deployment, set the URL to: `http://<host name>:<port no>/tfs`; in case of Visual Studio Team Services (VSTS On-Cloud) instance, set the URL to: `https://<instance name>.visualstudio.com`; and for a new Azure DevOps (On-Cloud) instance, set the URL to: `https://dev.azure.com/<organization name>`. |
 | **Authentication Mode** | Always | Select the authentication mode you would like to use for communicating with Azure DevOps systems API. |
-| **User Name** | Deployment type is On-Premises | Enter a primary username with the user domain (if there is any). User must have administrator privileges in Project Administrators user group or Project Collection Administrators user group. Please make sure this user has a unique display name across the instance. Refer to the [Add User in Group](#adduserintfsgroup) section to learn how to add user in user group list. |
+| **User Name** | Deployment type is On-Premises | Enter a primary username with the user domain (if there is any). User must have administrator privileges in Project Administrators user group or Project Collection Administrators user group. Please make sure this user has a unique display name across the instance. Refer to the [Add User in Group](#add-user-in-group) section to learn how to add user in user group list. |
 | **User Email** | Deployment type is On-Cloud | Enter User Email Address. User must have administrator privileges in Project Administrators user group or Project Collection Administrators user group. |
 | **User Password** | Authentication mode is Basic | In On-Premises deployed server, enter the primary password. |
-| **Personal Access Token** | Authentication mode is Personal Access Token | Enter the Personal Access Token generated for the integration user in the Azure DevOps. Refer [Create Personal Access Token](#cloud-vsts-pat) section to learn about how to create Personal Access Token. |
+| **Personal Access Token** | Authentication mode is Personal Access Token | Enter the Personal Access Token generated for the integration user in the Azure DevOps. Refer [Create Personal Access Token](#create-personal-access-token) section to learn about how to create Personal Access Token. |
 | **Tenant ID** | Deployment type is On-Cloud & Authentication mode is Service Principal - Client Secret or Service Principal - Client Certificate | Enter the Tenant Id of Azure Active Directory to which organization is connected. This can be found in the Microsoft Entra (Azure Active Directory). |
 | **Application ID** | Deployment type is On-Cloud & Authentication mode is Service Principal - Client Secret or Service Principal - Client Certificate | Enter the Application (client) ID of a dedicated application for API communication with your Azure DevOps instance. This can be found in the Microsoft Entra (Azure Active Directory). |
 | **Secret Value** | Deployment type is On-Cloud & Authentication mode is Service Principal - Client Secret | Provide the Secret Value generated in Azure Active Directory for the application given in "Application ID" input. This can be found in the Microsoft Entra (Azure Active Directory) while generating secret key. |
@@ -38,7 +37,7 @@ Refer the screenshot given below for reference.
 | **Thumbprint** | Deployment type is On-Cloud & Authentication mode is Service Principal - Client Certificate | Provide the Thumbprint of a certificate uploaded in Azure Active Directory for the application given in "Application ID" input. This can be found in the Microsoft Entra (Azure Active Directory) in "Certificates & secrets" section. |
 | **Team Collection Name** | Deployment type is On-Premises | Enter the Collection name. For example, PrimaryCollection. |
 | **Service URL** | Always | Provide the Service URL where the Service is installed. For example: `http://<service_host>:<port>/TFSService`. The Service URL is mandatory for all versions of Azure DevOps Server below 2020, regardless of the work item being integrated. For 2020 and above versions of Azure DevOps Server and Azure DevOps Service, the Service URL is mandatory for these work items: Area, Iteration Team, Group, User, Test Run, Test Suite, Test Result, Test Plan, Query, Dashboard, Widget, and Pull Request. |
-| **Bypass rules** | Always | Setting Bypass Rules to 'Yes' means disabling the rules while writing the changes to the system. This change will allow users to write invalid value(s) to any field in the system. For over writing, 'Changed By', 'Changed Date', etc. fields, enable the Bypass rules. Refer [Bypass Rule with User Impersonation](#bypassrulewithuserimpersonation) in the appendix section to learn in detail about User Impersonation and ByPass Rule.<br><img src="../assets/Note.jpg" width="30"/> If Bypass Rules is set to 'Yes' in the system configuration, make sure the user or Service Principal has the 'Bypass rules on work item updates permission' set to Allow at the project level in Azure DevOps. |
+| **Bypass rules** | Always | Setting Bypass Rules to 'Yes' means disabling the rules while writing the changes to the system. This change will allow users to write invalid value(s) to any field in the system. For over writing, 'Changed By', 'Changed Date', etc. fields, enable the Bypass rules. Refer [Bypass Rule with User Impersonation](#bypass-rule-with-user-impersonation) in the appendix section to learn in detail about User Impersonation and ByPass Rule. **Note** If Bypass Rules is set to 'Yes' in the system configuration, make sure the user or Service Principal has the 'Bypass rules on work item updates permission' set to Allow at the project level in Azure DevOps. |
 
 # Mapping Configuration
 
@@ -311,6 +310,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn 
 *If Commit/Branch link has a different project name or  a different repository name:
 ** Provide the respective project's name or repository's name using advance XSLT.
 ** For example, if source commit is found in project, 'project-xyz' and repository, 'repository-xyz', corresponding in target this commit is found in project, 'project-abc' and repository, 'repository-abc'. Therefore, to sync commit link of an entity, update the advance XSLT from this:
+ ```xml 
  <xsl:for-each select="linkProps/Property">
   <xsl:for-each select="*">
    <xsl:element name="{name(.)}">
@@ -318,8 +318,10 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn 
    </xsl:element>
   </xsl:for-each>
  </xsl:for-each>
+ ```
 
 to this:
+```xml
  <xsl:for-each select="linkProps/Property">
   <xsl:for-each select="*">
    <xsl:element name="{name(.)}">
@@ -341,12 +343,13 @@ to this:
    </xsl:element>
   </xsl:for-each>
  </xsl:for-each>
+```
 
 ## Mapping for Entity mention field
 
 * When Team Foundation Server ALM/Azure Devops service is configured as source system in the integration and its field/comment type is rich text (HTML), then the entity mention synchronization is supported.
-* Click on [**Known Behaviors & Limitation**](team_foundation_server#knownbehaviors) to know about entity mention sync limitation for this system.
-* Click on [Rank configuration](../integrate/mapping-configuration#configuration) to know more about entity mention mapping and synchronization behavior in general.
+* Click on [**Known Behaviors & Limitation**](#known-behaviors-&-limitation) to know about entity mention sync limitation for this system.
+* Click on [Rank configuration](../integrate/mapping-configuration.md#configuration) to know more about entity mention mapping and synchronization behavior in general.
 
 ## Mapping for Soft Delete Configuration
 *When Team Foundation Server is the target system, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md).
