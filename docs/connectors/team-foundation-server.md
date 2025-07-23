@@ -49,7 +49,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn 
   <img src="../assets/Mapping_Configuration_TFS_Edit1.png" />
 </p>
 
-* For **Changed By** and **Changed Date** synchronization please marked _overwrite true_ in the mapping (For source system). Refer [Mapping Configuration > Overwrite](Mapping_Configuration#Overwrite) section to learn how to marked field overwrite.
+* For **Changed By** and **Changed Date** synchronization please marked _overwrite true_ in the mapping (For source system). Refer [Overwrite](../integrate/mapping-configuration.md#overwrite) section to learn how to marked field overwrite.
 * When Azure DevOps Server or Services is the target system and Iterations and Area Paths are not considered separate entities, the default behavior is to verify and create these entities within the Azure DevOps system if they are mapped as fields in work items or test entities.
   * If the iteration and area path do not already exist in the target system, they will be created without start and end dates unless the checkAndCreate property is either not specified or set to 'true'. If these entities already exist, the new entity will be placed under the designated Area Path or Iteration.
   * If the user wants to disable this "Check and Create" behavior, they can set the checkAndCreate property to false. This will prevent the creation of new iterations or area paths in the ADO system if they do not already exist.
