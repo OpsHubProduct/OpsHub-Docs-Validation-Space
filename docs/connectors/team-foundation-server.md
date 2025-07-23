@@ -873,14 +873,14 @@ Here, "1234" is the source workitem id and "6789" is the corresponding target wo
 
 2. Select the **'Open WIT from Server'** menu item under the Tools > Process Editor > Work Item Types menu.  
    Note : Please make sure Microsoft Visual Studio has been installed with extension **'Process Template Editor'** to see above options.  
-   ![TFS_WORK_ITEMS_OPTIONS](../assets/TFS_WORK_ITEMS_OPTIONS.PNG)
+   ![TFS_WORK_ITEMS_OPTIONS](../assets/TFS_WORK_ITEMS_OPTIONS.png)
 
 3. Select the Team Foundation Server collection which contains the project to synchronize.
 
 4. Expand the project and then select the entity which is used for synchronization(in this case Bug).
 
 5. Click **'OK'** to open the Work Item Type Fields screen.  
-   ![TFS_WORK_ITEMS](../assets/TFS_WORK_ITEMS.PNG)
+   ![TFS_WORK_ITEMS](../assets/TFS_WORK_ITEMS.png)
 
 6. Here the user will see the list of all the fields with it's data-type and reference name for selected work-item.  
    ![TFS_Field_Ref_Name_Edit1](../assets/TFS_Field_Ref_Name_Edit1.png)
@@ -1056,24 +1056,24 @@ for sending Web Hook request to valid OpsHub instance. Provide the URL of OpsHub
 * Link impersonation will be supported between Azure DevOps systems. When two entities are linked then on Azure DevOps side, only one entity will contain actual linked added by user while on another entity link will be added by default integration user.  
 * Bypass rules also allow Azure DevOps system to write any data ( valid or invalid ) data into server. {{ spaceName }} can create data on past dates as well by enabling this feature.  
 * In case of Current State Synchronization/ Reconciliation:  
-  ** Fields and Attachments:  
-  *** They will be impersonated with the **last changed by user** of source entity.  
-  ** Comments:  
-  *** They will be impersonated with the comment user of source entity  
+  * Fields and Attachments:  
+    * They will be impersonated with the **last changed by user** of source entity.  
+  * Comments:  
+    *  They will be impersonated with the comment user of source entity  
 
 ## Bypass Rule with Time Impersonation
 
 * If an integration is configured to Azure DevOps from any other system with 'Bypass Rule' option enabled, {{ spaceName }} will consider the audit revision's timestamp as the timestamp on the basis of which impersonation is to be performed.
 * In case of Current State Synchronization/ Reconciliation:  
-  ** Fields, Comments and Attachments will be impersonated with the **last changed time** of source entity.
+  * Fields, Comments and Attachments will be impersonated with the **last changed time** of source entity.
 
 ## State Transitions known behavior
 
-*For Team Foundation Server system, state transitions is performed implicitly by OIM using API, given no customization has been done for dependent fields of state transitions. If a user-defined field is configured as a dependent field for the state transition, then it would require configuring the state transitions using mapping XML.*  
+* For Team Foundation Server system, state transitions is performed implicitly by OIM using API, given no customization has been done for dependent fields of state transitions. If a user-defined field is configured as a dependent field for the state transition, then it would require configuring the state transitions using mapping XML.*  
 
 How to configure transitions XML using mapping? Refer this: [Transition Section (../integrate/mapping-configuration.md#attachments-comments-relationships-and-workflow-transition).
 
-*Following is the example of a transition script for the Team Foundation Server:*
+* Following is the example of a transition script for the Team Foundation Server:*
 
 Particular field "customblock" is required in the end system when state is changed from 'Active' to 'Block', otherwise its hidden. Other dependent field(s) are system defined, for example 'Reasons' field. As the user-defined field configure for transition field, we must configure transitions in the mapping as shown below:
 
