@@ -28,7 +28,7 @@
 
 # System Configuration
 
-Before you continue with the integration, you must first configure codebeamer/codebeamerX system in {{ spaceName }}.
+Before you continue with the integration, you must first configure codebeamer/codebeamer X system in {{ spaceName }}.
 
 Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.
 
@@ -47,7 +47,7 @@ Refer to the following screenshot for reference:
 
 
 
-## codebeamer/codebeamerX System Form Details
+## codebeamer/codebeamer X System Form Details
 
 | **Field Name**                     | **When field is visible on the System form** | **Description** |
 |-----------------------------------|---------------------------------------------|-----------------|
@@ -231,18 +231,25 @@ To configure criteria in codebeamer/codebeamerX, integration needs to be created
 
 **Criteria samples**
 
+ '''Criteria samples''' 
 | **Field Type** | **Criteria Description** | **Criteria snippet** |
 |----------------|---------------------------|------------------------|
-| **Lookup** | Synchronizes all the entities having priority as "High". Here, 1 is project/workspace id and 2 is tracker id. | `'1.2.priority' = 'High'` |
-| **Date** | Synchronizes entities whose startDate is after 2021-01-01 | `startDate > '2021-01-01'` |
-| **Text** | Entities containing 'item' in Summary field | `summary LIKE '%item%'` |
-| **User** | Assigned to user with id 3 | `assignedTo = 3` |
-| **User and Lookup** | Assigned to user id 3 and Priority as High | `assignedTo = 3 and '1.2.priority' = 'High'` |
-| **Lookup or Text** | Priority = High or Summary contains 'item' | `'1.2.priority' = 'High' or summary LIKE '%item%'` |
-| **Custom Field** | Belong to tracker type 1, field `customField[1]` is Verified | `'1.customField[1]' = 'Verified'` |
-| **Custom Choice Field** | Belong to project/workspace id 1, tracker type 2, field `choiceList[1]` = 'Option A' | `'1.2.choiceList[1]' = 'Option A'` |
+| **Lookup** | Synchronizes all the entities having priority as "High". Here, 1 is codebeamer/codebeamer X's project/workspace id and 2 is tracker's id. | `'1.2.priority' = 'High'` |
+| **Date** | Synchronizes all the entities whose startDate is greater than the given date. | `startDate > '2021-01-01'` |
+| **Text** | Synchronizes all the entities containing 'item' within Summary field. | `summary LIKE '%item%'` |
+| **User** | Synchronizes all the entities assigned to user with id 3. Refer to section [[#Determine User ID|Determine User ID]] to find id of user. | `assignedTo = 3` |
+| **User** and **Lookup** | Synchronizes all the entities which are assigned to user with id 3 and has 'Priority' as 'High'. Here, 1 is codebeamer/codebeamer X's project/workspace id and 2 is tracker's id. | `assignedTo = 3 and '1.2.priority' = 'High'` |
+| **Lookup** or **Text** | Synchronizes all the entities having Priority as 'High' or containing 'item' within Summary field. Here, 1 is codebeamer/codebeamer X's project/workspace id and 2 is tracker's id | `'1.2.priority' = 'High' or summary LIKE '%item%'` |
+| **Custom Field** | Synchronizes all the entities belonging to tracker type 1, whose field with Property Name as customField[1] has value 'Verified' | `'1.customField[1]' = 'Verified'` |
+| **Custom Choice Field** | Synchronizes all the entities belonging to codebeamer/codebeamer X project/workspace having Id as 1 and tracker type 2, whose field with Property Name as choiceList[1] has value 'Option A' | `'1.2.choiceList[1]' = 'Option A'` |
 
 > **Note**: For the integration with multiple projects configuration, query specific to each configured project/workspace can be combined using `or`.
+
+## Target LookUp Configuration
+* Provide query in Target Search Query such that it is possible to search the entity in the codebeamer/codebeamer X as target system. Set the **'Query'** as per cbQL Format.  
+  * Syntax: [Target Field] = @[Source-Field-Name]@  
+  * Replace [Target Field] as per the  cbQL query.  
+* To know more about cbQL query in codebeamer/codebeamer X, refer to this link: [cbQL in codebeamer/codebeamer X](https://codebeamer.com/cb/wiki/871101).
 
 ### Sample queries:
 
