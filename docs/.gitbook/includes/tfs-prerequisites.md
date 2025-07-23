@@ -15,7 +15,7 @@ These are the common privileges for **user**. To know specific privileges requir
 
 * User can use **Basic** Authentication or **Personal Access Token** authentication method to communicate with API for Azure DevOps.  
   * In case of **Personal Access Token** authentication, please check [Personal Access Token Permission](../../connectors/team-foundation-server#personal-access-token-permission) section for the required permission details. Personal Access Token is supported for Team foundation Server On-Premise (TFS instance with **HTTPS** installation only) with version 2017 and above and Azure DevOps.  
-  * For On-Premises deployment, either Basic authentication or PAT authentication needs to be enabled on server. Please refer to [Internet Information Services(IIS) Configurations](internet-information-services-iis-configurations) to learn more about enabling the Basic/PAT authentication in IIS.
+  * For On-Premises deployment, either Basic authentication or PAT authentication needs to be enabled on server. Please refer to [Internet Information Services(IIS) Configurations](#internet-information-services-iis-configurations) to learn more about enabling the Basic/PAT authentication in IIS.
 
 * In case user want to synchronize User type fields of Azure DevOps with any other system with default {{ spaceName }} generated mapping, it is necsessary that all users have their preferred e-mail address set in Azure DevOps.
 
@@ -90,7 +90,7 @@ Refer [Create Personal Access Token](../../connectors/team-foundation-server.md#
 * It is applicable when the authentication mode is set to **Service Principal - Client Secret** or **Service Principal - Client Certificate**.
 * These authentication types are only supported for **on-cloud deployment** for which the available entity types are **Work Items** & **Build**.
 * Azure DevOps collection must be connected to Microsoft Entra (Azure Active Directory) for which Service Principal is being used.
-* Refer to [Secret key & Certificate](../../connectors/team-foundation-server.md#secret-key-&-certificate) section to generate **Secret key** or to upload **Certificate** in Microsoft Entra (Azure Active Directory).
+* Refer to [Secret key & Certificate](../../connectors/team-foundation-server.md#secret-key-and-certificate) section to generate **Secret key** or to upload **Certificate** in Microsoft Entra (Azure Active Directory).
 
 # Service configuration
 
@@ -121,9 +121,9 @@ Follow the steps given below for installation:
 * Open the command prompt as *Run As Administrator* and navigate to the extracted folder in which the `registerTFSWCFService.bat` is placed and execute `registerTFSWCFService.bat`.  
 * Once the command is executed, go to Windows Services, and look for a service with the name **OpsHubTFSService**. Check if the service has started or not. If it has not started, then start the service.  
 * Test the web service by opening this URL in browser: `http://<hostname>:<port>/TFSService`.  
-  E.g. `http://localhost:9090/TFSService`. For Troubleshooting, refer [Service Troubleshooting](../../connectors/team-foundation-server.md#service-troubleshooting) section.  
+  E.g. `http://localhost:9090/TFSService`. For Troubleshooting, refer [Service Troubleshooting](../../connectors/service-troubleshooting.md) section.  
 
-In case the machine on which {{ spaceName }} installed is behind the proxy (network proxy), then perform the steps mentioned in the [Proxy settings](../manage/administrator/proxy-settings.md) section.  
+In case the machine on which {{ spaceName }} installed is behind the proxy (network proxy), then perform the steps mentioned in the [Proxy settings](../../manage/administrator/proxy-settings.md) section.  
 
 It is also required to configure the proxy settings for {{ spaceName }} Service, refer to [Proxy settings](../../connectors/team-foundation-server.md#proxy-settings) in appendix section for the {{ spaceName }} Service to learn the configuration steps.  
 
