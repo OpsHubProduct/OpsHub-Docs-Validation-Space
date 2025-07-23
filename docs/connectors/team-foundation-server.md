@@ -301,15 +301,15 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn 
 ## Relationship Configuration
 
 ### Git Commit/Branch Link Configuration
-*To synchronize '''Git Commit/Branch''' links of an entity to other systems,  the Commit/Branch links need to be mapped in {{ spaceName }} relationship mapping.
+* To synchronize '''Git Commit/Branch''' links of an entity to other systems,  the Commit/Branch links need to be mapped in {{ spaceName }} relationship mapping.
 * When the '''Git Commit/Branch''' links are mapped in {{ spaceName }}:
-** While synchronizing a workitem, if any GIT artifact's project or repository is not found in the target system, this artifact will get skipped by {{ spaceName }}.
-** If any GIT artifact is missing in target repository, workitem's artifact link will be synced with the missing object. On syncing delta changes, those links will be re-establised with an artifact object if it is found in target repository.
-*** To sync delta changes from source repository to target repository, refer to this link for more details: https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository#mirroring-a-repository.
+ * While synchronizing a workitem, if any GIT artifact's project or repository is not found in the target system, this artifact will get skipped by {{ spaceName }}.
+ * If any GIT artifact is missing in target repository, workitem's artifact link will be synced with the missing object. On syncing delta changes, those links will be re-establised with an artifact object if it is found in target repository.
+  * To sync delta changes from source repository to target repository, refer to this link for more details: https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository#mirroring-a-repository.
 * For syncing the link '''Git Commit/Branch''' with a workitem to target [TFS/VSTS] systems, you must import source repository into target repository to bring all the Git commit and branch links into target repository.
-*If Commit/Branch link has a different project name or  a different repository name:
-** Provide the respective project's name or repository's name using advance XSLT.
-** For example, if source commit is found in project, 'project-xyz' and repository, 'repository-xyz', corresponding in target this commit is found in project, 'project-abc' and repository, 'repository-abc'. Therefore, to sync commit link of an entity, update the advance XSLT from this:
+* If Commit/Branch link has a different project name or  a different repository name:
+ * Provide the respective project's name or repository's name using advance XSLT.
+ * For example, if source commit is found in project, 'project-xyz' and repository, 'repository-xyz', corresponding in target this commit is found in project, 'project-abc' and repository, 'repository-abc'. Therefore, to sync commit link of an entity, update the advance XSLT from this:
  ```xml 
  <xsl:for-each select="linkProps/Property">
   <xsl:for-each select="*">
@@ -354,7 +354,7 @@ to this:
 ## Mapping for Soft Delete Configuration
 *When Team Foundation Server is the target system, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md).
 *After the Soft Delete operation is performed by OpsHub Integration Manager in Team Foundation Server, the entity will be deleted in the Team Foundation Server, and it can be found in the "Recycle bin" of the corresponding project, where it existed earlier.
-* To only enable the logical delete operation in the target, "OH Soft Delete" field shall be mapped with the default value "No" in the [Delete Mode](../integrate/mapping-configuration#delete-mode) mapping.
+* To only enable the logical delete operation in the target, "OH Soft Delete" field shall be mapped with the default value "No" in the [Delete Mode](../integrate/mapping-configuration.md#delete-mode) mapping.
 
 > **Note**: The above behavior is supported only for Workitems. Additionally it is supported from Team Foundation Server 2017 and above.<br><br>
 
@@ -407,7 +407,7 @@ to this:
 
 {% if spaceName == "OpsHub Migrator for Microsoft Azure DevOps" %}
 
-##Comments Field Advance Mapping Configuration for Pipeline Entity
+## Comments Field Advance Mapping Configuration for Pipeline Entity
 
 * By default, the comments field is synchronised, as it is, for each revision in the pipeline entity.
 * If there is a need to add actual revision time and user email with each revision comment, the following XSLT can be used:
@@ -695,7 +695,7 @@ If not provided, {{ spaceName }} uses a default JSON.
   <img src="../assets/WIdgetSettingIntegration.png" />
 </p>
 
-#### JSON Structure Overview
+### JSON Structure Overview
 
 The JSON input consists of the following sections:
 
@@ -711,15 +711,11 @@ The JSON input consists of the following sections:
   - **'''regex'''** (string): Same as described above.  
   - **'''jsonPath'''** (string): Same as described above.
 
-<p align="center">
-  <img src="../assets/Note.jpg" width="30px" />
-</p>
-
-Using jsonPath is preferred for accurate transformation of referenced IDs.
+> **Note** :Using jsonPath is preferred for accurate transformation of referenced IDs.
 
 A sample snippet of JSON is given below:
 
-````json
+```json
 {
   "generic": [
     {
