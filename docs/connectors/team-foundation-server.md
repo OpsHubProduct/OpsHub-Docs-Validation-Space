@@ -1075,7 +1075,9 @@ While configuring web hook on Azure DevOps, provide URL in this pattern:
 `http://[Opshub_Path]/OpsHubWS/ServiceHook/tfs`  
 for sending Web Hook request to valid OpsHub instance. Provide the URL of OpsHub which is accessible from Visual Studio Team Services instance. Refer following figure for URL configuration of Web Hook for OpsHub Service.
 
-![TFS4](../assets/TFS4.png)
+<p align="center">
+  <img src="../assets/TFS4.png" />
+</p>
 
 ## Bypass Rule with User Impersonation
 
