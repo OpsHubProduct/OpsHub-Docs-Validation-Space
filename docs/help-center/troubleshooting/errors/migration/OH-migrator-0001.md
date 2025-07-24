@@ -23,4 +23,4 @@ Please check the Migration.log file located under the logs folder in the OpsHub 
 
 In case the password has expired, reset the same password which was used during installation.
 
-In case the error is due to some permission issue, make sure you have provided the appropriate permissions on the database. Please refer [Database Prerequisites](../getting-started/prerequisites.md#database-prerequisites).
+In case the error is due to some permission issue, make sure you have provided the appropriate permissions on the database. Please refer [Database Prerequisites](../../../../getting-started/prerequisites.md#database-prerequisites).
