@@ -4,66 +4,68 @@
    * Reason: ADO\TFS API Limitations.  
    * The above behavior has been confirmed with Microsoft. Please refer to the thread for more information:  
      https://developercommunity2.visualstudio.com/t/all-aad-users-not-coming-in-response/1243303?from=email&viewtype=all#T-ND1246993
-
 2. For Team Foundation Server as the target system, if the attachment file name contains **Windows invalid file name characters** (`<`, `>`, `:`, `"`, `/`, `\`, `|`, `?`, `*`), then the invalid Windows characters will be replaced by an underscore (`_`).  
    * Reason: ADO\TFS API Limitations.  
    * To avoid this replacement, it is recommended to follow file naming conventions as mentioned in [Microsoft File Naming Conventions](https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file#naming-conventions).
-
 3. For the rich text type of field (HTML) or comments:
    * Entity mention synchronization is not supported for entity type(s) Test Suite, and Test Plan.
    * Entity mention synchronization is not supported for the Team Foundation Server ALM with version < 2015.
-   * Default entity mention synchronization option is **Sync source id**. So, migration will migrate source mentioned entity as source id in target. 
-
-4. Migration of the below mentioned **fields is not supported**, as they are Read only fields.  
-   * Area Id, Attached File Count, Authorized As, Authorized Date, Board Lane, External Link Count, Hyperlink Count, ID, Iteration Id, Node Name, Related Link Count, Rev, Revised Date, Team Project, Work Item Type, Board Column, Board Column Done.
-
-5. OpsHub Integration Manager does not support entity type change in TFS/Azure DevOps. Hence, below will be the behavior in case work item type is changed when TFS/Azure DevOps is the source system:
-
+   * Default entity mention synchronization option is **Sync source id**. So, migration will migrate source mentioned entity as source id in target.
+   * {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | Default entity mention synchronization option is **Sync source id**. So, migration will migrate source mentioned entity as source id in target.| Refer ["**Mention Sync Option**"](../../integrate/mapping-configuration.md#mention-configuration) for more details.}}
+4. {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |Migration of the below mentioned **fields is not supported**, as they are Read only fields.|Following fields are read-only, and can be synced from Azure DevOps to other systems.}}
+   * Area Id, Attached File Count, Authorized As, Authorized Date, Board Lane, External Link Count, Hyperlink Count, ID, Iteration Id, Node Name, Related Link Count, Rev, Revised Date, Team Project, Work Item Type, Board Column, Board Column Done**
+{% include "../.gitbook/includes/read-write-field.md" %}
+5. {{SITENAME}} does not support entity type change in TFS/Azure DevOps. Hence, below will be the behavior in case work item type is changed when TFS/Azure DevOps is the source system:
    **For ADO/TFS version 2017 and above**:
 
-   * If entity type of a work item is changed during active migration, the revisions still pending to be migrated will be skipped. The migration of changed entity type will start from the revision wherein work item type was changed. Below example will help in better understanding of the known behavior:
+   * If entity type of a work item is changed during active sync, the revisions still pending to be sync will be skipped. The synced of changed entity type will start from the revision wherein work item type was changed. Below example will help in better understanding of the known behavior:
      1. Let's say there is Work item 1 created with type Epic.
      2. Work item 1 is updated at T1 time [Revision R1]
      3. Work item 1 is updated at T2 time [Revision R2]
      4. Work item 1 type is changed to Feature at T3 time. Also, a comment is added to the feature in the same revision. [Revision R3]
-     5. Work item 1 is updated at T4 time [Revisions R4]
-
+     5. {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||The integration is started with the polling time, T0 }}
      * Case 1:
-       * If migration of both entity types is activated, Work item 1 is synchronized to target as Feature with Revision R3 (except the work item change), R4.
-
+       * If {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |migration|integration}} of both entity types is activated, Work item 1 is synchronized to target as Feature with Revision R3 (except the work item change), R4.
      * Case 2:
-       * If a work item has already been synchronized to the target system and its type is changed post migration, a new entity will be created in the target system with a new work item type.
-       * Specifically, before changing the type in the source, if the comments were added to that entity, then user impersonation for those comments won't occur. Instead, the migration user will add the comment to the target.
-
+       * If a work item has already been synchronized to the target system and its type is changed post {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |migration|synchronization}}, a new entity will be created in the target system with a new work item type.
+       * Specifically, before changing the type in the source, if the comments were added to that entity, then user impersonation for those comments won't occur. Instead, the integration/migration user will add the comment to the target.
+{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||
+       * If the integration of both entity types is activated after step #3 and before Step #4, then Work item 1 will be synchronized to target as Epic with revisions R1, R2. Post step #4 and step #5, a new Feature with R3 (except the work item change), R4 will be created in target.
+}}
     **For TFS version below 2017**:
-
    * For the entities whose types are changed, the entity type at the time of migration will be considered for migration. Below example will help in better understanding of the known behavior:
      1. Let's say there is Work item 1 created with type Epic.
      2. Work item 1 is updated at T1 time [Revision R1]
      3. Work item 1 is updated at T2 time [Revision R2]
      4. Work item 1 type is changed to Feature at T3 time. Also, a comment is added to the feature in the same revision. [Revision R3]
      5. Work item 1 is updated at T4 time [Revisions R4]
+     {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||6. The integration is started with the polling time, T0.}}
 
      * Case 1:
        * Work item 1 is synchronized to target as Feature with Revision R1, R2, R3 (except the work item change), R4.
        * For R3 revision, a comment is added in target but work item type change is skipped.
-
      * Case 2:
-       * If a work item has already been synchronized to the target system and its type is changed post migration, a new entity is created in the target system with a new work item type.
+       * If a work item has already been synchronized to the target system and its type is changed post {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |migration|synchronization}}, a new entity is created in the target system with a new work item type.
+{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||
+ In above example, if the integration is activated after step #3, then target will have Epic with R1, R2. Post step #5, a new Feature with R1, R2, R3 (except the work item Change), R4 will be created in target.
+    }}
+{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |
+6. To maintain correct relationships and references [available among the source data] into target [through migration], {{SITENAME}} migration follows a specific sequence in which the migration is undertaken. The below list will help understand this sequence.
 
-6. To maintain correct relationships and references [available among the source data] into target [through migration], OpsHub Integration Manager migration follows a specific sequence in which the migration is undertaken. The below list will help understand this sequence:
-   1. Meta Entities [User, Group and Team, Area, Iteration]
-   2. Work Item Entities [Bug, User Story, Task, etc., Test Case, Shared Steps]
-   3. Test Plan
-   4. Test Suite
-   5. Test Run
-   6. Test Result
-   7. Query, Dashboard
-   8. Widgets
-   9. Commit Information [Changesets] for TFVC (Team Foundation Version Control) Repos
+    1. Meta Entities [User, Group and Team, Area, Iteration]  
+    2. Work Item Entities [Bug, User Story, Task, etc., Test Case, Shared Steps]  
+    3. Test Plan  
+    4. Test Suite  
+    5. Test Run  
+    6. Test Result  
+    7. Query, Dashboard  
+    8. Widgets  
+    9. Commit Information [Changesets] for TFVC (Team Foundation Version Control) Repos
 
-   > **Note**: Above sequence will also consider the processing failures. The below example will help you understand it:
-   * If there is any processing failure for 4. [Test Suite migration], then the migration for 5. [Test Run] and 6. [Test Result] will not be started until failures of Test Suite migration are resolved.
+    **Note**: Above sequence will also consider the processing failures. The below example will help you understand it.
+
+    - If there is any processing failure for 4. [Test Suite migration], then the migration for 5. [Test Run] and 6. [Test Result] will not be started until failures of Test Suite migration are resolved.
+}}
 
 ## Specific Authentication Mode
 
