@@ -16,4 +16,4 @@ When you encounter an error **OH-DOORS Next-0043**, then the following error mes
 
 * The **"Module"** field must be mapped for **Create** event only.
 * For doing this configuration, skip the **"Module"** field synchronization by setting **"Create"** option under **"Sync When?"** settings in the field mapping.
-* For information on **"Sync When?"** setting, refer to document [Advance Settings Sync When?](../integrate/mapping-configuration.md#sync-when)
+* For information on **"Sync When?"** setting, refer to document [Advance Settings Sync When?](../../../../integrate/mapping-configuration.md#sync-when)
