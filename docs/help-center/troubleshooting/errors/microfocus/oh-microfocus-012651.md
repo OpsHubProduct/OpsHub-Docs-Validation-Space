@@ -2,7 +2,7 @@
 
 When user encounters OH-Micro Focus ALM/QC-012651, then following error message will appear:
 
-'OH-Micro Focus ALM/QC-012651 : Rest request processing Error : &lt;status_code&gt; &lt;name of the status code&gt; for the request &lt;request URL&gt;'
+'OH-Micro Focus ALM/QC-012651 : Rest request processing Error : `<status_code>` `<name of the status code>` for the request `<request URL>`'
 
 **Example:**
 
@@ -14,4 +14,4 @@ OH-Micro Focus ALM/QC-012651 : Rest request processing Error : 403 Bad Request f
 
 # Solution
 
-* To add the user as a **Project User** in Micro Focus ALM/QC, please refer: [Add a project user in a project](../connectors/micro-focus-alm#add-project-user-in-project)
+* To add the user as a **Project User** in Micro Focus ALM/QC, please refer: [Add a project user in a project](../../../../connectors/micro-focus-alm.md#add-project-user-in-project)
