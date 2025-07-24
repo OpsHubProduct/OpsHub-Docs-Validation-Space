@@ -110,15 +110,15 @@ Following are the limitations and behaviors specific to the individual entities 
    * **Workaround:** Edit the mapping of the **X System Bug to TFS Bug** to map the field used for an end system storage criteria setting on integration **TFS Bug to X System Bug** to -NONE- with value as 'True'.
 
 <p align="center">
-  <img src="../../assets/tfs_Integration_Criteria_Settings3.png" />
+  <img src="../../assets/tfs_Integration_Criteria_Settings3.PNG" />
 </p>
 
 <p align="center">
-  <img src="../../assets/tfs_target_system_with_bypass3.png" />
+  <img src="../../assets/tfs_target_system_with_bypass3.PNG" />
 </p>
 
 <p align="center">
-  <img src="../../assets/tfs_mapping_field_defaultVal3.png" />
+  <img src="../../assets/tfs_mapping_field_defaultVal3.PNG" />
 </p>
 
 8. For Team Foundation Server with version equal to or above 2017, the Remote URL will be different from the remote URLs of the older versions of Team Foundation Server. Also, for Azure DevOps, the Remote URLs will be different.
@@ -424,7 +424,7 @@ Following are the limitations and behaviors specific to the individual entities 
 
 To synchronize Pull Request, you need to select the repositories of the respective projects selected for the synchronization as shown in the screenshot:  
 <p align="center">
-  <img src="../../assets/ADOPullReqRepoSelection.png" />
+  <img src="../../assets/ADOPullReqRepoSelection.png" width="600"/>
 </p>
 
 
@@ -439,7 +439,7 @@ User can provide the target entity Ids in the Pull Request fields like Title/Des
 ```
 
 <p align="center">
-  <img src="../../assets/ADOPullReqRegexInput.png" />
+  <img src="../../assets/ADOPullReqRegexInput.png" width="600" />
 </p>
 
 ## Build Entity
