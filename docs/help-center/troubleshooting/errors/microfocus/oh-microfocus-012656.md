@@ -2,7 +2,7 @@
 
 When user encounters OH-Micro Focus ALM/QC-012656, following error message will appear:
 
-Micro Focus ALM/QC-012656: Test set folder cannot have duplicate name. Server error: Duplicate Test Set Folder: &lt;Exception Message&gt;
+Micro Focus ALM/QC-012656: Test set folder cannot have duplicate name. Server error: Duplicate Test Set Folder: `<Exception Message>`
 
 **Example:**  
 Micro Focus ALM/QC-012656: Test set folder cannot have duplicate name. Server error: Duplicate Test Set Folder: 'A'  
