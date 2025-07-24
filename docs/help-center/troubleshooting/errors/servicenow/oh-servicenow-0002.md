@@ -10,6 +10,6 @@ This generally occurs when 'Copy empty fields' function is not enabled in the 'T
 * Please navigate to 'Transform map' setting from ServiceNow navigator and select the 'Transform map' setting of the entity that you are synchronizing.
 * Enable 'Copy empty fields' check as shown below.
 
-![SNow_Image 94a](../assets/SNow_Image_94a.png)
+![SNow_Image 94a](../../../../assets/SNow_Image_94a.png)
 
-As 'Import set table' and 'Transform map' configuration are a part of [pre-requisites](../connectors/servicenow.md#prerequisites) for ServiceNow connector, we would advise you to relook into the pre-requisites and fulfill all of them to avoid such issues in the future.
+As 'Import set table' and 'Transform map' configuration are a part of [pre-requisites](../../../../connectors/servicenow.md#prerequisites) for ServiceNow connector, we would advise you to relook into the pre-requisites and fulfill all of them to avoid such issues in the future.
