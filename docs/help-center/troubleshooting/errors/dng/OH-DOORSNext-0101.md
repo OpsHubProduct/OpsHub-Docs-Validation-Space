@@ -11,4 +11,4 @@ When **Module Filter Query** setting is configured in integration for DOORS Next
 
 # Solution
 
-* Refer to the note(s) of the section [Synchronize artifacts from specific module(s)](../connectors/ibm-rational-doors-next-generation.md#synchronize-artifacts-from-specific-modules)
+* Refer to the note(s) of the section [Synchronize artifacts from specific module(s)](../../../../connectors/ibm-rational-doors-next-generation.md#synchronize-artifacts-from-specific-modules)
