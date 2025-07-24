@@ -930,73 +930,82 @@ Here, "1234" is the source workitem id and "6789" is the corresponding target wo
   <img src="../assets/Add_user_tfs.png" width="600"/>
 </p>
 
-5. Enter the name of the user and then click "Check Names" to check user existence.  
-   <p align="center">
+5. Enter the name of the user and then click "Check Names" to check user existence.
+
+<p align="center">
   <img src="../assets/Check_name.png" width="700"/>
-   </p>
+</p>
 
 6. Click "Ok". This will add the user in the selected collection.
 
 ### Add User in Azure DevOps Organization
 1. Login into Azure DevOps with a user having administrative rights.<br>
-2. Click the "Organization Settings".<br>
+2. Click the "Organization Settings".
 <p align="center">
-
-![ ](../assets/Azure_DevOps_Organization_Settings_Edit1.png)
+  <img src="../assets/Azure_DevOps_Organization_Settings_Edit1.png" />
 </p>
-3. In the left panel, under "General" option, click "Users" option and then click "Add New Users".<br>
+
+3. In the left panel, under "General" option, click "Users" option and then click "Add New Users".
+												
 <p align="center">
-
-![ ](../assets/Adure_devops_add_user.png)
+  <img src="../assets/Adure_devops_add_user.png" />
 </p>
+
 4. Add the email address of the user/s under "Users" field and select "Access Level". <br>
-<p align="center">
 
-![ ](../assets/Add_emailid.png)
+<p align="center">
+  <img src="../assets/Add_emailid.png" />
 </p>
+
 5. Click "Ok".<br>
 
 ## How to add user or Service Principal in group
 ### Add User or Service Principal in Collection Administration Group
 1. Login into Azure DevOps with the user having administrative rights.<br>
-2. For Azure DevOps system click on the "Organization Settings".<br>
-<p align="center">
+2. For Azure DevOps system click on the "Organization Settings"
 
-![ ](../assets/Azure_DevOps_Organization_Settings_Edit1.png)
-</p>
-For Team Foundation Server click on "Settings". <br>
 <p align="center">
-
-![ ](../assets/TFS_Collection_Settings_Edit1.png)
+  <img src="../assets/Azure_DevOps_Organization_Settings_Edit1.png" />
 </p>
+
+For Team Foundation Server click on "Settings". 
+
+<p align="center">
+  <img src="../assets/TFS_Collection_Settings_Edit1.png" />
+</p>
+
 3. Click on the "Security" option.  
 <p align="center">
-
-![ ](../assets/TFS_Security_Option_Edit1.png)
+  <img src="../assets/TFS_Security_Option_Edit1.png" />
 </p>
+
 4. Click on the "Project Collection Administrators" group. Then click on "Members".  
-<p align="center">
 
-![ ](../assets/Azure_Project_Collection_Administrator_Group_Edit1.png)
-</p>
-5. Click on "+ Add" button.  
 <p align="center">
-
-![ ](../assets/TFS_Group_Add_Member_Edit1.png)
+  <img src="../assets/Azure_Project_Collection_Administrator_Group_Edit1.png" />
 </p>
+
+5. Click on "+ Add" button. 
+
+<p align="center">
+  <img src="../assets/TFS_Group_Add_Member_Edit1.png" />
+</p>
+
 6. Search the User or Service Principal or user group name in searchbox. Then click on "Save Changes" button.  
-<p align="center">
 
-![ ](../assets/TFS_Save_User_In_User_Group_Edit_2.png)
+<p align="center">
+  <img src="../assets/TFS_Save_User_In_User_Group_Edit_2.png" />
 </p>
+
 
 ### Add User or Service Principal in Project Administration Group
 1. Login into Azure DevOps with the user having administrative rights.<br>
-2. Navigate to the project. Then click on "Settings" icon and select "Security" option.<br>
+2. Navigate to the project. Then click on "Settings" icon and select "Security" option.
+   
 <p align="center">
-
-![ ](../assets/TFS_Project_Security_Settings_Edit1.png)
+  <img src="../assets/TFS_Project_Security_Settings_Edit1.png" />
 </p>
+
 3. Select "Project Administration" group and select members.<br>
 4. Follow number 5 to 7 point of section Add User in Collection Administration Group to add a User or Service Principal in "Project Administration".
 
@@ -1005,18 +1014,18 @@ For Team Foundation Server click on "Settings". <br>
 1. Log into Microsoft Entra (Azure Active Directory) with the administrative user.<br>
 2. Navigate to **Microsoft Entra Id** -> **Applications** and select application added as Service Principal in Azure DevOps collection -> **Certificates & secrets**.<br>
 3. Navigate to **Client secrets** tab and add a new client secret.  
-<p align="center">
 
-![ ](../assets/VSTS_SP_Secret.png)
+<p align="center">
+  <img src="../assets/VSTS_SP_Secret.png" />
 </p>
 
 ### Upload Certificate in Microsoft Entra (Azure Active Directory)
 1. Log into Microsoft Entra (Azure Active Directory) with the administrative user.<br>
 2. Navigate to **Microsoft Entra Id** -> **Applications** and select application added as Service Principal in Azure DevOps collection -> **Certificates & secrets**.<br>
-3. Navigate to **Certificates** tab and upload a new certificate.  
+3. Navigate to **Certificates** tab and upload a new certificate.
+     
 <p align="center">
-
-![ ](../assets/VSTS_SP_Certificate.png)
+  <img src="../assets/VSTS_SP_Certificate.png" />
 </p>
 
 ## How to find Team Foundation Server's version
@@ -1026,9 +1035,9 @@ please follow given steps fo find Team Foundation Server version.
 * You can see the Team Foundation Server instance version detila in right side of panel. Please refere given screenshot for reference.
 
 <p align="center">
-
-![ ](../assets/TFS_Server_Version_Edit1.png)
+  <img src="../assets/TFS_Server_Version_Edit1.png" />
 </p>
+
 
 ## QTP MTM Test Extension Installation and Configuration
 
