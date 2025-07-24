@@ -346,11 +346,11 @@ Following are the limitations and behaviors specific to the individual entities 
 
 ### Widget Entity
 
-- **Remote Entity Link** is not supported for Widget entity because in Azure DevOps itself there is no independent URL to access a widget. Refer to [Tracking Link of Entities Across Systems](../integrate/integration-configuration.md#tracking-id-and-link-of-entities-across-systems) for more information on this feature.
+- **Remote Entity Link** is not supported for Widget entity because in Azure DevOps itself there is no independent URL to access a widget. Refer to [Tracking Link of Entities Across Systems](../../integrate/integration-configuration.md#tracking-id-and-link-of-entities-across-systems) for more information on this feature.
 - When Azure DevOps is configured as target:
   - In Azure DevOps, a widget can be only created within a dashboard. Hence, configuring a relationship of type **Dashboard** is mandatory so that widget gets created within that dashboard.
     - A failure [OH-Connector-0059] will be generated in case a dashboard is not synchronized and its widget is getting synchronized. In such cases, dashboard must be synchronized first and then widget creation failure should be retried.
-  - **Configuration field behavior**
+- **Configuration field behavior**
     - There can be variety of widgets and each widget can have its own configuration. Widget configuration can be synchronized using **Configuration** field in {{SITENAME}}.
 
 - **Widgets re-positioning behavior**
@@ -368,9 +368,9 @@ Following are the limitations and behaviors specific to the individual entities 
   - **Handling widget collisions:**
     - When widgets are re-positioned in source, the dashboard in target needs to be re-positioned as well using following configuration:
       - The **Widget** link must be configured in Dashboard mapping.
-      - The dashboard must be re-synchronized through {{SITENAME}}.
-      - In case of widget collision failure, the user will have to move the existing widget in target to another position, and then retry the processing failure of Dashboard integration in {{SITENAME}} to synchronize the widget re-positioning.  
-        > **Note** Any update on fields - **Position Row, Position Column, Size Row Span and Size Column Span** will be ignored during widget update synchronization.
+    - The dashboard must be re-synchronized through {{SITENAME}}.
+    - In case of widget collision failure, the user will have to move the existing widget in target to another position, and then retry the processing failure of Dashboard integration in {{SITENAME}} to synchronize the widget re-positioning.  
+    > **Note** Any update on fields - **Position Row, Position Column, Size Row Span and Size Column Span** will be ignored during widget update synchronization.
 
 - **Query Charts used as Dashboard Widgets:**
   - When a chart created using a query is directly added to dashboard without any additional configuration, then the widget will be synchronized without any query link.  
@@ -395,7 +395,7 @@ Following are the limitations and behaviors specific to the individual entities 
 
 - The Pull Request will get synchronized based on the current state (Non-revision based).
 - Pull Request will have source and target branch. Details of the source and target branches can be synchronized to the target using following fields - Branch Name, Url, ObjectId, Creator for source and target branch respectively.
-- Criteria configuration with [Storage type 'In End System'](Criteria Information Storage In End System) is not supported.
+- Criteria configuration with [Storage type 'In End System'](../../integrate/criteria-information-storage.md) is not supported.
 - Comments operations like add/update will synchronize to the target with the change in any other field of the Pull Request.
 - In Pull Request comments are of two types : 1) system 2) text, by default both the type of comments will synchronize to the target. But we do have an option to select any specific type from the comments mapping.
 - The first default comment, i.e., **<user> created the pull request** won't sync to the target because they are not available through AzureDevOps/TFS APIs.
