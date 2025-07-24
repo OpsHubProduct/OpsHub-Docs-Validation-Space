@@ -2,7 +2,7 @@
 
 When user encounters OH-Micro Focus ALM/QC-012652, then following error message will appear:
 
-'OH-Micro Focus ALM/QC-012652 : Invalid Field name used in the mapping therefore error in response from Quality Center, because of: &lt;Exception from QC&gt; : Exception Message - &lt;Exception Message&gt;'
+'OH-Micro Focus ALM/QC-012652 :  Invalid Field name used in the mapping therefore error in response from Quality Center, because of: `<Exception from QC>` : Exception Message - `<Exception Message>`.
 
 **Example:**  
 OH-Micro Focus ALM/QC-012652 : Invalid Field name used in the mapping therefore error in response from Quality Center, because of: qccore.unknown-field-name : Exception Message - Entity: requirement doesn't have a field named: 'user-xx'
@@ -17,7 +17,7 @@ OH-Micro Focus ALM/QC-012652 : Invalid Field name used in the mapping therefore 
 # Solution
 
 * To associate any custom field with the requirement type that is being used in integration, please refer  
-  [How to associate a custom field with the Requirement](../connectors/micro-focus-alm.md#how-to-associate-a-custom-field-with-requirement)
+  [How to associate a custom field with the Requirement](../../../../connectors/micro-focus-alm.md#how-to-associate-a-custom-field-with-requirement)
 
 * To determine the internal name for the criteria configuration please refer  
-  [How to find the internal name](../connectors/micro-focus-alm.md#how-to-find-out-internal-name2fkey-in-versions)
+  [How to find the internal name](../../../../connectors/micro-focus-alm.md#how-to-find-out-internal-name2fkey-in-versions)
