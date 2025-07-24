@@ -27,4 +27,4 @@ These error details will be needed by support team to investigate the failure an
 **Restore the application to earlier state**
 
 Since the migration has failed, OpsHub Integration Manager may not be in proper state to function. If you want to restore  
-the previous state of the application till the solution is provided, follow the steps mentioned in section [How to Restore](../manage/upgrade/taking-application-backup.md#how-to-restore).
+the previous state of the application till the solution is provided, follow the steps mentioned in section [How to Restore](../../../../manage/upgrade/taking-application-backup.md#how-to-restore).
