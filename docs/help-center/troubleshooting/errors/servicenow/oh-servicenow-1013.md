@@ -9,6 +9,6 @@ OH-ServiceNow-1013: Not able to get "Import set table" for entity type: &lt;enti
 
 * "Import set table"/"Transformation map" needs to be configured within ServiceNow for integration purpose for every entity that needs to be synchronized.
 
-* For steps to configure the "Import set table" and/or "Transformation map", please refer [Import Set and Transformation map](../../../../connectors/servicenow.md#configure_import_set_table_and_transformation_map)
+* For steps to configure the "Import set table" and/or "Transformation map", please refer [Import Set and Transformation map](../../../../connectors/servicenow.md#configure-import-set-table-and-transformation-map)
 
 As 'Import set table' and 'Transform map' configuration are a part of [pre-requisites](../../../../connectors/servicenow.md#prerequisites) for ServiceNow connector, we would advise you to relook into the pre-requisites and fulfill all of them to avoid such issues in the future.
