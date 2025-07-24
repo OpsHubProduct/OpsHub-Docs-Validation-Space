@@ -11,4 +11,4 @@ Referenced table of field &lt;field_name&gt; does not contain the fields Name or
 * Give required permission to Sync User so that reference table &lt;table_name&gt; of field &lt;field_name&gt; is accessible.
 * Do advance mapping configuration for this field if neither Name nor Number attribute are not found in referenced entity.
 
-For details on Synchronizing reference field, please refer [Syncing reference fields](../../../../connectors/servicenow.md#syncing-reference-fields)
+For details on Synchronizing reference field, please refer [Syncing reference fields](../../../../connectors/servicenow.md#syncing-fields)
