@@ -2,7 +2,7 @@
 
 When user encounters OH-Micro Focus ALM/QC-012656, following error message will appear:
 
-'Micro Focus ALM/QC-012616: Rest request processing Error : 500 Server Error : Probable cause for this error can be either the password entered in the System configuration form is wrong or the server has encountered the condition, which cannot process your request <request URL> (Please check the logs for the detailed response from server). OpsHub-012654: Error Occurred in HPQC CRUD Request execution for operation getMaxUpdateTime <Server Response Stack Trace> org.hp.qc.api.entities.InvalidValueForFieldException: Failed to convert the 'time' field of a 'audit-log'. The object 2000-01-01+00:00:00 cannot be converted to type QcDate&#xD
+'Micro Focus ALM/QC-012616: Rest request processing Error : 500 Server Error : Probable cause for this error can be either the password entered in the System configuration form is wrong or the server has encountered the condition, which cannot process your request `<request URL>` (Please check the logs for the detailed response from server). OpsHub-012654: Error Occurred in HPQC CRUD Request execution for operation getMaxUpdateTime `<Server Response Stack Trace>` org.hp.qc.api.entities.InvalidValueForFieldException: Failed to convert the 'time' field of a 'audit-log'. The object 2000-01-01+00:00:00 cannot be converted to type QcDate&#xD'
 
 # Cause
 
