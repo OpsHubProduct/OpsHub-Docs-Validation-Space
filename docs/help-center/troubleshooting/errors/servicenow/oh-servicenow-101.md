@@ -9,6 +9,6 @@ A field is not added in "Import set table" and "Transformation map" for the enti
 
 Configure the field (you want to synchronize) within "Import set table" and "Transformation map". 
 
-For steps, please refer [Import Set and Transformation map](../connectors/servicenow.md#configure_import_set_table_and_transformation_map)
+For steps, please refer [Import Set and Transformation map](../../../../connectors/servicenow.md#configure_import_set_table_and_transformation_map)
 
-As 'Import set table' and 'Transform map' configuration are a part of [pre-requisites](../connectors/servicenow.md#prerequisites) for ServiceNow connector, we would advise you to relook into the pre-requisites and fulfill all of them to avoid such issues in the future.
+As 'Import set table' and 'Transform map' configuration are a part of [pre-requisites](../../../../connectors/servicenow.md#prerequisites) for ServiceNow connector, we would advise you to relook into the pre-requisites and fulfill all of them to avoid such issues in the future.
