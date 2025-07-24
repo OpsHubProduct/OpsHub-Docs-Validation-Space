@@ -13,5 +13,5 @@ Following are the probable reasons for this:
 ## Solution
 
 * You need to configure all the fields which are mandatory from Team Foundation Server (TFS)/Azure DevOps Interface while configuring mapping for integration. 
-* In case you have mapped non-mandatory source field with Mandatory target field, then you can provide [Default Mapping](../../integrate/mapping-configuration.md#default-mapping) for that field.
-* If any rule is configured in Team Foundation Server (TFS)/Azure DevOps interface that prevents invalid values to be written in the fields then you need to do field mapping accordingly. Here also you can provide [Default Mapping](../../integrate/mapping-configuration.md#default-mapping) for the field for which error is coming.
+* In case you have mapped non-mandatory source field with Mandatory target field, then you can provide [Default Mapping](../../../../integrate/mapping-configuration.md#default-mapping) for that field.
+* If any rule is configured in Team Foundation Server (TFS)/Azure DevOps interface that prevents invalid values to be written in the fields then you need to do field mapping accordingly. Here also you can provide [Default Mapping](../../../../integrate/mapping-configuration.md#default-mapping) for the field for which error is coming.
