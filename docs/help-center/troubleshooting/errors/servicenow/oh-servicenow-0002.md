@@ -11,7 +11,7 @@ This generally occurs when 'Copy empty fields' function is not enabled in the 'T
 * Enable 'Copy empty fields' check as shown below.
 
 <p align="center">
-  <img src="../../../../assets/SNow_Image_94a.png" />
+  <img src="../../../../assets/SNow_Image_94a.png"  width="700" />
 </p>
 
 
