@@ -10,4 +10,4 @@ Sync User does not have the permission(s) to access the REST table API.
 For integration with ServiceNow, ServiceNow REST table API is used.  
 To access table API, Sync User needs permission(s).  
 
-Refer [User Privileges](../connectors/servicenow#user_privileges) to learn about permission(s) required for different tables.
+Refer [User Privileges](../../../../connectors/servicenow#user_privileges) to learn about permission(s) required for different tables.
