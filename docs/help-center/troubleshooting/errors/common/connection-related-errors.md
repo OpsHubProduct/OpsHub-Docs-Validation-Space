@@ -4,7 +4,7 @@
 
 * **End point not found/HTTP – 404 Errors**  
   * Such errors occur when configured URL is entered during system configuration in an incorrect manner/format. To ensure the URL is entered correctly, admin must verify the configured URL within the end point configuration. Refer to the tool-tip for the expected URL format and other requisite details in the system configuration documentation.  
-  * When the end point URL is behind a proxy, it is possible that the admin then might need to setup proxy parameters in [Proxy Setting](proxy_setting).
+  * When the end point URL is behind a proxy, it is possible that the admin then might need to setup proxy parameters in [Proxy Setting](../../../../../manage/administrator/proxy-setting.md).
 
 * **Authentication/Authorization Errors**  
   * These types of errors come when the username or password entered in the system is wrong or does not have sufficient privileges to perform required operations. In this case, admin is required to verify configured username and password and validate required permissions against the pre-requisite section of the respective system.
