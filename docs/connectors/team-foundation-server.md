@@ -743,7 +743,7 @@ A sample snippet of JSON is given below:
 ```
 
 # Known Behaviors & Limitations
-
+{% include "../.gitbook/includes/known-limitations-behavior.md"%}
 
 # Appendix
 ## Query Synchronization
