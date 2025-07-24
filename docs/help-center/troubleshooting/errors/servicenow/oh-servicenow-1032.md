@@ -12,6 +12,6 @@ Criteria query that is configured in Integration Criteria Configuration section 
 * Navigate to configure criteria section of the entity for which this error has occurred.
 * Correct the query configured in integration.
 
-For the syntax of criteria query, please refer [ServiceNow Criteria Configuration](../../../../connectors/servicenow.md#criteria_configuration)
+For the syntax of criteria query, please refer [ServiceNow Criteria Configuration](../../../../connectors/servicenow.md#criteria-configuration)
 
-For steps on how to configure criteria, please refer [Criteria Configuration](../../../../integrate/integration-configuration.md#criteria_configuration)
+For steps on how to configure criteria, please refer [Criteria Configuration](../../../../integrate/integration-configuration.md#criteria-configuration)
