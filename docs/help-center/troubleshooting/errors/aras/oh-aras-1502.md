@@ -11,9 +11,7 @@ OH-Aras-1502: Error occur during add attachment for internalId : `<Entity_Id>`, 
 
 # Cause
 
-One of the reasons for the above error can be **Attachment Filename containing Windows special characters**  
-`[`, `]`, `/`, `\`, `"`, `:`, `*`, `?`, `<`, `>`  
-This is because **Aras does not support Windows special characters in filename**.
+One of the reasons for the above error can be **Attachment Filename containing Windows special characters**  `[`, `]`, `/`, `\`, `"`, `:`, `*`, `?`, `<`, `>` . This is because **Aras does not support Windows special characters in filename**.
 
 ---
 
