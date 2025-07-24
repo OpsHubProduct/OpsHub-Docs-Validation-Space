@@ -12,6 +12,6 @@ Following are the probable reasons for this error:
 
 ## Solution
 
-* Add Integration user to the collection that you are trying to access. For example, add Integration User to <TFS_Collection_URL> collection. Refer [How to add a user in Collection/Organization](../../../../connectors/team-foundation-server.md#how-to-add-a-user-in-collection-organization) section for adding user in Collection/Organization.
-* Add Integration user to the Project of the collection that you are trying to access. Add Integration user in **'''''Project Administration Group'''''**. Refer [this](../../../../connectors/team-foundation-server.md#add-user-in-project-administration-group) for adding Integration user in **'''''Project Administration Group'''''**.
+* Add Integration user to the collection that you are trying to access. For example, add Integration User to <TFS_Collection_URL> collection. Refer [How to add a user in Collection/Organization](../../../../connectors/team-foundation-server.md#r#how-to-add-a-user-in-collection-organization) section for adding user in Collection/Organization.
+* Add Integration user to the Project of the collection that you are trying to access. Add Integration user in **Project Administration Group**. Refer [this](../../../../connectors/team-foundation-server.md#add-user-in-project-administration-group) for adding Integration user in **'''''Project Administration Group'''''**.
 * Make sure Integration user has all required permissions. Refer [User Privileges](../../../../connectors/team-foundation-server.md#user-privileges) for more details.
