@@ -8,4 +8,4 @@ OH-RallyDev-0056: Changes field does not have data in required format. This fiel
 * Changes field does not have required advanced mapping.
 
 ## Solution
-*Refer to [Map Changes field for Change Set](../../../../connector/rally.md#map-changes-field-for-change-set)*
+*Refer to [Map Changes field for Change Set](../../../../connectors/rally.md#map-changes-field-for-change-set)*
