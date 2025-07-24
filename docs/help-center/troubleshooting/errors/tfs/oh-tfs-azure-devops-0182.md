@@ -2,7 +2,7 @@
 
 When you encounter OH-TFS/AzureDevOps-0182 then the following error message will appear:
 
-'OH-TFS/AzureDevOps-0182:Can not reach TFSService. Please check if TFSService is running and <TFS_SERVICE_URL> is valid URL for TFSService.'
+'OH-TFS/AzureDevOps-0182:Can not reach TFSService. Please check if TFSService is running and `<TFS_SERVICE_URL>` is valid URL for TFSService.'
 
 ## Cause
 
@@ -22,9 +22,9 @@ Following are the probable reasons for this:
 * Validate OpsHubTFSService is registered on same hostname and port number that is provided in Service URL by opening this URL in the browser:  
   http://<hostname>:<port>/TFSService.  
   E.g. If you have registered OpsHubTFSService with hostname "localhost" and port number "9191" then hit URL: http://localhost:9191/TFSService. 
-* If you have upgraded {{SITENAME}}, then refer [How to upgrade OpsHubTFSService after upgrading {{SITENAME}}?](how-to-upgrade-opshubtfsservice-after-upgrading-opshub-integration-manager) to upgrade OpsHubTFSService.
+* If you have upgraded {{SITENAME}}, then refer [How to upgrade OpsHubTFSService after upgrading {{SITENAME}}?](../../../faqs/tfs/how-to-upgrade-opshubtfsservice-after-upgrading-opshub-integration-manager.md) to upgrade OpsHubTFSService.
 * If OpsHubTFSService is registered/started/upgraded successfully, the following output will be opened in the browser after hitting the URL:  
 <p align="center">
-  <img src="../../assets/Port_change.PNG">
+  <img src="../../../../assets/Port_change.PNG">
 </p>
 
