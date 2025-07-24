@@ -21,7 +21,7 @@ There are two solutions to this problem:
 
 * Set the **"In Folder"** field to be mapped for Create event only.
 * For doing this configuration, skip the **"In Folder"** field synchronization by setting **"Create"** option under **"Sync When?"** settings in the field mapping.
-* For information on **"Sync When?"** setting, refer to document [Advance Settings Sync When?](../../../../mapping-configuration.md#sync-when)
+* For information on **"Sync When?"** setting, refer to document [Advance Settings Sync When?](../../../../integrate/mapping-configuration.md#sync-when)
 
 > **Note**: As doing this setting synchronizes In Folder field for Create events only, make sure you use this mapping for shared artifacts synchronization and a separate mapping for core artifacts synchronization if you want to sync In Folder Field for All(Create and update) events. In case you want to use the same mapping for both shared and base artifacts then you can use Option 2.
 
