@@ -48,7 +48,8 @@ Following are the steps to run the utility:
 
 <p align="center">
   <img src="../../User_Count_Utility_6_a.png" width="800px">
-</p> }}
+</p> 
+}}
 
 Once the execution is completed, the user will see the output similar to the details given in the screenshot (an example of execution on Windows machine) below:
 
@@ -82,4 +83,5 @@ This file contains the following details:
 <p align="center">
   <img src="{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | User_Count_Utility_4_a_ovsmu.png | User_Count_Utility_4_a.png}}" width="600px">
 </p>
+
 
