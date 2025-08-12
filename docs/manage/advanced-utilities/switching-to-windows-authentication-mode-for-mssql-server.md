@@ -24,26 +24,26 @@ If the database is on MSSQL SQL Authentication mode and you need to switch to Wi
 - Enter path for the installation directory.
 
 <p align="center">
-  <img src="../assets/Switching_Image_2.png">
+  <img src="../../assets/Switching_Image_2.png">
 </p>
 
 
 - Press `2` to switch to Windows authentication mode.
 
 <p align="center">
-  <img src="../assets/Switching_Image_3.png">
+  <img src="../../assets/Switching_Image_3.png">
 </p>
 
 - Provide Microsoft JDBC Driver 4.0 (`tar.gz`) File Path.
 
 <p align="center">
-  <img src="../assets/Switching_Image_4.png">
+  <img src="../../assets/Switching_Image_4.png">
 </p>
 
 
 - Provide Windows Service Credentials.
 <p align="center">
-  <img src="../assets/Switching_Image_5.png">
+  <img src="../../assets/Switching_Image_5.png">
 </p>
 
 > **Note:**  
@@ -60,6 +60,7 @@ If the database is on MSSQL SQL Authentication mode and you need to switch to Wi
 > **Otherwise**, the username format will be `.\username`.
 
 <p align="center">
-  <img src="../assets/OpshubServerServiceCredentials.png">
+  <img src="../../assets/OpshubServerServiceCredentials.png">
 </p>
+
 
