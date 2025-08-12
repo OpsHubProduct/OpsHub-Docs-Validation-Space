@@ -1,4 +1,4 @@
-Please refer to [Database Prerequisites](../getting-started/prerequisites.md#database-prerequisites) before proceeding with the migration details. 
+Please refer to [Database Prerequisites](../../getting-started/prerequisites.md#database-prerequisites) before proceeding with the migration details. 
 
 ## Introduction
 As HSQL is not suitable for production usage, {{SITENAME}} needs to be migrated to one of three databases supported by {{SITENAME}}. There is a utility provided with {{SITENAME}} installation and packaged in `<{{SITENAME}}_Installation>\OpsHub_Resources\DatabaseMigrator` directory [Migrator directory].
@@ -12,7 +12,7 @@ As HSQL is not suitable for production usage, {{SITENAME}} needs to be migrated 
 * {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |Close OM4ADO application|Shut down server (ensure service is not running if registered) }}
 * Take back up of database  
 
-Refer to Database Backup section on [Taking Application Backup](../manage/upgrade/taking-application-backup.md) page for details. 
+Refer to Database Backup section on [Taking Application Backup](../../manage/upgrade/taking-application-backup.md) page for details. 
 
 ## Migrating on Windows
 Run `migrator.bat` in Migrator directory
@@ -32,3 +32,4 @@ Following are the steps to be performed after successful database migration:
 * Rename `OpsHubWS.zip` to `OpsHubWS.war`
 * Go to `<{{SITENAME}}_Installation>\OpsHubServer\webapps` and replace newly created `OpsHubWS.war` with the existing one
 * Delete `<{{SITENAME}}_Installation>\OpsHubServer\webapps\OpsHubWS` directory and {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | start OM4ADO application |start the service }}
+
