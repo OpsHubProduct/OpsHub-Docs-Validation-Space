@@ -1,8 +1,7 @@
 
-* If {{SITENAME}} database password has been modified by a user, then this utility would update the new password in **{{SITENAME}}** application.
+If {{SITENAME}} database password has been modified by a user, then this utility would update the new password in **{{SITENAME}}** application.
 
 Follow the steps given below for updating database password in OpsHub:
-
 {{#if product == "OIM"}}
 * Stop OpsHub Server/ Service before execution of this utility.
 {{/if}}
@@ -34,6 +33,7 @@ Follow the steps given below for updating database password in OpsHub:
 <p align="center">
   <img src="../../assets/Updating_Database_Password_Image_3.png">
 </p>
+
 
 
 
