@@ -9,7 +9,7 @@ Follow the steps given below for creating/updating the `cacerts_config.propertie
 * Enter the path for OpsHub Installation Directory.
 
 <p align="center">
-  <img src="../assets/CertUtil1.png">
+  <img src="../../assets/CertUtil1.png">
 </p>
 
 
@@ -41,3 +41,4 @@ Follow the steps given below for creating/updating the `cacerts_config.propertie
 </p>
 
 * If the `cacerts_config.properties` file already exists, then this utility will not create this file, it will just replace the password for the existing alias or add the new alias and encrypted password in the existing `cacerts_config.properties`.
+
