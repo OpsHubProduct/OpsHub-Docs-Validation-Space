@@ -37,7 +37,7 @@ Following are the steps to run the utility:
   * Execute the bat using command `UserCountUtility.bat` as shown below:  
 
 <p align="center">
-  <img src="../../User_Count_Utility_5_a.png" width="800px">
+  <img src="../../assets/User_Count_Utility_5_a.png" width="800px">
 </p>
 
 {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||
@@ -47,14 +47,14 @@ Following are the steps to run the utility:
   * Execute the bat using command `sh UserCountUtility.sh` as shown below:
 
 <p align="center">
-  <img src="../../User_Count_Utility_6_a.png" width="800px">
+  <img src="../../assets/User_Count_Utility_6_a.png" width="800px">
 </p> 
 }}
 
 Once the execution is completed, the user will see the output similar to the details given in the screenshot (an example of execution on Windows machine) below:
 
 <p align="center">
-  <img src="../../User_Count_Utility_2_a.png" width="800px">
+  <img src="../../assets/User_Count_Utility_2_a.png" width="800px">
 </p>
 
 ## Output
@@ -83,5 +83,6 @@ This file contains the following details:
 <p align="center">
   <img src="{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | User_Count_Utility_4_a_ovsmu.png | User_Count_Utility_4_a.png}}" width="600px">
 </p>
+
 
 
