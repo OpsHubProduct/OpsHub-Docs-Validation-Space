@@ -1,6 +1,6 @@
 # How to switch to Windows Authentication Mode for MSSQL Server
 
-Please go through the section [Installation Prerequisites](../getting-started/prerequisites.md#windows) for Windows Authentication mode before executing steps given below.
+Please go through the section [Installation Prerequisites](../../getting-started/prerequisites.md#windows) for Windows Authentication mode before executing steps given below.
 
 Please ensure the Windows user (who is used in MS SQL Windows Authentication) has **Read** and **Write** privileges before executing `databaseManagementUtlity`. You can grant the **Read** and **Write** privileges by executing the steps given below.
 
@@ -9,7 +9,7 @@ Please ensure the Windows user (who is used in MS SQL Windows Authentication) ha
 - Click OK after checking the Read and Write checkbox.
 
 <p align="center">
-  <img src="../assets/Switching_Image_1.png">
+  <img src="../../assets/Switching_Image_1.png">
 </p>
 
 If the database is on MSSQL SQL Authentication mode and you need to switch to Windows Authentication mode, then follow the steps given below:
@@ -62,5 +62,6 @@ If the database is on MSSQL SQL Authentication mode and you need to switch to Wi
 <p align="center">
   <img src="../../assets/OpshubServerServiceCredentials.png">
 </p>
+
 
 
