@@ -15,31 +15,31 @@
 * Enter the new Host Name for MYSQL: 
 
 <p align="center">
-  <img src="../assets/mysql1.PNG">
+  <img src="../../assets/Mysql1.PNG">
 </p>
 
 * If the Host Name input is not entered in the above step, then user will get the notification mentioned in the screen shot below. As the Host Name is a mandatory input that defines the new Host Name you want {{SITENAME}} database to refer to: 
 
 <p align="center">
-  <img src="../assets/mysql2.PNG">
+  <img src="../../assets/Mysql2.PNG">
 </p>
 
 * Enter the Port for MYSQL:
 
 <p align="center">
-  <img src="../assets/mysql3.PNG">
+  <img src="../../assets/Mysql3.PNG">
 </p>
 
 * If the Port input is not entered in the above step, then utility will use the existing Port [entered at a time of {{SITENAME}} installation]. If that is not the case, then enter the Port here:
 
 <p align="center">
-  <img src="../assets/mysql4.PNG">
+  <img src="../../assets/Mysql4.PNG">
 </p>
 
 * Utility will check the connection with new Host Name: 
 
 <p align="center">
-  <img src="../assets/mysql5.PNG">
+  <img src="../../assets/Mysql5.PNG">
 </p>
 
 ## HostChange with ORACLE
@@ -47,31 +47,31 @@
 * Enter the new Host Name for ORACLE:
 
 <p align="center">
-  <img src="../assets/oracle21.PNG">
+  <img src="../../assets/Oracle21.PNG">
 </p>
 
 * If the Host Name input is not entered in the above step, then user will get the notification mentioned in the screen shot below. As the Host Name is a mandatory input that defines the new Host Name you want {{SITENAME}} database to refer to:  
 
 <p align="center">
-  <img src="../assets/oracle22.PNG">
+  <img src="../../assets/Oracle22.PNG">
 </p>
 
 * Enter the Port for ORACLE:
 
 <p align="center">
-  <img src="../assets/oracle33.PNG">
+  <img src="../../assets/Oracle33.PNG">
 </p>
 
 * If the Port input is not entered in the above step, then utility will use the existing Port [entered at the time of {{SITENAME}} installation]. If that is not the case, then enter the Port here:
 
 <p align="center">
-  <img src="../assets/oracle44.PNG">
+  <img src="../../assets/Oracle44.PNG">
 </p>
 
 * Utility will check the connection with new Host Name:   
 
 <p align="center">
-  <img src="../assets/oracle55.PNG">
+  <img src="../../assets/Oracle55.PNG">
 </p>
 
 ## HostChange with MSSQL Server
@@ -81,43 +81,43 @@
 * Enter the new Host Name for MSSQL Server: 
 
 <p align="center">
-  <img src="../assets/mssqlSer1.PNG">
+  <img src="../../assets/MssqlSer1.PNG">
 </p>
 
 * If the Host Name input is not entered in the above step, then user will get the notification mentioned in the screen shot below. As the Host Name is a mandatory input that defines the new Host Name you want {{SITENAME}} database to refer to: 
 
 <p align="center">
-  <img src="../assets/mssqlSer2.PNG">
+  <img src="../../assets/MssqlSer2.PNG">
 </p>
 
 * If the new Host Name is a named instance, then there is no input required for the Port. Hence, after entering the Host Name, utility will check the connection with the new Host:
 
 <p align="center">
-  <img src="../assets/mssqlSer3.PNG">
+  <img src="../../assets/MssqlSer3.PNG">
 </p>
 
 * If the new Host Name is a non-named instance, then enter the Port for MSSQL:
 
 <p align="center">
-  <img src="../assets/mssqlSer4.PNG">
+  <img src="../../assets/MssqlSer4.PNG">
 </p>
 
 * If the Port input is not entered in the above step, then utility will use the existing Port [entered at the time of {{SITENAME}} installation]. If that is not the case, then enter the Port here:
 
 <p align="center">
-  <img src="../assets/mssqlSer5.PNG">
+  <img src="../../assets/MssqlSer5.PNG">
 </p>
 
 * Utility will check the connection with new Host Name [In the case of SQL Authentication]:
 
 <p align="center">
-  <img src="../assets/mssqlSer6.PNG">
+  <img src="../../assets/MssqlSer6.PNG">
 </p>
 
 * Utility will check the connection with new Host Name [In the case of Windows Authentication]:
 
 <p align="center">
-  <img src="../assets/mssqlSer7.PNG">
+  <img src="../../assets/MssqlSer7.PNG">
 </p>
 
 ## HostChange with PostgreSQL
@@ -151,3 +151,4 @@
 <p align="center">
   <img src="../assets/postgresql5.PNG">
 </p>
+
