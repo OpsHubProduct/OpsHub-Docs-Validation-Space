@@ -200,7 +200,7 @@ com.opshub.license.install.OpsHubLicenseManager.getLicenseContent(OpsHubLicenseM
 
 Here is a video on how to install OpsHub Integration Manager on the Windows machine:
 
-{% embed url="https://youtu.be/Is5sDKV01P0" %}
+{% embed url="https://www.youtube.com/watch?v=1a2b3c4d5e" %}
 
 
 ## Select Installation Path
