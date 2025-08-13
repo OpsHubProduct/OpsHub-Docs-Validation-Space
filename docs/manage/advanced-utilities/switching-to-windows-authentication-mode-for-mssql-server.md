@@ -56,12 +56,12 @@ If the database is on MSSQL SQL Authentication mode and you need to switch to Wi
 2. Right-click on the service, select **Properties** and go to the **Log On** Tab.  
 3. Enter Windows credentials in **This account**.  
 
-> **If the user is registered with a domain**, the username format will be `username@domain` or `domain\username`.  
-> **Otherwise**, the username format will be `.\username`.
+> If the user is registered with a domain, the username format will be "{username}@{domain}" or "{domain}\{username}". Otherwise, the username format will be ".\username".
 
 <p align="center">
   <img src="../../assets/OpshubServerServiceCredentials.png">
 </p>
+
 
 
 
