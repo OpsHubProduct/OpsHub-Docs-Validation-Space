@@ -10,9 +10,7 @@ Please refer to [Integration Prerequisites](integration-prerequisites.md) page t
 - In this video, we will learn how to configure a system onto and how to update the system details after configuration, if required
 > **Note**: Jira is the system that has been used for this video demonstration. The steps may vary slightly from one system to another.
 
-{% embed url="https://www.youtube.com/watch?v=-S6EsbZEmBw" %}
-
-{% embed url="https://www.youtube.com/watch?v=AQeA7O4uld4&t=1s==" %}
+{% embed url="https://youtu.be/Po6K9_UXrfM" %}
 
 
 > **Note**: During configuration or synchronization, connection-related errors might occur. There are couple of reasons for connection-related errors. Checkout the details [Common Error Solutions](../help-center/troubleshooting/errors/common.md).  
@@ -27,14 +25,14 @@ OpsHub Integration Manager fetches entities available in both systems and shows 
 From the Select Entities to Sync section, select the relevant entities for both systems.  
 In this video, we learn to integrate Bug entities between Jira and Azure DevOps Services (VSTS):
 
-![Video](../assets/Video.jpg)
+{% embed url="https://youtu.be/HMbMW_t5v5w" %}
 
 ## Mapping Fields
 
 Mapping is the process of defining the fields that are to be integrated between the given projects and entities of two systems. It is during the mapping stage that the flow of data (From System 1 to System 2, From System 2 to System 1 or bi-directional flow between System 1 and System 2) is also defined.  
 In this video, we will see how to map fields between Jira and Azure DevOps Services (VSTS).
 
-![Video](../assets/Video.jpg)
+{% embed url="https://youtu.be/vbnw92pPLFM" %}
 
 ### Value Mapping for Look-Up Type Fields
 
@@ -66,7 +64,7 @@ Criteria Filter/Configuration helps in integration of subset of entities based o
 For example, user can specify that bugs with high priority only are to be synchronized or tickets that are closed should be synchronized.  
 Even after the entities are integrated, this synchronization based on defined criteria is retained. It is not mandatory to configure a filter/criterion for each integration.
 
-![Video](../assets/Video.jpg)
+{% embed url="https://youtu.be/44prb4ssjTY" %}
 
 > **Note**: The format in which you enter condition in the Query field will vary from one system to another.
 
@@ -76,7 +74,7 @@ Even after the entities are integrated, this synchronization based on defined cr
 
 You can now save and activate the integration.
 
-![Video](../assets/Video.jpg)
+{% embed url="https://youtu.be/5bcgNpsfGGU" %}
 
 > **Note**:The Polling time is automatically set for the integration based on the system used for integration.
 

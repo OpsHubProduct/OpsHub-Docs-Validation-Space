@@ -339,7 +339,7 @@ _(if decision to sync the entity is taken based on name)_
 
 The following video shows how to configure comments synchronization during integration configuration:
 
-![Video](https://videos.cdn.spotlightr.com/watch/MTM4MjA1MQ==)
+{% embed url="https://youtu.be/LVAceV7yV5U" %}
 
 * Slide the button adjacent to **Comments** to the right to map comments.
 * The comments mapping will automatically enable comment author impersonation for supported systems. For more details, refer to Read the [Comment Author Impersonation](comment-author-impersonation.md) section.
@@ -361,7 +361,7 @@ The following video shows how to configure comments synchronization during integ
 
 The following video shows how to configure attachments synchronization during integration configuration:
 
-![Video](https://videos.cdn.spotlightr.com/watch/MTM4MjA1Ng==)
+{% embed url="https://youtu.be/vnvQbUux_kw" %}
 
 * Slide the button adjacent to **Attachments** to the right to map attachments.
 
@@ -379,7 +379,7 @@ The following video shows how to configure attachments synchronization during in
 
 Watch the following video to learn more about Relationships Mapping from one system to another:
 
-![Video](https://videos.cdn.spotlightr.com/watch/MTM4MjA1NA==)
+{% embed url="https://youtu.be/tDd5JRUwpqQ" %}
 
 Relationship synchronizes the relationship between the selected entities.
 

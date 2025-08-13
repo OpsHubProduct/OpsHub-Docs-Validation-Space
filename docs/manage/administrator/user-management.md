@@ -6,7 +6,7 @@ Here is a video on how to create and manage users for different operations withi
 
 > **Note** : All the new users in OpsHub Integration Manager have administrator-level permissions. With the administrator-level permissions, the users will have access to all features.
 
-{% embed url="https://www.youtube.com/watch?v=AQeA7O4uld4&t=1s==" %}
+{% embed url="https://youtu.be/r8HbL_Kz-rQ" %}
 
 To add a new user, follow the steps given below:
 * Click **Administration**. 

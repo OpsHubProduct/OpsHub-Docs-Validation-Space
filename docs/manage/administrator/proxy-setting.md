@@ -6,7 +6,7 @@ Watch the following video to learn how to configure proxy settings:
 
 > **Note:** This video has no audio.
 
-{% embed url="https://community.opshub.com/wp-content/uploads/2019/01/Proxy-Settings_Without-Audio.mp4" %}
+{% embed url="https://youtu.be/KL7eiS9HdXQ" %}
 
 1. Navigate to the top right corner of the screen and click **Administration** as shown in the screenshot below:
 

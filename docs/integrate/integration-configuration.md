@@ -156,7 +156,8 @@ The scenario mentioned above will be the expected behavior as entity **C2** does
 > **If integration gets deleted and created with the same configuration, the older criteria data synced by deleted integration will not remain in sync.**
 
 # Advance Settings
-
+Here is the video on Advanced Configuration settings:
+{% embed url="https://youtu.be/hHtNEqbQ7DU" %}
 These features help the user specify custom conditions during integration configuration.
 
 1. Click the **Configure Advance** icon to define custom configuration settings. A pop-up window appears on the right.

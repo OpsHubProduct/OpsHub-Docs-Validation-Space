@@ -141,12 +141,8 @@ If the OpsHub Integration Manager is not able to connect to the registration ser
 
 # Silent Registration for Linux
 
-Here is a video on the silent registration of OIM on the Linux machine:  
-<p align="center">
-  <a href="https://videos.cdn.spotlightr.com/watch/MTY4ODc5OA==">
-    <img src="../assets/Video.jpg" alt="Silent Registration Video" />
-  </a>
-</p>
+Here is a video on the silent registration of OIM on the Linux machine: 
+{% embed url="https://youtu.be/geegozffGtg" %}
 
 When you want to install/upgrade OpsHub Integration Manager on a Linux machine as described [here](installation.md#launch-the-installer-in-different-operating-systems), you need to register yourself by following the steps listed below before you proceed with the installation/upgradation.
 

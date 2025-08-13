@@ -2,7 +2,7 @@ The OIM dashboard gives a quick view of integrations configured in **OpsHub Inte
 
 Here is a video on how to use the dashboard in OIM:
 
-[![Video](../assets/Video.jpg)](https://videos.cdn.spotlightr.com/watch/MTY4ODEyNQ==)
+{% embed url="https://youtu.be/ZPXRxJduU1A" %}
 
 # Graphical View
 
