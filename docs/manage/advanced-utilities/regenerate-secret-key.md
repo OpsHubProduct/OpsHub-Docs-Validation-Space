@@ -12,33 +12,33 @@ Please follow below given steps for execution of this utility:
 * Enter path for OpsHub Installation Directory.
 
 <p align="center">
-  <img src="../assets/Regenerate_Image_1.png">
+  <img src="../../assets/Regenerate_Image_1.png">
 </p>
 
 
 * Enter new location for security. (`opshub.key` should not be available on the same location).
 
 <p align="center">
-  <img src="../assets/Regenerate_Image_2.png">
+  <img src="../../assets/Regenerate_Image_2.png">
 </p>
 
 * Select Data Encryption algorithm. By default, AES (128) is selected.
 
 <p align="center">
-  <img src="../assets/Regenerate_Image_3.png">
+  <img src="../../assets/Regenerate_Image_3.png">
 </p>
 
 
 * Provide password for database. 
 
 <p align="center">
-  <img src="../assets/Regenerate_Image_4.png">
+  <img src="../../assets/Regenerate_Image_4.png">
 </p>
 
 * This would generate new key at specified location.
 
 <p align="center">
-  <img src="../assets/Regenerate_Image_5.png">
+  <img src="../../assets/Regenerate_Image_5.png">
 </p>
 
 
@@ -46,3 +46,4 @@ Please follow below given steps for execution of this utility:
 
 * Start OpsHub Server/ Service.  
 * Re-enter passwords for all configured systems, configured database connections, configured proxy settings and overridden passwords in Advance Configuration of Integration.
+
