@@ -7,7 +7,7 @@
 * Enter the path for {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | OM4ADO | OpsHub}} Installation Directory
 
 <p align="center">
-  <img src="../assets/initial.png">
+  <img src="../../assets/initial.png">
 </p>
 
 ## HostChange with MYSQL
@@ -151,5 +151,6 @@
 <p align="center">
   <img src="../assets/postgresql5.png">
 </p>
+
 
 
