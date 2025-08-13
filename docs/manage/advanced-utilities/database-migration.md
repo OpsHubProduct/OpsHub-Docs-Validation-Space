@@ -14,10 +14,10 @@ As HSQL is not suitable for production usage, {{SITENAME}} needs to be migrated 
 
 Refer to Database Backup section on [Taking Application Backup](../../manage/upgrade/taking-application-backup.md) page for details. 
 
-## Migrating on Windows
+### Migrating on Windows
 Run `migrator.bat` in Migrator directory
 
-{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||## Migrating on Linux
+{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||### Migrating on Linux
 Run `migrator.sh` in Migrator directory  
 If file execution fails with ^M bad interpreter error, use following steps:  
 * Execute command in terminal `dos2unix migrator.sh`  
@@ -32,4 +32,5 @@ Following are the steps to be performed after successful database migration:
 * Rename `OpsHubWS.zip` to `OpsHubWS.war`
 * Go to `<{{SITENAME}}_Installation>\OpsHubServer\webapps` and replace newly created `OpsHubWS.war` with the existing one
 * Delete `<{{SITENAME}}_Installation>\OpsHubServer\webapps\OpsHubWS` directory and {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | start OM4ADO application |start the service }}
+
 
