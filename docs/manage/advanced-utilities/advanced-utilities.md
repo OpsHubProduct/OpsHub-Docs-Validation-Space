@@ -2,7 +2,7 @@
 
 2. [Migrating Database](database-migration.md)
 
-3. [Updating Database Password](Updating_Database_Password)
+3. [Updating Database Password](updating-database-password.md)
 
 4. [Changing MSSQL Server Host](how-to-change-mssql-database-server-host.md)
 
