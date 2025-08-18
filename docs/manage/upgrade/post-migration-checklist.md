@@ -314,3 +314,36 @@ Refer to respective section links for Commit Hooks setup:
 ### Backup Location
 Removed entity type mappings are saved at the following path:  
 **`<OpsHub Installation Dir>/AppData/LinkEntityTypeMapping`**
+
+# Migrating OpsHub Integration Manager version to 7.199 or above
+
+## Remap values of lookup field **Planned For** in IBM Engineering Workflow Management
+
+**Applicable When**
+* The **Planned For** field is configured in Mapping Configuration for the IBM Engineering Workflow Management end system.
+
+**Actions**
+* Open the mapping configuration where **Planned For** field is mapped.
+* Delete those value mappings (displaying in red colour) where the display name has changed from a simple leaf node name to a full hierarchical path, and remap them as per the use case.
+  * For example, if the value node Child1 was previously displayed as "Child1", after upgrading to 7.199 version, it will appear as "Parent1/Child1". In this case, remove the old "Child1" value mapping and remap the new display name "Parent1/Child1" with its corresponding source/target lookup value.
+
+**Reason**
+* Earlier lookup values were displayed using only their name, which could cause ambiguity when multiple nodes have the same name. Starting with version 7.199, the Planned For field now displays the full hierarchical path from root to leaf for each value, eliminating display-name discrepancies.
+
+---
+
+# Migrating OpsHub Integration Manager version to 7.201 or above
+
+## Map the lookup field **Test Run Type** in Codebeamer
+
+**Applicable When**
+* The **Test Run** entity type is configured in Mapping Configuration for the Codebeamer end system.
+
+**Action**
+* Open the mapping configuration for the **Test Run** entity type.
+* Map the **Test Run Type** lookup field with its corresponding value. For more details, refer to [Codebeamer#Mapping_For_Test_Run](Codebeamer#Mapping_For_Test_Run).
+
+**Reason**
+* Previously, only the **Test Run (Parent)** entity was supported. Now, both **Test Run (Parent)** and **Test Run (Child)** are supported; the latter is automatically generated during Parent creation and is handled as a separate synchronization entity.
+
+
