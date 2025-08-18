@@ -70,7 +70,7 @@ Now, click the **Create from Scratch** button to define the mapping from scratch
 
 * Click **Save Mapping** to save the mapping. You will be re-directed to the integration page.
 
-![Note](../../assets/Note.jpg) You may map more fields as per your requirement.
+>**Note**:  You may map more fields as per your requirement.
 
 ## Mapping Test Execution in Jira Xray to Test Run in Codebeamer
 
@@ -92,7 +92,7 @@ Give a unique name for the mapping in the **Name** field. For example, the name 
 
 ![Xray-CB Test Execution Mapping 1](../../assets/Xray-CB_Test_Execution_Mapping_1.png)
 
-![Note](../../assets/Note.jpg) You may map more fields as per your requirement.
+>**Note**:  You may map more fields as per your requirement.
 
 ### Relationship Mapping
 
@@ -126,7 +126,7 @@ Give a unique name for the mapping in the **Name** field. For example, the name 
 
 ![Xray-CB Test Run Mapping1](../../assets/Xray-CB_Test_Run_Mapping1.png)
 
-![Note](../../assets/Note.jpg) You may map more fields as per your requirement.
+>**Note**:  You may map more fields as per your requirement.
 
 ### Relationship Mapping
 
