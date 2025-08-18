@@ -341,7 +341,7 @@ Removed entity type mappings are saved at the following path:
 
 **Action**
 * Open the mapping configuration for the **Test Run** entity type.
-* Map the **Test Run Type** lookup field with its corresponding value. For more details, refer to Mapping For Test Run (../../connectors/codebeamer.md#mapping-for-test-run) section.
+* Map the **Test Run Type** lookup field with its corresponding value. For more details, refer to [Mapping For Test Run](../../connectors/codebeamer.md#mapping-for-test-run) section.
 
 **Reason**
 * Previously, only the **Test Run (Parent)** entity was supported. Now, both **Test Run (Parent)** and **Test Run (Child)** are supported; the latter is automatically generated during Parent creation and is handled as a separate synchronization entity.
