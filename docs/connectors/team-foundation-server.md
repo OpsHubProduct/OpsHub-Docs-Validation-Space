@@ -625,14 +625,13 @@ Supported versions of Team Foundation Server are listed in the [Systems Supporte
   Example target lookup query:  
   `GroupName=@Name@&Requestor=@Requestor@`
 
-- **Behavior:**  
-  Collection/Project groups are auto-detected and updated (not duplicated).  
-  "Members" and "Member of" relationships are synchronized from source.  
-  For collection-level group sync, the integration user must be a **Project Collection Administrator**.
+- **Behavior:**
+  - Default Collection/Project group(s) is not duplicated on the target side. They will be auto-detected, and their hierarchy and permission will be updated as per source. 'Members' and 'Member of' relationships will be set as source.
+  - For Collection Level Group synchronization, the integration user must be a '''Project Collection Administrator''' to sync 'Members' and 'Member of' relationships. Otherwise, synchronization may fail due to insufficient permissions.
 
 - **Active Directory Groups:**
-  - Not duplicated in the target (due to lack of APIs).
-  - Hierarchy and permissions updated via {{ spaceName }} if groups exist.
+  - Active directory group(s) will not be duplicated or created on the target side due to unavailability of the APIs.
+  - They will be auto-detected, and their hierarchy and permission will be updated as per source via {{SITENAME}}.
   - If groups are missing in the target:
     - **Same AD:** Add AD groups to a native group in the target.
     - **Different AD:** Create groups with matching names in the target AD and assign them as needed.
@@ -1178,3 +1177,4 @@ Particular field "customblock" is required in the end system when state is chang
        * Update the TestSuite of source end system for which failure is generated.
        * Execute the TestSuite Integration.
        * Once updates of TestSuite synced to target end system the retry then Test-Run failure.
+
