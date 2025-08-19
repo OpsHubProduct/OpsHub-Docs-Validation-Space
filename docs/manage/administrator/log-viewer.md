@@ -24,13 +24,13 @@ To navigate to System log
 * Click on Administration on top right corner.
 * On Left panel click on Global log as shown below
 
-![systemlog2_a.png](systemlog2-a.png)
+![systemlog2_a.png](../assets/systemlog2-a.png)
 
 ## Settings
 
 Click on Setting button on System log window to configure log settings as mentioned below
 
-![systemlog7.png](systemlog7.png)
+![systemlog7.png](../assets/systemlog7.png)
 
 
 ## Integration Log Setting
@@ -72,24 +72,24 @@ Following points should be considered:
 
 ## Refresh Log
 
-![systemlog3.png](systemlog3.png)
+![systemlog3.png](../assets/systemlog3.png)
 
 **Refresh log** button on the top of window can be used to refresh logs once to display latest logged data.  
 
-![systemlog4.png](systemlog4.png)
+![systemlog4.png](../assets/systemlog4.png)
 
 **Auto Refresh Log** is a toggle button, it can be set on to automatically refresh logs in every few seconds (2-3 seconds).  
 
 
 ## Export Logs
 
-![systemlog5.png](systemlog5.png)
+![systemlog5.png](../assets/systemlog5.png)
 
 Click on Export logs button to export logs as zip file.  
 
 ## Word Wrap
 
-![systemlog_wordwrap.png](systemlog-wordwrap.png)
+![systemlog_wordwrap.png](../assets/systemlog-wordwrap.png)
 
 Click on Word Wrap to enable/disable the word wrapping behavior in the log viewer.  
 * Word wrap is enabled by default.  
