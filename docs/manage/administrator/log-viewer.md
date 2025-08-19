@@ -24,13 +24,13 @@ To navigate to System log
 * Click on Administration on top right corner.
 * On Left panel click on Global log as shown below
 
-![systemlog2_a.png](../assets/systemlog2-a.png)
+![systemlog2_a.png](../../assets/systemlog2-a.png)
 
 ## Settings
 
 Click on Setting button on System log window to configure log settings as mentioned below
 
-![systemlog7.png](../assets/systemlog7.png)
+![systemlog7.png](../../assets/systemlog7.png)
 
 
 ## Integration Log Setting
@@ -64,32 +64,31 @@ Click on Setting button on System log window to configure log settings as mentio
 
 **Compress Backup Log Files:** Enable the toggle button to store all the backup log files in **compressed(.zip)** format.  
 
-![Note.jpg](Note.jpg)  
-Following points should be considered:  
+>**Note**: Following points should be considered:  
 * When the toggle button for 'Compress Backup Log Files' is enabled or disabled, ensure that no other application is using the backup files.  
 * When the toggle button for 'Compress Backup Log Files' is enabled or disabled, ensure to configure the values for 'No. of max backup global log files' and 'No. of max backup log files' appropriately.  
 
 
 ## Refresh Log
 
-![systemlog3.png](../assets/systemlog3.png)
+![systemlog3.png](../../assets/systemlog3.png)
 
 **Refresh log** button on the top of window can be used to refresh logs once to display latest logged data.  
 
-![systemlog4.png](../assets/systemlog4.png)
+![systemlog4.png](../../assets/systemlog4.png)
 
 **Auto Refresh Log** is a toggle button, it can be set on to automatically refresh logs in every few seconds (2-3 seconds).  
 
 
 ## Export Logs
 
-![systemlog5.png](../assets/systemlog5.png)
+![systemlog5.png](../../assets/systemlog5.png)
 
 Click on Export logs button to export logs as zip file.  
 
 ## Word Wrap
 
-![systemlog_wordwrap.png](../assets/systemlog-wordwrap.png)
+![systemlog_wordwrap.png](../../assets/systemlog-wordwrap.png)
 
 Click on Word Wrap to enable/disable the word wrapping behavior in the log viewer.  
 * Word wrap is enabled by default.  
