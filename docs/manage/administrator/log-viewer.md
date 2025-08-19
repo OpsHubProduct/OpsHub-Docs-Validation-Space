@@ -88,7 +88,7 @@ Click on Export logs button to export logs as zip file.
 
 ## Word Wrap
 
-![systemlog_wordwrap.png](../../assets/systemlog-wordwrap.png)
+![systemlog_wordwrap.png](../../assets/Systemlog-wordwrap.png)
 
 Click on Word Wrap to enable/disable the word wrapping behavior in the log viewer.  
 * Word wrap is enabled by default.  
