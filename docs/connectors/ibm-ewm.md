@@ -372,9 +372,13 @@ For giving privileges to integration user, follow the steps given below:
 
 This will give access for modifying and deleting attachments to all users for the selected project.  
 
-![RTC_Image 15](../assets/RTC-Image-15.png)  
+<p align="center">
+  <img src="../assets/RTC-Image-15.png" />
+</p>
 
-![RTC_Image 16](../assets/RTC-Image-16.png)  
+<p align="center">
+  <img src="../assets/RTC-Image-16.png"/>
+</p>
 
 
 # Appendix
@@ -428,5 +432,6 @@ The query includes expressions joined with `and` operator. Expression are in the
 > **Note**:  'Large String' attribute type is not supported while configuring criteria query.  
 > **Note**: In the criteria query for enumeration fields such as priority, severity, etc., the criteria query should be formed as: `oslc_cmx:priority="priority.literal.l3"`. Here the `priority.literal.l3` is the internal name of the field value.  
 > **Note**: In multi-project polling, if the criteria query is on custom enumeration field, the lookup values of the custom enumeration field should be of the same name for the criteria to work across multi-projects.
+
 
 
