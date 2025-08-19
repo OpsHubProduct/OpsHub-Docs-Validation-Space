@@ -581,8 +581,6 @@ When the **In Folder** or **Module** field is mapped in field mapping for DOORS 
   There are two types of configuration in DOORS Next - Local configuration and Global configuration. Local configuration is the individual configuration of any stream whereas Global configuration allows multiple streams of different systems to collaborate with each other. For information on Global Configuration, refer to link [Global Configuration in DOORS Next](https://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.6/com.ibm.rational.gcapp.doc/topics/c_gcm_node_product.html)
   * OpsHub Integration Manager supports synchronization in local configuration scope. Synchronization of Global configuration streams are not supported by OpsHub Integration Manager. Thus, cross component links are not supported for DOORS Next by OpsHub Integration Manager.
 
-* Tags are not supported as fields.
-
 ### When DOORS Next is configured as source system
 
 In addition to above limitations, following are some limitations in synchronization when DOORS Next system is configured as source end system in integration.
@@ -600,7 +598,10 @@ In addition to above limitations, following are some limitations in synchronizat
     * There are few comments added in artifacts in Stream A.1 at time T2 and T3. Let's say the synchronization is on-going for Stream A and has reached till T4. When Stream A.1 gets merged to Stream A at T5, then all the comments gets added in artifacts of Stream A. OpsHub Integration Manager will skip the comments added in Stream A.1 in such cases as the integration has already synchronized till T4 and the comments that are now added in Stream A at time T2 and T3 after merge will be skipped.
 
 * When the **In Modules** field is mapped, modules with empty names(no name) will not be synchronized to the target end system.
-* If the **Reviews** link type is configured during the mapping, an update to the parent entity is required to synchronize the updated review data.
+* If '''Reviews''' link is added, an update to the parent entity is required to synchronize the updated review data.
+ * Reason: After updating the review details, entity's last modified time does not update.
+* If '''Tags''' are edited after being synced, it will be synchronized to target system with next update.
+ * Reason: After Tags are edited, entity's last modified time does not update.
 
 ### When DOORS Next is configured as target system
 
@@ -895,3 +896,4 @@ In DOORS Next, the **read access** can be restricted using **Access Control** se
     * When a base/core artifact is added into module, it creates a replica of artifact in the module. The artifact created in the module is called shared artifact. The identifier of shared artifact and the core artifact is identical. But, their resource id (UUID) are different.
     * A shared artifact is always bounded with a core artifact but a core artifact may or may not have a shared artifact.
     * **Module artifact** – It's an alternate terminology to represent shared artifact.
+
