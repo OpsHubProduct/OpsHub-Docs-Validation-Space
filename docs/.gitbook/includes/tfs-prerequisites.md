@@ -141,3 +141,4 @@ It is also required to configure the proxy settings for {{ spaceName }} Service,
   * The IIS setting for **Basic Authentication** needs to be kept **Disabled**.  
   * **Note**: If we use Personal Access Token and **Basic Authentication** option is **Enabled** in the IIS Manager, then you might receive a processing failure of 'Unauthorized Access'.  
   * Please refer [this](https://docs.microsoft.com/en-us/azure/devops/integrate/get-started/authentication/iis-basic-auth?view=azure-devops) link for more information.
+
