@@ -281,6 +281,101 @@ For getting EWM version, follow the steps given below:
 
 * When EWM is configured as a source system, the user must provide keywords that could be used to mention an entity. As seen in the above screenshot, 'Defect' is used to mention an entity with id 123.  
 * The user is required to provide those keywords in JSON format. The project key should be the key and the string array list of the keywords should be the value in the JSON map. Refer to the example below:  
+```json
+ {
+        "_dFZrkdw684usLkKuTwQ": [
+            "defect",
+            "task",
+            "story",
+            "epic",
+            "work item",
+            "workitem",
+            "item"
+        ],
+        "_o1O6vvGnEe6FHv18q8e87g": [
+            "retrospective",
+            "adoption",
+            "impediment",
+            "buildtrackingitem",
+            "work item",
+            "workitem",
+            "item"
+        ]
+    }
+```
+* To obtain the project's key, fetch all project details from {User EWM Instance URL}/ccm/oslc/workitems/catalog api endpoint. Look at the value of rdf:resource inside oslc_disc:details/oslc:details. It contains the URL of the project and its id.
+* Possible keywords that can be used to mention an entity in EWM include the name of the entity type and its alias.
+* If the above field input is not provided, only those Entities Mentions will be detected that are mentioned using workitem, work item, and item keywords.
+
+## Understanding Metadata Detail Input
+
+* Below is the sample JSON for link metadata. The JSON can be modified as needed — it allows users to define or override link metadata based on their specific use case.
+
+```json
+{
+  "entities": [
+    {
+      "relationship": {
+        "linkTypes": [
+          {
+            "linkType": "affects requirement",
+            "reverseLinkType": "",
+            "isExternalLink": true,
+            "linkName": "oslc_cm:affectsRequirement"
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
+**Steps to get internal link name for any entity are mentioned below**  
+
+* Identify the work item for which the link needs to be added  
+* Construct the API URL for the work item using the following format:  
+  _https://<RTC_URL>/ccm/resource/itemName/com.ibm.team.workitem.WorkItem/<RTC_ENTITY_ID>_  
+* Inspect the response, and locate tags that represent existing internal links. These typically appear under elements such as:  
+  ![RTC_Json](../assets/RTC-Json.png)  
+* Copy the link name, this value must be used as the linkName field in your metadata configuration.  
+* Example for the link name is given below:  
+  * **Format**: <prefix_name>:<link internal name>  
+  * **Example**: oslc_cm:affectsRequirement  
+
+## Supported link types  
+
+### Reading-side supported link types  
+* REST API: duplicates, duplicateOf, successor, predecessor, children, parent, blocks, dependsOn, related, resolves, resolvedBy, copies, copiedFrom, affected by defect, custom links of type Work Item, and Work Item List  
+
+### Writing-side supported link types  
+* REST API: duplicates, duplicateOf, successor, predecessor, children, parent, blocks, dependsOn, related, resolves, resolvedBy, copies, copiedFrom, affected by defect, custom links of type Work Item, and Work Item List  
+
+## HTML description support  
+
+### Reading-side HTML description  
+EWM as a source system, description will be read as HTML.  
+
+### Writing-side HTML description  
+EWM as a target system, description will be written as plain text.  
+
+## User Privileges for Attachment Operations  
+
+For giving privileges to integration user, follow the steps given below:  
+
+* Log in to the CCM admin (https://<host>:<port>/ccm/admin).  
+* Navigate to the Project Areas menu.  
+* In Active Project Areas, select the project area for synchronization.  
+* Move to the **Permissions** tab.  
+* Select **Show by Role** in the **Permissions** tab and **Everyone (default)** in the **Select a role** tab.  
+* Navigate down to **Save Attachment** in Workitems section displayed on right.  
+* Expand it and enable the permissions for **Modify attachment** and **Delete attachment**.  
+
+This will give access for modifying and deleting attachments to all users for the selected project.  
+
+![RTC_Image 15](../assets/RTC-Image-15.png)  
+
+![RTC_Image 16](../assets/RTC-Image-16.png)  
+
 
 # Appendix
 
@@ -333,4 +428,5 @@ The query includes expressions joined with `and` operator. Expression are in the
 > **Note**:  'Large String' attribute type is not supported while configuring criteria query.  
 > **Note**: In the criteria query for enumeration fields such as priority, severity, etc., the criteria query should be formed as: `oslc_cmx:priority="priority.literal.l3"`. Here the `priority.literal.l3` is the internal name of the field value.  
 > **Note**: In multi-project polling, if the criteria query is on custom enumeration field, the lookup values of the custom enumeration field should be of the same name for the criteria to work across multi-projects.
+
 
