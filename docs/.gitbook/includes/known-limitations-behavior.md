@@ -11,8 +11,9 @@
    * Entity mention synchronization is not supported for entity type(s) Test Suite, and Test Plan.
    * Entity mention synchronization is not supported for the Team Foundation Server ALM with version < 2015.
    * Default entity mention synchronization option is **Sync source id**. So, migration will migrate source mentioned entity as source id in target.
-   * {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | Default entity mention synchronization option is **Sync source id**. So, migration will migrate source mentioned entity as source id in target.| Refer ["**Mention Sync Option**"](../../integrate/mapping-configuration.md#mention-configuration) for more details.}}
-4. {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |Migration of the below mentioned **fields is not supported**, as they are Read only fields.|Following fields are read-only, and can be synced from Azure DevOps to other systems.}}
+     {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} * Default entity mention synchronization option is **Sync source id**. So, migration will migrate source mentioned entity as source id in target.{% endif %}
+     {% if "OpsHub Integration Manager" === space.vars.SITENAME %} * Refer ["**Mention Sync Option**"](../../integrate/mapping-configuration.md#mention-configuration) for more details.{% endif %}
+4. {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} Migration of the below mentioned **fields is not supported**, as they are Read only fields.|Following fields are read-only, and can be synced from Azure DevOps to other systems.{% endif %}
    * Area Id, Attached File Count, Authorized As, Authorized Date, Board Lane, External Link Count, Hyperlink Count, ID, Iteration Id, Node Name, Related Link Count, Rev, Revised Date, Team Project, Work Item Type, Board Column, Board Column Done**
 {% include "../.gitbook/includes/read-write-field.md" %}
 5. {{SITENAME}} does not support entity type change in TFS/Azure DevOps. Hence, below will be the behavior in case work item type is changed when TFS/Azure DevOps is the source system:
@@ -23,15 +24,15 @@
      2. Work item 1 is updated at T1 time [Revision R1]
      3. Work item 1 is updated at T2 time [Revision R2]
      4. Work item 1 type is changed to Feature at T3 time. Also, a comment is added to the feature in the same revision. [Revision R3]
-     5. {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||The integration is started with the polling time, T0 }}
+     5. {% if "OpsHub Integration Manager" === space.vars.SITENAME %} The integration is started with the polling time, T0 {% endif %}
      * Case 1:
-       * If {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |migration|integration}} of both entity types is activated, Work item 1 is synchronized to target as Feature with Revision R3 (except the work item change), R4.
+       * If {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} migration {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} integration {% endif %} of both entity types is activated, Work item 1 is synchronized to target as Feature with Revision R3 (except the work item change), R4.
      * Case 2:
-       * If a work item has already been synchronized to the target system and its type is changed post {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |migration|synchronization}}, a new entity will be created in the target system with a new work item type.
+       * If a work item has already been synchronized to the target system and its type is changed post {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} migration {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} synchronization {% endif %}, a new entity will be created in the target system with a new work item type.
        * Specifically, before changing the type in the source, if the comments were added to that entity, then user impersonation for those comments won't occur. Instead, the integration/migration user will add the comment to the target.
-{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||
+         {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
        * If the integration of both entity types is activated after step #3 and before Step #4, then Work item 1 will be synchronized to target as Epic with revisions R1, R2. Post step #4 and step #5, a new Feature with R3 (except the work item change), R4 will be created in target.
-}}
+         {% endif %}
     **For TFS version below 2017**:
    * For the entities whose types are changed, the entity type at the time of migration will be considered for migration. Below example will help in better understanding of the known behavior:
      1. Let's say there is Work item 1 created with type Epic.
@@ -39,17 +40,17 @@
      3. Work item 1 is updated at T2 time [Revision R2]
      4. Work item 1 type is changed to Feature at T3 time. Also, a comment is added to the feature in the same revision. [Revision R3]
      5. Work item 1 is updated at T4 time [Revisions R4]
-     {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||6. The integration is started with the polling time, T0.}}
+     {% if "OpsHub Integration Manager" === space.vars.SITENAME %} 6. The integration is started with the polling time, T0.{% endif %}
 
      * Case 1:
        * Work item 1 is synchronized to target as Feature with Revision R1, R2, R3 (except the work item change), R4.
        * For R3 revision, a comment is added in target but work item type change is skipped.
      * Case 2:
-       * If a work item has already been synchronized to the target system and its type is changed post {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |migration|synchronization}}, a new entity is created in the target system with a new work item type.
-{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||
+       * If a work item has already been synchronized to the target system and its type is changed post {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} migration {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} synchronization {% endif %}, a new entity is created in the target system with a new work item type.
+         {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
  In above example, if the integration is activated after step #3, then target will have Epic with R1, R2. Post step #5, a new Feature with R1, R2, R3 (except the work item Change), R4 will be created in target.
-    }}
-{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |
+         {% endif %}
+         {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}
 6. To maintain correct relationships and references [available among the source data] into target [through migration], {{SITENAME}} migration follows a specific sequence in which the migration is undertaken. The below list will help understand this sequence.
 
     1. Meta Entities [User, Group and Team, Area, Iteration]  
@@ -65,7 +66,7 @@
     **Note**: Above sequence will also consider the processing failures. The below example will help you understand it.
 
     - If there is any processing failure for 4. [Test Suite migration], then the migration for 5. [Test Run] and 6. [Test Result] will not be started until failures of Test Suite migration are resolved.
-}}
+      {% endif %}
 
 ## Specific Authentication Mode
 
@@ -156,29 +157,30 @@ Following are the limitations and behaviors specific to the individual entities 
 - Test Suite will migrate current state. Any changes in the target system after synchronization may show inconsistency in data in both end points.  
 - Synchronization of Test Case chart and Test Result chart created within test suite is not supported  
 - Query-Based Suite or Requirement-Based Suite.<br>  
-	- Once a Query-Based Suite or Requirement-Based Suite synced to target system, then after any new linkage of Test-Case with test suite added due to modification in test case. Hence newly added Test-Case linkage of Test Suite will not {{-ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |migrate|sync}} to the target system and any Test Run with corresponding test point will resulted into processing failure. In such case do following. click [here](../../connectors/team-foundation-server.md-troubleshoot) for troubleshoot.  
-- Any update in Test Suite Configuration will {{-ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |migrate|synchronize}} only when test suite is updated.  
+	- Once a Query-Based Suite or Requirement-Based Suite synced to target system, then after any new linkage of Test-Case with test suite added due to modification in test case. Hence newly added Test-Case linkage of Test Suite will not {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} migrate {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} sync {% endif %} to the target system and any Test Run with corresponding test point will resulted into processing failure. In such case do following. click [here](../../connectors/team-foundation-server.md-troubleshoot) for troubleshoot.  
+- Any update in Test Suite Configuration will {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} migrate {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} synchronize {% endif %} only when test suite is updated.  
 - Ordering in Test Cases which are added to Test Suite is supported only for version 2019 onwards for on-premise deployments (i.e. Team Foundation Server) and all cloud deployments (i.e. Azure DevOps). In addition to that, ordering is only possible when the user has selected authentication type as Personal Access Token in the system configuration. Refer section [Create Personal Access Token](../../connectors/team-foundation-server.md-create-personal-access-token).  
 - If source endpoint is Team Foundation Server with version lower than 2017 or target endpoint is not an Azure DevOps, all types of Test Suite (Static/Query based/Requirement) will be migrated as Static Suite.  
 - If source endpoint is Azure DevOps or on-premise deployment (i.e Team Foundation Server) with version 2017 onwards and target endpoint is Azure DevOps, then the Static suite is {{-ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |migrated|synchronized}} as Static Test Suite. The Requirement-based test suite is {{-ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |migrated|synchronized}} as Requirement-based test suite and Query-based test suite is {{-ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |migrated|synchronized}} as Query-based test suite.  
-	- The {{-ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |migration|integration}} user of source and target endpoint requires desired access level Basic + Test Plans in end system to synchronize query-based and requirement-based suite. Refer [Access Level](https://docs.microsoft.com/en-us/azure/devops/organizations/security/access-levels?view=azure-devops) to know more about this access level or subscription for the {{-ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |migration|integration}} user. Otherwise, Test Suite synchronization will be resulted in to job error/sync failure as "You are not authorized to access this API. Please contact your project administrator".
+	- The {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} migration {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} integration {% endif %} user of source and target endpoint requires desired access level Basic + Test Plans in end system to synchronize query-based and requirement-based suite. Refer [Access Level](https://docs.microsoft.com/en-us/azure/devops/organizations/security/access-levels?view=azure-devops) to know more about this access level or subscription for the {{-ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |migration|integration}} user. Otherwise, Test Suite synchronization will be resulted in to job error/sync failure as "You are not authorized to access this API. Please contact your project administrator".
 - Synchronization Behavior of **Query Text** field of Query based Test Suite:
   - The Query based test suite has a field **Query Text** that represents the actual criteria that has been given in the Query Suite entity. The **Query Text** follows a specific format for which you can refer to [WIQL syntax](https://docs.microsoft.com/en-us/azure/devops/boards/queries/wiql-syntax?view=azure-devops).
   - Refer to the section [Synchronization Behavior of fields with WIQL format](../..connectors/team-foundation-server.md#synchronization-behavior-of-fields-with-wiql-format) to know general synchronization behavior applicable to this type of field. Following are the behavior specific to Query Text field of Test Suite entity:
   - It is recommended to have both source and target endpoints having identical templates (fields, lookups, iteration, areas, etc.) to synchronize the Query Text field of the Query-based suite. Any differences in the template could lead to a mismatch in Test Case association and cause the Test Suite sync failure. It may require the end-user to manually correct the Query Text field of Test Suite in the source or target end system to retry the failure.
     - **User values mentioned in Query Text**  
-      - Query Text Field with a user type of field clause will be restricted to transform the user(s) not the Group or Team present as part of clause value. {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |The user will be transformed to corresponding target end system user as per user mapping of migration.|The user will be transformed to corresponding target end system user as per user mentions mapping of field **Query Text** .}}
+      - Query Text Field with a user type of field clause will be restricted to transform the user(s) not the Group or Team present as part of clause value. {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} The user will be transformed to corresponding target end system user as per user mapping of migration.{% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} The user will be transformed to corresponding target end system user as per user mentions mapping of field **Query Text** .{% endif %}
     - **Id values mentioned in Query Text**  
       - In the **Query Text** field, an id clause can refer to a particular or set of a work item of type Test Case.
       - The synchronized test case will have a different id in target system than the source entity. Henceforth it is required to transform the id clause as per the target end system to avoid mismatch in the association of Test Case(s) with Test Suite between the source system and target system. By default, the Query Text field with ID field clause will not be changed as per target entity id. Perform following configuration(s) in order to transform ID as per the target end system.
-{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |
+        {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}
         - Create a custom field with the name as **Source Workitem ID** and type as *Integer* for the Test Case entity in the target system prior to migration to transform the ID as per the target entity. So, target query-based test suite gets populated with the desired test cases.
         -  In the absence of this custom field **Source Workitem ID** in the target end system the Query based test suite will be migrated as static suite.
         -  If a Custom field named "Source Workitem ID" exists before migration for Test Case entity in target endpoint, then Query Text field with ID field Clause will be migrated as "Source Workitem ID" clause instead ID clause in Query Text. For Example, [ID] = 1234 is the id clause in the source end system, then this id clause migrated in target as [Source Workitem ID] = 1234.
         -  It is recommended to have the "Source Workitem ID" field in Test Case for the target entity with Type "Integer" to avoid mismatch in the association of Test Case(s) with Test Suite between the source endpoint and target endpoint after migration.
         -  If the Type of the field "Source Workitem ID" is "String", then migration of Query Text field with ID clause is restricted to synchronize certain operators which are compatible with String type of field. For example, >, <, =, <=, >=, <>, In, Not In etc. The operator(s) which are only compatible with the Integer type of field and not compatible with the String type of field will cause the sync failure for Test Suite. Such incompatible operators are [=Field], [>Field], [>=Field], [<=Field], [<>Field], etc. The custom field used to replace ID field is of String type requires compatible operator and value.
-|
+           {% endif %}
 
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}
        - Create a custom field with any name but type as `Integer` for the Test Case entity in the target system.
        - Configure the Remote Id field for Test Case integration using above created custom field prior to synchronize Test Case(s).
        - Configure the following advance mapping for field **Query Text** to replace `ID` field with created custom field. Sample provided later in this document.
@@ -248,7 +250,7 @@ order by [System.Id]
   - **Enclosed Value With Quote:** Boolean parameter indicating whether to have the transformed value within single quotes or not. If invoked as `true()`, the value will be enclosed in single quotes in the resulting query text. If `false()`, then the transformed value will not be enclosed.
   - **Source System Id:** System id of the source end system.
   - **Target System Id:** System id of the target end system.
-}}
+    {% endif %}
 
 #### Test Result and Test Run
 
@@ -261,7 +263,7 @@ order by [System.Id]
   - Run and Result existing in Plan (e) Automated Run and Result are not supported.
 - Below are only for Test Result:
   - Test Result Attachment link is not supported.
-  - {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | Migration | Synchronization}} of video format attachment of Result Steps and Result is not supported.
+  - {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} Migration {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} Synchronization {% endif %} of video format attachment of Result Steps and Result is not supported.
   - Synchronization of Parameter Values for Step Results is not happening.  
     - Reason: ADO/TFS API limitations.
   - 'Duration' field will get synchronized only when the value of 'Status' field is 'completed'.
@@ -269,20 +271,21 @@ order by [System.Id]
 ## Meta Entities (User, Group and Team, Area, Iteration)
 
 - Impersonation is not supported.
-- {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | Migration | Synchronization}} of Meta Entities for Team Foundation Server 2010 or lower is not supported.
+- {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} Migration {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} Synchronization {% endif %} of Meta Entities for Team Foundation Server 2010 or lower is not supported.
 - {{SITENAME}} will not sync the following two permissions at collection level for Group and Users due to lack of API:  
   - Delete team project  
   - Delete team project collection  
     However, the first permissions for a group or a user will be set at the project level.
-- {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | Migration | Synchronization}} of the groups with reserved name is only possible if they are present in the target system. If such groups are not present in the target system, processing failures will be observed in {{SITENAME}}.
+- {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} Migration {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} Synchronization {% endif %} of the groups with reserved name is only possible if they are present in the target system. If such groups are not present in the target system, processing failures will be observed in {{SITENAME}}.
   - Reason: Groups cannot be created with reserved names, i.e., Group name 'Endpoint Creators' is reserved by the end system. While trying to create this group, a failure error message will be generated, 'Cannot complete the operation because the group name 'Endpoint Creators' is reserved by the system.'
-  - User needs to manually delete this failure and start the {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | migration | synchronization}} again.
-- If integration user is not a member of **Project Collection Administrators** group, collection level permissions will not be {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | migrated | synchronized}}.
-{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||
+  - User needs to manually delete this failure and start the {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} migration {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} synchronization {% endif %} again.
+- If integration user is not a member of **Project Collection Administrators** group, collection level permissions will not be {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} migrated {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} synchronized {% endif %}.
+  {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
 - Following are the limitations of {{SITENAME}}, if you are syncing Area or Iteration:
   - Target Lookup Query is supported for only one field i.e. Path and the query must be Path=@Path@ for Team Foundation Server to Team Foundation Server integration.
   - Recovery functionality is effective only when Manual Conflict Detection is put off for field Path. It could be set to 'disable conflict detection' or enabled with either 'Source Wins' or 'Target Wins'.  
-  - Restart Team Foundation Server and OpsHubTFSService.}}
+  - Restart Team Foundation Server and OpsHubTFSService.
+  - {% endif %}
 
 ### Dashboard/Query/Widgets Entities
 
@@ -292,9 +295,10 @@ order by [System.Id]
 - These entities do not have Attachments, Comments, and Inline images, hence these details are not supported.
 - These entities do not have historical data, hence historical data synchronization is not supported.
 
-{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}
 - Criteria based synchronization and target lookup is not supported for Dashboard and Query entity. Refer to [Criteria Configuration in integration](integration-configuration#criteria_configuration) and [Search in Target Before Sync](../integrate/integration-configuration.md#search-in-target-before-sync) to know more on these features.
-- Criteria based synchronization is not supported for Query entity. Target lookup is only supported for 'Folder' field, please refer to [Target lookup query format](../../connectors/team-foundation-server.md#supported-target-lookup-query-for-query-entity) for its target lookup query format.}}
+- Criteria based synchronization is not supported for Query entity. Target lookup is only supported for 'Folder' field, please refer to [Target lookup query format](../../connectors/team-foundation-server.md#supported-target-lookup-query-for-query-entity) for its target lookup query format.
+  {% endif %}
 
 **Entity Specific**
 
@@ -305,7 +309,7 @@ Following are the limitations and behaviors specific to the individual entities 
 - Dashboard can be marked as **Favorite**. Synchronization of this **Favorite** attribute is not supported.
   - Reason: ADO/TFS API unavailability
 
-{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}
 - Dashboard can be created with **Dashboard Type** as **Project Dashboard** or a **Team Dashboard**.
   - For Team Dashboard, **Owned by team** will be applicable and for **Project Dashboard**, **Owner** field will be applicable.
   - When Azure DevOps is source:
@@ -315,7 +319,9 @@ Following are the limitations and behaviors specific to the individual entities 
   - When Azure DevOps is target:
     - If **Owner** field contains a value, then the dashboard will be created with type **Project Dashboard**.
     - If **Owned by team** field contains a value, then the dashboard will be created with type **Team Dashboard**.
-    - If both fields contain value, then you will get a processing error [OH-TFS/AzureDevOps-1119].}}
+    - If both fields contain value, then you will get a processing error [OH-TFS/AzureDevOps-1119].
+{% endif %}
+
 
 #### Query Entity
 
@@ -501,11 +507,11 @@ User can provide the target entity Ids in the Pull Request fields like Title/Des
 - During the Pipeline entity synchronization, the processing failure may come while syncing the Service Connection for the below mentioned use case. For more details around the next steps, refer to [this](How_to_resolve_processing_failure_for_Pipeline_integration_when_there_is_a_Service_Connection_which_is_deleted_in_the_end_system?) section.  
   - Use case: Service Connection 1 was associated with some steps of any job in the Pipeline entity. The user changed the Service Connection from Service Connection 1 to Service Connection 2 and deleted the Service Connection 1 from the end system.
 
-{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |
+{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}
 - Actual revision time and user email are suffixed to the comment of that particular revision.
-}}
+  {% endif %}
 
-{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |
+{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}
 ## Version Control Entity (TFS Commit Information)
 
 - Original commit date will not be migrated.  
@@ -515,4 +521,4 @@ User can provide the target entity Ids in the Pull Request fields like Title/Des
 - Original committer user would be suffixed to Commit comment.
 - For all the merges in source which are performed only on particular changesets and not on latest version, there is a possibility that there can be difference in the merge history (not the file content) for those files after sync. Difference like certain number of changeset pending in source might be seen merged in target or certain changesets merged in source might be seen pending in target.
 - If a folder is created and later converted to a branch in the source, then the branch will be synced as a folder in the target system. Please contact the support team for post migration to reconcile branches and folders.
-}}
+  {% endif %}

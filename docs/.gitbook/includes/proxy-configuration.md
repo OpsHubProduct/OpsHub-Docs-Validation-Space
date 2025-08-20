@@ -1,6 +1,6 @@
-{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |To start the {{SITENAME}} installer on a machine that is behind a proxy, please perform the following steps:<br>|}}
+{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} To start the {{SITENAME}} installer on a machine that is behind a proxy, please perform the following steps:<br>{% endif %}
 
-{{#ifeq: {{SITENAME}} |  OpsHub Migrator for Microsoft Azure DevOps |1. | 6.}} Open environment configuration from My Computer -> Properties -> Advanced System Settings -> Environment Variables 
+{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} 1.{% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} 6. {% endif %} Open environment configuration from My Computer -> Properties -> Advanced System Settings -> Environment Variables 
 
 <p align="center"><img src="../assets/Proxy 1.png" width="600"/></p>
 
@@ -8,11 +8,11 @@
 
 <p align="center"><img src="../assets/Proxy3.png" width="600"/></p>
 
-{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |2. | 7. }} Create a new environment variable with the name **"_JAVA_OPTIONS"**.
+{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} 2.{% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} 7. {% endif %} Create a new environment variable with the name **"_JAVA_OPTIONS"**.
 
 <p align="center"><img src="../assets/Proxy4.png" width="600"/></p>
 
-{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |3. | 8. }} Set the variable's value as per the format ->  
+{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} 3.{% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} 8. {% endif %} Set the variable's value as per the format ->  
 `-Dhttp.proxyHost= -Dhttp.proxyPort= -Dhttp.nonProxyHosts="localhost|127.0.0.1" -Dhttp.proxyUser= -Dhttp.proxyPassword= -Dhttps=`
 
 | **Attribute**           | **Description**                                                                                                                                       |
@@ -32,11 +32,12 @@ ProxyIP → `00.00.00.00`, Proxy Port → `8080`, Proxy User Name → `username`
 
 <p align="center"><img src="../assets/Proxy5.png" width="600"/></p>
 
-{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |4. Save all the changes. | 9. Save all the changes and restart the {{SITENAME}} Service. }} 
+{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} 4. Save all the changes. {% endif %}
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %} 9. Save all the changes and restart the {{SITENAME}} Service. {% endif %}
 
-{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | | 10. Test the proxy by opening service URL **http://<service host>:<port>/TFSService** in browser. Now check the connection by trying to create mapping.}}
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %} 10. Test the proxy by opening service URL **http://<service host>:<port>/TFSService** in browser. Now check the connection by trying to create mapping.{% endif %}
 
 > **Note**:
 > Even after performing all these steps, if you are still unable to connect, then please check the proxy credentials given in  
-> {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | Step 3 | Step 8 }} and  
-> {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | restart your installer. | restart the {{SITENAME}} Service.}}
+> {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} Step 3 {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} Step 8 {% endif %} and  
+> {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} restart your installer. {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} restart the {{SITENAME}} Service.{% endif %}

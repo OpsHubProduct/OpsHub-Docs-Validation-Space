@@ -2,18 +2,18 @@
 
 There are different logs maintained and stored under **`<{{SITENAME}} Installation Folder>\AppData\logs`** during the installation process and one log is maintained to track the ongoing processing in {{SITENAME}}.
 
-| **Log File Name**       | **Description** |
-|--------------------------|-----------------|
-| DatabaseCreation.log     | Log generated during Database Creation phase of Installation |
-| Install.log              | Log related to installation steps |
-| OpsHubServer.log         | Log generated while {{SITENAME}} Installation (like launching URL). |
-| Service.log              | Log generated while registering {{SITENAME}} Application as Service. |
-| ConnectionModeConf.log   | Log related to the Connection Mode Configuration. |
-| OpsHub.log               | {{SITENAME}} Application log file for all the {{#ifeq: {{SITENAME}} \| OpsHub Migrator for Microsoft Azure DevOps \|migrations\|integrations}} |
-| OpsHubTFSService.log     | Common log file for TFS API interaction |
-| Integrations             | Folder contains the files for the logs of each {{#ifeq: {{SITENAME}} \| OpsHub Migrator for Microsoft Azure DevOps \|migrations\|integrations}} |
+| **Log File Name**       | **Description**                                                                                                                                                                                                                            |
+|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| DatabaseCreation.log     | Log generated during Database Creation phase of Installation                                                                                                                                                                               |
+| Install.log              | Log related to installation steps                                                                                                                                                                                                          |
+| OpsHubServer.log         | Log generated while {{SITENAME}} Installation (like launching URL).                                                                                                                                                                        |
+| Service.log              | Log generated while registering {{SITENAME}} Application as Service.                                                                                                                                                                       |
+| ConnectionModeConf.log   | Log related to the Connection Mode Configuration.                                                                                                                                                                                          |
+| OpsHub.log               | {{SITENAME}} Application log file for all the {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} migrations {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} integrations{% endif %}   |
+| OpsHubTFSService.log     | Common log file for TFS API interaction                                                                                                                                                                                                    |
+| Integrations             | Folder contains the files for the logs of each {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} migrations {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} integrations{% endif %}  |
 
-{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}
 
 # Log Settings
 
@@ -94,4 +94,4 @@ Click on Word Wrap to enable/disable the word wrapping behavior in the log viewe
 * Word wrap is enabled by default.  
 * When word wrap is enabled, long log entries are wrapped, making them easier to read without horizontal scrolling.  
 * When word wrap is disabled, log entries remain on a single line, preserving the visual alignment of timestamps and structure. However, horizontal scrolling may be needed.  
-}}
+  {% endif %}

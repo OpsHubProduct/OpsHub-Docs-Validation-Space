@@ -10,12 +10,12 @@
 * The utility folder contains following files:
   * input.properties: To provide the input details required to run the utility.
   * UserCountUtility.bat: To run the utility if {{SITENAME}} is installed on Windows machine.
-  {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||** UserCountUtility.sh: To run the utility if {{SITENAME}} is installed on Linux machine.}}
+    {% if "OpsHub Integration Manager" === space.vars.SITENAME %} ** UserCountUtility.sh: To run the utility if {{SITENAME}} is installed on Linux machine.{% endif %}
 
 ## Input
 The following inputs are to be provided in input.properties file:
 * **Installation_Path**  
-  * Provide the installation path of {{SITENAME}}. For example, if {{SITENAME}} is installed at `C:/Program Files/{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | OM4ADO | OpsHub}}`, then provide path as `C:/Program Files/{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | OM4ADO | OpsHub}}`.
+  * Provide the installation path of {{SITENAME}}. For example, if {{SITENAME}} is installed at `C:/Program Files/{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} OM4ADO{% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} OpsHub {% endif %}`, then provide path as `C:/Program Files/{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} OM4ADO{% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} OpsHub {% endif %}`.
 * **Count_Users_From_Date**  
   * It is useful when the user wants the utility to count the users from a specific date. This is an optional input and the date should be in the format, `YYYY-MM-DD`. If left blank, utility will count all users. For example, if the user wants the utility to count users from 1 Jan. 2021, then the user can specify the date as `2021-01-01`. In that case, this utility will count the users from 1 Jan. 2021 till date. 
 
@@ -30,7 +30,7 @@ Following are the steps to run the utility:
 * Go to `<{{SITENAME}} Installation Folder>/Other_Resources/Resources`. 
 * Unzip `UserCountUtility.zip`. 
 * Update the `input.properties` file as stated [here](#input).
-* {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | Close OM4ADO application before execution of the utility |Stop OpsHub Server Service before execution of the utility }}
+* {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} Close OM4ADO application before execution of the utility {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} Stop OpsHub Server Service before execution of the utility {% endif %}
 * If your {{SITENAME}} is installed on Windows machine, then refer to the steps given below:
   * Open Command Prompt
   * Navigate to `<{{SITENAME}} Installation Folder>/Other_Resources/Resources` path
@@ -40,7 +40,7 @@ Following are the steps to run the utility:
   <img src="../../assets/User_Count_Utility_5_a.png" width="800px">
 </p>
 
-{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}
 * If your {{SITENAME}} is installed on Linux machine, then refer to the steps given below: 
   * Open Shell Script
   * Navigate to `<{{SITENAME}} Installation Folder>/Other_Resources/Resources` path
@@ -49,7 +49,7 @@ Following are the steps to run the utility:
 <p align="center">
   <img src="../../assets/User_Count_Utility_6_a.png" width="800px">
 </p> 
-}}
+{% endif %}
 
 Once the execution is completed, the user will see the output similar to the details given in the screenshot (an example of execution on Windows machine) below:
 
@@ -66,14 +66,14 @@ Once the utility execution starts, it creates a folder `output` which contains b
 ### UserCountSummary.csv
 This file contains the following details:
 * **Total Unique**  
-  * It represents the number of unique users present in the synchronization done so far across all the systems configured. For example, if the user is present in {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | the configured systems [TFS,ADO] | three configured systems [Jira, Jama Connect, Cadence Verisium Manager]}}. There is a user (with email: `demouser@test.com`) who is present in both {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | TFS and ADO | Jira and Jama Connect}}, then, the user will be considered unique. For the users with no specified emails, in that case, their usernames will be considered unique.
+  * It represents the number of unique users present in the synchronization done so far across all the systems configured. For example, if the user is present in {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} the configured systems [TFS,ADO] {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} three configured systems [Jira, Jama Connect, Cadence Verisium Manager] {% endif %}. There is a user (with email: `demouser@test.com`) who is present in both {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} TFS and ADO {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} Jira and Jama Connect{% endif %}, then, the user will be considered unique. For the users with no specified emails, in that case, their usernames will be considered unique.
 * **Total**  
   * It represents the total number of users in all the systems.
 * **Distribution of users per system**  
   * It has the list of systems and the number of users synchronized by {{SITENAME}}.
 
 <p align="center">
-  <img src="{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | User_Count_Utility_3_a_ovsmu.png | User_Count_Utility_3_a.png}}" width="800px">
+  <img src="{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} User_Count_Utility_3_a_ovsmu.png {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} User_Count_Utility_3_a.png{% endif %}" width="800px">
 </p>
 
 ### UserCountDetailedReport.csv
@@ -81,7 +81,7 @@ This file contains the following details:
 * It has the user details (User Email or User Name as per the details found during synchronization). Additionally, a corresponding list of systems is present in which the users' details are found.
 
 <p align="center">
-  <img src="{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | User_Count_Utility_4_a_ovsmu.png | User_Count_Utility_4_a.png}}" width="600px">
+  <img src="{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} User_Count_Utility_4_a_ovsmu.png {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} User_Count_Utility_4_a.png{% endif %}" width="600px">
 </p>
 
 

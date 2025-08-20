@@ -5,16 +5,16 @@ The user should select the Database type for installation from the dropdown list
 </p>
 Click the checkbox adjacent to **Advance configuration** option if you have one of the following requirements:
 
-{{#if productName == "OIM"}}
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}
 * Install OpsHub Integration Manager in https
-{{/if}}
+{% endif %}
 
 - Install multiple instances of OpsHub Integration Manager on a single instance  
 - Need to create database manually  
 
-{{#if productName == "OIM"}}
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}
 * Need to change encryption algorithm (by default, it is AES 256)
-{{/if}}
+  {% endif %}
 
 Now, select **one of the five types of database selection for installation** as mentioned below.  
 

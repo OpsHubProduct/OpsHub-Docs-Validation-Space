@@ -9,7 +9,7 @@ As HSQL is not suitable for production usage, {{SITENAME}} needs to be migrated 
 * Change `destinationconnection.properties` and `sourceconnection.properties` in Migrator directory:  
   * **sourceconnection.properties**: Change `CONNECTION_HSQL_FILE_PATH` property and replace `<installation path>` with installation path  
   * **destinationconnection.properties**: Provide all properties value as guided in file
-* {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |Close OM4ADO application|Shut down server (ensure service is not running if registered) }}
+    {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} * Close OM4ADO application|Shut down server (ensure service is not running if registered) {% endif %}
 * Take back up of database  
 
 Refer to Database Backup section on [Taking Application Backup](../../manage/upgrade/taking-application-backup.md) page for details. 
@@ -17,11 +17,13 @@ Refer to Database Backup section on [Taking Application Backup](../../manage/upg
 ### Migrating on Windows
 Run `migrator.bat` in Migrator directory
 
-{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||### Migrating on Linux
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}
+### Migrating on Linux
 Run `migrator.sh` in Migrator directory  
 If file execution fails with ^M bad interpreter error, use following steps:  
 * Execute command in terminal `dos2unix migrator.sh`  
-* Now execute the sh file in terminal `migrator` }}
+* Now execute the sh file in terminal `migrator`
+{% endif %}
 
 ## Steps to perform after successful migration
 Following are the steps to be performed after successful database migration:
@@ -31,6 +33,6 @@ Following are the steps to be performed after successful database migration:
 * Select all the files and add to archive with name `OpsHubWS.zip`
 * Rename `OpsHubWS.zip` to `OpsHubWS.war`
 * Go to `<{{SITENAME}}_Installation>\OpsHubServer\webapps` and replace newly created `OpsHubWS.war` with the existing one
-* Delete `<{{SITENAME}}_Installation>\OpsHubServer\webapps\OpsHubWS` directory and {{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps | start OM4ADO application |start the service }}
+* Delete `<{{SITENAME}}_Installation>\OpsHubServer\webapps\OpsHubWS` directory and {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} start OM4ADO application {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} start the service {% endif %}
 
 
