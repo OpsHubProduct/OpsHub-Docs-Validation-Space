@@ -3,6 +3,7 @@ Returns only the revisions in which the attachment was added, deleted or modifie
 
 ## API URI
 ```http
+
 GET: /entities/{entityTypeId}/attachments/history?
      projectId=<projectId>
      &entityId=<entityId>
@@ -16,7 +17,7 @@ GET: /entities/{entityTypeId}/attachments/history?
 ```
 
 ## URI Parameters
-URI Parameters and Response Payload for this API is same as History – List API, with the only difference that this API will return only attachment revisions. Kindly refer to the [History – List API](History_–_List) page for understanding all the parameters.
+URI Parameters and Response Payload for this API is same as History – List API, with the only difference that this API will return only attachment revisions. Kindly refer to the [History – List API](history-list.md) page for understanding all the parameters.
 
 ## Response Payload
 ```json
@@ -53,4 +54,5 @@ URI Parameters and Response Payload for this API is same as History – List API
     }
   ]
 }
+
 ```
