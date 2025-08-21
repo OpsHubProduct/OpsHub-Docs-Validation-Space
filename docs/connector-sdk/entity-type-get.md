@@ -1,6 +1,6 @@
 ## Overview
 This API describes the entity type in detail for OpsHub to be able to integrate various basic and complex data for a given entity type.  
-![Note](../assets/Note.jpg|30px) It is important to return a correct response for this API as OpsHub relies heavily on these inputs to handle multiple connector tasks automatically.
+>**Note**: It is important to return a correct response for this API as OpsHub relies heavily on these inputs to handle multiple connector tasks automatically.
 
 ## API URI
 This is the URI OpsHub will execute to call this API:
@@ -540,5 +540,6 @@ GET: /entity-types/{entityTypeId}?projectId=<projectId>
 
 }
 
+// Internal note: For attachment, comment, link: readSupported, writeSupported can be derived from sync direction of entityType.
 
 ```
