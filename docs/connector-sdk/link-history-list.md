@@ -19,7 +19,7 @@ GET: /entities/{entityTypeId}/attachments/history?
 ```
 
 ## URI Parameters
-URI Parameters and Response payload for this API is same as History – List API, with the only difference that this API will return only link revisions. Refer to the [History – List API](History_–_List) page for understanding all the parameters.
+URI Parameters and Response payload for this API is same as History – List API, with the only difference that this API will return only link revisions. Refer to the [History – List API](history-list.md) page for understanding all the parameters.
 
 ## Response Payload
 ```
@@ -56,4 +56,5 @@ URI Parameters and Response payload for this API is same as History – List API
     }
   ]
 }
+
 ```
