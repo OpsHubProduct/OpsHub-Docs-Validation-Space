@@ -16,7 +16,7 @@ GET: /server-info
 |                         | maxResults          | True     | Integer | The maximum number of records that can be returned from a paginated API in a single page. If end system does not support pagination, connectors can implement in-memory pagination and provide maximum number of items per page in this field. |
 | integrationUserInfo     |                     | True     |         |             |
 |                         | fieldInternalName   | True     | String  | Internal name of the field used on system configuration screen to take integration username or email. This field name should match with the field name provided in connector metadata API. |
-|                         | userDataType        | True     | Enum    | Data type of integration user taken as input in fieldInternalName. Valid values are: <br/>* EMAIL_AS_USER: When email is provided in the integration user field. <br/>* USERNAME_AS_USER: When username is provided in the integration user field. |
+|                         | userDataType        | True     | Enum    | Data type of integration user taken as input in fieldInternalName. Valid values are: <br/> * EMAIL_AS_USER: When email is provided in the integration user field. <br/> * USERNAME_AS_USER: When username is provided in the integration user field. |
 
 # Response Payload
 
@@ -30,4 +30,5 @@ GET: /server-info
     "fieldInternalName": "userName"
   }
 }
+
 ```
