@@ -124,6 +124,7 @@ GET: /entities/{entityTypeId}/history?
 In newValue, send a list of attachments that exists as of this revision. If no attachment was added, deleted or modified in this revision OR the end system has a separate API for fetching attachment history, then attachmentRevision can be null |
 |                     | commentRevision        | Object   | In newValue, send any comment newly added or modified in this revision. If no comment was added or modified in this revision OR the end system has a separate API for fetching comments history, then commentRevision can be null |
 |                     | linkRevision           | Object   | Returns the list of links that existed in the entity in the previous revision in oldValue.In newValue, send a list of existing links as of this revision. If no link was added, deleted or modified in this revision OR the end system has a separate API for fetching link history, linkRevision can be null |
-| nextPageLink        |                        |          | Link to the next page of the entity history response. The connector should return the link of the next page exactly in the same way as it is returned from the end system. This is an optional field. If the end system does not provide next page link in the list API, it can remain null. |
+| nextPageLink        |                        |          | Link to the next page of the entity history response. <br> The connector should return the link of the next page exactly in the same way as it is returned from the end system. This is an optional field.<br> If the end system does not provide next page link in the list API, it can remain null. |
+
 
 
