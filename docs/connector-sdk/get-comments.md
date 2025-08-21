@@ -16,7 +16,7 @@ GET: /entities/{entityTypeId}/{entityId}/comments?projectId={projectId}&startInd
 | startIndex      | query  | True         | Integer   | Start index from which comments need to be returned |
 | maxResults      | query  | True         | Integer   | Number of comments from `startIndex` that need to be returned |
 | nextPageLink    | query  | False        | String    | Link to the next page if returned by the end system |
-| afterTime       | query  | False        | String    | Time after which the comments are to be filtered.<br><br>The `afterTime` date format will be the same as provided in [`comments.createUpdateDateFormat` in response payload for Entity Type – Get API](Entity_Type_–_Get#Response_Payload), and `timeZone` will be the same as provided in [`timeZone` in response payload for Server-Info API](Server-Info#Response_Payload).<br><br>- If the end system API does not support time-based filtering on comments, this parameter may be ignored.<br>- If the end system API supports time-based filtering on comments, the connector should return the comments with a createdUpdatedTime greater than the specified afterTime.<br>- If “null” is passed in the “afterTime” then connector needs to return all the comments without any time filter applied.
+| afterTime       | query  | False        | String    | Time after which the comments are to be filtered.<br><br>The `afterTime` date format will be the same as provided in [`comments.createUpdateDateFormat` in response payload for Entity Type – Get API](entity-type-get.md#response-payload), and `timeZone` will be the same as provided in [`timeZone` in response payload for Server-Info API](server-info.md#response-payload).<br><br>- If the end system API does not support time-based filtering on comments, this parameter may be ignored.<br>- If the end system API supports time-based filtering on comments, the connector should return the comments with a createdUpdatedTime greater than the specified afterTime.<br>- If “null” is passed in the “afterTime” then connector needs to return all the comments without any time filter applied.
 
 ## Response Payload
 ```json
@@ -40,4 +40,5 @@ GET: /entities/{entityTypeId}/{entityId}/comments?projectId={projectId}&startInd
 
 
 >**Note**": The key names in the above JSON will be as per the comment field names in your connector.
+
 
