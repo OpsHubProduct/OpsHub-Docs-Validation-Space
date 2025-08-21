@@ -2,7 +2,7 @@
 This section will guide the users on how to register and edit the connectors.
 
 # Register Connectors
-Connectors can be registered from the administration page by clicking the "plug" icon ![Register Connector Icon](../assets/RegisterConnectorIconOnly.png =25x) present in the left sidebar as shown in the image below:
+Connectors can be registered from the administration page by clicking the "plug" icon <img src="../assets/RegisterConnectorIconOnly.png" alt="Register Connector Icon" width="25"/> present in the left sidebar as shown in the image below:
 
 <p align="center">
   <img src="../assets/AddButtonRegisterConnector.png" width="1100px" height="1100px"/>
@@ -68,3 +68,4 @@ While editing the connector, if the refresh connector metadata is checked, a war
 >**Note**: If you want to refresh metadata for a connector, it is advisable to verify the systems and integrations that will be affected.  
 
 This warning box contains instructions on how the systems and integrations created on the connector will be affected if you choose to refresh the metadata. As shown in the image, this warning also shows the particular field that is removed and the screens affected by it.
+
