@@ -31,9 +31,9 @@ POST: /entities/{entityTypeId}/{entityId}/comments?
 
 | Name | Required | Type | Description |
 |------|---------|------|-------------|
-| <comment title Field> | True | String | The name will be the field name of the comment title, as passed in entity-type configuration API. The value will be the text that needs to be set in the comment title |
-| <comment body Field> | True | String | The name will be the field name of the comment body, as passed in entity-type configuration API. The value will be the text that needs to be set in the comment body |
-| <comment Type Field> | False | String | If there are different types of comments, then OpsHub will pass the type of comment that needs to be added |
+| `<comment title Field>` | True | String | The name will be the field name of the comment title, as passed in entity-type configuration API. The value will be the text that needs to be set in the comment title |
+| `<comment body Field>` | True | String | The name will be the field name of the comment body, as passed in entity-type configuration API. The value will be the text that needs to be set in the comment body |
+| `<comment Type Field>` | False | String | If there are different types of comments, then OpsHub will pass the type of comment that needs to be added |
 
 ### Response Payload
 
@@ -50,5 +50,6 @@ API should add a new comment and return the comment id and date on which it got 
 
 | Name | Required | Type | Description |
 |------|---------|------|-------------|
-| <comment id Field> | True | String | The name will be the field name of comment id, as passed in entity-type configuration API. The value will be the id of the comment that just got added |
-| <comment created Date Field> | True | Date | The name will be the field name of the comment created date, as passed in entity-type configuration API. The value will be the time at which the comment got added |
+| `<comment id Field>` | True | String | The name will be the field name of comment id, as passed in entity-type configuration API. The value will be the id of the comment that just got added |
+| `<comment created Date Field>` | True | Date | The name will be the field name of the comment created date, as passed in entity-type configuration API. The value will be the time at which the comment got added |
+
