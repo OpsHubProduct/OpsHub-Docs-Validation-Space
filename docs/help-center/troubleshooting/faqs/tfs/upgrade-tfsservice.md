@@ -5,4 +5,5 @@ To configure integrations for Team Foundation Server (TFS)/Azure DevOps, registe
 ## Solution
 
 Delete the old OpsHubTFSService installed on your system and re-register the new OpsHubTFSService.  
-Refer [Team Foundation Server ALM System / Azure DevOps](../../../../manage/upgrade/post-migration-checklist.md#team-foundation-server-alm-system-azure-devops) under "Upgrade system proxy" section to update OpsHubTFSService.
+Refer [Team Foundation Server ALM System / Azure DevOps](https://docs.myopshub.com/oim/index.php/Post-Migration_Checklist#Team_Foundation_Server_ALM_System_.2F_Azure_DevOps)) under "Upgrade system proxy" section to update OpsHubTFSService.
+
