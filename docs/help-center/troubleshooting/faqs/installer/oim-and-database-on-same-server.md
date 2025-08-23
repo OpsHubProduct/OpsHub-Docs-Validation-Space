@@ -5,10 +5,11 @@ However, you can use one of the other external databases like MYSQL, MSSQL, ORAC
 
 ## Solution
 
-It is not mandatory to have the database on the same machine where {{SITENAME}} is installed. They can reside on different machines as long as  [database pre-requisites](../../../../getting-started/installation.md#database-prerequisites) and  [hardware pre-requisites](../../../../getting-started/installation.md#hardware-prerequisites) are fulfilled for them. The machine on which {{SITENAME}} is installed should be able to access the machine on which the database has been placed.  
+It is not mandatory to have the database on the same machine where {{SITENAME}} is installed. They can reside on different machines as long as  [database pre-requisites](../../../../getting-started/prerequisites.md#database-prerequisites) and  [hardware pre-requisites](../../../../getting-started/prerequisites.md#hardware-prerequisites) are fulfilled for them. The machine on which {{SITENAME}} is installed should be able to access the machine on which the database has been placed.  
 It is better to have strong connectivity to the database machine to ensure smooth performance of {{SITENAME}}.
 
 > **Note**: Installation of {{SITENAME}} with HSQL database will automatically create the database on the same machine, as HSQL is the default embedded database of {{SITENAME}}.
+
 
 
 
