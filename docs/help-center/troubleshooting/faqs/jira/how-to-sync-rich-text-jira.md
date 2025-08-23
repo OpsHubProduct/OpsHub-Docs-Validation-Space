@@ -19,7 +19,7 @@ By default, **Description** field in Jira is considered as Wiki field and you wi
 **Steps for solving the issue:**
 1. Go to the mapping for which you are facing the formatting issue.
 2. For expanding the advance mapping settings, click ![AdvanceMappingExpandv2.png](../../../../assets/AdvanceMappingExpandv2.png) on the frame separator.
-3. [View/Edit XSLT Configurations](../../../../integrate/mapping-configuration#view-edit-xslt-configurations-options) can be used to change the default mapping XSLT. Click ![XSLT_icon_blue.png](../../../../assets/XSLT_icon_blue.png) to change the default behaviour of the field for which you are facing this formatting issue.
+3. [View/Edit XSLT Configurations](../../../../integrate/mapping-configuration.md#view-edit-xslt-configurations-options) can be used to change the default mapping XSLT. Click ![XSLT_icon_blue.png](../../../../assets/XSLT_icon_blue.png) to change the default behaviour of the field for which you are facing this formatting issue.
 4. You can find the values for the Source and Target fields' names in the xslt format, which you can use to substitute in the snippets given below.
 5. Find your snippet in cases given below. In these snippets, we have considered the source and target fields as `Source Field` and `Target Field` respectively. Before using a snippet, replace the `Source-space-Field` and `Target-space-Field` with the value that you receive during advance mapping.
 
@@ -61,6 +61,7 @@ If you are synchronizing the Wiki field from Jira to any simple Text field (non-
                 select="utils:convertWikiToText(SourceXML/updatedFields/Property/Source-space-Field)"/>
 </Target-space-Field>
 ```
+
 
 
 
