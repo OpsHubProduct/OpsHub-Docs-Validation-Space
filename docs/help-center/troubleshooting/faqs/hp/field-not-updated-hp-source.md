@@ -11,3 +11,4 @@ In Micro Focus ALM/QC, **history** must be enabled for the fields that are used 
 ## Solution
 
 * To enable history in Micro Focus ALM/QC, Please refer [How to enable history of fields to be mapped](../../../../connectors/micro-focus-alm-qc.md#how-to-enable-history-of-fields-to-be-mapped).
+
