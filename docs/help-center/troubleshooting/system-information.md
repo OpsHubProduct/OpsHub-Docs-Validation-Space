@@ -2,16 +2,25 @@
 
 To view system information, click on the user profile icon in the top-right corner of the navigation bar.
 
-![System Info Navbar](../assets/systemInfonavbar.png)
+<p align="center">
+  <img src="../../../assets/systemInfonavbar.png"/>
+</p>
+
 
 Then click on System Information.
 
-![System Info Menu](../assets/systemInfo.png)
+<p align="center">
+  <img src="../../../assets/systemInfo.png"/>
+</p>
+
 
 It will display the following window, with two sections: **Application Information** and **Machine Information**.  
-![Note](../assets/Note.jpg) As highlighted in the screenshot below, system information can be exported in a pdf format.
+>**Note**: As highlighted in the screenshot below, system information can be exported in a pdf format.
 
-![System Info Window](../assets/systemInfoWindow12.png)
+<p align="center">
+  <img src="../../../assets/systemInfoWindow12.png"/>
+</p>
+
 
 # System Information Overview
 
@@ -69,3 +78,4 @@ It will display the following window, with two sections: **Application Informati
 * **CPU Cores:** Number of CPU cores
 * **Time Zone & Region:** Time zone settings
 * **Total Physical Memory:** Total system memory
+
