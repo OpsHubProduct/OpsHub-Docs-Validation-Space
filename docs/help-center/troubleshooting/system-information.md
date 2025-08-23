@@ -3,14 +3,14 @@
 To view system information, click on the user profile icon in the top-right corner of the navigation bar.
 
 <p align="center">
-  <img src="../../../assets/systemInfonavbar.png"/>
+  <img src="../../../assets/SystemInfonavbar.png"/>
 </p>
 
 
 Then click on System Information.
 
 <p align="center">
-  <img src="../../../assets/systemInfo.png"/>
+  <img src="../../../assets/SystemInfo.png"/>
 </p>
 
 
@@ -18,7 +18,7 @@ It will display the following window, with two sections: **Application Informati
 >**Note**: As highlighted in the screenshot below, system information can be exported in a pdf format.
 
 <p align="center">
-  <img src="../../../assets/systemInfoWindow12.png"/>
+  <img src="../../../assets/SystemInfoWindow12.png"/>
 </p>
 
 
@@ -78,4 +78,5 @@ It will display the following window, with two sections: **Application Informati
 * **CPU Cores:** Number of CPU cores
 * **Time Zone & Region:** Time zone settings
 * **Total Physical Memory:** Total system memory
+
 
