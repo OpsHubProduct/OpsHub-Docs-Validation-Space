@@ -56,6 +56,7 @@ Following are the examples to configure Area-Path when TFS/Azure DevOps is one o
 </Area-space-Path>
 ```
 
-Replace `<Source Project Name>` and `<Target Project Name>` with source and target project names respectively which have been selected during [Integration Configuration](integration_configuration) under **Select Project to Sync** section.
+Replace `<Source Project Name>` and `<Target Project Name>` with source and target project names respectively which have been selected during [Integration Configuration](../../../../integrate/integration-configuration.md) under **Select Project to Sync** section.
 
 Similar above mapping is applicable for Iteration Path also, you need to replace `Iteration-space-Path` with `Area-space-Path`.
+
