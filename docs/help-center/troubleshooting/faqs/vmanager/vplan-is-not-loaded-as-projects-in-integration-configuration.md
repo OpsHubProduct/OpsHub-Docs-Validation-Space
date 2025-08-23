@@ -10,7 +10,10 @@ Integration is supported with the vPlan in the database only. Hence, vPlans will
   * Open **"Verisium Manager Desktop Client"**, i.e., Launch Verisium Manager desktop client by using `vmanager` command in the Command Prompt of the machine where **Verisium Manager client** is configured.
   * Provide credentials, if client asks for the UserName and Password.
   * Select **"View"** → **"Configurations"**  
-    ![vmgr_config.png](../../../../assets/vmgr_config.png)
+   <p align="center">
+  <img src="../../../../assets/vmgr_config.png" alt="vmgr_config.png" />
+   </p>
+   
     * Select **"VPlan"**
     * Enable **"vPlan in Database"**  
       ![vmgr_enable_db.png](../../../../assets/vmgr_enable_db.png)  
@@ -21,4 +24,5 @@ Integration is supported with the vPlan in the database only. Hence, vPlans will
   3. Please enter the preferred name in the **"vPlan name"** textbox.
   4. Select **"OK"** button.  
      ![vmgr_create_vplan.png](../../../../assets/vmgr_create_vplan.png)
+
 
