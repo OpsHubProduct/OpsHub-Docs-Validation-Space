@@ -17,7 +17,7 @@ Now, the user wants to synchronize this hierarchy of relationship as folder stru
 * Create mapping for 'Epic' to 'Requirement' with the default value for 'Requirement-Type' as 'Folder'. For 'Requirement-Type' field, default value is required, so map 'Requirement-Type' with None and set default value as 'Folder'.  
   ** To configure default mapping, please refer [default value mappings](../../../../integrate/mapping-configuration.md#default-mapping). For example, please refer the screenshot of {{SITENAME}} mapping page given below for 'Epic' to 'Requirement' mapping with default value 'Folder' for 'Requirement-Type'.
 
-![Epic to Requirement Mapping](../../../../assets/MICRO-FOCUS-FAQ-mapping-1.PNG)
+![Epic to Requirement Mapping](../../../../assets/MICRO-FOCUS-FAQ-mapping-1.png)
 
 * In this mapping, map the relationships to synchronize parent-child relationship defined in Version One as folder-hierarchy in Micro Focus QC/ALM. To map the relationships, click **Relationships** in {{SITENAME}} mapping page. A new window in which linkage between entities can be configured will open.
 
@@ -30,9 +30,10 @@ Now, the user wants to synchronize this hierarchy of relationship as folder stru
 * Create mapping for 'Story' to 'Requirement' with the default value for 'Requirement-Type' as 'Functional'. For 'Requirement-Type' field, default value is required, so map 'Requirement-Type' with None and set default value as 'Folder'.  
   ** For example, please refer the screenshot of {{SITENAME}} mapping page below for mapping of 'Backlog Item' (Story) of Version One to 'Requirement' of Micro Focus QC/ALM with default value 'Functional' for 'Requirement-Type'.
 
-![Story to Requirement Mapping](../../../../assets/MICRO-FOCUS-FAQ-mapping-3.PNG)
+![Story to Requirement Mapping](../../../../assets/MICRO-FOCUS-FAQ-mapping-3.png)
 
 * In this mapping, configure the Relationships (Parent-Child) as configured in the 'Epic' to 'Requirement' mapping.
+
 
 
 
