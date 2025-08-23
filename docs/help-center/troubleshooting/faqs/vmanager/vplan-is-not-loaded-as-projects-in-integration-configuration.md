@@ -1,5 +1,5 @@
 ## Description
-The user has configured the Verisium Manager System in the OpsHub Integration Manager. However, vPlans are not loaded in the Project list of Integration Configuration / Mapping configuration.
+The user has configured the Verisium Manager System in the {{SITENAME}}. However, vPlans are not loaded in the Project list of Integration Configuration / Mapping configuration.
 
 ## Cause
 Integration is supported with the vPlan in the database only. Hence, vPlans will be loaded in the Project list of Integration Configuration / Mapping configuration only if there exist a vPlan in the database.
@@ -21,3 +21,4 @@ Integration is supported with the vPlan in the database only. Hence, vPlans will
   3. Please enter the preferred name in the **"vPlan name"** textbox.
   4. Select **"OK"** button.  
      ![vmgr_create_vplan.png](../../../../assets/vmgr_create_vplan.png)
+
