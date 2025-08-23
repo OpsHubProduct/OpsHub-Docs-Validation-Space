@@ -9,7 +9,7 @@ Are you facing formatting issue while synchronizing these field cases:
 This page will guide you through the cause and solution for the same.
 
 ## Cause
-If OpsHub Integration Manager is able to decide whether the source or target Jira field is of type text or wiki then OpsHub Integration Manager would be able to handle the formatting by itself. But the formatting cannot be handled by default by OpsHub Integration Manager as the Jira API doesn't provide the information whether a text field is a simple text field or wiki type of field.
+If {{SITENAME}} is able to decide whether the source or target Jira field is of type text or wiki then {{SITENAME}} would be able to handle the formatting by itself. But the formatting cannot be handled by default by {{SITENAME}} as the Jira API doesn't provide the information whether a text field is a simple text field or wiki type of field.
 
 Therefore, irrespective of whether the field is wiki or text type of field in Jira, it is by default considered as text type of field during the field mapping.
 
@@ -61,5 +61,6 @@ If you are synchronizing the Wiki field from Jira to any simple Text field (non-
                 select="utils:convertWikiToText(SourceXML/updatedFields/Property/Source-space-Field)"/>
 </Target-space-Field>
 ```
+
 
 
