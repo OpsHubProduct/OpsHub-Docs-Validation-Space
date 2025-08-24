@@ -156,7 +156,7 @@ If you are facing a complex failure for which you are seeking help from support 
 * Go to the integration for which you are facing a failure.
 * Hover over More ![Stack_Icon](../../assets/Stack-Icon.png) icon, you will get an option to export Integration Details as shown in the image below.
 
-![Export_Integration_Details](../../assets/ExportIntegration-Details.png)  
+![Export_Integration_Details](../../assets/Export-Integration-Details.png)  
 
 * Click on the **Dump Integration Data** button. You will get a zip file with the name: **IntegrationDetails.zip**.
 * Zip contains integration configurations, sync logs, mapping, and failure details; it does not contain any sensitive data related to the integration user. 
@@ -165,6 +165,7 @@ You can also export Integration Details of multiple integrations as shown below.
 
 * Select integrations for which you want to export Integration Details.
 * Hover over More ![Stack_Icon](../../assets/Stack-Icon.png) icon enabled at the top level and follow the same process as described above.
+
 
 
 
