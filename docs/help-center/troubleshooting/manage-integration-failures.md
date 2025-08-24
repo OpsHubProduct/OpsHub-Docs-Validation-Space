@@ -6,7 +6,7 @@ Here is a video on different types of failures and how to manage them:
 
 ![Video](../assets/Video.jpg)
 
-> ![Note](../assets/Note.jpg) Instead of event failure(s) for a single entity, if you want to see the failures for all integrations configured on your OpsHub Integration Manager instance, delete the currently selected integration and hit the search button. You can also add multiple integrations by clicking on the text box below the currently selected integration(s) and add other integration name(s).
+>**Note**: Instead of event failure(s) for a single entity, if you want to see the failures for all integrations configured on your OpsHub Integration Manager instance, delete the currently selected integration and hit the search button. You can also add multiple integrations by clicking on the text box below the currently selected integration(s) and add other integration name(s).
 
 ## How to navigate to the Event Failure Management section
 
@@ -33,7 +33,7 @@ To view the Event Failure Management section, follow the steps below:
     * **Enabled**: Displays a list of failures filtered by the selected folder.
     * **Disabled**: Displays a list of failures across allowed folders.
 
-> ![Note](../assets/Note.jpg) If User Access Control is disabled, failures across all folders will be displayed.
+>**Note**: If User Access Control is disabled, failures across all folders will be displayed.
 
 * Instead of event failures of a single entity, if you want to see the failures of every integration, you can delete the currently selected integration name on the top left and hit the search button. Doing so will show all the event processing failures through out the OIM.
 * You can also add multiple integration by clicking on the textbox below the currently selected integration name and adding other integrations.
@@ -90,7 +90,7 @@ Once you click the **View Failed Event** option against a failure, a pop-up scre
 
 * **Source Event**: Source Event refers to the event retrieved from the source system. It contains a list of key-value pairs for properties of the issue type (e.g., Bug, User Story) or entity, such as AssignedTo, Created Date, eventType. Also, some fields that help OpsHub Integration Manager maintain records for the entity, such as InternalId and EventUUId.
 
-> ![Note](../assets/Note.jpg) Here's an example of the pop-up screen for an integration's failed event. The details may vary from failure to failure:
+>**Note**: Here's an example of the pop-up screen for an integration's failed event. The details may vary from failure to failure:
 
 ![ViewFailedEvent_1](../assets/ViewFailedEvent_1.png)
 
@@ -98,22 +98,22 @@ Once you click the **View Failed Event** option against a failure, a pop-up scre
 
 ![ViewFailedEvent_2](../assets/ViewFailedEvent_2.png)
 
-> ![Note](../assets/Note.jpg) Slide the toggle to switch between old values and new values of the mapping input.  
-> ![Note](../assets/Note.jpg) The 'old values' in the mapping input refer to the previously fetched values from the source entity. The 'new values' in the mapping input refer to the current values of an entity that has been fetched from the source system.
+>**Note**: Slide the toggle to switch between old values and new values of the mapping input.  
+>**Note**: The 'old values' in the mapping input refer to the previously fetched values from the source entity. The 'new values' in the mapping input refer to the current values of an entity that has been fetched from the source system.
 
 * **Mapping Output**: The Mapping Output option refers to the XML output for the source event as per the configured mapping.
 
 ![ViewFailedEvent_3](../assets/ViewFailedEvent_3.png)
 
-> ![Note](../assets/Note.jpg) Slide the toggle to switch between old values and new values for the mapping output.  
-> ![Note](../assets/Note.jpg) The 'old values' in the mapping output refer to the transformed values(old) for the given mapping input. The 'new values' in the mapping output refer to the values of an entity after they have been transformed as per the configured mapping.
+>**Note**: Slide the toggle to switch between old values and new values for the mapping output.  
+>**Note**: The 'old values' in the mapping output refer to the transformed values(old) for the given mapping input. The 'new values' in the mapping output refer to the values of an entity after they have been transformed as per the configured mapping.
 
 * **Reconciliation Data**: If the configured job is for **reconciliation** and a failure occurs because of it, another option for reconciliation data will appear. This option contains rules input and rules output for the configured reconciliation rules.
 
 ![ViewFailedEvent_4](../assets/ViewFailedEvent_4.png)
 
-> ![Note](../assets/Note.jpg) Slide the toggle to switch between rules input and rules output.  
-> ![Note](../assets/Note.jpg) The rules input is the 'Mapping Input XML' for the configured mapping along with a special field called 'diffProperties', crucial for reconciliation. The rules output is the 'Mapping Output XML' which are the transformed values of fields configured for reconciliation.
+>**Note**: Slide the toggle to switch between rules input and rules output.  
+>**Note**: The rules input is the 'Mapping Input XML' for the configured mapping along with a special field called 'diffProperties', crucial for reconciliation. The rules output is the 'Mapping Output XML' which are the transformed values of fields configured for reconciliation.
 
 * In the following two cases, the Mapping Input, Mapping Output, and Reconciliation Data options will provide no information:
   * There has been a problem during the execution of the transformation
@@ -124,14 +124,14 @@ Once you click the **View Failed Event** option against a failure, a pop-up scre
 
 * If the failures are present in the older versions(before V7.170 upgrade): In that case, to view the mapping input & mapping output, the failures should be retried to have the information.
 
-> ![Note](../assets/Note.jpg) If the failures are not retried after updating the source event, and you view the failed event again, an icon will appear in the top right corner of the Mapping Input, Mapping Output, and Reconciliation Data options. This icon indicates that the XML values are not the latest, and you should retry and refresh the failed event. Refer to the below image for the same:  
+>**Note**: If the failures are not retried after updating the source event, and you view the failed event again, an icon will appear in the top right corner of the Mapping Input, Mapping Output, and Reconciliation Data options. This icon indicates that the XML values are not the latest, and you should retry and refresh the failed event. Refer to the below image for the same:  
 ![ViewFailedEvent_7](../assets/ViewFailedEvent_7.png)
 
 ## How to read an error message
 
 Once you click the **Show Details** option against an error, **the Failure Details** pop-up appears. This pop-up has the following details related to the error.
 
-> ![Note](../assets/Note.jpg) The following image shows the Jira-ServiceNow integration specific error. The errors may slightly vary from one integration to another. 
+>**Note**: The following image shows the Jira-ServiceNow integration specific error. The errors may slightly vary from one integration to another. 
 
 ![Failure-Management](../assets/Failure-Management.png)
 
@@ -165,3 +165,4 @@ You can also export Integration Details of multiple integrations as shown below.
 
 * Select integrations for which you want to export Integration Details.
 * Hover over More ![Stack_Icon](../assets/Stack_Icon.PNG) icon enabled at the top level and follow the same process as described above.
+
