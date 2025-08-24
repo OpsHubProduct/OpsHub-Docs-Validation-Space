@@ -31,8 +31,8 @@ The Integration Sync Report includes:
 - **Last Processed Time:** This column show the time when entity was last processed by OpsHub Integration Manager  
 - **No. of Failures:** This column shows the number of failed events for a given entity. By clicking on the number, you will be navigated to failed events for that entity.  
 
-<p align="cent/er">
-  <img src="../../assets/Report-Image-3a.PNG"/>
+<p align="center">
+  <img src="../../assets/Report-Image-3a.png"/>
 </p>
 
 # Filtering an Integration Sync Report
@@ -68,6 +68,7 @@ Enter the details in the field that you want to use for filtering the data. Then
   1. **Active:** Entity is accessible in the end system  
   2. **Not Accessible:** Entity is not accessible in the end system  
   3. **Deleted By Sync:** Entity is Logically deleted/Soft deleted by OpsHub Integration Manager in the end system as per details given on [Source Delete Synchronization](../../integrate/source-delete-synchronization.md) page.
+
 
 
 
