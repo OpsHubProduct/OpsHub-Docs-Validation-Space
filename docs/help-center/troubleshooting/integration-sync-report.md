@@ -6,7 +6,7 @@ Integration Sync Report provides the information for each entity synchronized by
 
 To view the report for any integration, go to an integration, click the **Show List** button. From the list, click **Last Event ID** or **Last Event Time** button.  
 <p align="center">
-  <img src="../../assets/Report-Image-1a.PNG"/>
+  <img src="../../assets/Report-Image-1a.png"/>
 </p>
 
 <p align="center">
@@ -68,5 +68,6 @@ Enter the details in the field that you want to use for filtering the data. Then
   1. **Active:** Entity is accessible in the end system  
   2. **Not Accessible:** Entity is not accessible in the end system  
   3. **Deleted By Sync:** Entity is Logically deleted/Soft deleted by OpsHub Integration Manager in the end system as per details given on [Source Delete Synchronization](../../integrate/source-delete-synchronization.md) page.
+
 
 
