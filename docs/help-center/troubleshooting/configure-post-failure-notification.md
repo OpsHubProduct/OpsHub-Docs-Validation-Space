@@ -84,6 +84,8 @@ If you are not getting failure alert emails, you should go to Global Failures an
 - To change the trigger time for the Post Failure Notification job, go to the OpsHub system under the System tab.
 - By default, the value for **Post-Notification Scheduler** will be set to **30 Minute Schedule**. Select an option from drop down to schedule the Post Failure Notification job.
 
-![OpsHub_System1.png](../../assets/OpsHub_System1.png)
-![OpsHub_System_Scheduler.png](../../assets/OpsHub_System_Scheduler.png)
+![OpsHub_System1.png](../../assets/OpsHub-System1.png)
+
+![OpsHub_System_Scheduler.png](../../assets/OpsHub-System-Scheduler.png)
+
 
