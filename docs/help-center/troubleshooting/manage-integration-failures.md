@@ -4,7 +4,7 @@ Event Failure Management is a way to keep track of all failures that occur durin
 
 Here is a video on different types of failures and how to manage them:
 
-![Video](../assets/Video.jpg)
+{% embed url="https://www.youtube.com/watch?v=6FrZXa3xrMY" %}
 
 >**Note**: Instead of event failure(s) for a single entity, if you want to see the failures for all integrations configured on your OpsHub Integration Manager instance, delete the currently selected integration and hit the search button. You can also add multiple integrations by clicking on the text box below the currently selected integration(s) and add other integration name(s).
 
@@ -165,6 +165,7 @@ You can also export Integration Details of multiple integrations as shown below.
 
 * Select integrations for which you want to export Integration Details.
 * Hover over More ![Stack_Icon](../../assets/Stack-Icon.png) icon enabled at the top level and follow the same process as described above.
+
 
 
 
