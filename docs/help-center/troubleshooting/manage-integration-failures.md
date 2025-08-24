@@ -92,25 +92,25 @@ Once you click the **View Failed Event** option against a failure, a pop-up scre
 
 >**Note**: Here's an example of the pop-up screen for an integration's failed event. The details may vary from failure to failure:
 
-![ViewFailedEvent_1](../../assets/ViewFailedEvent_1.png)
+![ViewFailedEvent_1](../../assets/ViewFailedEvent-1.png)
 
 * **Mapping Input**: The Mapping Input option refers to the XML input for the source event as per the configured mapping. Here, all properties of the source entity are retrieved from the source system.
 
-![ViewFailedEvent_2](../../assets/ViewFailedEvent_2.png)
+![ViewFailedEvent_2](../../assets/ViewFailedEvent-2.png)
 
 >**Note**: Slide the toggle to switch between old values and new values of the mapping input.  
 >**Note**: The 'old values' in the mapping input refer to the previously fetched values from the source entity. The 'new values' in the mapping input refer to the current values of an entity that has been fetched from the source system.
 
 * **Mapping Output**: The Mapping Output option refers to the XML output for the source event as per the configured mapping.
 
-![ViewFailedEvent_3](../../assets/ViewFailedEvent_3.png)
+![ViewFailedEvent_3](../../assets/ViewFailedEvent-3.png)
 
 >**Note**: Slide the toggle to switch between old values and new values for the mapping output.  
 >**Note**: The 'old values' in the mapping output refer to the transformed values(old) for the given mapping input. The 'new values' in the mapping output refer to the values of an entity after they have been transformed as per the configured mapping.
 
 * **Reconciliation Data**: If the configured job is for **reconciliation** and a failure occurs because of it, another option for reconciliation data will appear. This option contains rules input and rules output for the configured reconciliation rules.
 
-![ViewFailedEvent_4](../../assets/ViewFailedEvent_4.png)
+![ViewFailedEvent_4](../../assets/ViewFailedEvent-4.png)
 
 >**Note**: Slide the toggle to switch between rules input and rules output.  
 >**Note**: The rules input is the 'Mapping Input XML' for the configured mapping along with a special field called 'diffProperties', crucial for reconciliation. The rules output is the 'Mapping Output XML' which are the transformed values of fields configured for reconciliation.
@@ -120,12 +120,12 @@ Once you click the **View Failed Event** option against a failure, a pop-up scre
   * If failure occurred before the execution of the transformation,
 
 * A warning will be given for the above three cases. Following is the example of the warning message:  
-![ViewFailedEvent_5](../../assets/ViewFailedEvent_5.png)
+![ViewFailedEvent_5](../../assets/ViewFailedEvent-5.png)
 
 * If the failures are present in the older versions(before V7.170 upgrade): In that case, to view the mapping input & mapping output, the failures should be retried to have the information.
 
 >**Note**: If the failures are not retried after updating the source event, and you view the failed event again, an icon will appear in the top right corner of the Mapping Input, Mapping Output, and Reconciliation Data options. This icon indicates that the XML values are not the latest, and you should retry and refresh the failed event. Refer to the below image for the same:  
-![ViewFailedEvent_7](../../assets/ViewFailedEvent_7.png)
+![ViewFailedEvent_7](../../assets/ViewFailedEvent-7.png)
 
 ## How to read an error message
 
@@ -165,6 +165,7 @@ You can also export Integration Details of multiple integrations as shown below.
 
 * Select integrations for which you want to export Integration Details.
 * Hover over More ![Stack_Icon](../../assets/Stack-Icon.png) icon enabled at the top level and follow the same process as described above.
+
 
 
 
