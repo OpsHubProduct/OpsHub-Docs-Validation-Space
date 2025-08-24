@@ -133,7 +133,7 @@ Once you click the **Show Details** option against an error, **the Failure Detai
 
 >**Note**: The following image shows the Jira-ServiceNow integration specific error. The errors may slightly vary from one integration to another. 
 
-![Failure-Management](../assets/Failure-Management.png)
+![Failure-Management](../../assets/Failure-Management.png)
 
 * **Integration Name**: Name of the integration for which the failure has been recorded
 * **Workflow**: Name of the workflow, executing which the failure has occurred
@@ -165,6 +165,7 @@ You can also export Integration Details of multiple integrations as shown below.
 
 * Select integrations for which you want to export Integration Details.
 * Hover over More ![Stack_Icon](../../assets/Stack-Icon.png) icon enabled at the top level and follow the same process as described above.
+
 
 
 
