@@ -6,14 +6,25 @@
 # How to navigate to the Integration Sync Logs
 
 To view the logs for any integration, navigate to integration and click the **Show List** button. From the list, click the **View Log** button.  
-![synclog1](../assets/synclog1.PNG)  
-![synclog1a](../assets/synclog1a.PNG)
+<p align="center">
+  <img src="../../assets/Synclog1.png"/>
+</p>
+
+<p align="center">
+  <img src="../../assets/Synclog1a.png"/>
+</p>
 
 # Settings
 
 - Click on the Setting button on the Sync log window to configure log settings as mentioned below:  
-  ![synclog10](../assets/synclog10.png)  
-  ![synclog11](../assets/synclog11.png)
+ <p align="center">
+  <img src="../../assets/Synclog10.png"/>
+</p>
+
+<p align="center">
+  <img src="../../assets/Synclog11.png"/>
+</p>
+
 
 - **Class/Package Name:** The name of the package or class for which logs need to be monitored. To monitor the logs within the 'com.opshub', package 'com.opshub' should be entered here.
 
@@ -43,32 +54,49 @@ To view the logs for any integration, navigate to integration and click the **Sh
 # Refresh log
 
 **Refresh log:** Button on the top of the window can be used to refresh the logs to show the latest logged data.  
-![synclog3](../assets/synclog3.png)
+<p align="center">
+  <img src="../../assets/Synclog3.png"/>
+</p>
 
 **Auto Refresh:** Toggle button which can be set **on** to automatically refresh logs every few seconds (2-3 seconds).  
-![synclog4](../assets/synclog4.png)
+<p align="center">
+  <img src="../../assets/Synclog4.png" alt="Synclog4/>
+</p>
+
 
 # Create-Update Delete Mode
 
 **Create-Update Delete Mode:** Toggle button is used to set the **type of synchronization** logs that the user would like to view.  
-![synclog5](../assets/synclog5.png)
+<p align="center">
+  <img src="../../assets/Synclog5.png"/>
+</p>
+
 
 # Forward Backward Direction
 
 **Forward Backward:** The Toggle button is used to set the direction of the integration the user would like to view.  
-![synclog6](../assets/synclog6.png)
+<p align="center">
+  <img src="../../assets/Synclog6.png"/>
+</p>
+
 
 # Export logs
 
 - Click the Export Logs button to export logs as a zip file. Here, the user can download the logs and analyze the logging for debugging purpose.  
-  ![synclog7](../assets/synclog7.png)
+<p align="center">
+  <img src="../../assets/Synclog7.png"/>
+</p>
+
 
 # Word Wrap
+<p align="center">
+  <img src="../../assets/Systemlog-wordwrap" />
+</p>
 
-![systemlog_wordwrap](../assets/systemlog_wordwrap.png)
 
 Click on Word Wrap to enable/disable the word wrapping behavior in the log viewer.
 
 - Word wrap is enabled by default.
 - When word wrap is enabled, long log entries are wrapped, making them easier to read without horizontal scrolling.
 - When word wrap is disabled, log entries remain on a single line, preserving the visual alignment of timestamps and structure. However, horizontal scrolling may be needed.
+
