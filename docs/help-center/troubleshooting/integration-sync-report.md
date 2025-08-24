@@ -6,11 +6,11 @@ Integration Sync Report provides the information for each entity synchronized by
 
 To view the report for any integration, go to an integration, click the **Show List** button. From the list, click **Last Event ID** or **Last Event Time** button.  
 <p align="center">
-  <img src="../../assets/Report_Image 1a.PNG"/>
+  <img src="../../assets/Report-Image-1a.PNG"/>
 </p>
 
 <p align="center">
-  <img src="../../assets/Report_Image 2a.png"/>
+  <img src="../../assets/Report-Image-2a.png"/>
 </p>
 
 
@@ -31,8 +31,8 @@ The Integration Sync Report includes:
 - **Last Processed Time:** This column show the time when entity was last processed by OpsHub Integration Manager  
 - **No. of Failures:** This column shows the number of failed events for a given entity. By clicking on the number, you will be navigated to failed events for that entity.  
 
-<p align="center">
-  <img src="../assets/Report_Image 3a.PNG"/>
+<p align="cent/er">
+  <img src="../../assets/Report-Image-3a.PNG"/>
 </p>
 
 # Filtering an Integration Sync Report
@@ -48,7 +48,7 @@ You can filter data from an Integration Sync Report by using the following param
 - **Target Entity Sync State:** Search the records with the target entity sync [state](#state) specified in the field  
 
 <p align="center">
-  <img src="../assets/Report_Image 4a.png"/>
+  <img src="../../assets/Report-Image-4a.png"/>
 </p>
 
 Enter the details in the field that you want to use for filtering the data. Then, click the **Search** button.
@@ -68,4 +68,5 @@ Enter the details in the field that you want to use for filtering the data. Then
   1. **Active:** Entity is accessible in the end system  
   2. **Not Accessible:** Entity is not accessible in the end system  
   3. **Deleted By Sync:** Entity is Logically deleted/Soft deleted by OpsHub Integration Manager in the end system as per details given on [Source Delete Synchronization](../../integrate/source-delete-synchronization.md) page.
+
 
