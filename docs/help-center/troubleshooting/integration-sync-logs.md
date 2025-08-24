@@ -90,7 +90,7 @@ To view the logs for any integration, navigate to integration and click the **Sh
 
 # Word Wrap
 <p align="center">
-  <img src="../../assets/Systemlog-wordwrap" />
+  <img src="../../assets/Systemlog-wordwrap.png" />
 </p>
 
 
@@ -99,4 +99,5 @@ Click on Word Wrap to enable/disable the word wrapping behavior in the log viewe
 - Word wrap is enabled by default.
 - When word wrap is enabled, long log entries are wrapped, making them easier to read without horizontal scrolling.
 - When word wrap is disabled, log entries remain on a single line, preserving the visual alignment of timestamps and structure. However, horizontal scrolling may be needed.
+
 
