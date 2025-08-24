@@ -80,9 +80,9 @@ Click ![editruleicon](../../assets/editruleicon.png) to view failed event.
 * ![Showfailures](../../assets/Showfailures.png) **Show Dependent Failures**: View all dependent failures for a single entity - you can retry, delete, or edit event XML fpr these failures  
 Click ![Showfailures](../../assets/Showfailures.png) to see all dependent failures of an entity.
 
-* ![failuredetails](../../assets/failuredetails.png) **Show Failure Details**: See detailed information about the selected failure
+* ![failuredetails](../../assets/Failuredetails.png) **Show Failure Details**: See detailed information about the selected failure
 
-Click ![failuredetails](../../assets/failuredetails.png) to see detailed information about the selected failure.
+Click ![failuredetails](../../assets/Failuredetails.png) to see detailed information about the selected failure.
 
 ## View Failed Event
 
@@ -165,6 +165,7 @@ You can also export Integration Details of multiple integrations as shown below.
 
 * Select integrations for which you want to export Integration Details.
 * Hover over More ![Stack_Icon](../../assets/Stack-Icon.png) icon enabled at the top level and follow the same process as described above.
+
 
 
 
