@@ -17,7 +17,7 @@ To view the Event Failure Management section, follow the steps below:
 * In the **Integration Health** column, for each integration you'll see a number denoting the number of failed events for that integration. If the number is greater than 0,  click the number to view the failure(s) and diagnose it further.
 * Once you click on the number, you'll be redirected to the *Integration Job Error(s)* page. There you'll see a table listing all the event failures for that integration.
 
-![EventFailure3a](../assets/EventFailure3a.png)
+![EventFailure3a](../../assets/EventFailure3a.png)
 
 ## Filtering failures
 
@@ -40,14 +40,14 @@ To view the Event Failure Management section, follow the steps below:
 
 For example, in the image below, we have filtered the errors with Error Code '0041'.
 
-![AdvanceSearcha](../assets/AdvanceSearcha.png)
+![AdvanceSearcha](../../assets/AdvanceSearcha.png)
 
 ## Grouping failures
 
 * You can group and filter failures in categories from the **Select to group** drop-down. The categories in which you can group failures are:  **Error Message**, **Error Code**, and **Integration Name.**
 * Select the grouping in which you want to view the failure. The errors relevant for that group will appear.
 
-![Group1](../assets/Group1.png)
+![Group1](../../assets/Group1.png)
 
 ## Action on failures
 
@@ -55,34 +55,34 @@ You can perform one shot actions on grouped failures. For example, you can retry
 
 The 4 actions that you can take on failures grouped under a single category are:
 
-* ![Deleteallfailures](../assets/Deleteallfailures.PNG) **Delete All**: Deletes all the failures without its dependent failures, across all the groups in the result
+* ![Deleteallfailures](../../assets/Deleteallfailures.PNG) **Delete All**: Deletes all the failures without its dependent failures, across all the groups in the result
 
-Click ![Deleteallfailures](../assets/Deleteallfailures.PNG) to delete all failures.
+Click ![Deleteallfailures](../../assets/Deleteallfailures.PNG) to delete all failures.
 
-* ![Deletealldfailures](../assets/Deletealldfailures.PNG) **Delete all with dependents**: Deletes all the failures with its dependent failures, across all the groups in the result
+* ![Deletealldfailures](../../assets/Deletealldfailures.PNG) **Delete all with dependents**: Deletes all the failures with its dependent failures, across all the groups in the result
 
-Click ![Deletealldfailures](../assets/Deletealldfailures.PNG) to delete all failures with dependents.
+Click ![Deletealldfailures](../../assets/Deletealldfailures.PNG) to delete all failures with dependents.
 
-* ![Resetretry](../assets/Resetretry.PNG) **Retry All**: Resets retry count for all the failures without its dependent failures, across all the groups in the result
+* ![Resetretry](../../assets/Resetretry.PNG) **Retry All**: Resets retry count for all the failures without its dependent failures, across all the groups in the result
 
-Click ![Resetretry](../assets/Resetretry.PNG) to retry all failures.
+Click ![Resetretry](../../assets/Resetretry.PNG) to retry all failures.
 
 * ![Resetdretry](../assets/Resetdretry.PNG) **Retry all with dependents**: Resets retry count for all the failures with its dependent failures, across all the groups in the result
 
-Click ![Resetdretry](../assets/Resetdretry.PNG) to retry all failures with dependents.
+Click ![Resetdretry](../../assets/Resetdretry.PNG) to retry all failures with dependents.
 
 In addition to the Delete, Retry, Delete All With Dependents and Retry All With Dependents actions, you can take 3 more actions on the individual errors within each section. The additional actions that you can perform on an individual error are:
 
-* ![editruleicon](../assets/editruleicon.PNG) **View Failed Event**: Allows users to view detailed information regarding event fetched from the source system, mapping input and output for the configured mapping, and rules input and output for configured reconciliation rules.
+* ![editruleicon](../../assets/editruleicon.PNG) **View Failed Event**: Allows users to view detailed information regarding event fetched from the source system, mapping input and output for the configured mapping, and rules input and output for configured reconciliation rules.
 
-Click ![editruleicon](../assets/editruleicon.PNG) to view failed event.
+Click ![editruleicon](../../assets/editruleicon.PNG) to view failed event.
 
-* ![Showfailures](../assets/Showfailures.PNG) **Show Dependent Failures**: View all dependent failures for a single entity - you can retry, delete, or edit event XML fpr these failures  
-Click ![Showfailures](../assets/Showfailures.PNG) to see all dependent failures of an entity.
+* ![Showfailures](../../assets/Showfailures.PNG) **Show Dependent Failures**: View all dependent failures for a single entity - you can retry, delete, or edit event XML fpr these failures  
+Click ![Showfailures](../../assets/Showfailures.PNG) to see all dependent failures of an entity.
 
-* ![failuredetails](../assets/failuredetails.PNG) **Show Failure Details**: See detailed information about the selected failure
+* ![failuredetails](../../assets/failuredetails.PNG) **Show Failure Details**: See detailed information about the selected failure
 
-Click ![failuredetails](../assets/failuredetails.PNG) to see detailed information about the selected failure.
+Click ![failuredetails](../../assets/failuredetails.PNG) to see detailed information about the selected failure.
 
 ## View Failed Event
 
@@ -92,25 +92,25 @@ Once you click the **View Failed Event** option against a failure, a pop-up scre
 
 >**Note**: Here's an example of the pop-up screen for an integration's failed event. The details may vary from failure to failure:
 
-![ViewFailedEvent_1](../assets/ViewFailedEvent_1.png)
+![ViewFailedEvent_1](../../assets/ViewFailedEvent_1.png)
 
 * **Mapping Input**: The Mapping Input option refers to the XML input for the source event as per the configured mapping. Here, all properties of the source entity are retrieved from the source system.
 
-![ViewFailedEvent_2](../assets/ViewFailedEvent_2.png)
+![ViewFailedEvent_2](../../assets/ViewFailedEvent_2.png)
 
 >**Note**: Slide the toggle to switch between old values and new values of the mapping input.  
 >**Note**: The 'old values' in the mapping input refer to the previously fetched values from the source entity. The 'new values' in the mapping input refer to the current values of an entity that has been fetched from the source system.
 
 * **Mapping Output**: The Mapping Output option refers to the XML output for the source event as per the configured mapping.
 
-![ViewFailedEvent_3](../assets/ViewFailedEvent_3.png)
+![ViewFailedEvent_3](../../assets/ViewFailedEvent_3.png)
 
 >**Note**: Slide the toggle to switch between old values and new values for the mapping output.  
 >**Note**: The 'old values' in the mapping output refer to the transformed values(old) for the given mapping input. The 'new values' in the mapping output refer to the values of an entity after they have been transformed as per the configured mapping.
 
 * **Reconciliation Data**: If the configured job is for **reconciliation** and a failure occurs because of it, another option for reconciliation data will appear. This option contains rules input and rules output for the configured reconciliation rules.
 
-![ViewFailedEvent_4](../assets/ViewFailedEvent_4.png)
+![ViewFailedEvent_4](../../assets/ViewFailedEvent_4.png)
 
 >**Note**: Slide the toggle to switch between rules input and rules output.  
 >**Note**: The rules input is the 'Mapping Input XML' for the configured mapping along with a special field called 'diffProperties', crucial for reconciliation. The rules output is the 'Mapping Output XML' which are the transformed values of fields configured for reconciliation.
@@ -120,12 +120,12 @@ Once you click the **View Failed Event** option against a failure, a pop-up scre
   * If failure occurred before the execution of the transformation,
 
 * A warning will be given for the above three cases. Following is the example of the warning message:  
-![ViewFailedEvent_5](../assets/ViewFailedEvent_5.png)
+![ViewFailedEvent_5](../../assets/ViewFailedEvent_5.png)
 
 * If the failures are present in the older versions(before V7.170 upgrade): In that case, to view the mapping input & mapping output, the failures should be retried to have the information.
 
 >**Note**: If the failures are not retried after updating the source event, and you view the failed event again, an icon will appear in the top right corner of the Mapping Input, Mapping Output, and Reconciliation Data options. This icon indicates that the XML values are not the latest, and you should retry and refresh the failed event. Refer to the below image for the same:  
-![ViewFailedEvent_7](../assets/ViewFailedEvent_7.png)
+![ViewFailedEvent_7](../../assets/ViewFailedEvent_7.png)
 
 ## How to read an error message
 
@@ -154,9 +154,9 @@ If you are facing a complex failure for which you are seeking help from support 
 
 * Navigate to the integrations page. 
 * Go to the integration for which you are facing a failure.
-* Hover over More ![Stack_Icon](../assets/Stack_Icon.PNG) icon, you will get an option to export Integration Details as shown in the image below.
+* Hover over More ![Stack_Icon](../../assets/Stack-Icon.PNG) icon, you will get an option to export Integration Details as shown in the image below.
 
-![Export_Integration_Details](../assets/Export_Integration_Details.png)  
+![Export_Integration_Details](../../assets/ExportIntegration-Details.png)  
 
 * Click on the **Dump Integration Data** button. You will get a zip file with the name: **IntegrationDetails.zip**.
 * Zip contains integration configurations, sync logs, mapping, and failure details; it does not contain any sensitive data related to the integration user. 
@@ -164,5 +164,6 @@ If you are facing a complex failure for which you are seeking help from support 
 You can also export Integration Details of multiple integrations as shown below. 
 
 * Select integrations for which you want to export Integration Details.
-* Hover over More ![Stack_Icon](../assets/Stack_Icon.PNG) icon enabled at the top level and follow the same process as described above.
+* Hover over More ![Stack_Icon](../../assets/Stack-Icon.PNG) icon enabled at the top level and follow the same process as described above.
+
 
