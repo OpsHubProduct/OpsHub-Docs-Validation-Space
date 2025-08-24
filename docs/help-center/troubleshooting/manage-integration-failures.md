@@ -67,7 +67,7 @@ Click ![Deletealldfailures](../../assets/Deletealldfailures.png) to delete all f
 
 Click ![Resetretry](../../assets/Resetretry.png) to retry all failures.
 
-* ![Resetdretry](../assets/Resetdretry.png) **Retry all with dependents**: Resets retry count for all the failures with its dependent failures, across all the groups in the result
+* ![Resetdretry](../../assets/Resetdretry.png) **Retry all with dependents**: Resets retry count for all the failures with its dependent failures, across all the groups in the result
 
 Click ![Resetdretry](../../assets/Resetdretry.png) to retry all failures with dependents.
 
@@ -165,6 +165,7 @@ You can also export Integration Details of multiple integrations as shown below.
 
 * Select integrations for which you want to export Integration Details.
 * Hover over More ![Stack_Icon](../../assets/Stack-Icon.png) icon enabled at the top level and follow the same process as described above.
+
 
 
 
