@@ -55,34 +55,34 @@ You can perform one shot actions on grouped failures. For example, you can retry
 
 The 4 actions that you can take on failures grouped under a single category are:
 
-* ![Deleteallfailures](../../assets/Deleteallfailures.PNG) **Delete All**: Deletes all the failures without its dependent failures, across all the groups in the result
+* ![Deleteallfailures](../../assets/Deleteallfailures.png) **Delete All**: Deletes all the failures without its dependent failures, across all the groups in the result
 
-Click ![Deleteallfailures](../../assets/Deleteallfailures.PNG) to delete all failures.
+Click ![Deleteallfailures](../../assets/Deleteallfailures.png) to delete all failures.
 
-* ![Deletealldfailures](../../assets/Deletealldfailures.PNG) **Delete all with dependents**: Deletes all the failures with its dependent failures, across all the groups in the result
+* ![Deletealldfailures](../../assets/Deletealldfailures.png) **Delete all with dependents**: Deletes all the failures with its dependent failures, across all the groups in the result
 
-Click ![Deletealldfailures](../../assets/Deletealldfailures.PNG) to delete all failures with dependents.
+Click ![Deletealldfailures](../../assets/Deletealldfailures.png) to delete all failures with dependents.
 
-* ![Resetretry](../../assets/Resetretry.PNG) **Retry All**: Resets retry count for all the failures without its dependent failures, across all the groups in the result
+* ![Resetretry](../../assets/Resetretry.png) **Retry All**: Resets retry count for all the failures without its dependent failures, across all the groups in the result
 
-Click ![Resetretry](../../assets/Resetretry.PNG) to retry all failures.
+Click ![Resetretry](../../assets/Resetretry.png) to retry all failures.
 
-* ![Resetdretry](../assets/Resetdretry.PNG) **Retry all with dependents**: Resets retry count for all the failures with its dependent failures, across all the groups in the result
+* ![Resetdretry](../assets/Resetdretry.png) **Retry all with dependents**: Resets retry count for all the failures with its dependent failures, across all the groups in the result
 
-Click ![Resetdretry](../../assets/Resetdretry.PNG) to retry all failures with dependents.
+Click ![Resetdretry](../../assets/Resetdretry.png) to retry all failures with dependents.
 
 In addition to the Delete, Retry, Delete All With Dependents and Retry All With Dependents actions, you can take 3 more actions on the individual errors within each section. The additional actions that you can perform on an individual error are:
 
-* ![editruleicon](../../assets/editruleicon.PNG) **View Failed Event**: Allows users to view detailed information regarding event fetched from the source system, mapping input and output for the configured mapping, and rules input and output for configured reconciliation rules.
+* ![editruleicon](../../assets/editruleicon.png) **View Failed Event**: Allows users to view detailed information regarding event fetched from the source system, mapping input and output for the configured mapping, and rules input and output for configured reconciliation rules.
 
-Click ![editruleicon](../../assets/editruleicon.PNG) to view failed event.
+Click ![editruleicon](../../assets/editruleicon.png) to view failed event.
 
-* ![Showfailures](../../assets/Showfailures.PNG) **Show Dependent Failures**: View all dependent failures for a single entity - you can retry, delete, or edit event XML fpr these failures  
-Click ![Showfailures](../../assets/Showfailures.PNG) to see all dependent failures of an entity.
+* ![Showfailures](../../assets/Showfailures.png) **Show Dependent Failures**: View all dependent failures for a single entity - you can retry, delete, or edit event XML fpr these failures  
+Click ![Showfailures](../../assets/Showfailures.png) to see all dependent failures of an entity.
 
-* ![failuredetails](../../assets/failuredetails.PNG) **Show Failure Details**: See detailed information about the selected failure
+* ![failuredetails](../../assets/failuredetails.png) **Show Failure Details**: See detailed information about the selected failure
 
-Click ![failuredetails](../../assets/failuredetails.PNG) to see detailed information about the selected failure.
+Click ![failuredetails](../../assets/failuredetails.png) to see detailed information about the selected failure.
 
 ## View Failed Event
 
@@ -154,7 +154,7 @@ If you are facing a complex failure for which you are seeking help from support 
 
 * Navigate to the integrations page. 
 * Go to the integration for which you are facing a failure.
-* Hover over More ![Stack_Icon](../../assets/Stack-Icon.PNG) icon, you will get an option to export Integration Details as shown in the image below.
+* Hover over More ![Stack_Icon](../../assets/Stack-Icon.png) icon, you will get an option to export Integration Details as shown in the image below.
 
 ![Export_Integration_Details](../../assets/ExportIntegration-Details.png)  
 
@@ -164,6 +164,7 @@ If you are facing a complex failure for which you are seeking help from support 
 You can also export Integration Details of multiple integrations as shown below. 
 
 * Select integrations for which you want to export Integration Details.
-* Hover over More ![Stack_Icon](../../assets/Stack-Icon.PNG) icon enabled at the top level and follow the same process as described above.
+* Hover over More ![Stack_Icon](../../assets/Stack-Icon.png) icon enabled at the top level and follow the same process as described above.
+
 
 
