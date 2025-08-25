@@ -6,4 +6,5 @@ Current license terms does not allow interaction with APIs, please contact OpsHu
 The reason behind this error is unavailability of “API” add on to use OpsHub Integration Manager APIs in the current license terms.
 
 # Solution
-Please refer to the [API License](getting-started_with_api.md#api-license) for accessing the OpsHub Integration Manager APIs.
+Please refer to the [API License](getting-started-with-api.md#api-license) for accessing the OpsHub Integration Manager APIs.
+
