@@ -60,7 +60,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
   <img src="../../assets/J-SN_Image_3.png" />
 </p>
 
-# Mapping configuration
+## Mapping configuration
 
 <p align="center">
   <img src="../../assets/J-SN_Image_4.png" />
