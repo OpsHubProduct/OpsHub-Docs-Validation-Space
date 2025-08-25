@@ -18,7 +18,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
   <img src="../../assets/Getting_Started_With_Application_Image_1G_a.png">
 </p>
 
->**Note**: **Proxy parameters**: Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](Proxy_Setting) in {{SITENAME}}.
+>**Note**: **Proxy parameters**: Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](../../manage/administrator/proxy-setting.md) in {{SITENAME}}.
 
 * Click **Integrate** on the top right corner of the screen and then click the plus [+] icon.  
 <p align="center">
@@ -37,7 +37,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 
 ## Configure System(s)
 
-* Once you have fulfilled all the prerequisites and are done with the above-mentioned check, configure Jira and Azure DevOps Server (TFS) by following the steps given on [Jira](Jira#System_Configuration) and [Azure DevOps Services (VSTS)](Team_Foundation_Server#System_Configuration) pages respectively.  
+* Once you have fulfilled all the prerequisites and are done with the above-mentioned check, configure Jira and Azure DevOps Server (TFS) by following the steps given on [Jira](../../connectors/jira.md#system-configuration) and [Azure DevOps Services (VSTS)](../../connectors/team-foundation-server.md#system-configuration) pages respectively.  
 
 <p align="center">
   <img src="../../assets/JST_5.png">
@@ -52,7 +52,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 
 
 ## Select Projects and Entities
->**Note**: If you receive the following error: **PKIX certification path not found** and the projects and entities don’t load properly, then [import SSL certificate](Import_SSL_Certificates) onto OpsHub Integration Manager’s Java KeyStore before you proceed.
+>**Note**: If you receive the following error: **PKIX certification path not found** and the projects and entities don’t load properly, then [import SSL certificate](../../getting-started/ssl-certificate-configuration.md) onto OpsHub Integration Manager’s Java KeyStore before you proceed.
 
 * In the **Add Project(s) to Sync** section, select the projects you want to synchronize between Jira and Azure DevOps Services (VSTS) by clicking them. For example, here we select {{SITENAME}} Demo Project from Jira and TestProject from Azure DevOps Services (VSTS).  
 * Once the projects are selected, define the source project and target project:  
@@ -91,7 +91,9 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 >**Note**: Mandatory fields might vary from one instance to another.  
 >**Note**: Check the Mandatory fields for Jira from Jira UI as well and map them accordingly to suitable field(s) in Azure DevOps Services (VSTS).  
 
-![Mandatory Mapping](JST 10.png)
+<p align="center">
+  <img src="../../assets/JST 10.png" />
+</p>
 
 #### Mapping Look-up Type Fields
 * Once you have mapped the Mandatory fields, you can now add more fields for mapping. We map the Look-up type fields first. Look-up type fields are multivalued fields. During mapping the fields for integration, the values of Look-up fields must be mapped for the mapped entities. In this case, we choose **Priority** and **Status** as the Look-up type fields to be mapped. We map:  
