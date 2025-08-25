@@ -51,7 +51,7 @@ To check whether the "API" feature is enabled in the {{SITENAME}} or not, please
    ![API Feature](../../assets/API2.png)  
  >**Note**: If this feature is disabled, and you have the license in which this feature is available, then please [install](Managing_Licenses) the correct license. If you don’t have a valid license, please reach out to OpsHub Sales/Support team for receiving the appropriate license.
 
-## Validate access to {{SITENAME}} instance
+## Validate access to OpsHub Integration Manager instance
 
 To check whether the {{SITENAME}} instance is accessible or not, please perform the below steps:
 
@@ -67,4 +67,5 @@ To check whether the {{SITENAME}} instance is accessible or not, please perform 
 
 1. SAML Users won't be able to login through the API.
    - Let's say the user has configured SAML login for OIM UI Login. Such users won't be able to login through the API. It would need either Default or LDAP user.
+
 
