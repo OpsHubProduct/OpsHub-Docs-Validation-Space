@@ -23,6 +23,12 @@ You can download the script from [here](https://opshubtrial-my.sharepoint.com/:u
 
 Below is an example of execution of script which shows the input and output.
 
-![Execution of integrationHealth.py](assets/Admin_API_Rest_2.png)
+<p align="center">
+  <img src="../assets/Admin-API-Rest-2.png" width="500px"/>
+</p>
 
-![Sample output.csv file](assets/Admin_API_Rest_4a.png)
+<p align="center">
+  <img src="../assets/Admin-API-Rest-4a.png" width="500px" />
+</p>
+
+
