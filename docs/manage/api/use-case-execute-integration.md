@@ -21,6 +21,7 @@ You can download the script from [here](https://opshubtrial-my.sharepoint.com/:u
 Below is an example of execution of script which shows the input and output.
 
 <p align="center">
-  <img src="../../assets/Admin-API-Rest-1.png" />
+  <img src="../../assets/Admin-API-Rest-1.png" width="700px" />
 </p>
+
 
