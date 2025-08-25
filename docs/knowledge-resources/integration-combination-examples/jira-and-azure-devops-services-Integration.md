@@ -12,9 +12,11 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 # Integration Configuration
 * Log in into {{SITENAME}}. The default credentials are:  
   **User Name:** admin  
-  **Password:** password  
-
-![Getting Started With Application](Getting_Started_With_Application_Image_1G_a.png)
+  **Password:** password
+  
+<p align="center">
+  <img src="../../assets/Getting_Started_With_Application_Image_1G_a.png">
+</p>
 
 >**Note**: **Proxy parameters**: Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](Proxy_Setting) in {{SITENAME}}.
 
