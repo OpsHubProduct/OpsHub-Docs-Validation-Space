@@ -20,4 +20,7 @@ You can download the script from [here](https://opshubtrial-my.sharepoint.com/:u
 
 Below is an example of execution of script which shows the input and output.
 
-![Execution of executeIntegraionOnDemand.py](assets/Admin_API_Rest_1.png)
+<p align="center">
+  <img src="../../assets/Admin-API-Rest-1.png" />
+</p>
+
