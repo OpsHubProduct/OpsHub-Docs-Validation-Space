@@ -40,13 +40,13 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
   * Click the plus sign [+] adjacent to the System 1 and System 2 fields. From the **Select 1st endpoint** and **Select 2nd endpoint** drop-down lists, select Jira and ServiceNow respectively.
 
 <p align="center">
-  <img src="../../assets/J-SN_Image 1.png" />
+  <img src="../../assets/J-SN_Image_1.png" />
 </p>
 
 * In the **Add Project(s) to Sync** section, select the projects you want to synchronize between Jira and ServiceNow by clicking them. ServiceNow doesn’t have projects, so {{SITENAME}} will show OH_NO_PROJECT. You can map OH_NO_PROJECT with multiple projects in Jira. Refer to the image below:
 
 <p align="center">
-  <img src="../../assets/J-SN_Image 2.png" />
+  <img src="../../assets/J-SN_Image_2.png" />
 </p>
 
 * Click the forward arrow (>) if you want to integrate any project only from Jira to ServiceNow, bi-directional arrow (<-->) if that project needs to be synced bi-directionally, or backward arrow (<) if for that projects synchronization is needed only from ServiceNow to Jira.  
@@ -57,13 +57,13 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Click the plus button [+] adjacent to **Select fields to be synced** to create the mapping between these two entities. You will, now, be navigated to Mapping Configuration screen.
 
 <p align="center">
-  <img src="../../assets/J-SN_Image 3.png" />
+  <img src="../../assets/J-SN_Image_3.png" />
 </p>
 
 # Mapping configuration
 
 <p align="center">
-  <img src="../../assets/J-SN_Image 4.png" />
+  <img src="../../assets/J-SN_Image_4.png" />
 </p>
 
 Once you come to the mapping page from the integration page, following details are automatically populated in the Mapping section. <br>  
@@ -78,7 +78,7 @@ Once you come to the mapping page from the integration page, following details a
 * {{SITENAME}} will load fields available in the selected entity and project fields. For reference, please look at the image below:
 
 <p align="center">
-  <img src="../../assets/J-SN_Image 5a.png" />
+  <img src="../../assets/J-SN_Image_5a.png" />
 </p>
 
 >**Note**: For creating any entity in Jira, mapping **Status** is mandatory, please make it is mapped and value mapping for it is done.  
@@ -92,13 +92,13 @@ Once you come to the mapping page from the integration page, following details a
 * For look-up type fields such priority, status, etc. do value mapping by clicking on the bulb icon on the right.
 
 <p align="center">
-  <img src="../../assets/J-SN_Image 6.png" />
+  <img src="../../assets/J-SN_Image_6.png" />
 </p>
 
 Click [here](../../integrate/mapping-configuration.md#value-mapping) to learn about Value Mapping in detail.  
 
 <p align="center">
-  <img src="../../assets/J-SN_Image 7.png" />
+  <img src="../../assets/J-SN_Image_7.png" />
 </p>
 
 >**Note**: For any user field mapped, mapping will work without any change if users have same email id or username in both systems. It is recommended that users have same email id or username across the systems; however, if that is not the case, then advance mapping may be required. Kindly reach out to your sales/support representative.  
@@ -109,7 +109,7 @@ Refer to the video on this page to learn in detail about [Comments mapping](../.
 * For enabling comments, just toggle the comments toggle at bottom of fields mapping.  
 
 <p align="center">
-  <img src="../../assets/J-SN_Image 8.png" />
+  <img src="../../assets/J-SN_Image_8.png" />
 </p>
 
 * By default, comments will be synchronized in both directions and all comments will be synchronized as public/visible to customer comments. For changing the default behavior, click the Settings icon next to comments.  
@@ -118,7 +118,7 @@ Refer to the video on this page to learn in detail about [Comments mapping](../.
   * Once these changes are done, click the Save button to save comments configuration.  
 
 <p align="center">
-  <img src="../../assets/J-SN_Image 9.png" />
+  <img src="../../assets/J-SN_Image_9.png" />
 </p>
 
 ### Map Attachments
