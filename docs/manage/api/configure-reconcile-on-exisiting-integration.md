@@ -29,5 +29,6 @@ You can download the script from [here](https://opshub.com/ohftp/AdminAPI/config
 
 Below is an example of execution of script which shows the input and output:
 
-![Execution of configureReconciliationOnExistingIntegration.py](assets/Admin_API_Rest_6a.png)  
-![Execution of configureReconciliationOnExistingIntegration.py](assets/Admin_API_Rest_6b.png)
+![Execution of configureReconciliationOnExistingIntegration.py](../../assets/Admin-API-Rest-6a.png)  
+![Execution of configureReconciliationOnExistingIntegration.py](../../assets/Admin-API-Rest-6b.png)
+
