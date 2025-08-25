@@ -22,4 +22,8 @@ You can download the script from [here](https://opshub.com/ohftp/AdminAPI/addFie
 
 Below is an example of execution of script which shows the input and output:
 
-![Execution of addFieldsToMapping.py](assets/Admin_API_Rest_5a.png)
+<p align="center">
+  <img src="../../assets/Admin-API-Rest-5a.png" />
+</p>
+
+
