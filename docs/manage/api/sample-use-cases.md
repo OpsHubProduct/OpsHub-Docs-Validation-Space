@@ -1,3 +1,4 @@
+** Sample Use Cases **
 
 - [Get the project pairs configured in integration(s)](use-case-get-all-project-pairs.md)
 - [Integration health details like getting list of active integrations with failures count](use-case-integration-healthcheck.md)
