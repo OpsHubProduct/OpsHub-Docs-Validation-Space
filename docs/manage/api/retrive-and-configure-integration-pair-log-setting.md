@@ -31,5 +31,12 @@ You can download the script from [here](https://opshub.com/ohftp/AdminAPI/retrie
 
 Here is an example of execution of script showing the input and the output:
 
-![Fetching and updating Integration Log Settings with As per Global Log Setting as 'false'](assets/Admin_API_Rest_7a.png)  
-![Fetching and updating Integration Log Settings with As per Global Log Setting as 'true'](assets/Admin_API_Rest_7b.png)
+<p align="center">
+  <img src="../../../assets/Admin-API-Rest-7a.png" />
+</p>
+
+<p align="center">
+  <img src="assets/Admin-API-Rest-7b.png" />
+</p>
+
+
