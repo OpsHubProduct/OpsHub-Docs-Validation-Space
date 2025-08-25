@@ -172,9 +172,8 @@ At this stage, you can also map entities such as comments and attachments. Refer
   - The Criteria Configuration pop-up opens. In the pop-up, select **Yes** from **Configure Criteria** list.  
   - Enter the criteria query.  
 
-<p align="left">
-  <img src="../../assets/Note.jpg" width="30px"> The query is different for different systems. You can refer to more details about Criteria Configuration in [Jira](../../connectors/jira.md#criteria-configuration) and [Azure DevOps Services (VSTS)](../../connectors/team-foundation-server.md#criteria-configuration) from their respective configuration pages.
-</p>
+>**Note**: The query is different for different systems. You can refer to more details about Criteria Configuration in [Jira](../../connectors/jira.md#criteria-configuration)
+ and [Azure DevOps Services (VSTS)](../../connectors/team-foundation-server.md#criteria-configuration) from their respective configuration pages.
 
 - Select **In Database** from the **Select criteria storage type** drop-down list.  
 
