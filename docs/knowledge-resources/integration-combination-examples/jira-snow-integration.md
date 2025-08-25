@@ -17,7 +17,7 @@ Jira is a popular bug tracking, issue tracking, and project management functions
 
 # System Prerequisites
 
-Configuring [system pre-requisites](Integration_Prerequisites) is mandatory for successful system configuration. Check out the pre-requisites for [Jira](../../connectors/jira#prerequisites) and [ServiceNow](../../connectors/servicenow.md#pre-requisites) systems before you proceed with the integration.
+Configuring [system pre-requisites](../../integrate/integration-prerequisites.md) is mandatory for successful system configuration. Check out the pre-requisites for [Jira](../../connectors/jira.md#prerequisites) and [ServiceNow](../../connectors/servicenow.md#pre-requisites) systems before you proceed with the integration.
 
 # Integration Configuration
 
