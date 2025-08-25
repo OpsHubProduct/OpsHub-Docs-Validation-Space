@@ -1,8 +1,8 @@
 
-- [Get the project pairs configured in integration(s)](get-the-project-pairs-configured-in-integrations)
-- [Integration health details like getting list of active integrations with failures count](integration-health-including-the-details-like-list-of-active-integrations-with-failures-count)
-- [Trigger integration execution on demand](trigger-integration-execution-on-demand)
-- [Add fields to existing Mapping](add-fields-to-existing-mapping)
-- [Configure Reconciliation on existing Integration](configure-reconciliation-on-existing-integration)
-- [Retrieve and Configure Integration Pair Log Settings](retrieve-and-configure-integration-pair-log-settings)
+- [Get the project pairs configured in integration(s)](use-case-get-all-project-pairs.md)
+- [Integration health details like getting list of active integrations with failures count](use-case-integration-healthcheck.md)
+- [Trigger integration execution on demand](use-case-execute-integration.md)
+- [Add fields to existing Mapping](add-fields-to-mapping.md)
+- [Configure Reconciliation on existing Integration](configure-reconcile-on-exisiting-integration.md)
+- [Retrieve and Configure Integration Pair Log Settings](retrive-and-configure-integration-pair-log-setting.md)
 
