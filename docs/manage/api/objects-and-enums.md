@@ -12,8 +12,8 @@ In the below schema structure:
 - **Description**: Represents the description of the field.  
 - **Type**: Represents the type of the field.  
 - **Writable**: Represents whether the field is an input field or not.  
-  - * following Yes value indicates the field is mandatory to create operation.  
-  - * following Yes value indicates the field is mandatory to update operation.  
+  * following Yes value indicates the field is mandatory to create operation.  
+  * following Yes value indicates the field is mandatory to update operation.  
 - Mandatory input fields: * preceding Yes value indicates the fields is mandatory.  
 - **Readable**: Represents whether the field is an output field or not.  
 - **Filterable**: Represents whether the field is filterable field or not in the list API request.
@@ -563,6 +563,7 @@ Enums represents the list of possible values for the field.
 | DELETE    | Synchronizing entity deletion only                    |
 | SYNC      | Synchronizing creation, deletion and update of the entity |
 | UPDATE    | Synchronizing updates on the entity only              |
+
 
 
 
