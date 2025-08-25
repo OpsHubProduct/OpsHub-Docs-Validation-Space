@@ -20,4 +20,5 @@ You can download the script from [here].
 
 Below is an example of execution for this script.
 
-![Execution of projectConfiguredForEndpoints.py](assets/Admin_API_Rest_3.png)
+![Execution of projectConfiguredForEndpoints.py](../../assets/Admin-API-Rest-3.png)
+
