@@ -301,7 +301,7 @@ In the below schema structure:
 
 | **Name**           | **Type**                           | **Description**                                                                                       |
 |--------------------|------------------------------------|--------------------------------------------------------------------------------------------------------|
-| advanced           | [AdvanceSettings](#advancesettings) | It indicates the [entity specific advanced configurations](integration_configuration#specific-advanced-configuration) |
+| advanced           | [AdvanceSettings](#advancesettings) | It indicates the [entity specific advanced configurations](../../integrate/integration-configuration.md#specific-advanced-configuration) |
 | executionDetails   | [ExecutionDetails](#execution-details) | It indicates the execution status, i.e., whether the integration is under execution or not            |
 | startPollingTime   | String                             | Start polling time for the artifact pair. The format for this time is “Day Mon DD YYYY HH:MM:SS” i.e., Mon Dec 30 2019 09:18:26 |
 | status             | [Status](#status)                  | It indicates the status of the integration. It is an enum of type [Status](#status)                  |
@@ -329,14 +329,14 @@ In the below schema structure:
 
 ## OperationAdvanceSettings
 
-- It contains details regarding the system specific [advanced configuration](integration_configuration#advance_settings) of the [entity pair](#entitypair).
+- It contains details regarding the system specific [advanced configuration](../../integrate/integration-configuration.md#advance-settings) of the [entity pair](#entitypair).
 - Fields:
 
 | **Name**               | **Type**                                | **Description**                                                                 |
 |------------------------|-----------------------------------------|---------------------------------------------------------------------------------|
 | overrideParameters     | [OverrideParameters](#overrideparameters) | Details that can be overridden for the system configured in the integration    |
-| remoteIdFieldName      | String                                  | Field name of the other system in which the unique id of the entity will be stored for the [traceability](integration_configuration#tracking_id_and_link_of_entities_across_systems) purpose |
-| remoteLinkFieldName    | String                                  | Field name of the other system in which the unique id of the entity will be stored for the [traceability](integration_configuration#tracking_id_and_link_of_entities_across_systems) purpose |
+| remoteIdFieldName      | String                                  | Field name of the other system in which the unique id of the entity will be stored for the [traceability](../../integration-configuration.md#tracking-id-and-link-of-entities-across-systems) purpose |
+| remoteLinkFieldName    | String                                  | Field name of the other system in which the unique id of the entity will be stored for the [traceability](../../integrate/integration-configuration.md#tracking-id-and-link-of-entities-across-systems) purpose |
 | systemSpecificSettings | List<[EaiKeyValue](#eaikeyvalue)>        | Key-value pair for the system specific advance configuration                   |
 
 ## OverrideParameters
@@ -366,8 +366,8 @@ In the below schema structure:
 | **Name**                      | **Type**                                 | **Description**                                                                 |
 |-------------------------------|------------------------------------------|---------------------------------------------------------------------------------|
 | projectPairs                  | List<[ProjectPair](#projectpair)>        | List of Source and target project pairs along with the data synchronization direction |
-| syncChildProjectsForSystem1   | Boolean                                  | Whether the [child project synchronization](../integration-configuration.md#child-project-synchronization) is enabled for the Endpoint 1 |
-| ObjectsyncChildProjectsForSystem2ype | Boolean                          | Whether the [child project synchronization](../integration-configuration.md#child-project-synchronization) is enabled for the Endpoint 2 |
+| syncChildProjectsForSystem1   | Boolean                                  | Whether the [child project synchronization](../../integrate/integration-configuration.md#child-project-synchronization) is enabled for the Endpoint 1 |
+| ObjectsyncChildProjectsForSystem2ype | Boolean                          | Whether the [child project synchronization](../../integrate/integration-configuration.md#child-project-synchronization) is enabled for the Endpoint 2 |
 
 ## ProjectPair
 
@@ -394,7 +394,7 @@ In the below schema structure:
 
 ## WorkflowAssociation
 
-- It contains the details about [workflow](integration_configuration#workflow_association) associated with the integration.
+- It contains the details about [workflow](../../integrate/integration-configuration.md#workflow-association) associated with the integration.
 - Fields:
 
 | **Name**        | **Type**                              | **Description**                                                 |
@@ -433,7 +433,7 @@ Enums represents the list of possible values for the field.
 
 ### ActionOnMultipleResults
 
-- It represents the action to be performed when there are multiple entities found in the target system matching the query mentioned in the [Search in target before sync](integration_configuration#search_in_target_before_sync) configuration.
+- It represents the action to be performed when there are multiple entities found in the target system matching the query mentioned in the [Search in target before sync](../../integrate/integration-configuration.md#search-in-target-before-sync) configuration.
 - Possible values:
 
 | **Value**  | **Description**                                          |
@@ -563,6 +563,7 @@ Enums represents the list of possible values for the field.
 | DELETE    | Synchronizing entity deletion only                    |
 | SYNC      | Synchronizing creation, deletion and update of the entity |
 | UPDATE    | Synchronizing updates on the entity only              |
+
 
 
 
