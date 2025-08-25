@@ -24,12 +24,13 @@ You can download the script from [here](https://opshubtrial-my.sharepoint.com/:u
 Below is an example of execution of script which shows the input and output.
 
 <p align="center">
-  <img src="../../assets/Admin-API-Rest-2.png" width="500px"/>
+  <img src="../../assets/Admin-API-Rest-2.png" width="700px"/>
 </p>
 
 <p align="center">
-  <img src="../../assets/Admin-API-Rest-4a.png" width="500px" />
+  <img src="../../assets/Admin-API-Rest-4a.png" width="700px" />
 </p>
+
 
 
 
