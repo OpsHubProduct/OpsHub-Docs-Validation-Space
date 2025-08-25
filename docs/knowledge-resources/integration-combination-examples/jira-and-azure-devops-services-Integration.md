@@ -3,7 +3,7 @@ Best-of-breed systems such as Jira and Azure DevOps Server (TFS) bring rich func
 OpsHub Integration Manager integrates Jira and Azure DevOps Services (VSTS) bi-directionally. On this page, we will discuss the bi-directional integration of:
 
 <p align="center">
-  <img src="../../assets/Jira-VSTS_entity.PNG">
+  <img src="../../assets/Jira-VSTS_entity.png">
 </p>
 
 # System Prerequisites
