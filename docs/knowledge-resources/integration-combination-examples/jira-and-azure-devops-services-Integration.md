@@ -98,7 +98,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
   - Priority → Priority  
   - Status → State  
 
-* The Look-up type fields are marked with ![Lookup](I_9.png). Once you have mapped these fields in Jira and Azure DevOps Services (VSTS), click the icon to map their values one by one.  
+* The Look-up type fields are marked with ![Lookup](../../assets/I_9.png). Once you have mapped these fields in Jira and Azure DevOps Services (VSTS), click the icon to map their values one by one.  
 
 <p align="center">
   <img src="../../assets/JST_11.png">
@@ -204,7 +204,7 @@ At this stage, you can also map entities such as comments and attachments. Refer
 
 >**Note**: You should not be using the integration user credentials to create entities in the systems as in this case the integration will not work.
 
-- Create/Update event in the source system and check whether the event synchronizes to the target system. Wait for one minute for the data to synchronize. If you face any issue, please refer this page for [possible reasons and their fix](General).  
+- Create/Update event in the source system and check whether the event synchronizes to the target system. Wait for one minute for the data to synchronize. If you face any issue, please refer this page for [possible reasons and their fix](../../help-center/faqs/general).  
 
 
 ## Additional Configurations
