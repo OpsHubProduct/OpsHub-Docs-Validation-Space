@@ -53,7 +53,7 @@ In the below schema structure:
 
 ## Integration
 
-- Integration contains the details regarding the [integration configuration](../integrate/integration-configuration.md) using which we can retrieve or modify the integration.
+- Integration contains the details regarding the [integration configuration](../../integrate/integration-configuration.md) using which we can retrieve or modify the integration.
 - Fields:
 
 | **Name**           | **Type**                                      | **Description**                                                                                          | **Writable** | **Readable** | **Filterable** |
@@ -382,7 +382,7 @@ In the below schema structure:
 
 ## TargetSearchQuery
 
-- It contains configuration details of the [search in target before sync](../integrate/integration-configuration.md#search-in-target-before-sync).
+- It contains configuration details of the [search in target before sync](../../integrate/integration-configuration.md#search-in-target-before-sync).
 - Fields:
 
 | **Name**                 | **Type**                                     | **Description**                                                                 |
@@ -422,7 +422,7 @@ Enums represents the list of possible values for the field.
 
 ### ActionOnDeletedEntities
 
-- It represents the action to be performed when the [entity got deleted in the target system](../integrate/integration-configuration.md#action-on-entity-deleted-in-target).
+- It represents the action to be performed when the [entity got deleted in the target system](../../integrate/integration-configuration.md#action-on-entity-deleted-in-target).
 - Possible values:
 
 | **Value**        | **Description**                                                       |
@@ -443,7 +443,7 @@ Enums represents the list of possible values for the field.
 
 ### ActionOnNoResults
 
-- It represents the action to be performed when there is no matching entity found in target system for the query mentioned in the [Search in target before sync](../integrate/integration-configuration#search-in-target-before-sync) configuration.
+- It represents the action to be performed when there is no matching entity found in target system for the query mentioned in the [Search in target before sync](../../integrate/integration-configuration.md#search-in-target-before-sync) configuration.
 - Possible values:
 
 | **Value** | **Description**                                  |
@@ -533,7 +533,7 @@ Enums represents the list of possible values for the field.
 
 ### StorageType
 
-- It represents the storage type in the [criteria configuration](../integrate/integration-configuration.md#criteria-configuration).
+- It represents the storage type in the [criteria configuration](../../integrate/integration-configuration.md#criteria-configuration).
 - Possible values:
 
 | **Value**   | **Description**                                                              |
@@ -543,7 +543,7 @@ Enums represents the list of possible values for the field.
 
 ### SynchronizationType
 
-- It represents type of the [event synchronization](../integrate/integration-configuration.md#sync-new-failed-or-both-events) for the integration.
+- It represents type of the [event synchronization](../../integrate/integration-configuration.md#sync-new-failed-or-both-events) for the integration.
 - Possible values:
 
 | **Value** | **Description**                                      |
@@ -554,7 +554,7 @@ Enums represents the list of possible values for the field.
 
 ### SynchronizationEventType
 
-- It represents the type of the event that will be synchronized via associated [workflow](../integrate/integration-configuration.md#workflow-association)
+- It represents the type of the event that will be synchronized via associated [workflow](../../integrate/integration-configuration.md#workflow-association)
 - Possible values:
 
 | **Value** | **Description**                                       |
@@ -563,4 +563,5 @@ Enums represents the list of possible values for the field.
 | DELETE    | Synchronizing entity deletion only                    |
 | SYNC      | Synchronizing creation, deletion and update of the entity |
 | UPDATE    | Synchronizing updates on the entity only              |
+
 
