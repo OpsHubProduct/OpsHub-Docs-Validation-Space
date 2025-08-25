@@ -22,7 +22,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 
 * Click **Integrate** on the top right corner of the screen and then click the plus [+] icon.  
 <p align="center">
-  <img src="../../assets/Getting_Started_With_Application_Image_1G_a.png">
+  <img src="../../assets/Overview_of_Integration_Image_1D.png">
 </p>
 
 
@@ -92,7 +92,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 >**Note**: Check the Mandatory fields for Jira from Jira UI as well and map them accordingly to suitable field(s) in Azure DevOps Services (VSTS).  
 
 <p align="center">
-  <img src="../../assets/JST 10.png" />
+  <img src="../../assets/JST_10.png" />
 </p>
 
 #### Mapping Look-up Type Fields
