@@ -497,8 +497,8 @@ Enums represents the list of possible values for the field.
 
 | **Value**     | **Description**                                          |
 |---------------|----------------------------------------------------------|
-| INTEGRATION   | [Integration](integration_configuration) mode            |
-| RECONCILE     | [Reconciliation](reconciliation) mode                    |
+| INTEGRATION   | [Integration](../../integrate/integration-configuration.md) mode            |
+| RECONCILE     | [Reconciliation](../../integrate/reconciliation.md) mode                    |
 
 ### ObjectType
 
@@ -563,6 +563,7 @@ Enums represents the list of possible values for the field.
 | DELETE    | Synchronizing entity deletion only                    |
 | SYNC      | Synchronizing creation, deletion and update of the entity |
 | UPDATE    | Synchronizing updates on the entity only              |
+
 
 
 
