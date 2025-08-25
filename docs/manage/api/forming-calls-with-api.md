@@ -397,4 +397,5 @@ In the JSON format, some characters like ‘\\’, ‘"’, new line, tab, carri
 - **Double quote** with `\"`
 - **Backslash** with `\\`
 
-![Note](assets/Note.jpg) Some online tools are available for escaping the reserved characters.
+>**Note**: Some online tools are available for escaping the reserved characters.
+
