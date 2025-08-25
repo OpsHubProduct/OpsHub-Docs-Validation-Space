@@ -75,7 +75,7 @@ query {
 ```
 
 **Explanation:**
-* `<ObjectName>`: For any information retrieval is actually an [object](Objects_and_Enums). Refer to object list for usage.
+* `<ObjectName>`: For any information retrieval is actually an [object](objects-and-enums.md). Refer to object list for usage.
 * `[(id:<value>)]`: If we want to fetch details of the object with specific unique id.
 * `{<Readable Fields>}`: Fields of the object that we want to retrieve. For complex fields, mention nested subfields.
 * Use any [percent-encoding](https://en.wikipedia.org/wiki/Percent-encoding) tool to encode this.
@@ -306,7 +306,7 @@ mutation {
       - System2_Project2[Project(internalName:DEFAULT:: System2_Project2)]
 
 - Here is the API Request to configure a bidirectional integration which can be used to synchronize the data between Bug entity of Jira and Defect entity of Micro Focus ALM/QC where the data of projects, System1_Project1 and System2_Project1 are in sync, and System1_Project2 and System2_Project2 are in sync.
-- For this integration configuration, we will be communicating with [Integration](Objects_and_Enums#Integration) Object.
+- For this integration configuration, we will be communicating with [Integration](objects-and-enums.md#integration) Object.
 
 **Request Method Type:** POST  
 **Request URL:** `http://10.13.27.222:8989/OpsHubWS/queryNode/execute`  
@@ -321,7 +321,7 @@ mutation {
 
 - Let's consider we have an integration configured in {{SITENAME}} with id 1, and we want to update this integration [Criteria](Integration_Configuration#Criteria_Configuration) for synchronizing only the entities having Id>0 for forward direction of the integration.
 
-- To form the request for updating the integration, we need the details for the integration. To retrieve the details of the integration, query given in [example](Forming_Calls_with_API#Example) 1 can be used in which id will be 1, and the object to be retrieved will be [Integration](Objects_and_Enums#Integration).
+- To form the request for updating the integration, we need the details for the integration. To retrieve the details of the integration, query given in [example](Forming_Calls_with_API#Example) 1 can be used in which id will be 1, and the object to be retrieved will be [Integration](objects-and-enums.md#integration).
 
 **Request Method Type:** PUT  
 **Request URL:** `http://10.13.27.222:8989/OpsHubWS/queryNode/execute`  
@@ -398,5 +398,6 @@ In the JSON format, some characters like ‘\\’, ‘"’, new line, tab, carri
 - **Backslash** with `\\`
 
 >**Note**: Some online tools are available for escaping the reserved characters.
+
 
 
