@@ -3,7 +3,7 @@ Best-of-breed systems such as Micro Focus ALM/QC and Jira bring rich functionali
 OpsHub Integration Manager integrates Micro Focus ALM and Jira bi-directionally. On this page, we will discuss the bi-directional integration of:
 
 <p align="center">
-  <img src="../../assets/Micro_Focus_ALM_Jira_entities.png" width="900px"/>
+  <img src="../../assets/Micro_Focus_ALM-Jira_entities.png" width="900px"/>
 </p>
 
 # System Prerequisites
@@ -190,7 +190,7 @@ As the final step, click **Save** to save the integration.
 * Choose the mapping in which you want to make changes. We choose Micro Focus ALM [Micro Focus Quality Center Defect] – Jira [Bug] mapping. Edit this map to add the changes.  
 * We will add user-type fields such as Author, Updated By, etc. in the mapping. The user fields vary from one system to another.  
 * We map the user fields: Assigned To in Micro Focus ALM to Assignee in Jira. You are free to choose other fields.  
->**Note**: User fields are mapped by email id. If e-mail ids of the users are same in both the systems, it will be mapped automatically, but if the email ids are not same, you will have to update the [one-to-one XSL](../../integrate/mapping-configuration#value-mapping-using-excel-sheet) for user fields mapping.  
+>**Note**: User fields are mapped by email id. If e-mail ids of the users are same in both the systems, it will be mapped automatically, but if the email ids are not same, you will have to update the [one-to-one XSL](../../integrate/mapping-configuration.md#value-mapping-using-excel-sheet) for user fields mapping.  
 
 <p align="center">
   <img src="../../assets/ALM_17.png" width="950px"/>
