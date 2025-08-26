@@ -204,7 +204,7 @@ For example, a user can specify that only bugs with high priority are to be sync
 >**Note**: Do not use the **integration user credentials** to create entities in the systems, as the integration will not work in that case.  
 
 * Create/Update event in the source system and check whether the event synchronizes to the target system. Wait for one minute for the data to synchronize.  
-* If you face any issue, please refer to [possible reasons and their fix](../../help-center/faqs/general).  
+* If you face any issue, please refer to [possible reasons and their fix](../../help-center/faqs/general.md).  
 
 ## Additional Configurations
 ### Mapping User Fields
@@ -215,7 +215,7 @@ Example: Azure DevOps Server (TFS) [Bug] – Micro Focus ALM [Defect] mapping. E
 We map the user fields: **Assigned To** in Azure DevOps Server (TFS) → **Assigned To** in Micro Focus ALM.  
 You are free to choose other fields.  
 
->**Note**: User fields are mapped by **email id**. If emails are same in both systems, mapping is automatic. If not, update the [one-to-one XSL](../../integrate/mapping-configuration#value-mapping-using-excel-sheet) for user fields mapping.  
+>**Note**: User fields are mapped by **email id**. If emails are same in both systems, mapping is automatic. If not, update the [one-to-one XSL](../../integrate/mapping-configuration.md++#value-mapping-using-excel-sheet) for user fields mapping.  
 
 <p align="center">
   <img src="../../assets/TFS_20.png" width="950px"/>
