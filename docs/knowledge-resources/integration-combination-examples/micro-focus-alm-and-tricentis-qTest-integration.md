@@ -94,7 +94,8 @@ We select **Create from Scratch**.
 #### Mapping for Design Steps to Test Steps ####
 * To synchronize Design Steps from Micro Focus ALM [where the project is versioned] with Test Steps in Tricentis qTest, the following advanced mapping can be applied:
  
-```json 
+```json
+
  <Test-space-Step source-entity-version="{SourceXML/updatedFields/Property/Version-space-Number}">
   <xsl:for-each select="SourceXML/updatedFields/Property/Design-space-Steps/list">
    <xsl:element name="{concat('_',Property/Step-hash-)}">
@@ -151,6 +152,7 @@ We select **Create from Scratch**.
 * To synchronize Run Steps from Micro Focus ALM [where the project is versioned] to Step Results in Tricentis qTest, the following advanced mapping can be applied:
 
 ```json
+
  <Step-space-Results xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:eaiUtils="http://com.opshub.eai.EaiUtility" source-entity-version="{SourceXML/updatedFields/Property/Test-space-Version-space-Number}">
   <xsl:for-each select="SourceXML/updatedFields/Property/Run-space-Steps/list">
    <xsl:element name="{concat('_',position())}">
@@ -204,6 +206,7 @@ We select **Create from Scratch**.
 * Once the additional configurations are completed successfully, update the mapping, activate the integration, and save it again.
 
  
+
 
 
 
