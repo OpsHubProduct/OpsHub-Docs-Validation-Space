@@ -121,21 +121,21 @@ If Mandatory fields in one system don’t have a corresponding value in the othe
   <img src="../../assets/IBM_DOORS_14.png" width="950px"/>
 </p>
 
-*If you want to synchronize a field only in one direction, then you can disable sync of a field by clicking [>] or [<].  
-*The look-up type field, project, is marked with the value mapping icon  
+* If you want to synchronize a field only in one direction, then you can disable sync of a field by clicking [>] or [<].  
+* The look-up type field, project, is marked with the value mapping icon  
 ![](../../assets/I_9.png)  
 
 >**Note**: Value Mapping is used to map the values for the Lookup Type fields.  
-*Click ![](../../assets/I_9.png) against the Projects fields to map their corresponding values.  
-*From the Value Mapping pop-up that opens after clicking ![](../../assets/I_9.png), select the corresponding values from both systems by clicking them. We select Demo Module 1 from IBM DOORS and DemoProject from Jira.  
+* Click ![](../../assets/I_9.png) against the Projects fields to map their corresponding values.  
+* From the Value Mapping pop-up that opens after clicking ![](../../assets/I_9.png), select the corresponding values from both systems by clicking them. We select Demo Module 1 from IBM DOORS and DemoProject from Jira.  
 
 ![](../../assets/IBM_DOORS_15.png)  
 
-*Click **Save** in the Value Mapping pop-up to save the mapping. It’s time to save the mapping now. Click the **Create Mapping** to create & save the mapping.  
+* Click **Save** in the Value Mapping pop-up to save the mapping. It’s time to save the mapping now. Click the **Create Mapping** to create & save the mapping.  
 
 ![](../../assets/IBM_DOORS_16.png)  
 
-*Once you save the mapping successfully, you will get the following pop-up at the bottom of the page.  
+* Once you save the mapping successfully, you will get the following pop-up at the bottom of the page.  
 
 ![](../../assets/IBM_DOORS_17.png)  
 
@@ -144,7 +144,7 @@ You will be further re-directed to the Integration page:
 ![](../../assets/IBM_DOORS_18.png)  
 
 # Set Polling Time & Activate Integration  
-*Now on the integration page, in the **Start Polling Time** field, set the time to start synchronizing data in both the systems. The polling time for both systems needs to be set one by one.  
+* Now on the integration page, in the **Start Polling Time** field, set the time to start synchronizing data in both the systems. The polling time for both systems needs to be set one by one.  
 
 ![](../../assets/IBM_DOORS_19.png)  
 
@@ -152,8 +152,8 @@ To save the integration in active mode, slide the **Activate Integration** butto
 
 ![](../../assets/IBM_DOORS_20.png)  
 
-*As the final step, click **Save** to save the integration.  
-*The integration will be created. You will also get a pop-up at the bottom of the screen confirming the integration has been successfully configured and activated.  
+* As the final step, click **Save** to save the integration.  
+* The integration will be created. You will also get a pop-up at the bottom of the screen confirming the integration has been successfully configured and activated.  
 
 ![](../../assets/IBM_DOORS_21.png)  
 
@@ -170,7 +170,7 @@ Refer to the videos on this page to learn in detail about [Comments](../../integ
 
 ![](../../assets/IBM_DOORS_22.png)  
 
-*Once the integration configuration is open, click the edit icon as shown in the image below:  
+* Once the integration configuration is open, click the edit icon as shown in the image below:  
 
 ![](../../assets/IBM_DOORS_23.png)  
 
@@ -178,13 +178,13 @@ Refer to the videos on this page to learn in detail about [Comments](../../integ
 
 ![](../../assets/IBM_DOORS_24.png)  
 
-*From the **Select Entities to Sync** section, click the mapping for which you want to enable comment and relationship synchronization.  
+* From the **Select Entities to Sync** section, click the mapping for which you want to enable comment and relationship synchronization.  
 
 ![](../../assets/IBM_DOORS_25.png)  
 
 >**Note**: Mapping of attachments is not supported for this integration.  
 
-*Once the mapping configuration page is open, click the edit icon to edit the mapping.  
+* Once the mapping configuration page is open, click the edit icon to edit the mapping.  
 
 ![](../../assets/IBM_DOORS_26.png)  
 
@@ -195,9 +195,9 @@ Refer to the video on this page to learn in detail about [Comments](../../integr
 
 ![](../../assets/IBM_DOORS_27.png)  
 
-*For enabling comments, just toggle the comments toggle at bottom of fields mapping.  
-*By default, comments will be synchronized in both directions. For changing the default behavior, click the icon next to comments.  
-*If required, disable the direction in which comments need not be synchronized by clicking the [>][<] buttons.  
+* For enabling comments, just toggle the comments toggle at bottom of fields mapping.  
+* By default, comments will be synchronized in both directions. For changing the default behavior, click the icon next to comments.  
+* If required, disable the direction in which comments need not be synchronized by clicking the [>][<] buttons.  
 
 ![](../../assets/IBM_DOORS_28.png)  
 
@@ -205,27 +205,28 @@ Refer to the video on this page to learn in detail about [Comments](../../integr
 
 ![](../../assets/IBM_DOORS_29.png)  
 
-*For syncing relationship and link between the entities in both systems, switch on the Relationship toggle.  
-*Now, click Map Relationships.  
-*Toggle the **Entity Type- Link Type** button to left to map entity types.  
+* For syncing relationship and link between the entities in both systems, switch on the Relationship toggle.  
+* Now, click Map Relationships.  
+* Toggle the **Entity Type- Link Type** button to left to map entity types.  
 
 ![](../../assets/IBM_DOORS_30.png)  
 
-*In the mapping, map the relationship between entities – SR in IBM DOORS to Story in Jira by selecting them from the respective boxes.  
+* In the mapping, map the relationship between entities – SR in IBM DOORS to Story in Jira by selecting them from the respective boxes.  
 
 ![](../../assets/IBM_DOORS_31.png)  
 
-*Click **Next** in the Relationship Configuration pop-up to map link type. We link `Oh_Childids` with `relates to`, which means SR from IBM DOORS, which is a child to the Requirement, relates to Story in Jira in the same manner.  
+* Click **Next** in the Relationship Configuration pop-up to map link type. We link `Oh_Childids` with `relates to`, which means SR from IBM DOORS, which is a child to the Requirement, relates to Story in Jira in the same manner.  
 
 ![](../../assets/IBM_DOORS_32.png)  
 
-*Now, click the **Update Mapping** to update the mapping.  
+* Now, click the **Update Mapping** to update the mapping.  
 
 ![](../../assets/IBM_DOORS_33.png)  
 
-*You will see the following pop-up at the bottom of the screen notifying the mapping is updated and you will be taken to the integration configuration page.  
-*Activate the integration and save it.  
+* You will see the following pop-up at the bottom of the screen notifying the mapping is updated and you will be taken to the integration configuration page.  
+* Activate the integration and save it.  
 
 ![](../../assets/IBM_DOORS_34.png)  
+
 
 
