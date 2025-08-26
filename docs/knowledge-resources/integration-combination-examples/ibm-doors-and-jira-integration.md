@@ -200,7 +200,7 @@ Refer to the video on this page to learn in detail about [Comments](../../integr
 
 ![](../../assets/IBM_DOORS_28.png)  
 
-## Map Relationships  
+# Map Relationships  
 
 ![](../../assets/IBM_DOORS_29.png)  
 
@@ -226,6 +226,7 @@ Refer to the video on this page to learn in detail about [Comments](../../integr
 * Activate the integration and save it.  
 
 ![](../../assets/IBM_DOORS_34.png)  
+
 
 
 
