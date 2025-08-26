@@ -4,7 +4,7 @@ Best of breed tools such as Azure DevOps Services (VSTS) and Micro Focus ALM bri
 **{{SITENAME}}** integrates Azure DevOps Services (VSTS) and Micro Focus ALM bidirectionally. On this page, we will discuss the bi-directional integration of:  
 
 <p align="center">
-  <img src="../../assets/VSTS_Micro_Focus_ALM.png" width="900px"/>
+  <img src="../../assets/VSTS-Micro_Focus_ALM.png" width="900px"/>
 </p>  
 
 # System Prerequisites
@@ -137,7 +137,7 @@ Example: **Description** from Azure DevOps Services (VSTS) → **Description** f
 * If you do not wish to add more entities, save the integration and activate it.  
 
 <p align="center">
-  <img src="../../assets/VSTS_14.png" width="950px"/>
+  <img src="../../assets/VSTS_13.png" width="950px"/>
 </p>  
 
 ### Entity: Bug and Defect
@@ -147,7 +147,7 @@ In this case: **Bug** from Azure DevOps Services (VSTS) and **Defect** from Micr
 * Click the adjacent mapping to **Select fields to be Synced** to create the mapping between these two entities. You will be navigated to Mapping Configuration screen.  
 
 <p align="center">
-  <img src="../../assets/VSTS_15.png" width="950px"/>
+  <img src="../../assets/VSTS_14.png" width="950px"/>
 </p>  
 
 * You can refer to the [previous mapping](#mapping-mandatory-fields) and follow the same steps further.  
@@ -155,7 +155,7 @@ In this case: **Bug** from Azure DevOps Services (VSTS) and **Defect** from Micr
 * Once you save the mapping successfully, you will be re-directed to the Integration page.  
 
 <p align="center">
-  <img src="../../assets/VSTS_16.png" width="950px"/>
+  <img src="../../assets/VSTS_15.png" width="950px"/>
 </p>  
 
 ## Comments and Attachments Mapping
@@ -181,7 +181,7 @@ For example, a user can specify that only bugs with high priority are to be sync
 * Select **In Database** from the **Select criteria storage type** drop-down list.  
 
 <p align="center">
-  <img src="../../assets/VSTS_17.png" width="950px"/>
+  <img src="../../assets/VSTS_16.png" width="950px"/>
 </p>  
 
 ## Save and Activate Integration
@@ -189,13 +189,13 @@ For example, a user can specify that only bugs with high priority are to be sync
 * As the final step, click **Save** to save the integration.  
 
 <p align="center">
-  <img src="../../assets/VSTS_18.png" width="950px"/>
+  <img src="../../assets/VSTS_17.png" width="950px"/>
 </p>  
 
 * The integration will be created. You will also get a confirmation pop-up at the bottom of the screen, and the integration will be listed in the integrations list.  
 
 <p align="center">
-  <img src="../../assets/VSTS_19.png" width="950px"/>
+  <img src="../../assets/VSTS_18.png" width="950px"/>
 </p>  
 
 ## Test the Integration
@@ -218,7 +218,7 @@ You are free to choose other fields.
 >**Note**: User fields are mapped by **email id**. If emails are same in both systems, mapping is automatic. If not, update the [one-to-one XSL](../../integrate/mapping-configuration.md++#value-mapping-using-excel-sheet) for user fields mapping.  
 
 <p align="center">
-  <img src="../../assets/VSTS_20.png" width="950px"/>
+  <img src="../../assets/VSTS_19.png" width="950px"/>
 </p>  
 
 * Once the additional configurations are completed successfully, update the mapping, activate the integration, and save it again.  
