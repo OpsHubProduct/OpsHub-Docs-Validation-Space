@@ -200,12 +200,13 @@ We select **Create from Scratch**.
 ``` 
 
 >**Note**:
-* In the above advanced mapping, we have passed the '''source-entity-version''' in Run Steps as attribute to sync the Run Steps and parameters with history.
-* In case, the Micro Focus ALM's projects is not versioned, then there is no need to pass the above attribute '''source-entity-version''' in the advanced mapping.
+* In the above advanced mapping, we have passed the **source-entity-version** in Run Steps as attribute to sync the Run Steps and parameters with history.
+* In case, the Micro Focus ALM's projects is not versioned, then there is no need to pass the above attribute **source-entity-version** in the advanced mapping.
 
 * Once the additional configurations are completed successfully, update the mapping, activate the integration, and save it again.
 
  
+
 
 
 
