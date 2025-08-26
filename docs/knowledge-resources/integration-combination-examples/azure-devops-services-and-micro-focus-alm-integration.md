@@ -4,7 +4,7 @@ Best of breed tools such as Azure DevOps Services (VSTS) and Micro Focus ALM bri
 **{{SITENAME}}** integrates Azure DevOps Services (VSTS) and Micro Focus ALM bidirectionally. On this page, we will discuss the bi-directional integration of:  
 
 <p align="center">
-  <img src="../../assets/VSTS_Micro_Focus_ALM_entities.png" width="900px"/>
+  <img src="../../assets/VSTS_Micro_Focus_ALM.png" width="900px"/>
 </p>  
 
 # System Prerequisites
