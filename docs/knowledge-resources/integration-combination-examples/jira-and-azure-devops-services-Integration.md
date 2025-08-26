@@ -205,7 +205,7 @@ At this stage, you can also map entities such as comments and attachments. Refer
 
 >**Note**: You should not be using the integration user credentials to create entities in the systems as in this case the integration will not work.
 
-- Create/Update event in the source system and check whether the event synchronizes to the target system. Wait for one minute for the data to synchronize. If you face any issue, please refer this page for [possible reasons and their fix](../../help-center/faqs/general).  
+- Create/Update event in the source system and check whether the event synchronizes to the target system. Wait for one minute for the data to synchronize. If you face any issue, please refer this page for [possible reasons and their fix](../../help-center/faqs/general.md).  
 
 
 ## Additional Configurations
