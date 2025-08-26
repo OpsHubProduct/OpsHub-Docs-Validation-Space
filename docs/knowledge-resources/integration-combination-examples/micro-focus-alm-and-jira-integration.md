@@ -182,7 +182,7 @@ As the final step, click **Save** to save the integration.
 ## Test the Integration
 * At this stage, test the integration by trying to synchronize data between the specified Micro Focus ALM and Jira projects.  
 >**Note**: You should not be using the integration user credentials to create entities in the systems as in this case the integration will not work.  
-* Create/Update event in the source system and check whether the event synchronizes to the target system. Wait for one minute for the data to synchronize. If you face any issue, please refer to [possible reasons and their fix](../../help-center/faqs/general).  
+* Create/Update event in the source system and check whether the event synchronizes to the target system. Wait for one minute for the data to synchronize. If you face any issue, please refer to [possible reasons and their fix](../../help-center/faqs/general.md).  
 
 ## Additional Configurations
 ### Mapping User Fields
