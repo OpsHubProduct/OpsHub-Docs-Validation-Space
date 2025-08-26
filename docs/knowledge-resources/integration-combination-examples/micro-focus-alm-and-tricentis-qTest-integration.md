@@ -5,12 +5,11 @@ Best-of-breed systems such as Micro Focus ALM/QC and Tricentis qTest bring rich 
 {{SITENAME}} integrates Micro Focus ALM and Tricentis qTest bi-directionally. On this page, we will discuss the bi-directional integration of:  
 
 <p align="center">
-  <img src="../../assets/Micro_Focus_ALM_-_Tricentis_qTest_entities.PNG" width="900px" />
+  <img src="../../assets/Micro_Focus_ALM_Tricentis_qTest_entities.PNG" width="900px" />
 </p>
 
 # System Prerequisites
-Configuring [system pre-requisites](../../integrate/integration-prerequisites.md) is mandatory for successful system configuration.  
-Check out the prerequisites for [Micro Focus ALM](../../connectors/microfocus-alm-qc.md#prerequisites) and [Tricentis qTest](../../tricentis_qTest.md#Prerequisites) systems before you proceed with the integration.  
+Configuring [system pre-requisites](../../integrate/integration-prerequisites.md) is mandatory for successful system configuration.  Check out the prerequisites for [Micro Focus ALM](../../connectors/microfocus-alm-qc.md#prerequisites) and [Tricentis qTest](../../tricentis_qTest.md#Prerequisites) systems before you proceed with the integration.  
 
 # Integration Configuration
 * Log in into {{SITENAME}}. The default credentials are: User Name: `admin`, Password: `password`.  
@@ -19,7 +18,7 @@ Check out the prerequisites for [Micro Focus ALM](../../connectors/microfocus-al
   <img src="../../assets/Getting_Started_With_Application_Image_1G_a.png" />
 </p>
 
-![](../../assets/Note.jpg) **Proxy parameters**: Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](../../manage/administrator/proxy-setting.md) in {{SITENAME}}.  
+>**Note** **Proxy parameters**: Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](../../manage/administrator/proxy-setting.md) in {{SITENAME}}.  
 
 * Click **Integrate** on the top right corner of the screen and then click the plus [+] icon.  
 
@@ -50,7 +49,7 @@ Check out the prerequisites for [Micro Focus ALM](../../connectors/microfocus-al
 </p>
 
 ## Select Projects and Entities
-![](../../assets/Note.jpg) If you receive the following error: **PKIX certification path not found** and the projects and entities don’t load properly, then [import SSL certificate](../../getting-started/ssl-certificate-configuration.md) onto OpsHub Integration Manager’s Java KeyStore before you proceed.  
+>**Note** If you receive the following error: **PKIX certification path not found** and the projects and entities don’t load properly, then [import SSL certificate](../../getting-started/ssl-certificate-configuration.md) onto OpsHub Integration Manager’s Java KeyStore before you proceed.  
 
 * In the **Add Project(s) to Sync** section, select the projects you want to synchronize between Tricentis qTest and Micro Focus ALM by clicking them.  
 For example, here we select {{SITENAME}} Demo Project from Tricentis qTest and TestProject from Micro Focus ALM.  
@@ -205,3 +204,4 @@ We select **Create from Scratch**.
 * Once the additional configurations are completed successfully, update the mapping, activate the integration, and save it again.
 
  
+
