@@ -4,7 +4,7 @@ Best of breed tools such as Azure DevOps Server (TFS) and Micro Focus ALM bring 
 **{{SITENAME}}** integrates Azure DevOps Server (TFS) and Micro Focus ALM bidirectionally. On this page, we will discuss the bi-directional integration of:  
 
 <p align="center">
-  <img src="../../assets/TFS_Micro_Focus_ALM_entities.PNG" width="900px"/>
+  <img src="../../assets/TFS_Micro_Focus_ALM_entities.png" width="900px"/>
 </p>  
 
 # System Prerequisites
