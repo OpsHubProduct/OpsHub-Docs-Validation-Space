@@ -1,77 +1,66 @@
-# Prerequisites
+# casdm
 
-## User Privileges
+## Prerequisites
+
+### User Privileges
 
 * Create one user for CA Service Desk Manager, dedicated to integration. User should not be used to do any operations from CA Service Desk Manager's user interface.
-* User must have administrator-level access to access the REST web-services API. 
-* User must set User Id field on CA Service Desk Manager for user synchronization. 
+* User must have administrator-level access to access the REST web-services API.
+* User must set User Id field on CA Service Desk Manager for user synchronization.
 
+## System Configuration
 
-# System Configuration
-
-Before you continue to the integration, you must first configure CA Service Desk Manager.  
-Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.  
+Before you continue to the integration, you must first configure CA Service Desk Manager.\
+Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.\
 Refer the screenshot given below for reference.
 
-<p align="center">
-  <img src="../assets/CASDM_Image_1a.png" />
-</p>
+<div align="center"><img src="../assets/CASDM_Image_1a.png" alt=""></div>
 
 If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
+## Mapping Configuration
 
-# Mapping Configuration
-
-In this step, map the fields between CA Service Desk Manager and the other system to be integrated to ensure that the data between both the systems synchronizes correctly.  
+In this step, map the fields between CA Service Desk Manager and the other system to be integrated to ensure that the data between both the systems synchronizes correctly.\
 Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
+## Integration Configuration
 
-# Integration Configuration
-
-In this step, set a time to synchronize data between CA Service Desk Manager and the other system to be integrated. Also, define parameters and conditions, if any, for integration.  
+In this step, set a time to synchronize data between CA Service Desk Manager and the other system to be integrated. Also, define parameters and conditions, if any, for integration.\
 Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
 
-# Criteria Configuration
+## Criteria Configuration
 
-If you want to specify conditions for synchronizing an entity between CA Service Desk Manager and the other system to be integrated, you can use the **Criteria Configuration** feature.  
+If you want to specify conditions for synchronizing an entity between CA Service Desk Manager and the other system to be integrated, you can use the **Criteria Configuration** feature.\
 To configure criteria in CA Service Desk Manager, integration needs to be created with CA Service Desk Manager as the source system.
 
-**Query Format:**  
+**Query Format:**\
 `Fieldname = value`
 
 **Sample Queries:**
 
-* Polling all projects with status set to Acknowledged  
-  E.g. `(status='ACK')` where `ACK` = code for status value *Acknowledged*  
-  User can view the status list of Request/ Incident/ Problem by  
-  *Administration → Service Desk → Requests/Incidents/Problems → Status*
+* Polling all projects with status set to Acknowledged\
+  E.g. `(status='ACK')` where `ACK` = code for status value _Acknowledged_\
+  User can view the status list of Request/ Incident/ Problem by\
+  &#xNAN;_&#x41;dministration → Service Desk → Requests/Incidents/Problems → Status_
 
-<p align="center">
-  <img src="../assets/CASDM_Image_2a.png" />
-</p>
+<div align="center"><img src="../assets/CASDM_Image_2a.png" alt=""></div>
 
-<p align="center">
-  <img src="../assets/CASDM_Image_3.png" />
-</p>
+<div align="center"><img src="../assets/CASDM_Image_3.png" alt=""></div>
 
-* Polling all projects with Areas set to Applications  
-  For example, `(Areas='Active')` where `Active` = Record Status for symbol *Applications*  
-  User can view the Areas list of Request/Incident/Problem by  
-  *Administration → Service Desk → Requests/Incidents/Problems → Areas*
+* Polling all projects with Areas set to Applications\
+  For example, `(Areas='Active')` where `Active` = Record Status for symbol _Applications_\
+  User can view the Areas list of Request/Incident/Problem by\
+  &#xNAN;_&#x41;dministration → Service Desk → Requests/Incidents/Problems → Areas_
 
-<p align="center">
-  <img src="../assets/CASDM_Image_4a.png" />
-</p>
+<div align="center"><img src="../assets/CASDM_Image_4a.png" alt=""></div>
 
-<p align="center">
-  <img src="../assets/CASDM_Image_5.png" />
-</p>
+<div align="center"><img src="../assets/CASDM_Image_5.png" alt=""></div>
 
-Go to the Criteria Configuration section on the [Integration Configuration](integration-configuration) page to learn more.
+Go to the Criteria Configuration section on the [Integration Configuration](integration-configuration/) page to learn more.
 
----
+***
 
-# Known Limitations
+## Known Limitations
 
 * Fields under properties tab of Additional Information are not supported for integration.
 * For synchronization from CA Service Desk Manager to any other system, entity update is needed when the comment is added from API to the source entity. This situation can occur for three-end systems integration where CA Service Desk Manager is the middle system. For example, integration from system A to CA Service Desk Manager and from CA Service Desk Manager to system B. So, if comment is added in CA Service Desk Manager from A system, then entity update is needed in CA Service Desk Manager to sync that comment to C system.
