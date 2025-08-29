@@ -153,9 +153,7 @@ Now, click **Create from Scratch** button to define the mapping from scratch.
   <img src="../../assets/TR-Jama_Image_6b.png" alt="Mapping Section to Test Group"/>
 </p>
 
-<p align="center">
-  <img src="../../assets/note.jpg" alt="Note" width="30px"/>
-</p>
+>**Note**:
 
 The fields mapped here are examples; you can map more fields as per your requirement.  
 
@@ -183,9 +181,7 @@ Now, map **Link types** between Jama and TestRail entities:
 
 Click **Save Mapping** button to save the mapping. You will be directed back to the integration page.  
 
-<p align="center">
-  <img src="../../assets/note.jpg" alt="Note" width="30px"/>
-</p>
+>**Note**:
 
 The fields mapped here are examples; you can map more fields as per your requirement.  
 
@@ -231,11 +227,7 @@ Now, map **Link types** between Jama and TestRail entities: select **Section** f
 
 Click **Save Mapping** button to save the mapping. You will be directed back to the integration page.  
 
-<p align="center">
-  <img src="../../assets/note.jpg" alt="Note" width="30px"/>
-</p>
-
-The fields mapped here are examples; you can map more fields as per your requirement.  
+>**Note**: The fields mapped here are examples; you can map more fields as per your requirement.  
 
 ## <span style="color:#de413a">Criteria Configuration</span>
 
@@ -282,9 +274,7 @@ From the **Link type** boxes for the systems: select **Suite** from TestRail and
 
 Click **Save Mapping** button to save the mapping. You will be directed back to the navigation page.  
 
-<p align="center">
-  <img src="../../assets/note.jpg" alt="Note" width="30px"/>
-</p>
+>**Note**:
 
 ### Mapping Test in TestRail to Test Run in Jama
 
@@ -307,9 +297,7 @@ Click **Create from Scratch** button to define the mapping from scratch.
   <img src="../../assets/TR-Jama_Image_15b.png" alt="Mapping Test to Test Run"/>
 </p>
 
-<p align="center">
-  <img src="../../assets/note.jpg" alt="Note" width="30px"/>
-</p>
+>**Note**:
 
 **For Steps field**: The Steps in TestRail can be mapped to Steps in Jama for a particular case/test run. But in Jama, there is an additional field within Steps named **status**, whereas in TestRail, **status** is a generic field. To sync the status from TestRail's test entity to Jama's test run entity, advanced XSL is created.  
 
@@ -397,9 +385,7 @@ Click **Create from Scratch** button to define the mapping from scratch.
   </xsl:for-each><br>
 </testRunSteps><br>
 ```
-<p align="center">
-  <img src="../../assets/note.jpg" alt="Note" width="30px"/>
-</p>
+>**Note**:
 
 **TestRail and Jama Model Mismatch for Steps field:**  
 In Jama, the information about the **"Steps"** of **TestRun Entity** cannot be updated after its creation, except for the **"status"** information of the Steps field. In TestRail, the information about the **"Steps"** in **Test Entity** can be updated after creation.  
@@ -570,9 +556,7 @@ From the **Link type** boxes for the systems: select **Case** from TestRail and 
 
 Now, click **Save Mapping** button to save the mapping. You will be directed to the integration page.  
 
-<p align="center">
-  <img src="../../assets/note.jpg" alt="Note" width="30px"/>
-</p>
+>**Note**:
 
 The fields mapped here are examples, you can map more fields as per your requirement.  
 
@@ -607,4 +591,5 @@ The integration will be created.
 <p align="center">
   <img src="../../assets/TR-Jama_Image_1a.png" alt="Integration Overview"/>
 </p>
+
 
