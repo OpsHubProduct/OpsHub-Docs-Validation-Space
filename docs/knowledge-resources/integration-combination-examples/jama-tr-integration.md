@@ -33,7 +33,7 @@ To create an integration between Jama and TestRail, you need to:
   <img src="../../assets/TR-Jama_Image_21a.png" alt="Pre-requisites"/>
 </p>
 
-To learn how to configure Jama and TestRail, navigate to [Jama](../jama.md) and [TestRail](../testrail.md) pages.  
+To learn how to configure Jama and TestRail, navigate to [Jama](../../connectors/jama.md) and [TestRail](../../connectors/testrail.md) pages.  
 
 - If you want to synchronize test cases from Jama to TestRail bi-directionally, then due to TestRail's API limitation, criteria will have to be configured in Jama.  
 - For this, you need to create a custom field of type **boolean**.  
@@ -577,6 +577,7 @@ The integration will be created.
 <p align="center">
   <img src="../../assets/TR-Jama_Image_1a.png" alt="Integration Overview"/>
 </p>
+
 
 
 
