@@ -215,8 +215,6 @@ Click **Create from Scratch** button to define the mapping from scratch.
   <img src="../../assets/TR-Jama_Image_9b.png" alt="Mapping Case to Test Case"/>
 </p>
 
----
-
 ## <span style="color:#005999">Relationship Mapping</span>
 
 From the **Entity type** boxes for the systems: select **Section** from TestRail and **Test Group** from Jama and map them bi-directionally.  
@@ -239,15 +237,11 @@ Click **Save Mapping** button to save the mapping. You will be directed back to 
 
 The fields mapped here are examples; you can map more fields as per your requirement.  
 
----
-
 ## <span style="color:#de413a">Criteria Configuration</span>
 
 * In TestRail, there is no API to update Section in which test cases exist, and in Jama, test cases can't be linked to Test Group at the time of creation.  
 * To bridge this model mismatch, configure criteria on Jama test cases so that the integration polls test cases only when criteria is met.  
 * For example, a custom field of type 'boolean' is used for criteria. Only the test cases that have value 'true' in the 'boolean' field will be synchronized. Name of the boolean field: **syncedtotestrail (t/f)**.  
-
----
 
 ### Mapping Test Run in TestRail to Test Cycle in Jama
 
@@ -272,8 +266,6 @@ Click **Create from Scratch** button to define the mapping from scratch.
   <img src="../../assets/TR-Jama_Image_12b.png" alt="Mapping Test Run to Test Cycle"/>
 </p>
 
----
-
 ## <span style="color:#005999">Relationship Mapping</span>
 
 From the **Entity type** boxes for the systems: select **Test Suite** from TestRail and **Test Plan** in Jama and map them in forward direction (TestRail to Jama).  
@@ -293,8 +285,6 @@ Click **Save Mapping** button to save the mapping. You will be directed back to 
 <p align="center">
   <img src="../../assets/note.jpg" alt="Note" width="30px"/>
 </p>
-
----
 
 ### Mapping Test in TestRail to Test Run in Jama
 
@@ -617,3 +607,4 @@ The integration will be created.
 <p align="center">
   <img src="../../assets/TR-Jama_Image_1a.png" alt="Integration Overview"/>
 </p>
+
