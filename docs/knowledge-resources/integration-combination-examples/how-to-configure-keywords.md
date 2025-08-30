@@ -7,7 +7,7 @@ OpsHub **preserves a reference** to the original keyword by appending a special 
 Integration required:  
 
 <p align="center">
-  <img src="../../assets/ZephyrToETM.png.png"  width="700px"/>
+  <img src="../../assets/ZephyrToETM.png"  width="700px"/>
 </p>
 
 This allows:  
