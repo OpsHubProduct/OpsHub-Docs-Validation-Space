@@ -185,7 +185,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 
 >**Note**: Do not use integration user credentials to create entities.  
 
-* Create/Update events in source system and check synchronization. Wait one minute. For issues, refer to [General](../../General).
+* Create/Update events in source system and check synchronization. Wait one minute. For issues, refer to [General](../../help-center/faqs/general).
 
 ## Additional Configurations
 
@@ -194,7 +194,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Choose mapping for additional configuration. Example: ServiceNow [Problem] – Azure DevOps [Bug].  
 * Map user fields like **Assigned to** in both systems. Other fields can be selected.
 
->**Note**: User fields are mapped by email. If emails differ, update [one-to-one XSL](../../integrate/mapping-configuration.md++#value-mapping-using-excel-sheet) for user mapping.
+>**Note**: User fields are mapped by email. If emails differ, update [one-to-one XSL](../../integrate/mapping-configuration.md#value-mapping-using-excel-sheet) for user mapping.
 
 <p align="center">
   <img src="../../assets/SNT_16.png" alt="User Fields Mapping" width="950px"/>
