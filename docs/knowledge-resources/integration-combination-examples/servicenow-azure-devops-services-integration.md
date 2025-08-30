@@ -4,7 +4,7 @@ Best of breed tools such as ServiceNow and Azure DevOps Services (VSTS) bring ri
 {{SITENAME}} integrates ServiceNow and Azure DevOps Services (VSTS) bi-directionally. On this page, we will discuss the bi-directional integration of:
 
 <p align="center">
-  <img src="../../assets/ServiceNow-Azure DevOps Services entities.PNG" alt="ServiceNow – Azure DevOps Services entities" width="900px"/>
+  <img src="../../assets/ServiceNow-Azure_DevOps_Services_entities.png" alt="ServiceNow – Azure DevOps Services entities" width="900px"/>
 </p>
 
 # System Prerequisites
