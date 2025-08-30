@@ -32,7 +32,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Click the plus [+] icon adjacent to the System 1 and System 2 fields one by one to configure ServiceNow and Azure DevOps Services (VSTS).
 
 <p align="center">
-  <img src="../../assets/SNT 1.png" alt="Configure Systems" width="950px"/>
+  <img src="../../assets/SNT_1.png" alt="Configure Systems" width="950px"/>
 </p>
 
 ## Configure System(s)
@@ -40,13 +40,13 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Once you have fulfilled all the prerequisites and are done with the above-mentioned check, configure ServiceNow and Azure DevOps Services (VSTS) by following the steps given on [ServiceNow system configuration](../../ServiceNow#System_Configuration) and [Azure DevOps Services (VSTS) system configuration](../../Team_Foundation_Server#System_Configuration) pages respectively.
 
 <p align="center">
-  <img src="../../assets/SNT 2.png" alt="System Configuration" width="950px"/>
+  <img src="../../assets/SNT_2.png" alt="System Configuration" width="950px"/>
 </p>
 
 * When you save the respective system configuration pages after configuring the systems, the systems will automatically be added to the integration. Proceed to adding projects and entities in the integration.
 
 <p align="center">
-  <img src="../../assets/SNT 3.png" alt="Add Projects and Entities" width="950px"/>
+  <img src="../../assets/SNT_3.png" alt="Add Projects and Entities" width="950px"/>
 </p>
 
 ## Select Projects and Entities
@@ -61,14 +61,14 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Once the direction is selected, the arrows will turn grey. We have selected bi-directional flow.
 
 <p align="center">
-  <img src="../../assets/SNT 4.png" alt="Select Projects" width="950px"/>
+  <img src="../../assets/SNT_4.png" alt="Select Projects" width="950px"/>
 </p>
 
 * {{SITENAME}} fetches entities available in both systems and shows them in the entities list. From the **Select Entities to Sync** section, select the relevant entities for both systems. Here we select **Feature** from Azure DevOps Server (TFS) and **Requirement** from Micro Focus ALM.
 * Define the fields that need to be integrated for every entity mapped. Click the plus [+] icon adjacent to **Select fields to be Synced** to create the mapping between these entities. You will be navigated to Mapping Configuration screen.
 
 <p align="center">
-  <img src="../../assets/SNT 5.png" alt="Select Fields to Sync" width="950px"/>
+  <img src="../../assets/SNT_5.png" alt="Select Fields to Sync" width="950px"/>
 </p>
 
 ## Mapping Fields
@@ -79,7 +79,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Click **Create from Scratch** to define mapping manually or **Auto Map** to map all fields with the same name. Even if you select **Auto Map**, {{SITENAME}} allows adding/removing fields before saving. We select **Create from Scratch**.
 
 <p align="center">
-  <img src="../../assets/SNT 6.png" alt="Create Mapping" width="950px"/>
+  <img src="../../assets/SNT_6.png" alt="Create Mapping" width="950px"/>
 </p>
 
 #### Mapping Mandatory Fields
@@ -90,7 +90,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 >**Note**: For ServiceNow, a field is writable only if it is part of import set.
 
 <p align="center">
-  <img src="../../assets/SNT 7.png" alt="Mandatory Fields" width="950px"/>
+  <img src="../../assets/SNT_7.png" alt="Mandatory Fields" width="950px"/>
 </p>
 
 #### Mapping Look-up Type Fields
@@ -128,7 +128,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * If no more entities, save the integration and activate it.
 
 <p align="center">
-  <img src="../../assets/SNT 11.png" alt="Rich Text Mapping" width="950px"/>
+  <img src="../../assets/SNT_11.png" alt="Rich Text Mapping" width="950px"/>
 </p>
 
 ### Entity: Problem and Bug
@@ -137,13 +137,13 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Click adjacent field icon to **Select fields to be Synced**. You will navigate to Mapping Configuration screen.
 
 <p align="center">
-  <img src="../../assets/SNT 12.png" alt="Problem and Bug Mapping" width="950px"/>
+  <img src="../../assets/SNT_12.png" alt="Problem and Bug Mapping" width="950px"/>
 </p>
 
 * Save mapping by clicking **Create Mapping**.
 
 <p align="center">
-  <img src="../../assets/SNT 13.png" alt="Saved Mapping" width="950px"/>
+  <img src="../../assets/SNT_13.png" alt="Saved Mapping" width="950px"/>
 </p>
 
 ## Comments and Attachments Mapping
@@ -174,7 +174,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Click **Save** to save integration.
 
 <p align="center">
-  <img src="../../assets/SNT 15.png" alt="Activate Integration" width="950px"/>
+  <img src="../../assets/SNT_15.png" alt="Activate Integration" width="950px"/>
 </p>
 
 * Integration is created. A pop-up confirms successful configuration. Integration will appear in the integrations list.
@@ -197,7 +197,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 >**Note**: User fields are mapped by email. If emails differ, update [one-to-one XSL](../../integrate/mapping-configuration.md++#value-mapping-using-excel-sheet) for user mapping.
 
 <p align="center">
-  <img src="../../assets/SNT 16.png" alt="User Fields Mapping" width="950px"/>
+  <img src="../../assets/SNT_16.png" alt="User Fields Mapping" width="950px"/>
 </p>
 
 * After additional configuration, update mapping, activate integration, and save again.
