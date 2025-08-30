@@ -2,7 +2,7 @@
 - [Azure DevOps Services (VSTS) – Micro Focus ALM Integration](azure-devops-services-and-micro-focus-alm-integration.md)  
 - [IBM DOORS – Jira Integration](ibm-doors-and-jira-integration.md)  
 - [Jira – Azure DevOps Server (TFS) Integration](jira-and-azure-devops-server-Integration.md)  
-- [Jira – Azure DevOps Services (VSTS) Integration](jira-and-azure-devops-services-Integration.md)  
+- [Jira – Azure DevOps Services (VSTS) Integration](jira-and-azure-devops-services-integration.md)  
 - [Jira – ServiceNow Integration](jira-snow-integration.md)  
 - [Micro Focus ALM – Jira Integration](micro-focus-alm-and-jira-integration.md)  
 - [Micro Focus ALM – Tricentis qTest Integration](micro-focus-alm-and-tricentis-qTest-integration.md)  
