@@ -37,7 +37,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 
 ## Configure System(s)
 
-* Once you have fulfilled all the prerequisites and are done with the above-mentioned check, configure ServiceNow and Azure DevOps Services (VSTS) by following the steps given on [ServiceNow system configuration](../../connectors/servicenow.md#system-configuration) and [Azure DevOps Services (VSTS) system configuration](../../../../connectors/team-foundation-server.md#system-configuration) pages respectively.
+* Once you have fulfilled all the prerequisites and are done with the above-mentioned check, configure ServiceNow and Azure DevOps Services (VSTS) by following the steps given on [ServiceNow system configuration](../../connectors/servicenow.md#system-configuration) and [Azure DevOps Services (VSTS) system configuration](../../connectors/team-foundation-server.md#system-configuration) pages respectively.
 
 <p align="center">
   <img src="../../assets/SNT_2.png" alt="System Configuration" width="950px"/>
