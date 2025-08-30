@@ -165,7 +165,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Select **In Database** from **Select criteria storage type** drop-down.
 
 <p align="center">
-  <img src="../../assets/SNT 14.png" alt="Criteria Configuration" width="950px"/>
+  <img src="../../assets/SNT_14.png" alt="Criteria Configuration" width="950px"/>
 </p>
 
 ## Save and Activate Integration
