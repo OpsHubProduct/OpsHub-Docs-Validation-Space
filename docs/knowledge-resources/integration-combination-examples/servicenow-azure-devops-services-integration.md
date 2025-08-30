@@ -101,7 +101,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Look-up fields are marked with ![Icon](../../assets/I_9.png). Click the icon to map values.
 
 <p align="center">
-  <img src="../../assets/SNT 8.png" alt="Lookup Field Mapping" width="950px"/>
+  <img src="../../assets/SNT_8.png" alt="Lookup Field Mapping" width="950px"/>
 </p>
 
 * Map the values for all Look-up type fields. Example for Priority:  
@@ -111,7 +111,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
   * 4 – Low – 4  
 
 <p align="center">
-  <img src="../../assets/SNT 9.png" alt="Value Mapping" width="950px"/>
+  <img src="../../assets/SNT_9.png" alt="Value Mapping" width="950px"/>
 </p>
 
 * Default Mapping: set default value if no value comes from source. For user mapping, default should be user name/email expected by target.
@@ -148,7 +148,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 
 ## Comments and Attachments Mapping
 
-* Map entities like comments and attachments. Refer to [Comments](../../integrate/mapping-configuration.md#comments) and [Attachments](../../Mapping_Configuration#Attachments) for details.
+* Map entities like comments and attachments. Refer to [Comments](../../integrate/mapping-configuration.md#comments) and [Attachments](../../integrate/mapping-configuration.md#attachments) for details.
 
 ## Configure Filter(s) (Optional)
 
