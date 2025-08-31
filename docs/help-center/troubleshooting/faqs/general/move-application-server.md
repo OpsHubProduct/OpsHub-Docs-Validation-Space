@@ -26,7 +26,7 @@ I have {{SITENAME}}installed on one machine. Now, I want to move {{SITENAME}}fro
 5. Install the same version of {{SITENAME}}on the new machine. During installation, select the database server where you want your {{SITENAME}}database.  
    - Ensure the database name matches the old installation.  
    - If your old instance used a custom database name (other than `opshub` or `reportsdb`), make sure to use the same custom name here.  
-   - Refer to [Database Custom Configuration](../../../../getting-started/installation.md#opshub-database-custom-configuration) for details on selecting the database name during installation.  
+   - Refer to [Database Custom Configuration](../../../getting-started/installation.md#opshub-database-custom-configuration) for details on selecting the database name during installation.  
 6. If installation fails:  
    - Review the error message in `<Install_Folder>/logs/install.log`.  
    - Resolve the issue, clean the failed installation folder, and reinstall.  
