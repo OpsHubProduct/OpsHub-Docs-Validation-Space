@@ -1,6 +1,6 @@
 # Description
 
-While configuring an integration, schedule can be associated in advance configuration. For more information on how to 'Associate Schedule', refer [Integration Configuration - Associate Schedule](../../integrate/integration-configuration.md#associate-schedule).  
+While configuring an integration, schedule can be associated in advance configuration. For more information on how to 'Associate Schedule', refer [Integration Configuration - Associate Schedule](../../../integrate/integration-configuration.md#associate-schedule).  
 
 Now if I want to create a custom schedule and associate it to integration then how can I do this? For example, I want to create a schedule of '2 hours' so that every 2 hours integration reads data from the source system and synchronizes it to the target system. At present, the option to set 2 hours of schedule is not available in OpsHub Integration Manager by default.
 
@@ -31,4 +31,4 @@ You can create a custom schedule by following the steps below:
 
   **Note:** If you are accessing OpsHub Integration Manager from a different machine, then change the localhost to the IP address or hostname of the machine where OpsHub Integration Manager is installed.
 
-* Now, refer [Integration Configuration - Associate Schedule](../../integrate/integration-configuration.md#associate-schedule) documentation to associate your newly created schedule to the integration. Now, choose your custom schedule to set to the integration.
+* Now, refer [Integration Configuration - Associate Schedule](../../../integrate/integration-configuration.md#associate-schedule) documentation to associate your newly created schedule to the integration. Now, choose your custom schedule to set to the integration.
