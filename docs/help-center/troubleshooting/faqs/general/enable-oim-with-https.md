@@ -28,7 +28,9 @@ cd keytool -genkey -keyalg RSA -alias opshub.com -keysize 2048 -keystore <OpsHub
 * After entering the password, the user is prompted to enter various certificate details. For the **first name and last name**, the user must provide the **hostname of the machine** where {{SITENAME}} is installed. Otherwise, the signed certificate will not be visible even after successful import.  
 
 **Command 2:**  
-``` cd keytool -certreq -keyalg RSA -alias opshub.com -file <path of new CSR file> -keystore <OpsHub Installation Path>\AppData\OpsHubData\cacerts```
+``` 
+cd keytool -certreq -keyalg RSA -alias opshub.com -file <path of new CSR file> -keystore <OpsHub Installation Path>\AppData\OpsHubData\cacerts
+```
 
 After execution, share the CSR file with your CA (Certificate Authority) to generate the certificate file (`.cer`). For example, the certificate file generated could be `opshub.cer`. Once the certificate is generated, proceed with Command 3.  
 
@@ -38,10 +40,14 @@ After execution, share the CSR file with your CA (Certificate Authority) to gene
 * If no Root certificate is present, import only the certificate file.  
 
 Command to import the root certificate:  
-```cd keytool -importcert -alias root -keystore <OpsHub Installation Path>\AppData\OpsHubData\cacerts -trustcacerts -file <root CER file path>```
+```
+cd keytool -importcert -alias root -keystore <OpsHub Installation Path>\AppData\OpsHubData\cacerts -trustcacerts -file <root CER file path>
+```
 
 Command to import your certificate:  
-``` cd keytool -import -alias opshub.com -keystore <OpsHub Installation Path>\AppData\OpsHubData\cacerts -file <Path of your CER file>```
+```
+cd keytool -import -alias opshub.com -keystore <OpsHub Installation Path>\AppData\OpsHubData\cacerts -file <Path of your CER file>
+```
 
 
 **Notes:**  
