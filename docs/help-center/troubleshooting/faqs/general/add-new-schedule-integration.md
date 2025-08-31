@@ -19,7 +19,7 @@ You can create a custom schedule by following the steps below:
 * Fill up the details as per your custom schedule need. Given below is the example of a 2-hours schedule setup.  
 
 <p align="center">
-  <img src="../assets/Add_New_Schedule.jpg"/>
+  <img src="../../../assets/Add_New_Schedule.jpg"/>
 </p>
 
 
