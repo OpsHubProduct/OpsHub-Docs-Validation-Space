@@ -63,7 +63,7 @@ $exp [Username]/[Password] OWNER=([opshub_schema],[reports_schema]) FILE="[Path 
 ```
 (For example: `$exp USERID=system/root OWNER=(opshub,reportsdb) File="C:\dumpFinal.dmp"`)
 
-![Note](../assets/Note.jpg) For detailed information, you can refer to official Oracle documentation. Refer: [11g](https://docs.oracle.com/cd/E11882_01/backup.112/e10642/rcmbckba.htm#BRADV8003) or [12c](https://docs.oracle.com/database/121/BRADV/rcmbckba.htm#BRADV8003) according to installed Oracle version.
+>**Note**: For detailed information, you can refer to official Oracle documentation. Refer: [11g](https://docs.oracle.com/cd/E11882_01/backup.112/e10642/rcmbckba.htm#BRADV8003) or [12c](https://docs.oracle.com/database/121/BRADV/rcmbckba.htm#BRADV8003) according to installed Oracle version.
 
 ### PostgreSQL Database Backup
 
@@ -174,3 +174,4 @@ Example:
 ```
 psql -U postgres -h localhost -d opshub < C:/opshub_backup.sql
 ```
+
