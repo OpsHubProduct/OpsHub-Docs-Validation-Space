@@ -19,14 +19,14 @@ Follow the steps given below to enable HTTPS on {{SITENAME}} which has already b
   ```
 
 **Command 1:**  
-``` keytool -genkey -keyalg RSA -alias opshub.com -keysize 2048 -keystore <OpsHub Installation Directory>\AppData\OpsHubData\cacerts  ```
+``` cd keytool -genkey -keyalg RSA -alias opshub.com -keysize 2048 -keystore <OpsHub Installation Directory>\AppData\OpsHubData\cacerts  ```
 **Note:**  
 * The alias provided in the above command should be used for Command 2 as well as while importing the certificate, so please take a note of the alias name used.  
 * Upon successful execution, it will prompt the user to enter the keystore password for `AppData\OpsHubData\cacerts`. The default password for the keystore is `changeit`.  
 * After entering the password, the user is prompted to enter various certificate details. For the **first name and last name**, the user must provide the **hostname of the machine** where {{SITENAME}} is installed. Otherwise, the signed certificate will not be visible even after successful import.  
 
 **Command 2:**  
-``` keytool -certreq -keyalg RSA -alias opshub.com -file <path of new CSR file> -keystore <OpsHub Installation Path>\AppData\OpsHubData\cacerts```
+``` cd keytool -certreq -keyalg RSA -alias opshub.com -file <path of new CSR file> -keystore <OpsHub Installation Path>\AppData\OpsHubData\cacerts```
 
 After execution, share the CSR file with your CA (Certificate Authority) to generate the certificate file (`.cer`). For example, the certificate file generated could be `opshub.cer`. Once the certificate is generated, proceed with Command 3.  
 
@@ -36,10 +36,10 @@ After execution, share the CSR file with your CA (Certificate Authority) to gene
 * If no Root certificate is present, import only the certificate file.  
 
 Command to import the root certificate:  
-```keytool -importcert -alias root -keystore <OpsHub Installation Path>\AppData\OpsHubData\cacerts -trustcacerts -file <root CER file path>```
+```cd keytool -importcert -alias root -keystore <OpsHub Installation Path>\AppData\OpsHubData\cacerts -trustcacerts -file <root CER file path>```
 
 Command to import your certificate:  
-``` keytool -import -alias opshub.com -keystore <OpsHub Installation Path>\AppData\OpsHubData\cacerts -file <Path of your CER file>```
+``` cd keytool -import -alias opshub.com -keystore <OpsHub Installation Path>\AppData\OpsHubData\cacerts -file <Path of your CER file>```
 
 
 **Notes:**  
@@ -71,6 +71,7 @@ Open `server.xml` in any text editor.
            maxParameterCount="1000"
 />
 -->
+```
 * Now, paste the below code in server.xml:
 ```xml
 <Connector port="8443" protocol="com.opshub.security.resources.OpsHubHttp11Nio2Protocol" 
