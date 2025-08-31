@@ -19,7 +19,9 @@ Follow the steps given below to enable HTTPS on {{SITENAME}} which has already b
   ```
 
 **Command 1:**  
-``` cd keytool -genkey -keyalg RSA -alias opshub.com -keysize 2048 -keystore <OpsHub Installation Directory>\AppData\OpsHubData\cacerts  ```
+``` 
+cd keytool -genkey -keyalg RSA -alias opshub.com -keysize 2048 -keystore <OpsHub Installation Directory>\AppData\OpsHubData\cacerts
+ ```
 **Note:**  
 * The alias provided in the above command should be used for Command 2 as well as while importing the certificate, so please take a note of the alias name used.  
 * Upon successful execution, it will prompt the user to enter the keystore password for `AppData\OpsHubData\cacerts`. The default password for the keystore is `changeit`.  
