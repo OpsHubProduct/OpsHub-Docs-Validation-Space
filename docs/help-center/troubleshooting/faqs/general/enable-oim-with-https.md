@@ -46,7 +46,7 @@ Command to import your certificate:
 * If your certificate chain is `root → chain cert1 → opshub.cer`, then import `chain cert1` with a different alias.  
 * For the main certificate (`opshub.cer` in this case), the alias must be the same as used in Command 1 and Command 2 (`opshub.com`).  
 
-5. To access {{SITENAME}} with HTTPS, please refer to the [Configurations for HTTPS](#enable-oim-with-https.md) section.  
+5. To access {{SITENAME}} with HTTPS, please refer to the [Configurations for HTTPS](#configurations-for-https) section.  
 6. Save the `server.xml` file.  
 7. Start the OpsHub Server.  
 8. Access {{SITENAME}} with the URL:  
