@@ -8,7 +8,8 @@ The probable reason could be: A field (corresponding to the link field of the en
 
 ## Solution
 
-Create/update configuration related to "Import set table" and/or "Transformation map" setting for the link field of the entity that you are synchronizing. For steps, please refer [Configure reference type fields](../../../../connectors/servicenow.md#configure-reference-type-fields).
+Create/update configuration related to "Import set table" and/or "Transformation map" setting for the link field of the entity that you are synchronizing. For steps, please refer [Configure reference type fields](../../../connectors/servicenow.md#configure-reference-type-fields).
 
-As 'Import set table' and 'Transform map' configuration are a part of [pre-requisites](../../../../connectors/servicenow.md#prerequisites) for ServiceNow connector, we would advise you to relook into the pre-requisites and fulfill all of them to avoid such issues in the future.
+As 'Import set table' and 'Transform map' configuration are a part of [pre-requisites](../../../connectors/servicenow.md#prerequisites) for ServiceNow connector, we would advise you to relook into the pre-requisites and fulfill all of them to avoid such issues in the future.
+
 
