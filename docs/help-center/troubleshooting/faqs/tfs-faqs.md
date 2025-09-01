@@ -1,7 +1,7 @@
 # Category: OIM User Manual
 
 * [How does update or delete comment functionality works in Team Foundation Server (TFS) and Azure DevOps?](./tfs/update-comment.md)
-* [Which authentication modes does {{SITENAME}} support for Team Foundation Server (TFS)/Azure DevOps?](./tfs/auth-types.md.md)
+* [Which authentication modes does {{SITENAME}} support for Team Foundation Server (TFS)/Azure DevOps?](./tfs/auth-types.md)
 * [What type of user and user permissions are required for synchronization?](./tfs/permission.md)
 * [Which Team Foundation Server (TFS)/Azure DevOps fields are supported by {{SITENAME}} for synchronization?](./tfs/fields.md)
 * [What should be scope/permissions assigned to the Personal Access Token?](./tfs/pat-permission.md)
