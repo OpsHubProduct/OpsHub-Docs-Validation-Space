@@ -1,20 +1,20 @@
 
 > [**General**](faqs/general-faqs.md)
 
-> [**Clarity**](faqs/clarity/clarity-faqs.md)
+> [**Clarity**](faqs/clarity-faqs.md)
 
-> [**Micro Focus ALM/QC**](faqs/micro-focus/micro-focus-faqs.md)
+> [**Micro Focus ALM/QC**](faqs/micro-focus-faqs.md)
 
-> [**Jira**](faqs/jira/jira-faqs.md)
+> [**Jira**](faqs/jira-faqs.md)
 
-> [**TFS/Azure DevOps**](faqs/tfs/tfs-azure-devops-faqs.md)
+> [**TFS/Azure DevOps**](faqs/tfs-faqs.md)
 
-> [**ServiceNow**](faqs/servicenow/servicenow-faqs.md)
+> [**ServiceNow**](faqs/servicenow-faqs.md)
 
-> [**Verisium Manager (Formerly known as vManager)**](faqs/vmanager/vmanager-faqs.md)
+> [**Verisium Manager (Formerly known as vManager)**](faqs/vmanager-faqs.md)
 
-> [**Codebeamer**](faqs/codebeamer/codebeamer-faqs.md)
+> [**Codebeamer**](faqs/codebeamer-faqs.md)
 
-> [**Installer**](faqs/installer/installer-faqs.md)
+> [**Installer**](faqs/installer-faqs.md)
 
-> [**Enterprise Architect**](faqs/enterprise-architect/enterprise-architect-faqs.md)
+> [**Enterprise Architect**](faqs/enterprise-architect-faqs.md)
