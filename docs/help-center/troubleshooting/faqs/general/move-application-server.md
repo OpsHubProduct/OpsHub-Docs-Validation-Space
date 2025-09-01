@@ -1,42 +1,40 @@
 # Description
 
-I have {{SITENAME}}installed on one machine. Now, I want to move {{SITENAME}}from that machine to another machine. How can I do this migration?
+I have {{SITENAME}} installed on one machine. Now, I want to move {{SITENAME}} from that machine to other machine. How can I do this migration?
 
 # Solution
 
-### Assumptions
+## Assumptions
 
-1. Username and password of old and new database instances are known to you.  
-2. You have the password of systems users configured in OpsHub Integration Manager.  
-3. These steps are applicable for the same database type. For example, if your {{SITENAME}}database is on MySQL, then you can move it to another instance of MySQL (not to a different database type).  
-4. Make sure your old and new database versions are the same. For example, if {{SITENAME}}is installed on MySQL 5.6, then your new database MySQL instance should also be MySQL 5.6.  
-5. Database name of old and new server is the same.  
+1. Username and password of old and new database instances is known to you.  
+2. You have the password of systems users configured in {{SITENAME}}.  
+3. These steps are applicable for same database type, for example, if your {{SITENAME}} database is on MySQL, then you can move it to other instance of MySQL (not to any other database type).  
+4. Make sure your old and new database versions are also same. For example, if your {{SITENAME}} is installed on MySQL 5.6, then your new database MySQL instance should also have that same version.  
+5. Database name of older and newer server is same.  
 
-### Steps
+## Steps
 
-1. Inactivate all integrations.  
-2. Stop the {{SITENAME}}server.  
-3. Take application and database backup.  
-   - **Application backup:** For details, refer to [Application Backup](../../../manage/upgrade/taking-application-backup.md#database-backup).  
-   - **Database backup:** For details, refer to [Database Backup](../../../manage/upgrade/taking-application-backup.md#application-backup).  
-   - Ensure both backups are completed properly. Without backups, failed steps cannot be recovered.  
-4. Remove the data of the old instance.  
-   - After taking database backup, drop the database.  
-   - Uninstall {{SITENAME}}from the old machine.  
-5. Install the same version of {{SITENAME}}on the new machine. During installation, select the database server where you want your {{SITENAME}}database.  
-   - Ensure the database name matches the old installation.  
-   - If your old instance used a custom database name (other than `opshub` or `reportsdb`), make sure to use the same custom name here.  
-   - Refer to [Database Custom Configuration](../../../getting-started/installation.md#opshub-database-custom-configuration) for details on selecting the database name during installation.  
-6. If installation fails:  
-   - Review the error message in `<Install_Folder>/logs/install.log`.  
-   - Resolve the issue, clean the failed installation folder, and reinstall.  
-   - If unresolved, send `<Install_Folder>/logs` to OpsHub support and restore the previous instance:  
-     - Restore the application folder ([Application Restore](../../../manage/upgrade/taking-application-backup.md#application-restore)).  
-     - Restore the database ([Database Restore](../../../manage/upgrade/taking-application-backup.md#database-restore)).  
-7. If installation succeeds:  
-   - Stop the {{SITENAME}}server.  
-   - Restore the database(s) from the backup into the new database instance/server ([Database Restore](../../../manage/upgrade/taking-application-backup.md#database-restore)).  
-   - Start the {{SITENAME}}server.  
-   - Re-enter the password for sync users configured in systems and integrations.  
-   - Load field mapping and integrations to validate connectivity.  
-8. Finally, activate integrations as per your requirements.  
+1. `{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |Stop all migrations|Inactivate all integrations}}`.  
+2. `{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |Close {{SITENAME}}|Stop the {{SITENAME}} server}}`.  
+3. Take application and database backup:  
+   * Take Application backup. For more information on how to take application backup, refer [Application Backup](../../../manage/upgrade/taking-application-backup.md#application-backup).  
+   * Take Database backup. For more information on how to take database backup, refer [Database Backup](../../../manage/upgrade/taking-application-backup.md#database-backup).  
+   * Make sure you have taken application and database backup properly. If you miss this backup and any of the subsequent steps fail, then you won't be able to restore the application.  
+4. Remove the data of the old instance:  
+   * After taking database backup, drop the database.  
+   * Uninstall {{SITENAME}} from the older instance.  
+5. Install the same {{SITENAME}} version on the machine where you want to move {{SITENAME}} server. During installation, select the database server where you want your {{SITENAME}} database. While configuring installation, make sure database name is same as old installation. If your old {{SITENAME}} instance database name is custom (other than 'opshub' and 'reportsdb'), then make sure in this new installation the database name remains the same.  
+   `{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||You can refer [OpsHub Database Custom Configuration](../../../getting-started/installation.md#opshub-database-custom-configuration) documentation for selecting database name during installation time.}}`  
+6. If for any reason, installation failed, follow the steps below:  
+   * See installation fail error and try to resolve it. You can also refer logs to get more error information on this error. Navigate `<Install_Folder>/logs` folder and see `install.log` file.  
+   * Once you find the error and resolve it, re-install the application. First clean the installation folder on which installation failed and then re-install it on the same folder.  
+   * If you are not able to resolve this error, then send the `<Install_Folder>/logs` folder to {{SITENAME}} support team. Restore application to earlier state until this issue is fixed:  
+     * Restore applicable folder by following [Application Restore](../../../manage/upgrade/taking-application-backup.md#application-restore) documentation.  
+     * Restore database by following [Database Restore](../../../manage/upgrade/taking-application-backup.md#database-restore) documentation.  
+7. If installation finished successfully, follow the steps below:  
+   * `{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |Close {{SITENAME}}|Stop the {{SITENAME}}}}`.  
+   * Restore the database(s) from the backup taken from old {{SITENAME}} instance/server into the new {{SITENAME}} database instance/server. For more information, refer [Database Restore](../../../manage/upgrade/taking-application-backup.md#database-restore).  
+   * Start new {{SITENAME}} server.  
+   * Re-enter the password for sync user configured in systems `{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps || and integration}}`.  
+   `{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps ||#* Load field mapping and integration to validate connectivity.}}`  
+8. Now you can `{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps |start migration|activate integration}}` as per your requirement.
