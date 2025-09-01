@@ -1,16 +1,45 @@
+# Category: OIM User Manual
 
-| General | Clarity | Micro Focus ALM/QC |
-|---------|---------|------------------|
-| [General](./general/general.md) | [Clarity FAQs](./clarity/clarity-faqs.md) | [Micro Focus FAQs](./micro-focus/micro-focus-faqs.md) |
+<div style="display: flex; flex-wrap: wrap; gap: 16px;">
 
-| Jira | TFS/Azure DevOps | ServiceNow |
-|------|-----------------|------------|
-| [Jira FAQs](./jira/jira-faqs.md) | [TFS/Azure DevOps FAQs](./tfs/tfs-azure-devops-faqs.md) | [ServiceNow FAQs](./servicenow/servicenow-faqs.md) |
+<div style="flex: 1 1 200px; border: 1px solid #ccc; padding: 12px; text-align: center; border-radius: 8px;">
+[General](./general/general.md)
+</div>
 
-| Verisium Manager | Codebeamer | Installer |
-|-----------------|------------|-----------|
-| [Verisium Manager FAQs](./verisium/verisium-manager-faqs.md) | [Codebeamer FAQs](./codebeamer/codebeamer-faqs.md) | [Installer FAQs](./installer/installer-faqs.md) |
+<div style="flex: 1 1 200px; border: 1px solid #ccc; padding: 12px; text-align: center; border-radius: 8px;">
+[Clarity FAQs](./clarity/clarity-faqs.md)
+</div>
 
-| Enterprise Architect |
-|--------------------|
-| [Enterprise Architect FAQs](./enterprise-architect/enterprise-architect-faqs.md) |
+<div style="flex: 1 1 200px; border: 1px solid #ccc; padding: 12px; text-align: center; border-radius: 8px;">
+[Micro Focus ALM/QC](./micro-focus/micro-focus-faqs.md)
+</div>
+
+<div style="flex: 1 1 200px; border: 1px solid #ccc; padding: 12px; text-align: center; border-radius: 8px;">
+[Jira](./jira/jira-faqs.md)
+</div>
+
+<div style="flex: 1 1 200px; border: 1px solid #ccc; padding: 12px; text-align: center; border-radius: 8px;">
+[TFS/Azure DevOps](./tfs/tfs-azure-devops-faqs.md)
+</div>
+
+<div style="flex: 1 1 200px; border: 1px solid #ccc; padding: 12px; text-align: center; border-radius: 8px;">
+[ServiceNow](./servicenow/servicenow-faqs.md)
+</div>
+
+<div style="flex: 1 1 200px; border: 1px solid #ccc; padding: 12px; text-align: center; border-radius: 8px;">
+[Verisium Manager](./verisium/verisium-manager-faqs.md)
+</div>
+
+<div style="flex: 1 1 200px; border: 1px solid #ccc; padding: 12px; text-align: center; border-radius: 8px;">
+[Codebeamer](./codebeamer/codebeamer-faqs.md)
+</div>
+
+<div style="flex: 1 1 200px; border: 1px solid #ccc; padding: 12px; text-align: center; border-radius: 8px;">
+[Installer](./installer/installer-faqs.md)
+</div>
+
+<div style="flex: 1 1 200px; border: 1px solid #ccc; padding: 12px; text-align: center; border-radius: 8px;">
+[Enterprise Architect](./enterprise-architect/enterprise-architect-faqs.md)
+</div>
+
+</div>
