@@ -10,8 +10,8 @@
 * [How to put default value for any mandatory field of destination system?](./general/default-value-mandatory-field-target-system.md)  
 * [How to do value mapping for lookup type fields ?](./general/value-mapping-lookuptype-fields.md)  
 * [How to do value mapping for lookup type fields using an Excel sheet ?](./general/value-mapping-lookuptype-fields-using-excel-sheet.md)  
-* [NullEmptyInvalid values are coming for Mandatory fields in target system from the source system. How to prevent them?](./general/docs/help-center/troubleshooting/faqs/general/nullemptyinvalid-values-are-coming-for-mandatory-fields-in-target-system-from-the-source-system-how-to-prevent-them.md)  
-* [Error: Entity synchronization is failing due to error: OpsHub-012010: Processing Stopped – earlier event(s) for entity have to be processed first.](./general/docs/help-center/troubleshooting/faqs/general/error-entity-synchronization-is-failing-due-to-error-opshub-012010-processing-stopped-earlier-event(s)-for-entity-have-to-be-processed-first-how-to-resolve-this-error.md)  
+* [NullEmptyInvalid values are coming for Mandatory fields in target system from the source system. How to prevent them?](./general/nullemptyinvalid-values-are-coming-for-mandatory-fields-in-target-system-from-the-source-system-how-to-prevent-them.md)  
+* [Error: Entity synchronization is failing due to error: OpsHub-012010: Processing Stopped – earlier event(s) for entity have to be processed first.](./general/error-entity-synchronization-is-failing-due-to-error-opshub-012010-processing-stopped-earlier-event(s)-for-entity-have-to-be-processed-first-how-to-resolve-this-error.md)  
 * [Does entity delete operation supported ?](./general/does-entity-delete-operation-supported.md)  
 * [How to handle synchronization of a synced entity deleted from destination System?](./general/handle-synchronization-of-a-synced-entity-deleted-from-destination-system.md)  
 * [What is 'Start Polling Time' and its usage in Integration configuration ?](./general/start-polling-time-usage-in-integration.md)  
@@ -24,7 +24,7 @@
 * [How to remove unnecessary audits to improve audit loading time?](./general/how-to-remove-audits.md)  
 * [How to enable compression in database?](./general/how-to-enable-compression.md)  
 * [How to move {{SITENAME}} from CentOS to Ubuntu?](./general/move-application-server.md)  
-* [How to identify between Custom and Default Workflows and their associated integrations?](./general/docs/help-center/troubleshooting/faqs/general/how-to-identify-between-custom-and-default-workflows-and-their-associated-integrations.md)  
+* [How to identify between Custom and Default Workflows and their associated integrations?](./general/how-to-identify-between-custom-and-default-workflows-and-their-associated-integrations.md)  
 * [How to configure cross system linkages between IBM systems?](./general/how-to-configure-cross-system-linkage-in-ibm-systems.md)  
 
 
