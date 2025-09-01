@@ -11,4 +11,5 @@ If {{SITENAME}} is being installed for POC (Proof of Concept) purpose or no othe
 3. Oracle  
 4. PostgreSQL  
 
-For database related pre-requisites, please refer to [Database Prerequisites](../../../../getting-started/prerequisites.md#database-prerequisites).
+For database related pre-requisites, please refer to [Database Prerequisites](../../../getting-started/prerequisites.md#database-prerequisites).
+
