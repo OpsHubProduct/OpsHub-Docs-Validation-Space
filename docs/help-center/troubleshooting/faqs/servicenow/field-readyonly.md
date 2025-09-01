@@ -9,6 +9,7 @@ The reason could be: A field (corresponding to the actual field of the entity) i
 ## Solution
 
 Create/update configuration related to "Import set table" and/or "Transformation map" for the entity that is being synchronized.  
-For steps, please refer [Import Set and Transformation map](../../../../connectors/servicenow.md#configure-import-set-table-and-transformation-map).
+For steps, please refer [Import Set and Transformation map](../../../connectors/servicenow.md#configure-import-set-table-and-transformation-map).
 
-As 'Import set table' and 'Transform map' configuration are a part of [pre-requisites](../../../../connectors/servicenow.md#prerequisites) for ServiceNow connector, we would advise you to relook into the pre-requisites and fulfill all of them to avoid such issues in the future.
+As 'Import set table' and 'Transform map' configuration are a part of [pre-requisites](../../../connectors/servicenow.md#prerequisites) for ServiceNow connector, we would advise you to relook into the pre-requisites and fulfill all of them to avoid such issues in the future.
+
