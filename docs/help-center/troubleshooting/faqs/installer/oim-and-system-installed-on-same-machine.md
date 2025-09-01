@@ -4,5 +4,6 @@ Can {{SITENAME}} and an end system that is being used in integration be installe
 
 ## Solution
 
-{{SITENAME}} can be installed on the same machine where one of the end system is installed. However, the machine on which OpsHub Integration Manager is being installed must fulfill the [Installation Prerequisites](../../../../getting-started/prerequisites.md#installation-prerequisites). It is preferable to have separate VM's for both, as the system may take up more resources if the number of users accessing it increases. In such scenario, it would be necessary to ensure that {{SITENAME}} gets its required share of resources or it will affect the performance of {{SITENAME}}
+{{SITENAME}} can be installed on the same machine where one of the end system is installed. However, the machine on which OpsHub Integration Manager is being installed must fulfill the [Installation Prerequisites](../../../getting-started/prerequisites.md#installation-prerequisites). It is preferable to have separate VM's for both, as the system may take up more resources if the number of users accessing it increases. In such scenario, it would be necessary to ensure that {{SITENAME}} gets its required share of resources or it will affect the performance of {{SITENAME}}
+
 
