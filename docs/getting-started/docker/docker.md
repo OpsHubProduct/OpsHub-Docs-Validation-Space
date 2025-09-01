@@ -1,10 +1,10 @@
-# Docker-based deployment for OpsHub Integration Manager
+# Docker-based deployment for{{SITENAME}}
 
 ## Prerequisites
 
 {% include "../.gitbook/includes/docker-prerequisites.md" %}
 
-## Steps to Run OpsHub Integration Manager
+## Steps to Run{{SITENAME}}
 
 {% include "../.gitbook/includes/oim-docker-configurations.md" %}
 
@@ -36,3 +36,4 @@
   ```bash
   docker-compose -f docker-compose-OIM.yml up
   ```
+
