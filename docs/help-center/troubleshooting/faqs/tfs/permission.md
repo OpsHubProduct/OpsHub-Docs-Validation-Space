@@ -4,5 +4,6 @@
 
 ## Solution
 
-Dedicated integration user is responsible to read and/or write data from Team Foundation Server (TFS)/Azure DevOps. For these operations, the user needs special permissions. Refer [User Previledges](../../../../connectors/team-foundation-server.md#user-privileges) section that explains what all permissions must be given to the integration user.
+Dedicated integration user is responsible to read and/or write data from Team Foundation Server (TFS)/Azure DevOps. For these operations, the user needs special permissions. Refer [User Previledges](../../../connectors/team-foundation-server.md#user-privileges) section that explains what all permissions must be given to the integration user.
+
 
