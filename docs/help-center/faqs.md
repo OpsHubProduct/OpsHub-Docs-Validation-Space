@@ -1,31 +1,20 @@
-# Category: OIM User Manual
 
-> **General**  
-> [General](./general/general.md)
+> [**General**](faqs/general/general-faqs.md)
 
-> **Clarity**  
-> [Clarity FAQs](./clarity/clarity-faqs.md)
+> [**Clarity**](faqs/clarity/clarity-faqs.md)
 
-> **Micro Focus ALM/QC**  
-> [Micro Focus FAQs](./micro-focus/micro-focus-faqs.md)
+> [**Micro Focus ALM/QC**](faqs/micro-focus/micro-focus-faqs.md)
 
-> **Jira**  
-> [Jira FAQs](./jira/jira-faqs.md)
+> [**Jira**](faqs/jira/jira-faqs.md)
 
-> **TFS/Azure DevOps**  
-> [TFS/Azure DevOps FAQs](./tfs/tfs-azure-devops-faqs.md)
+> [**TFS/Azure DevOps**](faqs/tfs/tfs-azure-devops-faqs.md)
 
-> **ServiceNow**  
-> [ServiceNow FAQs](./servicenow/servicenow-faqs.md)
+> [**ServiceNow**](faqs/servicenow/servicenow-faqs.md)
 
-> **Verisium Manager (Formerly known as vManager)**  
-> [Verisium Manager FAQs](./verisium/verisium-manager-faqs.md)
+> [**Verisium Manager (Formerly known as vManager)**](faqs/vmanager/vmanager-faqs.md)
 
-> **Codebeamer**  
-> [Codebeamer FAQs](./codebeamer/codebeamer-faqs.md)
+> [**Codebeamer**](faqs/codebeamer/codebeamer-faqs.md)
 
-> **Installer**  
-> [Installer FAQs](./installer/installer-faqs.md)
+> [**Installer**](faqs/installer/installer-faqs.md)
 
-> **Enterprise Architect**  
-> [Enterprise Architect FAQs](./enterprise-architect/enterprise-architect-faqs.md)
+> [**Enterprise Architect**](faqs/enterprise-architect/enterprise-architect-faqs.md)
