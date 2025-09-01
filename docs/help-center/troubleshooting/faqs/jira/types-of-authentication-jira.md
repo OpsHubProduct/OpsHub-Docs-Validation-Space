@@ -14,5 +14,6 @@ It is recommended to use Jira Cookie-based Authentication over Basic Authenticat
 The Cookie-based Authentication for Jira system has been incorporated from {{SITENAME}} Version 6.9 U1.
 
 **How to Configure**  
-Configure Authentication Type in system configuration of Jira. For more details on Jira's system configuration refer: [System Configuration of Jira](../../../../connectors/jira.md#system-configuration)
+Configure Authentication Type in system configuration of Jira. For more details on Jira's system configuration refer: [System Configuration of Jira](../../../connectors/jira.md#system-configuration)
+
 
