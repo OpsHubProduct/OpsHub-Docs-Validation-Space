@@ -19,6 +19,7 @@
   ```
 - `-d` can also be added as an option to start docker container in detached mode.
 
+# Known Limitations
 {% include "../.gitbook/includes/docker-limitations.md" %}
 
 # Upgrade Application Version
@@ -34,6 +35,7 @@
   ```bash
   docker-compose -f docker-compose-OIM.yml up
   ```
+
 
 
 
