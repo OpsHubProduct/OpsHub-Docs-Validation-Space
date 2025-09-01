@@ -8,4 +8,5 @@ Change management module's entities are supported for integration.
 
 Create 'Import set table' and configure 'Transform map' setting for the Change management entity that you want to synchronize.
 
-For steps, please refer [pre-requisites](../../../../connectors/servicenow.md#prerequisites)
+For steps, please refer [pre-requisites](../../../connectors/servicenow.md#prerequisites)
+
