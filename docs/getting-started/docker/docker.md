@@ -1,14 +1,12 @@
-# Docker-based deployment for{{SITENAME}}
-
-## Prerequisites
+# Prerequisites
 
 {% include "../.gitbook/includes/docker-prerequisites.md" %}
 
-## Steps to Run{{SITENAME}}
+# Steps to Run{{SITENAME}}
 
 {% include "../.gitbook/includes/oim-docker-configurations.md" %}
 
-### Run Docker Container
+## Run Docker Container
 
 - An image name is required to run docker container. Docker images need to be downloaded from the shared installer link.
 - Pull/Load the image into local docker environment:
@@ -23,7 +21,7 @@
 
 {% include "../.gitbook/includes/docker-limitations.md" %}
 
-## Upgrade Application Version
+# Upgrade Application Version
 
 - Pull the image into local docker environment:
   ```bash
@@ -36,4 +34,5 @@
   ```bash
   docker-compose -f docker-compose-OIM.yml up
   ```
+
 
