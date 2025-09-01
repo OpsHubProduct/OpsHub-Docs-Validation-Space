@@ -4,7 +4,7 @@
 * Remove the container using the following command:  
   `docker rm -f CONTAINER <CONTAINER_NAME>`
 
-* Take the backup of the database. For more details, refer to [DataBase Backup](../manage/upgrade/taking-application-backup.md#database-backup) section.
+* Take the backup of the database. For more details, refer to [DataBase Backup](../../manage/upgrade/taking-application-backup.md#database-backup) section.
 
 * Take the backup of the docker volume:  
   `docker volume create <BackUp_VolumeName>`  
@@ -24,3 +24,4 @@
     <Base_VolumeName>:
       external: true
   ```
+
