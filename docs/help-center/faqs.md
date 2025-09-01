@@ -1,5 +1,5 @@
 
-> [**General**](faqs/general/general-faqs.md)
+> [**General**](faqs/general-faqs.md)
 
 > [**Clarity**](faqs/clarity/clarity-faqs.md)
 
