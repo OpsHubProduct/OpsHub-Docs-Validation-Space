@@ -11,18 +11,19 @@ Integration is supported with the vPlan in the database only. Hence, vPlans will
   * Provide credentials, if client asks for the UserName and Password.
   * Select **"View"** → **"Configurations"**  
    <p align="center">
-  <img src="../../../../assets/vmgr_config.png" alt="vmgr_config.png" />
+  <img src="../../../assets/vmgr_config.png" alt="vmgr_config.png" />
    </p>
    
     * Select **"VPlan"**
     * Enable **"vPlan in Database"**  
-      ![vmgr_enable_db.png](../../../../assets/vmgr_enable_db.png)  
+      ![vmgr_enable_db.png](../../../assets/vmgr_enable_db.png)  
       >**Note**: To enable this option, **"Vmanager_High_Availability"** feature [Product Id: VMGH01. Product Name: vManager Gen 4] must be present in the Verisium Manager license.
 * After this configuration, vPlan can be created in the database. Please follow the steps given below for the same:
   1. Select **"New vPlan"** button.
   2. This will open a **"New vPlan"** window.
   3. Please enter the preferred name in the **"vPlan name"** textbox.
   4. Select **"OK"** button.  
-     ![vmgr_create_vplan.png](../../../../assets/vmgr_create_vplan.png)
+     ![vmgr_create_vplan.png](../../../assets/vmgr_create_vplan.png)
+
 
 
