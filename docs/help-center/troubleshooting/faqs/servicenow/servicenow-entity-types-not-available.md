@@ -8,6 +8,7 @@ The possible reason could be "Import set table" and/or "Transformation map" not 
 
 ## Solution
 
-Configure "Import set table" and "Transformation map" for the entity. For steps, please refer [Import Set and Transformation map](../../../../connectors/servicenow.md#configure-import-set-table-and-transformation-map).
+Configure "Import set table" and "Transformation map" for the entity. For steps, please refer [Import Set and Transformation map](../../../connectors/servicenow.md#configure-import-set-table-and-transformation-map).
 
-As 'Import set table' and 'Transform map' configuration are a part of [pre-requisites](../../../../connectors/servicenow.md#prerequisites) for ServiceNow connector, we would advise you to relook into the pre-requisites and fulfill all of them to avoid such issues in the future.
+As 'Import set table' and 'Transform map' configuration are a part of [pre-requisites](../../../connectors/servicenow.md#prerequisites) for ServiceNow connector, we would advise you to relook into the pre-requisites and fulfill all of them to avoid such issues in the future.
+
