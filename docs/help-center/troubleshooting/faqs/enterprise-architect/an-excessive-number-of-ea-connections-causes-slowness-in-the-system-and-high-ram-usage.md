@@ -19,4 +19,4 @@
 - Right click on each process and select 'End task' to terminate it and release the resource.  
   ![End_Process](../../../../assets/End-Process.png)
 
-> **Note**: To release all the connections properly when closing OpsHubEAWindowsService, we recommend to close OpsHubEAWindowsService using Enter key. Refer to [Setting up OpsHubEAWindowsService](../../../../connectors/enterprise-architect.md#setting-up-opshubeawindowsservice)
+> **Note**: To release all the connections properly when closing OpsHubEAWindowsService, we recommend to close OpsHubEAWindowsService using Enter key. Refer to [Setting up OpsHubEAWindowsService](../../../connectors/enterprise-architect.md#setting-up-opshubeawindowsservice)
