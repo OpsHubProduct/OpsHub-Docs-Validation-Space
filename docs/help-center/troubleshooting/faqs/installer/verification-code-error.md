@@ -1,6 +1,6 @@
 ## Description
 
-[Registration](../../../../getting-started/installation.md#registration) is one of the steps in installation. At the time of registration, user is required to provide the verification code which was sent to his/her business email address. This error may be encountered during the validation of verification code. 
+[Registration](../../../getting-started/installation.md#registration) is one of the steps in installation. At the time of registration, user is required to provide the verification code which was sent to his/her business email address. This error may be encountered during the validation of verification code. 
 
 ## Solution
 
@@ -10,4 +10,5 @@ For e.x, during registration process of installation, the verification code is g
 This error will also occur if for the same machine the verification code is generated for some installation path (`folder A\folder B`) and later used for installing {{SITENAME}} at another path (`folder C\folder D`).  
 
 So make sure that the verification code is generated for the same machine and path where {{SITENAME}} is to be installed.
+
 
