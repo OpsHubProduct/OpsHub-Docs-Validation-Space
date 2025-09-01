@@ -2,7 +2,7 @@
 
 {% include "../.gitbook/includes/docker-prerequisites.md" %}
 
-# Steps to Run{{SITENAME}}
+# Steps to Run {{SITENAME}}
 
 {% include "../.gitbook/includes/oim-docker-configurations.md" %}
 
@@ -34,5 +34,6 @@
   ```bash
   docker-compose -f docker-compose-OIM.yml up
   ```
+
 
 
