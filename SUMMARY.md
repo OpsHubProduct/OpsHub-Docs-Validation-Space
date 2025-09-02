@@ -1,12 +1,12 @@
 # Table of contents
 
 # Getting Started
-* [Getting OpsHub Integration Manager](getting-started/download.md)
-* [Prerequisites](getting-started/prerequisites.md)
-* [Installation](getting-started/installation.md.md)
-  * [Docker Deployment](getting-started/docker/docker.md)
-* [Logging In](getting-started/logging-in.md)
-* [Start/Stop OpsHub Integration Manager](getting-started/start-or-stop-service.md)
+* [Getting OpsHub Integration Manager](docs/getting-started/download.md)
+* [Prerequisites](docs/getting-started/prerequisites.md)
+* [Installation](docs/getting-started/installation.md.md)
+  * [Docker Deployment](docs/getting-started/docker/docker.md)
+* [Logging In](docs/getting-started/logging-in.md)
+* [Start/Stop OpsHub Integration Manager](dcos/getting-started/start-or-stop-service.md)
 
 # Other
 * [Oim-Documentation](README.md)
