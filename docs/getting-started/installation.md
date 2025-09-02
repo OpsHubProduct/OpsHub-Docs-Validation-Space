@@ -68,7 +68,7 @@ at com.izforge.izpack.installer.Installer.main(Unknown Source)
 
 Make sure you have performed the following steps correctly:
 
-* You have registered as described [Registration – Silent Registration for Linux](registration.md#silent-registration-for-linux) before Installation/Upgradation.
+* You have registered as described [Registration – Silent Registration for Linux](docs/getting/started/registration.md#silent-registration-for-linux) before Installation/Upgradation.
 * You have registered using the same path for which you install/upgrade OpsHub Integration Manager.
 * You have used the correct verification code.
   * Verification Code is unique for each machine and installation path. The code generated on a different machine and for different path won't work.
