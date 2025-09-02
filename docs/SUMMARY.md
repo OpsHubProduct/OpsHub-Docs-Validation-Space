@@ -1,8 +1,4 @@
-# Summary
-
-* [Introduction](README.md)
-
-## Getting Started
+# Getting Started
 * [Getting OpsHub Integration Manager](getting-started/download.md)
 * [Prerequisites](getting-started/prerequisites.md)
 * [Installation](getting-started/installation.md.md)
