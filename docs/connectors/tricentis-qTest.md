@@ -128,15 +128,21 @@ To configure an integration based on criteria, follow the steps given below:
   </xsl:choose>
 </OH_Approve_Test_Case>
 ```
-* For Requirement and Test Case sync, if the source does not contain a Module entity or if you need to create or update the module based on a specified path, then you must map the **Module Path**.  
-  * OpsHub Integration Manager uses the "/" character to separate modules in a **Module Path**. If the source system uses a different path separator, users must create advanced mapping to convert that separator to the "/" string.
+
 * If the Module entity is configured in OpsHub Integration Manager as a separate entity, map the Parent in a link relationship with Requirement and Test Case entities.  
   * The module is mandatory in Requirement and Test Case synchronization.
 * If the Module entity is not configured separately, use the check-and-create functionality with the **Module Path** field  
   * To create the module hierarchy, you need to configure the **checkAndCreate** flag. If **checkAndCreate** is not configured and the module hierarchy does not exist, an error will be thrown.  
   * For example, if the module path is set to "Default/Test/Test1" and the checkAndCreate option is not configured, then OpsHub Integration Manager will attempt to locate the specified path.  
     * If the path exists, it will be used for create/update operations.  
-    * If the path does not exist, an error will be thrown.  
+    * If the path does not exist, an error will be thrown.
+* {{SITENAME}} uses the "/" character to separate modules in a '''Module Path'''. If the source system uses a different path separator, users must create advanced mapping to convert that separator to the "/" string.
+    ```xml
+   <Module-space-Path>
+     <xsl:value-of xmlns:xsl="http://www.w3.org/1999/XSL/Transform" select="replace(SourceXML/updatedFields/Property/Subject, '\\', '/')"/>
+   </Module-space-Path>
+    ```
+    
   * Please refer sample mapping below:  
     ```xml
     <Module-space-Path>
@@ -230,5 +236,6 @@ For creating custom field in Tricentis qTest, follow the steps given below:
 </p>
 
 * Save the changes.
+
 
 
