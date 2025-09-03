@@ -184,7 +184,7 @@ This makes link names visible in {{SITENAME}} aligned with link names visible in
 * Earlier, if the query was, for example, `search=test`, it should be updated in JSON format as:\
   `{"search":"test","expand":"descendants"}`
   * `"expand"` should be added as it was the default query parameter used previously, along with "search".
-* For more details, refer to [criteria configuration](../connectors/tricentis-qtest.md#criteria-configuration) and [Target Lookup Configuration](../connectors/tricentis-qtest.md#target-lookup-configuration) sections.
+* For more details, refer to [criteria configuration](../../connectors/tricentis-qtest.md#criteria-configuration) and [Target Lookup Configuration](../../connectors/tricentis-qtest.md#target-lookup-configuration) sections.
 
 ### Reason
 
@@ -310,7 +310,7 @@ The prerequisite to rename Jira Xray entities has been removed.
 
 * Use the latest `.py` files available in the installation directory, for the respective system in folder `<OpsHub Installation Dir>/Other_Resources/Hooks`.
 
-Refer to respective section links for Commit Hooks setup: [SVN](../../connectors/subversion.md#configuring-and-installing-the-hook), [Git](../../connectors/git.md#git-hook-configuration)
+Refer to respective section links for Commit Hooks setup: [SVN](../../connectors/svn.md#configuring-and-installing-the-hook), [Git](../../connectors/git.md#git-hook-configuration)
 
 **Reason**
 
