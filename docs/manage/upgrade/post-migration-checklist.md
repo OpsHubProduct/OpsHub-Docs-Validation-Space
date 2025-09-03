@@ -20,7 +20,7 @@
   * `[SourceXML/updatedFields/Property/stepResult/*]` replace with `[SourceXML/updatedFields/Property/stepResult/Property/*]`
 * Replace the path of step result fields with `Property/[fieldName]`:
   * Example: Replace `status` with `Property/status`
-* For more details refer: [Sample advanced mapping for Jira Zephyr Test Execution](integrate/jira/#supported_relationships)
+* For more details refer: [Sample advanced mapping for Jira Zephyr Test Execution](../../connectors/jira.md#supported-relationships)
 
 **Reason**
 
@@ -185,9 +185,7 @@ This makes link names visible in {{SITENAME}} aligned with link names visible in
 * Earlier, if the query was, for example, `search=test`, it should be updated in JSON format as:\
   `{"search":"test","expand":"descendants"}`
   * `"expand"` should be added as it was the default query parameter used previously, along with "search".
-* For more details, refer to\
-  [criteria configuration](../connectors/tricentis-qtest.md#criteria-configuration) and\
-  [Target Lookup Configuration](../connectors/tricentis-qtest.md#target-lookup-configuration) sections.
+* For more details, refer to [criteria configuration](../connectors/tricentis-qtest.md#criteria-configuration) and [Target Lookup Configuration](../connectors/tricentis-qtest.md#target-lookup-configuration) sections.
 
 #### Reason
 
@@ -207,7 +205,9 @@ This makes link names visible in {{SITENAME}} aligned with link names visible in
 * Remove the **Release ID** field from the field mapping, as it is now redundant configuration after relationship mapping update.
 * For instance, if the **Release ID** was previously mapped with the default value `'1058'`, update the relationship configuration to utilize the default lookup query: `'id[=1058]'` for the corresponding linking release.
 
-![HPQC\_Default\_Link](../../assets/HPQC_Default_Link.png)
+<p align="center">
+  <img src="../../assets/HPQC_Default_Link.png" />
+</p>
 
 **Reason**
 
@@ -226,7 +226,7 @@ This makes link names visible in {{SITENAME}} aligned with link names visible in
 * To synchronize fixed values for **Start Date** and **End Date**, **Date Type lookup field** must be mapped with the default value as `"Fixed"`; otherwise, it will result in processing failure.
 * If **Start Date** and **End Date** field values need to be inherited from related milestone, **Date Type lookup field** must be mapped with the default value as `"Inherited"`.
 
-For more details, please refer to [Gitlab connector mapping configurations](../connectors/gitlab.md#mapping-configuration).
+For more details, please refer to [Gitlab connector mapping configurations](../../connectors/gitlab.md#mapping-configuration).
 
 **Reason**
 
@@ -276,9 +276,9 @@ For more details, please refer to [Gitlab connector mapping configurations](../c
 ]
 ```
 
-* Refer to [Jira Xray entity names](../connectors/jira.md#xray-entity-names) section for more details.
+* Refer to [Jira Xray entity names](../../connectors/jira.md#xray-entity-names) section for more details.
 
-**Reason**\
+**Reason**
 The prerequisite to rename Jira Xray entities has been removed.
 
 ## Migrating {{SITENAME}} version to 7.195 or above
@@ -311,9 +311,7 @@ The prerequisite to rename Jira Xray entities has been removed.
 
 * Use the latest `.py` files available in the installation directory, for the respective system in folder `<OpsHub Installation Dir>/Other_Resources/Hooks`.
 
-Refer to respective section links for Commit Hooks setup:\
-[SVN](../connectors/subversion.md#configuring-and-installing-the-hook),\
-[Git](../connectors/git.md#git-hook-configuration)
+Refer to respective section links for Commit Hooks setup: [SVN](../../connectors/subversion.md#configuring-and-installing-the-hook), [Git](../../connectors/git.md#git-hook-configuration)
 
 **Reason**
 
