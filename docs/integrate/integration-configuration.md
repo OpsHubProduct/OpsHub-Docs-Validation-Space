@@ -448,7 +448,20 @@ Select a single integration, then click the **Options** button to perform the fo
 
     > **Note**: This button will only be visible when the integration is configured with delete sync.\_
 
-***
+<p align="center">
+  <img src="../../../assets/Integration_Configuration_Image_With_Forward_Backward_Actions.png"  />
+</p>
+
+* **Action Buttons**
+  * **Hover behavior:**
+    * When you hover over the Activate, Inactivate, Execute, or Execute Delete buttons, two directional buttons (Forward / Backward) appear.
+  * **Forward / Backward buttons:**
+    * Apply the action in the selected direction only.
+  * **Available actions:**
+    * **Activate / Inactivate:** Activate or inactivate the integration in the selected direction.
+    * **Execute:** Trigger a sync job for the selected direction.
+    * **Execute Delete:** Trigger a delete job for the selected direction.
+
 
 #### How to edit Integration
 
