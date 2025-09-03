@@ -449,7 +449,7 @@ Select a single integration, then click the **Options** button to perform the fo
     > **Note**: This button will only be visible when the integration is configured with delete sync.\_
 
 <p align="center">
-  <img src="../../../assets/Integration_Configuration_Image_With_Forward_Backward_Actions.png"  />
+  <img src="../../assets/Integration_Configuration_Image_With_Forward_Backward_Actions.png"  />
 </p>
 
 * **Action Buttons**
