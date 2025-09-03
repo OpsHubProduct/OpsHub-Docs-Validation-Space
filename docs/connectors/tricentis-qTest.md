@@ -149,7 +149,7 @@ To configure an integration based on criteria, follow the steps given below:
   <Module-space-Path checkAndCreate="true">
     <xsl:value-of xmlns:xsl="http://www.w3.org/1999/XSL/Transform" select="SourceXML/updatedFields/Property/Module-space-Path"/>
   </Module-space-Path>
- ```
+  ```
 ## Module
 
 * The Module can have sub-modules in the qTest. Hence to sync the modules' hierarchy, the 'Parent' or 'Child' linkages needs to be configured in the relationship mapping of the Module.
@@ -230,4 +230,5 @@ For creating custom field in Tricentis qTest, follow the steps given below:
 </p>
 
 * Save the changes.
+
 
