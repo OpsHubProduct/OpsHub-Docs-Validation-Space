@@ -53,7 +53,7 @@ To register for **Failure Notification**, follow the steps given below:
   - Set **Mail If No Activity Found In Job For** to the time duration after which the mail should be sent if there is no activity in the active integration.
   - Enable **Notify immediately when global failure occurs** to send an immediate notification in case of job failure.
   -  Disable **Notify immediately when global failure occurs** and set the value of **Notify when global failure count reaches** to specify the number of times a global failure must occur before sending a notification. Only numeric values between 1 and 20 (inclusive) are allowed.
-  ->**Note**: If the project or entity is not accessible and a global failure occurs, a notification will be sent immediately regardless of the configuration, as this type of error is not temporary and requires immediate action.
+  -   ->*Note**: If the project or entity is not accessible and a global failure occurs, a notification will be sent immediately regardless of the configuration, as this type of error is not temporary and requires immediate action.
 - Enable **Enable processing failure notification** to enable notification for processing failures.
   - Enable **Notify even if failure is not retried till max count** to notify processing failure without waiting for it to get retried till max retry count.
 - **Same setting for backward direction** enable this setting to use same setting for backward direction incase of bidirectional integrational configuration. To configure different setting for backward direction, uncheck this checkbox.
@@ -90,6 +90,7 @@ If you are not getting failure alert emails, you should go to Global Failures an
 ![OpsHub_System1.png](../../assets/OpsHub-System1.png)
 
 ![OpsHub_System_Scheduler.png](../../assets/OpsHub-System-Scheduler.png)
+
 
 
 
