@@ -190,7 +190,7 @@ For example, there are two main integrations:
 * Refer to the XML for writing External Links to ETM below.
 * The use case is to sync DNG link to ETM [If a Jira's Test entity is synced to a DOORS NG's System Requirement entity and another Jira's Test entity to an ETM's Test Script, linking the two in Jira will add the DNG item to ETM].
 
-```json
+```xml
 <OHEntityReferences xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:entityInfo="http://com.opshub.dao.eai.OIMEntityInfo">
  	<xsl:variable xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="nonDefaultLinks" as="item()*">
  		<Item targetLinkType="Requirement">parent</Item>
