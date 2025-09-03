@@ -1,11 +1,10 @@
-# post-migration-checklist
 
 > 👉 **Looking for older version steps?**\
 > Refer to the [Post-Migration Checklist (MediaWiki)](https://docs.myopshub.com/oim/index.php/Post-Migration_Checklist) for {{SITENAME}} versions prior to 7.195.
 
-## Migrating {{SITENAME}} version to 7.175 or above
+# Migrating {{SITENAME}} version to 7.175 or above
 
-### Update the Advance XSLT used for Jira Zephyr Test-step results
+## Update the Advance XSLT used for Jira Zephyr Test-step results
 
 **Applicable When**
 
@@ -27,7 +26,7 @@
 * Step Results were stored as a List in old values, and as a Hashmap in new values. This inconsistency can cause failures in parsing list of step results correctly.
 * For maintaining consistency between old values and new values in the event xml, the format has been changed to List of step results.
 
-### Change the SAML IDP Single sign-on URL
+## Change the SAML IDP Single sign-on URL
 
 **Applicable When**
 
@@ -48,9 +47,9 @@
 
 * Going forward, {{SITENAME}} will use Spring Security Saml2 service provider to support SAML-based authentication. It will also eliminate vulnerabilities of older SAML framework.
 
-## Migrating {{SITENAME}} version to 7.176 or above
+# Migrating {{SITENAME}} version to 7.176 or above
 
-### Update .NET framework to 4.7.2 or above
+## Update .NET framework to 4.7.2 or above
 
 **Applicable When**
 
@@ -68,9 +67,9 @@
 
 * .NET Framework version 4.0 is out of support. Therefore, dependency on .NET framework version 4.0 has also been removed.
 
-## Migrating {{SITENAME}} version to 7.177 or above
+# Migrating {{SITENAME}} version to 7.177 or above
 
-### Workflow Change for Any Customized Workflow
+## Workflow Change for Any Customized Workflow
 
 Pls refer, [How to identify between Custom and Default Workflows and their associated integrations?](../../integrate/how-to-identify-between-custom-and-default-workflows-and-their-associated-integrations.md)
 
@@ -111,21 +110,21 @@ HashMap oldCustomValues =  mappedProperties.get(Constants.OLDSYSTEMPROP);
 String status = oldCustomValues.get("status");
 ```
 
-#### Reason
+### Reason
 
 Starting with version 7.177, all properties are directly accessible from the old properties map. The intermediate "avoid conflict" map has been removed.
 
 ***
 
-## Migrating {{SITENAME}} version to 7.181 or above
+# Migrating {{SITENAME}} version to 7.181 or above
 
-### Remap values of lookup field when it contains special character(s)
+## Remap values of lookup field when it contains special character(s)
 
-#### Applicable When
+### Applicable When
 
 Values for lookup field contains special characters (tab space) in the source/target system, even though these special characters are not visible in the lookup values of {{SITENAME}}.
 
-#### Actions
+### Actions
 
 After upgrading {{SITENAME}}, remap the lookup field that contains lookup values with the above specified special characters.
 
@@ -133,23 +132,23 @@ The following specified characters need to have their lookup field values remapp
 
 * Tab Space: `\t`
 
-#### Reason
+### Reason
 
 To regenerate XSLT to synchronize the actual value with the above mentioned special characters.
 
 ***
 
-### Update Relationship Configuration for OpenText ALM Octane Endpoint
+## Update Relationship Configuration for OpenText ALM Octane Endpoint
 
-#### Applicable When
+### Applicable When
 
 The user has configured any of the following relationship in integration configuration involving OpenText ALM Octane Endpoint. Originated defect, Originated feature, Originated epic, Originated user story, Originated quality story, Original defect, Original feature, Original epic, Original user story, Original quality story.
 
-#### Prerequisite
+### Prerequisite
 
 Resolve all the failures for the configurations that requires update.
 
-#### Actions
+### Actions
 
 Open mapping configurations with mention relationships configured. Remove mentioned linkages and replace them as per following new linkages:
 
@@ -166,34 +165,34 @@ Open mapping configurations with mention relationships configured. Remove mentio
 | Original user story      | Story (Trace from)         |
 | Original quality story   | Quality Story (Trace from) |
 
-#### Reason
+### Reason
 
 This makes link names visible in {{SITENAME}} aligned with link names visible in OpenText ALM Octane UI for respective entity types.
 
-## Migrating {{SITENAME}} version to 7.184 or above
+# Migrating {{SITENAME}} version to 7.184 or above
 
-### Update the Criteria Query Or Lookup Query for Tricentis qTest Module
+## Update the Criteria Query Or Lookup Query for Tricentis qTest Module
 
-#### Applicable When
+### Applicable When
 
 * If integration is configured with qTest as source system for **Module** entity with criteria configuration:
   * To identify if criteria is configured for the integration, refer [Integration Criteria Configuration](../../integrate/integration-configuration.md#criteria-configuration).
 * If target lookup or default query is configured with qTest as target system for **Module** entity.
 
-#### Actions
+### Actions
 
 * Earlier, if the query was, for example, `search=test`, it should be updated in JSON format as:\
   `{"search":"test","expand":"descendants"}`
   * `"expand"` should be added as it was the default query parameter used previously, along with "search".
 * For more details, refer to [criteria configuration](../connectors/tricentis-qtest.md#criteria-configuration) and [Target Lookup Configuration](../connectors/tricentis-qtest.md#target-lookup-configuration) sections.
 
-#### Reason
+### Reason
 
 * Enhanced filtering for qTest module entity to support **expand** and **parentId** along with search query parameters.
 
-## Migrating {{SITENAME}} version to 7.186 or above
+# Migrating {{SITENAME}} version to 7.186 or above
 
-### Update Relationship Mapping for Cycle Entity in OpenText ALM Quality Center
+## Update Relationship Mapping for Cycle Entity in OpenText ALM Quality Center
 
 **Applicable When**
 
@@ -215,7 +214,7 @@ This makes link names visible in {{SITENAME}} aligned with link names visible in
 
 ***
 
-### GitLab mapping configuration changes for Epic
+## GitLab mapping configuration changes for Epic
 
 **Applicable When**
 
@@ -234,9 +233,9 @@ For more details, please refer to [Gitlab connector mapping configurations](../.
 
 ***
 
-## Migrating {{SITENAME}} version to 7.189 or above
+# Migrating {{SITENAME}} version to 7.189 or above
 
-### Update the JSON input for Jira Xray Cloud Entity Display Name
+## Update the JSON input for Jira Xray Cloud Entity Display Name
 
 **Applicable When**
 
@@ -281,9 +280,9 @@ For more details, please refer to [Gitlab connector mapping configurations](../.
 **Reason**
 The prerequisite to rename Jira Xray entities has been removed.
 
-## Migrating {{SITENAME}} version to 7.195 or above
+# Migrating {{SITENAME}} version to 7.195 or above
 
-### Data type changes for Text type of fields in TestRail
+## Data type changes for Text type of fields in TestRail
 
 **Applicable When**
 
@@ -299,9 +298,9 @@ The prerequisite to rename Jira Xray entities has been removed.
 
 ***
 
-## Migrating {{SITENAME}} version to 7.196 or above
+# Migrating {{SITENAME}} version to 7.196 or above
 
-### Update .py files used in commit hooks
+## Update .py files used in commit hooks
 
 **Applicable When**
 
@@ -319,20 +318,20 @@ Refer to respective section links for Commit Hooks setup: [SVN](../../connectors
 
 ***
 
-### Recover Entity Type Mapping in Relationship Configuration
+## Recover Entity Type Mapping in Relationship Configuration
 
 > ⚠️ This can be a breaking change. Kindly review thoroughly.
 
-#### Applicable When
+### Applicable When
 
 * Any integration where relationship sync is enabled.
 
-#### Actions Taken by OIM
+### Actions Taken by OIM
 
 * During OIM upgrade, **entity type mappings will be removed** from relationship configurations.
 * OIM will **automatically identify the target linked entity type** using entity type mapping at the integration level.
 
-#### How OIM Detects Entity Type Mapping
+### How OIM Detects Entity Type Mapping
 
 * OIM checks the **linked entity** defined in the relationship.
 * It automatically finds the equivalent target entity for the linked source entity.
@@ -343,14 +342,14 @@ Refer to respective section links for Commit Hooks setup: [SVN](../../connectors
 
 > _Note: The Bypass Link Entity Type Mapping add-on is required in your license to enable manual entity type mapping._
 
-#### Backup Location
+### Backup Location
 
 Removed entity type mappings are saved at the following path:\
 &#xNAN;**`<OpsHub Installation Dir>/AppData/LinkEntityTypeMapping`**
 
-## Migrating {{SITENAME}} version to 7.199 or above
+# Migrating {{SITENAME}} version to 7.199 or above
 
-### Remap values of lookup field **Planned For** in IBM Engineering Workflow Management
+## Remap values of lookup field **Planned For** in IBM Engineering Workflow Management
 
 **Applicable When**
 
@@ -368,9 +367,9 @@ Removed entity type mappings are saved at the following path:\
 
 ***
 
-## Migrating {{SITENAME}} version to 7.201 or above
+# Migrating {{SITENAME}} version to 7.201 or above
 
-### Map the lookup field **Test Run Type** in Codebeamer
+## Map the lookup field **Test Run Type** in Codebeamer
 
 **Applicable When**
 
@@ -385,9 +384,9 @@ Removed entity type mappings are saved at the following path:\
 
 * Previously, only the **Test Run (Parent)** entity was supported. Now, both **Test Run (Parent)** and **Test Run (Child)** are supported; the latter is automatically generated during Parent creation and is handled as a separate synchronization entity.
 
-## Migrating {{SITENAME}} version to 7.203 or above
+# Migrating {{SITENAME}} version to 7.203 or above
 
-### Update Relationship Mapping for Jira
+## Update Relationship Mapping for Jira
 
 **Applicable When**
 * Jira is configured as one of the endpoints in the integration and a not supported link type from Jira has been mapped in the {{SITENAME}}. In such cases, after the upgrade, the mapping cannot be updated until the unsupported link type is removed.
