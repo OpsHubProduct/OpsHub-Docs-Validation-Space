@@ -184,7 +184,7 @@ This makes link names visible in {{SITENAME}} aligned with link names visible in
 * Earlier, if the query was, for example, `search=test`, it should be updated in JSON format as:\
   `{"search":"test","expand":"descendants"}`
   * `"expand"` should be added as it was the default query parameter used previously, along with "search".
-* For more details, refer to [criteria configuration](../../connectors/tricentis-qtest.md#criteria-configuration) and [Target Lookup Configuration](../../connectors/tricentis-qtest.md#target-lookup-configuration) sections.
+* For more details, refer to [criteria configuration](../../connectors/tricentis-qTest.md#criteria-configuration) and [Target Lookup Configuration](../../connectors/tricentis-qTest.md#target-lookup-configuration) sections.
 
 ### Reason
 
