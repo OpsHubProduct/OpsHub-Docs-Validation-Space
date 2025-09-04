@@ -86,7 +86,7 @@ keytool -importcert -alias <myalias> -keystore <your-keystore-location> -file <p
 
 * After making the changes, restart the server to apply the new configuration.
 
-> **Note:** To change and encrypt the keystore and private key passwords, refer to the section [Change Keystore and Private Key passwords](#change-keystore-and-private-key-passwords) for instructions on how to encrypt and update the passwords in server.xml.
+> **Note:** To change and encrypt the keystore and private key passwords, refer to the section [Change Keystore and Private Key passwords](../manage/advanced-utilities/change-keystore-and-private-key-passwords.md) for instructions on how to encrypt and update the passwords in server.xml.
 
 # Appendix
 
@@ -228,3 +228,4 @@ For steps to importing the certificate, refer to [Importing Certificates](#steps
 * mTLS is a method of mutual authentication, ensuring that the parties at each end of a network connection are authenticated by digital certificates.
 * To authenticate itself, OpsHub Integration Manager will send the certificate signed by the Certificate authorities(CA). This CA would either be trusted by the endpoint or have signed the endpoint certificate configured over mTLS.
   * Hence, this certificate shall be stored in the truststore of OpsHub Integration Manager located at `<OpsHub Installation Directory>\AppData\OpsHubData\cacerts`.
+
