@@ -50,12 +50,14 @@ keytool -importcert -alias <opshub.com> -keystore <OpsHub Installation Path>\App
 **Command to import .pem file:**
 
 * Importing .pem file with only a certificate:
+* If your `.pem` file contains only the certificate (not the full chain), you can import it directly into the keystore
 
 ```sh
 keytool -importcert -file <certificate.pem> -keystore "<OpsHub Installation Directory>/AppData/OpsHubData/cacerts" -alias <myalias>
 ```
 
 * Import the PKCS#12 file into a Java keystore:
+* Once you have the '.p12' file, you can import it into a Java keystore using the 'keytool' command
 
 ```sh
 keytool -importkeystore -destkeystore "<OpsHub Installation Path>/AppData/OpsHubData/cacerts" -srckeystore <keystore.p12> -srcstoretype PKCS12 -alias <myalias>
@@ -64,6 +66,7 @@ keytool -importkeystore -destkeystore "<OpsHub Installation Path>/AppData/OpsHub
 > **Note:** Replace `keystore.p12` with the path to your PKCS#12 file.
 
 * Import the Chain certificate using keytool:
+* Use the following keytool command to import the chain certificate into the Java keystore:
 
 ```sh
 keytool -importcert -trustcacerts -alias <myalias> -file <chain.pem> -keystore "<OpsHub Installation Path>/AppData/OpsHubData/cacerts" -storepass <your-keystore-password>
@@ -228,4 +231,5 @@ For steps to importing the certificate, refer to [Importing Certificates](#steps
 * mTLS is a method of mutual authentication, ensuring that the parties at each end of a network connection are authenticated by digital certificates.
 * To authenticate itself, OpsHub Integration Manager will send the certificate signed by the Certificate authorities(CA). This CA would either be trusted by the endpoint or have signed the endpoint certificate configured over mTLS.
   * Hence, this certificate shall be stored in the truststore of OpsHub Integration Manager located at `<OpsHub Installation Directory>\AppData\OpsHubData\cacerts`.
+
 
