@@ -36,19 +36,19 @@ OpsHub Integration Manager can be deployed with an embedded database; however, f
 
 ### 1. MySQL Server
 
-{% include "../.gitbook/includes/mysql-preq (1).md" %}
+{% include "../.gitbook/includes/mysql-preq.md" %}
 
 ### 2. MS SQL/Azure SQL Server
 
-{% include "../.gitbook/includes/mssql-preq (1).md" %}
+{% include "../.gitbook/includes/mssql-preq.md" %}
 
 ### 3. Oracle
 
-{% include "../.gitbook/includes/oracle-preq (1).md" %}
+{% include "../.gitbook/includes/oracle-preq.md" %}
 
 ### 4. PostgreSQL Server
 
-{% include "../.gitbook/includes/posgres-preq (1).md" %}
+{% include "../.gitbook/includes/posgres-preq.md" %}
 
 > **Note**: If default connection timeout parameter is changed for any database server, then it must be confirmed that sufficient connection timeout has been set.\
 > For example, for MySQL the default server-side connection timeout is 8 hours.\
@@ -96,4 +96,4 @@ For successful installation/upgradation of OpsHub Integration Manager, following
 
 ### Windows specific configuration
 
-{% include "../.gitbook/includes/windows-specific-configuration (1).md" %}
+{% include "../.gitbook/includes/windows-specific-configuration.md" %}
