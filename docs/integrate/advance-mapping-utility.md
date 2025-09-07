@@ -9,8 +9,8 @@
 
 | **Placeholder**   | **Value**                        | **Description** |
 |:-----------------:|:--------------------------------:|-----------------|
-| <<Workflow Id>>   | $workflowId                      | if workflowId is required for any utility pass it as $workflowId, it is always available in mapping xml. |
-| <<System Id>>     | $sourceSystemId or $targetSystemId | If the requirement is to have the value for the source system then set this as '$sourceSystemId' and if the requirement is to have the value for the target system then set the value as '$targetSystemId'. |
+| `<<Workflow Id>>`   | $workflowId                      | if workflowId is required for any utility pass it as $workflowId, it is always available in mapping xml. |
+| `<<System Id>>`     | $sourceSystemId or $targetSystemId | If the requirement is to have the value for the source system then set this as '$sourceSystemId' and if the requirement is to have the value for the target system then set the value as '$targetSystemId'. |
 
 </p>
 
