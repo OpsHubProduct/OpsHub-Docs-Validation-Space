@@ -31,8 +31,7 @@ Refer the screenshot given below for reference.
 
 | **Field Name**          | **When field is visible on the System form** | **Description**                                                                                                                                                   |
 |------------------------|---------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **System Name**        | Always                                      | Set **System Name** to **Helix ALM** or any other name you want. This name will appear throughout the application  
-Note: **System Name** should be unique |
+| **System Name**        | Always                                      | Set **System Name** to **Helix ALM** or any other name you want. This name will appear throughout the application <br> Note: **System Name** should be unique |
 | **Version**            | Always                                      | Provide the supported version of Helix ALM System.                                                                                                             |
 | **Web Service URL**    | Always                                      | Provide the **Helix ALM Server** Web Service URL. This URL is used for connecting to Helix ALM SOAP API. Format for URL: http://<host name>:<port no>/scripts/ttsoapcgi.exe. |
 | **Application URL**    | Always                                      | Provide the Application Web URL, this URL is being used in constructing link to remote entity, hence keep this as per the Helix ALM client. e.g. ttstudio://<host>:<port> |
@@ -465,6 +464,7 @@ For getting Helix ALM version, follow the steps given below:
 * For the active license:
   * if you have a X-user floating evaluation license, provide the **SOAP Session Limit** as X.
   * If you have a X-user named license, provide the **SOAP Session Limit** as 1.
+
 
 
 
