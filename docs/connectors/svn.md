@@ -7,7 +7,7 @@ For integration, OpsHub Integration Manager requires user that is authorized to 
 ## Subversion Client
 
 Subversion client must be installed on the machine on which server is running.  
-![Note](../assets/Note.jpg) For installing Subversion client, refer the steps given in [Installing Subversion Client](#installing-subversion-client) under Appendix.  
+>**Note**:  For installing Subversion client, refer the steps given in [Installing Subversion Client](#installing-subversion-client) under Appendix.  
 For basic Python installation, refer [Python Configuration](#configuration-python-260) under Appendix.
 
 # System Configuration
@@ -77,7 +77,7 @@ If Subversion client is not installed on the machine, then please follow the ste
 Following are the steps to know the version of your Subversion instance.
 
 * Open command prompt and fire command `svn version`.
-  ![Note](../assets/Note.jpg) For Linux, fire the command on terminal.
+  >**Note**:  For Linux, fire the command on terminal.
 * This will display the version of the Subversion server installed on your machine.
 
 ## Subversion Hook Configuration
@@ -170,7 +170,7 @@ echo Error found in commit 1>&2
 exit 1
 ```
 * With the above scripts, the hook is ready to act.  
-![Note](../assets/Note.jpg) In PATH_TO_OpsHub_Script_folder, mention the full path till script folder.
+>**Note**:  In PATH_TO_OpsHub_Script_folder, mention the full path till script folder.
 
 ## Steps to import Certificate of Subversion
 
@@ -254,3 +254,4 @@ Open python (type: `python` on command line)
    >>> import fpconst
    >>> fpconst.__version__
    ```
+
