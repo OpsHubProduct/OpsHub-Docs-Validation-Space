@@ -385,6 +385,7 @@ Learn [How to find out internal name/key in versions](#how-to-find-out-internal-
   <img src="../assets/HPALM_Image_3a2.png" alt="Add Permissions" />
 </p>
 ---
+
 ## How to associate a custom field with Requirement
 
 To associate a custom field with Requirement type, follow the steps:  
@@ -543,7 +544,7 @@ minWorkerThreads="1"
 
 ---
 
-## Micro Focus ALM/QC comments
+## Micro Focus ALM QC comments
 
 Micro Focus ALM/QC comments work on the following underlying assumptions:
 
