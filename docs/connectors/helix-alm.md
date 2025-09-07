@@ -390,7 +390,7 @@ Recommended link configurations in Helix ALM:
 ## Add User
 
 <p align="center">
-  <img src="Helix_Image_3.png" />
+  <img src="../assets/Helix_Image_2.png" />
 </p>
 
 
@@ -405,7 +405,7 @@ For adding a new user, follow the steps given below:
 ## Giving User Privileges
 
 <p align="center">
-  <img src="Helix_Image_3.png" />
+  <img src="../assets/Helix_Image_3.png" />
 </p>
 
 
@@ -419,7 +419,7 @@ For giving privileges, follow the steps given below:
 - Click the **OK** button.
 
 <p align="center">
-  <img src="Helix_Image_4.png" />
+  <img src="../assets/Helix_Image_4.png" />
 </p>
 
 
@@ -463,4 +463,5 @@ For getting Helix ALM version, follow the steps given below:
 * For the active license:
   * if you have a X-user floating evaluation license, provide the **SOAP Session Limit** as X.
   * If you have a X-user named license, provide the **SOAP Session Limit** as 1.
+
 
