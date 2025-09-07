@@ -191,14 +191,14 @@ For checking the version of your Helix ALM instance, refer [Find Version](#find-
 
 # Mapping Configuration
 
-Map the fields between Helix ALM and the other system to be integrated to ensure that the data between both the systems synchronizes correctly. Click[mapping-configuration](../integrate/mapping-configuration)
+Map the fields between Helix ALM and the other system to be integrated to ensure that the data between both the systems synchronizes correctly. Click [mapping-configuration](../integrate/mapping-configuration)
 to learn the step-by-step process to configure mapping between the systems.  
 Click [Mapping Checkpoints](#mapping-checkpoints) to learn about mapping checkpoints for Helix ALM as a target system. 
 
 ## Get Requirement Document Id's for Requirement
 
 * In Helix ALM, a single Requirement can be added to multiple Requirement Documents.  
-  * To fetch the record id's of all such Requirement Documents, the [Get field Value of Entity](advance-mapping-utility#get-field-value-of-entity) utility can be used. In this utility method, the **Related Requirement Documents** will be used as field name.  
+  * To fetch the record id's of all such Requirement Documents, the [Get field Value of Entity](../integrate/advance-mapping-utility.md#get-field-value-of-entity) utility can be used. In this utility method, the **Related Requirement Documents** will be used as field name.  
   * This utility will return all the Requirement Documents record id's separated by a comma.  
     * For example, if a Requirement is added to multiple Requirement Documents having record id's 1, 2, and 3, the utility will return "1,2,3".  
   * Given below is a sample advance XSL for getting the Requirement Documents record id's:
@@ -464,6 +464,7 @@ For getting Helix ALM version, follow the steps given below:
 * For the active license:
   * if you have a X-user floating evaluation license, provide the **SOAP Session Limit** as X.
   * If you have a X-user named license, provide the **SOAP Session Limit** as 1.
+
 
 
 
