@@ -194,8 +194,10 @@ exit 1
   * Right click and select properties and then, select the **Log On** tab.
   * Select **'This account'** check box for Log on as and provide the username and password of the user for which the certificate was imported.
   * Restart server.
-
-![SVN Certificate Import](../assets/SVN_Image_2.png)
+  * 
+<p align="center">
+  <img src="../assets/SVN_Image_2.png"/>
+</p>
 
 ## Configuration python 2.6.0
 
@@ -262,6 +264,7 @@ Open python (type: `python` on command line)
    >>> import fpconst
    >>> fpconst.__version__
    ```
+
 
 
 
