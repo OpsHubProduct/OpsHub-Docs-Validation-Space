@@ -557,7 +557,7 @@ Micro Focus ALM/QC comments work on the following underlying assumptions:
   * Regex Example, if the user wants to split the comments having N >= '_', then the regex input can be "_{N,}" 
 
 <p align="center">
-  <img src="../assets/Comment_Splitting_Regex_Field_With_Value.PNG" alt="Comment Splitting Regex"/>
+  <img src="../assets/Comment_Splitting_Regex_Field_With_Value.png" alt="Comment Splitting Regex"/>
 </p>
 
 ---
