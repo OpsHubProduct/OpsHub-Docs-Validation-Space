@@ -161,9 +161,9 @@ For more details on how to configure criteria in Jira Align, refer: [Jira Align 
 
 *For Jira Align system, user can organize their data at different levels, i.e., Enterprise, Portfolio or Program [as defined below]. Different entities can reside on different levels, for e.g., the Epic can belong to Program while Objective can belong to Portfolio. For more details on Project entity, please refer to [[#Entity Details | Entity Details]] section.*
 
-* Enterprise
-  * ** Portoflio
-    * ** Program
+* **Enterprise**
+  * **Portoflio**
+    * **Program**
 
 And this hierarchy is inclusive of Parent. For example, Epic can be organized at Program level, and the user can create an integration with Program/Portfolio/Enterprise setting for their integration. While Objective can belong to Portfolio level, and user can create an integration with Portfolio/Enterprise setting for their integration.
 
@@ -283,6 +283,7 @@ And this hierarchy is inclusive of Parent. For example, Epic can be organized at
    User Token Copied: `user:1166|{.%Bb8_V6LPX5JY}03j|v+t<#M~V}8r`  
    Change to: `Bearer user:1166|{.%Bb8_V6LPX5JY}03j|v+t<#M~V}8r`
    ```
+
 
 
 
