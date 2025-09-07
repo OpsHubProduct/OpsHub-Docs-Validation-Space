@@ -78,20 +78,21 @@ Refer the screenshot given below:
 | **Field Name**     | **Description**                                                                                                                                       |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **System Name**     | Provide System name                                                                                                                                   |
-| **Server URL**      | Provide Server URL of the Jira Align instance. This URL will be used for communicating to Jira Align API. Format: `https://[name].jiraalign.com/`     |
-| **User Email**      | Provide the email ID of the integration user. Refer to [User privileges](#user-privileges) for permission details.                                    |
-| **API Token**       | Provide the API token generated in Jira Align for the above user.                                                                                     |
-| **Metadata Details**| JSON format metadata info (fields, lookups, etc.). Refer to [Understanding JSON Input](#understanding-json-input).                                    |
+| **Server URL**      | Provide Server URL of the Jira Align instance. This URL will be used for comminucating to Jira Align API. The format of the URL will be: https://[nameOfYourJiraInstance]. Example: myopshub.jiraalign.com/ |
+| **User Email**      | Provide the email Id of a dedicated user who will be used for communicating with Jira Align API. This user should have the required privileges to use the Jira Align API. For more details on the required privileges, please refer to [User privileges](#user-privileges) section.|
+| **API Token**       | Provide the API token generated in Jira Align for the user given in 'User Email' field. For help on how to generate API token, please refer to section.|
+| **Metadata Details**| This data is pre-populated in JSON format according to our knowledge of system metadata (entity type, field names, lookup...), the user can edit it based on his/her Jira Align instance details for system/custom metadata. For the format and guidance related to filling these details in JSON form, please refer to [Understanding JSON Input](#understanding-json-input) section. |
 
 ### Understanding JSON Input
 
-- Field metadata is provided as JSON during system configuration.
-- Internal name = API endpoint of the entity (e.g., for "Epic" → `"Epics"`).
-- Incorrect internal name causes sync failure.
-- "Lookup" fields depend on these names.
-- If custom/system field is used, ensure it's activated from Detail Panel Settings.
-- If marked mandatory in metadata, ensure it's required in Jira Align.
-- Refer to [Understanding JSON Metadata Input](../integrate/system-configuration.md#understanding-json-metadata-input) and [JSON Metadata Sample](sample-json-file-for-jira-align.md).
+- The field metadata details needed for integrating Jira Align system with other systems are provided at the time of system configuration in the field 'Metadata details' in the form of JSON.
+- For an entity, internal name of the entity is given as the API endpoint name of the entity.For example - for entity "Epic", the API end point name is - "Epics"
+- If the internal name is not given correct, it will lead to failures in the integration.
+- This internal name is used in "lookup" field and the entities fields of the other entities as well.
+- If any system/custom field is added in the entity metadata, ensure that the field is activated from the Detail Panel Settings in the instance.
+- If any system/custom field is marked as mandatory in the entity metadata, ensure that the field is required from the Detail Panel Settings in the instance.
+- Refer to [Understanding JSON Metadata Input](../integrate/system-configuration.md#understanding-json-metadata-input) for more details on the JSON inputs
+  - Refer to [JSON Metadata Sample](sample-json-file-for-jira-align.md) for a sample JSON for Jira Align entities.
 
 # Mapping Configuration
 
@@ -107,10 +108,9 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn ho
 > In Jira Align, entity type selection in mapping depends on the project. See [Project Selection](#project-selection).
 
 # Integration Configuration
+Set a time to synchronize data between Jira Align and the other system to be integrated. Also, define parameters and conditions, if any, for integration.
 
-Set sync timing and parameters between Jira Align and the target system.
-
-Click [Integration Configuration](../integrate/integration-configuration.md) to follow configuration steps.
+Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
 
 <p align="center">
   <img src="../assets/Ja8.png" width="600px" />
@@ -121,30 +121,31 @@ Click [Integration Configuration](../integrate/integration-configuration.md) to 
 
 ## Criteria Configuration
 
-To specify sync conditions when Jira Align is the source system:
+If the user wants to specify conditions for synchronizing an entity from Jira Align as source system to the other system, he/she can use the Criteria Configuration.
 
 - Go to **Criteria Configuration** section on the [Integration Configuration](../integrate/integration-configuration.md) page.
 - Set the `Query` field using Jira Align native query format (e.g., `priority eq 1`).
 
-See [Jira Align Query Documentation](https://help.jiraalign.com/hc/en-us/articles/360048085774-10X-API-2-0-GET-Usage-and-Filters).
+For more details on how to configure criteria in Jira Align native query format, refer: [Jira Align Query Documentation](https://help.jiraalign.com/hc/en-us/articles/360048085774-10X-API-2-0-GET-Usage-and-Filters). The queries used in filter section in plain text can be used as criteria query.
+
+Given below are the sample snippets of how the Jira Align queries can be used as criteria query in OpsHub Integration Manager:
 
 **Criteria Samples**
 
 | **Field Type** | **Criteria Description**                                          | **Criteria Snippet**                          |
 |----------------|--------------------------------------------------------------------|-----------------------------------------------|
 | Lookup         | Synchronize entities with high priority                           | `priority eq 2`                               |
-| Date           | Sync entities created after 10 March 2021                         | `createdDate ge 2021-03-10T00:00:00Z`         |
-| User           | Sync entities created by user 'ABC'                               | `createdBy eq 1159`                           |
-| User + Lookup  | User 'ABC' & Priority 'Critical'                                  | `createdBy eq 1159 and priority eq 1`         |
-| Lookup         | Priority is 'Critical' or 'High'                                  | `priority eq 1 or priority eq 2`              |
+| Date           | Synchronize entities created after 10 March 2021                         | `createdDate ge 2021-03-10T00:00:00Z`         |
+| User           | Synchronize entities created by user 'ABC'                               | `createdBy eq 1159`                           |
+| User + Lookup  | Synchronize all entities which was created by user 'ABC' and also has 'Priority' as 'Critical'| `createdBy eq 1159 and priority eq 1`         |
+| Lookup         | Synchronize all entities which has 'Priority' as 'Critical' or 'Priority' as 'High'   | `priority eq 1 or priority eq 2`              |
 
 ## Target LookUp Configuration
 
-Specify the `Target Search Query` so OpsHub Integration Manager can search the entity in Jira Align.
-
-> Use `@source_field@` placeholders to reference source values.
-
+Provide Query in Target Search Query field such that it is possible to search the entity in the Jira Align as the destination system. In the target search query field, the user can provide a placeholder for the source system's field value in the '@' .
 Go to **Search in Target Before Sync** on the [Integration Configuration](../integrate/integration-configuration.md) page.
+Overall, Target Lookup Query is similar to [Criteria Query](#criteria-query), except that the value part contains a field name with '@' instead of static value.
+Given below is the sample snippet of how the Jira Align queries can be used as target entity lookup query in OpsHub Integration Manager:
 
 **Target Lookup Query Samples**
 
@@ -152,7 +153,7 @@ Go to **Search in Target Before Sync** on the [Integration Configuration](../int
 |----------------|---------------------------------------------------------------|----------------------------------------|
 | Text           | Match entity having source ID in `description` field          | `description eq '@source_system_id@'`  |
 
-See [Jira Align Query Documentation](https://help.jiraalign.com/hc/en-us/articles/360048085774-10X-API-2-0-GET-Usage-and-Filters) for more details.
+For more details on how to configure criteria in Jira Align, refer: [Jira Align Query Documentation](https://help.jiraalign.com/hc/en-us/articles/360048085774-10X-API-2-0-GET-Usage-and-Filters) for more details. The queries used in filter section in plain text can be used as criteria query.
 
 # Known Behaviour
 
@@ -190,14 +191,11 @@ And this hierarchy is inclusive of Parent. For example, Epic can be organized at
     - In the field configuration, the **sync when** should be configured to create only.
 - When Jira Align is source endpoint:
   - Conflict detection is not supported for 'State' field in the 'Epic' entity type.
-
-*When Jira Align is source endpoint, below entities will be synchronized without history. They will be synchronized with the entity state/details available at the time of synchronization.*
-- Product, Value Stream, Release Vehicle, Snapshot, Region, Portfolio, Theme, Program, Program Increment, Team, Sprint
-
-*In case of One to Many links from Epic to Capability and Capability to Feature, configure link from child to parent, that is from Capability to Epic and enable **fail if not found** criteria.*  
-**Reason: API limitation from Jira Align.**
-
-*When a link is added from Epic to Feature or vice versa, an additional update is needed as the last updated time of the entity does not change by adding link.*
+- When Jira Align is source endpoint, below entities will be synchronized without history. They will be synchronized with the entity state/details available at the time of synchronization.*
+  - Product, Value Stream, Release Vehicle, Snapshot, Region, Portfolio, Theme, Program, Program Increment, Team, Sprint
+- In case of One to Many links from Epic to Capability and Capability to Feature, configure link from child to parent, that is from Capability to Epic and enable **fail if not found** criteria.*  
+  - **Reason**: API limitation from Jira Align.**
+- When a link is added from Epic to Feature or vice versa, an additional update is needed as the last updated time of the entity does not change by adding link.*
 
 # Appendix
 
@@ -280,7 +278,10 @@ And this hierarchy is inclusive of Parent. For example, Epic can be organized at
   <img src="../assets/JiraAlign_GenerateBearerToken3.png" width="800px" />
 </p>
 
-4. Add "Bearer" at the begining of the copied token to make it in the form of `Bearer <API 2.0 Token>`. For example:  
+4. Add "Bearer" at the begining of the copied token to make it in the form of `Bearer <API 2.0 Token>`. For example:
+   ```
    User Token Copied: `user:1166|{.%Bb8_V6LPX5JY}03j|v+t<#M~V}8r`  
    Change to: `Bearer user:1166|{.%Bb8_V6LPX5JY}03j|v+t<#M~V}8r`
+   ```
+
 
