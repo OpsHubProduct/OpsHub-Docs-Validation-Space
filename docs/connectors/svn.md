@@ -17,7 +17,7 @@ Click [System Configuration](../integrate/system-configuration.md) to learn the 
 Refer the screenshot given below.
 
 <p align="center">
-  <img src="../assets/SVN_Image_1a.png" width="600px"/>
+  <img src="../assets/SVN_Image_1a.png" width="900px"/>
 </p>
 
 
@@ -262,6 +262,7 @@ Open python (type: `python` on command line)
    >>> import fpconst
    >>> fpconst.__version__
    ```
+
 
 
 
