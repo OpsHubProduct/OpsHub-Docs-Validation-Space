@@ -99,8 +99,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 ### Mandatory Links
 
 * For Cycle type of entities, Release is a mandatory relationship linkage as Cycle can only be created inside the Release.  
-<p><img src="../assets/Note.jpg" alt="Note" width="30px"></p>  
-Configure the default link only if Releases are not being synchronized to the OpenText ALM Quality Center or if you want to sync all Cycles under a single parent release, due to the limitation in the end system where the release link cannot be modified after Cycle creation.
+>**Note**: Configure the default link only if Releases are not being synchronized to the OpenText ALM Quality Center or if you want to sync all Cycles under a single parent release, due to the limitation in the end system where the release link cannot be modified after Cycle creation.
 
 ## Mapping Target Release and Target Cycle fields
 
@@ -305,17 +304,17 @@ Learn [How to find out internal name/key in versions](#how-to-find-out-internal-
 # known Behaviour
 * Micro Focus ALM/QC 11 allows creating entities even when mandatory fields are not specified.  
 * Micro Focus ALM/QC 10 truncates data of custom fields if the data size is greater than field length.  
-* The usage of Micro Focus ALM/QC comments is based on certain assumptions. Click [Micro Focus ALM/QC Comments](#micro-focus-almqc-comments) to learn more.  
+* The usage of Micro Focus ALM/QC comments is based on certain assumptions. Click [Micro Focus ALM/QC Comments](#micro-focus-alm-qc-comments) to learn more.  
 * In Micro Focus ALM/QC, the details of the user who has updated the entity is known through history. Hence, the **OH_UpdatedBy** field information can be synchronized only if the information related to history is present at the time of synchronization for a given entity.  
-  * For checking if the history is present or not for an entity, refer to [Check if entity has history](micro_focus_almqc.md#check-if-entity-has-history).  
+  * For checking if the history is present or not for an entity, refer to [Check if entity has history](#check-if-entity-has-history).  
   * **OH_UpdatedBy**: This is a field provided by {{SITENAME}} for synchronization of the user details who updated the given entity.  
 * **User field synchronization**: For Micro Focus ALM/QC version ≥ 15.0, the user email address detail can be accessed only by site administrator users. Therefore, to synchronize the User field, one of the following must be done:  
   * The sync user must be a site administrator for user field sync to work on email (with default mapping).  
   * If sync user can't be given site administrator rights, then user field sync will work if the **Usernames are the same** in both the end systems with default mapping. If the Usernames are not the same, the user can do advanced mapping to achieve one-to-one mapping on username.  
 * For cycle entity, attachments will be synchronized only when there will be an update on any other history-enabled field.  
 * A **Root** folder is available for every project by default in Micro Focus ALM for Test Set Folder entity. Hence, when Micro Focus ALM is the target system and synchronizes the Test Set Folder entity, the test set folders will be created inside the **Root** folder.  
-  * If you want to create the Test Set Folder under any other Test Set Folder, you can achieve that using the parent/child [Relationship Configuration](mapping_configuration.md#relationships).  
-* When Micro Focus ALM is the target system (Test Set Folder entity), if the Test Set Folder being synchronized has the same name as an already present Test Set Folder (at the same level), then you will receive a processing failure message, [OH-Micro_Focus_ALM/QC-012656](oh-micro_focus_almqc-012656.md).  
+  * If you want to create the Test Set Folder under any other Test Set Folder, you can achieve that using the parent/child [Relationship Configuration](../integrate/mapping-configuration.md#relationships).  
+* When Micro Focus ALM is the target system (Test Set Folder entity), if the Test Set Folder being synchronized has the same name as an already present Test Set Folder (at the same level), then you will receive a processing failure message, [OH-Micro_Focus_ALM/QC-012656](../help-center/troubleshooting/errors/microfocus/oh-microfocus-012656.md).  
   * **Reason:** Micro Focus ALM doesn't allow a Test Set Folder with the same name under a parent.  
 * While getting baseline name for an entity, if {{SITENAME}} encounters an error like `Item does not exist`, the synchronization of the Baseline field will be skipped for that entity. However, this information will be added to the logs.  
 * The Test Set Folder and Test Plan Folder entities do not have history. Hence, they can be synchronized in **current state only**.  
@@ -325,7 +324,8 @@ Learn [How to find out internal name/key in versions](#how-to-find-out-internal-
   * In the below-mentioned scenarios, discrepancies may be observed in the sync of Design steps and Parameter values:  
     * If a versioned project is changed to a non-versioned project in Micro Focus ALM, discrepancies may be observed in the Design Steps and Parameters sync.  
     * For versioned projects, when a Test entity with unchecked design steps is executed: In that case, the Test Run entity will be generated with incorrect test version and unchecked design steps.  
-    * When a parameter of a Design Step with uppercase letters is created directly by placing it in between `<<<` and `>>>`, then a parameter gets generated with lowercase by Micro Focus ALM itself. It can result in discrepancies while syncing the parameters to the end systems having a parameter-name with case sensitivity.  
+    * When a parameter of a Design Step with uppercase letters is created directly by placing it in between `<<<` and `>>>`, then a parameter gets generated with lowercase by Micro Focus ALM itself. It can result in discrepancies while syncing the parameters to the end systems having a parameter-name with case sensitivity.
+      * However, the above case sensitivity issue can be handled with the following snippet:
 
       **Snippet to handle case sensitivity issue:**
       ```xml
@@ -333,14 +333,245 @@ Learn [How to find out internal name/key in versions](#how-to-find-out-internal-
         <xsl:value-of select="string:toLowerCase(utils:replace(utils:replace(utils:convertHTMLToPlainText(Property/Description),'#OH_START_PARAM#','[~'),'#OH_END_PARAM#',']'))"/>
       </xsl:element>
       ```
-
 * **Release Folder:**  
   * In bidirectional integration, to sync the root folder, the user needs to configure the target lookup between the source's root entity and the target's root entity to avoid a hierarchy mismatch.  
-  * In case there is no need to sync the root folder, the user can configure criteria to avoid the sync. For example, if the root folder id of HPQC Release folder is `1`, the sample query would be:  
-    `id[<>1]`  
+  * In case there is no need to sync the root folder, the user can configure criteria to avoid the sync. For example, if the root folder id of HPQC Release folder is `1`, the sample query would be:  `id[<>1]`  
 
 ## Known Limitations
 * For Cycle entities, the link to the Release cannot be modified after creation.  
 
+# Appendix
+## Activate the User as a Site User
+* Log in to Micro Focus ALM/QC Site Administration.  
+* Click **Site Users**.  
+* Expand the domain and click the User to whom you want to make an **Active Site User**.  
+* Click **User Details**.  
+* Click **Activate**.  
 
+<p align="center">
+  <img src="../assets/Hpqc_activate_users.png" alt="Activate User" />
+</p>
+
+---
+
+## Add project user in project
+* Log in to Micro Focus ALM/QC Site Administration.  
+* Click **Site Projects**.  
+* Expand the domain and click the Project for which you need to add user.  
+* Click **Project users**.  
+* Click **Add**.  
+* Click **Add from the Users list**.  
+
+<p align="center">
+  <img src="../assets/Hpqc_add_user_1.png" alt="Add Project User Step 1" />
+</p>
+
+* Select the user that you want to add.  
+* Click **Add selected User**.  
+
+<p align="center">
+  <img src="../assets/Hpqc_add_user_2.png" alt="Add Project User Step 2" />
+</p>
+---
+
+## Add permissions to project
+* Log in to Micro Focus ALM/QC Site Administration.  
+* Click **Site Projects**.  
+* Expand the domain and click the Project for which you need to set permission.  
+* Click **Project users**.  
+* Mark **Project Administrator** to the user for which permission required to set.  
+
+<p align="center">
+  <img src="../assets/HPALM_Image_3a2.png" alt="Add Permissions" />
+</p>
+---
+## How to associate a custom field with Requirement
+
+To associate a custom field with Requirement type, follow the steps:  
+* Log in to Micro Focus ALM/QC for the project specified in the integration.  
+* Go to **Tools → Customize → Requirement Types**.  
+* Select the specific requirement type that you have mapped in the integration. If no specific type is selected, follow the steps for all requirement types.  
+* Click **User Defined Fields**.  
+* Select the user-defined field that you have used in the mapping.  
+* Mark enable **InType** for that particular custom field.  
+
+Example: if a user has configured an integration between the Functional Type of Requirement of Micro Focus ALM/QC and any entity of the target system, and in the mapping, a user has used custom field Link to Remote Entity. Then to associate the custom field Link to Remote Entity with the Functional Type of requirement. Please refer below image.  
+
+<p align="center">
+  <img src="../assets/Hp_Associate_field.png" alt="Associate Field" />
+</p>
+
+* For example, if a user has configured an integration between any type of Requirement type of Micro Focus ALM/QC and any entity of the target system, and in the mapping, user has used custom field Link to Remote Entity. Then the user needs to associate the custom field Link to Remote Entity with all the type of requirement type.
+
+---
+
+## How to find out internal name/key in versions
+### How to find out internal name/key in version 10.0
+To know the internal field name, refer to Tools->Customize->Project Entities and here:
+
+* Expand entity type that is selected in integration, for example 'Defect'.
+* Select attribute for which internal name needs to be found.
+* On the right pane, it will appear labelled as 'Name'.
+* If it is an enumerated attribute, set of values can be found by clicking the Go to List button.
+  
+<p align="center">
+  <img src="../assets/HPALM_Image_5a3.png" alt="Internal Name Version 10" />
+</p>
+
+### How to find out internal name/key in version 11.x/12.x
+
+* Go to: http://hostname:port/qcbin/rest/domains/[DOMAIN]/projects/[PROJECT]/[requirements/defects/tests]/{Existing requirement/defect/test id}?login-form-required=y. (For example - to know the internal name of a specific field in the defect entity in project1 of domain1 for a Micro Focus ALM instance running on port 1234 of myopshub.com, go to: http://myopshub.com:1234/qcbin/rest/domains/domain1/projects/project1/defects/12?login-form-required=y)  
+* Provide username and password if you have not logged in before. 
+* Following should be the output for the URL:  
+```xml
+<Field Name="status"> 
+  <Value>Not Covered</Value> 
+</Field>
+```
+* Value of Name attribute will be the key for criteria configuration.
+
+>**Note**: For Micro Focus ALM/QC version 11 or higher, you might need to keep the value in **" "** if it contains space (It is recommended to use the values as shown in Micro Focus ALM/QC UI filter).  
+For example, `user-01['"OpsHub & Inc"']`  
+
+>**Note**: To find the internal name/key, when Micro Focus ALM is running on HTTPS, go to:  
+`https://hostname:port/qcbin/rest/domains/[DOMAIN]/projects/[PROJECT]/[requirements/defects/tests]/{Existing requirement/defect/test id}?login-form-required=y`  
+(The port number can be skipped if it is 443.)
+
+---
+
+## Proxy Configuration steps
+
+* Before performing the following steps, ensure the server satisfies the prerequisites for [proxy configuration](#proxy-configuration).  
+* Navigate to `<OpsHub_Installation_Directory>\Other_Resources\Resources`.  
+* Extract OpsHub_ALMQC_WebService.zip from the above-mentioned directory to IIS directory (C:\Inetpub\wwwroot\). This will create the HPQCWebService directory inside the IIS directory (e.g. C:\Inetpub\wwwroot\HPQCWebService).
+>**Note**: After extracting the service, The 'HPQCWebService' directory must contain the content of the extracted zip file (i.e. The 'bin' directory, 'HPQCService.asmx' file and 'Web.config' file) as its immediate children.
+
+<p align="center">
+  <img src="../assets/HPALM_Image_Root_Path.png" alt="Web Service Folder Structure"/>
+</p>
+
+* Open Internet Information Service (IIS) Manager, expand server, and right click Sites and then select Add Web Site. This opens Add Web Site dialog. 
+
+<p align="center">
+  <img src="../assets/HPALM_Image_1a.png" alt="Add Web Site"/>
+</p>
+
+*Set Physical path to the extracted directory (C:\Inetpub\wwwroot\HPQCWebService). Set Site name. Set port on which this proxy will serve requests. For example, if you want to create the website with the name HPQCWebservice, which will be bound with the 8844 port of IP address 10.13.28.178, then refer to the configuration shown in the image below.
+
+<p align="center">
+  <img src="../assets/Hpqc_add_website.png" alt="Website Configuration"/>
+</p>
+
+>**Note**:  If you will not bind the website with an IP address (E.g. if you select All Unassigned in the IP address field), then the website will be bound to the localhost.
+* This will create an Application Pool with the same name given as Site name. In the Connections pane, expand the server name, and then click Application Pools . Navigate to the application pool that is used for OpsHub ALM/QC Web Service application. In the Actions pane, click Advanced Settings. In the Advanced Settings dialog box, set the following values for properties in given sections
+
+| Section | Properties |
+|---------|------------|
+| **General** | .NET CLR Version: v4.0<br>Enable 32-Bit Applications: True<br>Managed Pipeline Mode: Classic |
+| **CPU** | Processor Affinity Enabled: True<br>Processor Affinity Mask: 1 |
+| **Process Model** | Maximum Worker Processes: 1 |
+| **Rapid-Fail Protection** | Enabled: False |
+
+>**Note**: Enable 32-Bit Applications is required only when the Proxy Host machine is 64-Bit.
+* For the reference, please refer below screenshot of Advanced Settings.
+
+<p align="center">
+  <img src="../assets/Hpqc_ws_application_pool.png" alt="Advanced Settings Screenshot"/>
+</p>
+
+* Open `%systemroot%\Microsoft.NET\Framework\v4.0.30319\CONFIG\machine.config` in Notepad. Replace `<processModel>` under `<system.web>`:  
+```xml
+<processModel 
+enable="true" 
+autoConfig="false" 
+maxWorkerThreads="1" 
+minWorkerThreads="1" 
+/>
+```
+>**Note**: In the path mentioned above the `v4.0.30319` part may differ depending on the version of .NET framework installed.
+
+* Open `web.config` from OpsHub ALM/QC Web Service application in Notepad and change the following properties: set the value of `"value"` attribute of `<param name="File">` element under `<configuration><log4net><appender>` with a valid path to a logger file that has appropriate write permission for logging.  
+  Example:  
+```xml
+<configuration>
+  <log4net>
+    <appender name="LogFileAppender" type="log4net.Appender.FileAppender">
+      <param name="File" value="C:\logs\OpsHubProxyLog.txt" />
+    </appender>
+  </log4net>
+</configuration>
+```
+* Set the following date formats in **Region and Language**:  
+  - Short date: M/d/yyyy  
+  - Long date: dddd, MMMM dd, yyyy  
+  - Short time: h:mm tt  
+  - Long time: h:mm:ss tt  
+
+* Restart IIS.  
+
+* With the above configuration, the OpsHub ALM/QC web service will be deployed successfully. To check whether the web service is deployed properly or not, click **Browse Website** from the Actions pane in the IIS Manager.
+
+<p align="center">
+  <img src="../assets/Hpqc_check_deploy_ws.png" alt="Check Web Service Deployment"/>
+</p>
+
+* Please make sure that the Directory Browsing is enabled for the added website. For example, when you have added the website HPQCWebservice, then to enable Directory Browsing for the website HPQCWebservice, go to Sites -> HPQCWebservice -> Feature View -> Directory Browsing -> enable 
+
+<p align="center">
+  <img src="../assets/Hpqc_dir_browsing.png" alt="Enable Directory Browsing"/>
+</p>
+
+* To refer to the deployed web service, use http://<Host name\IP address>:<Port Number>/HPQCService.asmx link (IP address and the port number will have the same value as mentioned for the website configuration in the IIS Manager). For example, http://10.13.28.178:8844/HPQCService.asmx
+  
+>**Note**: The proxy can be deployed with the default application pool .NET v4.5 Classic. To deploy proxy with the default application pool, above-mentioned changes must be done in this application pool as well. For example, after you have added the website HPQCWebservice, then to change the application pool for the website HPQCWebservice, go to: Sites -> HPQCWebservice -> Basic Settings -> Select ->Application Pool -> .NET v4.5 Classic
+
+---
+
+## How to enable history of fields to be mapped
+
+* Log in to Micro Focus ALM/QC.  
+* Go to **Tools → Customize → Project Entities**.  
+* Expand the entity type for which the integration is configured, e.g., 'Defect'.  
+* Expand **System Fields** and **Custom Fields** folders.  
+* Search for the attribute that is mapped for the integration.  
+* Click the attribute → a checkbox labeled **History** will appear on the right pane.  
+* Enable/disable **History** for the selected attribute based on your requirement.  
+
+<p align="center">
+  <img src="../assets/HPALM_Image_6b2.png" alt="Enable Field History"/>
+</p>
+
+---
+
+## Micro Focus ALM/QC comments
+
+Micro Focus ALM/QC comments work on the following underlying assumptions:
+
+* Comment once added will not be deleted and can only be accumulated. However, if you delete the previously added comment, it will synchronize other comments of all the revisions on the target system as a single comment.
+* Comment once added will not be modified. Updating the previously added comment will result into synchronization of comment value of all the revisions on the target system.
+* The reason behind above assumptions being the manner in which comments in Micro Focus ALM/QC are compared between successive revisions. Comments in Micro Focus ALM/QC are compared based on the assumption that the new value of comment starts with the old value of comment, this being the only way by which difference in content of successive comments can be ascertained, above best practices should be followed to avoid duplicity.
+* If the Current State Sync is enabled in the integration, then we will fetch the comments from the current state values only. In this case, one field Comment Splitting Regex introduced at the advanced integration configuration level. To split the comments, the user needs to provide the regex.
+* If the History Sync is enabled in the integration, the comment history should be enabled in the Micro Focus ALM/QC. In this case, one field Comment Splitting Regex introduced at the advanced integration configuration level. To split the comments, the user needs to provide the regex.
+* Comment Splitting Regex, value is not given by the user, then the default regex will be used. default regex is _{40,}. If you have overriden the ActionCanExecute script with action BugAddDevCommentsAction1 in Micro Focus ALM/QC, then need to provide correct regex.
+  * Regex Example, if the user wants to split the comments having N >= '_', then the regex input can be "_{N,}" 
+
+<p align="center">
+  <img src="../assets/Comment_Splitting_Regex_Field_With_Value.PNG" alt="Comment Splitting Regex"/>
+</p>
+
+---
+
+## Check if entity has history
+For finding if a Micro Focus entity has history or not, follow the steps below:
+
+* Open the entity you want to check → **History** tab
+* Go to the 'History' tab
+
+<p align="center">
+  <img src="../assets/Mfhistv1.png" alt="History Tab"/>
+</p>
+
+* Go to **Audit Log** tab → check for changes.  
+* Go to the 'Audit Log' tab and check for changes;
+* If history is not present for an entity, then there will not be any changes present in the 'Audit Log'.
 
