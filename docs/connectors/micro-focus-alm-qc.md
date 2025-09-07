@@ -79,7 +79,7 @@ Refer the screenshot given below for reference.
 
 Map the fields between Micro Focus ALM/QC and the other system to be integrated to ensure that the data between both the systems synchronizes correctly.
 
-Click [Mapping Configuration](../mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
+Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
 ## Mapping Checkpoints for Micro Focus ALM/QC as the source system
 
@@ -92,7 +92,7 @@ Click [Mapping Configuration](../mapping-configuration.md) to learn the step-by-
 
 * **Req Full Path** field needs to be mapped for requirement entity to synchronize requirement under a specific requirement folder. When this field is mapped and incoming requirement path that is mapped with the target Micro Focus ALM/QC field does not exist in Micro Focus ALM/QC, then we can create the same hierarchy in Micro Focus ALM/QC as a requirement folder tree by mapping one more extra boolean field. This field is **Req Folder Auto Create** with default value `true`.  
 * **Release Full Path** is a mandatory field while mapping Release entity as target. Release entity will be created under the path provided here.  
-* **Test Configurations** is dependent on the Test entity. To sync Test Configurations, it is necessary to map link type **Test** and link entity type as **tests** in Relationship section. As it is mandatory, it also requires providing the default link settings for this relationship. Please refer to [Default Link Settings](Default_Link_Settings) to learn about default link usage and mapping configuration in general.  
+* **Test Configurations** is dependent on the Test entity. To sync Test Configurations, it is necessary to map link type **Test** and link entity type as **tests** in Relationship section. As it is mandatory, it also requires providing the default link settings for this relationship. Please refer to [Default Link Settings](../integrate/default-link-settings.md) to learn about default link usage and mapping configuration in general.  
 * Synchronization for data-related fields for Test Configurations entity is not supported. Data-related fields are Data Object, Data State, and Data Filtering.  
   * When Micro Focus ALM/QC is target, the **Data State** field is mandatory to synchronize Test Configuration entity despite it being unsupported with data. So, set this field value using default value in mapping with numeric value 0, 1, or 2 as per the **Test Type**. For example, if test type of test configuration is **MANUAL**, then set numeric zero.
 
@@ -221,14 +221,15 @@ There is no need to create a new Cycle entity if a cycle entity already exists. 
 </Target-space-Cycle>
 ```
 >**Note**: The Release and Cycle's full paths mentioned in the methods used in advanced mapping above should have backward slash (`\`) as the separator.
+
 ## Synchronize Responsible Tester field of Test Instance
 
 * Test Instance is a relationship/link between `Test Set`, `Test`, and `Test Configurations` entities.  
-** {{SITENAME}} supports above relationship synchronization using the following link type(s):  
-**** `TEST_INSTANCE`  
-***** Map this linkage to synchronize association between Test Set and Test entities.  
-**** `TEST_INSTANCE(Configuration)`  
-***** Map this linkage to synchronize association between Test Set and Test Configurations entities.  
+* {{SITENAME}} supports above relationship synchronization using the following link type(s):  
+  * `TEST_INSTANCE`  
+    * Map this linkage to synchronize association between Test Set and Test entities.  
+  * `TEST_INSTANCE(Configuration)`  
+    * Map this linkage to synchronize association between Test Set and Test Configurations entities.  
 
 * To synchronize the Responsible Tester field of the above Test Instance linkage(s), advanced XSLT needs to be written in the relationship mapping of {{SITENAME}}.  
 * In the advanced mapping, the Responsible Tester field will be referred to as `owner`.  
@@ -263,5 +264,83 @@ The above mapping can be changed to the  below mentioned advanced mapping to syn
   </xsl:for-each>
  </xsl:for-each>
 ```
+
+# Integration Configuration  
+Set a time to synchronize data between Micro Focus ALM/QC and the other system to be integrated. Also, define parameters and conditions, if any, for integration.
+
+Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems. 
+
+## Criteria Configuration
+If you want to specify conditions for synchronizing an entity between Micro Focus ALM/QC and the other system to be integrated, you can use the Criteria Configuration feature.
+
+Go to the **Criteria Configuration** section on the [Integration Configuration](../integrate/integration-configuration.md) page to learn in detail about Criteria Configuration. 
+
+**Configure**  
+To configure criteria in Micro Focus ALM/QC, integration needs to be created with Micro Focus ALM/QC as the source system. 
+
+**Query**  
+Query in Micro Focus ALM/QC is the valid SQL (version 10.0) / REST (version 11.x, 12.x) query that can contain any column property name (internal name of fields) available in Micro Focus ALM/QC.
+
+### Sample Queries
+* **Micro Focus ALM/QC 10:**  
+  `BG_PRIORITY='1-Low'` (Steps given above are applicable for version 10.0 only)
+* **Micro Focus ALM/QC 11.x / 12.x:**  
+  * `priority[1-Low];status[Open]` (REST-based queries do not allow `or` condition)  
+  * `creation-time[>2017-11-02]`  
+  * Search for custom field `User_02` with value `80`. The front-end name of `User_02` is `Remote Id`:  
+    `user-02[=80]`
+
+Criteria with value containing `"` is not supported in Integration Configuration.  
+
+Learn [How to find out internal name/key in versions](#how-to-find-out-internal-namekey-in-version).
+
+## Supported Target Lookup Queries
+* Search for custom field `User_02`. The front-end name of `User_02` is **Remote Id**.  
+* Query format is:  
+  `user-02[=@RemoteID@]`  
+  where **RemoteID** is a field of the source.  
+* For query format based on different Micro Focus ALM/QC versions, please refer [Criteria Configuration](#criteria-configuration) on this page.  
+
+
+# known Behaviour
+* Micro Focus ALM/QC 11 allows creating entities even when mandatory fields are not specified.  
+* Micro Focus ALM/QC 10 truncates data of custom fields if the data size is greater than field length.  
+* The usage of Micro Focus ALM/QC comments is based on certain assumptions. Click [Micro Focus ALM/QC Comments](#micro-focus-almqc-comments) to learn more.  
+* In Micro Focus ALM/QC, the details of the user who has updated the entity is known through history. Hence, the **OH_UpdatedBy** field information can be synchronized only if the information related to history is present at the time of synchronization for a given entity.  
+  * For checking if the history is present or not for an entity, refer to [Check if entity has history](micro_focus_almqc.md#check-if-entity-has-history).  
+  * **OH_UpdatedBy**: This is a field provided by {{SITENAME}} for synchronization of the user details who updated the given entity.  
+* **User field synchronization**: For Micro Focus ALM/QC version ≥ 15.0, the user email address detail can be accessed only by site administrator users. Therefore, to synchronize the User field, one of the following must be done:  
+  * The sync user must be a site administrator for user field sync to work on email (with default mapping).  
+  * If sync user can't be given site administrator rights, then user field sync will work if the **Usernames are the same** in both the end systems with default mapping. If the Usernames are not the same, the user can do advanced mapping to achieve one-to-one mapping on username.  
+* For cycle entity, attachments will be synchronized only when there will be an update on any other history-enabled field.  
+* A **Root** folder is available for every project by default in Micro Focus ALM for Test Set Folder entity. Hence, when Micro Focus ALM is the target system and synchronizes the Test Set Folder entity, the test set folders will be created inside the **Root** folder.  
+  * If you want to create the Test Set Folder under any other Test Set Folder, you can achieve that using the parent/child [Relationship Configuration](mapping_configuration.md#relationships).  
+* When Micro Focus ALM is the target system (Test Set Folder entity), if the Test Set Folder being synchronized has the same name as an already present Test Set Folder (at the same level), then you will receive a processing failure message, [OH-Micro_Focus_ALM/QC-012656](oh-micro_focus_almqc-012656.md).  
+  * **Reason:** Micro Focus ALM doesn't allow a Test Set Folder with the same name under a parent.  
+* While getting baseline name for an entity, if {{SITENAME}} encounters an error like `Item does not exist`, the synchronization of the Baseline field will be skipped for that entity. However, this information will be added to the logs.  
+* The Test Set Folder and Test Plan Folder entities do not have history. Hence, they can be synchronized in **current state only**.  
+* **Design steps and Parameters sync:**  
+  * For versioned projects, Design steps and Parameters will be synced along with the history.  
+  * For non-versioned projects, they will sync with the current state only.  
+  * In the below-mentioned scenarios, discrepancies may be observed in the sync of Design steps and Parameter values:  
+    * If a versioned project is changed to a non-versioned project in Micro Focus ALM, discrepancies may be observed in the Design Steps and Parameters sync.  
+    * For versioned projects, when a Test entity with unchecked design steps is executed: In that case, the Test Run entity will be generated with incorrect test version and unchecked design steps.  
+    * When a parameter of a Design Step with uppercase letters is created directly by placing it in between `<<<` and `>>>`, then a parameter gets generated with lowercase by Micro Focus ALM itself. It can result in discrepancies while syncing the parameters to the end systems having a parameter-name with case sensitivity.  
+
+      **Snippet to handle case sensitivity issue:**
+      ```xml
+      <xsl:element name="description">
+        <xsl:value-of select="string:toLowerCase(utils:replace(utils:replace(utils:convertHTMLToPlainText(Property/Description),'#OH_START_PARAM#','[~'),'#OH_END_PARAM#',']'))"/>
+      </xsl:element>
+      ```
+
+* **Release Folder:**  
+  * In bidirectional integration, to sync the root folder, the user needs to configure the target lookup between the source's root entity and the target's root entity to avoid a hierarchy mismatch.  
+  * In case there is no need to sync the root folder, the user can configure criteria to avoid the sync. For example, if the root folder id of HPQC Release folder is `1`, the sample query would be:  
+    `id[<>1]`  
+
+## Known Limitations
+* For Cycle entities, the link to the Release cannot be modified after creation.  
+
 
 
