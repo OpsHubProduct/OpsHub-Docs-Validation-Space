@@ -7,9 +7,14 @@
 ## Custom field
 One special field is required on the entity that is being synchronized to Helix ALM. This must be set up so that the integration status of each item can be tracked:
 
+<p align="center">
+
 | **Property Name** | **Type** | **Size** |
-|-------------------|----------|----------|
+|:-----------------:|:--------:|:--------:|
 | OH_Last_Update    | String   | 255      |
+
+</p>
+
 
 For more details on adding custom fields, refer [Custom fields](#custom-fields) in appendix section.
 
@@ -463,5 +468,6 @@ For getting Helix ALM version, follow the steps given below:
 * For the active license:
   * if you have a X-user floating evaluation license, provide the **SOAP Session Limit** as X.
   * If you have a X-user named license, provide the **SOAP Session Limit** as 1.
+
 
 
