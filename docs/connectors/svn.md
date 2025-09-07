@@ -16,7 +16,10 @@ Before you continue to the integration, you must first configure Subversion onto
 Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.  
 Refer the screenshot given below.
 
-![SVN_Image 1a](../assets/SVN_Image_1a.PNG)
+<p align="center">
+  <img src="../assets/SVN_Image_1a.png" width="600px"/>
+</p>
+
 
 If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
@@ -28,7 +31,10 @@ Clicking the Template will bring up the table shown above in a new pop-up window
 * *Reviewer::admin*
 * *Status::Done*
 
-![SVN_Image 3a](../assets/SVN_Image_3a.png)
+<p align="center">
+  <img src="../assets/SVN_Image_3a.png" width="600px"/>
+</p>
+
 
 Here number 9999 against the attribute BugId should be the actual id of the entity against which SCM integration is configured. For example, for Subversion to QAComplete Requirement Traceability, 9999 should be the requirement id existing in QAComplete.  
 
@@ -58,7 +64,10 @@ If Regex is configured on commit message to synchronize commit on mentioned Issu
   * **any number**, it means all the commit messages having commit id <= value will be parsed as Regex, i.e., only these commits will be synchronized to the mentioned backlog in commit message. Other commits will be parsed as per the template defined in the system configuration form. If the commit message is not as per the template format, then the commit will be synchronized to default backlog mentioned in the mapping.
   * **0**, it means no commit messages will be parsed as Regex, i.e., all the commits will be synchronized to default backlog mentioned in mapping.
 
-![SVN_Image 4a](../assets/SVN_Image_4a.png)
+<p align="center">
+  <img src="../assets/SVN_Image_4a.png" width="400px"/>
+</p>
+
 
 # Appendix
 
@@ -253,5 +262,6 @@ Open python (type: `python` on command line)
    >>> import fpconst
    >>> fpconst.__version__
    ```
+
 
 
