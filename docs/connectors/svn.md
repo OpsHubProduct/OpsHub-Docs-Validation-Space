@@ -17,7 +17,7 @@ Click [System Configuration](../integrate/system-configuration.md) to learn the 
 Refer the screenshot given below.
 
 <p align="center">
-  <img src="../assets/SVN_Image_1a.png" width="900px"/>
+  <img src="../assets/SVN_Image_1a.png" width="1000px"/>
 </p>
 
 
@@ -32,7 +32,7 @@ Clicking the Template will bring up the table shown above in a new pop-up window
 * *Status::Done*
 
 <p align="center">
-  <img src="../assets/SVN_Image_3a.png" width="600px"/>
+  <img src="../assets/SVN_Image_3a.png" width="1000px"/>
 </p>
 
 
@@ -65,7 +65,7 @@ If Regex is configured on commit message to synchronize commit on mentioned Issu
   * **0**, it means no commit messages will be parsed as Regex, i.e., all the commits will be synchronized to default backlog mentioned in mapping.
 
 <p align="center">
-  <img src="../assets/SVN_Image_4a.png" width="400px"/>
+  <img src="../assets/SVN_Image_4a.png" width="1000px"/>
 </p>
 
 
@@ -262,6 +262,7 @@ Open python (type: `python` on command line)
    >>> import fpconst
    >>> fpconst.__version__
    ```
+
 
 
 
