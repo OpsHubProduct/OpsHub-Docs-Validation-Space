@@ -1,22 +1,19 @@
 # Pre-requisites
-
 ## User privileges
 
 * Create one user for Helix ALM System, dedicated to OpsHub Integration Manager. User should not be used to do any operations from system's user interface.  
-* User should not be used to create or update any entities from Helix ALM user interface. For help on how to add user, please refer [[#add-user|Add User]] in appendix. For help on how to assign user to groups, please refer [[#giving-user-privileges|Assign User Privileges]] in the appendix.
+* User should not be used to create or update any entities from Helix ALM user interface. For help on how to add user, please refer [Add User](#add-user) in appendix. For help on how to assign user to groups, please refer [Assign User Privileges](#giving-user-privileges) in the appendix.
 
 ## Custom field
-
 One special field is required on the entity that is being synchronized to Helix ALM. This must be set up so that the integration status of each item can be tracked:
 
 | **Property Name** | **Type** | **Size** |
 |-------------------|----------|----------|
 | OH_Last_Update    | String   | 255      |
 
-For more details on adding custom fields, refer [[#custom-fields|Custom fields]] in appendix section.
+For more details on adding custom fields, refer [Custom fields](#custom-fields) in appendix section.
 
 ## Other prerequisites
-
 * Helix ALM SOAP CGI and Helix ALM REST API Server must be installed to communicate with Helix ALM Server. Refer to [Installing Helix ALM SOAP CGI](https://help.perforce.com/helix-alm/helixalm/current/sdk/Content/SDK/GettingStarted.htm) and [Installing Helix ALM Rest API Server](https://help.perforce.com/helix-alm/helixalm/current/restapi/Content/RESTAPI/InstallingAPI.htm) for more details.
 
 # System Configuration
@@ -24,7 +21,10 @@ For more details on adding custom fields, refer [[#custom-fields|Custom fields]]
 Before you continue to the integration, you must first configure Helix ALM. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.  
 Refer the screenshot given below for reference.
 
-![Helix System Form](../assets/Helix_System_Form2.png)
+<p align="center">
+  <img src="../assets/Helix_System_Form2.png" />
+</p>
+
 
 <span style="color:blue">**Helix ALM system form details**</span><br>
 
@@ -42,7 +42,7 @@ Note: **System Name** should be unique |
 | **Metadata Details**   | Always                                      | Provide the details regarding system/custom fields of the Workflow events. Refer to [Understanding JSON Input](#understanding-json-input) for more information. |
 
 If the system is deployed on HTTPS and a self-signed certificate is used, you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificate](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.  
-For checking the version of your Helix ALM instance, refer [[#find-version|Find Version]] in appendix.
+For checking the version of your Helix ALM instance, refer [Find Version](#find-version) in appendix.
 
 ## Understanding JSON Input
 
@@ -230,7 +230,7 @@ Refer to the following table for some sample criteria queries:
 
 Refer to [Helix REST API Documentation](https://help.perforce.com/helix-alm/helixalm/current/restapi/Content/RESTAPI/LimitingItemsReturned.htm) to check different criteria queries available.
 
-## Known Behavior
+# Known Behavior
 
 - If Helix ALM is the target system:
   - Inline image synchronization is not supported.  
@@ -240,7 +240,7 @@ Refer to [Helix REST API Documentation](https://help.perforce.com/helix-alm/heli
   - The integration user is associated with a floating license, but the number of projects configured for integration exceeds the **SOAP Session Limit** provided in the system configuration form.  
     **Reason for above-mentioned scenarios:** To execute a SOAP API, {{SITENAME}} needs to first log into the project. Every login consumes a license. If more projects are configured, login and logout operations will be performed repeatedly, causing slowness in synchronization.
 
-### Attachment Synchronization
+## Attachment Synchronization
 
 For Helix ALM Issue entity, there can be multiple reports available [under Detail tab] and each of this report can have multiple attachments.
 
@@ -257,7 +257,7 @@ Let's assume that we have a bidirectional integration configured between Helix A
 - If we edit the attachment R1 in VersionOne Defect, the attachment will get deleted and, instead, add an attachment R1 on the 1st report.  
   But if we edit the attachment R2 in VersionOne, it will be added to Report 1 and the attachment for Report 2 will be as it is (This is because of a known limitation)
 
-### Relationship Synchronization
+## Relationship Synchronization
 
 Given below are the expected behaviors while writing links to Helix ALM:
 
@@ -359,7 +359,7 @@ Suppose Requirement "req1" is related to 2 test cases "test1" and "test2" throug
 </FieldTransitions>
 ```
 
-### Administrative Configurations
+## Administrative Configurations
 
 Recommended link configurations in Helix ALM:
 
@@ -374,7 +374,7 @@ Recommended link configurations in Helix ALM:
 - Synchronization of only **Comment Workflow event** is supported.
 - For Issue entity, the field label of all the Found By Records field should not be changed. It should be set to the default value.  
   Found By Record fields supported by {{SITENAME}} are Description, Steps to Reproduce, Other Hardware and Software, Version Found, Found By, Date Found, Reproduced.
-  - If the label of the field is changed in the end system, the mapping needs to be updated in the {{SITENAME}}.
+- If the label of the field is changed in the end system, the mapping needs to be updated in the {{SITENAME}}.
 - If Requirement entity is configured for synchronization and Relationships synchronization is enabled:
   - There should not be a custom link type in Helix ALM having same name as either "Requirement Relationships(Parent)" or "Requirement Relationships(Child)".
 - If Helix ALM is the source system:
@@ -385,11 +385,14 @@ Recommended link configurations in Helix ALM:
   - Synchronization of "Requirement Relationships(Parent)" and "Requirement Relationships(Child)" links is not supported.
   - Synchronization of different fields of the first Found By Record of Issue entity is supported.
 
-## Appendix
+# Appendix
 
-### Add User
+## Add User
 
-![Helix Image 2](Helix_Image%202.png)
+<p align="center">
+  <img src="Helix_Image_3.png" />
+</p>
+
 
 For adding a new user, follow the steps given below:
 
@@ -399,9 +402,12 @@ For adding a new user, follow the steps given below:
 - Select Security Groups **Administration**.
 - Click the **Add** button.
 
-### Giving User Privileges
+## Giving User Privileges
 
-![Helix Image 3](Helix_Image%203.png)
+<p align="center">
+  <img src="Helix_Image_3.png" />
+</p>
+
 
 For giving privileges, follow the steps given below:
 
@@ -412,39 +418,49 @@ For giving privileges, follow the steps given below:
 - From the right panel in **Available Users** section, select the user(s) that needs to be added to the current security group. Click the **Add** button.
 - Click the **OK** button.
 
-![Helix Image 4](Helix_Image%204.png)
+<p align="center">
+  <img src="Helix_Image_4.png" />
+</p>
 
-### Custom fields
+
+## Custom fields
 
 {{SITENAME}} requires a few special fields to be defined on the entity that is being synchronized. These must be set up so that the integration status of each item can be tracked.
 
-![Helix Image 5](../assets/Helix_Image_5.png)
+<p align="center">
+  <img src="../assets/Helix_Image_5.png" />
+</p>
 
 * Log in to Helix ALM as a user with Administration security group.
 * Choose **Tools** > **Administration** > **Custom Fields**. The **Setup Custom Fields** dialog box opens.
 * Select the entity type in **Type** dropdown list (In this case, we will select **Issues**).
 * Click the **Add button** link, and click the **Add Custom** field link on the presented page. The **Add Custom** field screen will display.
 
-![Helix Image 6](../assets/Helix_Image_6.png)
+<p align="center">
+  <img src="../assets/Helix_Image_6.png" />
+</p>
 
 * Fill in the **Field** name, **Long label** and **Field** code.
 * Select the appropriate **Field** type field the list. 
 * Click the **OK** button.
 
-### Find version
+## Find version
 
 For getting Helix ALM version, follow the steps given below:
 
-![Helix Image 7](../assets/Helix_Image_7.png)
+<p align="center">
+  <img src="../assets/Helix_Image_7.png" />
+</p>
 
 * Log in to the Helix ALM project using Helix ALM client.
 * Go to **Help** menu and in that click **About Helix ALM Client** menu item. The Helix ALM Client, dialog will display.
 * Given here is the version for the Helix ALM server.
 
-### Find SOAP Session Limit
+## Find SOAP Session Limit
 
 * Log in to License Server Admin Utility as a user with Administration security group.
 * Click the **Licenses** button.
 * For the active license:
   * if you have a X-user floating evaluation license, provide the **SOAP Session Limit** as X.
   * If you have a X-user named license, provide the **SOAP Session Limit** as 1.
+
