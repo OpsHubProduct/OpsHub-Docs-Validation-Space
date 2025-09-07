@@ -69,7 +69,7 @@ Click [System Configuration](../integrate/system-configuration.md) to learn the 
 Refer the screenshot given below:
 
 <p align="center">
-  <img src="../assets/ja1.png" width="600px" />
+  <img src="../assets/Ja1.png" width="600px" />
 </p>
 
 
@@ -98,7 +98,7 @@ Refer the screenshot given below:
 Map fields between Jira Align and the other system to ensure accurate synchronization.
 
 <p align="center">
-  <img src="../assets/ja9.png" width="600px" />
+  <img src="../assets/Ja9.png" width="600px" />
 </p>
 
 
@@ -113,7 +113,7 @@ Set sync timing and parameters between Jira Align and the target system.
 Click [Integration Configuration](../integrate/integration-configuration.md) to follow configuration steps.
 
 <p align="center">
-  <img src="../assets/ja8.png" width="600px" />
+  <img src="../assets/Ja8.png" width="600px" />
 </p>
 
 
@@ -207,25 +207,25 @@ And this hierarchy is inclusive of Parent. For example, Epic can be organized at
 2. Go to **Administration** Section.<br>
 
 <p align="center">
-  <img src="../assets/ja24.png" />
+  <img src="../assets/Ja24.png" />
 </p>
 
 3. Navigate to *People*<br>
 
 <p align="center">
-  <img src="../assets/ja22.png" />
+  <img src="../assets/Ja22.png" />
 </p>
 
 4. Click on the **Add User** button on top right corner of the users' list.<br>
 
 <p align="center">
-  <img src="../assets/ja12.png" />
+  <img src="../assets/Ja12.png" />
 </p>
 
 5. Fill the details regarding user. For the 'Role', select the roles having permissions mentioned in [[#User privileges|User privileges]] Section<br>
 
 <p align="center">
-  <img src="../assets/ja19.png" />
+  <img src="../assets/Ja19.png" />
 </p>
 
 6. Save changes
@@ -236,28 +236,28 @@ And this hierarchy is inclusive of Parent. For example, Epic can be organized at
 2. Go to **Administration->Roles** Section.<br>
 
 <p align="center">
-  <img src="../assets/ja24.png" />
+  <img src="../assets/Ja24.png" />
 </p>
 
 <p align="center">
-  <img src="../assets/ja23.png" />
+  <img src="../assets/Ja23.png" />
 </p>
 
 3. Select a Role you want to give to integration user.<br>
 
 <p align="center">
-  <img src="../assets/ja13.png" />
+  <img src="../assets/Ja13.png" />
 </p>
 
 4. Give permissions as per mentioned in the [[#User privileges|User privileges]] Section to this role.<br>
 5. For example, to give Administration access: click the '+' sign on the left side of **Administration** section and enable the needed permissions.<br>
 
 <p align="center">
-  <img src="../assets/ja14.png" />
+  <img src="../assets/Ja14.png" />
 </p>
 
 <p align="center">
-  <img src="../assets/ja20.png" />
+  <img src="../assets/Ja20.png" />
 </p>
 
 ## Steps for generating the Bearer token
@@ -283,3 +283,4 @@ And this hierarchy is inclusive of Parent. For example, Epic can be organized at
 4. Add "Bearer" at the begining of the copied token to make it in the form of `Bearer <API 2.0 Token>`. For example:  
    User Token Copied: `user:1166|{.%Bb8_V6LPX5JY}03j|v+t<#M~V}8r`  
    Change to: `Bearer user:1166|{.%Bb8_V6LPX5JY}03j|v+t<#M~V}8r`
+
