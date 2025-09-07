@@ -192,13 +192,14 @@ For checking the version of your Helix ALM instance, refer [Find Version](#find-
 
 # Mapping Configuration
 
-Map the fields between Helix ALM and the other system to be integrated to ensure that the data between both the systems synchronizes correctly. Click [[mapping-configuration]] to learn the step-by-step process to configure mapping between the systems.  
+Map the fields between Helix ALM and the other system to be integrated to ensure that the data between both the systems synchronizes correctly. Click[mapping-configuration](../integrate/mapping-configuration)
+to learn the step-by-step process to configure mapping between the systems.  
 Click [Mapping Checkpoints](#mapping-checkpoints) to learn about mapping checkpoints for Helix ALM as a target system. 
 
 ## Get Requirement Document Id's for Requirement
 
 * In Helix ALM, a single Requirement can be added to multiple Requirement Documents.  
-  * To fetch the record id's of all such Requirement Documents, the [[advance-mapping-utility#get-field-value-of-entity|Get field Value of Entity]] utility can be used. In this utility method, the **Related Requirement Documents** will be used as field name.  
+  * To fetch the record id's of all such Requirement Documents, the [Get field Value of Entity](advance-mapping-utility#get-field-value-of-entity) utility can be used. In this utility method, the **Related Requirement Documents** will be used as field name.  
   * This utility will return all the Requirement Documents record id's separated by a comma.  
     * For example, if a Requirement is added to multiple Requirement Documents having record id's 1, 2, and 3, the utility will return "1,2,3".  
   * Given below is a sample advance XSL for getting the Requirement Documents record id's:
@@ -211,11 +212,11 @@ Click [Mapping Checkpoints](#mapping-checkpoints) to learn about mapping checkpo
 
 Set a time to synchronize data between Helix ALM and the other system to be integrated. Also, define parameters and conditions, if any, for integration.<br>
 
-Click [Integration Configuration](integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
+Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
 
 ## Criteria Configuration
 
-If you want to specify conditions for synchronizing an entity between Helix ALM and the other system to be integrated, use the Criteria Configuration feature. Go to the Criteria Configuration section on the [Integration Configuration](integration-configuration.md#criteria-configuration) page for details.
+If you want to specify conditions for synchronizing an entity between Helix ALM and the other system to be integrated, use the Criteria Configuration feature. Go to the Criteria Configuration section on the [Integration Configuration](../integrate/integration-configuration.md#criteria-configuration) page for details.
 
 To configure criteria in Helix ALM, integration needs to be created with Helix ALM as the source system.
 
@@ -464,6 +465,7 @@ For getting Helix ALM version, follow the steps given below:
 * For the active license:
   * if you have a X-user floating evaluation license, provide the **SOAP Session Limit** as X.
   * If you have a X-user named license, provide the **SOAP Session Limit** as 1.
+
 
 
 
