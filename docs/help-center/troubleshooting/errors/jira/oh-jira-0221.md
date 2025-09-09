@@ -15,5 +15,6 @@ Probable causes for this issue are:
 1. To check whether the username or password provided in system configuration is correct or not, perform these steps:  
    1. Login with the same username and password through the Jira UI.  
    2. If the login was not possible through Jira UI, please check with your administrator for correct credentials.  
-2. For checking whether the user has required privileges/sufficient permission(s), please check whether these prerequisites are followed: [Prerequisites for sync user in Jira](../../../../connector/jira.md#prerequisites)
+2. For checking whether the user has required privileges/sufficient permission(s), please check whether these prerequisites are followed: [Prerequisites for sync user in Jira](../../../../connectors/jira.md#prerequisites)
+
 
