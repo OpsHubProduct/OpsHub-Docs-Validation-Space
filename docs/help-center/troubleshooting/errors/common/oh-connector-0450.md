@@ -19,6 +19,10 @@ com.opshub.eai.core.exceptions.OIMAttachmentException: OH-Connector-0450: An err
    - Open **opshub system** in the 'System Configuration' page
    - From here, select the **Skip the attachments for which content is not found in source** as **Yes**
 
-![Skip Option](../assets/Skipv1.png)
+<p align="center">
+  <img src="../../../../assets/Skipv1.png" />
+</p>
+
 
 >**Note**: This option will start skipping the attachments from all the systems for which {{SITENAME}} can determine the attachments which are not found.
+
