@@ -5,7 +5,7 @@ When the user encounters OH-ClearQuest-0023, the following type of error message
 OH-ClearQuest-0023: Query Parameter(s) not matched, Expected query parameter(s) are `<Filter Fields Name>` for the query Personal `Queries\OpsHub_<Query Name><EntityName>`.
 
 Example:  
-:: OH-ClearQuest-0023: Query Parameter(s) not matched, Expected query parameter(s) are [history.user_name, history.action_timestamp, history.old_state] for the query Personal Queries`\OpsHub_LastCreatedByIntegration<EntityName>`.
+OH-ClearQuest-0023: Query Parameter(s) not matched, Expected query parameter(s) are [history.user_name, history.action_timestamp, history.old_state] for the query Personal Queries`\OpsHub_LastCreatedByIntegration<EntityName>`.
 
 ## Cause
 
@@ -15,3 +15,4 @@ Example:
 ## Solution
 
 Update the **query filters** as mentioned in the IBM ClearQuest Rational connector documentation. Refer to the [Queries Configuration](../../../../connectors/ibm-rational-clearquest.md#queries-configuration) section.
+
