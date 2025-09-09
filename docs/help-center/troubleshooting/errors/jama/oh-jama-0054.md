@@ -11,4 +11,5 @@ When Jama system is target system and trying to create a link between Test Cycle
 ## Solution
 
 - In OpsHub Integration Manager field mapping configuration, under the relationship configuration, please define relationship for ‘Test Plan’ with Test Cycle  
-- Please refer to [**TestRail-Jama Integration**](testrail-jama-integration) for configuring links
+- Please refer to [**TestRail-Jama Integration**](../../../../knowledge-resources/integration-combination-examples/jama-tr-integration.md) for configuring links
+
