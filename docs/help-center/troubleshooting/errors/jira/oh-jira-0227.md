@@ -11,4 +11,5 @@ If user is getting this error code then it might be because the sync user that i
 ## Solution
 
 For solving this issue, please check if the sync user has been given access for the necessary applications used in the Jira system configuration. For more information on the required application access, refer:  
-[License required by sync user in Jira](../../../../connectors/jira#licenses-required)
+[License required by sync user in Jira](../../../../connectors/jira.md#licenses-required)
+
