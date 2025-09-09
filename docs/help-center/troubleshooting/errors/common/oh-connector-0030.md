@@ -19,5 +19,6 @@ This failure occurred as you have selected 'Fail event if linked entity doesn't 
      * If you find that linked entity is synchronized as per sync report, then you just need to retry this failure.  
      * If you don't find linked entity in sync report, then make sure that the integration which is configured for linked entity is up and eligible for that linked entity synchronization. Once you validate this action, then execute the integration and wait for the synchronization of linked entity. Once linked entity is synchronized to target system then retry failed event.
 
-For more information on how to retry failed event, refer [Manage Integration Failures - Action on failures](../../../troubleshootingmanage-integration-failures.md#action-on-failures)
+For more information on how to retry failed event, refer [Manage Integration Failures - Action on failures](../../../troubleshooting/manage-integration-failures.md#action-on-failures)
+
 
