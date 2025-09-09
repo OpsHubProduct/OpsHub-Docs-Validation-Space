@@ -18,7 +18,7 @@ There are couple of reasons due to which connection-related error(s) might occur
   * Such error occurs when the end system is configured over Secure Socket Layer (SSL). In this case, user needs to import the site certificate in Java Key Store used by OIM. Using the steps given in [SSL Certificate Configuration](../../../../getting-started/installation.md#ssl-certificate-configuration), certificate can be imported. This will fix the error.
 
 * **Host not reachable/accessible**  
-  * Configured system is not reachable from the machine where synchronization platform is installed. To validate, user needs to trigger ping command on console from the server machine, ”“ping hostname -t””. If the command results into errors such as request timed out (continuous), unknown host, destination host unreachable then it means that the system is not reachable from the machine where OIM is installed. In such cases, user can check Proxy Setting or try to load the end system in the browser to check whether connectivity is present or not. If the system loads in the web browser then there are chances that system is behind the proxy server, user needs to follow the steps mentioned in [Proxy Setting](../../../../../manage/administrator/proxy-setting.md).
+  * Configured system is not reachable from the machine where synchronization platform is installed. To validate, user needs to trigger ping command on console from the server machine, ”“ping hostname -t””. If the command results into errors such as request timed out (continuous), unknown host, destination host unreachable then it means that the system is not reachable from the machine where OIM is installed. In such cases, user can check Proxy Setting or try to load the end system in the browser to check whether connectivity is present or not. If the system loads in the web browser then there are chances that system is behind the proxy server, user needs to follow the steps mentioned in [Proxy Setting](../../../../manage/administrator/proxy-setting.md).
 
 * **Intermediate request timed out in ping command’s response**  
   * This means, system is reachable but intermediate network packets/frames are dropped during the transit. For synchronization tool to work smoothly, network should be reliable so that it does not drop packets/frames frequently. Such situations can be debugged and fixed with the help of network administrator team.
@@ -32,4 +32,5 @@ There are couple of reasons due to which connection-related error(s) might occur
 
 * **Connectivity issue with VPN configuration**  
   * There are very less chances but sometimes VPN might restrict connection to the end system. In case system doesn’t require VPN access, then user can stop the VPN and try to connect with the end system to further analyze this type of error.
+
 
