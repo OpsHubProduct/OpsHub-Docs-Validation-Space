@@ -14,4 +14,5 @@ OH-Micro Focus ALM/QC-012651 : Rest request processing Error : 403 Bad Request f
 
 # Solution
 
-* To add the user as a **Project User** in Micro Focus ALM/QC, please refer: [Add a project user in a project](../../../../connectors/micro-focus-alm.md#add-project-user-in-project)
+* To add the user as a **Project User** in Micro Focus ALM/QC, please refer: [Add a project user in a project](../../../../connectors/micro-focus-alm-qc.md#add-project-user-in-project)
+
