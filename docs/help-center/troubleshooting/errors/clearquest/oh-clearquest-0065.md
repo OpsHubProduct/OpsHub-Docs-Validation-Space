@@ -5,7 +5,7 @@ When the user encounters OH-ClearQuest-0065, the following type of error message
 OH-ClearQuest-0065: Expected display field(s) `<Display Fields Name>` of Query Presentation encountered as empty or null, Verify the display field(s) of this query `Personal Queries/OpsHub_<QueryName><EntityName>` on end system.
 
 Example:<br>  
-:: OH-ClearQuest-0065: Expected display field(s) id,action_timestamp of Query Presentation encountered as empty or null, Verify the display field(s) of this query `Personal Queries/OpsHub_LastCreatedByIntegrationBaseCMActivity` on end system.
+OH-ClearQuest-0065: Expected display field(s) id,action_timestamp of Query Presentation encountered as empty or null, Verify the display field(s) of this query `Personal Queries/OpsHub_LastCreatedByIntegrationBaseCMActivity` on end system.
 
 ## Cause
 
@@ -15,3 +15,4 @@ Example:<br>
 ## Solution
 
 Update the **query presentation fields** as mentioned in the IBM Rational ClearQuest connector documentation. Refer to the [Queries Configuration](../../../../connectors/ibm-rational-clearquest.md#queries-configuration) section.
+
