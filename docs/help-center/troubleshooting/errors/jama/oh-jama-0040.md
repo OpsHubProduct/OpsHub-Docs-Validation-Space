@@ -12,5 +12,6 @@ If we have a state transition defined for a field, but related details of Workfl
 
 ## Solution
 
-In {{SITENAME}} field mapping configuration, we need to provide the state transition in given format. Refer to [Workflow Transition](../../../../integrate/mapping-configuration#workflow-transition) for details.
+In {{SITENAME}} field mapping configuration, we need to provide the state transition in given format. Refer to [Workflow Transition](../../../../integrate/mapping-configuration.md#workflow-transition) for details.
+
 
