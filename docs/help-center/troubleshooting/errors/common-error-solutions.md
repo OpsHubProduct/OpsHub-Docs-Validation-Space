@@ -15,7 +15,7 @@
 
 - **[OH-Connector-0030: Link will not be added. No entity exists in system with global id `<global_id>`](common/oh-connector-0030.md)**
 
-- **[OH-Connector-0045: An error occurred while getting the input stream for attachment for entity id: `<entity id>` and stream URI: `<attachmentURI>`. Please check if the attachment is present in the source or if it can be accessible by the integration user or not. If you want to skip such attachments globally for all the systems, go to System Configuration -> opshub system -> select 'Skip the attachments for which content is not found in source' as 'Yes'.](common/oh-connector-0045.md)**
+- **[OH-Connector-0450: An error occurred while getting the input stream for attachment for entity id: `<entity id>` and stream URI: `<attachmentURI>`. Please check if the attachment is present in the source or if it can be accessible by the integration user or not. If you want to skip such attachments globally for all the systems, go to System Configuration -> opshub system -> select 'Skip the attachments for which content is not found in source' as 'Yes'.](common/oh-connector-0450.md)**
 
 - **[Redirect errors with SOAP based services.](common/redirect-errors-with-soap-based-services.md)**
 
@@ -27,5 +27,6 @@
 
 - **[OH-Connector-06200: Entity with entity id "`<Entity Id>`" is expected to have issue type "`<Expected Entity Type>`" and project id "`<Expected Project Id>`" but has issue type "`<Actual Entity Type>`" and project id "`<Actual Project Id>`". Therefore, we will not proceed with the processing until the "Entity Type" and/or Project is restored as per expected values.](common/oh-connector-06200.md)**
 
-- **[OH-Connector-06201: The target entity corresponding to the source entity "`<Entity Id>`" will be created with all source data as the source entity's scope has been updated. Please note this error is thrown temporarily for creating a new entity in the target with all the source data. It will be resolved automatically. If a 0 value is set for the "Maximum Retry Count" in the advanced configuration of the integration, then this failure needs to be retried manually to resolve it; Additionally, if "New Event" has been selected in the "Sync" advance configuration of the integration, then this configuration needs to be updated to "Both (Failed and New Events)" to resolve this error.](../common/oh-connector-06201.md)**
+- **[OH-Connector-06201: The target entity corresponding to the source entity "`<Entity Id>`" will be created with all source data as the source entity's scope has been updated. Please note this error is thrown temporarily for creating a new entity in the target with all the source data. It will be resolved automatically. If a 0 value is set for the "Maximum Retry Count" in the advanced configuration of the integration, then this failure needs to be retried manually to resolve it; Additionally, if "New Event" has been selected in the "Sync" advance configuration of the integration, then this configuration needs to be updated to "Both (Failed and New Events)" to resolve this error.](common/oh-connector-06201.md)**
+
 
