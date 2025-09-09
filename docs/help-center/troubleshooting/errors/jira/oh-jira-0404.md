@@ -1,7 +1,7 @@
 ## Description
 
 When you encounter error OH-JIRA-0404, then following error message will appear:  
-**OH-JIRA-0404**: Error occurred while requesting URL <<URL>>. Response received from server is Maximum results per request exceeded. Please paginate your request or contact you Jira Administrator. The current maximum is <<page size>>.
+**OH-JIRA-0404**: Error occurred while requesting URL `<<URL>>`. Response received from server is Maximum results per request exceeded. Please paginate your request or contact you Jira Administrator. The current maximum is `<<page size>>`.
 
 ## Cause
 
@@ -12,3 +12,4 @@ When you encounter error OH-JIRA-0404, then following error message will appear:
 ## Solution
 
 Please ensure that the page size in the [Jira Xray settings](https://docs.getxray.app/display/XRAY/Miscellaneous#Miscellaneous-Maxresultsperrequest) is 100 or more as {{SITENAME}} expects the page size to be at least 100.
+
