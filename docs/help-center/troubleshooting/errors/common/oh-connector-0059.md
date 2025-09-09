@@ -15,4 +15,5 @@ Let's assume we have configured an integration for Task entity with Clarity bein
 
 ## Solution
 
-User needs to configure link in relationship mapping. For configuring relationship mapping, user should refer to [relationship mapping configuration](../../../..//mapping-configuration.md#relationships).
+User needs to configure link in relationship mapping. For configuring relationship mapping, user should refer to [relationship mapping configuration](../../../../integrate/mapping-configuration.md#relationships).
+
