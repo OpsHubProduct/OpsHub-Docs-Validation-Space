@@ -19,4 +19,5 @@ There are a few limitations that are common across all connectors. The limitatio
 ## End System Limitations
 
 In addition to the common limitations, each system has its own set of synchronization limitations.  
-Such limitations are available in the limitations section on each connector's page under [Connectors](../connectors.md).
+Such limitations are available in the limitations section on each connector's page under [Connectors](../connectors/connectors.md).
+
