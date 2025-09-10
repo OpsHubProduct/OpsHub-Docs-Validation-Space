@@ -27,11 +27,11 @@
        * [Inline Image or File Synchronization](inline-image-sync-behaviour.md)
        * [Source Delete Synchronization](source-delete-synchronization.md)
        * [Comment Author Impersonation](comment-author-impersonation.md)
-  * [Integration Reconciliation](reconcile.md)
-  * Monitoring and Organization
-      * [Using the Dashboard](dashboards.md)
-      * [Organize Integrations](merge.md)
-      * [Folder Management](folder-management.md)
-  * [Best Practices](best-practises.md)
-  * [Limitations](limitations.md)
+    * [Integration Reconciliation](reconcile.md)
+    * Monitoring and Organization
+        * [Using the Dashboard](dashboards.md)
+        * [Organize Integrations](merge.md)
+        * [Folder Management](folder-management.md)
+    * [Best Practices](best-practises.md)
+    * [Limitations](limitations.md)
      
