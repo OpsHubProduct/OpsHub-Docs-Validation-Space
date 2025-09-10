@@ -1,6 +1,4 @@
-# mapping-configuration
-
-## Mapping Overview
+# Mapping Overview
 
 Mapping is the process of defining the fields that are to be integrated between the given projects and entities of two systems. It is during the mapping stage that the flow of data (From System 1 to System 2, From System 2 to System 1 or bi-directional flow between System 1 and System 2) is also defined.
 
@@ -12,7 +10,7 @@ In the image below, we show TFS and JIRA selected as the two systems.
 
 ![Integration\_Configuration\_Image 1F](../assets/Integration_Configuration_Image_1F.png)
 
-## Create a Mapping
+# Create a Mapping
 
 * Once the systems are selected, on the Integration Configuration screen, click the the plus button \[+] adjacent to **Select fields to be synced**.
 * The Mapping Configuration form will open. You will be prompted to enter the **Mapping Name** and name of systems you want to map.
@@ -26,7 +24,7 @@ If you are coming from the integration page to the mapping page, the systems wil
 
 Once you select the systems involved in integration, other relevant fields such as **Project** and **Entity Type** (Issue Type) appear. These fields might differ from one system to another.
 
-### Mapping the Fields
+## Mapping the Fields
 
 * From the **Project** drop-down lists, select the project that you want to integrate. For example, we select DemoProject in JIRA.
 * From the **Issue/Entity Type** drop-down lists, select the relevant entity within the project that you want to integrate. For example, we select Bug in both the systems.
@@ -46,17 +44,17 @@ Fields can be mapped for two different modes using the toggle button.\
 * This mode will be selected by default.
 * The fields configured in this mode will be used for the synchronization of Create/Update type of events
 
-**Delete Mode**
+#### **Delete Mode**
 
 * The fields configured in this mode will be used for the synchronization of Delete type of events
 * OpsHub Integration Manager cannot fetch any data from the end system for the entity which is deleted in the source system. Hence, [Default Target Field Mapping](mapping-configuration.md#default-target-field-mapping) shall be done for each of the target fields to be mapped.
   * For more insights on the state of the source entity regarding Delete configuration, a read-only field named "OH Deletion Type" will be available:
     * This field will be of Lookup type.
     * Possible values for this field are as follows:
-      * **NOT\_ACCESSIBLE:**
-        * An entity will be tagged as "NOT\_ACCESSIBLE" if it is deleted or OpsHub Integration Manager is unable to access it due to insufficient permissions.
-      * **NOT\_APPLICABLE:**
-        * An entity will be tagged as "NOT\_APPLICABLE" if it has been moved to a project or entity type, whose configuration does not exist either in OpsHub Integration Manager or has certain criteria enabled. Moreover, that entity no longer meets the criteria.
+      * **NOT_ACCESSIBLE:**
+        * An entity will be tagged as "NOT_ACCESSIBLE" if it is deleted or OpsHub Integration Manager is unable to access it due to insufficient permissions.
+      * **NOT_APPLICABLE:**
+        * An entity will be tagged as "NOT_APPLICABLE" if it has been moved to a project or entity type, whose configuration does not exist either in OpsHub Integration Manager or has certain criteria enabled. Moreover, that entity no longer meets the criteria.
 * Three types of fields can be mapped to perform **Logical**, **Soft Delete**, and/or **Archive Operations** in this mode:
   1. The fields of the target entity to be updated to represent the **Logical Delete**
   2. The field to perform **Soft Delete** of the target entity
@@ -72,72 +70,85 @@ Fields can be mapped for two different modes using the toggle button.\
 
 > **Note** : In both modes, you can also filter the fields as "All Fields", "Mandatory Fields", "Read Only Fields", "Custom Fields", and "System Fields".
 
-![Mapping Configuration Image 4F1](../assets/Mapping_Configuration_Image_4F1.png)
+<p align="center">
+  <img src="../assets/Mapping_Configuration_Image_4F1.png">
+</p>
 
 Here is how the mapping will look like:
 
-![Integration\_Configuration\_Image 17a](../assets/Integration_Configuration_Image_17a.png)
+<p align="center">
+  <img src="../assets/Integration_Configuration_Image_17a.png">
+</p>
 
-#### Define the Flow of Data and Conditions to Synchronize It
+
+# Define the Flow of Data and Conditions to Synchronize It
 
 * The mapped fields appear on the sliding pop-up on the right.
 * In the pop-up, click the arrows under the **Flow** column to define the flow of data. Selecting both arrows signifies that the flow is bi-directional.\
   The default flow is bi-directional.
 * **None** is generally used to put default values for fields on target side, which do not have relevant source field to be mapped. Click ![defaultemapping](../assets/defaultemapping.png) to define the default value.
 
-![Map2](../assets/Map2.png)
+<p align="center">
+  <img src="../assets/Map2.png">
+</p>
 
-## Default Mapping
+# Default Mapping
 
 * There are two types of Default Mapping:
   1. [Default Value Mapping](mapping-configuration.md#default-value-mapping)
   2. [Default Target Field Mapping](mapping-configuration.md#default-target-field-mapping)
 
-### Default Value Mapping
+## Default Value Mapping
 
 * Default Value Mapping is used to write default value to target field in case if there is no value coming from mapped source fields. Click ![defaultemapping](../assets/defaultemapping.png) to define the default mapping. The Default Mapping pop-up opens.
 * For user mapping, default value should be configured in form of user name or email as user name as expected by target end-point.
 * For user mapping, default value will not be written to target even if matching user not found in target. Defaulting will be done only if nothing coming from mapped source field.
 * For lookup value mapping, the default value is written to the target if the matching value is not found in the target.
 
-![Mapping\_Configuration\_Image 34](../assets/Mapping_Configuration_Image_34.png)
+<p align="center">
+  <img src="../assets/Mapping_Configuration_Image_34.png">
+</p>
 
 * Click **Save** button to save default value mapping.
 
-### Default Target Field Mapping
+## Default Target Field Mapping
 
 * Default Target Field Mapping is used to write the default value to the target field in case there is no relevant source field to map
 * For Default Target Field Mapping, "None" is used from the source endpoint.
   * After mapping "None" with the target field, the default value must be provided for that pair for field mapping using [Default Value Mapping](mapping-configuration.md#default-value-mapping)
   * As the value remains constant during the synchronization, it is recommended to enable the "Overwrite" option when such default target field mapping is done with the [Sync When?](mapping-configuration.md#sync-when) setting options, i.e., "Update"/"Both" or "Soft Delete" in [Create-Update Mode](mapping-configuration.md#create-update-mode) or [Delete Mode](mapping-configuration.md#delete-mode) respectively.
 
-## Value Mapping
+# Value Mapping
 
 * Value Mapping is used to map the values for the Lookup Type fields. Click ![valuemapping](../assets/Valuemapping.png) to define the value mapping for all **Lookup Type** fields. The Value Mapping pop-up opens.
 * A lookup field displays a list of values from which the user can choose.
 * In the Value Mapping pop-up, select the relevant values for both the systems. Other actions that can be performed within Value Mapping tab are also listed in the image.
 
-![Mapping\_Configuration\_Image 31F1](../assets/Mapping_Configuration_Image_31F1.png)
+<p align="center">
+  <img src="../assets/Mapping_Configuration_Image_31F1.png">
+</p>
 
 * Click **Save** button to save your selection.
 
-### Value mapping using the Same As Integration option
+## Value mapping using the Same As Integration option
 
 * This option is available only for the "Projects" field.
 * The project mapping is defined at the integration level in OpsHub Integration Manager. If there are no intended modifications in the project field's value mapping, the "Same as Integration" option within the value mapping can be used. This will avoid redundant project value mappings for the "Projects" field.
 
-![Same\_As\_Integration](../assets/Same_As_Integration.png)
+<p align="center">
+  <img src="../assets/Same_As_Integration.png" >
+</p>
 
 > **Note** : This option becomes available only if there is no default value configuration, one-to-one value mapping configuration, and advanced mapping configuration applied to the Projects field in the specified direction. Similarly, enabling this option in a specific direction will disable the default value configuration, one-to-one value mapping configuration, and advanced mapping configuration for that direction.
 
-### Value Mapping using Excel sheet
+## Value Mapping using Excel sheet
 
 * **There is a limitation in value mapping in lookup type of fields, i.e., a maximum of 100 values can be mapped.**
 * If the user wants to map more than 100 values in lookup value mapping, then an Excel sheet can be used for this purpose.
 * If there are a large number of values in a field to be mapped, then an Excel sheet is easier to use.
 * Please refer to page [Excel Upload](excel-upload.md) for uploading excel sheet.
 
-#### Associate Excel File with Field Mapping
+### Associate Excel File with Field Mapping
 
 * The user can associate the excel file with the following field types:
   * Lookup, reference, and user fields.
@@ -157,7 +168,7 @@ Here is how the mapping will look like:
 * In system1 column, mention the column of the sheet which should be considered as source value.
 * In system2 column, mention the column of the sheet which should be considered as target value.
 
-#### Configure Excel Mapping for Backward Direction
+### Configure Excel Mapping for Backward Direction
 
 * If the fields are mapped bidirectionally, the checkbox for the same setting for backward direction will be there in the form:
 
@@ -169,13 +180,13 @@ Here is how the mapping will look like:
 
 ![ExcelMapping4](../assets/ExcelMapping4.png)
 
-## View/Edit XSLT Configurations options
+# View/Edit XSLT Configurations options
 
 * Any field mapping created is saved in the XSLT language.
 * View/Edit XSLT Configurations can be used to change the default mapping XSLT. Click ![XSLT Icon](../assets/XSLT_icon_blue.png) to change the default behaviour of a particular field mapping.
 * User can customize default mapping XSLT using Advance mapping. For Advance mapping, OpsHub Integration Manager has some Utilities available. Refer to [Advance Mapping Utility](../manage/advance-mapping-utility.md) for Utilities.
 
-### Defining Unicode for Element names
+## Defining Unicode for Element names
 
 * The field names are normalized to be valid element names in XML. Some of the characters such as \~, @, #, ©, $, etc. are invalid XML characters and therefore, these characters are normalized when stored as XML.
 * By default, when the 'View/Edit XSLT Configurations' is selected, then for a field name its element name is loaded in normalized format. So, if you want to perform customization on an element name that has invalid unicode character then first map the field and then from 'View/Edit XSLT Configurations' and then copy the field name. (You can remove this field mapping if it is not needed, as it was needed to get the field name.)
@@ -197,7 +208,7 @@ You can map attachments, comments and relationships between System 1 and System 
 
 ***
 
-### Specifying Unicode for values in lookup fields
+## Specifying Unicode for values in lookup fields
 
 * Lookup field values containing special characters such as tab space (`\t`) are normalized for XML compatibility, as these characters are not directly supported in XML.
 * By default, when 'View/Edit XSLT Configurations' option is selected, the fields values for a lookup field are loaded in normalized format.
@@ -221,14 +232,14 @@ You can map attachments, comments and relationships between System 1 and System 
 
 ***
 
-## Reference Field
+# Reference Field
 
-### Synchronization behavior of reference field(s)
+## Synchronization behavior of reference field(s)
 
 * The first synchronization will be performed based on the ID of the target entity synced by OpsHub Integration Manager.
 * If no matching entity is found in the above step, then the synchronization will be performed based on the name of the entity.
 
-### Synchronize default target value for reference field
+## Synchronize default target value for reference field
 
 * To synchronize "default target value" (irrespective of source field value) for the reference field, the advance mapping can be configured in OpsHub Integration Manager mapping.
 * To perform this, `defaultTargetId` element needs to be mentioned in the advanced mapping of reference field.
@@ -282,7 +293,7 @@ You can map attachments, comments and relationships between System 1 and System 
 
 ***
 
-### Synchronize reference field in case end system does not provide name of the referenced entity in Entity API and History API for base entity
+## Synchronize reference field in case end system does not provide name of the referenced entity in Entity API and History API for base entity
 
 * Following XSLT snippet can be used if name based synchronization is to be performed for reference field
 
@@ -332,7 +343,7 @@ You can map attachments, comments and relationships between System 1 and System 
 
 ***
 
-## Comments
+# Comments
 
 The following video shows how to configure comments synchronization during integration configuration:
 
@@ -354,7 +365,7 @@ The following video shows how to configure comments synchronization during integ
 
 ![Mapping Configuration Image 25F12.png](../assets/Mapping_Configuration_Image_25F12.png)
 
-## Attachments
+# Attachments
 
 The following video shows how to configure attachments synchronization during integration configuration:
 
@@ -372,7 +383,7 @@ The following video shows how to configure attachments synchronization during in
 
 * Click the edit icon (right icon) to edit attachments XSLT.
 
-## Relationships
+# Relationships
 
 Watch the following video to learn more about Relationships Mapping from one system to another:
 
@@ -399,7 +410,7 @@ Read in detail about [Default Link Settings](default-link-settings.md) here.
 * Select the **Fail event if linked entity doesn't exist** option to fail the event when the linked entity doesn't exist in the target system. If you want to enable this feature bidirectionally, click both the arrows.
 * Select the **Poll archived links** option to retrieve archived links from end system. If you want to enable this feature bidirectionally, click both the arrows.
 
-### Entity Type Mapping
+## Entity Type Mapping
 
 * OIM automatically identifies the target linked entity type in most cases. However, if you need to configure entity type mapping manually, follow the steps below.
 * Click on **Manual Entity Type Mapping** to manually configure or adjust the mappings.
@@ -415,7 +426,7 @@ Read in detail about [Default Link Settings](default-link-settings.md) here.
 
 ![Entity\_Type\_Mapping.png](../assets/Entity_Type_Mapping.png)
 
-## Workflow Transition
+# Workflow Transition
 
 **Workflow transition** is a feature supported by OpsHub Integration Manager wherein the user can configure OpsHub Integration Manager to automatically handle workflow transition of an entity as per requirement.
 
@@ -550,9 +561,7 @@ To solve this problem, OpsHub Integration Manager allows the user to configure W
 * If the Workflow Transition is configured, then during the integration, the transition of entities based on incoming values is done automatically by OpsHub Integration Manager. This makes it easier to synchronize such systems.
 * Now, click **Create Mapping** button to create the mapping.
 
-***
-
-### Workflow Transition Example
+## Workflow Transition Example
 
 Suppose the possible status transition(s) of Jira system is:
 
@@ -617,15 +626,15 @@ Below is workflow transition XML configuration sample for OpsHub Integration Man
 
 **Note:** Currently, only Jira and Windchill RV\&S as the target systems support using such dependent `OH_Dependent_Comments` along with the transitions.
 
-## Mention Setting
+# Mention Setting
 
-### Overview
+## Overview
 
 **Mention Synchronization** is a feature supported by **OpsHub Integration Manager** which allows users to synchronize the entity mentioned and user mentioned data from source end system to target end system.
 
 End user can edit this **Mention Setting** in **OpsHub Integration Manager** to configure the mention sync option. This configuration is applicable to synchronization of entity mentioned. **OpsHub Integration Manager** supports three ways to synchronize the entity mentioned data to target end system.
 
-### Mention Configuration
+## Mention Configuration
 
 **Mention Sync Option**
 
@@ -650,7 +659,7 @@ End user can edit this **Mention Setting** in **OpsHub Integration Manager** to 
 
 > **Note** : To enable entity mention synchronization for supported systems, it is required to remap applicable field(s) and comments after upgrading **OpsHub Integration Manager** to version 7.146 or above. Otherwise, mentioned entity ID of source will sync to the target system. Additionally, further updates from corresponding target field will overwrite the source mentioned entity with source mentioned ID.
 
-### Mention Sync Setting View
+## Mention Sync Setting View
 
 ![mention\_setting](../assets/mention_setting.png) ![mention\_sync\_option\_new](../assets/mention_sync_option_new.png)
 
@@ -672,7 +681,7 @@ Say, for example, if the rich text field **description** of the source end syste
 | `#Defect101`      | Yes                                         | Text              | Defect101               | https://source-end-host:port/SourceProject1/\_workitems/edit/101             | https://target-endpoint-host:port/TargetProject1/\_workitems/edit/T101                                           |
 | `#Defect101`      | No                                          | Text              | Defect101               | https://source-end-host:port/SourceProject1/\_workitems/edit/101             | https://oim-host:8989/OpsHubWS/mentionsync?src\_mention\_sync\_id={no}\&tgt\_host\_entity\_info\_id={no}         |
 
-#### When entity mention is supported for target end system but not for target mapped field
+### When entity mention is supported for target end system but not for target mapped field
 
 | Description value | Is mentioned entity synchronized to target? | Target field type | Repo-Steps with Option1 | Repo-Steps with Option2                                                      | Repo-Steps with Option3                                                                                          |
 | ----------------- | ------------------------------------------- | ----------------- | ----------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -681,7 +690,7 @@ Say, for example, if the rich text field **description** of the source end syste
 | `#Defect101`      | Yes                                         | WIKI              | Defect101               | [Defect101](https:/source-end-host:port/SourceProject1/_workitems/edit/101/) | [DefectT101](https:/target-endpoint-host:port/TargetProject1/_workitems/edit/T101/)                              |
 | `#Defect101`      | No                                          | WIKI              | Defect101               | [Defect101](https:/source-end-host:port/SourceProject1/_workitems/edit/101/) | [OHDefect101](https://oim-host:8989/OpsHubWS/mentionsync?src_mention_sync_id={no}\&tgt_host_entity_info_id={no}) |
 
-### Entity Mention Sync Behaviour
+## Entity Mention Sync Behaviour
 
 * If source system supports entity mention, but the target system does not support it:
   * Mentioned entity from the source system will sync to the target system, as per the mention sync option configured in **OpsHub Integration Manager**.
@@ -695,7 +704,7 @@ Say, for example, if the rich text field **description** of the source end syste
 
 > **Note** : It is not recommended to alter or edit the default generated entity mentioned mapping for fields/comments other than removing whole mapping or setting empty tag.
 
-### Entity Mention Sync Limitation
+## Entity Mention Sync Limitation
 
 * Bidirectional sync of the Entity Mention is **not supported** in the below-mentioned cases:
   * If "sync Source Id" option is configured in the mention setting in **OpsHub Integration Manager**.
@@ -708,12 +717,12 @@ Say, for example, if the rich text field **description** of the source end syste
 
 Entity mention sync is supported only when the following systems are configured as the source in **OpsHub Integration Manager**:
 
-1. [**Team Foundation Server ALM and Azure DevOps Services**](../connectors/team-foundation-server.md#EntityMentionSync)
-2. [**Codebeamer**](../connectors/codebeamer.md#entityMentionSync)
-3. [**CodebeamerX**](../connectors/codebeamerX.md#entityMentionSync)
-4. [**Rally**](../connectors/rally.md#entityMentionSync)
-5. [**Jira**](../connectors/jira.md#entityMentionSync)
-6. [**GitHub**](../connectors/gitHub.md#entityMentionSync)
+1. [**Team Foundation Server ALM and Azure DevOps Services**](../connectors/team-foundation-server.md#mapping-for-entity-mention-field)
+2. [**Codebeamer**](../connectors/codebeamer.md#mapping-for-entity-mention-field)
+3. [**CodebeamerX**](../connectors/codebeamerX.md#mapping-for-entity-mention-field)
+4. [**Rally**](../connectors/rally.md#mapping-for-entity-mention-field)
+5. [**Jira**](../connectors/jira.md#mapping-for-entity-mention-field)
+6. [**GitHub**](../connectors/gitHub.md#mapping-for-entity-mention-field)
 
 ### User Mention Configuration When User Search On Email Not Supported
 
