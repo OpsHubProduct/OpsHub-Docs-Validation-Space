@@ -12,7 +12,7 @@ Integration is the process of connecting two or more systems in order to enable 
 To configure an integration, you should go to the integration page from the homepage as shown in the image below and fill the requested details in the integration form.
 
 <div align="center">
-  <img src="../assets/Overview_of_Integration_Image_1D.png" alt="Overview of Integration Image 1D" />
+  <img src="../assets/Overview_of_Integration_Image_1D.png" />
 </div>
 
 If you are creating an integration for the first time, you need to follow the steps given below:
@@ -21,14 +21,14 @@ If you are creating an integration for the first time, you need to follow the st
 - Choose the two systems you want to integrate.  
 
   <div align="center">
-    <img src="../assets/Overview_of_Integration_Image_2C.png" alt="Overview of Integration Image 2C" />
+    <img src="../assets/Overview_of_Integration_Image_2C.png" />
   </div>
 
 - Go to the System Configuration screen and configure the systems that you want to integrate. The details of how to configure a system can be accessed on the [System Configuration](system-configuration.md) page.
 - Then, select the project and entities that you want to synchronize between the systems. You will be prompted to create a mapping for the integration. The details of how to create a mapping can be accessed on the [Mapping Configuration](mapping-configuration.md) page.
 
 <div align="center">
-  <img src="../assets/Overview_of_Integration_Image_3C.png" alt="Overview of Integration Image 3C" />
+  <img src="../assets/Overview_of_Integration_Image_3C.png" />
 </div>
 
 - You can then proceed with integration and set the polling time and define other advanced settings. Click [Integration Configuration](integration-configuration.md) to learn more.
@@ -37,7 +37,7 @@ If you are creating an integration for the first time, you need to follow the st
 
 ## Sync Limitations
 
-Each system has its own set of synchronization limitations. Please refer to the system-specific known limitations section on the [Connectors](../connectors.md) page before you proceed.
+Each system has its own set of synchronization limitations. Please refer to the system-specific known limitations section on the [Connectors](../connectors/connectors.md) page before you proceed.
 
 Additionally, there are a few limitations that are common across all connectors. Those limitations are listed below:
 
@@ -52,3 +52,4 @@ Additionally, there are a few limitations that are common across all connectors.
   - If the source user *does not exist in the target system*, then the source system's user's display name as seen in the source system will synchronize to the target system as literal text.
 
 - In both the above-mentioned cases, once the literal text for the user's display name is synchronized to the target system, and when this data is synchronized back to the other system, the actual User mention will be overwritten with the literal text as displayed in the target system.
+
