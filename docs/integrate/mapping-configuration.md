@@ -216,8 +216,8 @@ You can map attachments, comments and relationships between System 1 and System 
 
 * Lookup field values containing special characters such as tab space (`\t`) are normalized for XML compatibility, as these characters are not directly supported in XML.
 * By default, when 'View/Edit XSLT Configurations' option is selected, the fields values for a lookup field are loaded in normalized format.
-* For advanced XSLT configuration of field values, if the value includes any of the aforementioned characters, you can manage them using the following format:\
-  &#xNAN;**`Ust_<<Unicode character Code>>_Uend`**\
+* For advanced XSLT configuration of field values, if the value includes any of the aforementioned characters, you can manage them using the following format:
+  &#xNAN;**`Ust_<<Unicode character Code>>_Uend`**
   Here, `<<Unicode character Code>>` is the character code in UTF-16 decimal value.
 
 **Examples of values normalization:**
@@ -237,8 +237,6 @@ You can map attachments, comments and relationships between System 1 and System 
 ```
 
 * Unicode character code of tab is **0009**
-
-***
 
 # Reference Field
 
@@ -1104,7 +1102,10 @@ From the **Detect Conflict** drop-down list:
 * Select **Manual** when you want the user to manually take an action to resolve the conflict.
 * Select **Custom Strategy** when you want the user to define the action with a pre-defined condition, for example the system in which the entity was updated last is allowed to overwrite the information in the other system.
 
-![ConflictM1](../assets/ConflictM1.png)
+<p align="center">
+  <img src="../assets/ConflictM1.png" />
+</p>
+
 
 Read in detail about Custom Conflict Resolution Strategy [here](custom-conflict-resolution-strategy.md).
 
