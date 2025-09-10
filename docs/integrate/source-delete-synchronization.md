@@ -61,6 +61,7 @@
   - Updates on the SE3 and SE4 will be synchronized to the target entities TE3 and TE4 respectively via Task and Story integration.
   - TE5 (as SE5 fails to meet the criteria of Story integration) and TE6 (as the configuration related to Feature is missing in **OpsHub Integration Manager**) will be soft deleted or archived in the target as per the configuration, and the sync report will be updated with the "Not Applicable" state for this entity.
     
-![DeleteActions](../assets/DeleteActions.png)
+![](../assets/DeleteActions.png)
+
 
 
