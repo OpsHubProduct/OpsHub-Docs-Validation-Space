@@ -13,7 +13,7 @@ Folder Management helps in organizing Integrations, Mappings, and Systems under 
 - Folders can be found on the top panel.
 
 <div align="center">
-  <img src="../assets/foldersview.PNG" />
+  <img src="../assets/foldersview.PNG"  width="400px"/>
 </div>
 
 - "Default" is the root folder.
@@ -149,6 +149,7 @@ The sorting behavior for integration folder names is based on their ASCII values
 <div align="center">
   <img src="../assets/ASCII-Table.png"  />
 </div>
+
 
 
 
