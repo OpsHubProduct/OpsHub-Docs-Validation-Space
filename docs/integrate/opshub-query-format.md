@@ -11,7 +11,7 @@ The query can be applied only on the conditions that are supported by connector.
 Below is the JSON syntax for the criteria query.
 
 <p align="center">
-  <img src="../assets/OpsHub_JSON_Query_1b.PNG" alt="OpsHub JSON Query Format">
+  <img src="../assets/OpsHub_JSON_Query_1b.PNG">
 </p>
 
 
@@ -304,4 +304,5 @@ A query can be a **simple query** or a **complex query**. A simple query has onl
   ]
 }
 ```
+
 
