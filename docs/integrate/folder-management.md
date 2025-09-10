@@ -57,7 +57,7 @@ From child folder, a user can view all the config done in parent folders, using 
 - To move an item from one folder to another folder, click on item, select move action as shown below.
 - 
 <p align="center">
-  <img src="../assets/foldermove.png" width="700px" />
+  <img src="../assets/foldermove.png" width="800px" />
 </p>
 
 - All the existing folder will be listed, select the folder, and click **Move**.
@@ -149,6 +149,7 @@ The sorting behavior for integration folder names is based on their ASCII values
 <div align="center">
   <img src="../assets/ASCII-Table.png"  />
 </div>
+
 
 
 
