@@ -42,7 +42,7 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
     > **Note**: If the integration associated with the older "Entity type" and/or "Project" is not available, then the delete mode mapping configured in the integration related to new "Entity type" and/or "Project" will be considered.
 
     2. A new entity will be created based on the current data of the source entity.
-    3. If the comments are mapped in the mapping, ['OpsHub-020404' or 'OH-Connector-06201'](../help-center/troubleshooting/errors/common/oh-connector-06201.md) error will be observed temporarily in the sync.
+    3. If the comments are mapped in the mapping, ['OpsHub-020404' or 'OH-Connector-06201'](../help-center/troubleshooting/errors/common/opshub-020404.md) error will be observed temporarily in the sync.
 * If the source entity is restored to the older "Entity type" and/or "Project", it will be treated as a new change on that source entity. As a result, deprecation and new creation of the entity will be performed in the target system.
 * OpsHub Integration Manager has integration configurations, involving multiple systems:
 
