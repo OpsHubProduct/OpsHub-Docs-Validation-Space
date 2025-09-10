@@ -40,14 +40,14 @@ Look-up type fields are multi-valued fields.
 During mapping the fields for integration, the values of Look-up fields must be mapped for the mapped entities.  
 In this case, for example, we choose Priority and Status as the Look-up type fields to be mapped. We map Priority to Priority and Status to State.
 
-![Image-10A](../assets/Image-10A.png)
+![](../assets/Image-10A.png)
 
 ### Default Mapping
 
 Default Mapping is used to write default value to target field in case there is no value coming from mapped source fields.  
-Shown below is the Default Mapping pop-up, which opens on clicking the ![rotate](../assets/rotate.png) icon.
+Shown below is the Default Mapping pop-up, which opens on clicking the ![](../assets/rotate.png) icon.
 
-![Image-11-2](../assets/Image-11-2.png)
+![](../assets/Image-11-2.png)
 
 > **Note**: The default flow is bi-directional. None is generally used to put default values for fields on target side, which do not have relevant source field to be mapped.
 
@@ -85,7 +85,7 @@ You can now save and activate the integration.
 ## Troubleshooting
 
 Create/Update event in the source system and check whether the event synchronizes to the target system.  
-If you face any issue, please refer to the [General FAQs](../help-center/faqs.md)
+If you face any issue, please refer to the [General FAQs](../help-center/faqs/faqs.md)
 
 You can also see the steps to manage an integration from this page [Managing Integrations](integration-configuration.md#managing-integration)
 
@@ -106,3 +106,4 @@ You should not be using the integration user credentials to create entities in t
 Create/Update event in the source system and check whether the event synchronizes to the target system.  
 Wait for one minute for the data to synchronize.  
 If you face any issue, please refer to [Possible Reasons and Fixes](../help-center/faqs/general.md)
+
