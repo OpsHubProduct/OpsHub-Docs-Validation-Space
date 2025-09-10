@@ -10,7 +10,10 @@ The query can be applied only on the conditions that are supported by connector.
 
 Below is the JSON syntax for the criteria query.
 
-![OpsHub JSON Query Format](../assets/OpsHub_JSON_Query_1b.PNG)
+<p align="center">
+  <img src="../assets/OpsHub_JSON_Query_1b.PNG" alt="OpsHub JSON Query Format">
+</p>
+
 
 The JSON query syntax can accommodate simple queries as well as complex queries using nested JSON criterias. In the above JSON query, the **Leaf Criteria Sections** denotes the simple queries that can be grouped together into complex queries (nested queries). The **Criteria Section 1** groups together the criterias denoted by **Criteria sub section 1**.
 
@@ -301,3 +304,4 @@ A query can be a **simple query** or a **complex query**. A simple query has onl
   ]
 }
 ```
+
