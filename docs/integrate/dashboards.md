@@ -10,7 +10,9 @@ Here is a video on how to use the dashboard in OIM:
 - Dashboard will appear on home page.
 - Click on (../assets/rotate.png) at top right corner of dashboard to rotate graphical representation of integration.
 
-![](../assets/dashboard.png)
+<p align="center">
+  <img src="../assets/dashboard.png" />
+</p>
 
 - **Node:** Represents system created in **OpsHub Integration Manager**.
 - **Branch:** Represents that two nodes are connected through integration. Click on branch to view integration in read-only mode. Color of branch depicts status of integration.
@@ -39,7 +41,7 @@ Users can filter the integrations according to the system and integration status
 
 - Click the funnel icon to view the filter options.
 
-(../assets/dashboard_filter.PNG)
+![](../assets/dashboard_filter.PNG)
 
 - Select the **systems** and click **Filter** button. All the integrations that use the selected systems will be displayed.
 - The available options for **integration status** are: All, Active, Inactive, and In error. Select one and click **Filter**.
@@ -54,18 +56,19 @@ Users can filter the integrations according to the system and integration status
 
 - Click on a system node in the graph. For example, clicking on the “Team Foundation Server” icon will open that system’s configuration.
 
-(../assets/Dashboard_Image3.png)
+![](../assets/Dashboard_Image3.png)
 
 ## Navigate to Integration
 
 - Click on the integration name in the graph to open its details.
 
-(../assets/Dashboard_Image1.png)
+![](../assets/Dashboard_Image1.png)
 
 ## Navigate to Failure
 
 - Click on "Global Failure(s)" or "Processing Failure(s)" to go directly to the Failures module.
 
-(../assets/Dashboard_Image2.png)
+![](../assets/Dashboard_Image2.png)
+
 
 
