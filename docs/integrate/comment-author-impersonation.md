@@ -14,3 +14,4 @@
 ## Configuration
 
 - Enable the comment sync in the **OpsHub Integration Manager** mapping. As a result, the comment sync will enable the comment's author impersonation without any additional configuration.
+
