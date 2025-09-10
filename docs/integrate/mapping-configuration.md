@@ -361,17 +361,26 @@ The following video shows how to configure comments synchronization during integ
 * The comments mapping will automatically enable comment author impersonation for supported systems. For more details, refer to Read the [Comment Author Impersonation](comment-author-impersonation.md) section.
 * Comment time impersonation is not supported by OpsHub Integration Manager via comment mapping.
 
-![](../assets/Mapping_Configuration_Image_21F2.PNG)
+<p align="center">
+  <img src="../assets/Mapping_Configuration_Image_21F2.PNG" />
+</p>
+
 
 * Click the (\</>) icon to define comments mapping.
 * Map the correct fields and define the flow by selecting backward (<), forward (>), or bi-directional (<-->) arrows.
 * As you can see in the screenshot below, you can map public reply and internal notes as well. You can also include author details and/or comment-time in the comment.
 
-![](../assets/Mapping_Configuration_Image_22F1.png)
+<p align="center">
+  <img src="../assets/Mapping_Configuration_Image_22F1.png" />
+</p>
+
 
 * Click the edit icon (right icon) to edit comments XSLT.
 
-![](../assets/Mapping_Configuration_Image_25F12.png)
+<p align="center">
+  <img src="../assets/Mapping_Configuration_Image_25F12.png" />
+</p>
+
 
 # Attachments
 
@@ -381,13 +390,18 @@ The following video shows how to configure attachments synchronization during in
 
 * Slide the button adjacent to **Attachments** to the right to map attachments.
 
-![](../assets/Mapping_Configuration_Image_21F1.png)
+<p align="center">
+  <img src="../assets/Mapping_Configuration_Image_21F1.png" />
+</p>
+
 
 * Click the (\</>) icon to define mapping.
 * Map the correct fields and define the flow by selecting backward (<), forward (>), or bi-directional (<-->) arrows.
 * As you can see in the screenshot below, you can map status, projects, and priority for the attachments.
 
-![](../assets/Mapping_Configuration_Image_24F1.png)
+<p align="center">
+  <img src="../assets/Mapping_Configuration_Image_24F1.png" />
+</p>
 
 * Click the edit icon (right icon) to edit attachments XSLT.
 
@@ -403,13 +417,18 @@ Relationship synchronizes the relationship between the selected entities.
 * Click the edit icon. The **Relationships** form opens on the right.
 * Link Type mapping will be displayed by default.
 
-![](../assets/Mapping_Configuration_Image_6.png)
+<p align="center">
+  <img src="../assets/Mapping_Configuration_Image_6.png" />
+</p>
+
 
 * Select the link types from the corresponding boxes in both systems by clicking them. For example, in the link type tab, we select Duplicates from System 1 and Affected from System 2. The arrows between the link types define the flow. If you want to enable a bi-directional flow, click both the arrows.
 
 Click the edit icon against the link type for which you need to set default link. The 'Default Link Settings' option is applicable to any link type, not necessary to only mandatory link.
 
-![](../assets/Default_Link_Configuration.png)
+<p align="center">
+  <img src="../assets/Default_Link_Configuration.png" />
+</p>
 
 Read in detail about [Default Link Settings](default-link-settings.md) here.
 
@@ -432,7 +451,10 @@ Read in detail about [Default Link Settings](default-link-settings.md) here.
 
 **Note:** The **Bypass Link Entity Type Mapping** add-on is required in your license to enable manual entity type mapping.
 
-![](../assets/Entity_Type_Mapping.png)
+<p align="center">
+  <img src="../assets/Entity_Type_Mapping.png" />
+</p>
+
 
 # Workflow Transition
 
@@ -450,7 +472,10 @@ To solve this problem, OpsHub Integration Manager allows the user to configure W
 * If the dependent field added in the workflow transition is the reference field type, then by default, the lookup for the target entity will be done based on a name basis.
 * If the user wants to perform target lookup based on the target entity id, they can achieve this by specifying the attribute `"lookupBy"` in the dependent field. For more details, refer to [Reference Field Working](mapping-configuration.md#reference-field).
 
-![](../assets/Mapping_Configuration_Image_32.PNG)
+<p align="center">
+  <img src="../assets/Mapping_Configuration_Image_32.PNG" />
+</p>
+
 
 * Given below is the template for Advance Transition XSL.
 
@@ -468,7 +493,10 @@ To solve this problem, OpsHub Integration Manager allows the user to configure W
 * If the dependent field added in the workflow transition is the reference field type, then by default, the lookup for the target entity will be done based on a name basis.
 * If the user wants to perform target lookup based on the target entity id, they can achieve this by specifying the attribute `"lookupBy"` in the dependent field. For more details, refer to [Reference Field Working](mapping-configuration.md#reference-field)
 
-![](../assets/Mapping_Configuration_Image_32.PNG)
+<p align="center">
+  <img src="../assets/Mapping_Configuration_Image_32.PNG" />
+</p>
+
 
 * Given below is the template for Advance Transition XSL.
 
@@ -1095,7 +1123,9 @@ From the **Sync When?** drop-down list against a field in [Create-Update Mode](m
 > **Note**: Do not set the **Conflict Resolution Strategy** as **Manual** when you have set **Sync When?** to Update.\
 > Reason: As the field was not created at sync time, this will result into conflict error.
 
-![SyncWhen1](../assets/SyncWhen1.png)
+<p align="center">
+  <img src="../assets/SyncWhen1.png"  />
+</p>
 
 For the [Delete Mode](mapping-configuration.md#delete-mode) mapping configuration, the default **Sync When?** mode is **Soft Delete**.
 
@@ -1118,7 +1148,10 @@ For the [Delete Mode](mapping-configuration.md#delete-mode) mapping configuratio
 
 * Open the mapping from the integration page. Alternatively, you can also click the mapping name on the mapping configuration page. You will be navigated to the Mapping Configuration page. You can click the option highlighted in the image below to edit the mappping.
 
-![Mapping Configuration Image 26F](../assets/Mapping_Configuration_Image_26F.png)
+<p align="center">
+  <img src="../assets/Mapping_Configuration_Image_26F.png" />
+</p>
+
 
 * Update the details and click the **Update Mapping** button to save the details. You will receive a prompt when the mapping details are updated.
 
@@ -1126,7 +1159,10 @@ For the [Delete Mode](mapping-configuration.md#delete-mode) mapping configuratio
 
 Apart from updating, you can also take multiple other actions on an existing mappings. Roll over the icon on the right most corner against the mapping name to see all actions that you can take.
 
-![Mapping Configuration Image 27F](../assets/Mapping_Configuration_Image_27F.png)
+<p align="center">
+  <img src="../assets/Mapping_Configuration_Image_27F.png"  />
+</p>
+
 
 Here are the actions you can perform on an existing mapping:
 
@@ -1139,7 +1175,10 @@ You can:
 
 Refer to the image below.
 
-![Mapping Configuration Image 29F](../assets/Mapping_Configuration_Image_29F.png)
+<p align="center">
+  <img src="../assets/Mapping_Configuration_Image_29F.png" />
+</p>
+
 
 > **Note** : From version 7.0 onwards, exported mapping will be in XML format with display name of fields rather than internal names to make mapping portability robust.
 >
@@ -1147,4 +1186,7 @@ Refer to the image below.
 
 You can also perform other actions on multiple selected mappings:
 
-![Mapping Configuration Image 30F1](../assets/Mapping_Configuration_Image_30F1.png)
+<p align="center">
+  <img src="../assets/Mapping_Configuration_Image_30F1.png" />
+</p>
+
