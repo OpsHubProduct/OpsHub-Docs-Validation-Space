@@ -46,7 +46,10 @@ Users can filter the integrations according to the system and integration status
 - Select the **systems** and click **Filter** button. All the integrations that use the selected systems will be displayed.
 - The available options for **integration status** are: All, Active, Inactive, and In error. Select one and click **Filter**.
 - You can try combinations — for example: set Jira as a system filter and Active as an integration status filter to view all active Jira integrations.
-(../assets/dashboard_filter_graph.PNG)
+<p align="center">
+  <img src="../assets/dashboard_filter_graph.PNG" />
+</p>
+
 
 - Click **Clear** to view all integrations and remove applied filters.
 
@@ -56,7 +59,10 @@ Users can filter the integrations according to the system and integration status
 
 - Click on a system node in the graph. For example, clicking on the “Team Foundation Server” icon will open that system’s configuration.
 
-![](../assets/Dashboard_Image3.png)
+<p align="center">
+  <img src="../assets/Dashboard_Image3.png" />
+</p>
+
 
 ## Navigate to Integration
 
@@ -69,6 +75,7 @@ Users can filter the integrations according to the system and integration status
 - Click on "Global Failure(s)" or "Processing Failure(s)" to go directly to the Failures module.
 
 ![](../assets/Dashboard_Image2.png)
+
 
 
 
