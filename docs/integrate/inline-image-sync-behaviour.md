@@ -23,20 +23,20 @@ OpsHub Integration Manager supports the synchronization of images and files acro
 
 ## Server/ Base64 Storage System Combinations
 
-![Server to Server](../assets/Server_to_server_inline.png)
+![](../assets/Server_to_server_inline.png)
 
 * Between server/ base64 and server/ base64 storage combination systems, if an inline image/ file is added to the entity upon synchronization by OpsHub Integration Manager as shown in the above image, it will be similar to the way image/ file is added to the source end system entity, i.e., it will only be added on inline field/ comment.
 
 ## Entity Storage System Combinations
 
-![Entity to Entity](../assets/Entity_to_entity_inline.png)
+![](../assets/Entity_to_entity_inline.png)
 
 * Between entity and entity storage combination systems, if an inline image/ file is added to the entity, upon synchronization by OpsHub Integration Manager as shown in the above image, it will be similar to the way image/ file is added to the source end system entity, i.e., it will be added on inline field/ comment and also as an attachment on the entity.
   * Due to the entity storage system's behavior of auto-adding the image/ file as an attachment to the entity regardless of whether attachment synchronization is enabled/ disabled in mapping. OpsHub Integration Manager will also add the attachment on the entity to synchronize the image/ file.
 
 ## Server/ Base64 Storage and Entity System Combinations
 
-![Server to Entity](../assets/Server_to_entity_inline.png)
+![](../assets/Server_to_entity_inline.png)
 
 * Between server/ base64 and entity storage combination systems, if an inline image/ file is added to the entity, upon synchronization by OpsHub Integration Manager above shown image will be the way image/ file will be added to the entity.
   * When the entity storage system is the target, OpsHub Integration Manager will auto-add the image/ file as an attachment to the entity.
@@ -93,4 +93,5 @@ Following are the **Before** and **After** behaviors for the given scenarios:
 | 10 | - Comment synchronization is enabled<br>- Rich text field is mapped to text field in target<br>- Both have same inline image | Entity Storage | Server Storage | - Image will be uploaded to server system & text field data added with `<ImageTag src = ”Server storage uploaded URL”>Img1.png</ImageTag>`<br>- Comment will be added with referred inline image | Same as before |
 | 11 | - Source HTML field is mapped to target text field<br>- Create entity with inline image & synchronize<br>- Update target text field & start reverse synchronization (from target to source) | ALL | Base64 Storage | - Inline image with base64 storage is not supported | - If same name image is found in source entity, it will be replaced with source URI<br>- In case, image with same name is not found, the image will be removed from the source entity |
 | 12 | - Create entity with rich text field having image 1<br>- In next revision, image 2 is uploaded on the same field<br>- If the events fail and are in retry but image 1’s base64 data is missing from the write-side cache | Base64 Storage | ALL | - Inline image with base64 storage is not supported | - Base64 content for image 1's hashcode will be queried in source entity<br>- Since, it is no longer present on entity now, image 1 will not be synchronized<br>- In the next revision, image 2 will be synchronized |
+
 
