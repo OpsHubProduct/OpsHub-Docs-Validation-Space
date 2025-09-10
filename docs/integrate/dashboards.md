@@ -41,7 +41,10 @@ Users can filter the integrations according to the system and integration status
 
 - Click the funnel icon to view the filter options.
 
-![](../assets/dashboard_filter.PNG)
+<p align="center">
+  <img src="../assets/dashboard_filter.PNG" />
+</p>
+
 
 - Select the **systems** and click **Filter** button. All the integrations that use the selected systems will be displayed.
 - The available options for **integration status** are: All, Active, Inactive, and In error. Select one and click **Filter**.
@@ -75,6 +78,7 @@ Users can filter the integrations according to the system and integration status
 - Click on "Global Failure(s)" or "Processing Failure(s)" to go directly to the Failures module.
 
 ![](../assets/Dashboard_Image2.png)
+
 
 
 
