@@ -10,7 +10,7 @@ Here is a video on how to use the dashboard in OIM:
 - Dashboard will appear on home page.
 - Click on (../assets/rotate.png) at top right corner of dashboard to rotate graphical representation of integration.
 
-[](../assets/dashboard.png)
+![](../assets/dashboard.png)
 
 - **Node:** Represents system created in **OpsHub Integration Manager**.
 - **Branch:** Represents that two nodes are connected through integration. Click on branch to view integration in read-only mode. Color of branch depicts status of integration.
@@ -18,9 +18,9 @@ Here is a video on how to use the dashboard in OIM:
   - **Gray:** Integration is inactive.
   - **Red:** Job failure in integration.
   - **Orange:** Processing failures in integration.
-  - Click on ![integration branch](../assets/integrationbranch.png) to view integration details from dashboard.
+  - Click on ![](../assets/integrationbranch.png) to view integration details from dashboard.
 
-[](../assets/integrationdetail.png)
+![](../assets/integrationdetail.png)
 
 In integration details window, the following information is shown:
 
