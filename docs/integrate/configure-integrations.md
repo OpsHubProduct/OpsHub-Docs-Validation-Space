@@ -1,5 +1,3 @@
-# Integration Overview
-
 Integration is the process of connecting two or more systems in order to enable a seamless exchange of information between the system users. Each system has its own set of prerequisites for successful configuration.  
 Please refer to [Integration Prerequisites](integration-prerequisites.md) page to check the pre-requisites of the systems you want to integrate before you proceed.
 
@@ -12,9 +10,8 @@ Please refer to [Integration Prerequisites](integration-prerequisites.md) page t
 
 {% embed url="https://youtu.be/Po6K9_UXrfM" %}
 
-
-> **Note**: During configuration or synchronization, connection-related errors might occur. There are couple of reasons for connection-related errors. Checkout the details [Common Error Solutions](../help-center/troubleshooting/errors/common.md).  
-> **Note**: If the system is behind a proxy server, then set up [Proxy Setting](../manage/administrator/proxy-settings.md) in OpsHub Integration Manager.  
+> **Note**: During configuration or synchronization, connection-related errors might occur. There are couple of reasons for connection-related errors. Checkout the details [Common Error Solutions](../help-center/troubleshooting/errors/common-error-solutions.md).  
+> **Note**: If the system is behind a proxy server, then set up [Proxy Setting](manage/administrator/proxy-setting.md) in OpsHub Integration Manager.  
 > **Note**: For details on how to configure systems, refer [System Configuration](system-configuration.md)
 
 ## Select Projects and Entities
@@ -105,5 +102,6 @@ This will be done only if nothing is coming from the mapped source field.
 You should not be using the integration user credentials to create entities in the systems as in this case the integration will not work.  
 Create/Update event in the source system and check whether the event synchronizes to the target system.  
 Wait for one minute for the data to synchronize.  
-If you face any issue, please refer to [Possible Reasons and Fixes](../help-center/faqs/general.md)
+If you face any issue, please refer to [Possible Reasons and Fixes](../help-center/faqs/general-faqs.md)
+
 
