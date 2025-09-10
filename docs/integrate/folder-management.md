@@ -13,20 +13,20 @@ Folder Management helps in organizing Integrations, Mappings, and Systems under 
 - Folders can be found on the top panel.
 
 <div align="center">
-  <img src="../assets/foldersview.PNG" alt="foldersview" />
+  <img src="../assets/foldersview.PNG" />
 </div>
 
 - "Default" is the root folder.
 - To create new folder, click the add icon as shown below.
 
 <div align="center">
-  <img src="../assets/addfolder.png" alt="addfolder" width="500px"/>
+  <img src="../assets/addfolder.png"  width="800px"/>
 </div>
 
 - Multi-level hierarchy of a folder can be created based on set of integrations.
 
 <div align="center">
-  <img src="../assets/folderoverview1a.png" alt="folderoverview1a" width="500px"/>
+  <img src="../assets/folderoverview1a.png" width="800px"/>
 </div>
 
 ## Include parent item
@@ -34,7 +34,7 @@ Folder Management helps in organizing Integrations, Mappings, and Systems under 
 From child folder, a user can view all the config done in parent folders, using the toggle button:
 
 <div align="center">
-  <img src="../assets/includeparent.png" alt="includeparent" />
+  <img src="../assets/includeparent.png" width="800px" />
 </div>
 
 - Integrations, mappings, and systems created under parent folder will be accessible to the child folder.
@@ -44,11 +44,11 @@ From child folder, a user can view all the config done in parent folders, using 
 - The assests below show all systems created in Default folder and Folder 1, which is the child folder of Default folder. 
 
 <div align="center">
-  <img src="../assets/defaultview1b.png" alt="Default Folder View" width="500px"/>
+  <img src="../assets/defaultview1b.png"  width="800px"/>
 </div>
 
 <div align="center">
-  <img src="../assets/folder2b.png" alt="Folder1 View" width="500px" />
+  <img src="../assets/folder2b.png" width="800px" />
 </div>
 
 ## Move configuration
@@ -57,13 +57,13 @@ From child folder, a user can view all the config done in parent folders, using 
 - To move an item from one folder to another folder, click on item, select move action as shown below.
 
 <div align="center">
-  <img src="../assets/foldermove.png" alt="foldermove" />
+  <img src="../assets/foldermove.png" />
 </div>
 
 - All the existing folder will be listed, select the folder, and click **Move**.
 
 <div align="center">
-  <img src="../assets/foldermoveselect.png" alt="foldermoveselect" width="500px" />
+  <img src="../assets/foldermoveselect.png"  width="800px" />
 </div>
 
 - Similarly, mappings and systems can be moved.
@@ -114,7 +114,7 @@ Create a model for arranging integrations to be configured in OpsHub Integration
 - Create mappings and integration in folders as shown below.
 
 <div align="center">
-  <img src="../assets/systemcombinationexample1a.png" alt="systemcombinationexample1a" width="500px"/>
+  <img src="../assets/systemcombinationexample1a.png" width="800px"/>
 </div>
 
 **2. Dividing based on Team/Users under same organization**
@@ -125,7 +125,7 @@ Create a model for arranging integrations to be configured in OpsHub Integration
 Folder structure can be as follows:
 
 <div align="center">
-  <img src="../assets/teamwisecombination1a.png" alt="teamwisecombination1a" width="500px" />
+  <img src="../assets/teamwisecombination1a.png"  width="800px" />
 </div>
 
 **3. Dividing based on customer**
@@ -135,7 +135,7 @@ Folder structure can be as follows:
 - Here Systems, Mapping, and Integrations will be created under specific folder created for each customer (as different customer do not share systems).
 
 <div align="center">
-  <img src="../assets/customerwise1a.png" alt="customerwise1a" width="500px" />
+  <img src="../assets/customerwise1a.png"  width="800px" />
 </div>
 
 > **Note** : Currently all the users will have access to all the folders.
@@ -147,6 +147,7 @@ Folder structure can be as follows:
 The sorting behavior for integration folder names is based on their ASCII values. Refer to the following ASCII values table for more information:
 
 <div align="center">
-  <img src="../assets/ASCII-Table.png" alt="ASCII Table" />
+  <img src="../assets/ASCII-Table.png"  />
 </div>
+
 
