@@ -20,13 +20,13 @@ Folder Management helps in organizing Integrations, Mappings, and Systems under 
 - To create new folder, click the add icon as shown below.
 
 <div align="center">
-  <img src="../assets/addfolder.png" alt="addfolder" />
+  <img src="../assets/addfolder.png" alt="addfolder" width="500px"/>
 </div>
 
 - Multi-level hierarchy of a folder can be created based on set of integrations.
 
 <div align="center">
-  <img src="../assets/folderoverview1a.png" alt="folderoverview1a" />
+  <img src="../assets/folderoverview1a.png" alt="folderoverview1a" width="500px"/>
 </div>
 
 ## Include parent item
@@ -44,11 +44,11 @@ From child folder, a user can view all the config done in parent folders, using 
 - The assests below show all systems created in Default folder and Folder 1, which is the child folder of Default folder. 
 
 <div align="center">
-  <img src="../assets/defaultview1b.png" alt="Default Folder View" />
+  <img src="../assets/defaultview1b.png" alt="Default Folder View" width="500px"/>
 </div>
 
 <div align="center">
-  <img src="../assets/folder2b.png" alt="Folder1 View" />
+  <img src="../assets/folder2b.png" alt="Folder1 View" width="500px" />
 </div>
 
 ## Move configuration
@@ -63,7 +63,7 @@ From child folder, a user can view all the config done in parent folders, using 
 - All the existing folder will be listed, select the folder, and click **Move**.
 
 <div align="center">
-  <img src="../assets/foldermoveselect.png" alt="foldermoveselect" />
+  <img src="../assets/foldermoveselect.png" alt="foldermoveselect" width="500px" />
 </div>
 
 - Similarly, mappings and systems can be moved.
@@ -114,7 +114,7 @@ Create a model for arranging integrations to be configured in OpsHub Integration
 - Create mappings and integration in folders as shown below.
 
 <div align="center">
-  <img src="../assets/systemcombinationexample1a.png" alt="systemcombinationexample1a" />
+  <img src="../assets/systemcombinationexample1a.png" alt="systemcombinationexample1a" width="500px"/>
 </div>
 
 **2. Dividing based on Team/Users under same organization**
@@ -125,7 +125,7 @@ Create a model for arranging integrations to be configured in OpsHub Integration
 Folder structure can be as follows:
 
 <div align="center">
-  <img src="../assets/teamwisecombination1a.png" alt="teamwisecombination1a" />
+  <img src="../assets/teamwisecombination1a.png" alt="teamwisecombination1a" width="500px" />
 </div>
 
 **3. Dividing based on customer**
@@ -135,7 +135,7 @@ Folder structure can be as follows:
 - Here Systems, Mapping, and Integrations will be created under specific folder created for each customer (as different customer do not share systems).
 
 <div align="center">
-  <img src="../assets/customerwise1a.png" alt="customerwise1a" />
+  <img src="../assets/customerwise1a.png" alt="customerwise1a" width="500px" />
 </div>
 
 > **Note** : Currently all the users will have access to all the folders.
@@ -149,3 +149,4 @@ The sorting behavior for integration folder names is based on their ASCII values
 <div align="center">
   <img src="../assets/ASCII-Table.png" alt="ASCII Table" />
 </div>
+
