@@ -34,7 +34,7 @@ Folder Management helps in organizing Integrations, Mappings, and Systems under 
 From child folder, a user can view all the config done in parent folders, using the toggle button:
 
 <div align="center">
-  <img src="../assets/includeparent.png" width="300px" />
+  <img src="../assets/includeparent.png" width="400px" />
 </div>
 
 - Integrations, mappings, and systems created under parent folder will be accessible to the child folder.
@@ -57,7 +57,7 @@ From child folder, a user can view all the config done in parent folders, using 
 - To move an item from one folder to another folder, click on item, select move action as shown below.
 
 <div align="center">
-  <img src="../assets/foldermove.png" />
+  <img src="../assets/foldermove.png" width="600px" />
 </div>
 
 - All the existing folder will be listed, select the folder, and click **Move**.
@@ -149,6 +149,7 @@ The sorting behavior for integration folder names is based on their ASCII values
 <div align="center">
   <img src="../assets/ASCII-Table.png"  />
 </div>
+
 
 
 
