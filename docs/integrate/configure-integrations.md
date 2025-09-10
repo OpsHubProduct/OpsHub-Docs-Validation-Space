@@ -84,7 +84,7 @@ You can now save and activate the integration.
 Create/Update event in the source system and check whether the event synchronizes to the target system.  
 If you face any issue, please refer to the [General FAQs](../help-center/faqs/faqs.md)
 
-You can also see the steps to manage an integration from this page [Managing Integrations](/integration-configuration.md#managing-integration)
+You can also see the steps to manage an integration from this page [Managing Integrations](integration-configuration.md#managing-integration)
 
 ## Additional Configuration
 
@@ -103,6 +103,7 @@ You should not be using the integration user credentials to create entities in t
 Create/Update event in the source system and check whether the event synchronizes to the target system.  
 Wait for one minute for the data to synchronize.  
 If you face any issue, please refer to [Possible Reasons and Fixes](../help-center/faqs/general-faqs.md)
+
 
 
 
