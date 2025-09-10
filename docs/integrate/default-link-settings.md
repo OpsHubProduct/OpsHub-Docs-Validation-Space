@@ -1,8 +1,7 @@
-# Default Link Settings
 
 `Default Link Settings` provide information about the default target entity that needs to be linked with the synced target entities (synced from source system) at the time of synchronization.
 
-## When to configure default link
+# When to configure default link
 
 - **Case 1**: **When the target system has any link type that must be added when the entity is created, and the source system may or may not have that corresponding link.**
   - For example: TFS Task to VersionOne Task integration  
@@ -16,11 +15,16 @@
 
   In TFS, Tasks can have a parent link, but it is not mandatory. In JIRA, there is no parent type link available for a Task. Taking an example of synchronization of Tasks from JIRA to TFS, if you want to assign the TFS tasks to some Problem or Requirement Work item, then, you can have a default link configuration stating that link the TFS tasks to a certain existing Problem or Requirement.
 
-## How to configure the default link
+# How to configure the default link
 
-![Default Image 1](../assests/Default_Image_1.png)
+<p align="center">
+  <img src="../assets/Default_Image_1.png">
+</p>
 
-![Default Link Configuration](../assests/Default_Link_Configuration.png)
+<p align="center">
+  <img src="../assets/Default_Link_Configuration.png" >
+</p>
+
 
 - Open **Issue Relationship** section.
 - Map the source link type to the target link type for which the default link needs to be configured.
@@ -106,3 +110,4 @@ For any of the query type, if your target system's native format expects `{` or 
 
 > **Note**: Here, `name['<evaluating expression>']` is as per target system native query format whereas, `<evaluating expression>` is the dynamic part which you want to evaluate.  
 > The above query fetches the first test-set matching the name equivalent to the incoming project name from JIRA. The property path `SourceXML/opshubProjectName` refers to the source system project name i.e. Name of the project to which incoming entity from system belongs to. Here, `opshubProjectName` is a source field. The source field name is an internal field name which can be found from advance mapping XSL corresponding to the field mapped.
+
