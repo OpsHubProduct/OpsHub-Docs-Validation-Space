@@ -20,13 +20,13 @@ Folder Management helps in organizing Integrations, Mappings, and Systems under 
 - To create new folder, click the add icon as shown below.
 
 <div align="center">
-  <img src="../assets/addfolder.png"  width="600px"/>
+  <img src="../assets/addfolder.png"  width="400px"/>
 </div>
 
 - Multi-level hierarchy of a folder can be created based on set of integrations.
 
 <div align="center">
-  <img src="../assets/folderoverview1a.png" width="600px"/>
+  <img src="../assets/folderoverview1a.png" width="400px"/>
 </div>
 
 ## Include parent item
@@ -34,7 +34,7 @@ Folder Management helps in organizing Integrations, Mappings, and Systems under 
 From child folder, a user can view all the config done in parent folders, using the toggle button:
 
 <div align="center">
-  <img src="../assets/includeparent.png" width="600px" />
+  <img src="../assets/includeparent.png" width="400px" />
 </div>
 
 - Integrations, mappings, and systems created under parent folder will be accessible to the child folder.
@@ -44,11 +44,11 @@ From child folder, a user can view all the config done in parent folders, using 
 - The assests below show all systems created in Default folder and Folder 1, which is the child folder of Default folder. 
 
 <div align="center">
-  <img src="../assets/defaultview1b.png"  width="800px"/>
+  <img src="../assets/defaultview1b.png"  width="600px"/>
 </div>
 
 <div align="center">
-  <img src="../assets/folder2b.png" width="800px" />
+  <img src="../assets/folder2b.png" width="600px" />
 </div>
 
 ## Move configuration
@@ -114,7 +114,7 @@ Create a model for arranging integrations to be configured in OpsHub Integration
 - Create mappings and integration in folders as shown below.
 
 <div align="center">
-  <img src="../assets/systemcombinationexample1a.png" width="800px"/>
+  <img src="../assets/systemcombinationexample1a.png" width="600px"/>
 </div>
 
 **2. Dividing based on Team/Users under same organization**
@@ -125,7 +125,7 @@ Create a model for arranging integrations to be configured in OpsHub Integration
 Folder structure can be as follows:
 
 <div align="center">
-  <img src="../assets/teamwisecombination1a.png"  width="800px" />
+  <img src="../assets/teamwisecombination1a.png"  width="600px" />
 </div>
 
 **3. Dividing based on customer**
@@ -135,7 +135,7 @@ Folder structure can be as follows:
 - Here Systems, Mapping, and Integrations will be created under specific folder created for each customer (as different customer do not share systems).
 
 <div align="center">
-  <img src="../assets/customerwise1a.png"  width="800px" />
+  <img src="../assets/customerwise1a.png"  width="600px" />
 </div>
 
 > **Note** : Currently all the users will have access to all the folders.
@@ -149,6 +149,7 @@ The sorting behavior for integration folder names is based on their ASCII values
 <div align="center">
   <img src="../assets/ASCII-Table.png"  />
 </div>
+
 
 
 
