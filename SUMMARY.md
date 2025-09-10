@@ -29,8 +29,8 @@
       * [Source Delete Synchronization](docs/integrate/source-delete-synchronization.md)
     * [Integration Reconciliation](docs/integrate/reconcile.md)
     * Monitoring and Organization
-      * [Folder Management](docs/integrate/folder-management.md)
-      * [Organize Integrations](docs/integrate/merge.md)
+      * [Organize Integrations](docs/integrate/folder-management.md)
+      * [Merge Integrations](docs/integrate/merge.md)
       * [Using the Dashboard](docs/integrate/dashboards.md)
     * [Best Practices](docs/integrate/best-practises.md)
     * [Limitations](docs/integrate/limitations.md)
