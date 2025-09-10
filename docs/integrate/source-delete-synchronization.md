@@ -28,7 +28,7 @@
 - If the source entity is restored somehow in the end system, in that case, the further updates on that entity will be synchronized under the configuration done for the regular synchronization of the "Create"/"Update" events.
 - If the access of the integration user is revoked from some set of entities, then those entities will be considered as deleted for that integration user. Therefore, they will be considered for the Source Delete synchronization. Once access is being given to those entities, they would remain in sync and the behavior of the synchronization would be similar to the restoration of the entity in the source.
 - If the '[Delete Mode](mapping-configuration.md#delete-mode)' mapping gets updated, then the earlier synchronized data cannot be reconciled as per the new "Delete Mode" configuration.
-- If the Delete event is synchronized for the source entity, for which **OpsHub Integration Manager** has recreated the entity in the target as per 'Recreate' configuration of '[Action on Entity Deleted in Target](integration-configuration.md#action-on-entity-deleted-in-target)' advanced setting, then in the '[Integration Sync Report](/integration_sync_report)', the already deleted entity will be in the 'Active' state.
+- If the Delete event is synchronized for the source entity, for which **OpsHub Integration Manager** has recreated the entity in the target as per 'Recreate' configuration of '[Action on Entity Deleted in Target](integration-configuration.md#action-on-entity-deleted-in-target)' advanced setting, then in the '[Integration Sync Report](../manage/troubleshooting/integration_sync_report)', the already deleted entity will be in the 'Active' state.
 - If **Synchronize Not Applicable Entities** is configured with **Yes** input:
   - **OpsHub Integration Manager** will meticulously scan all the configurations between relevant source and target systems. Consequently, there's a risk of erroneously identifying entities as not applicable under certain circumstances:
     - Criteria configuration will be updated in any dormant integration configuration related to the updated entity type or project.
@@ -62,3 +62,4 @@
   - TE5 (as SE5 fails to meet the criteria of Story integration) and TE6 (as the configuration related to Feature is missing in **OpsHub Integration Manager**) will be soft deleted or archived in the target as per the configuration, and the sync report will be updated with the "Not Applicable" state for this entity.
     
 ![DeleteActions](../assets/DeleteActions.png)
+
