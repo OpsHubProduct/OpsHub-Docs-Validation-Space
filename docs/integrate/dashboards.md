@@ -8,9 +8,9 @@ Here is a video on how to use the dashboard in OIM:
 
 - Login into **OpsHub Integration Manager**.
 - Dashboard will appear on home page.
-- Click on ![rotate](../assets/rotate.png) at top right corner of dashboard to rotate graphical representation of integration.
+- Click on (../assets/rotate.png) at top right corner of dashboard to rotate graphical representation of integration.
 
-![dashboard](../assets/dashboard.png)
+(../assets/dashboard.png)
 
 - **Node:** Represents system created in **OpsHub Integration Manager**.
 - **Branch:** Represents that two nodes are connected through integration. Click on branch to view integration in read-only mode. Color of branch depicts status of integration.
@@ -20,7 +20,7 @@ Here is a video on how to use the dashboard in OIM:
   - **Orange:** Processing failures in integration.
   - Click on ![integration branch](../assets/integrationbranch.png) to view integration details from dashboard.
 
-![integrationdetail](../assets/integrationdetail.png)
+(../assets/integrationdetail.png)
 
 In integration details window, the following information is shown:
 
@@ -39,13 +39,12 @@ Users can filter the integrations according to the system and integration status
 
 - Click the funnel icon to view the filter options.
 
-![dashboard_filter](../assets/dashboard_filter.PNG)
+(../assets/dashboard_filter.PNG)
 
 - Select the **systems** and click **Filter** button. All the integrations that use the selected systems will be displayed.
 - The available options for **integration status** are: All, Active, Inactive, and In error. Select one and click **Filter**.
 - You can try combinations — for example: set Jira as a system filter and Active as an integration status filter to view all active Jira integrations.
-
-![dashboard_filter_graph](../assets/dashboard_filter_graph.PNG)
+(../assets/dashboard_filter_graph.PNG)
 
 - Click **Clear** to view all integrations and remove applied filters.
 
@@ -55,16 +54,17 @@ Users can filter the integrations according to the system and integration status
 
 - Click on a system node in the graph. For example, clicking on the “Team Foundation Server” icon will open that system’s configuration.
 
-![Dashboard_Image3](../assets/Dashboard_Image3.png)
+(../assets/Dashboard_Image3.png)
 
 ## Navigate to Integration
 
 - Click on the integration name in the graph to open its details.
 
-![Dashboard_Image1](../assets/Dashboard_Image1.png)
+(../assets/Dashboard_Image1.png)
 
 ## Navigate to Failure
 
 - Click on "Global Failure(s)" or "Processing Failure(s)" to go directly to the Failures module.
 
-![Dashboard_Image2](../assets/Dashboard_Image2.png)
+(../assets/Dashboard_Image2.png)
+
