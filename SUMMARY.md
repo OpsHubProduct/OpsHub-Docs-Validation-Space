@@ -16,7 +16,7 @@
     * [Integration Setup](docs/integrate/configure-integrations.md)
       * [Integration Configuration (Advanced Settings)](docs/integrate/integration-configuration.md)
         * [Criteria Storage Information](docs/integrate/criteria-information-storage.md)
-        * [OpsHub Query Format](opshub-query-format.md)
+        * [OpsHub Query Format](docs/integrate/opshub-query-format.md)
       * [Mapping Configuration](docs/integrate/mapping-configuration.md)
         * [Advanced Mapping Utility](docs/integrate/advance-mapping-utility.md)
         * [Custom Conflict Resolution Strategy](docs/integrate/custom-conflict-resolution-strategy.md)
