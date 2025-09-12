@@ -49,9 +49,9 @@
         * [Configure Socket Timeout](docs/manage/administrator/configure-socket-timeout.md)
         * [Scheduler](docs/manage/administrator/schedular.md)
         * [Log Viewer](docs/manage/administrator/log-viewer.md)
-        * [Role Configuration](docs/manage/administrator/role-configuration.md)
-        * [User Access Control](docs/manage/administrator/user-access-control.md)
-        * [User Role Association](docs/manage/administrator/user-role-association.md)
+        * [User Access Control]
+          * [User Role Association](docs/manage/administrator/user-role-association.md)
+          * [Role Configuration](docs/manage/administrator/role-configuration.md)
     * Advanced Utilities 
         * [Count the users involved in synchronization](docs/manage/advanced-utilities/count-the-users.md)
         * [Migrating Database](docs/manage/advanced-utilities/database-migration.md)
