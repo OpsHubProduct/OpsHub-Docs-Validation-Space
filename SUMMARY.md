@@ -35,5 +35,46 @@
       * [Using the Dashboard](docs/integrate/dashboards.md)
     * [Best Practices](docs/integrate/best-practises.md)
     * [Limitations](docs/integrate/limitations.md)
+*  **Manage**
+  *  Administrator
+      * User Management (docs/manage/administrator/user-management.md)
+      * Login Server Management (docs/manage/administrator/login-server-management.md)
+      * Managing Licenses (docs/manage/administrator/license-management.md)
+      * Proxy Settings (docs/manage/administrator/proxy-setting.md)
+      * Register Connectors (docs/manage/administrator/register-connectors.md)
+      * Purge Change Logs (docs/manage/administrator/purge-records.md)
+      * Rules Management (docs/manage/administrator/rules-management.md)
+      * Reset Default Password (docs/manage/administrator/reset-default-password.md)
+      * Increase Server Memory (docs/manage/administrator/increase-server-memory.md)
+      * Configure Socket Timeout (docs/manage/administrator/configure-socket-timeout.md)
+      * Scheduler (docs/manage/administrator/schedular.md)
+      * Log Viewer (docs/manage/administrator/log-viewer.md)
+      * Role Configuration (docs/manage/administrator/role-configuration.md)
+      * User Access Control (docs/manage/administrator/user-access-control.md)
+      * User Role Association (docs/manage/administrator/user-role-association.md)
+  * Advanced Utilities 
+      * [Count the users involved in synchronization](docs/manage/advanced-utilities/count-the-users.md)
+      * [Migrating Database](docs/manage/advanced-utilities/database-migration.md)
+      * [Updating Database Password](docs/manage/advanced-utilities/updating-database-password.md)
+      * [Changing MSSQL Server Host](docs/manage/advanced-utilities/how-to-change-mssql-database-server-host.md)
+      * [Switching to Windows authentication](docs/manage/advanced-utilities/switching-to-windows-authentication-mode-for-mssql-server.md)
+      * [Change Keystore and Private Key passwords](docs/manage/advanced-utilities/change-keystore-and-private-key-passwords.md)
+      * [Secret Key Reset Utility](docs/manage/advanced-utilities/regenerate-secret-key.md)
+      * [Certificate Private Key Password Encryptor Utility](docs/manage/advanced-utilities/certificate-private-key-password-encryptor-utility.md)
+  * APIs
+      * [Getting Started with APIs](docs/manage/api/getting-started-with-api.md)
+      * [Sample Use Cases and Scripts](docs/manage/api/sample-use-cases.md)
+        * [Get the project pairs configured in integration(s)](docs/manage/api/use-case-get-all-project-pairs.md)
+        * [Integration health including the details like list of active integrations with failures count](docs/manage/api/use-case-integration-healthcheck.md)
+        * [Trigger integration execution on demand](docs/manage/api/use-case-execute-integration.md)
+        * [Add fields to existing Mapping](docs/manage/api/add-fields-to-mapping.md)
+        * [Configure Reconciliation on existing Integration](docs/manage/api/configure-reconcile-on-exisiting-integration.md)
+        * [Retrieve and Configure Integration Pair Log Settings](docs/manage/api/retrive-and-configure-integration-pair-log-setting.md)
+   *  Upgrade
+      *  [Upgrading Application Version](docs/manage/upgrade/upgrade-application.md)
+        * [Pre Migration Checklists](docs/manage/upgrade/pre-migration-checklist.md)
+        * [Post Migration Checklists](docs/manage/upgrade/post-migration-checklist.md)
+      *  [Taking Application Backup](docs/manage/upgrade/taking-application-backup.md)
+
 
      
