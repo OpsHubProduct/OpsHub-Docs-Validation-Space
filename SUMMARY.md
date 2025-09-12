@@ -49,7 +49,7 @@
         * [Configure Socket Timeout](docs/manage/administrator/configure-socket-timeout.md)
         * [Scheduler](docs/manage/administrator/schedular.md)
         * [Log Viewer](docs/manage/administrator/log-viewer.md)
-        * [User Access Control]
+        * User Access Control
           * [User Role Association](docs/manage/administrator/user-role-association.md)
           * [Role Configuration](docs/manage/administrator/role-configuration.md)
     * Advanced Utilities 
