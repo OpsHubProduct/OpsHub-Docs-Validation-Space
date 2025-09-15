@@ -53,6 +53,7 @@ The following table describes:
 | | [Comment History – List](comment-history-list.md) | | | Implement this API if your end system has a separate API for getting comments history. |
 | | [Link History – List](link-history-list.md) | | | Implement this API if your end system has a separate API for getting links history. |
 
-### Some Useful SDK Pages
+## Some Useful SDK Pages
 - [APIs Required for Each Feature](apis-required-for-each-feature.md)
 - [SDK Best Practices](sdk-best-practices.md)
+
