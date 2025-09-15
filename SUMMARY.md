@@ -76,7 +76,15 @@
           * [Post Migration Checklists](docs/manage/upgrade/post-migration-checklist.md)
         *  [Taking Application Backup](docs/manage/upgrade/taking-application-backup.md)
   *  **Help Center**
-      *  
+      *  Troubleshooting
+          * [{{SITENAME}}'s System Information](docs/help-center/troubleshooting/system-information.md)  
+          * [Manage Integration Failures](docs/help-center/troubleshooting/manage-integration-failures.md)  
+          * [Configure Failure Notification](docs/help-center/troubleshooting/configure-post-failure-notification.md)  
+          * [Integration Sync Report](docs/help-center/troubleshooting/integration-sync-report.md)  
+          * [Integration Sync Logs](docs/help-center/troubleshooting/integration-sync-logs.md)
+          * Errors
+              
+              * 
   *  [**Supported Connector Versions**](docs/supported-connectors/systems-supported.md)
   *  **Connector Guide**
       * [Aha](docs/connectors/aha.md)
@@ -84,7 +92,7 @@
       * [Azure DevOps Server/ Services/Version Control](docs/connectors/team-foundation-server.md)
           * [Service Troubleshooting](docs/connectors/service-troubleshooting.md) 
       * [Blueprint](docs/connectors/blueprint.md)
-      * [BMC Remedy]((docs/connectors/remedy.md)
+      * [BMC Remedy](docs/connectors/remedy.md)
       * [Brodcom Clarity](docs/connectors/clarity.md)
       * [Brodcom Rally Software](docs/connectors/rally.md)
       * [Brodcom Service Desk Manager](docs/connectors/casdm.md)
