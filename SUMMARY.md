@@ -76,7 +76,8 @@
           * [Post Migration Checklists](docs/manage/upgrade/post-migration-checklist.md)
         *  [Taking Application Backup](docs/manage/upgrade/taking-application-backup.md)
   *  **Help Center**
-      *  Troubleshooting
+      * FAQs 
+      * Troubleshooting
           * [{{SITENAME}}'s System Information](docs/help-center/troubleshooting/system-information.md)  
           * [Manage Integration Failures](docs/help-center/troubleshooting/manage-integration-failures.md)  
           * [Configure Failure Notification](docs/help-center/troubleshooting/configure-post-failure-notification.md)  
@@ -170,7 +171,8 @@
                   * [OH-ClearQuest-0023](docs/help-center/troubleshooting/errors/clearquest/oh-clearquest-0023.md)  
                   * [OH-ClearQuest-0064](docs/help-center/troubleshooting/errors/clearquest/oh-clearquest-0064.md)  
                   * [OH-ClearQuest-0065](docs/help-center/troubleshooting/errors/clearquest/oh-clearquest-0065.md)  
-                  * [OH-ClearQuest-0005](docs/help-center/troubleshooting/errors/clearquest/oh-clearquest-0005.md)       
+                  * [OH-ClearQuest-0005](docs/help-center/troubleshooting/errors/clearquest/oh-clearquest-0005.md)
+      * [Contact Us](docs/help-center/contact-us.md)     
   *  [**Supported Connector Versions**](docs/supported-connectors/systems-supported.md)
   *  **Connector Guide**
       * [Aha](docs/connectors/aha.md)
