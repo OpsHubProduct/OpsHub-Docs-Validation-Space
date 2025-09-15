@@ -318,7 +318,14 @@
       * [Verisium Manager](docs/connectors/vManager.md)
       * [Windchill](docs/connectors/windchill-rv-s.md)
       * [Zendesk](docs/connectors/zendesk.md)
-  *  **Knowledge Resources**
+  *   **Connector SDK**
+      * [Getting Started](docs/connector-sdk/getting-started.md)
+        * [SDK Best Practices](docs/connector-sdk/sdk-best-practices.md)
+        * [APIs Required for Each Feature](docs/connector-sdk/apis-required-for-each-feature.md)
+      * [Build Your Own Connector](docs/connector-sdk/sdk-connector-apis.md)
+      * [Register Connectors](docs/connector-sdk/register-connectors.md)
+      * [Developer Notes]()  
+  *   **Knowledge Resources**
       *  Integration Combination Examples
           * [Azure DevOps Server (TFS) – Micro Focus ALM Integration](docs/knowledge-resources/integration-combination-examples/azure-devops-server-and-micro-focus-alm-integration.md)
           * [Azure DevOps Services (VSTS) – Micro Focus ALM Integration](docs/knowledge-resources/integration-combination-examples/azure-devops-services-and-micro-focus-alm-integration.md)
