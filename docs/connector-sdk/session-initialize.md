@@ -3,7 +3,7 @@ SDK can use this API to connect to end system. OpsHub will send all the connecti
 
 - API will return the parameters which it will need for all subsequent API calls.  
 - All the response parameters returned by this, will be passed by OpsHub in subsequent APIs, as Request Headers.  
-- When token gets expired, SDK need to pass the appropriate HTTP status code (Refer to [Error Handling](./Error_Handling) page). On receiving this error code, OpsHub will again call initialize API to renew the token.
+- When token gets expired, SDK need to pass the appropriate HTTP status code (Refer to [Error Handling](error-handling.md) page). On receiving this error code, OpsHub will again call initialize API to renew the token.
 
 # Recommendations
 - When initialize API is called, all the system configuration details are passed in the request. Connector should do necessary validation for the configuration fields. e.g., If a field's value is expected to be a JSON, the JSON value can be validated in this API call.
@@ -78,3 +78,4 @@ This is the URI, OpsHub will execute to call this API:
 | key       | String  | True     | Key can contain any name by which you want to read data later in subsequent APIs. For example, SDK is authenticating to end system using API token and wants OpsHub to pass this token as part of every subsequent API call, then pass token in value, with any name in key, of your choice |
 | value     | String  | True     | It will contain the value that you want to use later |
 | sensitive | Boolean | True     | If the data passed is sensitive or not. OpsHub will take care not to log such data in logs |
+
