@@ -14,7 +14,7 @@ These APIs can be written in any language and hosted anywhere, as long as the Op
 # Start Connector Development
 
 ## SDK APIs
-- Refer to **[Build Your Own Connector](build-your-own-connector.md)** page for the list of APIs to implement a connector.
+- Refer to **[Build Your Own Connector](sdk-connector-apis.md)** page for the list of APIs to implement a connector.
 
 ### SDK Bootstrap Package
 If an SDK Connector is going to be developed in **Java**,  
@@ -56,3 +56,4 @@ The bootstrap package can be downloaded from the table below.
 # Some Useful SDK Pages
 - **[APIs Required for Each Feature](apis-required-for-each-feature.md)**
 - **[SDK Best Practices](sdk-best-practices.md)**
+
