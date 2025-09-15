@@ -5,8 +5,8 @@ This API describes the entity type in detail for OpsHub to be able to integrate 
 ## API URI
 This is the URI OpsHub will execute to call this API:
 
-```http
-GET /entity-types/{entityTypeId}?projectId=<projectId>
+```bash
+GET: /entity-types/{entityTypeId}?projectId=<projectId>
 ```
 
 ## URI Parameters
@@ -543,4 +543,5 @@ GET /entity-types/{entityTypeId}?projectId=<projectId>
 // Internal note: For attachment, comment, link: readSupported, writeSupported can be derived from sync direction of entityType.
 
 ```
+
 
