@@ -6,12 +6,12 @@ This section will guide the users on how to register and edit the connectors.
 
 - Connectors can be registered from administration page by clicking the "plug" icon ![](../../assets/RegisterConnectorIconOnly.png) present in left side bar as shown in the image below:
 
-![AddButtonRegisterConnector](../../assets/AddButtonRegisterConnector.png)
+![](../../assets/AddButtonRegisterConnector.png)
 
 - To register a connector, click the "+"[add image] icon on the top right corner of the "Registered Connectors" page.
 - The following page comes which requires two inputs as shown in the image below:
 
-![RegisterConnectorPage](../../assets/RegisterConnectorPage.png)
+![](../../assets/RegisterConnectorPage.png)
 
 - Fill the form with relevant details:
   - **'''System Type Name '''**: The name that you want to assign to the connector you are registering. This name will be shown in the system type list on "Configure Systems" page.
@@ -57,4 +57,5 @@ While editing the connector, if the refresh connector metadata is checked, a war
 > **Note**:  If you want to refresh metadata for a connector, it is advisable to verify the systems and integrations that will be affected.
 
 This warning box contains the instructions on how the systems and integrations created on the connector will be affected, if you choose to refresh the metadata of the connector. As shown in the image, this warning also shows the particular field that is removed and the screens affected by it.
+
 
