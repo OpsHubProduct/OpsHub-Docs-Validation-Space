@@ -14,7 +14,7 @@ To add a new user, follow the steps given below:
 * To add a new user, click the plus sign (+) on the top right corner of the screen.
   
 <p align="center">
-  <img src="../../assets/User_Management_Image_1C.png" width="1500"/>
+  <img src="../../assets/User_Management_Image_1C.png" width="2000"/>
 </p>
 
 * The Create User form will open. Fill the following details in the form: 
@@ -63,6 +63,7 @@ To add a new user, follow the steps given below:
      </p>
 
 > **Note** : The attribute which is specified in 'Unique User Identifer' should be used while defining the user's 'User name' in OpsHub Integration Manager. For example, here 'user.mail' is the selected attribute and so this property of the user from Azure Active Directory is to be used while defining 'User name' in OpsHub Integration Manager.
+
 
 
 
