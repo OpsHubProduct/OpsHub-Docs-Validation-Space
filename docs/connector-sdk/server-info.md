@@ -3,7 +3,7 @@ API to get server configuration.
 
 # API URI
 
-```http
+```bash
 GET: /server-info
 ```
 
@@ -32,4 +32,5 @@ GET: /server-info
 }
 
 ```
+
 
