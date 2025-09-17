@@ -17,7 +17,7 @@ Watch the following video to learn how to configure proxy settings:
 2. Now, click the third icon on the left menu as shown in the screenshot below: 
 
 <p align="center">
-  <img src="../../assets/Proxy_Management_Image_3E1.png" width="500" />
+  <img src="../../assets/Proxy_Management_Image_3E1.png" width="700" />
 </p>
 
 The proxy settings form opens as shown in the screenshot below:
@@ -53,5 +53,6 @@ The proxy settings form opens as shown in the screenshot below:
   * Provide **SOCKS Password** for the given user name
 
 4. Save the configuration and check the connection by trying to create mapping.
+
 
 
