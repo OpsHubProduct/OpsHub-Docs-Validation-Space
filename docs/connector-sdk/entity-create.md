@@ -4,7 +4,7 @@ This API is supposed to create a new entity in the end system and return the ent
 # API URI
 This is the URI, OpsHub will execute to call this API:  
 
-```http
+```bash
 POST: /entities/{entityTypeId}?
 projectId=<projectId>
 ```
@@ -51,4 +51,5 @@ projectId=<projectId>
 # Response Payload
 
 Please refer to the [Response Payload](entity-get.md#response-payload) section of the Entity-Get API.
+
 
