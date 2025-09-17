@@ -115,19 +115,19 @@ Select Login Server Type as SAML 2.0 and the form shown below would be displayed
   3. Select your application from **All applications**
      
      <p align="center">
-       <img src="../../assets/Azure_Application.png"  style="width:600px;" />
+       <img src="../../assets/Azure_Application.png"  style="width:800px;" />
      </p>
      
   5. Select **Single sign-on** from left panel
      
      <p align="center">
-       <img src="../../assets/Azure_SingleSignOn.png" style="width:800px;" />
+       <img src="../../assets/Azure_SingleSignOn.png" style="width:500px;" />
      </p>
      
   7. Go to section **SAML Signing Certificate** and download 'Certificate (Base64)'
      
      <p align="center">
-       <img src="../../assets/Azure_SAMLSigningCertificate.png"  style="width:600px;" />
+       <img src="../../assets/Azure_SAMLSigningCertificate.png"  style="width:800px;" />
      </p>
 
 - **For extracting the key credential from metadata XML file:**
@@ -159,7 +159,7 @@ In the list of login servers, users can find a record for **Default Server** of 
 Using this, users can login with the default credentials or the users configured in OpsHub Integration Manager itself fall in this category.
 
 <p align="center">
-  <img src="../../assets/LDAP_Image_3.png"  style="width:900px;" />
+  <img src="../../assets/LDAP_Image_3.png"  style="width:1000px;" />
 </p>
 
 This server cannot be deleted.
@@ -176,7 +176,7 @@ It would lead to the page which allows managing multiple servers.
 This page displays all the configured login servers with a search tool in the first part.
 
 <p align="center">
-  <img src="../../assets/LDAP_Image_2a.png"  style="width:900px;" />
+  <img src="../../assets/LDAP_Image_2a.png"  style="width:1000px;" />
 </p>
 
 One can search configured login servers using the search options available.
@@ -196,6 +196,7 @@ One can search configured login servers using the search options available.
   - **Delete**: User can delete the server configuration.
 
 **Note** All servers cannot be inactivated at the same time. At any point of time, at least one server should be in Active state.
+
 
 
 
