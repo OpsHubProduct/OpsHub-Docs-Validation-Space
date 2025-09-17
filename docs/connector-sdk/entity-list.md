@@ -1,3 +1,16 @@
+## Overview
+Return the list of entities matching the search criteria.
+
+## API URI
+This is the URI, OpsHub will execute to call this API:
+```bash
+POST: /entities/{entityTypeId}/search? 
+projectId=<projectId>
+&startIndex=<startIndex>
+&maxResults=<maxResults>
+&nextPageLink=<nextPageLink>
+```
+
 ## URI Parameters
 
 | Name          | In    | Required | Type     | Description |
@@ -197,4 +210,5 @@ The list of entities matching the selection criteria sent as part of the request
   ]
 }
 ```
+
 
