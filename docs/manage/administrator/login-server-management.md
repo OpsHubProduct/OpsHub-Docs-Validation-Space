@@ -106,19 +106,26 @@ Select Login Server Type as SAML 2.0 and the form shown below would be displayed
 ### Azure Active Directory Configuration
 
 - **For downloading HTTPS Certificate:**
-  1. Go to **Enterprise applications**  
+  1. Go to **Enterprise applications**
+     
      <p align="center">
-       <img src="../../assets/Azure_Services.png"  style="width:600px;" />
+       <img src="../../assets/Azure_Services.png"  style="width:500px;" />
      </p>
-  2. Select your application from **All applications**  
+     
+  3. Select your application from **All applications**
+     
      <p align="center">
        <img src="../../assets/Azure_Application.png"  style="width:600px;" />
      </p>
-  3. Select **Single sign-on** from left panel  
+     
+  5. Select **Single sign-on** from left panel
+     
      <p align="center">
-       <img src="../../assets/Azure_SingleSignOn.png" style="width:600px;" />
+       <img src="../../assets/Azure_SingleSignOn.png" style="width:800px;" />
      </p>
-  4. Go to section **SAML Signing Certificate** and download 'Certificate (Base64)'  
+     
+  7. Go to section **SAML Signing Certificate** and download 'Certificate (Base64)'
+     
      <p align="center">
        <img src="../../assets/Azure_SAMLSigningCertificate.png"  style="width:600px;" />
      </p>
@@ -189,5 +196,6 @@ One can search configured login servers using the search options available.
   - **Delete**: User can delete the server configuration.
 
 **Note** All servers cannot be inactivated at the same time. At any point of time, at least one server should be in Active state.
+
 
 
