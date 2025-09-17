@@ -1,4 +1,4 @@
-{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} *Close OM4ADO application before execution of the utility |Stop OpsHub Server Service before execution of the utility {% endif %} 
+{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} *Close OM4ADO application before execution of the utility | Stop OpsHub Server Service before execution of the utility {% endif %} 
 * Go to `<{{SITENAME}} Installation Folder>/Other_Resources/Resources` 
 * Unzip `HostChange.zip` 
 * Open Command Prompt with administrator privileges and go to directory `<{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} OM4ADO{% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} OpsHub {% endif %} Installation Folder>/Other_Resources/Resources/HostChange` using command  **`cd <{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} OM4ADO{% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} OpsHub {% endif %} Installation Folder>/Other_Resources/Resources/HostChange`**
@@ -151,6 +151,7 @@
 <p align="center">
   <img src="../assets/postgresql5.png">
 </p>
+
 
 
 
