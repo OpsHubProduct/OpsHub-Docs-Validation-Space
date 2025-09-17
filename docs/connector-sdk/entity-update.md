@@ -11,7 +11,7 @@ This API is supposed to update an existing entity in the end system and return t
 
 This is the URI, OpsHub will execute to call this API
 
-```http
+```bash
 PUT: /entities/{entityTypeId}/{entityId}? 
       projectId=<projectId>
       &subStepNumber=<subStepNumber>
