@@ -76,7 +76,7 @@ Click on Setting button on System log window to configure log settings as mentio
 ## Refresh Log
 
 <p align="center">
-  <img src="../../assets/systemlog3.png" width="800"/>
+  <img src="../../assets/systemlog3.png" />
 </p>
 
 
