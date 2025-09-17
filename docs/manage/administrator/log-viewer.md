@@ -83,7 +83,7 @@ Click on Setting button on System log window to configure log settings as mentio
 **Refresh log** button on the top of window can be used to refresh logs once to display latest logged data.
 
 <p align="center">
-  <img src="../../assets/systemlog4.png" width="800"/>
+  <img src="../../assets/systemlog4.png"/>
 </p>
 
 
@@ -92,7 +92,7 @@ Click on Setting button on System log window to configure log settings as mentio
 ## Export Logs
 
 <p align="center">
-  <img src="../../assets/systemlog5.png" width="800"/>
+  <img src="../../assets/systemlog5.png" />
 </p>
 
 
@@ -101,7 +101,7 @@ Click on Export logs button to export logs as zip file.
 ## Word Wrap
 
 <p align="center">
-  <img src="../../assets/Systemlog-wordwrap.png" width="800"/>
+  <img src="../../assets/Systemlog-wordwrap.png" />
 </p>
 
 
