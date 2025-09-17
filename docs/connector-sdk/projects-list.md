@@ -6,7 +6,7 @@ Get the projects from the end system that the integration user has access to.
 # API URI
 This is the URI OpsHub will execute to call this API:  
 
-```http
+```bash
 GET: /projects?
 startIndex=<startIndex>
 maxResults=<maxResults>
@@ -100,3 +100,4 @@ maxResults=<maxResults>
 ]
 
 ```
+
