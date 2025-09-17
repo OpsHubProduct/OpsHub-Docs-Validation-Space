@@ -1,7 +1,7 @@
 # Overview
 Get the projects from the end system that the integration user has access to.  
 
-![Note](../assets/Note.jpg =30x) Return the `OH_NO_PROJECT` if the end system does not have the Projects' structure.  
+>**Note**: Return the `OH_NO_PROJECT` if the end system does not have the Projects' structure.  
 
 # API URI
 This is the URI OpsHub will execute to call this API:  
@@ -98,4 +98,5 @@ maxResults=<maxResults>
     "parentId": "1"
   }
 ]
+
 ```
