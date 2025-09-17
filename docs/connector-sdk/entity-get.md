@@ -9,7 +9,7 @@ OpsHub will call this API to retrieve the **current field values** of a given en
 
 ## API URI
 
-```http
+```bash
 GET: /entities/{entityId}?
      entityTypeId={entityTypeId}&
      projectId=<projectId>
@@ -124,4 +124,5 @@ GET: /entities/{entityId}?
     "value": "Low"
   }
 ]
+
 ```
