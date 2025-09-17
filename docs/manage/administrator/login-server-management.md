@@ -17,7 +17,7 @@ Select Login Server Type as LDAP and the form shown above would be displayed. Pr
 
 If your company structure is as follows:  
 <p align="center">
-  <img src="../../assets/CompanyStructure.png" alt="Company Structure" style="width:900px;" />
+  <img src="../../assets/CompanyStructure.png" alt="Company Structure" style="width:600px;" />
 </p>
 
 Now, here if you want to give access to John Doe, follow the below configuration:  
@@ -189,4 +189,5 @@ One can search configured login servers using the search options available.
   - **Delete**: User can delete the server configuration.
 
 **Note** All servers cannot be inactivated at the same time. At any point of time, at least one server should be in Active state.
+
 
