@@ -106,6 +106,7 @@ GET: /entities/{entityId}?
     "value": "Low"
   }
 ]
+```
 
 2) Sample response for priority field with same id and value:
 
@@ -126,3 +127,4 @@ GET: /entities/{entityId}?
 ]
 
 ```
+
