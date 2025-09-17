@@ -11,13 +11,13 @@
 * Navigate to the top-right corner of the screen and click **Administration**.
   
  <p align="center">
-  <img src="../assets/purge_administration_list_2.png" width="800"/>
+  <img src="../../assets/purge_administration_list_2.png" width="800"/>
 </p>
 
 * Now, click the **Purge** icon on the left sidebar, as shown in the image.
   
 <p align="center">
-  <img src="../assets/Purge_entry_page_1_2.png" width="800"/>
+  <img src="../../assets/Purge_entry_page_1_2.png" width="800"/>
 </p>
 
 
@@ -50,14 +50,14 @@ Only users with an **Ultimate** license can access the **Purge Audit Logs**.
 1. From the **Purge category**, select the **Audit Logs** as shown in the image below.
    
  <p align="center">
-  <img src="../assets/Purge_audits_2_1.png" width="800"/>
+  <img src="../../assets/Purge_audits_2_1.png" width="800"/>
 </p>
 
 2. Now, from the **Audit component(s) drop-down list**, select the **Audit component(s)** as per your requirements, as shown in the image below.
 3. Then select the date from the **Purge audits created before date** field.
    
 <p align="center">
-  <img src="../assets/Purge_audits_2_2.png" width="800"/>
+  <img src="../../assets/Purge_audits_2_2.png" width="800"/>
 </p>
 
 4. Click the **Purge** button to filter the information according to the specified inputs.
@@ -122,29 +122,58 @@ Refer to the [Permissions and Corresponding Actions](role-configuration.md#permi
 ## Steps to purge integrated data records
 
 1. From the **Purge category**, select **Integrated data records** as shown in the image below.
-   ![Purge records 1](../assets/Purge_records_3_1.png)
+   
+ <p align="center">
+  <img src="../../assets/Purge_records_3_1.png" width="800"/>
+</p>
+
 2. Now, select **System 1** and **System 2** from the dropdown to filter the integrated records for purging as shown in the image below.
    * These are mandatory selections.
-     ![Purge records 2](../assets/Purge_records_3_2.png)
+     
+ <p align="center">
+   <img src="../../assets/Purge_records_3_2.png" width="800"/>
+ </p>
+
+    
 3. After selecting both **System 1** and **System 2**, the interface displays **Integration state** and **Integration(s)** as shown in the image below.
    * The **Integration(s)** dropdown lists configured (but inactive) integrations between the selected systems by default.
    * You can switch to **deleted integrations list** by choosing **Integration state** as **Deleted**.
    * These selections are optional, meaning purge can be performed based solely on the system selection also.
-     ![Purge records 3](../assets/Purge_records_3_3.png)
+     
+   <p align="center">
+        <img src="../../assets/Purge_records_3_3.png" width="800"/>
+   </p>
+
 4. From the **Integration(s)**, select the integrations as per your requirements as shown in the image below.
    * This is a multi-select field, allowing multiple integrations to be selected for purge at the same time.
-     ![Purge records 4](../assets/Purge_records_3_4.png)
+     
+    <p align="center">
+      <img src="../../assets/Purge_records_3_4.png" width="800"/>
+   </p>
+
 5.  After selecting **Integration(s)**, the interface displays **Entity type pair(s)** as shown in the image below.
 
     * Users can select for which **entity type pair(s)** they want to purge the synced records.
     * This is a multi-select field, allowing multiple pairs to be selected for purge at the same time.
-      ![Purge records 5](../assets/Purge_records_3_5.png)
+      
+   <p align="center">
+      <img src="../../assets/Purge_records_3_5.png" width="800"/>
+    </p>
+
 
     > **Note**: **Entity type pair(s)** is not available for **Deleted Integrations**. All entity types configured for the deleted integration will be purged.
 6. After selecting required **Entity type pair(s)**, click on **Next** to view the details of records to be purged.
-   ![Purge records 6](../assets/Purge_records_3_6.png)
+   
+  <p align="center">
+  <img src="../../assets/Purge_records_3_6.png" width="800"/>
+  </p>
+
 7. The **Purge confirmation** page loads as shown in the image below:
-   ![Purge records 7](../assets/Purge_records_3_7.png)
+   
+  <p align="center">
+   <img src="../../assets/Purge_records_3_7.png" width="800"/>
+ </p>
+
    * The **Purge confirmation** page is a critical safety checkpoint in the database cleanup process that displays a comprehensive preview of all integrated records that will be marked for deletion from the OpsHub database. This page serves as the final verification step before executing the purge operation.
    * **Key Aspects**:
      1. **Warning Alert:** The selected records will be marked as deleted in the OpsHub database. These records will be recreated during resynchronization. A backup of the database is strongly recommended before proceeding.
