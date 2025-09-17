@@ -5,7 +5,7 @@
 * Roles can be associated with user from **View associated roles** button in rightmost column against a given user.
   
 <p align="center">
-  <img src="../../assets/User_Role_Association.png" width="1000"/>
+  <img src="../../assets/User_Role_Association.png" width="1500"/>
 </p>
 
 
@@ -13,7 +13,7 @@
 * Navigate to user role association screen and click on edit icon in top right corner.
   
 <p align="center">
-  <img src="../../assets/Create_User_Role_Association.png" width="1000"/>
+  <img src="../../assets/Create_User_Role_Association.png" width="1500"/>
 </p>
 
 * Select roles to be associated with given user. Refer to [Permissions and Corresponding Actions](role-configuration.md#permissions-and-corresponding-actions) section to understand which operations can be performed based on the configured role.
@@ -21,7 +21,7 @@
   * For instance, if Sync Administrator role is to be associated with user 'David Smith', it can be selected under Administration as shown below:
     
 <p align="center">
-  <img src="../../assets/User_Role_Association_-_Adminstration.png" width="1000"/>
+  <img src="../../assets/User_Role_Association_-_Adminstration.png" width="1500"/>
 </p>
 
 * Click on **Save** button to save user role association.
@@ -30,14 +30,14 @@
 * Navigate to User Role Association screen and click on edit icon in top right corner as shown below:
   
 <p align="center">
-  <img src="../../assets/Create_User_Role_Association.png" width="1000"/>
+  <img src="../../assets/Create_User_Role_Association.png" width="1500"/>
 </p>
 
 * Select roles to be associated with the given user. Refer to [Permissions and Corresponding Actions](role-configuration.md#permissions-and-corresponding-actions) section to understand which operations can be performed based on the configured role.
 * Under the drop down list, only Integration roles will be available.
   
 <p align="center">
-  <img src="../../assets/User_Role_Association_-_Integration0.png" width="1000"/>
+  <img src="../../assets/User_Role_Association_-_Integration0.png" width="1500"/>
 </p>
 
 * Here, roles can be assigned folder-wise.
@@ -48,7 +48,7 @@
 * Assigning any role with **Read** access to integration or mapping in a child folder indicates **Read** access to all associated mappings and systems in the parent folder.
 
 <p align="center">
-  <img src="../../assets/User_Role_Association_-_Integration.png" width="1000"/>
+  <img src="../../assets/User_Role_Association_-_Integration.png" width="1500"/>
 </p>
 
 
@@ -61,6 +61,7 @@
 | Default/Parent 1/Child 2      | All actions associated with **Sync Monitor** role   |
 | Default/Parent 1/Child 3      | All actions associated with **Sync Administrator** role |
 | Default/Parent 2              | All actions associated with **Sync Administrator** role |
+
 
 
 
