@@ -48,13 +48,13 @@ To check whether the "API" feature is enabled in the {{SITENAME}} or not, please
 3. Click on the Edition value of the {{SITENAME}}
    
 <p align="center">
-<img src="../../assets/API1.png" width="700"/>
+<img src="../../assets/API1.png" width="800"/>
 </p>
 
 4. Please make sure the "API" feature is enabled.
    
 <p align="center">
-<img src="../../assets/API2.png" width="700"/>
+<img src="../../assets/API2.png" width="800"/>
 </p>
 
  >**Note**: If this feature is disabled, and you have the license in which this feature is available, then please [install](Managing_Licenses) the correct license. If you don’t have a valid license, please reach out to OpsHub Sales/Support team for receiving the appropriate license.
@@ -75,6 +75,7 @@ To check whether the {{SITENAME}} instance is accessible or not, please perform 
 
 1. SAML Users won't be able to login through the API.
    - Let's say the user has configured SAML login for OIM UI Login. Such users won't be able to login through the API. It would need either Default or LDAP user.
+
 
 
 
