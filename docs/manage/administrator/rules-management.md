@@ -3,7 +3,7 @@
 To view Rules, go to Administration > Rules Management. This would lead to a page that lists multiple rules that are already configured for different systems integrated using OpsHub Integration Manager.
 
 <p align="center">
-  <img src="../../assets/Rules_Management.png" width="800"  />
+  <img src="../../assets/Rules_Management.png" width="1000"  />
 </p>
 
 
@@ -75,16 +75,17 @@ To upload a new rule, follow the steps given below:
 * Click on ![](../../assets/Deletealldfailures.PNG)
 
 <p align="center">
-  <img src="../../assets/Rules_Management_Delete.png" width="800"  />
+  <img src="../../assets/Rules_Management_Delete.png" width="1000"  />
 </p>
 
 * You will not be able to recover the rule once you delete it
 
 <p align="center">
-  <img src="../../assets/Rules_Management_DeletePopup.png" width="800" />
+  <img src="../../assets/Rules_Management_DeletePopup.png" width="600" />
 </p>
 
 * Click on **"Yes, delete it"** to delete the rule  
 * Click on **"Cancel"** to cancel the process
+
 
 
