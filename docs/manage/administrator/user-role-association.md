@@ -38,3 +38,4 @@
 | Default/Parent 1/Child 2      | All actions associated with **Sync Monitor** role   |
 | Default/Parent 1/Child 3      | All actions associated with **Sync Administrator** role |
 | Default/Parent 2              | All actions associated with **Sync Administrator** role |
+
