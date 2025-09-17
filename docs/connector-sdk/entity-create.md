@@ -32,6 +32,7 @@ projectId=<projectId>
     }
   ]
 }
+```
 
 # URI Parameters
 
@@ -49,4 +50,5 @@ projectId=<projectId>
 
 # Response Payload
 
-Please refer to the [Response Payload](entity-getet#response-payload) section of the Entity-Get API.
+Please refer to the [Response Payload](entity-get.md#response-payload) section of the Entity-Get API.
+
