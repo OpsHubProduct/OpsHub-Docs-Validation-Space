@@ -3,11 +3,19 @@
 * One user can have multiple Integration and Administration Roles. The permissions available to that role will be a union of permissions associated with all individual roles.
 * Only users with permission **Permission Grant** can associate roles with users.
 * Roles can be associated with user from **View associated roles** button in rightmost column against a given user.
-![User Role Association](../../assets/User_Role_Association.png)
+  
+<p align="center">
+  <img src="../../assets/User_Role_Association.png" width="800"/>
+</p>
+
 
 # Associating Administration Role to a User
 * Navigate to user role association screen and click on edit icon in top right corner.
-![Create User Role Association](../../assets/Create_User_Role_Association.png)
+  
+<p align="center">
+  <img src="../../assets/Create_User_Role_Association.png" width="800"/>
+</p>
+
 * Select roles to be associated with given user. Refer to [Permissions and Corresponding Actions](role-configuration.md#permissions-and-corresponding-actions) section to understand which operations can be performed based on the configured role.
 * Under the drop down list, only Administration roles will be available. 
   * For instance, if Sync Administrator role is to be associated with user 'David Smith', it can be selected under Administration as shown below:
@@ -38,4 +46,5 @@
 | Default/Parent 1/Child 2      | All actions associated with **Sync Monitor** role   |
 | Default/Parent 1/Child 3      | All actions associated with **Sync Administrator** role |
 | Default/Parent 2              | All actions associated with **Sync Administrator** role |
+
 
