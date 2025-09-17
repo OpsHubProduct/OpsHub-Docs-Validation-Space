@@ -60,7 +60,7 @@ A pop-up with **License Details** will open.
 
 * **Mail Notifications**
   * To get mail notifications regarding each upcoming license expiry, the SMTP mail server notifications can be configured
-  * Refer to [Creating SMTP System](../../help-center/troubleshooting/configure-failure-notification.md#smtp-configuration) for creating an SMTP system.
+  * Refer to [Creating SMTP System](../../help-center/troubleshooting/configure-post-failure-notification.md#smtp-configuration) for creating an SMTP system.
   * SMTP Mail Client system must be created in OpsHub Integration Manager and configured in **OpsHub System** under **SMTP System For Notification**.
     
  <p align="center">
@@ -99,6 +99,7 @@ For procuring a license, you have to contact our [Sales](mailto:sales@opshub.com
 If you want to renew your license, send your current license number and your requirement to our sales/support representatives.
 
 OpsHub Integration Manager works best with the following browsers: Google Chrome, Mozilla Firefox, and Safari.
+
 
 
 
