@@ -47,7 +47,7 @@ After installing, refresh the browser.
 A pop-up with **License Details** will open.  
 
 <p align="center">
-  <img src="../../assets/License_Management_Image_6C.png"/>
+  <img src="../../assets/License_Management_Image_6C.png" width="700"/>
 </p>
 
 **Note** See the Version [Example: QAOIMV6.16-U4B002] and Build [Example: QA2018Q1PH19_6_16_004_B002] details in the footer.
@@ -78,7 +78,7 @@ A pop-up with **License Details** will open.
 * Click the cross icon against the License name which you want to delete.  
 
 <p align="center">
-  <img src="../../assets/License_Management_Image_7C.png" width="900"/>
+  <img src="../../assets/License_Management_Image_7C.png" width="1000"/>
 </p>
 
 
@@ -99,6 +99,7 @@ For procuring a license, you have to contact our [Sales](mailto:sales@opshub.com
 If you want to renew your license, send your current license number and your requirement to our sales/support representatives.
 
 OpsHub Integration Manager works best with the following browsers: Google Chrome, Mozilla Firefox, and Safari.
+
 
 
 
