@@ -14,7 +14,7 @@
 It contains search criteria which is required to be applied in the end system to fetch the matching entities.
 
 - OpsHub has developed its own query format to query any end system.
-- Refer to **[OpsHub Query Format Guide](../integrate/opsHub-query-format.md)** for a detailed understanding of the OpsHub queries.
+- Refer to **[OpsHub Query Format Guide](../integrate/opshub-query-format.md)** for a detailed understanding of the OpsHub queries.
 - {{SITENAME}} will pass the query object as JSON payload which Connector SDK will parse and convert to end system’s native query.
 - Most queries done by OpsHub contain complex queries with the following fields:
   - project
@@ -166,8 +166,8 @@ Following are some search criteria that OpsHub will call **Entity – List API**
 The list of entities matching the selection criteria sent as part of the request payload should be returned.
 
 > **Note:**  
-> Fields provided in [fieldNameInfo in response payload for Entity Type-Get API](Entity_Type_–_Get#Response_Payload) and any field which can be configured for end system criteria storage should be part of the response payload.  
-> For more details regarding end system criteria storage, refer to [Criteria Configuration](Integration_Configuration#Criteria_Configuration).
+> Fields provided in [fieldNameInfo in response payload for Entity Type-Get API](entity-type-get.md#response-payload) and any field which can be configured for end system criteria storage should be part of the response payload.  
+> For more details regarding end system criteria storage, refer to [Criteria Configuration](../integrate/integration-configuration.md#criteria-configuration).
 
 ```json
 {
@@ -197,3 +197,4 @@ The list of entities matching the selection criteria sent as part of the request
   ]
 }
 ```
+
