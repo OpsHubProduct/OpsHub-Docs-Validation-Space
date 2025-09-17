@@ -42,14 +42,14 @@ To create a new schedule, follow the steps given below:
   * To edit a schedule, click on ![](../../assets/Custom_Scheduler_EditIcon.png) at the end of the corresponding schedule that you want to edit
 
 <p align="center">
-  <img src="../../assets/Custom_Scheduler_Edit.png" width="1000"/>
+  <img src="../../assets/Custom_Scheduler_Edit.png" width="2000"/>
 </p>
 
 
 * The Edit Schedule form will open. Edit the details in the form. Refer to the image below:
 
 <p align="center">
-  <img src="../../assets/Custom_Scheduler_Form.png" width="600" height="700" />
+  <img src="../../assets/Custom_Scheduler_Form.png" width="900" height="900" />
 </p>
 
 
@@ -77,6 +77,7 @@ To create a new schedule, follow the steps given below:
 
 * Click on **"Yes, delete it"** to delete the schedule
 * Click on **"Cancel"** to cancel the process
+
 
 
 
