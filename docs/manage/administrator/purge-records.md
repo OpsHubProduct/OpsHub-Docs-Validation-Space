@@ -11,7 +11,7 @@
 * Navigate to the top-right corner of the screen and click **Administration**.
   
  <p align="center">
-  <img src="../../assets/purge_administration_list_2.png" width="800" height="500"/>
+  <img src="../../assets/purge_administration_list_2.png" width="800"/>
 </p>
 
 * Now, click the **Purge** icon on the left sidebar, as shown in the image.
