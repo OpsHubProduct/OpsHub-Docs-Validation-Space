@@ -56,7 +56,7 @@ To upload a new rule, follow the steps given below:
   * Click on ![](../../assets/Edit_Image.png)
     
 <p align="center">
-  <img src="../../assets/Rules_Management_Edit.png" width="800" />
+  <img src="../../assets/Rules_Management_Edit.png" width="2000" />
 </p>
 
 * The Edit form will open. Edit the details in the form. Refer to the image below:
@@ -88,6 +88,7 @@ To upload a new rule, follow the steps given below:
 
 * Click on **"Yes, delete it"** to delete the rule  
 * Click on **"Cancel"** to cancel the process
+
 
 
 
