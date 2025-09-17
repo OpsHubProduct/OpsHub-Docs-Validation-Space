@@ -48,7 +48,7 @@
 * Assigning any role with **Read** access to integration or mapping in a child folder indicates **Read** access to all associated mappings and systems in the parent folder.
 
 <p align="center">
-  <img src="../../assets/User_Role_Association_-_Integration.png" width="1500"/>
+  <img src="../../assets/User_Role_Association_-_Integration.png" width="2000"/>
 </p>
 
 
@@ -61,6 +61,7 @@
 | Default/Parent 1/Child 2      | All actions associated with **Sync Monitor** role   |
 | Default/Parent 1/Child 3      | All actions associated with **Sync Administrator** role |
 | Default/Parent 2              | All actions associated with **Sync Administrator** role |
+
 
 
 
