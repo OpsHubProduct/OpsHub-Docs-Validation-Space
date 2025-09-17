@@ -1,14 +1,13 @@
-# entity-update
 
-## API Name
+# API Name
 
 API Name: Entity – Update
 
-### Overview
+## Overview
 
 This API is supposed to update an existing entity in the end system and return the entity object as a response. As part of the request payload, OpsHub will send all the field details with which entity needs to be updated. API must update only the fields that are coming and shouldn’t modify any other field.
 
-### API URI
+## API URI
 
 This is the URI, OpsHub will execute to call this API
 
@@ -18,10 +17,8 @@ PUT: /entities/{entityTypeId}/{entityId}?
       &subStepNumber=<subStepNumber>
 ```
 
-\
 
-
-### URI Parameters
+## URI Parameters
 
 | Name          | In    | Required | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------- | ----- | -------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -30,7 +27,7 @@ PUT: /entities/{entityTypeId}/{entityId}?
 | projectId     | query | True     | String | Project in which the entity exists                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | subStepNumber | query | True     | String | <p>Step number in which the field/fields can be updated.<br><br>Consider the following if the entity type and project movement is supported and the <code>multiStepUpdate</code> field provided in the <a href="Entity_Type_%E2%80%93_Get/#response_parameters">multiStepUpdate</a> is either <code>STATIC_SUB_STEPS</code> or <code>DYNAMIC_SUB_STEPS</code>:<br><br><strong>"-2"</strong>: Project should be updated to the project passed in the Request Payload corresponding to fields, provided <code>{projectIdFieldName}</code> key.<br><strong>"-3"</strong>: Entity Type should be updated to the Entity Type passed in the Request Payload corresponding to fields, provided <code>{entityTypeIdFieldName}</code> key.<br><strong>"-6"</strong>: Both Project and EntityType should be updated to the Entity Type and project passed respectively in the fields, <code>{entityTypeIdFieldName}</code> and <code>{projectIdFieldName}</code> keys.</p> |
 
-### Request Payload
+## Request Payload
 
 ```json
 {
