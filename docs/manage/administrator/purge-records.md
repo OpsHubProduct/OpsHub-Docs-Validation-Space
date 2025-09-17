@@ -49,7 +49,7 @@ Only users with an **Ultimate** license can access the **Purge Audit Logs**.
 
 1. From the **Purge category**, select the **Audit Logs** as shown in the image below.
    
- <p align="center">
+<p align="center">
   <img src="../../assets/Purge_audits_2_1.png" width="800"/>
 </p>
 
@@ -116,7 +116,7 @@ Refer to the [Permissions and Corresponding Actions](role-configuration.md#permi
     
  <p align="center">
   <img src="../../assets/Purge_error.png" width="800"/>
-</p>
+ </p>
 
 
 ## Steps to purge integrated data records
@@ -125,13 +125,13 @@ Refer to the [Permissions and Corresponding Actions](role-configuration.md#permi
    
  <p align="center">
   <img src="../../assets/Purge_records_3_1.png" width="800"/>
-</p>
+ </p>
 
 2. Now, select **System 1** and **System 2** from the dropdown to filter the integrated records for purging as shown in the image below.
    * These are mandatory selections.
      
  <p align="center">
-   <img src="../../assets/Purge_records_3_2.png" width="800"/>
+  <img src="../../assets/Purge_records_3_2.png" width="800"/>
  </p>
 
     
@@ -141,14 +141,14 @@ Refer to the [Permissions and Corresponding Actions](role-configuration.md#permi
    * These selections are optional, meaning purge can be performed based solely on the system selection also.
      
    <p align="center">
-        <img src="../../assets/Purge_records_3_3.png" width="800"/>
+    <img src="../../assets/Purge_records_3_3.png" width="800"/>
    </p>
 
 4. From the **Integration(s)**, select the integrations as per your requirements as shown in the image below.
    * This is a multi-select field, allowing multiple integrations to be selected for purge at the same time.
      
     <p align="center">
-      <img src="../../assets/Purge_records_3_4.png" width="800"/>
+     <img src="../../assets/Purge_records_3_4.png" width="800"/>
    </p>
 
 5.  After selecting **Integration(s)**, the interface displays **Entity type pair(s)** as shown in the image below.
@@ -157,7 +157,7 @@ Refer to the [Permissions and Corresponding Actions](role-configuration.md#permi
     * This is a multi-select field, allowing multiple pairs to be selected for purge at the same time.
       
    <p align="center">
-      <img src="../../assets/Purge_records_3_5.png" width="800"/>
+    <img src="../../assets/Purge_records_3_5.png" width="800"/>
     </p>
 
 
