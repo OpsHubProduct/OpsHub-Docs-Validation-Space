@@ -4,10 +4,13 @@ All the users in OpsHub Integration Manager, who have a 'Professional' or 'Ultim
 
 To create a new schedule, follow the steps given below:
 * Click on **"Administration"**
-* Click on ![Custom Scheduler](../../assets/Custom_Scheduler.png) given on the left panel. You can see the list of schedules that are already created
-* To create a new schedule, click on ![Plus](../../assets/Plus.png) given on the top right corner of the screen
+* Click on ![](../../assets/Custom_Scheduler.png) given on the left panel. You can see the list of schedules that are already created
+* To create a new schedule, click on ![](../../assets/Plus.png) given on the top right corner of the screen
 
-![Custom Scheduler Create](../../assets/Custom_Scheduler_Create.png)
+<p align="center">
+  <img src="../../assets/Custom_Scheduler_Create.png" width="900"/>
+</p>
+
 
 * The Create Schedule screen will open. Fill the following details:
   * **Schedule Name**: Give the name of the schedule which you will create.
@@ -35,14 +38,20 @@ To create a new schedule, follow the steps given below:
 
 * To edit a schedule, follow the steps given below:
   * Click on **"Administration"**
-  * Click on ![Custom Scheduler](../../assets/Custom_Scheduler.png) given on the left panel. You can see the list of schedules that are already created
-  * To edit a schedule, click on ![Edit Icon](../../assets/Custom_Scheduler_EditIcon.png) at the end of the corresponding schedule that you want to edit
+  * Click on ![](../../assets/Custom_Scheduler.png) given on the left panel. You can see the list of schedules that are already created
+  * To edit a schedule, click on ![](../../assets/Custom_Scheduler_EditIcon.png) at the end of the corresponding schedule that you want to edit
 
-![Custom Scheduler Edit](../../assets/Custom_Scheduler_Edit.png)
+<p align="center">
+  <img src="../../assets/Custom_Scheduler_Edit.png" width="800"/>
+</p>
+
 
 * The Edit Schedule form will open. Edit the details in the form. Refer to the image below:
 
-![Custom Scheduler Form](../../assets/Custom_Scheduler_Form.png)
+<p align="center">
+  <img src="../../assets/Custom_Scheduler_Form.png" width="800"/>
+</p>
+
 
 * Click on **"Save"**
 * Click on **"Reset"** to set the previous saved value
@@ -55,7 +64,7 @@ To create a new schedule, follow the steps given below:
 * To delete a schedule, click on ![](../../assets/Custom_Scheduler_DeleteIcon.png) at the end of a corresponding schedule that you want to delete
 
 <p align="center">
-  <img src="../../assets/Custom_Scheduler_Delete.png" width="800"/>
+  <img src="../../assets/Custom_Scheduler_Delete.png" width="900"/>
 </p>
 
 
@@ -68,4 +77,5 @@ To create a new schedule, follow the steps given below:
 
 * Click on **"Yes, delete it"** to delete the schedule
 * Click on **"Cancel"** to cancel the process
+
 
