@@ -61,8 +61,14 @@ To upload a new rule, follow the steps given below:
 
 * The Edit form will open. Edit the details in the form. Refer to the image below:
 
-![](../../assets/Rules_Management_EditForm1.png)  
-![](../../assets/Rules_Management_EditForm2.png)
+<p align="center">
+  <img src="../../assets/Rules_Management_EditForm1.png" width="800"/>
+</p>
+
+<p align="center">
+  <img src="../../assets/Rules_Management_EditForm2.png" width="800"/>
+</p>
+
 
 * Click on **"Save"**  
 * Click on **"Reset"** to set the previously saved value  
@@ -88,6 +94,7 @@ To upload a new rule, follow the steps given below:
 
 * Click on **"Yes, delete it"** to delete the rule  
 * Click on **"Cancel"** to cancel the process
+
 
 
 
