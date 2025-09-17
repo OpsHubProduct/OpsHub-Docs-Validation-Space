@@ -61,4 +61,4 @@ PUT: /entities/{entityTypeId}/{entityId}?
 
 ## Response Payload
 
-Please refer to the [Response Payload](entity-get/#response-payload) section of the Entity-Get API.
+Please refer to the [Response Payload](entity-get.md#response-payload) section of the Entity-Get API.
