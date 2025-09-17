@@ -37,11 +37,13 @@ To upload a new rule, follow the steps given below:
   * **Rule XML**: Upload the XML file using the *Choose File* option  
   * **Weight**: It defines the priority of rule. Higher the weight, higher will be the priority given to the rule  
   * **Status**: It represents whether the rule is active or inactive
+    
 <p align="center">
   <img src="../../assets/Rules_Management_UploadForm.png" />
 </p>
-* Click on **"Save"**  
-* Click on **"Reset"** to fill the form again  
+
+* Click on **Save**  
+* Click on **Reset** to fill the form again  
 
 ---
 
@@ -86,6 +88,7 @@ To upload a new rule, follow the steps given below:
 
 * Click on **"Yes, delete it"** to delete the rule  
 * Click on **"Cancel"** to cancel the process
+
 
 
 
