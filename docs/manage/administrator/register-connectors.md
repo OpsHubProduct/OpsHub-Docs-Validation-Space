@@ -4,7 +4,7 @@ This section will guide the users on how to register and edit the connectors.
 
 # Register Connectors
 
-- Connectors can be registered from administration page by clicking the "plug" icon ![RegisterConnectorIconOnly](../../assets/RegisterConnectorIconOnly.png) present in left side bar as shown in the image below:
+- Connectors can be registered from administration page by clicking the "plug" icon ![](../../assets/RegisterConnectorIconOnly.png) present in left side bar as shown in the image below:
 
 ![AddButtonRegisterConnector](../../assets/AddButtonRegisterConnector.png)
 
@@ -26,19 +26,19 @@ This section will guide the users on how to register and edit the connectors.
 
 - The registered connectors are available in the form of list on the "Registered Connectors" page as shown in the image below:
 
-![RegisterConnectorList](../../assets/RegisterConnectorList.png)
+![](../../assets/RegisterConnectorList.png)
 
-- There is an audit icon ![AuditsIcon](../../assets/AuditsIcon.png) present on the top right corner of the list. Clicking this icon will show all the audits related to the registered connectors.
+- There is an audit icon ![](../../assets/AuditsIcon.png) present on the top right corner of the list. Clicking this icon will show all the audits related to the registered connectors.
 
 # Edit Connectors
 
 - Registered connectors can be edited by clicking the specific connector followed by clicking the pencil icon on the top right corner of the page.
 
-![EditButton](../../assets/EditButton.png)
+![](../../assets/EditButton.png)
 
 - You can edit the system name, add or remove URLs. There is also a check box in case you want to refresh the metadata of the connector.
 
-![RefreshConnectorMetadataCheckBox](../../assets/RefreshConnectorMetadataCheckBox.png)
+![](../../assets/RefreshConnectorMetadataCheckBox.png)
 
 > **Note** :  Edit register connector option will not allow you to remove the URL if it is already used in any system or in the integration of the systems. An error message will be displayed in case the URL that is already in use is deleted.
 
@@ -51,9 +51,10 @@ Refresh Connector Metadata checkbox (as shown in the image above) can be selecte
 While editing the connector, if the refresh connector metadata is checked, a warning pops up as shown in the image below:
 
 <p align="center">
-  <img src="../../assets/RefreshMetaData.png" alt="RefreshMetaData" />
+  <img src="../../assets/RefreshMetaData.png"  />
 </p>
 
 > **Note**:  If you want to refresh metadata for a connector, it is advisable to verify the systems and integrations that will be affected.
 
 This warning box contains the instructions on how the systems and integrations created on the connector will be affected, if you choose to refresh the metadata of the connector. As shown in the image, this warning also shows the particular field that is removed and the screens affected by it.
+
