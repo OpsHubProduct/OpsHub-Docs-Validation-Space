@@ -52,13 +52,20 @@ To create a new schedule, follow the steps given below:
 * System generated schedules can't be deleted
 * To delete the schedule which is associated with any integration, first you need to remove this schedule from the integration and then you can delete 
 
-* To delete a schedule, click on ![Delete Icon](../../assets/Custom_Scheduler_DeleteIcon.png) at the end of a corresponding schedule that you want to delete
+* To delete a schedule, click on ![](../../assets/Custom_Scheduler_DeleteIcon.png) at the end of a corresponding schedule that you want to delete
 
-![Custom Scheduler Delete](../../assets/Custom_Scheduler_Delete.png)
+<p align="center">
+  <img src="../../assets/Custom_Scheduler_Delete.png" width="800"/>
+</p>
+
 
 * You will not be able to restore the schedule once you delete it
 
-![Custom Scheduler Delete Popup](../../assets/Custom_Scheduler_DeletePopup.png)
+<p align="center">
+  <img src="../../assets/Custom_Scheduler_DeletePopup.png" width="800"/>
+</p>
+
 
 * Click on **"Yes, delete it"** to delete the schedule
 * Click on **"Cancel"** to cancel the process
+
