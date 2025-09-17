@@ -17,12 +17,12 @@ Select Login Server Type as LDAP and the form shown above would be displayed. Pr
 
 If your company structure is as follows:  
 <p align="center">
-  <img src="../../assets/CompanyStructure.png" alt="Company Structure" style="width:600px;" />
+  <img src="../../assets/CompanyStructure.png" alt="Company Structure" style="width:900px;" />
 </p>
 
 Now, here if you want to give access to John Doe, follow the below configuration:  
 <p align="center">
-  <img src="../../assets/Ldapsv2.png" alt="LDAPS" style="width:600px;" />
+  <img src="../../assets/Ldapsv2.png" alt="LDAPS" style="width:900px;" />
 </p>
 
 Below are the three examples for constructing path:
@@ -90,7 +90,7 @@ For enabling SAML authentication, user needs to configure SAML server. For confi
 Select Login Server Type as SAML 2.0 and the form shown below would be displayed:
 
 <p align="center">
-  <img src="../../assets/SAML_Server_1.png" alt="SAML Server Form" style="width:600px;" />
+  <img src="../../assets/SAML_Server_1.png"  style="width:900px;" />
 </p>
 
 - Provide inputs to all the fields, as shown in the above image. Only after providing all the inputs, user can save the configuration.
@@ -108,19 +108,19 @@ Select Login Server Type as SAML 2.0 and the form shown below would be displayed
 - **For downloading HTTPS Certificate:**
   1. Go to **Enterprise applications**  
      <p align="center">
-       <img src="../../assets/Azure_Services.png" alt="Azure Services" style="width:600px;" />
+       <img src="../../assets/Azure_Services.png"  style="width:600px;" />
      </p>
   2. Select your application from **All applications**  
      <p align="center">
-       <img src="../../assets/Azure_Application.png" alt="Azure Application" style="width:600px;" />
+       <img src="../../assets/Azure_Application.png"  style="width:600px;" />
      </p>
   3. Select **Single sign-on** from left panel  
      <p align="center">
-       <img src="../../assets/Azure_SingleSignOn.png" alt="Azure SSO" style="width:600px;" />
+       <img src="../../assets/Azure_SingleSignOn.png" style="width:600px;" />
      </p>
   4. Go to section **SAML Signing Certificate** and download 'Certificate (Base64)'  
      <p align="center">
-       <img src="../../assets/Azure_SAMLSigningCertificate.png" alt="Azure SAML Cert" style="width:600px;" />
+       <img src="../../assets/Azure_SAMLSigningCertificate.png"  style="width:600px;" />
      </p>
 
 - **For extracting the key credential from metadata XML file:**
@@ -152,7 +152,7 @@ In the list of login servers, users can find a record for **Default Server** of 
 Using this, users can login with the default credentials or the users configured in OpsHub Integration Manager itself fall in this category.
 
 <p align="center">
-  <img src="../../assets/LDAP_Image_3.png" alt="Default Server" style="width:600px;" />
+  <img src="../../assets/LDAP_Image_3.png"  style="width:900px;" />
 </p>
 
 This server cannot be deleted.
@@ -169,7 +169,7 @@ It would lead to the page which allows managing multiple servers.
 This page displays all the configured login servers with a search tool in the first part.
 
 <p align="center">
-  <img src="../../assets/LDAP_Image_2a.png" alt="Login Server View" style="width:600px;" />
+  <img src="../../assets/LDAP_Image_2a.png"  style="width:900px;" />
 </p>
 
 One can search configured login servers using the search options available.
@@ -189,3 +189,4 @@ One can search configured login servers using the search options available.
   - **Delete**: User can delete the server configuration.
 
 **Note** All servers cannot be inactivated at the same time. At any point of time, at least one server should be in Active state.
+
