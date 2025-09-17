@@ -47,22 +47,23 @@ To add a new user, follow the steps given below:
   3. Select your application from **All applications**.
      
      <p align="center">
-       <img src="../../assets/Azure_Application.png" />
+       <img src="../../assets/Azure_Application.png"  width="900" />
      </p>  
      
   5. Select **Single sign-on** from left panel.
      
      <p align="center">
-       <img src="../../assets/Azure_SingleSignOn.png" />
+       <img src="../../assets/Azure_SingleSignOn.png"  width="900" />
      </p>  
      
   7. Refer to section **User Attributes & Claims**.
      
      <p align="center">
-       <img src="../../assets/Azure_UserAttribute.png"" style="width: 600px;" />
+       <img src="../../assets/Azure_UserAttribute.png""  width="900" />
      </p>
 
 > **Note** : The attribute which is specified in 'Unique User Identifer' should be used while defining the user's 'User name' in OpsHub Integration Manager. For example, here 'user.mail' is the selected attribute and so this property of the user from Azure Active Directory is to be used while defining 'User name' in OpsHub Integration Manager.
+
 
 
 
