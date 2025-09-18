@@ -1,34 +1,32 @@
 # lookup-field-value-get
 
-\# Overview
+# Overview
 
 OpsHub will call this API for fields of type LOOKUP. Implementation of this API should return valid values that the user can set in a given lookup field.
 
-\# API URI
+# API URI
 
-```http
-
+```bash
 GET: /metadata/fields/{fieldId}/values?projectId=<projectId>\&entityTypeId=<entityTypeId>\&fieldScope=<FieldScope>
-
 ```
 
-\# URI Parameters
+# URI Parameters
 
-\| Name | In | Required | Type | Description |
+| Name | In | Required | Type | Description |
 
-\|--------------|------|----------|--------|-------------|
+|--------------|------|----------|--------|-------------|
 
-\| entityTypeId | path | True | String | ‘id’ of entity type returned as response of \*\*Entity Type – List\*\* API |
+| entityTypeId | path | True | String | ‘id’ of entity type returned as response of \*\*Entity Type – List\*\* API |
 
-\| fieldId | path | True | String | Id of the field, as sent by Connector SDK from `/entity-types/{entityTypeId}` API |
+| fieldId | path | True | String | Id of the field, as sent by Connector SDK from `/entity-types/{entityTypeId}` API |
 
-\| projectId | query| True | String | Project id for which the list of entity types is available. ProjectId here will be the same as ‘id’ sent as part of `/projects` |
+| projectId | query| True | String | Project id for which the list of entity types is available. ProjectId here will be the same as ‘id’ sent as part of `/projects` |
 
-\| FieldScope | query| True | ENUM | Scope where Lookup values for a field are to be displayed.\
+| FieldScope | query| True | ENUM | Scope where Lookup values for a field are to be displayed.\
 \- \*\*ENTITY\_FIELD\*\*: Provide 'ENTITY\_FIELD' when lookup values are to be displayed at mapping level.\
 \- \*\*CONFIG\_FIELD\*\*: Provide 'CONFIG\_FIELD' when lookup values are to be displayed at advanced integration configuration level in entity-level mandatory settings screen. |
 
-\# Response Payload
+# Response Payload
 
 ```json
 
