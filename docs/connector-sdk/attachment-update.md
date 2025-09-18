@@ -62,13 +62,14 @@ Response parameters are same as Add attachment.
 
 | Name                | Required | Type     | Description                                                                                                           |
 |--------------------|----------|---------|-----------------------------------------------------------------------------------------------------------------------|
-| <idField>           | True     | String  | The name will be the field name of the attachment id field. The value will be a unique id for the given attachment   |
-| <contentUriField>   | True     | String  | The name will be the field name of the attachment content URI field. The value will be attachment content URL, attachment id, or anything else that will help the connector later to fetch attachment content only by the given URI |
-| <renderUriField>    | False    | String  | The name will be the field name of the attachment render URI field. The value will be text to be shown. This field is used to render/display the content of the attachment (e.g., inline image with `<img>` tag). Not used to download the attachment. For downloading, use `contentUri`. |
-| <fileNameField>     | True     | String  | The name will be the field name of the attachment file name field. The value will be the file name of the attachment added |
-| <contentTypeField>  | True     | String  | The name will be the field name of the attachment content type field. The value will be the content type of attachment (e.g., IMG, DOC) |
-| <contentLengthField>| True     | String  | The name will be the field name of the attachment content length field. The value will be the size of the attachment content |
-| <createdDateField>  | False    | Datetime| The name will be the field name of the attachment created date field. The value will be the date-time at which the attachment was added |
-| <createdByField>    | False    | String  | The name will be the field name of the attachment created by field. The value will be the username of the user who added the attachment |
-| <fileCommentField>  | False    | String  | The name will be the field name of the attachment file comment field. The value will be the file comment updated to the attachment |
+| `<idField>`           | True     | String  | The name will be the field name of the attachment id field. The value will be a unique id for the given attachment   |
+| `<contentUriField>`   | True     | String  | The name will be the field name of the attachment content URI field. The value will be attachment content URL, attachment id, or anything else that will help the connector later to fetch attachment content only by the given URI |
+| `<renderUriField>`   | False    | String  | The name will be the field name of the attachment render URI field. The value will be text to be shown. This field is used to render/display the content of the attachment (e.g., inline image with `<img>` tag). Not used to download the attachment. For downloading, use `contentUri`. |
+| `<fileNameField>`     | True     | String  | The name will be the field name of the attachment file name field. The value will be the file name of the attachment added |
+| `<contentTypeField>`  | True     | String  | The name will be the field name of the attachment content type field. The value will be the content type of attachment (e.g., IMG, DOC) |
+| `<contentLengthField>`| True     | String  | The name will be the field name of the attachment content length field. The value will be the size of the attachment content |
+| `<createdDateField>`  | False    | Datetime| The name will be the field name of the attachment created date field. The value will be the date-time at which the attachment was added |
+| `<createdByField>`    | False    | String  | The name will be the field name of the attachment created by field. The value will be the username of the user who added the attachment |
+| `<fileCommentField>`  | False    | String  | The name will be the field name of the attachment file comment field. The value will be the file comment updated to the attachment |
+
 
