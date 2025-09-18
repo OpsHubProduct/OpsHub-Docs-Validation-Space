@@ -2,7 +2,7 @@
 **Get Siblings Under Parent Order By Rank**
 
 ## Overview
-Applicable only when the end system supports [Rank](../integrate/mapping-configuration.md#overview-2).
+Applicable only when the end system supports [Rank](../integrate/mapping-configuration.md#overview-1).
 
 Get all the siblings of an entity identified by the given entity id and under the given parent entity.
 
@@ -85,4 +85,5 @@ It should also contain the entity itself.
 | internalId | True     | String | Internal id of the entity. |
 | entityType | True     | String | Entity type id of the entity. |
 | scopeId    | True     | String | The unique identification parameter of an entity. If the entity id is unique across all the projects and entity types, the scopeId can be null. If the entity id is unique under a project but can be repeated in different projects, the scopeId is `projectId`. |
+
 
