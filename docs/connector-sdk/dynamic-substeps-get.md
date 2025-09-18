@@ -7,7 +7,7 @@ Returns the sequence in which a set of fields needs to be updated. OpsHub will b
 ## API URI
 OpsHub will execute the following API:
 
-```http
+```bash
 POST: /entities/{entityTypeId}/sub-steps-for-update?projectId=<projectId>
 ```
 
@@ -59,4 +59,5 @@ The API should return a list of fields to be sent in subsequent requests to upda
   } 
 ]
 ```
+
 
