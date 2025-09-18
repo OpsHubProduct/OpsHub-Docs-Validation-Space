@@ -970,7 +970,7 @@ The Rank Synchronization is used to maintain the Rank of the entity in target sy
 **Windchill RV\&S view**
 
 <p align="center">
-  <img src="../assets/ptc_hierarchy.png" width="1000" />
+  <img src="../assets/ptc_hierarchy.png" width="900" />
 </p>
 
 
@@ -984,7 +984,7 @@ Hence, Rank Synchronization helps the user synchronize these entities and visual
 **Jira R4J Plugin view**
 
 <p align="center">
-  <img src="../assets/r4j_hierarchy.png" width="500px" />
+  <img src="../assets/r4j_hierarchy.png" width="900" />
 </p>
 
 In the above image, the respective Ranks of entities, PROJ3-883, and PROJ3-884 within the entity PROJ3-882 are 1 and 2. Similarly, the respective Ranks of entities, PROJ3-885, PROJ3-886, and PROJ3-887 within the entity PROJ3-883 are 1, 2 and 3.
