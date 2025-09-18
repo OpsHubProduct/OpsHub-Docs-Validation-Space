@@ -970,7 +970,7 @@ The Rank Synchronization is used to maintain the Rank of the entity in target sy
 **Windchill RV\&S view**
 
 <p align="center">
-  <img src="../assets/ptc_hierarchy.png" width="800" />
+  <img src="../assets/ptc_hierarchy.png" width="1000" />
 </p>
 
 
