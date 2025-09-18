@@ -6,7 +6,7 @@ Deletes links between two entities from the end system.
 
 
 ## API URI
-```http
+```bash
 POST: /entities/{entityTypeId}/{entityId}/links/delete?projectId=<projectId>
 ```
 
@@ -52,3 +52,4 @@ POST: /entities/{entityTypeId}/{entityId}/links/delete?projectId=<projectId>
 
 ## Response Payload
 Only HTTP status `204`.
+
