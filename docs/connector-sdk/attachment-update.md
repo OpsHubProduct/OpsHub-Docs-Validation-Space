@@ -4,7 +4,7 @@ Updates an existing attachment in the given entity id.
 ## API URI
 This is the URI OpsHub will execute to call this API:
 
-```http
+```bash
 PUT: /entities/{entityTypeId}/{entityId}/attachments? 
     attachmentId={attachmentId}& 
     projectId={projectId}
@@ -71,3 +71,4 @@ Response parameters are same as Add attachment.
 | <createdDateField>  | False    | Datetime| The name will be the field name of the attachment created date field. The value will be the date-time at which the attachment was added |
 | <createdByField>    | False    | String  | The name will be the field name of the attachment created by field. The value will be the username of the user who added the attachment |
 | <fileCommentField>  | False    | String  | The name will be the field name of the attachment file comment field. The value will be the file comment updated to the attachment |
+
