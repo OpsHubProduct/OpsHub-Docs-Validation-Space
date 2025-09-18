@@ -1,8 +1,8 @@
-# Overview
+## Overview
 Return existing comments for the given entity ID.
 
 ## API URI
-```http
+```bash
 GET: /entities/{entityTypeId}/{entityId}/comments?projectId={projectId}&startIndex=<startIndex>&maxResults=<maxResults>&nextPageLink=<nextPageLink>&afterTime=<afterTime>
 ```
 
@@ -40,5 +40,6 @@ GET: /entities/{entityTypeId}/{entityId}/comments?projectId={projectId}&startInd
 
 
 >**Note**": The key names in the above JSON will be as per the comment field names in your connector.
+
 
 
