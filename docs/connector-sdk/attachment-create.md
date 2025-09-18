@@ -1,10 +1,8 @@
-# Add Attachment API
-
 ## Overview
 Adds an attachment to the given entity id.
 
 ## API URI
-```http
+```bash
 POST: /entities/{entityTypeId}/{entityId}/attachments?projectId={projectId}
 ```
 
@@ -50,7 +48,7 @@ Return attachment details for the newly added attachment. All the `<keyname>` in
 ```
 ## Response Parameters
 
-![Note](../assets/Note.jpg) Id and contentUri should not have ‘::’ double colon.
+>**Note**: Id and contentUri should not have ‘::’ double colon.
 
 | Name | Required | Type | Description |
 |------|----------|------|-------------|
@@ -63,3 +61,4 @@ Return attachment details for the newly added attachment. All the `<keyname>` in
 | `<createdDateField>` | False | Datetime | The name will be the field name of the attachment created date field. The value will be the date-time at which the attachment was added |
 | `<createdByField>` | False | String | The name will be the field name of the attachment created by the field. The value will be the username of the user who added the attachment |
 | `<fileCommentField>` | False | String | The name will be the field name of the attachment file comment field. The value will be the file comment added to the attachment |
+
