@@ -5,7 +5,7 @@ Link history – List
 Returns only the revisions in which the link was added, deleted or modified. This API is handy for the end systems where the end system has a different API for fetching link revision.
 
 ## API URI
-```http
+```bash
 GET: /entities/{entityTypeId}/attachments/history?
      projectId=<projectId>
      &entityId=<entityId>
@@ -58,3 +58,4 @@ URI Parameters and Response payload for this API is same as History – List API
 }
 
 ```
+
