@@ -2,7 +2,7 @@
 Returns only the revisions in which a comment was added, deleted or modified. This API is handy for end systems where the end system has a different API for fetching comment revisions.
 
 ## API URI
-```http
+```bash
 GET: /entities/{entityTypeId}/attachments/history?
      projectId=<projectId>
      &entityId=<entityId>
@@ -55,3 +55,4 @@ URI Parameters and Response Payload for this API are the same as **History – L
 }
 
 ```
+
