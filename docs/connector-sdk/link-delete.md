@@ -24,7 +24,7 @@ POST: /entities/{entityTypeId}/{entityId}/links/delete?projectId=<projectId>
 | Name      | Required | Type   | Description |
 |-----------|----------|--------|-------------|
 | linkType  | True     | String | The type of link for which links are to be deleted. Example: `Parent`, `Child`, `Related`. <br><br>**If connector supports rank:**<br>If `links.rank.orderType` from [Entity Type – Get](entity-type-get.md) API is either `HIERARCHY_SINGLE` or `HIERARCHY_MULTIPLE`, handle additional link types `Hierarchy Parent` and `Hierarchy Child`. |
-| links     | True     | List   | List of links to be deleted. Each link in the list has the following structure:<br><br> [<br> { `"<linkedEntityIdField>"`: "Entity ID to unlink"  `"<linkedEntityTypeField>"`: "Entity type of linked entity" <br> } <br>] |
+| links     | True     | List   | List of links to be deleted. Each link in the list has the following structure:<br><br> [<br> { `"<linkedEntityIdField>"`: "The name will be the field name in which entity of the linked entity will come, and the value will be the entity id to which entityId coming in request URI need to be deleted", <br>  `"<linkedEntityTypeField>"`: "The name will be the field name in which entity type of linked entity will come, and the value will be the entity type of linked entity id that needs to be deleted" <br> } <br>] |
 
 **Example**
 ```json
@@ -45,5 +45,6 @@ POST: /entities/{entityTypeId}/{entityId}/links/delete?projectId=<projectId>
 
 ## Response Payload
 Only HTTP status `204`.
+
 
 
