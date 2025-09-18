@@ -2,7 +2,7 @@
 Returns only the revisions in which the attachment was added, deleted or modified. This API is handy for the end systems where the end system has a different API for fetching attachment revision.
 
 ## API URI
-```http
+```bash
 
 GET: /entities/{entityTypeId}/attachments/history?
      projectId=<projectId>
@@ -56,3 +56,4 @@ URI Parameters and Response Payload for this API is same as History – List API
 }
 
 ```
+
