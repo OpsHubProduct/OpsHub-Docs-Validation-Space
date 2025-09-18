@@ -1,4 +1,3 @@
-# Sub-Steps for Update API
 
 ## Overview
 Returns the sequence in which a set of fields needs to be updated. OpsHub will break the incoming payload from the source system accordingly and call the **entity – update API** multiple times, as required to update all fields.  
@@ -60,3 +59,4 @@ The API should return a list of fields to be sent in subsequent requests to upda
   } 
 ]
 ```
+
