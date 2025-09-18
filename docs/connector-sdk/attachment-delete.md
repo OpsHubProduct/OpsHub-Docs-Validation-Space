@@ -4,7 +4,7 @@ Deletes an attachment.
 ## API URI
 This is the URI OpsHub will execute to call this API:
 
-```http
+```bash
 DELETE: entities/{entityTypeId}/{entityId}/attachments? 
 attachmentId=<attachmentId>& 
 projectId=<projectId>
@@ -21,3 +21,4 @@ projectId=<projectId>
 
 ## Request Payload
 This API does not require a request body. Only HTTP status `204` is returned on successful deletion.
+
