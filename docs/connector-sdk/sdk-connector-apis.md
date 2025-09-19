@@ -23,7 +23,7 @@ The following table describes:
 | | [Projects – List](projects-list.md) | | | This API needs to return all the projects that exist in the end system. |
 | | [Entity Types – List](entity-types-list.md) | | | Returns all the entity types for a given project. |
 | | [Entity Type – Get](entity-type-get.md) | | | Returns detailed configuration information for a given entity type and project. |
-| | [Lookup Field Values-Get](lookup-field-values-get.md) | | | Returns lookup values for a given field, a given entity type. |
+| | [Lookup Field Values-Get](lookup-field-value-get.md) | | | Returns lookup values for a given field, a given entity type. |
 | **Entity APIs** | | Yes | 4 | Entity CRUD APIs. |
 | | [Entity – Get](entity-get.md) | | | Gets information for a given entity id. |
 | | [Entity – Create](entity-create.md) | | | Creates a single entity in the end system. |
@@ -56,4 +56,5 @@ The following table describes:
 ## Some Useful SDK Pages
 - [APIs Required for Each Feature](apis-required-for-each-feature.md)
 - [SDK Best Practices](sdk-best-practices.md)
+
 
