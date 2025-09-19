@@ -4,7 +4,7 @@ Returns base64 encoded stream for the given attachment URI
 ## API URI
 This is the URI, OpsHub will execute to call this API:
 
-```http
+```bash
 GET: /entities/{entityTypeId}/attachments/content? 
      projectId=<projectId>    	 
      contentUri=<contentUri>
@@ -18,3 +18,4 @@ GET: /entities/{entityTypeId}/attachments/content?
 
 ## Response Payload
 Base64 encoded stream – content of an attachment.
+
