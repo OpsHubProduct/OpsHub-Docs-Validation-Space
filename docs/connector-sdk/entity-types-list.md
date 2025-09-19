@@ -1,26 +1,18 @@
-=API URI=
-This is the URI, OpsHub will execute to call this API: 
-<pre>
-GET: /entity-types? 
-     projectId=<projectId>
-</pre>
-=URI Parameters=
-{| class="wikitable"
-|-
-|style="width: 5%"|'''Name'''
-|style="width: 5%"|'''In'''
-|'''Required'''
-|'''Type'''
-|'''Description'''
-|-
-|'''projectId''' 
-|Query
-|True
-|String 
-|Project id for which list of entity types available need to be returned. ProjectId here will be same as ‘id’ sent as part of /projects 
-|-
-|}
-=Response Payload=
+## API URI
+
+This is the URI, OpsHub will execute to call this API:  
+
+```bash
+GET: /entity-types?projectId=<projectId>
+```
+
+## URI Parameters
+
+| **Name**     | **In** | **Required** | **Type** | **Description** |
+|--------------|--------|--------------|----------|-----------------|
+| **projectId** | Query  | True         | String   | Project id for which list of entity types available need to be returned. ProjectId here will be same as ‘id’ sent as part of /projects |
+
+## Response Payload=
 ```json
 [ 
 
@@ -48,22 +40,16 @@ GET: /entity-types?
 ```
 
 ## Entity Type Response Parameters
+| **Name**               | **Required** | **Type**       | **Description** |
+|-------------------------|--------------|----------------|-----------------|
+| **id**                  | True         | String         | Internal name of the entity. If end system does not have different internal name for an entity type, pass display name here too. |
+| **name**                | True         | String         | Display name of the entity. |
+| **direction**           | True         | Enum           | In which direction can we sync the data in end system?<br>- **SOURCE_ONLY**: End system is read only <br>- **TARGET_ONLY**: End system is write only <br>- **BOTH**: End system allows both read and write |
+| **pollerType**          | True         | Enum           | Types of poller:<br>- **CURRENT_STATE**: Current state will be synced. Set this pollerType if it is possible from API to query entities based on their create and update time.<br>- **NON_TIME_BASED**: Current state will be synced. Set this pollerType if it is not possible from API to query entities based on their create and update time.<br>- **ENTITY_WISE_HISTORY**: Complete entity history will be integrated. Set this pollerType if the end system has APIs to query history (audits) of entities. |
+| **isSoftDeleteSupported** | False      | Boolean        | Set to **true** if end system supports soft delete for the given entity type; else, set it to **false**. |
+| **isArchiveSupported**   | False      | Boolean        | Set to **true** if the end system supports archive operation for the given entity type; else, set it to **false**. |
+| **belongsToCategories**  | False      | List<String>   | List of categories in which the given entity type belongs. Each category indicates interconvertibility between entity types. |
 
-| **Name** | **Required** | **Type** | **Description** |
-|----------|--------------|----------|----------------|
-| **id** | True | String | Internal name of the entity. If end system does not have different internal name for an entity type, pass display name here too. |
-| **name** | True | String | Display name of the entity. |
-| **direction** | True | Enum | In which direction can we sync the data in end system?  
-- **SOURCE_ONLY**: End system is read only  
-- **TARGET_ONLY**: End system is write only  
-- **BOTH**: End system allows both read and write |
-| **pollerType** | True | Enum | Types of poller:  
-- **CURRENT_STATE**: Current state will be synced. Set this pollerType if it is possible from API to query entities based on their create and update time.  
-- **NON_TIME_BASED**: Current state will be synced. Set this pollerType if it is not possible from API to query entities based on their create and update time.  
-- **ENTITY_WISE_HISTORY**: Complete entity history will be integrated. Set this pollerType if the end system has APIs to query history (audits) of entities. |
-| **isSoftDeleteSupported** | False | Boolean | Set to true if end system supports soft delete for the given entity type; else, set it to false. |
-| **isArchiveSupported** | False | Boolean | Set to **true** if the end system supports archive operation for the given entity type; else, set it to false. |
-| **belongsToCategories** | False | List<String> | List of categories in which the given entity type belongs. Each category indicates interconvertibility between entity types.  
 
 For instance, if both "Bug" and "Story" are assigned to the "WorkItems" category, it indicates that these two entity types can be converted mutually.  
 
@@ -184,4 +170,5 @@ If movement is detected, entity types must have at least one category in common.
   }
 ]
 ```
+
 
