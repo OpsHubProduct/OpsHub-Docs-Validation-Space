@@ -37,7 +37,7 @@ Click [System Configuration](../integrate/system-configuration.md) to learn the 
 Refer the screenshot given below for reference.
 
 <p align="center">
-  <img src="../assets/Trac_Image_1a.png" width="500" />
+  <img src="../assets/Trac_Image_1a.png" width="1000" />
 </p>
 
 
@@ -82,7 +82,7 @@ reporter=xyz
 * Click **Add** to give the permission.
   
 <p align="center">
-  <img src="../assets/Trac_Image_2a.png" width="500" />
+  <img src="../assets/Trac_Image_2a.png" width="1000" />
 </p>
 
 ## Custom Field Configuration
@@ -107,7 +107,7 @@ reporter=xyz
   customField.value =
   ```
 <p align="center">
-  <img src="../assets/Trac_Image_3a.png" width="500"/>
+  <img src="../assets/Trac_Image_3a.png" width="1000"/>
 </p>
 
 
@@ -129,8 +129,9 @@ reporter=xyz
 * **Edit Custom Field** shows custom field **Internal Name**.
 
 <p align="center">
-  <img src="../assets/Trac_Image_5.png" width="500" />
+  <img src="../assets/Trac_Image_5.png" width="1000" />
 </p>
+
 
 
 
