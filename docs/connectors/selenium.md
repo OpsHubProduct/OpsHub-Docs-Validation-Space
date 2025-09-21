@@ -9,7 +9,7 @@ Before you continue to the integration, you must first configure Selenium onto O
 Refer to the screenshot given below for reference.  
 
 <p align="center">
-  <img src="../assets/Selenium_Image 1a.png" width="600" />
+  <img src="../assets/Selenium_Image_1a.png" width="600" />
 </p>
 
 If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
@@ -45,3 +45,4 @@ $config[SELENIUM_DIRS] = [
 
 ## Known Limitations
 Only polling is supported for this connector.
+
