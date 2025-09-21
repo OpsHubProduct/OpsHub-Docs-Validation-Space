@@ -20,7 +20,7 @@ Given below are the configuration parameters for the Redmine database to create 
 # System Configuration
 Before you continue to the integration, you must first configure Redmine. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system. Refer the screenshot given below for reference.
 
-<p align="center"><img src="../assets/Redmine_Image_1.png" alt="Redmine System Configuration"></p>
+<p align="center"><img src="../assets/Redmine_Image_1.png" width="600"></p>
 
 <span style="color:blue">**Redmine System form details**</span>
 
@@ -28,7 +28,7 @@ Before you continue to the integration, you must first configure Redmine. Click 
 |----------------------------|----------------------------------------------|-----------------|
 | **System Name**            | Always                                       | Provide system name |
 | **Version**                | Always                                       | Provide version like 3.1.2, 3.4.5. To know your version, refer to [How to find Redmine's version](#find-version) section. |
-| **Redmine Database Connection** | Always                                | Select an already created Database connection or if the Database connection is not configured for Redmine, then click the + sign and follow steps given on the [Database Configuration](../.gitbook/includes/database-configuration.md) page to create database connection. |
+| **Redmine Database Connection** | Always                                | Select an already created Database connection or if the Database connection is not configured for Redmine, then click the + sign and follow steps given on the [Database Configuration](database-configuration.md) page to create database connection. |
 | **Redmine URL**            | Always                                       | Format: [http/https]://[RedmineServerHost]/[RedmineServerPort] |
 | **Redmine User Name**      | Always                                       | Provide the username of the Redmine user created for OpsHub Integration Manager. Please refer to  [User Privileges](#user-privileges) for more details. |
 | **Redmine User Password**  | Always                                       | Provide Redmine Users password |
@@ -58,11 +58,11 @@ The relative ids for the properties are given in the table below:
 
 | **Property Name** | **Internal Name** | **Description** |
 |------------------|-------------------|-----------------|
-| Tracker          | tracker_id        | https://www.redmine.org/projects/redmine/wiki/Rest_Trackers |
-| Status           | status_id         | [More info](https://www.redmine.org/projects/redmine/wiki/Rest_IssueStatuses) |
-| Assigned To      | assigned_to_id    | [More info](https://www.redmine.org/projects/redmine/wiki/Rest_Users) |
-| Priority         | priotity_id       | [More info](https://www.redmine.org/projects/redmine/wiki/Rest_Enumerations) |
-| Custom Fields    | cf_x              | [More info](https://www.redmine.org/projects/redmine/wiki/Rest_CustomFields) |
+| Tracker          | tracker_id        | To know more about trackers_id, refer to https://www.redmine.org/projects/redmine/wiki/Rest_Trackers |
+| Status           | status_id         | To know more about status_id, refer to https://www.redmine.org/projects/redmine/wiki/Rest_IssueStatuses |
+| Assigned To      | assigned_to_id    | To know more about users_id, refer to https://www.redmine.org/projects/redmine/wiki/Rest_Users) |
+| Priority         | priotity_id       | To know more about proirity_id, refer to https://www.redmine.org/projects/redmine/wiki/Rest_Enumerations) |
+| Custom Fields    | cf_x              | To know more about custom_fields_id, refer to https://www.redmine.org/projects/redmine/wiki/Rest_CustomFields) |
 
 ## Sample Query
 * Polling all the issues with status 'Closed'.  
@@ -137,7 +137,7 @@ The internal names of the properties are listed in the table below, and can be u
 6. Check the **Administrator** box.  
 7. Click the **Create** button.
 
-<p align="center"><img src="../assets/Redmine_Image_2.png" width="500"></p>
+<p align="center"><img src="../assets/Redmine_Image_2.png" width="300"></p>
 
 ## Assigning User to Projects
 * Log in to Redmine as a user with Administrator rights.
