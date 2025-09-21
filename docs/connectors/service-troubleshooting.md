@@ -1,10 +1,8 @@
-# Service Not Started
-
-## Problem
+# Problem
 
 Page loading error when opening URL: `http://<proxyhost>:9090/TFSService` in browser.
 
-## Resolution
+# Resolution
 
 * Open run in machine (You can open it by pressing Windows + R button)
 * Type **services.msc** and click ok.
@@ -53,3 +51,4 @@ Perform following steps to resolve the issue.
 
 1. Exit Team Foundation Server. Stop OpsHubTFSService from the local service.
 2. Open the command window and navigate to the folder: `%localappdata%\Microsoft\Team Foundation\X.0\Cache`. Here delete all sub-items in cache folder and empty it. Do this for all folders X.0 where X is version number i.e. 3.0, 4.0, etc.
+
