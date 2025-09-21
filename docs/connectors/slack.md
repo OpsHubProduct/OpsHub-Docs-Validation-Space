@@ -27,7 +27,7 @@ Click [System Configuration](../integrate/system-configuration.md) to learn the 
 Refer the screenshot given below for reference. 
 
 <p align="center">
-  <img src="../assets/Slack_Image_8.png" width="800" />
+  <img src="../assets/Slack_Image_8.png" width="1200" />
 </p>
 
 
@@ -148,6 +148,7 @@ Steps to edit permission and scopes: Login to your team domain by a dedicated in
 
 
 * Now in Features → OAuth & Permissions → OAuth Tokens & Redirect URLs → Tokens for Your Team Click **Reinstall App**.
+
 
 
 
