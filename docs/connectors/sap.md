@@ -26,12 +26,12 @@
 * After Sap ECC 6.0 and in Sap S/4HANA, this API is set to **normal-enabled** in the Sap end system.
 * To sync any entity type other than 'Transport Request', it is mandatory to:
   * Ask the Sap BASIS administrator to make the API **RFC-enabled** in the end system.
-  * Or plug in the custom API 'ZCRMOST_WHERE_USED_OPSHUB' in the end system. Refer to [Configure Custom Linkage API](#configure_custom_linkage_api) for details.
+  * Or plug in the custom API 'ZCRMOST_WHERE_USED_OPSHUB' in the end system. Refer to [Configure Custom Linkage API](#configure-custom-linkage-api) for details.
 
 ## Enable API for 'Usage Details'
 
 * Due to the lack of available API in Sap, the user must configure the custom API in Sap end system to fetch the Usage Details entity for synchronization.
-* Refer to [Configure Custom Linkage API](#configure_custom_linkage_api) for details.
+* Refer to [Configure Custom Linkage API](#configure-custom-linkage-api) for details.
 
 # System Configuration
 
@@ -290,6 +290,7 @@ In Sap environments running versions below ECC 6.0 with NetWeaver 7.5, certain S
 
 - Go to 'Attributes' and select the Remote-Enabled Module radio button.
 - Save and activate the Function Module. Click the green tick mark in the pop-up window.
+
 
 
 
