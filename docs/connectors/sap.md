@@ -66,45 +66,52 @@
 
 ```json
 [
-    {
-      "displayName": "Mention the display name of the entity type.",
-      "objectTypeInTADIR":"Mention the entity type from 'OBJECT' column of the TADIR table in the SAP instance.",
-      "relatedSapTables": [
         {
-            "sapTableName":"Mention additional SAP table name (if any), having more details about the entity type.",
-            "joinColumnName": "Mention the column name of the above table, having the identifier value same as 'OBJ_NAME' column of TADIR table."
+          "displayName": "Mention the display name of the entity type.",
+          "objectTypeInTADIR":"Mention the entity type from 'OBJECT' column of the TADIR table in the SAP instance.",
+          "relatedSapTables": [
+            {
+                "sapTableName":"Mention additional SAP table name (if any), having more details about the entity type.",
+                "joinColumnName": "Mention the column name of the above table, having the identifier value same as 'OBJ_NAME' column of TADIR table."
+            },
+            ...
+            {
+
+            }
+          ]
         },
         ...
-      ]
-    },
-    ...
+        {
+
+        }
 ]
 ```
-
-Multiple additional entity types can be added in the same field. Refer to the below example:
+* Multiple additional entity types can be added in the same field. Refer to the below example:
+  
 ```json
-[
-    {
-      "displayName": "View Cluster",
-      "objectTypeInTADIR":"VCLS",
-      "relatedSapTables": [
+    [
         {
-            "sapTableName":"VCLSTRUCT",
-            "joinColumnName": "VCLNAME"
-        }
-      ]
-    },
-    {
-      "displayName": "View Maintenance",
-      "objectTypeInTADIR":"VDAT",
-      "relatedSapTables": [
+          "displayName": "View Cluster",
+          "objectTypeInTADIR":"VCLS",
+          "relatedSapTables": [
+            {
+                "sapTableName":"VCLSTRUCT",
+                "joinColumnName": "VCLNAME"
+            }
+          ]
+        },
         {
-            "sapTableName":"",
-            "joinColumnName":""
+          "displayName": "View Maintenance",
+          "objectTypeInTADIR":"VDAT",
+          "relatedSapTables": [
+            {
+                "sapTableName":"",
+                "joinColumnName": ""
+            }
+          ]
         }
-      ]
-    }
-]
+
+    ]
 ```
 
 # Mapping Configuration
@@ -292,3 +299,4 @@ In SAP environments running versions below ECC 6.0 with NetWeaver 7.5, certain S
 
 - Go to 'Attributes' and select the Remote-Enabled Module radio button.
 - Save and activate the Function Module. Click the green tick mark in the pop-up window.
+
