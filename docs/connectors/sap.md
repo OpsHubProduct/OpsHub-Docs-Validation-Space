@@ -122,7 +122,7 @@
 - Here is an example of Sap's Enhancement and Azure DevOps' User Story integration:
 
 <p align="center">
-  <img src="assets/Sap_mapping_preview.png" />
+  <img src="../assets/Sap_mapping_preview.png" />
 </p>
 
 Refer to the [Mapping Configuration](../integrate/mapping-configuration.md) page to learn the steps to configure mapping between the systems.
@@ -134,7 +134,7 @@ In Sap, there can be only one project representing the object repository of the 
 Set a time to synchronize data between Sap and the other system to be integrated. Also, define parameters and conditions (if any) for integration. Refer to the [Integration Configuration](../integrate/integration-configuration.md) page to learn the steps to configure the integration between two systems. Refer to the screenshot below:
 
 <p align="center">
-  <img src="assets/Sap_integration.png"  />
+  <img src="../assets/Sap_integration.png"  />
 </p>
 
 ## Criteria Configuration
@@ -208,7 +208,7 @@ In Sap environments running versions below ECC 6.0 with NetWeaver 7.5, certain S
 - Refer to the following list of the column names corresponding to the fields of entity types other than 'Transport Request' for Sap ECC:
 
 <p align="center">
-  <img src="assets/Sap_tadir.png" />
+  <img src="../assets/Sap_tadir.png" />
 </p>
 
 > **Note** :Display names of the fields might vary in different versions of Sap. The above table is for reference only.
@@ -299,6 +299,7 @@ In Sap environments running versions below ECC 6.0 with NetWeaver 7.5, certain S
 
 - Go to 'Attributes' and select the Remote-Enabled Module radio button.
 - Save and activate the Function Module. Click the green tick mark in the pop-up window.
+
 
 
 
