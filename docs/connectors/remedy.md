@@ -95,22 +95,23 @@ To create a new custom field in Remedy, follow the steps given below:
 * As shown in the image below, right click **Remedy** form to add a new field.
 
 <p align="center">
-  <img src="../assets/Remedy_Image_4a.png" />
+  <img src="../assets/Remedy_Image_4a.png" width="800"  />
 </p>
 
 
 * Add mapping for that field in web-service's operations: `OpGet`, `OpSet`, `OpCreate`.
   
 <p align="center">
-  <img src="../assets/Remedy_Image_5a.png" />
+  <img src="../assets/Remedy_Image_5a.png" width="800"  />
 </p>
 
 <p align="center">
-  <img src="../assets/Remedy_Image_6a.png"  />
+  <img src="../assets/Remedy_Image_6a.png" width="800"  />
 </p>
 
 * Save web-service and the form.
 * Restart the Remedy Tomcat Server.
+
 
 
 
