@@ -171,12 +171,9 @@ python PATH_TO_OpsHub_Script_folder/precommit.py "$REPOS" "$TXN" || exit 1
 * Add the following lines of code to the top of the file:
 
 ```bat
-python PATH_TO_OpsHub_Script_folder\precommit.py %1 %2
-if errorlevel 1 goto :ERROR
-exit 0
-:ERROR
-echo Error found in commit 1>&2
-exit 1
+pythonPATH_TO_OpsHub_Script_folder\precommit.py %1 %2 if errorlevel 1 goto :ERROR exit 0
+  ERROR
+echo Error found in commit 1>&2 exit 1
 ```
 * With the above scripts, the hook is ready to act.  
 >**Note**:  In PATH_TO_OpsHub_Script_folder, mention the full path till script folder.
@@ -194,7 +191,7 @@ exit 1
   * Right click and select properties and then, select the **Log On** tab.
   * Select **'This account'** check box for Log on as and provide the username and password of the user for which the certificate was imported.
   * Restart server.
-  * 
+    
 <p align="center">
   <img src="../assets/SVN_Image_2.png"/>
 </p>
@@ -264,6 +261,7 @@ Open python (type: `python` on command line)
    >>> import fpconst
    >>> fpconst.__version__
    ```
+
 
 
 
