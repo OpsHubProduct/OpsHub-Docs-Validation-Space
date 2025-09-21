@@ -346,25 +346,25 @@ For reference, we are taking example of sys _audit table. Below steps are applic
 1. Click **Tables** from **System Definition** on left side panel.
    
   <p align="center">
-  <img src="../assets/snow_systemdef_panel.png" />
+  <img src="../assets/Snow_systemdef_panel.png" />
 </p>
 
 2. Click **Attachment** table from the displayed list.
    
 <p align="center">
-  <img src="../assets/snow_attachment_tablelist.png" />
+  <img src="../assets/Snow_attachment_tablelist.png" />
 </p>
 
 3. Double click **Max Length** cell of the **File Name** column.
    
  <p align="center">
-  <img src="../assets/snow_attachment_table_columnlist.png" />
+  <img src="../assets/Snow_attachment_table_columnlist.png" />
 </p>
 
 4. Change value to maximum possible length and click the save icon. 
 
 <p align="center">
-  <img src="../assets/snow_attachment_filename_length.png" />
+  <img src="../assets/Snow_attachment_filename_length.png" />
 </p>
 
 
