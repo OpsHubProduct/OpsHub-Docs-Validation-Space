@@ -24,8 +24,12 @@ Refer [Editing Permission and Scope](#editing-permission-and-scope) in appendix 
 Before you continue to the integration, you must first configure Slack.  
 Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.  
 
-Refer the screenshot given below for reference.  
-![Slack_Image 8](../assets/Slack_Image 8.png)
+Refer the screenshot given below for reference. 
+
+<p align="center">
+  <img src="../assets/Slack_Image 8.png" />
+</p>
+
 
 If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
@@ -38,8 +42,8 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 
 In this step, set a time to synchronize data between Slack and the other system to be integrated. Also, define parameters and conditions, if any, for integration.  
 
-![Note](../assets/Note.jpg) Set the Slack Channel to which the Post, Comments and Attachments should get synchronized.  
-![Note](../assets/Note.jpg) Set Slack Entity to Post.
+>**Note**:  Set the Slack Channel to which the Post, Comments and Attachments should get synchronized.  
+>**Note**:  Set Slack Entity to Post.
 
 Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
 
@@ -54,8 +58,8 @@ For finding the target entity id, Regex of Target Entity Id of Default Integrati
 For example: The Target Entity Id to which the comment is to be added is OP-422. In Slack, a comment is added with target entity id: 'Add this comment to ##OP-422##'.  
 Here ## is used in the start and end of the target entity id to identify the target entity id from the entire string. This is the identifier for the target entity id. For extracting the target entity id, Regex of Target Entity Id is `\#\#(OP)(\-){1}\d+\#`. Now, as the Regex provides with '##OP-422##' part of the comment, remove the Identifier part of the Target Entity Id. So, for this identifier is '##', which gets removed from the string matched to give the target entity id as: OP-422.  
 
-![Note](../assets/Note.jpg) Identifier is a string/simple text and not defined as Regular expression.  
-![Note](../assets/Note.jpg) Default behavior: If Regex can directly match the Target Entity Id, there is no need for an Identifier, and there is no need to remove any part of the string matched for target entity id.  
+>**Note**:  Identifier is a string/simple text and not defined as Regular expression.  
+>**Note**:  Default behavior: If Regex can directly match the Target Entity Id, there is no need for an Identifier, and there is no need to remove any part of the string matched for target entity id.  
 
 For example: The target entity id to which the comment has to be added is OP-422. In Slack, a comment is added with target entity id: 'Add this comment to OP-422'. For extracting the target entity id, Regex of Target Entity Id is `(OP)(\-){1}\d+`. Now Regex will directly provide the target entity id as: OP-422. Here, you can directly get the target entity id through the Regex of Target Entity Id. So, there is no need for an Identifier.
 
@@ -85,44 +89,63 @@ Set Target Search Query as `<key of target system> =@TargetEntityID@` (Without q
 * Now go to: https://api.slack.com/apps/newlink from the same browser you have logged in with the admin user. Click 'Create New App' will show the dialog box as described in the image below.
 * Give any application name and then, select the team for which the integration will be made. Now, click 'Create App'.  
 
-![Note](../assets/Note.jpg) This user should be part of the Channel for which the integration is to be created.
+>**Note**:  This user should be part of the Channel for which the integration is to be created.
 
-![Slack_Image 1](../assets/Slack_Image 1.png)
+<p align="center">
+  <img src="../assets/Slack_Image_1.png" />
+</p>
 
 * Now from side-bar, select 'OAuth & Permissions' under 'Features'. Under 'OAuth & Permissions', go to: Permission Scopes and provide the required privileges to the application.
 * The permission scopes required by OpsHub application are defined in [Permission Scopes](#permission-scopes).
 * Save the changes.  
 
-![Slack_Image 2](../assets/Slack_Image 2.png)
+<p align="center">
+  <img src="../assets/Slack_Image_2.png" />
+</p>
+
 
 * Inside OAuth & Permissions → OAuth Tokens & Redirect URLs select  **Install App to Team**.  
 
-![Slack_Image 3](../assets/Slack_Image 3.png)
+<p align="center">
+  <img src="../assets/Slack_Image_3.png" />
+</p>
+
 
 * It will ask you to provide the access to OpsHub Application. Click Authorize.  
 
-![Slack_Image 4](../assets/Slack_Image 4.png)
+<p align="center">
+  <img src="../assets/Slack_Image_4.png" />
+</p>
+
 
 * The token gets generated under: Features → OAuth & Permission → Tokens for your Team. See the figure.  
 
-![Slack_Image 5](../assets/Slack_Image 5.png)
+<p align="center">
+  <img src="../assets/Slack_Image_5.png" />
+</p>
 
 ## Editing Permission and Scope
 
-Steps to edit permission and scopes:  
-Login to your team domain by a dedicated integration user. This integrated user will be a user that is dedicated for OpsHub Integration Manager.  
+Steps to edit permission and scopes: Login to your team domain by a dedicated integration user. This integrated user will be a user that is dedicated for OpsHub Integration Manager.  
 
-![Note](../assets/Note.jpg) This user should be part of the Channel for which the integration is to be created.
+>**Note**:  This user should be part of the Channel for which the integration is to be created.
 
 * Now go to: https://api.slack.com/apps link from the same browser you have logged in with the integration user.
 * From 'Your Apps', select the application for which you want to change the permission and scope.
 * From side-bar, select 'OAuth and Permissions' under 'Features'.  
 
-![Slack_Image 6](../assets/Slack_Image 6.png)
+<p align="center">
+  <img src="../assets/Slack_Image_6.png" />
+</p>
+
 
 * Under 'OAuth and Permissions', go to: Permissions Scope and provide permissions scope. The required permissions for integration are defined in [Permission Scopes](#permission-scopes).
 * Now, save the changes.  
 
-![Slack_Image 7](../assets/Slack_Image 7.png)
+<p align="center">
+  <img src="../assets/Slack_Image_7.png" />
+</p>
+
 
 * Now in Features → OAuth & Permissions → OAuth Tokens & Redirect URLs → Tokens for Your Team Click **Reinstall App**.
+
