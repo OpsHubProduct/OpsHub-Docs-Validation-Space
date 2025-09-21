@@ -137,7 +137,7 @@ The internal names of the properties are listed in the table below, and can be u
 6. Check the **Administrator** box.  
 7. Click the **Create** button.
 
-<p align="center"><img src="../assets/Redmine_Image_2.png"></p>
+<p align="center"><img src="../assets/Redmine_Image_2.png" width="500"></p>
 
 ## Assigning User to Projects
 * Log in to Redmine as a user with Administrator rights.
@@ -153,12 +153,12 @@ The internal names of the properties are listed in the table below, and can be u
 ## Custom Field Configuration
 OpsHub Integration Manager needs a few special fields to be defined on the entity that is being synchronized. These must be set up so that OpsHub Integration Manager can track the integration status of each item.
 
-<p align="center"><img src="../assets/Redmine_Image_4.png" width="600"></p>
+<p align="center"><img src="../assets/Redmine_Image_4.png" width="500"></p>
 
 * Log in to Redmine as a user with Administrator rights.
 * Click Custom fields.
 
-<p align="center"><img src="../assets/Redmine_Image_5.png" width="600"></p>
+<p align="center"><img src="../assets/Redmine_Image_5.png" width="500"></p>
 
 * Click the + Sign to add a new custom field.
 * Enter custom field name.
@@ -168,7 +168,7 @@ OpsHub Integration Manager needs a few special fields to be defined on the entit
 * Check the options for For all Projects, Used as a Filter, Searchable.
 * Click Save button.
 
-<p align="center"><img src="../assets/Redmine_Image_6.png" width="500"></p>
+<p align="center"><img src="../assets/Redmine_Image_6.png" width="700"></p>
 
 ## Find Version
 1. Log in to Redmine as a user with Administrator rights. 
