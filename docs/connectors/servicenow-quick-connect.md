@@ -256,9 +256,9 @@ record_checkpoint!=-1^sys_created_by!=John
 </p>
 
 ## Add User Access for Table
-
-In ServiceNow Quick Connect, permissions are provided to a role which is assigned to user. Create a new role for your user. Refer to [Create Role](servicenow-quick-connect.md#create-role) for creating a new role and assigning it to your user. 
-For reference, we are taking example of sys _audit table. Below steps are applicable for all the tables for which access needs to be provided to a user role.
+In ServiceNow Quick Connect, permissions are provided to a role which is assigned to user. Create a new role for your user. Refer to [Create Role](servicenow-quick-connect.md#create-role) for creating a new role and assigning it to your user.
+For reference, we are taking example of sys_audit table. Below steps are applicable for all the tables for which access needs to be provided to a user role.
+Provide 'read' access to a table
 
 ### Provide 'read' access to a table
 
@@ -277,32 +277,47 @@ For reference, we are taking example of sys _audit table. Below steps are applic
   <img src="../assets/Snow_read.png" />
 </p>
 
-
 * Click **Submit** and then click **Update** to update the table access controls.
 
 ### Provide 'write' access to a table
 
-* Repeat steps as above, select 'write' in the Operation field.
+* Navigate to System Definition > Tables and open the definition for sys_audit table.
+* Click the 'add' button in the 'Access Controls' section.
+* Select 'write' option in the 'Operation field'.
+* Under 'Requires role' section, add the role for which read access needs to be provided.
 
-![Snow _write](../assets/Snow_write.png)
+<p align="center">
+  <img src="../assets/Snow_write.png" />
+</p>
+
+* Click 'Submit' and then click 'Update' to update the table access controls.
 
 ### Provide 'delete' access to a table
 
-* Repeat steps as above, select 'delete' in the Operation field.
+* Navigate to System Definition > Tables and open the definition for sys_audit table.
+* Click the 'add' button in the 'Access Controls' section.
+* Select 'delete' option in the 'Operation field'.
+* Under 'Requires role' section, add the role for which read access needs to be provided.
 
 <p align="center">
   <img src="../assets/Snow_delete.png" />
 </p>
 
+* Click 'Submit' and then click 'Update' to update the table access controls.
+  
+### Provide 'read. *' access to a table
 
-#### Provide 'read. *' access to a table
-
-* Repeat steps as above, but in the 'name' field, select table name in first input box and ' *' in second input box.
+* Navigate to System Definition > Tables and open the definition for sys_audit table.
+* Click the 'add' button in the 'Access Controls' section.
+* Select 'read' option in the 'Operation field'.
+* In the 'name' field, select table name in the first input box and '*' in the second input box.
+* Under 'Requires role' section, add the role for which read access needs to be provided.
 
 <p align="center">
   <img src="../assets/Snow_read_star.png" />
 </p>
 
+* Click 'Submit' and then click 'Update' to update the table access controls.
 
 ## Create Role
 
@@ -317,16 +332,22 @@ For reference, we are taking example of sys _audit table. Below steps are applic
 
 ![Snow _role _create](../assets/Snow_role_create.png)
 
-* Assign this role to user via **User Administration > Users > Edit Roles**.
+* This will create a new role. Now you need to assign this role to your user.
+* Navigate to User Administration > Users.
+* Open the user for which this role needs to be assigned.
+* Click the 'Edit' under the 'Roles' section.
 
 <p align="center">
   <img src="../assets/Snow_user_role.png" />
 </p>
 
+* Select the role from the left section and click the 'Add' button to add the role.
+
 <p align="center">
   <img src="../assets/Snow_role_assign.png" />
 </p>
 
+* Click 'Save'.
 
 ## Turn on Auditing (History) for a Table
 
@@ -343,25 +364,25 @@ For reference, we are taking example of sys _audit table. Below steps are applic
 
 ## How to change attachment table configuration
 
-1. Click **Tables** from **System Definition** on left side panel.
+1. Click **Tables** from **System Definition** on left side panel. It will display list of tables as per next step
    
   <p align="center">
   <img src="../assets/Snow_systemdef_panel.png" />
 </p>
 
-2. Click **Attachment** table from the displayed list.
+2. Click "Attachment" table from the displayed list. It will display list of attachment tables's columns as per next step.
    
 <p align="center">
   <img src="../assets/Snow_attachment_tablelist.png" />
 </p>
 
-3. Double click **Max Length** cell of the **File Name** column.
+3.Double click "Max Length" cell of the "File Name" column. It will open "Max Length" field in edit mode.
    
  <p align="center">
   <img src="../assets/Snow_attachment_table_columnlist.png" />
 </p>
 
-4. Change value to maximum possible length and click the save icon. 
+4. Change value to maximum possible length and click the save icon.
 
 <p align="center">
   <img src="../assets/Snow_attachment_filename_length.png" />
