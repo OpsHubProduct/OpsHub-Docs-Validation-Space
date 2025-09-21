@@ -147,26 +147,17 @@ If the user wants to specify conditions for synchronizing an entity from Sap as 
 
 <span style="color:blue"> **Criteria samples for 'Transport Request' entity:** </span>
 
-{| class="wikitable" align="center"
-|| **Field Internal Name** || **Field Display Name** || **Criteria snippet** || **Description**
-|-
-|| **TRKORR** || Request/Task || TRKORR LIKE 'EH%' || Query to get the results only for TRs starting with 'EH'.
-|-
-|| **TRFUNCTION** || Type of request/task || TRFUNCTION NE 'D' || Query to get the results only for TRs with function type D.
-|-
-|| **TRSTATUS** || Status of request/task || TRSTATUS EQ 'R' || Query to poll only released TRs.
-|-
-|| **TARSYSTEM** || Transport Target of Request || TARSYSTEM LIKE 'AB%' || Query to poll TRs meant for target system starting with 'AB'.
-|-
-|| **KORRDEV** || Request or task category || KORRDEV EQ 'ZTES' || Query to poll TRs of the 'ZTES' category.
-|-
-|| **AS4USER** || Owner of a Request or Task || AS4USER EQ 'USER1' || Query to poll TRs whose owner is 'USER1'.
-|-
-|| **AS4DATE** || Date of Last Change || AS4DATE GE '20240809' AND AS4DATE LE '20240909' || Query to poll TRs between given the time interval. Time is given in the 'yyyyMMdd' format.
-|-
-|| **STRKORR** || Higher-Level Request || STRKORR LIKE 'Z%' || Query to poll TRs with higher-level request names starting with Z.
-|-
-|}
+| **Field Internal Name** | **Field Display Name** | **Criteria snippet** | **Description** |
+|-------------------------|----------------------|-------------------|----------------|
+| **TRKORR** | Request/Task | TRKORR LIKE 'EH%' | Query to get the results only for TRs starting with 'EH'. |
+| **TRFUNCTION** | Type of request/task | TRFUNCTION NE 'D' | Query to get the results only for TRs with function type D. |
+| **TRSTATUS** | Status of request/task | TRSTATUS EQ 'R' | Query to poll only released TRs. |
+| **TARSYSTEM** | Transport Target of Request | TARSYSTEM LIKE 'AB%' | Query to poll TRs meant for target system starting with 'AB'. |
+| **KORRDEV** | Request or task category | KORRDEV EQ 'ZTES' | Query to poll TRs of the 'ZTES' category. |
+| **AS4USER** | Owner of a Request or Task | AS4USER EQ 'USER1' | Query to poll TRs whose owner is 'USER1'. |
+| **AS4DATE** | Date of Last Change | AS4DATE GE '20240809' AND AS4DATE LE '20240909' | Query to poll TRs between given the time interval. Time is given in the 'yyyyMMdd' format. |
+| **STRKORR** | Higher-Level Request | STRKORR LIKE 'Z%' | Query to poll TRs with higher-level request names starting with Z. |
+
 
 - For all other entity types (including additional types), criteria can be applied to any of the fields corresponding to the columns in the TADIR table in Sap. Refer to the [TADIR Columns](#tadir-columns) section for more details.
 
@@ -299,6 +290,7 @@ In Sap environments running versions below ECC 6.0 with NetWeaver 7.5, certain S
 
 - Go to 'Attributes' and select the Remote-Enabled Module radio button.
 - Save and activate the Function Module. Click the green tick mark in the pop-up window.
+
 
 
 
