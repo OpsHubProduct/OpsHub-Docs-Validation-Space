@@ -218,69 +218,69 @@ In SAP environments running versions below ECC 6.0 with NetWeaver 7.5, certain S
 1. Open 'Object Navigator' using SE80 TCode in SAP GUI.
 
 <p align="center">
-  <img src="assets/sap_link_step_1.png" />
+  <img src="../assets/sap_link_step_1.png" />
 </p>
 
 2. Select 'Function Group' from the object drop-down.
 
 <p align="center">
-  <img src="assets/sap_link_step_2.png"  />
+  <img src="../assets/sap_link_step_2.png"  />
 </p>
 
 3. Type 'ZMYOPSHUB' and press Enter. If the Function Group exists, skip this step. Click 'Yes'.
 
 <p align="center">
-  <img src="assets/sap_link_step_4.png" />
+  <img src="../assets/sap_link_step_4.png" />
 </p>
 
 4. Add a description and click 'Save'. Click 'Local Object' in the pop-up window.
 
 <p align="center">
-  <img src="assets/sap_link_step_3.png"  />
+  <img src="../assets/sap_link_step_3.png"  />
 </p>
 
 <p align="center">
-  <img src="assets/sap_link_step_5.png"  />
+  <img src="../assets/sap_link_step_5.png"  />
 </p>
 
 5. Right-click 'ZMYOPSHUB' and select 'Function Module'.
 
 <p align="center">
-  <img src="assets/sap_link_step_6.png"  />
+  <img src="../assets/sap_link_step_6.png"  />
 </p>
 
 6. Enter the name as 'ZCRMOST_WHERE_USED_OPSHUB', add a short description and click 'Save'.
 
 <p align="center">
-  <img src="assets/sap_link_step_7.png"  />
+  <img src="../assets/sap_link_step_7.png"  />
 </p>
 
 7. Double-click the function module and go to Utilities->More Utilities->Upload/Download->Upload. Browse the API file and upload.
 
 <p align="center">
-  <img src="assets/sap_link_step_9.png"  />
+  <img src="../assets/sap_link_step_9.png"  />
 </p>
 
 8. If the upload option is not working, copy-paste the code in the IDE and add the following import and export variables.
 
 <p align="center">
-  <img src="assets/sap_link_step_10.png"  />
+  <img src="../assets/sap_link_step_10.png"  />
 </p>
 
 <p align="center">
-  <img src="assets/sap_link_step_11.png" />
+  <img src="../assets/sap_link_step_11.png" />
 </p>
 
 9. Go to 'Attributes' and select the Remote-Enabled Module radio button.
 
 <p align="center">
-  <img src="assets/sap_link_step_12.png"  />
+  <img src="../assets/sap_link_step_12.png"  />
 </p>
 
 10. Save and activate the Function Module. Click the green tick mark in the pop-up window.
 
 <p align="center">
-  <img src="assets/sap_link_step_13.png" />
+  <img src="../assets/sap_link_step_13.png" />
 </p>
 
 ## Configure Usage Details API
@@ -290,13 +290,14 @@ In SAP environments running versions below ECC 6.0 with NetWeaver 7.5, certain S
   - If the upload option is not working, copy-paste the code in the IDE and add the following import and export variables.
 
 <p align="center">
-  <img src="assets/sap_usage_step_1.png" />
+  <img src="../assets/sap_usage_step_1.png" />
 </p>
 
 <p align="center">
-  <img src="assets/sap_usage_step_2.png" />
+  <img src="../assets/sap_usage_step_2.png" />
 </p>
 
 - Go to 'Attributes' and select the Remote-Enabled Module radio button.
 - Save and activate the Function Module. Click the green tick mark in the pop-up window.
+
 
