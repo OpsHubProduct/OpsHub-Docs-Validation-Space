@@ -2,76 +2,76 @@
 
 ## Pre-loaded Dependency
 
-* SAP connector depends on 'sapjco3.dll' (for Windows) and 'libsapjco.so' (for Linux).
-* These files can be downloaded from [SAP Connector](https://support.sap.com/en/product/connectors/jco.html) by the user with a valid SAP license/subscription.
+* Sap connector depends on 'Sapjco3.dll' (for Windows) and 'libSapjco.so' (for Linux).
+* These files can be downloaded from [Sap Connector](https://support.Sap.com/en/product/connectors/jco.html) by the user with a valid Sap license/subscription.
 * Place the dependency in a path available in the machine's environment variables. Restart the OpsHub Integration Manager service after placing the dependency.
 * The following table shows one of the paths available in the environment variables:
 
 | OS Type | Dependency   | Path                   |
 |---------|--------------|------------------------|
-| Windows | sapjco3.dll  | C:\Windows\System32     |
-| Linux   | libsapjco.so | \usr\lib               |
+| Windows | Sapjco3.dll  | C:\Windows\System32     |
+| Linux   | libSapjco.so | \usr\lib               |
 
 ## User Privileges
 
-* Create a technical ABAP user in the SAP ECC or SAP S/4HANA technical instance dedicated to OpsHub Integration Manager. This user shouldn't perform any other action from SAP GUI. This user is referred to as the 'Integration User' in this document.
-* A SAP user can only be created by the SAP BASIS administrator.
-* To integrate SAP entities using OpsHub Integration Manager, the user must be a technical ABAP user with:
+* Create a technical ABAP user in the Sap ECC or Sap S/4HANA technical instance dedicated to OpsHub Integration Manager. This user shouldn't perform any other action from Sap GUI. This user is referred to as the 'Integration User' in this document.
+* A Sap user can only be created by the Sap BASIS administrator.
+* To integrate Sap entities using OpsHub Integration Manager, the user must be a technical ABAP user with:
   * RFC read and execute permissions.
   * SE80 read, write, and execute permissions.
 
 ## Enable API for 'Linkages'
 
 * OpsHub Integration Manager uses the RFC 'CRMOST_WHERE_USED_LIST' to fetch the linkages for each entity type except the 'Transport Request' entity.
-* After SAP ECC 6.0 and in SAP S/4HANA, this API is set to **normal-enabled** in the SAP end system.
+* After Sap ECC 6.0 and in Sap S/4HANA, this API is set to **normal-enabled** in the Sap end system.
 * To sync any entity type other than 'Transport Request', it is mandatory to:
-  * Ask the SAP BASIS administrator to make the API **RFC-enabled** in the end system.
+  * Ask the Sap BASIS administrator to make the API **RFC-enabled** in the end system.
   * Or plug in the custom API 'ZCRMOST_WHERE_USED_OPSHUB' in the end system. Refer to [Configure Custom Linkage API](#configure_custom_linkage_api) for details.
 
 ## Enable API for 'Usage Details'
 
-* Due to the lack of available API in SAP, the user must configure the custom API in SAP end system to fetch the Usage Details entity for synchronization.
+* Due to the lack of available API in Sap, the user must configure the custom API in Sap end system to fetch the Usage Details entity for synchronization.
 * Refer to [Configure Custom Linkage API](#configure_custom_linkage_api) for details.
 
 # System Configuration
 
-* To start the integration, configure the SAP system in OpsHub Integration Manager.
+* To start the integration, configure the Sap system in OpsHub Integration Manager.
 * Refer to [System Configuration](../integrate/system-configuration.md) page to learn the stepwise process. Refer to the following screenshot:
 
 <p align="center">
-  <img src="../assets/sap_system_form.png" />
+  <img src="../assets/Sap_system_form.png" />
 </p>
 
-**SAP System form details**
+**Sap System form details**
 
 | Field Name                | Description                                                                                         |
 |---------------------------|-----------------------------------------------------------------------------------------------------|
 | **System Name**            | Provide the system's name.                                                                          |
-| **Version**                | Provide the version of the SAP instance: ECC or HANA.                                              |
-| **Host**                   | Specify the host where the SAP system is deployed. For example: 49.50.51.52                        |
-| **Port**                   | Specify the port where the SAP system is deployed. Usually, it is 80XX, where XX is the instance number.|
-| **Instance Number**        | Specify the instance number of the SAP system. It is a two-digit number indicating the Id of the SAP instance.|
-| **Group**                  | Provide the Group IP for the SAP system. If there is no group, enter the same value as Host.         |
-| **Client Id**              | Specify the SAP Client Id. It is a three-digit number to identify the SAP Client.                  |
+| **Version**                | Provide the version of the Sap instance: ECC or HANA.                                              |
+| **Host**                   | Specify the host where the Sap system is deployed. For example: 49.50.51.52                        |
+| **Port**                   | Specify the port where the Sap system is deployed. Usually, it is 80XX, where XX is the instance number.|
+| **Instance Number**        | Specify the instance number of the Sap system. It is a two-digit number indicating the Id of the Sap instance.|
+| **Group**                  | Provide the Group IP for the Sap system. If there is no group, enter the same value as Host.         |
+| **Client Id**              | Specify the Sap Client Id. It is a three-digit number to identify the Sap Client.                  |
 | **User Id**                | Provide the user id of a dedicated user for communicating with the system API. This user should have the required privileges as mentioned in [User Privileges](#user-privileges) |
 | **Password**               | Provide the password for the user.                                                                  |
-| **Language Code**          | Specify the language code of the SAP system. For example: EN (for English). The language code must be only two characters. The default language code is EN. |
-| **Additional Entity Type** | This is an optional field to specify the list of entity type(s), other than the supported ones for integration. Each additional entity type must be a valid Object Type of the TADIR table in SAP. Refer to [Additional Entity Type JSON](#additional-entity-type-json) to understand the input template. |
+| **Language Code**          | Specify the language code of the Sap system. For example: EN (for English). The language code must be only two characters. The default language code is EN. |
+| **Additional Entity Type** | This is an optional field to specify the list of entity type(s), other than the supported ones for integration. Each additional entity type must be a valid Object Type of the TADIR table in Sap. Refer to [Additional Entity Type JSON](#additional-entity-type-json) to understand the input template. |
 
 **Additional Entity Type JSON**
 
 > **Note** :For the additional entity types, certain advanced features may not operate as intended. The purpose of this field is to offer users the flexibility to sync entity types beyond the default options.
-* In SAP, all the objects' entries are available in the TADIR table, along with their Object Type. This document will use the word 'Entity Type' for Object Types in SAP. Out of the available entity types in TADIR, OpsHub Integration Manager supports limited entity types by default.
-* If there are entity types present in the TADIR table but not included in the supported list of OpsHub Integration Manager, the user can integrate them by registering their details in the Additional Entity Type field in the SAP system form. This can be done using the following JSON template:
+* In Sap, all the objects' entries are available in the TADIR table, along with their Object Type. This document will use the word 'Entity Type' for Object Types in Sap. Out of the available entity types in TADIR, OpsHub Integration Manager supports limited entity types by default.
+* If there are entity types present in the TADIR table but not included in the supported list of OpsHub Integration Manager, the user can integrate them by registering their details in the Additional Entity Type field in the Sap system form. This can be done using the following JSON template:
 
 ```json
 [
         {
           "displayName": "Mention the display name of the entity type.",
-          "objectTypeInTADIR":"Mention the entity type from 'OBJECT' column of the TADIR table in the SAP instance.",
+          "objectTypeInTADIR":"Mention the entity type from 'OBJECT' column of the TADIR table in the Sap instance.",
           "relatedSapTables": [
             {
-                "sapTableName":"Mention additional SAP table name (if any), having more details about the entity type.",
+                "SapTableName":"Mention additional Sap table name (if any), having more details about the entity type.",
                 "joinColumnName": "Mention the column name of the above table, having the identifier value same as 'OBJ_NAME' column of TADIR table."
             },
             ...
@@ -95,7 +95,7 @@
           "objectTypeInTADIR":"VCLS",
           "relatedSapTables": [
             {
-                "sapTableName":"VCLSTRUCT",
+                "SapTableName":"VCLSTRUCT",
                 "joinColumnName": "VCLNAME"
             }
           ]
@@ -105,7 +105,7 @@
           "objectTypeInTADIR":"VDAT",
           "relatedSapTables": [
             {
-                "sapTableName":"",
+                "SapTableName":"",
                 "joinColumnName": ""
             }
           ]
@@ -116,32 +116,32 @@
 
 # Mapping Configuration
 
-> **Note** :In OpsHub Integration Manager, the SAP system supports only read-only functionality.
+> **Note** :In OpsHub Integration Manager, the Sap system supports only read-only functionality.
 
-- Map the fields between SAP and the other system to be integrated to ensure data synchronization between both systems.
-- Here is an example of SAP's Enhancement and Azure DevOps' User Story integration:
+- Map the fields between Sap and the other system to be integrated to ensure data synchronization between both systems.
+- Here is an example of Sap's Enhancement and Azure DevOps' User Story integration:
 
 <p align="center">
-  <img src="assets/sap_mapping_preview.png" />
+  <img src="assets/Sap_mapping_preview.png" />
 </p>
 
 Refer to the [Mapping Configuration](../integrate/mapping-configuration.md) page to learn the steps to configure mapping between the systems.
 
-In SAP, there can be only one project representing the object repository of the instance.
+In Sap, there can be only one project representing the object repository of the instance.
 
 # Integration Configuration
 
-Set a time to synchronize data between SAP and the other system to be integrated. Also, define parameters and conditions (if any) for integration. Refer to the [Integration Configuration](../integrate/integration-configuration.md) page to learn the steps to configure the integration between two systems. Refer to the screenshot below:
+Set a time to synchronize data between Sap and the other system to be integrated. Also, define parameters and conditions (if any) for integration. Refer to the [Integration Configuration](../integrate/integration-configuration.md) page to learn the steps to configure the integration between two systems. Refer to the screenshot below:
 
 <p align="center">
-  <img src="assets/sap_integration.png"  />
+  <img src="assets/Sap_integration.png"  />
 </p>
 
 ## Criteria Configuration
 
-If the user wants to specify conditions for synchronizing an entity from SAP as the source system to the other system (target system), criteria must be configured. Navigate to the [Criteria Configuration](../integrate/integration-configuration.md#criteria-configuration.md) section on the [Integration Configuration](../integrate/integration-configuration.md) page for more details.
+If the user wants to specify conditions for synchronizing an entity from Sap as the source system to the other system (target system), criteria must be configured. Navigate to the [Criteria Configuration](../integrate/integration-configuration.md#criteria-configuration.md) section on the [Integration Configuration](../integrate/integration-configuration.md) page for more details.
 
-- Set the **Query** as per the SAP native query format.
+- Set the **Query** as per the Sap native query format.
 - Criteria configuration is not supported by the 'Usage Details' entity type.
 - However, criteria can be applied to the below fields for the 'Transport Request' entity type:
 
@@ -168,119 +168,119 @@ If the user wants to specify conditions for synchronizing an entity from SAP as 
 |-
 |}
 
-- For all other entity types (including additional types), criteria can be applied to any of the fields corresponding to the columns in the TADIR table in SAP. Refer to the [TADIR Columns](#tadir-columns) section for more details.
+- For all other entity types (including additional types), criteria can be applied to any of the fields corresponding to the columns in the TADIR table in Sap. Refer to the [TADIR Columns](#tadir-columns) section for more details.
 
 # Known Behaviour
 
 ## Dynamically changing poller type of an entity
 
-In SAP environments running versions below ECC 6.0 with NetWeaver 7.5, certain SAP tables used for polling do not contain date columns for entity creation. This limitation affects the ability of the poller to function based on timestamps.
+In Sap environments running versions below ECC 6.0 with NetWeaver 7.5, certain Sap tables used for polling do not contain date columns for entity creation. This limitation affects the ability of the poller to function based on timestamps.
 
 ### Behavior and Impact
 
-- If the expected time field is unavailable in the SAP end system, the poller switches to a non-timestamp-based mode.
+- If the expected time field is unavailable in the Sap end system, the poller switches to a non-timestamp-based mode.
 - In non-timestamp-based polling, the poller retrieves all entities, regardless of their creation time.
 - Due to this, it is recommended to increase the 'Associate Schedule' available in 'Global level advance configurations' while configuring integration to optimize the performance and reduce unnecessary processing.
 - By default, the poller operates as a current-state poller.
 
-### API rate-limit in SAP
+### API rate-limit in Sap
 
-- The SAP system uses `sapjco3.dll` to communicate with the end system. Hence, there is no specific limitation in terms of calling APIs.
-- However, if there is an idle wait time-out configured in the SAP GUI, the same is applicable for the system in OpsHub Integration Manager.
-- The wait time-out can be changed/disabled only by the SAP BASIS administrator.
+- The Sap system uses `Sapjco3.dll` to communicate with the end system. Hence, there is no specific limitation in terms of calling APIs.
+- However, if there is an idle wait time-out configured in the Sap GUI, the same is applicable for the system in OpsHub Integration Manager.
+- The wait time-out can be changed/disabled only by the Sap BASIS administrator.
 
 ## Limitations
 
 - Entities will be synced without history.
-- Comments and Attachments are not supported for any entity type of SAP.
+- Comments and Attachments are not supported for any entity type of Sap.
 
 ## Limitations specific to Usage Details entity
 
 - Metadata of the system fields is not available for the 'Usage Details' entity type. However, static metadata is provided for the same.
-- Recovery cannot be performed for the 'Usage Details' entity type, as the data for this entity expires every 48 hours in the end system. This expiration time is configurable in the end system and can only be done by the SAP BASIS administrator.
-- Integration for syncing the 'Usage Details' entity type does not work in parallel with other entity types' integrations using the same SAP system. However, the use case can be achieved by configuring two separate systems for Usage Details and any other entity types. This behavior is because of the difference in time formats for the 'Usage Details' entity and other supported entity types.
+- Recovery cannot be performed for the 'Usage Details' entity type, as the data for this entity expires every 48 hours in the end system. This expiration time is configurable in the end system and can only be done by the Sap BASIS administrator.
+- Integration for syncing the 'Usage Details' entity type does not work in parallel with other entity types' integrations using the same Sap system. However, the use case can be achieved by configuring two separate systems for Usage Details and any other entity types. This behavior is because of the difference in time formats for the 'Usage Details' entity and other supported entity types.
 
 # Appendix
 
 ## TADIR Columns
 
-- TADIR is a master table in SAP storing the system and custom object types of the given SAP instance.
-- Refer to the following list of the column names corresponding to the fields of entity types other than 'Transport Request' for SAP ECC:
+- TADIR is a master table in Sap storing the system and custom object types of the given Sap instance.
+- Refer to the following list of the column names corresponding to the fields of entity types other than 'Transport Request' for Sap ECC:
 
 <p align="center">
-  <img src="assets/sap_tadir.png" />
+  <img src="assets/Sap_tadir.png" />
 </p>
 
-> **Note** :Display names of the fields might vary in different versions of SAP. The above table is for reference only.
+> **Note** :Display names of the fields might vary in different versions of Sap. The above table is for reference only.
 
 ## Configure Custom Linkage API
 
-1. Open 'Object Navigator' using SE80 TCode in SAP GUI.
+1. Open 'Object Navigator' using SE80 TCode in Sap GUI.
 
 <p align="center">
-  <img src="../assets/sap_link_step_1.png" />
+  <img src="../assets/Sap_link_step_1.png" />
 </p>
 
 2. Select 'Function Group' from the object drop-down.
 
 <p align="center">
-  <img src="../assets/sap_link_step_2.png"  />
+  <img src="../assets/Sap_link_step_2.png"  />
 </p>
 
 3. Type 'ZMYOPSHUB' and press Enter. If the Function Group exists, skip this step. Click 'Yes'.
 
 <p align="center">
-  <img src="../assets/sap_link_step_4.png" />
+  <img src="../assets/Sap_link_step_4.png" />
 </p>
 
 4. Add a description and click 'Save'. Click 'Local Object' in the pop-up window.
 
 <p align="center">
-  <img src="../assets/sap_link_step_3.png"  />
+  <img src="../assets/Sap_link_step_3.png"  />
 </p>
 
 <p align="center">
-  <img src="../assets/sap_link_step_5.png"  />
+  <img src="../assets/Sap_link_step_5.png"  />
 </p>
 
 5. Right-click 'ZMYOPSHUB' and select 'Function Module'.
 
 <p align="center">
-  <img src="../assets/sap_link_step_6.png"  />
+  <img src="../assets/Sap_link_step_6.png"  />
 </p>
 
 6. Enter the name as 'ZCRMOST_WHERE_USED_OPSHUB', add a short description and click 'Save'.
 
 <p align="center">
-  <img src="../assets/sap_link_step_7.png"  />
+  <img src="../assets/Sap_link_step_7.png"  />
 </p>
 
 7. Double-click the function module and go to Utilities->More Utilities->Upload/Download->Upload. Browse the API file and upload.
 
 <p align="center">
-  <img src="../assets/sap_link_step_9.png"  />
+  <img src="../assets/Sap_link_step_9.png"  />
 </p>
 
 8. If the upload option is not working, copy-paste the code in the IDE and add the following import and export variables.
 
 <p align="center">
-  <img src="../assets/sap_link_step_10.png"  />
+  <img src="../assets/Sap_link_step_10.png"  />
 </p>
 
 <p align="center">
-  <img src="../assets/sap_link_step_11.png" />
+  <img src="../assets/Sap_link_step_11.png" />
 </p>
 
 9. Go to 'Attributes' and select the Remote-Enabled Module radio button.
 
 <p align="center">
-  <img src="../assets/sap_link_step_12.png"  />
+  <img src="../assets/Sap_link_step_12.png"  />
 </p>
 
 10. Save and activate the Function Module. Click the green tick mark in the pop-up window.
 
 <p align="center">
-  <img src="../assets/sap_link_step_13.png" />
+  <img src="../assets/Sap_link_step_13.png" />
 </p>
 
 ## Configure Usage Details API
@@ -290,14 +290,15 @@ In SAP environments running versions below ECC 6.0 with NetWeaver 7.5, certain S
   - If the upload option is not working, copy-paste the code in the IDE and add the following import and export variables.
 
 <p align="center">
-  <img src="../assets/sap_usage_step_1.png" />
+  <img src="../assets/Sap_usage_step_1.png" />
 </p>
 
 <p align="center">
-  <img src="../assets/sap_usage_step_2.png" />
+  <img src="../assets/Sap_usage_step_2.png" />
 </p>
 
 - Go to 'Attributes' and select the Remote-Enabled Module radio button.
 - Save and activate the Function Module. Click the green tick mark in the pop-up window.
+
 
 
