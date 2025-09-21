@@ -1,5 +1,4 @@
-## Prerequisites
-
+# Prerequisites
 ## User Privileges
 
 No user is required for Remedy connector.
@@ -37,7 +36,10 @@ Attachment name, data, and size field should be configured in the following form
   `Attachment1_attachmentData`,  
   `Attachment1_attachmentOrigSize`.
 
-![Remedy Attachment Example](../assets/Remedy_Image_1a.png)
+<p align="center">
+  <img src="../assets/Remedy_Image_1a.png" />
+</p>
+
 
 # System Configuration
 
@@ -46,8 +48,14 @@ Click [System Configuration](../integrate/system-configuration.md) to learn the 
 
 Refer the screenshot given below for reference:
 
-![System Configuration 1](../assets/Remedy_Image_2a.png)  
-![System Configuration 2](../assets/Remedy_Image_3a.png)
+<p align="center">
+  <img src="../assets/Remedy_Image_2a.png"  />
+</p>
+
+<p align="center">
+  <img src="../assets/Remedy_Image_3a.png" />
+</p>
+
 
 If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager.  
 Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
@@ -86,12 +94,21 @@ To create a new custom field in Remedy, follow the steps given below:
 
 * As shown in the image below, right click **Remedy** form to add a new field.
 
-![Add New Field](../assets/Remedy_Image_4a.png)
+<p align="center">
+  <img src="../assets/Remedy_Image_4a.png" />
+</p>
+
 
 * Add mapping for that field in web-service's operations: `OpGet`, `OpSet`, `OpCreate`.
+  
+<p align="center">
+  <img src="../assets/Remedy_Image_5a.png" />
+</p>
 
-![Webservice Mapping 1](../assets/Remedy_Image_5a.png)  
-![Webservice Mapping 2](../assets/Remedy_Image_6a.png)
+<p align="center">
+  <img src="../assets/Remedy_Image_6a.png"  />
+</p>
 
 * Save web-service and the form.
 * Restart the Remedy Tomcat Server.
+
