@@ -43,12 +43,16 @@ ServiceNow Quick Connect tracks incident, change, and problem history in the sys
 
 * OpsHub Integration Manager must be enabled for the ServiceNow Express instance. You can get this app from ServiceNow appStore: [https://store.servicenow.com/sn _appstore _store.do#!/store/application/8e6f0b610f8ce6001f6fc3ace1050ebb](https://store.servicenow.com/sn_appstore_store.do#!/store/application/8e6f0b610f8ce6001f6fc3ace1050ebb)
 
-![Snow _Store](../assets/Snow_Store.PNG)
+<p align="center">
+  <img src="../assets/Snow_Store.PNG" />
+</p>
 
 * On the OpsHub Integration Manager App page, click on **Get** and provide your ServiceNow Quick Connect HI Credentials.
 * You will see OpsHub Integration Manager for ServiceNow Quick Connect in Downloads tab by navigating **System Applications -> Applications** in your ServiceNow Quick Connect instance  [The example below shows OpsHub Integration Manager for ServiceNow Quick Connect Enterprise]. Click on Install for OpsHub Integration Manager for ServiceNow Quick Connect applications.
 
-![Snow2](../assets/Snow2.png)
+<p align="center">
+  <img src="../assets/Snow2.png" />
+</p>
 
 * On successful installation, OpsHub Integration Manager for ServiceNow Quick Connect application will be available.
 
@@ -60,7 +64,10 @@ If attachments or HTML//Rich type supported fields are mapped, then keep the att
 
 Before you continue with the integration, you must first configure ServiceNow Quick Connect system. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system. Refer to the screenshot given below:
 
-![Snow _Quick _Connect _system _config](../assets/Snow_Quick_Connect_system_config.png)
+<p align="center">
+  <img src="../assets/Snow_Quick_Connect_system_config.png" />
+</p>
+
 
 ServiceNow Quick Connect system can be configured using either Basic or OAuth authentication.
 
@@ -133,7 +140,11 @@ _To overcome manual overhead of updating entity to reflect attachment changes im
   * Advance: enable advance setting to define the script to update the particular field upon add operation. Refer following sample business rule script.
 
 **Sample Business Rule Script** 
-![snow _rule _audit _attachment](../assets/snow_rule_audit_attachment.PNG)
+
+<p align="center">
+  <img src="../assets/snow_rule_audit_attachment.PNG" />
+</p>
+
 
 >**Note**:  Refer to [ServiceNow Business Rules Docs](https://docs.servicenow.com/bundle/quebec-application-development/page/script/business-rules/concept/c_BusinessRules.html) for more information about the ServiceNow's business rule configuration. 
 >**Note**:  Refer to [Community Blog](https://community.servicenow.com/community?id=community_blog &sys_id=ee6e22eddbd0dbc01dcaf3231f96196c) for more information about how to generate audit on field/notes upon attachment operation.
@@ -161,11 +172,17 @@ Provide query in 'Target Search Query' such that it is possible to search the en
   `state=1` 
   &#xNAN;_&#x48;ow to get value 1 for the state Open?_
 
-![Snow4](../assets/Snow4.png)
+<p align="center">
+  <img src="../assets/Snow4.png" />
+</p>
+
 
 Right click on state field and click on **Show Choice** List.
 
-![Snow5](../assets/Snow5.png)
+<p align="center">
+  <img src="../assets/Snow5.png" />
+</p>
+
 
 Here, we can see the internal value `1` for `Open` state.
 
@@ -214,19 +231,29 @@ record_checkpoint!=-1^sys_created_by!=John
 * Filter **Users** and click on **Users**.
 * Click **New**.
 
-! [snow6] (../assets/snow6.png)
+<p align="center">
+  <img src="../assets/snow6.png" />
+</p>
+
 
 * Fill the details in the form and make sure that active checkbox is enabled.
 
-! [snow7] (../assets/snow7.png)
+<p align="center">
+  <img src="../assets/snow7.png" />
+</p>
+
 
 * Open created user and click **Edit Roles**.
 
-! [snow8] (../assets/snow8.png)
+<p align="center">
+  <img src="../assets/snow8.png" />
+</p>
 
 * Add **admin** privileges from Collection and click **Save**. In case you cannot provide admin privileges, please refer to [User Privileges](servicenow-quick-connect.md#user-privileges) section for providing required permissions to the user.
-
-! [snow9] (../assets/snow9.png)
+  
+<p align="center">
+  <img src="../assets/snow9.png" />
+</p>
 
 ## Add User Access for Table
 
@@ -237,13 +264,19 @@ For reference, we are taking example of sys _audit table. Below steps are applic
 
 * Navigate to **System Definition > Tables** and open the definition for sys _audit table.
 
-![Snow _access](../assets/Snow_access.PNG)
+<p align="center">
+  <img src="../assets/Snow_access.PNG" />
+</p>
+
 
 * Click on 'add' button in the **Access Controls** section.
 * Select 'read' option in the **Operation** field.
 * Under **Requires role** section, add the role for which read access needs to be provided.
 
-![Snow _read](../assets/Snow_read.PNG)
+<p align="center">
+  <img src="../assets/Snow_read.PNG" />
+</p>
+
 
 * Click **Submit** and then click **Update** to update the table access controls.
 
@@ -257,19 +290,27 @@ For reference, we are taking example of sys _audit table. Below steps are applic
 
 * Repeat steps as above, select 'delete' in the Operation field.
 
-![Snow _delete](../assets/Snow_delete.PNG)
+<p align="center">
+  <img src="../assets/Snow_delete.PNG" />
+</p>
+
 
 #### Provide 'read. *' access to a table
 
 * Repeat steps as above, but in the 'name' field, select table name in first input box and ' *' in second input box.
 
-![Snow _read _star](../assets/Snow_read_star.PNG)
+<p align="center">
+  <img src="../assets/Snow_read_star.PNG" />
+</p>
+
 
 ## Create Role
 
 * Navigate to **User administration > Roles**.
 
-![Snow _role](../assets/Snow_role.PNG)
+<p align="center">
+  <img src="../assets/Snow_role.PNG" />
+</p>
 
 * Click **New**.
 * Fill the required details and click **Submit**.
@@ -278,8 +319,14 @@ For reference, we are taking example of sys _audit table. Below steps are applic
 
 * Assign this role to user via **User Administration > Users > Edit Roles**.
 
-![Snow _user _role](../assets/Snow_user_role.PNG) 
-![Snow _role _assign](../assets/Snow_role_assign.png)
+<p align="center">
+  <img src="../assets/Snow_user_role.PNG" />
+</p>
+
+<p align="center">
+  <img src="../assets/Snow_role_assign.png" />
+</p>
+
 
 ## Turn on Auditing (History) for a Table
 
@@ -287,7 +334,10 @@ For reference, we are taking example of sys _audit table. Below steps are applic
 * Select the table to audit.
 * Select the dictionary entry for the table. The table name always has an empty column name and **Type** `Collection`.
 
-![Snow _audit](../assets/Snow_audit.PNG)
+<p align="center">
+  <img src="../assets/Snow_audit.PNG" />
+</p>
+
 
 * Set the value for the **Audit** column to **true**.
 
