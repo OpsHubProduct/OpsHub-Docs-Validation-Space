@@ -139,7 +139,7 @@ Set a time to synchronize data between Sap and the other system to be integrated
 
 ## Criteria Configuration
 
-If the user wants to specify conditions for synchronizing an entity from Sap as the source system to the other system (target system), criteria must be configured. Navigate to the [Criteria Configuration](../integrate/integration-configuration.md#criteria-configuration.md) section on the [Integration Configuration](../integrate/integration-configuration.md) page for more details.
+If the user wants to specify conditions for synchronizing an entity from Sap as the source system to the other system (target system), criteria must be configured. Navigate to the [Criteria Configuration](../integrate/integration-configuration.md#criteria-configuration) section on the [Integration Configuration](../integrate/integration-configuration.md) page for more details.
 
 - Set the **Query** as per the Sap native query format.
 - Criteria configuration is not supported by the 'Usage Details' entity type.
@@ -290,6 +290,7 @@ In Sap environments running versions below ECC 6.0 with NetWeaver 7.5, certain S
 
 - Go to 'Attributes' and select the Remote-Enabled Module radio button.
 - Save and activate the Function Module. Click the green tick mark in the pop-up window.
+
 
 
 
