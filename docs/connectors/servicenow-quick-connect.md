@@ -232,27 +232,27 @@ record_checkpoint!=-1^sys_created_by!=John
 * Click **New**.
 
 <p align="center">
-  <img src="../assets/snow6.png" />
+  <img src="../assets/Snow6.png" />
 </p>
 
 
 * Fill the details in the form and make sure that active checkbox is enabled.
 
 <p align="center">
-  <img src="../assets/snow7.png" />
+  <img src="../assets/Snow7.png" />
 </p>
 
 
 * Open created user and click **Edit Roles**.
 
 <p align="center">
-  <img src="../assets/snow8.png" />
+  <img src="../assets/Snow8.png" />
 </p>
 
 * Add **admin** privileges from Collection and click **Save**. In case you cannot provide admin privileges, please refer to [User Privileges](servicenow-quick-connect.md#user-privileges) section for providing required permissions to the user.
   
 <p align="center">
-  <img src="../assets/snow9.png" />
+  <img src="../assets/Snow9.png" />
 </p>
 
 ## Add User Access for Table
@@ -265,7 +265,7 @@ For reference, we are taking example of sys _audit table. Below steps are applic
 * Navigate to **System Definition > Tables** and open the definition for sys _audit table.
 
 <p align="center">
-  <img src="../assets/Snow_access.PNG" />
+  <img src="../assets/Snow_access.png" />
 </p>
 
 
@@ -274,7 +274,7 @@ For reference, we are taking example of sys _audit table. Below steps are applic
 * Under **Requires role** section, add the role for which read access needs to be provided.
 
 <p align="center">
-  <img src="../assets/Snow_read.PNG" />
+  <img src="../assets/Snow_read.Png" />
 </p>
 
 
@@ -284,14 +284,14 @@ For reference, we are taking example of sys _audit table. Below steps are applic
 
 * Repeat steps as above, select 'write' in the Operation field.
 
-![Snow _write](../assets/Snow_write.PNG)
+![Snow _write](../assets/Snow_write.png)
 
 ### Provide 'delete' access to a table
 
 * Repeat steps as above, select 'delete' in the Operation field.
 
 <p align="center">
-  <img src="../assets/Snow_delete.PNG" />
+  <img src="../assets/Snow_delete.png" />
 </p>
 
 
@@ -300,7 +300,7 @@ For reference, we are taking example of sys _audit table. Below steps are applic
 * Repeat steps as above, but in the 'name' field, select table name in first input box and ' *' in second input box.
 
 <p align="center">
-  <img src="../assets/Snow_read_star.PNG" />
+  <img src="../assets/Snow_read_star.png" />
 </p>
 
 
@@ -309,18 +309,18 @@ For reference, we are taking example of sys _audit table. Below steps are applic
 * Navigate to **User administration > Roles**.
 
 <p align="center">
-  <img src="../assets/Snow_role.PNG" />
+  <img src="../assets/Snow_role.png" />
 </p>
 
 * Click **New**.
 * Fill the required details and click **Submit**.
 
-![Snow _role _create](../assets/Snow_role_create.PNG)
+![Snow _role _create](../assets/Snow_role_create.png)
 
 * Assign this role to user via **User Administration > Users > Edit Roles**.
 
 <p align="center">
-  <img src="../assets/Snow_user_role.PNG" />
+  <img src="../assets/Snow_user_role.png" />
 </p>
 
 <p align="center">
@@ -335,7 +335,7 @@ For reference, we are taking example of sys _audit table. Below steps are applic
 * Select the dictionary entry for the table. The table name always has an empty column name and **Type** `Collection`.
 
 <p align="center">
-  <img src="../assets/Snow_audit.PNG" />
+  <img src="../assets/Snow_audit.png" />
 </p>
 
 
