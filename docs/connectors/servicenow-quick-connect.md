@@ -170,7 +170,7 @@ Provide query in 'Target Search Query' such that it is possible to search the en
 * **Criteria to get entities whose state is Open** 
   Example: 
   `state=1` 
-  &#xNAN;_&#x48;ow to get value 1 for the state Open?_
+  * How to get value 1 for the state Open?_
 
 <p align="center">
   <img src="../assets/Snow4.png" />
