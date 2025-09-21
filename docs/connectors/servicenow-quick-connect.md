@@ -44,7 +44,7 @@ ServiceNow Quick Connect tracks incident, change, and problem history in the sys
 * OpsHub Integration Manager must be enabled for the ServiceNow Express instance. You can get this app from ServiceNow appStore: [https://store.servicenow.com/sn _appstore _store.do#!/store/application/8e6f0b610f8ce6001f6fc3ace1050ebb](https://store.servicenow.com/sn_appstore_store.do#!/store/application/8e6f0b610f8ce6001f6fc3ace1050ebb)
 
 <p align="center">
-  <img src="../assets/Snow_Store.PNG" />
+  <img src="../assets/Snow_Store.png" />
 </p>
 
 * On the OpsHub Integration Manager App page, click on **Get** and provide your ServiceNow Quick Connect HI Credentials.
@@ -142,7 +142,7 @@ _To overcome manual overhead of updating entity to reflect attachment changes im
 **Sample Business Rule Script** 
 
 <p align="center">
-  <img src="../assets/snow_rule_audit_attachment.PNG" />
+  <img src="../assets/snow_rule_audit_attachment.png" />
 </p>
 
 
@@ -274,7 +274,7 @@ For reference, we are taking example of sys _audit table. Below steps are applic
 * Under **Requires role** section, add the role for which read access needs to be provided.
 
 <p align="center">
-  <img src="../assets/Snow_read.Png" />
+  <img src="../assets/Snow_read.png" />
 </p>
 
 
