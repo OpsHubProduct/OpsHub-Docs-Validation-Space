@@ -47,7 +47,6 @@ Refer [Custom Field](#custom-field-configuration) section in appendix to learn h
 * If you want to specify conditions for synchronizing an entity between Redmine and the other system to be integrated, you can use the Criteria Configuration feature.  
 * Go to Criteria Configuration section on [Integration Configuration](../integrate/integration-configuration.md) page for further details.  
 * To configure criteria in Redmine, integration needs to be created with Redmine as the source system. OpsHub Integration Manager supports criteria on native queries which are supported by Redmine Rest API. The format of criteria query is [Internal Name] = [Value of Id for desired property]
-
 * Some of the properties on which OpsHub Integration Manager support queries are as follows:
   * Tracker
   * Status
@@ -59,67 +58,73 @@ The relative ids for the properties are given in the table below:
 
 | **Property Name** | **Internal Name** | **Description** |
 |------------------|-------------------|-----------------|
-| Tracker          | tracker_id        | [More info](https://www.redmine.org/projects/redmine/wiki/Rest_Trackers) |
+| Tracker          | tracker_id        | https://www.redmine.org/projects/redmine/wiki/Rest_Trackers |
 | Status           | status_id         | [More info](https://www.redmine.org/projects/redmine/wiki/Rest_IssueStatuses) |
 | Assigned To      | assigned_to_id    | [More info](https://www.redmine.org/projects/redmine/wiki/Rest_Users) |
 | Priority         | priotity_id       | [More info](https://www.redmine.org/projects/redmine/wiki/Rest_Enumerations) |
 | Custom Fields    | cf_x              | [More info](https://www.redmine.org/projects/redmine/wiki/Rest_CustomFields) |
 
-### Sample Query
+## Sample Query
 * Polling all the issues with status 'Closed'.  
-  - Let the id of status closed under issue_statuses table be 3. So, query formed will be: `status_id=3`
+  - Let the id of status closed under issue_statuses table be 3. So, query formed will be: 'status_id=3'
 
 * Polling the issues with custom description having value 'hello'.  
-  - Let the id of custom description field be 3. So, query formed will be: `cf_3=hello`
+  - Let the id of custom description field be 3. So, query formed will be: 'cf_3=hello'.
 
-* Polling the issues with more than one criteria (e.g., status as 'Closed' and custom description as 'hello')  
-  - Query: `cf_3=hello&status_id=3`  
-  - [More info](https://www.redmine.org/projects/redmine/wiki/Rest_Issues)
+* Polling the issues with more than one criteria: For example, poll the issues having status as 'Closed' and custom description as 'hello'. For more details about criteria query with more than one parameters, refer to https://www.redmine.org/projects/redmine/wiki/Rest_Issues.  
+  - The query formed will be 'cf_3=hello&status_id=3'.
 
 # Target Lookup Configuration
 Provide Query in Target Search Query field so that it is possible to search the entity in Redmine when it is the target system.  
 Go to **Search in Target Before Sync** section on [Integration Configuration](../integrate/integration-configuration.md) page to learn in detail about how to configure Target Lookup.  
 Target LookUp configuration is similar to the Criteria Configuration where in the target search query field, you can provide a placeholder for the source system’s field value in-between ‘@’.
 
+The internal names of the properties are listed in the table below, and can be used in the Target Lookup query:
+
+
 | **Property Name** | **Internal Name** | **Description** |
 |------------------|-------------------|-----------------|
-| Tracker          | tracker_id        | [More info](https://www.redmine.org/projects/redmine/wiki/Rest_Trackers) |
-| Status           | status_id         | [More info](https://www.redmine.org/projects/redmine/wiki/Rest_IssueStatuses) |
-| Assigned To      | assigned_to_id    | [More info](https://www.redmine.org/projects/redmine/wiki/Rest_Users) |
-| Priority         | priotity_id       | [More info](https://www.redmine.org/projects/redmine/wiki/Rest_Enumerations) |
-| Custom Fields    | cf_x              | [More info](https://www.redmine.org/projects/redmine/wiki/Rest_CustomFields) |
+| Tracker          | tracker_id        | To know more about trackers_id please refer to https://www.redmine.org/projects/redmine/wiki/Rest_Trackers. |
+| Status           | status_id         | To know more about status_id please refer to https://www.redmine.org/projects/redmine/wiki/Rest_IssueStatuses |
+| Assigned To      | assigned_to_id    | To know more about users_id please refer to https://www.redmine.org/projects/redmine/wiki/Rest_Users |
+| Priority         | priotity_id       | To know more about proirity_id please refer to https://www.redmine.org/projects/redmine/wiki/Rest_Enumerations |
+| Custom Fields    | cf_x              | To know more about custom_fields_id, please refer to https://www.redmine.org/projects/redmine/wiki/Rest_CustomFields |
 
-### Sample Queries
+## Sample Queries
 
 * Target Lookup Query for a constraint on a **single field**:  
   `(subject=@Title@)`  
-  **Description:** Selects only entities that have the same "subject" as the source system's "title".
+  **Description:** It represents a query that will select only entities that have the same "subject" field value as the source system's "title" field value.
 
-* Target Lookup Query for **multiple fields**:  
+* Target Lookup Query for constraints on **multiple fields**:  
   `(status_id=@State@&subject=@Title@)`  
-  **Description:** Matches both "status" and "subject" fields from source system values.
+  **Description:** It represents a query that selects only entities whose "status" field value matches the source system's "state" field value and whose "subject" field value matches the source system's "title" field value.
 
 # Known Behaviour
-* **Comments Synchronization:** Notes in the Redmine will be synchronized as comments at the other end point.
-* **Issues Synchronization:** OpsHub Integration Manager supports synchronization of the trackers under the issues type.
-* **SubTask Synchronization:** Relationship should be configured in mapping with link type as ParentChild.
-* **Version Type Field:**  
-  - Values must be the same across all syncing projects.  
-  - Project must be selected at the mapping level.  
-  - Redmine API does not provide fields project-wise; all fields are shown.
+* Comments Synchronization:
+  * On enabling comments synchronization, Notes in the Redmine will be synchronized as comments at the other end point.
+* Issues Synchronization:
+  * Currently OpsHub Integration Manager supports synchronization of the trackers under the issues type.
+* SubTask Synchronization:
+  * To synchronize subtasks, relationship should be configured in mapping configuration with link type as ParentChild.
+* Version type Field:
+  * For Version Type field , in case of multi-project sync, the values need to be same across all the projects in the Redmine, which are the part of the sync.
+    * For the above field sync, the project needs to be selected at the mapping level.
+       * Reason: Redmine API requires the project input to fetch the values of Version type field.
+  * However, the fields shown at mapping level will not be project[selected at mapping level] specific. The fields for all the projects will be visible at mapping level.
+   * Reason: Redmine API does not provide a way to fetch the fields project-wise.
 
 # Known Limitations
-* **Related Issues changes not synced if only relation links are updated:**  
-  - Reason: Redmine does not update the entity’s updated time.  
-  - Solution: Make any additional field update in Redmine.
-
-* **Inline images synchronization:**  
-  - Depends on support from target system.  
-  - Case mismatch between inline image reference and attachment filename may cause issues.
-
-* **Unsupported plugin-based field types.**
-
-* **At least one issue of any type must exist in Redmine before mapping configuration.**
+* Synchronization of issues that have change only in the related issues(relation link) for any entity will not sync to the target system:
+  * Reason: When the related issues are changed in an entity(either a related issue is added or removed), in that case Redmine does not update the updated time of the entity.
+  * Solution: To synchronize such related issues changes, an additional update is needed to any system or custom field of Redmine.
+* Synchronization of the inline images:
+  * Inline images are synchronized to the target system depending on whether the target system supports them or not.
+  * The inline image may not synchronize properly in the below mentioned use case:
+    * Referencing of the inline images with attachment is case insensitive in Redmine. For example, if the attachment name is Capture.PNG and the attachment refered as inline image is written as !Capture.png!, Redmine will still refer to 'Capture.PNG' attachment. The other end point system may not refer to the attachment if their is any mismatch in case of inline image and attachment.
+* Issues' Synchronization:
+  * OpsHub Integration Manager does not provide support for field type coming from plugin(s) as of now.
+* At least one issue of any type must be created in the Redmine instance before performing mapping configuration in the OpsHub Integration Manager.
 
 # Appendix
 
@@ -132,50 +137,53 @@ Target LookUp configuration is similar to the Criteria Configuration where in th
 6. Check the **Administrator** box.  
 7. Click the **Create** button.
 
-<p align="center"><img src="../assets/Redmine_Image_2.png" alt="Add User"></p>
+<p align="center"><img src="../assets/Redmine_Image_2.png"></p>
 
 ## Assigning User to Projects
-1. Log in as Administrator.  
-2. Go to **Administration > Projects**.  
-3. Select the project and click **Members**.  
-4. Select the user and assign the **Role**.  
-5. Click **Add**.
+* Log in to Redmine as a user with Administrator rights.
+* Click **Administration**.
+* Select **Projects**.
+* Click the project to which the user is to be assigned.
+* Click **Members**.
+* Select the user to be assigned, along with the Role.
+* Click **Add** button.
 
-<p align="center"><img src="../assets/Redmine_Image_3.png" alt="Assign User"></p>
+<p align="center"><img src="../assets/Redmine_Image_3.png"></p>
 
 ## Custom Field Configuration
-OpsHub Integration Manager needs special fields to track integration status.
+OpsHub Integration Manager needs a few special fields to be defined on the entity that is being synchronized. These must be set up so that OpsHub Integration Manager can track the integration status of each item.
 
-<p align="center"><img src="../assets/Redmine_Image_4.png" alt="Custom Field Config 1"></p>
+<p align="center"><img src="../assets/Redmine_Image_4.png" width="600"></p>
 
-1. Log in as Administrator.  
-2. Click **Custom fields**.
+* Log in to Redmine as a user with Administrator rights.
+* Click Custom fields.
 
-<p align="center"><img src="../assets/Redmine_Image_5.png" alt="Custom Field Config 2"></p>
+<p align="center"><img src="../assets/Redmine_Image_5.png" width="600"></p>
 
-3. Click **+** to add a new custom field.  
-4. Enter field name, select format **Text**, set max length to 255.  
-5. Attach to all Tracker types.  
-6. Check **For all Projects**, **Used as a Filter**, **Searchable**.  
-7. Click **Save**.
+* Click the + Sign to add a new custom field.
+* Enter custom field name.
+* Select format Text.
+* Set Maximum length to 255.
+* Attach it to the all Tracker types.
+* Check the options for For all Projects, Used as a Filter, Searchable.
+* Click Save button.
 
-<p align="center"><img src="../assets/Redmine_Image_6.png" alt="Custom Field Config 3"></p>
+<p align="center"><img src="../assets/Redmine_Image_6.png" width="500"></p>
 
 ## Find Version
-1. Log in as Administrator.  
+1. Log in to Redmine as a user with Administrator rights. 
 2. Go to **Administration > Information**.  
-3. The version will be displayed.
+3. Click **Information**. It will display the Redmine version.
 
-<p align="center"><img src="../assets/Redmine_Image_7.png" alt="Find Version"></p>
+<p align="center"><img src="../assets/Redmine_Image_7.png" width="500"></p>
 
 ## Redmine Configuration
-By default, **Enable REST API** is disabled.
+By default, Enable Rest API option is disabled in Redmine.
+Given below are the steps to enable REST API option:
 
-To enable it:
-
-1. Log in as Administrator.  
+1. Log in to Redmine as a user with Administrator rights. 
 2. Go to **Settings > Authentication** tab.  
-3. Check **Enable REST web service**.  
-4. Click **OK**.
+3. Under Authentication tab, check mark the option of **Enable REST web service** if it is not checked. 
+4. Press **OK** button.
 
-<p align="center"><img src="../assets/Redmine_Image_8.png" alt="Enable REST API"></p>
+<p align="center"><img src="../assets/Redmine_Image_8.png" width="600"></p>
