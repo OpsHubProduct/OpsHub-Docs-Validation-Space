@@ -36,7 +36,10 @@ Click [System Configuration](../integrate/system-configuration.md) to learn the 
 
 Refer the screenshot given below for reference.
 
-![Trac Image 1a](../assets/Trac_Image_1a.png)
+<p align="center">
+  <img src="../assets/Trac_Image_1a.png" />
+</p>
+
 
 If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
@@ -76,9 +79,11 @@ reporter=xyz
 * In **Admin** tab, select **Permission** from the left panel. 
 * In **Subject** of **Grant Permission** option named the resource to which you want to give privilege. For Example, 'oimuser'. 
 * In **Action** of **Grant Permission** options, select the permission you want to give to the selected Subject. For Example, 'XML_RPC'. 
-* Click **Add** to give the permission.  
-
-![Trac Image 2a](../assets/Trac_Image_2a.png)
+* Click **Add** to give the permission.
+  
+<p align="center">
+  <img src="../assets/Trac_Image_2a.png" />
+</p>
 
 ## Custom Field Configuration
 
@@ -101,15 +106,20 @@ reporter=xyz
   customField.order = 2
   customField.value =
   ```
+<p align="center">
+  <img src="../assets/Trac_Image_3a.png" />
+</p>
 
-![Trac Image 3a](../assets/Trac_Image_3a.png)
 
 ## Version
 
 * Open the tracurl : `http://<hostname>:<portno>/<TrcProjectName>` 
 * Click on Wiki tab.  
 
-![Trac Image 4](../assets/Trac_Image_4.png)
+<p align="center">
+  <img src="../assets/Trac_Image_4.png" />
+</p>
+
 
 ## Custom Field Internal Name
 
@@ -118,4 +128,8 @@ reporter=xyz
 * From the page displayed, click on **Custom Field** link on the left menu. It will show list of custom fields if any configured with a link to **Add a new custom field** at the end. 
 * **Edit Custom Field** shows custom field **Internal Name**.
 
-![Trac Image 5](../assets/Trac_Image_5.png)
+<p align="center">
+  <img src="../assets/Trac_Image_5.png" />
+</p>
+
+
