@@ -142,7 +142,7 @@ _To overcome manual overhead of updating entity to reflect attachment changes im
 **Sample Business Rule Script** 
 
 <p align="center">
-  <img src="../assets/snow_rule_audit_attachment.png" />
+  <img src="../assets/Snow_rule_audit_attachment.png" />
 </p>
 
 
@@ -343,14 +343,30 @@ For reference, we are taking example of sys _audit table. Below steps are applic
 
 ## How to change attachment table configuration
 
-1. Click **Tables** from **System Definition** on left side panel. 
-   ![snow _systemdef _panel](../assets/snow_systemdef_panel.png)
-2. Click **Attachment** table from the displayed list. 
-   ![snow _attachment _tablelist](../assets/snow_attachment_tablelist.png)
-3. Double click **Max Length** cell of the **File Name** column. 
-   ![snow _attachment _table _columnlist](../assets/snow_attachment_table_columnlist.png)
+1. Click **Tables** from **System Definition** on left side panel.
+   
+  <p align="center">
+  <img src="../assets/snow_systemdef_panel.png" />
+</p>
+
+2. Click **Attachment** table from the displayed list.
+   
+<p align="center">
+  <img src="../assets/snow_attachment_tablelist.png" />
+</p>
+
+3. Double click **Max Length** cell of the **File Name** column.
+   
+ <p align="center">
+  <img src="../assets/snow_attachment_table_columnlist.png" />
+</p>
+
 4. Change value to maximum possible length and click the save icon. 
-   ![snow _attachment _filename _length](../assets/snow_attachment_filename_length.png)
+
+<p align="center">
+  <img src="../assets/snow_attachment_filename_length.png" />
+</p>
+
 
 ## Overwrite API Endpoints using JSON
 
