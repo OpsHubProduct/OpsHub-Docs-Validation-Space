@@ -37,7 +37,7 @@ Attachment name, data, and size field should be configured in the following form
   `Attachment1_attachmentOrigSize`.
 
 <p align="center">
-  <img src="../assets/Remedy_Image_1a.png" width="500" />
+  <img src="../assets/Remedy_Image_1a.png" width="800" />
 </p>
 
 
@@ -111,5 +111,6 @@ To create a new custom field in Remedy, follow the steps given below:
 
 * Save web-service and the form.
 * Restart the Remedy Tomcat Server.
+
 
 
