@@ -15,7 +15,7 @@
 # Create Connection
 
 <p align="center">
-  <img src="../../assets/Connection1.png" width="500" />
+  <img src="../assets/Connection1.png" width="500" />
 </p>
 
 
@@ -38,7 +38,7 @@ Steps for Creating Database Connection:
 # View Connections
 
 <p align="center">
-  <img src="../../assets/Connection2.png" width="500" />
+  <img src="../assets/Connection2.png" width="500" />
 </p>
 
 Steps for viewing Database Connections:
@@ -50,7 +50,7 @@ Steps for viewing Database Connections:
 # Edit Connection
 
 <p align="center">
-  <img src="../../assets/Connection3.png" width="500" />
+  <img src="../assets/Connection3.png" width="500" />
 </p>
 
 1. Navigate to **Administration -> Connection Management**.
