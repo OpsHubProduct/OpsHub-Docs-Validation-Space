@@ -5,7 +5,7 @@
 - Create a dedicated integration user in ETM. This user shouldn't perform any other action from ETM interface.
 - User must be a member of projects used to synchronize entities/artifacts.
 - User can use **Forms-based authentication** or **OAuth 1.0** authentication mode to communicate with API for ETM.  
-  ** Refer to [[#OAuth_Configuration| OAuth Configuration]] section to learn how to create OAuth token.
+  ** Refer to [OAuth Configuration](#oauth-configuration) section to learn how to create OAuth token.
 
 ## Required Permissions
 
@@ -60,11 +60,12 @@ Before configuring the integration, you must first configure ETM. Refer to [Syst
 
 Refer to the following screenshot below with **Authentication Type** as Form-based authentication:
 
-![ETMSystemform1.png](ETMSystemform1.png){ width=550px }
+<img src="../assets/ETMSystemform1.png"  width="550px">
 
 Refer to the following screenshot below with **Authentication Type** as OAuth 1.0:
 
-![ETMSystemform2.png](ETMSystemform2.png){ width=550px }
+<img src="../assets/ETMSystemform2.png"  width="550px">
+
 
 | **Field Name**           | **When is the field visible**                    | **Description**                                                                                                                                                                                                                                                                             |
 |--------------------------|-------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -145,14 +146,13 @@ This allows:
 
 ## Cross-System Linkage with Other IBM Systems
 
-- For more information on configuring cross-system linkages, refer to the following document:  
-[**Cross System Linkages for IBM System**](#how-to-configure-cross-system-linkage-in-ibm-systems)
+- For more information on configuring cross-system linkages, refer to the following document: [**Cross System Linkages for IBM System**](../help-center/faqs/general/how-to-configure-cross-system-linkage-in-ibm-systems.md)
 
 # Integration Configuration
 
 Select projects & entities to be synchronized between ETM and the other system to be integrated. Also, define parameters and conditions, if any, for integration. Refer to [Integration Configuration](..integrate/integration-configuration.md) page to learn the step-by-step process to configure integration between two systems.
 
-![ETMIntegrationform.png](ETMIntegrationform.png){ width=1100px }
+<img src="../assets/ETMIntegrationform.png"  width="1100px">
 
 ## Criteria Configuration
 
@@ -192,7 +192,7 @@ ETM query is a normal SQL type query where you can frame simple queries on the b
 
 ## Target Lookup Configuration
 
-Provide query in Target Search Query field to be able to search the entity in ETM when it is the target system. Go to [[Integration Configuration#Search_in_Target_Before_Sync| **Search in Target Before Sync**]] section on Integration Configuration page to learn in detail on how to configure the Target Lookup. The Target LookUp configuration is similar to the Criteria configuration where in the target search query field, you can provide a placeholder for the source system’s field value between ‘@’ and '@'. Refer to the examples below:
+Provide query in Target Search Query field to be able to search the entity in ETM when it is the target system. Go to [**Search in Target Before Sync**](../integrate/integration-configuration.md#search-in-target-before-sync) section on Integration Configuration page to learn in detail on how to configure the Target Lookup. The Target LookUp configuration is similar to the Criteria configuration where in the target search query field, you can provide a placeholder for the source system’s field value between ‘@’ and '@'. Refer to the examples below:
 
 ### Sample Query
 
@@ -212,10 +212,10 @@ Provide query in Target Search Query field to be able to search the entity in ET
 
 ## OAuth Access Token Timeout
 - On ETM admin panel, you can specify the timeout seconds for the OAuth Access Token.
-- The number of seconds provided here specifies that token will stay valid (till the number of seconds specified) while not being used. It is recommended to set this value based on usage. In case of token regeneration, refer to [[#OAuth_Configuration| OAuth Configuration]] section.
+- The number of seconds provided here specifies that token will stay valid (till the number of seconds specified) while not being used. It is recommended to set this value based on usage. In case of token regeneration, refer to [OAuth Configuration](#oauth-configuration) section.
 
 ## Behavior of 'Link' type field
-- Custom link type of field can be added in **Metadata Details**. For JSON format, refer to [[#Metadata_Configuration| Metadata Configuration]] section.
+- Custom link type of field can be added in **Metadata Details**. For JSON format, refer to [Metadata Configuration](#metadata-configuration) section.
 - After adding this field at system configuration level, 2 subfields will be visible at mapping configuration level to synchronize label & value of link separately.
 - Example:
   - Link type of custom field with name: CustomLink
@@ -225,7 +225,7 @@ Provide query in Target Search Query field to be able to search the entity in ET
 
 ## Custom lookup values for Priority
 - In each project, Priority field can have different custom lookup values.
-- All the custom lookup values along with default values are needed to be provided in **Metadata Details** while system configuration. Refer [[#System_Custom_Configuration| Metadata JSON to provide system & custom fields]] section for required JSON format to provide custom lookup values for **Priority** field.
+- All the custom lookup values along with default values are needed to be provided in **Metadata Details** while system configuration. Refer [Metadata JSON to provide system & custom fields](#system-custom-configuration) section for required JSON format to provide custom lookup values for **Priority** field.
 - If custom lookup values are not provided, then Priority field will have these default lookup values for each project:
   - Unassigned
   - Low
@@ -250,46 +250,45 @@ Provide query in Target Search Query field to be able to search the entity in ET
 # Appendix
 
 ## Permission Configuration
-
 ## Repository Permissions Configuration
-- Log in to Admin panel (<ETM URL>/qm/admin).
+- Log in to Admin panel (`<ETM URL>`/qm/admin).
 - Navigate to Users > Active Users > select OpsHub Integration Manager's dedicated user.
 - Provide required **Repository Permissions**. Click **Save**.
 
-![ETMrepo.png](ETMrepo.png){width=750px}
+<img src="../assets/ETMrepo.png" width="750px">
 
 ## Client Access Licenses Configuration
-- Log in to Admin panel (<ETM URL>/qm/admin).
+- Log in to Admin panel (`<ETM URL>`/qm/admin).
 - Navigate to Users > Active Users > select OpsHub Integration Manager's dedicated user.
 - Provide required **Client Access Licenses**. Click **Save**.
-
-![ETMlicense.png](ETMlicense.png){width=950px}
+  
+<img src="../assets/ETMlicense.pn" width="950px">
 
 ## User Permission Configuration
-- Log in to Admin panel (<ETM URL>/qm/admin).
+- Log in to Admin panel (`<ETM URL>`/qm/admin).
 - Navigate to Project Areas > Active Project Areas > select project > Permissions.
 - Provide required **Permissions** to a role which is added to OpsHub Integration Manager's dedicated user. Click **Save**.
 
-![ETMpermission.png](ETMpermission.png){width=900px}
+<img src="../assets/ETMpermission.png" width="900px">
 
 ## Page-size Configuration
-- Log in to Admin panel (<ETM URL>/qm/admin).
+- Log in to Admin panel (`<ETM URL>`/qm/admin).
 - Navigate to Application > Advanced Properties > ETM Integration Component.
 - Provide required page-size to **Max Feed Entries/Page** (maximum page size - 512). Click **Save**.
 
-![ETMpagesize.png](ETMpagesize.png){width=800px}
+<img src="../assets/ETMpagesize.png" width="800">
 
 ## OAuth Configuration
 
 Following are the steps to be performed for generating OAuth token for ETM system:
 
 ## Generate Customer Key & Consumer Secret
-- Log in to Admin panel (<ETM URL>/qm/admin) with user whose OAuth token needs to be generated.
+- Log in to Admin panel (`<ETM URL>`/qm/admin) with user whose OAuth token needs to be generated.
 - Navigate to Application > Consumers (Inbound) > OAuth Consumers section.
 - Enter the **Consumer Name**, **Consumer Secret**, and click **Register**. A **Consumer Key** will be auto generated.
 - After successfully registering the consumer, the Consumer Name and Consumer Key will be added in the **Authorized Keys** section.
 
-![ETMoauth1.png](ETMoauth1.png){width=950px}
+<img src="../assets/ETMoauth1.png" width="950">
 
 ## Generate OAuth Token and OAuth Token Secret for the generated Consumer Key
 Generate an OAuth token using a third-party REST client such as Postman. Once consumer key and consumer secret are generated in end system, following are the 3 steps to be performed: 
@@ -300,7 +299,7 @@ Generate an OAuth token using a third-party REST client such as Postman. Once co
 - Set **Consumer Key** and **Consumer Secret** in the request. Click **Send**.  
 - In the response, OAuth token and OAuth token secret will be generated.
 
-![ETMoauth2.png](ETMoauth2.png){width=750px}
+<img src="../assets/ETMoauth2.png" width="750px">
 
 **Authorize OAuth Request Token**  
 - To authorize OAuth Request Token, prepare the request mentioned below and open it in the browser. It requires login with a user who has admin privileges.  
@@ -314,12 +313,12 @@ Generate an OAuth token using a third-party REST client such as Postman. Once co
 - Set the **GET** method with URL as `<ETM URL>/qm/oauth-access-token` & set the Authentication Type as **OAuth 1.0**.  
 - Set the required fields, i.e., **Customer Key** & **Customer Secret**. Provide the **OAuth token** and **OAuth token secret** that was generated in previous step. Click **Send**.  
 - In the response, OAuth token and OAuth token secret will be generated.
-
-![ETMoauth3.png](ETMoauth3.png){width=750px}
+  
+<img src="../assets/ETMoauth3.png" width="750px">
 
 While creating/updating ETM system configuration in OpsHub Integration Manager, select **OAuth 1.0** as Authentication Type. Also, provide these 4 inputs:  
-- Consumer Key & Consumer Secret (generated in [[#Consumer_key_secret| Generate Customer Key & Consumer Secret]])  
-- OAuth Token & OAuth Token Secret (generated in [[#OAuth_token_secret| Get the OAuth Access Token]])  
+- Consumer Key & Consumer Secret (generated in [Generate Customer Key & Consumer Secret](#consumer-key-secret))  
+- OAuth Token & OAuth Token Secret (generated in [Get the OAuth Access Token](#oauth-token-secret))  
 
 ## Custom Field Configuration
 - Log in to ETM.
@@ -327,11 +326,11 @@ While creating/updating ETM system configuration in OpsHub Integration Manager, 
 - Go to **Administration** > **Manage Project Properties** > **Custom Attributes** > select entity.
 - Provide **Attribute Name** & **Type**. Click **Save**.
 
-![ETMCustomField.png](ETMCustomField.png){width=950px}
+<img src="../assets/ETMCustomField.png" width="950px">
 
 ## Metadata Configuration
 - If any custom field is added in ETM that requires synchronization via OpsHub Integration Manager, provide that in the custom field details of **Metadata Details** at system configuration level.
-- System fields are provided by default. If they need to be overwritten, provide the details in **Metadata Details** at the system configuration level. Refer to [[#System_Custom_Configuration| Metadata JSON to provide system & custom fields]] section for a sample JSON.
+- System fields are provided by default. If they need to be overwritten, provide the details in **Metadata Details** at the system configuration level. Refer to [Metadata JSON to provide system & custom fields](#system-custom-configuration) section for a sample JSON.
 - This details are required in specific JSON format. Below is the format of metadata:
 
 ```json
@@ -356,7 +355,7 @@ While creating/updating ETM system configuration in OpsHub Integration Manager, 
     }
   ]
 }
-
+```
 * Refer to [Identify internal name of projects](#identify-internal-name-of-projects)section to get the internal names of each project 
 
 ### Metadata JSON to provide custom fields with different datatypes
@@ -525,5 +524,6 @@ While creating/updating ETM system configuration in OpsHub Integration Manager, 
 ## Identify internal name of projects
 
 * Prepare the following request and open it in the browser.  
-** List project URL: https://{instance}:{port}/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects
+  * List project URL: https://{instance}:{port}/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects
 * From the response, get the internal value of each project from `feed > entry > content > project > alias`.
+
