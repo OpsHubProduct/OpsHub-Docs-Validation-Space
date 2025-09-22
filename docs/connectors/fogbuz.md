@@ -13,7 +13,7 @@ Before you continue to the integration, you must first configure FogBugz. Click 
 Refer the screenshot given below for reference.  
 
 <p align="center">
-  <img src="../assets/FB_Image_9a.png" width="800">
+  <img src="../assets/FB_Image_9a.png" width="1000">
 </p>
 
 For checking version and api_key, refer [How to get API URL and Version?](#how-to-get-api-url-and-version) section in appendix.
@@ -42,9 +42,8 @@ Click [Integration Configuration](../integrate/integration-configuration.md) to 
 
 Click [Create Custom Fields](#create-custom-fields) to learn how to create custom fields.
 
-## Appendix
-
-### Add user
+# Appendix
+## Add user
 
 * Login to FogBugz server.
 * Click on **Admin** on the right top corner and select **Users**.
@@ -65,7 +64,7 @@ Click [Create Custom Fields](#create-custom-fields) to learn how to create custo
   <img src="../assets/FB_Image_3.png">
 </p>
 
-### Set User Time Zone
+## Set User Time Zone
 
 * Log into **FogBugz** server.
 * Click **Admin** tab on the top-right corner and select **Users**.
@@ -81,7 +80,7 @@ Click [Create Custom Fields](#create-custom-fields) to learn how to create custo
   <img src="../assets/FB_Image_4.png">
 </p>
 
-### Create Custom Fields
+## Create Custom Fields
 
 * Login to FogBugz server.
 * Click on **Admin** menu.
@@ -104,6 +103,6 @@ Click [Create Custom Fields](#create-custom-fields) to learn how to create custo
   <img src="../assets/FB_Image_8.png">
 </p>
 
-### How to get API URL and Version?
+## How to get API URL and Version?
 
 Go to http://fogbugz.stackexchange.com/fogbugz-xml-api and see **Checking the API version and location**.
