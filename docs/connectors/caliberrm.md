@@ -25,7 +25,7 @@ This configuration is required before creating mappings or integrations with Cal
 Before you continue to the integration, you must first configure Caliber RM. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system. Refer the screenshot given below for reference.
 
 <p align="center">
-  <img src="../assets/Caliber_RM_Image_1a.png" width="800" />
+  <img src="../assets/Caliber_RM_Image_1a.png" width="1000" />
 </p>
 
 If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
@@ -41,4 +41,5 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 
 Set a time to synchronize data between Caliber RM and the other system to be integrated. Also, define parameters and conditions, if any, for integration.  
 Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
+
 
