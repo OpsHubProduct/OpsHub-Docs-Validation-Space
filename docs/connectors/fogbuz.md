@@ -13,7 +13,7 @@ Before you continue to the integration, you must first configure FogBugz. Click 
 Refer the screenshot given below for reference.  
 
 <p align="center">
-  <img src="../assets/FB_Image_9a.png">
+  <img src="../assets/FB_Image_9a.png" width="800">
 </p>
 
 For checking version and api_key, refer [How to get API URL and Version?](#how-to-get-api-url-and-version) section in appendix.
