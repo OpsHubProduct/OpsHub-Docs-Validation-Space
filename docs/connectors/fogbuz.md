@@ -77,7 +77,7 @@ Click [Create Custom Fields](#create-custom-fields) to learn how to create custo
 * Set Time Zone to: **(UTC) Coordinated Universal Time**.
 
 <p align="center">
-  <img src="../assets/FB_Image_4.png" width="400">
+  <img src="../assets/FB_Image_4.png" width="700">
 </p>
 
 ## Create Custom Fields
@@ -86,7 +86,7 @@ Click [Create Custom Fields](#create-custom-fields) to learn how to create custo
 * Click on **Admin** menu.
 
 <p align="center">
-  <img src="../assets/FB_Image_5.png" width="400">
+  <img src="../assets/FB_Image_5.png" width="700">
 </p>
 
 * Select **Plugins** from menu.
@@ -94,10 +94,10 @@ Click [Create Custom Fields](#create-custom-fields) to learn how to create custo
 * Click **Add New Custom Field**.
 
 <p align="center">
-  <img src="../assets/FB_Image_6b.png" width="400">
+  <img src="../assets/FB_Image_6b.png" width="700">
 </p>
 <p align="center">
-  <img src="../assets/FB_Image_7.png" width="400">
+  <img src="../assets/FB_Image_7.png" width="700">
 </p>
 <p align="center">
   <img src="../assets/FB_Image_8.png" >
