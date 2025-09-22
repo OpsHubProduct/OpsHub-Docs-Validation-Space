@@ -86,7 +86,7 @@ Click [Create Custom Fields](#create-custom-fields) to learn how to create custo
 * Click on **Admin** menu.
 
 <p align="center">
-  <img src="../assets/FB_Image_5.png">
+  <img src="../assets/FB_Image_5.png" width="400">
 </p>
 
 * Select **Plugins** from menu.
@@ -97,10 +97,10 @@ Click [Create Custom Fields](#create-custom-fields) to learn how to create custo
   <img src="../assets/FB_Image_6b.png" width="400">
 </p>
 <p align="center">
-  <img src="../assets/FB_Image_7.png">
+  <img src="../assets/FB_Image_7.png" width="400">
 </p>
 <p align="center">
-  <img src="../assets/FB_Image_8.png">
+  <img src="../assets/FB_Image_8.png" >
 </p>
 
 ## How to get API URL and Version?
