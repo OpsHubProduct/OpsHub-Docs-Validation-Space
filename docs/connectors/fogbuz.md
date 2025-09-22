@@ -86,7 +86,7 @@ Click [Create Custom Fields](#create-custom-fields) to learn how to create custo
 * Click on **Admin** menu.
 
 <p align="center">
-  <img src="../assets/FB_Image_5.png" width="700">
+  <img src="../assets/FB_Image_5.png" width="400">
 </p>
 
 * Select **Plugins** from menu.
@@ -94,7 +94,7 @@ Click [Create Custom Fields](#create-custom-fields) to learn how to create custo
 * Click **Add New Custom Field**.
 
 <p align="center">
-  <img src="../assets/FB_Image_6b.png" width="700">
+  <img src="../assets/FB_Image_6b.png" width="800">
 </p>
 <p align="center">
   <img src="../assets/FB_Image_7.png" width="700">
