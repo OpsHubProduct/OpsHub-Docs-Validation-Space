@@ -48,7 +48,7 @@ DOORS system allows users to add Rich Text formatting to Text/String type of fie
 Before you continue to the integration, you must first configure the DOORS system. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system. Refer to the screenshot given below for reference. 
 
 <p align="center">
-  <img src="DOORS_Image_6f.png"/>
+  <img src="../assets/DOORS_Image_6f.png"/>
 </p>
 
 
@@ -305,13 +305,13 @@ OH_InLink
 * Navigate to the edit menu and click on Attributes.
 
 <p align="center">
-  <img src="DOORS_Image_1.png"  />
+  <img src="../assets/DOORS_Image_1.png"  />
 </p>
 
 * Then, click the 'new button. Now, set attribute name (Do not use the name specified in DOORS Reserved keyword list section), select the appropriate type and if needed, set the appropriate default value.
 
 <p align="center">
-  <img src="DOORS_Image_2.png"  />
+  <img src="../assets/DOORS_Image_2.png"  />
 </p>
 
 * Finally, click OK and save the module.
@@ -325,7 +325,7 @@ OH_InLink
 * Navigate to Access tab and set appropriate rights.
 
 <p align="center">
-  <img src="DOORS_Image_3.png"/>
+  <img src="../assets/DOORS_Image_3.png"/>
 </p>
 
 ## Find version
@@ -333,14 +333,14 @@ OH_InLink
 * Navigate to help menu, and click About DOORS
 
 <p align="center">
-  <img src="DOORS_Image_4.png"/>
+  <img src="../assets/DOORS_Image_4.png"/>
 </p>
 
 
 * It will open a separate window that will show DOORS server version.
 
 <p align="center">
-  <img src="DOORS_Image_5.png"/>
+  <img src="../assets/DOORS_Image_5.png"/>
 </p>
 
 
@@ -467,4 +467,5 @@ Steps to execute and verify:
 4. Click on Run to execute the DXL. If the download is successful, then DONE will be printed in the DXL output window, and an RTF file will be generated at the specified path;
 5. Now open this generated RTF file using Microsoft Word. Click on File menu then click on Save as. Save this file as HTML;
 6. Open the saved HTML file. This file's output is how the data of this field will be displayed in the target system's field.
+
 
