@@ -99,7 +99,7 @@ For example, **Description** field is mapped in the mapping, and the **Complexit
 
 ## Mapping for Soft Delete Configuration
 
-* When Digital.ai Agility is the target system in the integration, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](source_delete_synchronization).
+* When Digital.ai Agility is the target system in the integration, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md).
 * After the soft delete operation is performed by OpsHub Integration Manager in Digital.ai Agility, the entity will be deleted in the Digital.ai Agility.
 * To only enable the logical delete operation in the target, "IsDeleted" field shall be mapped with the default value "No" in the [Delete Mode](../integrate/mapping-configuration.md#delete-mode) mapping.
 
@@ -377,4 +377,5 @@ You can add inline images in rich text type of fields from Digital.ai Agility UI
 
 ![Digital.ai Agility10](../assets/Digital.ai_Agility10.png)  
 <center>*Digital.ai Agility Project Management*</center>
+
 
