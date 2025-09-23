@@ -122,7 +122,7 @@ In this step, set a time to synchronize data between DOORS and the other system 
 
 ## Event Detection & Generation
 
-- DOORS support event detection on Object Number attribute: Please check [Event Detection & Generation](../integration/integration-configuration.md#event-detection-generation) section to learn more on how to enable the Event Detection & Generation feature.
+- DOORS support event detection on Object Number attribute: Please check [Event Detection & Generation](../integrate/integration-configuration.md#event-detection-generation) section to learn more on how to enable the Event Detection & Generation feature.
 - In DOORS, Object Number is a system and a calculated attribute. This attribute value is changed by add/move/remove operation on other object within the same module. However, Object's Last Modified Time does not get updated for such scenarios.
 - When DOORS is the source system and is running on history based sychronization, then the additional user credentials should be provided. The additional user credentials will be used to update the object in the source system. For current state synchronization, the additional user credentials are not required.
 
@@ -467,6 +467,7 @@ Steps to execute and verify:
 4. Click on Run to execute the DXL. If the download is successful, then DONE will be printed in the DXL output window, and an RTF file will be generated at the specified path;
 5. Now open this generated RTF file using Microsoft Word. Click on File menu then click on Save as. Save this file as HTML;
 6. Open the saved HTML file. This file's output is how the data of this field will be displayed in the target system's field.
+
 
 
 
