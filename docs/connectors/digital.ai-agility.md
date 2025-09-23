@@ -18,11 +18,14 @@
 |--------------------|--------------------|
 | ChangeSetId        | String             |
 
-## System Configuration
+# System Configuration
 
 Before you continue with the integration, you must first configure Digital.ai Agility. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system. Refer to the screenshot given below:
 
-![Digital.ai Agility1a](../assets/Digital.ai_Agility1a.PNG)
+<p align="center">
+  <img src="../assets/Digital.ai_Agility1a.png"/>
+</p>
+
 
 If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/how-to-import-a-certificate.md) to learn how to import SSL certificate.
 
@@ -37,20 +40,20 @@ If the system is deployed on HTTPS and a self-signed certificate is used, then y
 | **Digital.ai Agility Authentication Type** | Digital.ai Agility Authentication Type to be used for authentication |
 | **Digital.ai Agility Time Zone**  | Digital.ai Agility Time Zone-you can find this information from /config.v1. Based on this information, you can accordingly select the timezone. E.g., if TimeZoneId field in /config.v1 is shown as Eastern Time, then you need to select 'USEastern'. If TimeZoneId field has some other value, then select appropriate value accordingly |
 
-## Mapping Configuration
+# Mapping Configuration
 
 Map the fields between Digital.ai Agility and the other system to be integrated to ensure that the data between both the systems synchronize correctly.  
 Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
-> ![Note](../assets/Note.jpg) When Digital.ai Agility system is the destination system , it is mandatory to set **Project Path** field. In this field, you can select the Digital.ai Agility Project to be integrated.
+>**Note**: When Digital.ai Agility system is the destination system , it is mandatory to set **Project Path** field. In this field, you can select the Digital.ai Agility Project to be integrated.
 
-### Advanced Mapping Use Case
+## Advanced Mapping Use Case
 
 * If the user wants to take the decision based on the **unmapped** field in the **advanced mapping** of any **mapped** field, then the unmapped field's Xpath can be configured using the specific XSL patterns.
 
 For example, **Description** field is mapped in the mapping, and the **ComplexityRank** field is not mapped in the mapping. If the user wants to take decision based on **ComplexityRank** field in the advanced mapping of **Description** field, then the user can define the source Xpath for ComplexityRank, using the below XSL patterns:
 
-#### XSL Pattern: Any tag where prefix is XSL and Attribute is `select`
+### XSL Pattern: Any tag where prefix is XSL and Attribute is `select`
 
 **Example:**
 ```xml
@@ -64,7 +67,7 @@ For example, **Description** field is mapped in the mapping, and the **Complexit
 
 ---
 
-#### XSL Pattern: Tag is `<xsl:if>` and Attribute is `test`
+### XSL Pattern: Tag is `<xsl:if>` and Attribute is `test`
 
 **Example:**
 ```xml
@@ -79,7 +82,7 @@ For example, **Description** field is mapped in the mapping, and the **Complexit
 
 ---
 
-#### XSL Pattern: Tag is `<xsl:when>` and Attribute is `test`
+### XSL Pattern: Tag is `<xsl:when>` and Attribute is `test`
 
 **Example:**
 ```xml
@@ -94,27 +97,31 @@ For example, **Description** field is mapped in the mapping, and the **Complexit
 ```
 
 
-### Mapping for Soft Delete Configuration
+## Mapping for Soft Delete Configuration
 
 * When Digital.ai Agility is the target system in the integration, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](source_delete_synchronization).
 * After the soft delete operation is performed by OpsHub Integration Manager in Digital.ai Agility, the entity will be deleted in the Digital.ai Agility.
 * To only enable the logical delete operation in the target, "IsDeleted" field shall be mapped with the default value "No" in the [Delete Mode](../integrate/mapping-configuration.md#delete-mode) mapping.
 
-> ![Note](../assets/Note.jpg) For the "Actual" entity, the Soft delete operation is not available due to API limitation.
+>**Note**: For the "Actual" entity, the Soft delete operation is not available due to API limitation.
 
-## Integration Configuration
+# Integration Configuration
 
 Set a time to synchronize data between Digital.ai Agility and the other system to be integrated. Also, define parameters and conditions, if any, for integration.  
 Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
 
-![Integration Configuration](../assets/DI_Integration_Configuration.png)
+<p align="center">
+  <img src="../assets/DI_Integration_Configuration.png"/>
+</p>
+
 
 **Note:** As per OpsHub Integration Manager's default behavior, when you integrate projects that have child projects, child projects' entities also sync when integration starts.
 
 Look at the sample below. The 'Demo Project' shown here has two child projects as well. That means when you integrate 'Demo Project', child projects within it - CAB Approval and eCAB Approval - will also sync by default.
 
-![VersionOne_Project_Selection](../assets/VersionOne_Project_Selection.PNG)  
-<center>*Digital.ai Agility Project Selection*</center>
+<p align="center">
+  <img src="../assets/VersionOne_Project_Selection.png" />
+</p>
 
 To avoid this behavior, you can configure criteria in a manner that child projects are excluded during the integration. For example, you can set a query that specifies that data from only the project in the given integration's scope has to be synchronized.
 
@@ -124,14 +131,18 @@ The criteria query, in this case, should be:
 Example:  
 **Scope.Name = 'Demo Project'**
 
-![VersionOne_Project_Selection_Criteria](../assets/VersionOne_Project_Selection_Criteria.PNG)  
-<center>*Digital.ai Agility Project Selection Criteria*</center>
+<p align="center">
+  <img src="../assets/VersionOne_Project_Selection_Criteria.png" />
+</p>
+
 
 To sync multiple projects, the criteria query should be:  
 **Scope.Name='Project 1'\|Scope.Name='Project 2'**
 
-![VersionOne_Multi_Project_Selection](../assets/VersionOne_Multi_Project_Selection.PNG)  
-<center>*Digital.ai Agility Multiple Project Selection Criteria*</center>
+<p align="center">
+  <img src="../assets/VersionOne_Multi_Project_Selection.png" />
+</p>
+
 
 Click [Criteria Configuration](#criteria-configuration) to learn how to configure criteria.
 
@@ -147,7 +158,7 @@ There are two ways to sync Actuals.
 * Actuals as a field of the parent entity (Defect, Task, Story)  
 * Actuals as a separate entity with the parent entity, for example child relation between Actuals and parent entity
 
-> ![Note](../assets/Note.jpg) Actual as entity is the preferred approach. Do not use both the approaches together as it will lead to inconsistent data in end system.
+>**Note**: Actual as entity is the preferred approach. Do not use both the approaches together as it will lead to inconsistent data in end system.
 
 ##### Sync Actuals as a field of parent entity
 
@@ -202,17 +213,17 @@ For example:
 ```
 Where `Priority.Name` is a valid field on which one can specify query.
 
-### Sample Query
+## Sample Query
 
 - **Priority.Name="High";ChangeDate&gt;="2010-09-24T14:35:35.041"**
 
-* Example with one Lookup field (System Lookup field):  
+* An example of criteria with one 'Lookup field (System Lookup field)':  
   `Priority.Name="High"`
 
-* Example with one custom Lookup field and one date field:  
+* An example of criteria with one custom Lookup field and one date field:  
   `Custom_StartDate="2010-09-24T14:35:35.041";Custom_Effort="1"`
 
-* Example with 'contains' on text field or created by a user:  
+* An example of criteria with 'contains on text field or created by (or some other user field) = some user':  
   `CreatedBy.Username="syncuser"`
 
 ---
@@ -222,6 +233,7 @@ Where `Priority.Name` is a valid field on which one can specify query.
 ## Epic Planned End Date or Sprint End Date
 
 Digital.ai Agility API returns actual date + 1 in Planned end date field of Epic and end date of Sprint. Therefore, there will be a difference of 1 day when synchronizing this field.
+When Digital.ai Agility is the source system, following sample Advance XSL can be used to overcome this limitation:
 
 ### When Digital.ai Agility is the source system:
 
@@ -236,7 +248,9 @@ Digital.ai Agility API returns actual date + 1 in Planned end date field of Epic
   </xsl:if>
 </Target_Field>
 ```
-Replace `Target_Field` with the internal name of target field.
+Replace Target_Field with the internal name of target field.
+
+When Digital.ai Agility is target system, following sample Advance XSL can be used to overcome this limitation:
 
 ### When Digital.ai Agility is the target system:
 
@@ -266,8 +280,11 @@ When Digital.ai Agility is the source system, and the user type field is mapped 
    [https://www1.v1host.com/<appinstance>](https://www1.v1host.com/<appinstance>)
 
 2. You can find the version of Digital.ai Agility instance on this page as shown in the image below:
+   
+<p align="center">
+  <img src="../assets/Digital.ai_Agility.png"/>
+</p>
 
-![Digital.ai Agility](../assets/Digital.ai_Agility.PNG)
 
 ---
 
@@ -277,18 +294,25 @@ When Digital.ai Agility is the source system, and the user type field is mapped 
 2. Navigate to **Admin** tab.  
 3. In **Projects** tab navigate to **Member Roles** tab and find the project on which permission need to be granted.
 
-![Digital.ai Agility2](../assets/Digital.ai_Agility2.PNG)  
-<center>*Digital.ai Agility Project Management*</center>
+<p align="center">
+  <img src="../assets/Digital.ai_Agility2.png" />
+</p>
+
+
 
 4. Click on **Manage** button in front of the project.
 
-![Digital.ai Agility3](../assets/Digital.ai_Agility3.PNG)  
-<center>*Digital.ai Agility Project Management*</center>
+<p align="center">
+  <img src="../assets/Digital.ai_Agility3.png" />
+</p>
+
 
 5. For the user, select the role and click on **Apply** on the right-hand corner of the pop-up to save the changes.
 
-![Digital.ai Agility4](../assets/Digital.ai_Agility4.PNG)  
-<center>*Digital.ai Agility Assign Member Role*</center>
+<p align="center">
+  <img src="../assets/Digital.ai_Agility4.png" />
+</p>
+
 
 ---
 
@@ -300,21 +324,27 @@ To create a custom field in **Digital.ai Agility**:
 2. Log in with a user having administrative rights.  
 3. Click on the **Admin** on the top.  
 4. Select **Configuration > Custom Fields**.
+   
+<p align="center">
+  <img src="../assets/Digital.ai_Agility5.png" />
+</p>
 
-![Digital.ai Agility5](../assets/Digital.ai_Agility5.PNG)  
-<center>*Digital.ai Agility creates custom field configuration*</center>
 
 5. Click on the **Add Field** button in the row of the relevant asset in which you want to add the custom field (this is the story type configured in integration).
 
-![Digital.ai Agility6](../assets/Digital.ai_Agility6.PNG)  
-<center>*Digital.ai Agility creates custom field*</center>
+<p align="center">
+  <img src="../assets/Digital.ai_Agility6.png" />
+</p>
+
 
 6. Enter the **Display Name** of the new custom field (**SyncEntity** in this case).  
 7. Select appropriate Field Type for the custom field (**Text** in this case).  
 8. Click on OK.
 
-![Digital.ai Agility7](../assets/Digital.ai_Agility7.PNG)  
-<center>*Digital.ai Agility creates custom field*</center>
+<p align="center">
+  <img src="../assets/Digital.ai_Agility7.png"/>
+</p>
+
 
 9. Click on **Publish Changes**, shown in the previous window.  
 10. After field is created, System Name of the field is the Internal Name of custom fields.
@@ -331,15 +361,20 @@ You can add inline images in rich text type of fields from Digital.ai Agility UI
 
 * Navigate to Admin > Projects as shown in the image below.
 
-![Digital.ai Agility8](../assets/Digital.ai_Agility8.png)  
-<center>*Digital.ai Agility Project Management*</center>
+<p align="center">
+  <img src="../assets/Digital.ai_Agility8.png" />
+</p>
+ 
 
 * Open the project in a new tab, which is configured in integration as shown in the image below:
 
-![Digital.ai Agility9](../assets/Digital.ai_Agility9.PNG)  
-<center>*Digital.ai Agility Project Management*</center>
+<p align="center">
+  <img src="../assets/Digital.ai_Agility9.png" />
+</p>
+
 
 * Copy the project id from Digital.ai Agility URL as shown in the image below:
 
-![Digital.ai Agility10](../assets/Digital.ai_Agility10.PNG)  
+![Digital.ai Agility10](../assets/Digital.ai_Agility10.png)  
 <center>*Digital.ai Agility Project Management*</center>
+
