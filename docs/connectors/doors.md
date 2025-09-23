@@ -113,8 +113,8 @@ From DOORS UI, only the following formatting is supported. Hence, OpsHub Integra
 ## Rank
 
 * Doors allows to organize the Requirements in tree structure. To synchronize the Requirement maintaining the tree structure, below configurations need to be performed in OpsHub Integration Manager.
-- Map `OH_ChildIds` and `OH_ParentId` relationship as per standard [Relationship Configuration](../integrate/mapping-configuration.md#relationship-configuration).
-- Enable rank sync as described in [Rank configuration](../integrate/mapping-configuration.md#rank-configuration).
+- Map `OH_ChildIds` and `OH_ParentId` relationship as per standard [Relationship Configuration](../integrate/mapping-configuration.md#relationships).
+- Enable rank sync as described in [Rank configuration](../integrate/mapping-configuration.md#rank).
 
 # Integration Configuration
 
@@ -467,6 +467,7 @@ Steps to execute and verify:
 4. Click on Run to execute the DXL. If the download is successful, then DONE will be printed in the DXL output window, and an RTF file will be generated at the specified path;
 5. Now open this generated RTF file using Microsoft Word. Click on File menu then click on Save as. Save this file as HTML;
 6. Open the saved HTML file. This file's output is how the data of this field will be displayed in the target system's field.
+
 
 
 
