@@ -239,7 +239,7 @@ When user wants to install OpsHub's DOORS Remote Services on any machine (which 
     For eg: .rtf will synchronize as .doc and .csv will synchronize as .xlsm.  
   * An OLE object shown as a Picture (Enhanced Metafile) will synchronize as a blank image in the other end system. That is due to API limitations. To find out the OLE Object type, right-click on OLE Object and see the type in 'OLE Object Properties...'.
 
-![Note](../assets/Note.jpg){width=20px} If you are trying to synchronize any other file formats, then it is suggested to validate on test instance first. In case of any queries, please reach out to OpsHub Support.
+>**Note**: If you are trying to synchronize any other file formats, then it is suggested to validate on test instance first. In case of any queries, please reach out to OpsHub Support.
 
 ---
 
@@ -467,5 +467,6 @@ Steps to execute and verify:
 4. Click on Run to execute the DXL. If the download is successful, then DONE will be printed in the DXL output window, and an RTF file will be generated at the specified path;
 5. Now open this generated RTF file using Microsoft Word. Click on File menu then click on Save as. Save this file as HTML;
 6. Open the saved HTML file. This file's output is how the data of this field will be displayed in the target system's field.
+
 
 
