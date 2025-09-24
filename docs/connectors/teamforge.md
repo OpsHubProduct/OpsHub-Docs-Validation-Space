@@ -106,7 +106,7 @@ TeamForge Query format is:
 * Now from menu select **Users** and click on **Create**.
   
  <p align="center">
-  <img src="../assets/TeamForge_CUser_2.PNG" width="900">
+  <img src="../assets/TeamForge_CUser_2.PNG" width="1500">
 </p>
 
 * Do provide necessary details in fields such as User Name, Email, Full Name and so on.
@@ -131,6 +131,7 @@ TeamForge Query format is:
 <p align="center">
   <img src="../assets/TeamForge_Site-wise_Role.PNG" width="750px">
 </p>
+
 
 
 
