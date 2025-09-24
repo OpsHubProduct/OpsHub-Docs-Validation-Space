@@ -151,7 +151,7 @@ It is mandatory to configure Child relationship in Relationship Configuration fo
 
 * When Verisium Manager is the target system, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md).
 * After the Soft Delete operation is performed by OpsHub Integration Manager in Verisium Manager, the entity will be deleted in the Verisium Manager, and it can be found in the "Deleted Entities" of the corresponding project, where it existed earlier.
-* To only enable the logical delete operation in the target, "OH Soft Delete" field shall be mapped with the default value "No" in the [Delete Mode](../integrate/mapping-configuration,md/#delete-mode) mapping.
+* To only enable the logical delete operation in the target, "OH Soft Delete" field shall be mapped with the default value "No" in the [Delete Mode](../integrate/mapping-configuration.md#delete-mode) mapping.
 
 # Integration Configuration
 
