@@ -35,7 +35,7 @@ Map the fields between TeamForge and the other system to be integrated to ensure
 Set a time to synchronize data between TeamForge and the other system to be integrated. Also, define parameters and conditions, if any, for integration. Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
 
 <p align="center">
-  <img src="../assets/TeamForge_Integration.PNG" width="800">
+  <img src="../assets/TeamForge_Integration.PNG" width="1000">
 </p>
 
 
@@ -74,7 +74,7 @@ TeamForge Query format is:
 >**Note**:  You can see an example in below image.
 
 <p align="center">
-  <img src="../assets/TeamForge_Criteria_Config.PNG" width="750px">
+  <img src="../assets/TeamForge_Criteria_Config.PNG" width="600">
 </p>
 
 * For **Planning Folders**, criteria-based integration is supported only with **Planning Folder Type** field.  
@@ -100,13 +100,13 @@ TeamForge Query format is:
 * Navigate My Workspace → Admin as shown in the screenshot.
   
 <p align="center">
-  <img src="../assets/TeamForge_CUser_1.PNG" width="400">
+  <img src="../assets/TeamForge_CUser_1.PNG" width="300">
 </p>
 
 * Now from menu select **Users** and click on **Create**.
   
  <p align="center">
-  <img src="../assets/TeamForge_CUser_2.PNG" width="800">
+  <img src="../assets/TeamForge_CUser_2.PNG" width="900">
 </p>
 
 * Do provide necessary details in fields such as User Name, Email, Full Name and so on.
@@ -131,6 +131,7 @@ TeamForge Query format is:
 <p align="center">
   <img src="../assets/TeamForge_Site-wise_Role.PNG" width="750px">
 </p>
+
 
 
 
