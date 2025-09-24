@@ -20,7 +20,7 @@ Click "[Add Users](#add-users)" and "[Site-wise Roles](#assign-site-wise-roles-t
 Before you continue to the integration, you must first configure TeamForge. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system. Refer the screenshot given below.
 
 <p align="center">
-  <img src="../assets/TeamForge_Sys_Create_1.PNG" width="750px">
+  <img src="../assets/TeamForge_Sys_Create_1.PNG" width="900">
 </p>
 
 
@@ -131,6 +131,7 @@ TeamForge Query format is:
 <p align="center">
   <img src="../assets/TeamForge_Site-wise_Role.PNG" width="750px">
 </p>
+
 
 
 
