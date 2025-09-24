@@ -166,7 +166,7 @@ The above behavior with OpsHub Integration Manager sync reflects the Zendesk API
 * Copy the value under **Reference Field (Legacy)** field.  
 
 <p align="center">
-  <img src="../assets/Zendesk_LinkField_1.png"  width="900"/>
+  <img src="../assets/Zendesk_LinkField_1.png"  width="600"/>
 </p>
 
 * Go to **Objects and rules** → **Tickets** → **Fields**.  
@@ -175,5 +175,6 @@ The above behavior with OpsHub Integration Manager sync reflects the Zendesk API
 <p align="center">
   <img src="../assets/Zendesk_LinkField_2.png" width="900"/>
 </p>
+
 
 
