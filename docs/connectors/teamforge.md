@@ -35,7 +35,7 @@ Map the fields between TeamForge and the other system to be integrated to ensure
 Set a time to synchronize data between TeamForge and the other system to be integrated. Also, define parameters and conditions, if any, for integration. Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
 
 <p align="center">
-  <img src="../assets/TeamForge_Sys_Create_1.PNG" width="750px">
+  <img src="../assets/TeamForge_Integration.PNG" width="800">
 </p>
 
 
@@ -56,20 +56,20 @@ To configure criteria in TeamForge, integration needs to be created with TeamFor
 TeamForge Query format is:
 
 ```
-{"fieldName":{"matches":[array of values to be allowed to poll]}}
+{\"fieldName\":{\"matches\":[array of values to be allowed to poll]}}
 ```
 
 * An example of criteria for 'Lookup field'  
   **Sample Query:** Polling entities where priority is either 1 or 2.  
-  **Example query:** `{"priority":{"matches":["1", "2"]}}`
+  **Example query:** `{\"priority\":{\"matches\":[\"1\", \"2\"]}}`
 
 * An example of criteria for 'User field'  
   **Sample Query:** Polling entities which are assigned to integration user or testuser.  
-  **Example query:** `{"assignedToUsername":{"matches":["@self","testuser"]}}`
+  **Example query:** `{\"assignedToUsername\":{\"matches\":[\"@self\",\"testuser\"]}}`
 
 * An example of criteria for 'More than one field'  
   **Sample Query:** Polling entities with Priority 1 or 2 and Status is Open.  
-  **Example query:** `{"priority":{"matches": ["1", "2"]},"status":{"matches": ["Open"]}}`
+  **Example query:** `{\"priority\":{\"matches\": [\"1\", \"2\"]},\"status\":{\"matches\": [\"Open\"]}}`
 
 >**Note**:  You can see an example in below image.
 
@@ -100,13 +100,13 @@ TeamForge Query format is:
 * Navigate My Workspace → Admin as shown in the screenshot.
   
 <p align="center">
-  <img src="../assets/TeamForge_CUser_1.PNG" width="750px">
+  <img src="../assets/TeamForge_CUser_1.PNG" width="400">
 </p>
 
 * Now from menu select **Users** and click on **Create**.
   
  <p align="center">
-  <img src="../assets/TeamForge_CUser_2.PNG" width="750px">
+  <img src="../assets/TeamForge_CUser_2.PNG" width="800">
 </p>
 
 * Do provide necessary details in fields such as User Name, Email, Full Name and so on.
@@ -131,5 +131,6 @@ TeamForge Query format is:
 <p align="center">
   <img src="../assets/TeamForge_Site-wise_Role.PNG" width="750px">
 </p>
+
 
 
