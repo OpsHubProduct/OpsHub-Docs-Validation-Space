@@ -19,7 +19,10 @@ Click "[Add Users](#add-users)" and "[Site-wise Roles](#assign-site-wise-roles-t
 
 Before you continue to the integration, you must first configure TeamForge. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system. Refer the screenshot given below.
 
-![TeamForge_Sys_Create_1](../assets/TeamForge_Sys_Create_1.PNG)
+<p align="center">
+  <img src="../assets/TeamForge_Sys_Create_1.PNG" width="750px">
+</p>
+
 
 If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
@@ -31,7 +34,10 @@ Map the fields between TeamForge and the other system to be integrated to ensure
 
 Set a time to synchronize data between TeamForge and the other system to be integrated. Also, define parameters and conditions, if any, for integration. Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
 
-![TeamForge_Integration](../assets/TeamForge_Integration.PNG)
+<p align="center">
+  <img src="../assets/TeamForge_Sys_Create_1.PNG" width="750px">
+</p>
+
 
 # Integration behavior
 
@@ -65,9 +71,11 @@ TeamForge Query format is:
   **Sample Query:** Polling entities with Priority 1 or 2 and Status is Open.  
   **Example query:** `{"priority":{"matches": ["1", "2"]},"status":{"matches": ["Open"]}}`
 
-![Note](../assets/Note.jpg) You can see an example in below image.
+>**Note**:  You can see an example in below image.
 
-![TeamForge_Criteria_Config](../assets/TeamForge_Criteria_Config.PNG)
+<p align="center">
+  <img src="../assets/TeamForge_Criteria_Config.PNG" width="750px">
+</p>
 
 * For **Planning Folders**, criteria-based integration is supported only with **Planning Folder Type** field.  
   Example query: `planningFolderType=standard`
@@ -89,10 +97,18 @@ TeamForge Query format is:
 ## Add Users
 
 * Login in to the TeamForge with root/admin user (which has Administrator privileges).
-* Navigate My Workspace → Admin as shown in the screenshot.  
-  ![TeamForge_CUser_1](../assets/TeamForge_CUser_1.PNG)
-* Now from menu select **Users** and click on **Create**.  
-  ![TeamForge_CUser_2](../assets/TeamForge_CUser_2.PNG)
+* Navigate My Workspace → Admin as shown in the screenshot.
+  
+<p align="center">
+  <img src="../assets/TeamForge_CUser_1.PNG" width="750px">
+</p>
+
+* Now from menu select **Users** and click on **Create**.
+  
+ <p align="center">
+  <img src="../assets/TeamForge_CUser_2.PNG" width="750px">
+</p>
+
 * Do provide necessary details in fields such as User Name, Email, Full Name and so on.
 * Click **Create** and it will create the user.
 
@@ -110,5 +126,10 @@ TeamForge Query format is:
 * Select **Roles** from the left panel and check **ROLES ADMIN** in the right panel (As shown in the screenshot below).
 * Save **Role**.
 * Open that **Role** again to assign the user to the role.
-* Navigate to the **Assigned Users** tab and add user that you want to use for integration in this role.  
-  ![TeamForge_Site-wise_Role](../assets/TeamForge_Site-wise_Role.PNG)
+* Navigate to the **Assigned Users** tab and add user that you want to use for integration in this role.
+  
+<p align="center">
+  <img src="../assets/TeamForge_Site-wise_Role.PNG" width="750px">
+</p>
+
+
