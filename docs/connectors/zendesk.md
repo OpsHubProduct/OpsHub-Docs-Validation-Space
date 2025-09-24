@@ -71,7 +71,7 @@ The steps given below explain how to make view in Zendesk for enabling criteria:
 * Navigate to Admin → Views → Add View  
 
 <p align="center">
-  <img src="../assets/Zendesk_Criteria_Config_1.png" alt="Zendesk Criteria Config 1" width="600"/>
+  <img src="../assets/Zendesk_Criteria_Config_1.png"  width="900"/>
 </p>
 
 * Fill the view details  
@@ -81,7 +81,7 @@ The steps given below explain how to make view in Zendesk for enabling criteria:
     - If you specify condition(s) under 'Meet any of the following conditions' section then it will ensure that ticket will be synchronized if any one of the condition(s) will be satisfied for this section  
 
 <p align="center">
-  <img src="../assets/Zendesk_Criteria_Config_2.png" alt="Zendesk Criteria Config 2" width="600"/>
+  <img src="../assets/Zendesk_Criteria_Config_2.png"  width="900"/>
 </p>
 
 * Give appropriate access to integration user and create view  
@@ -89,25 +89,25 @@ The steps given below explain how to make view in Zendesk for enabling criteria:
   - Finally click on 'Create View' to save the view.  
 
 <p align="center">
-  <img src="../assets/Zendesk_Criteria_Config_3.png" alt="Zendesk Criteria Config 3" width="600"/>
+  <img src="../assets/Zendesk_Criteria_Config_3.png" width="900"/>
 </p>
 
 * Once you created view, then select appropriate option as per earlier access provided under 'Available For' section. In earlier step, if 'Me only' option is selected, then here select 'Personal Views', if 'All agents' option is selected, then here select 'Views shared with all agents' option.  
 
 <p align="center">
-  <img src="../assets/Zendesk_Criteria_Config_4.png" alt="Zendesk Criteria Config 4" width="600"/>
+  <img src="../assets/Zendesk_Criteria_Config_4.png" width="900"/>
 </p>
 
 * Navigate to recently created view and click on it.  
 
 <p align="center">
-  <img src="../assets/Zendesk_Criteria_Config_5.png" alt="Zendesk Criteria Config 5" width="600"/>
+  <img src="../assets/Zendesk_Criteria_Config_5.png"  width="900"/>
 </p>
 
 * Navigate to browser address bar, here you will find view id. If you see URL like this `https://opshub.zendesk.com/agent/admin/views/123754` in browser, then view id is **123754**  
 
 <p align="center">
-  <img src="../assets/Zendesk_Criteria_Config_6.png" alt="Zendesk Criteria Config 6" width="600"/>
+  <img src="../assets/Zendesk_Criteria_Config_6.png"  width="900"/>
 </p>
 
 * Use this view id as criteria query for Zendesk system in OpsHub Integration Manager
@@ -116,17 +116,17 @@ The steps given below explain how to make view in Zendesk for enabling criteria:
 
 **Synchronize tickets from specific organization and Status is Open**  
 <p align="center">
-  <img src="../assets/Zendesk_Criteria_Sample_1.png" alt="Zendesk Criteria Sample 1" width="600"/>
+  <img src="../assets/Zendesk_Criteria_Sample_1.png"  width="900"/>
 </p>
 
 **Synchronize tickets from specific organization, Status is Open and Priority is High**  
 <p align="center">
-  <img src="../assets/Zendesk_Criteria_Sample_2.png" alt="Zendesk Criteria Sample 2" width="600"/>
+  <img src="../assets/Zendesk_Criteria_Sample_2.png" width="900"/>
 </p>
 
 **Synchronize tickets from any one of the specified organizations, Status is Open and Priority is High**  
 <p align="center">
-  <img src="../assets/Zendesk_Criteria_Sample_3.png" alt="Zendesk Criteria Sample 3" width="600"/>
+  <img src="../assets/Zendesk_Criteria_Sample_3.png"  width="900"/>
 </p>
 
 # Appendix
@@ -141,7 +141,7 @@ The steps given below explain how to make view in Zendesk for enabling criteria:
 * Click **Save** to add user.  
 
 <p align="center">
-  <img src="../assets/Zendesk_Image 2a.png" alt="Zendesk Add User" width="600"/>
+  <img src="../assets/Zendesk_Image 2a.png"  width="900"/>
 </p>
 
 ## Organization Association to Ticket
@@ -166,12 +166,13 @@ The above behavior with OpsHub Integration Manager sync reflects the Zendesk API
 * Copy the value under **Reference Field (Legacy)** field.  
 
 <p align="center">
-  <img src="../assets/Zendesk_LinkField_1.png" alt="Zendesk Link Field 1" width="600"/>
+  <img src="../assets/Zendesk_LinkField_1.png"  width="900"/>
 </p>
 
 * Go to **Objects and rules** → **Tickets** → **Fields**.  
 * Search for the field id with copied value from **Reference Field (Legacy)** field. The display name of that field record is the Parent - Child Link field name.  
 
 <p align="center">
-  <img src="../assets/Zendesk_LinkField_2.png" alt="Zendesk Link Field 2" width="600"/>
+  <img src="../assets/Zendesk_LinkField_2.png" width="900"/>
 </p>
+
