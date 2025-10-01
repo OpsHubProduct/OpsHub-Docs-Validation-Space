@@ -122,7 +122,7 @@ Set the **Query** as per Planview AdaptiveWork query format which is **CZQL**. H
 2. Navigate to top right corner and select **My Details** from the user profile as shown in the screenshot below: 
 
 
-<div align="center"><img src="../assets/Planview_AdaptiveWork_user_permission_1.png" alt="" width="400"></div>
+<div align="center"><img src="../assets/Planview_AdaptiveWork_user_permission_1.png" alt="" width="300"></div>
 
 3 . Enable **Admin**, **Super User** and **Integration User** toggle button from the Global Prermissions section. 
 
@@ -136,7 +136,7 @@ Set the **Query** as per Planview AdaptiveWork query format which is **CZQL**. H
 1. Select the option **Settings** given at the top right corner under the user profile as shown in the screenshot below: 
 
 
-<div align="center"><img src="../assets/Planview_AdaptiveWork_custom_field_1.png" alt="" width="400"></div>
+<div align="center"><img src="../assets/Planview_AdaptiveWork_custom_field_1.png" alt="" width="300"></div>
 
 2 . Navigate to the **Configurations** section as shown in the screenshot below:
 
@@ -149,7 +149,7 @@ Set the **Query** as per Planview AdaptiveWork query format which is **CZQL**. H
 <div align="center"><img src="../assets/Planview_AdaptiveWork_custom_field_3.png" alt=""></div>
 
 4 . Choose custom field type from the list and fill the details as shown in the screenshot below. 
-<div align="center"><img src="../assets/Planview_AdaptiveWork_custom_field_4.png" alt="" width="400"></div>
+<div align="center"><img src="../assets/Planview_AdaptiveWork_custom_field_4.png" alt="" width="00"></div>
 
 5 . Save the changes.
 
@@ -158,7 +158,7 @@ Set the **Query** as per Planview AdaptiveWork query format which is **CZQL**. H
 1. Select the option **Settings** given at the top right corner under user profile as shown in the screenshot below: 
 
 
-<div align="center"><img src="../assets/Planview_AdaptiveWork_custom_field_1.png" alt="" width="400"></div>
+<div align="center"><img src="../assets/Planview_AdaptiveWork_custom_field_1.png" alt="" width="300"></div>
 
 2 . Navigate to **Configurations** section as shown in the screenshot below: 
 
