@@ -33,7 +33,7 @@ Click [System Configuration](../integrate/system-configuration.md) to learn the 
 Refer to the screenshot given below:
 
 <p align="center">
-  <img src="../assets/PagerDuty1a.PNG"  width="800"/>
+  <img src="../assets/PagerDuty1a.PNG"  width="900"/>
 </p>
 
 | **Field Name**       | **When field is visible on the System form** | **Description**                                                                                                                                            |
@@ -49,7 +49,7 @@ Map the fields between PagerDuty and the other system to be integrated to ensure
 Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
 <p align="center">
-  <img src="../assets/PagerDuty2.PNG" width="800" />
+  <img src="../assets/PagerDuty2.PNG" width="1000" />
 </p>
 
 > **Note** : **While configuring mapping, the details appearing in the 'Projects' drop-down are services in PagerDuty.**
