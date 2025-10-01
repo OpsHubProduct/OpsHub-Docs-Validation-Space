@@ -150,7 +150,7 @@ Set the **Query** as per Planview AdaptiveWork query format which is **CZQL**. H
 
 4 . Choose custom field type from the list and fill the details as shown in the screenshot below. 
 
-<div align="center"><img src="../assets/Planview_AdaptiveWork_custom_field_4.png" alt="" width="800"></div>
+<div align="center"><img src="../assets/Planview_AdaptiveWork_custom_field_4.png" alt="" width="1200"></div>
 
 5 . Save the changes.
 
