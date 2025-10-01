@@ -253,7 +253,7 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_AAD_2.png" alt=""></div>
 
-4 . Give the right application name and Select the  **Single tenant ** option while creating the application. Click on Register as shown in the screenshot below. 
+4 . Give the right application name and Select the  **Single tenant** option while creating the application. Click on Register as shown in the screenshot below. 
 
 
 <div align="center"><img src="../assets/MSD_AAD_3.png" alt=""></div>
@@ -270,7 +270,7 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_AAD_4.png" alt=""></div>
 
-3 . Navigate to  **Client secrets ** and click on  **New client secret ** to add the new secret. 
+3 . Navigate to  **Client secrets** and click on  **New client secret** to add the new secret. 
 
 
 <div align="center"><img src="../assets/MSD_AAD_5.png" alt=""></div>
@@ -296,19 +296,19 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_Power_Apps_2.png" alt=""></div>
 
-6 . Navigate to the  **Application users ** under  *Users + permissions * section as shown in the screenshot below.
+6 . Navigate to the  **Application users** under  *Users + permissions* section as shown in the screenshot below.
 
 <div align="center"><img src="../assets/MSD_Power_Apps_3.png" alt=""></div>
 
-7 . Click on the  **New app user ** from the top to add the application user.
+7 . Click on the  **New app user** from the top to add the application user.
 
 <div align="center"><img src="../assets/MSD_Power_Apps_4.png" alt=""></div>
 
-8 . Click on  **Add an app ** and select the application created in AAD. Select your  **Business Unit **.
+8 . Click on  **Add an app** and select the application created in AAD. Select your  **Business Unit**.
 
 <div align="center"><img src="../assets/MSD_Power_Apps_5.png" alt=""></div>
 
-9 . Fill the details regarding the user security role. Select the above mentioned security roles from the list of security roles. 10. Click on  **Create ** to add the user.
+9 . Fill the details regarding the user security role. Select the above mentioned security roles from the list of security roles. 10. Click on  **Create** to add the user.
 
 ## Grant Permissions to MS Dynamics 365 User
 
@@ -321,7 +321,7 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_Power_Apps_2.png" alt=""></div>
 
-4 . Navigate to the  **Application users ** under  *Users + permissions * section.
+4 . Navigate to the  **Application users** under  **Users + permissions** section.
 
 <div align="center"><img src="../assets/MSD_Power_Apps_3.png" alt=""></div>
 
@@ -338,23 +338,23 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_Power_Apps_1.png" alt=""></div>
 
-3 . Navigate to the  **Settings ** as shown below:
+3 . Navigate to the  **Settings** as shown below:
 
 <div align="center"><img src="../assets/MSD_Power_Apps_2.png" alt=""></div>
 
-4 . Navigate to the  **Security roles ** under  *Users + permissions * section.
+4 . Navigate to the  **Security roles** under  **Users + permissions** section.
 
 <div align="center"><img src="../assets/MSD_Security_Role_1.png" alt=""></div>
 
-5 . Add the  **New role **.
+5 . Add the  **New role**.
 
 <div align="center"><img src="../assets/MSD_Security_Role_2.png" alt=""></div>
 
-6 . Give a proper security  **Role Name **. Similarly, select a proper organization name.
+6 . Give a proper security  **Role Name**. Similarly, select a proper organization name.
 
 <div align="center"><img src="../assets/MSD_Security_Role_3.png" alt=""></div>
 
-7 . Add the privileges for this security role and  **Save ** the changes.
+7 . Add the privileges for this security role and  **Save** the changes.
 
 <div align="center"><img src="../assets/MSD_Security_Role_4.png" alt=""></div>
 
@@ -365,31 +365,31 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_Power_Apps_1.png" alt=""></div>
 
-3 . Navigate to the  **Settings ** as shown below:
+3 . Navigate to the  **Settings** as shown below:
 
 <div align="center"><img src="../assets/MSD_Power_Apps_2.png" alt=""></div>
 
-4 . Navigate to the  **Column security profiles ** under  *Users + permissions * section.
+4 . Navigate to the  **Column security profiles** under  *Users + permissions* section.
 
 <div align="center"><img src="../assets/MSD_Column_Security_Profile_1.png" alt=""></div>
 
-5 . Add the  **New Profile **.
+5 . Add the  **New Profile**.
 
 <div align="center"><img src="../assets/MSD_Column_Security_Profile_2.png" alt=""></div>
 
-6 . Give a proper profile name and click on  **Save ** to create.
+6 . Give a proper profile name and click on  **Save** to create.
 
 <div align="center"><img src="../assets/MSD_Column_Security_Profile_3.png" alt=""></div>
 
-7 . Click on the created profile. Select the column for which permission needs to be added. Click on  **Edit **.
+7 . Click on the created profile. Select the column for which permission needs to be added. Click on  **Edit**.
 
 <div align="center"><img src="../assets/MSD_Column_Security_Profile_4.png" alt=""></div>
 
-8 . Allow  **Read **,  **Update ** and  **Create ** permissions.  **Save ** the changes.
+8 . Allow  **Read**,  **Update** and  **Create** permissions.  **Save** the changes.
 
 <div align="center"><img src="../assets/MSD_Column_Security_Profile_5.png" alt=""></div>
 
-9 . Select the  **Users ** tab and click  **Add Users ** to add the integration user in the search window as shown below:
+9 . Select the  **Users** tab and click  **Add Users** to add the integration user in the search window as shown below:
 
 <div align="center"><img src="../assets/MSD_Column_Security_Profile_6.png" alt=""></div>
 
@@ -400,7 +400,7 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_Custom_Field_1.png" alt=""></div>
 
-3 . Click on the  **Properties ** section from the top as shown in the screenshot below.
+3 . Click on the  **Properties** section from the top as shown in the screenshot below.
 
 <div align="center"><img src="../assets/MSD_Search_Result_1.png" alt=""></div>
 
@@ -421,11 +421,11 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_Power_Apps_2.png" alt=""></div>
 
-4 . Navigate to the  **Audit settings ** under the  *Audit and logs * section.
+4 . Navigate to the  **Audit settings** under the  **Audit and logs** section.
 
 <div align="center"><img src="../assets/MSD_Power_Apps_7.png" alt=""></div>
 
-5 . Select the  **Start Auditing ** checkbox from the list and select the proper log retention period.
+5 . Select the  **Start Auditing** checkbox from the list and select the proper log retention period.
 
 <div align="center"><img src="../assets/MSD_Power_Apps_8.png" alt=""></div>
 
@@ -437,11 +437,11 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_Custom_Field_1.png" alt=""></div>
 
-4 . Click on the  **Properties ** section from the top as shown in the screenshot below.
+4 . Click on the  **Properties** section from the top as shown in the screenshot below.
 
 <div align="center"><img src="../assets/MSD_Search_Result_1.png" alt=""></div>
 
-5 . In the newly opened menu, select the  **Audit changes to its data ** checkbox from the advanced options.
+5 . In the newly opened menu, select the  **Audit changes to its data** checkbox from the advanced options.
 
 <div align="center"><img src="../assets/MSD_Audit_Enable_1.png" alt=""></div>
 
@@ -454,11 +454,11 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_Custom_Field_1.png" alt=""></div>
 
-3 . Navigate to  **Schema ** and select the  **Columns **.
+3 . Navigate to  **Schema ** and select the  **Columns**.
 
 <div align="center"><img src="../assets/MSD_Custom_Field_2.png" alt=""></div>
 
-4 . Click on the  **New Column ** from the top to add the new custom field.
+4 . Click on the  **New Column** from the top to add the new custom field.
 
 <div align="center"><img src="../assets/MSD_Custom_Field_3.png" alt=""></div>
 
@@ -466,7 +466,7 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_Custom_Field_4.png" alt=""></div>
 
-6 . Remember to enable the auditing from the  *Advanced options * to maintain the audit history for the field.
+6 . Remember to enable the auditing from the  *Advanced options* to maintain the audit history for the field.
 
 <div align="center"><img src="../assets/MSD_Custom_Field_5.png" alt=""></div>
 
@@ -474,7 +474,7 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_Custom_Layout_1.png" alt=""></div>
 
-9 . Navigate to your current App and select the  **OPEN IN APP DESIGNER ** option.
+9 . Navigate to your current App and select the  **OPEN IN APP DESIGNER** option.
 
 <div align="center"><img src="../assets/MSD_Custom_Layout_2.png" alt=""></div>
 
@@ -482,7 +482,7 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_Custom_Field_6.png" alt=""></div>
 
-11 . From the right menu, select the form and click on  **Edit **.
+11 . From the right menu, select the form and click on  **Edit**.
 
 <div align="center"><img src="../assets/MSD_Custom_Field_7.png" alt=""></div>
 
@@ -490,7 +490,7 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_Custom_Field_8.png" alt=""></div>
 
-13 .  **Save and publish ** the changes as shown in the screenshot below.
+13 .  **Save and publish** the changes as shown in the screenshot below.
 
 <div align="center"><img src="../assets/MSD_Custom_Field_9.png" alt=""></div>
 
@@ -500,7 +500,7 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_Custom_Layout_1.png" alt=""></div>
 
-2 . Navigate to your current App and select the  **OPEN IN APP DESIGNER ** option.
+2 . Navigate to your current App and select the  **OPEN IN APP DESIGNER** option.
 
 <div align="center"><img src="../assets/MSD_Custom_Layout_2.png" alt=""></div>
 
@@ -508,7 +508,7 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_Custom_Layout_3.png" alt=""></div>
 
-4 . From the right menu click on  **New form ** to create the new layout.
+4 . From the right menu click on  **New form** to create the new layout.
 
 <div align="center"><img src="../assets/MSD_Custom_Layout_4.png" alt=""></div>
 
@@ -516,6 +516,6 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_Custom_Layout_5.png" alt=""></div>
 
-6 .  **Save and publish ** the changes as shown in the screenshot below.
+6 .  **Save and publish** the changes as shown in the screenshot below.
 
 <div align="center"><img src="../assets/MSD_Custom_Field_9.png" alt=""></div>
