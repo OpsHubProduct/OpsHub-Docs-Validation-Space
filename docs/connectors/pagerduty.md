@@ -33,7 +33,7 @@ Click [System Configuration](../integrate/system-configuration.md) to learn the 
 Refer to the screenshot given below:
 
 <p align="center">
-  <img src="../assets/PagerDuty1a.PNG" />
+  <img src="../assets/PagerDuty1a.PNG"  width="800"/>
 </p>
 
 | **Field Name**       | **When field is visible on the System form** | **Description**                                                                                                                                            |
@@ -49,7 +49,7 @@ Map the fields between PagerDuty and the other system to be integrated to ensure
 Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
 <p align="center">
-  <img src="../assets/PagerDuty2.PNG" />
+  <img src="../assets/PagerDuty2.PNG" width="800" />
 </p>
 
 > **Note** : **While configuring mapping, the details appearing in the 'Projects' drop-down are services in PagerDuty.**
@@ -85,7 +85,7 @@ To learn how to configure comment mapping, refer: [Map Comments](../integrate/ma
 **Comment Mapping for synchronizing Status Update as Comment:**
 
 <p align="center">
-  <img src="../assets/PagerDuty12.PNG" />
+  <img src="../assets/PagerDuty12.PNG" width="800"/>
 </p>
 
 # Integration Configuration
@@ -95,7 +95,7 @@ In this step, set a time to synchronize data between PagerDuty and the other sys
 Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
 
 <p align="center">
-  <img src="../assets/PagerDuty3.PNG" />
+  <img src="../assets/PagerDuty3.PNG" width="800"/>
 </p>
 
 > **Note** : **While configuring integration, the details appearing in the 'Projects' drop-down are services in PagerDuty.**
