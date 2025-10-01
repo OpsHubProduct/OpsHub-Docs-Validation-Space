@@ -112,7 +112,7 @@ In PagerDuty, criteria can be configured on the fields: **Status** and **Inciden
 |----------------|------------------------------------------------------------|--------------------------------------------------|
 | Status         | Status is *acknowledged*                                   | statuses[]=acknowledged                          |
 | Status         | Status is *acknowledged* or *triggered*                   | statuses[]=acknowledged&statuses[]=triggered     |
-| Incidence Key  | Incidence key is *abc* (example key after creating)       | incident_key=abc                                 |
+| Incidence Key  | Incidence key is *abc* (here, abc is just example, you can get incidence key of an incident after creating it)       | incident_key=abc                                 |
 
 ## Target LookUp Configuration
 
