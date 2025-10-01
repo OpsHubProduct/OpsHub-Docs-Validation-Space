@@ -122,7 +122,7 @@ Set the **Query** as per Planview AdaptiveWork query format which is **CZQL**. H
 2. Navigate to top right corner and select **My Details** from the user profile as shown in the screenshot below: 
 
 
-<div align="center"><img src="../assets/Planview_AdaptiveWork_user_permission_1.png" alt=""></div>
+<div align="center"><img src="../assets/Planview_AdaptiveWork_user_permission_1.png" alt="" width="600"></div>
 
 3 . Enable **Admin**, **Super User** and **Integration User** toggle button from the Global Prermissions section. 
 
@@ -160,14 +160,14 @@ Set the **Query** as per Planview AdaptiveWork query format which is **CZQL**. H
 1. Select the option **Settings** given at the top right corner under user profile as shown in the screenshot below: 
 
 
-<div align="center"><img src="../assets/Planview_AdaptiveWork_custom_field_1.png" alt=""></div>
+<div align="center"><img src="../assets/Planview_AdaptiveWork_custom_field_1.png" alt="" width="700"></div>
 
 2 . Navigate to **Configurations** section as shown in the screenshot below: 
 
 
 <div align="center"><img src="../assets/Planview_AdaptiveWork_custom_field_2.png" alt="" width="1200"></div>
 
-3 . Select the Item Type/Entity for which the user wants to get the API Name. 
+3 . Select the Item Type/Entity for which the user wants to get the API Name. <br>
 4 . Search for the field name and get the API Name from the table as shown in the screenshot below:
 
 <div align="center"><img src="../assets/Planview_AdaptiveWork_api_name_1.png" alt="" width="1000"></div>
