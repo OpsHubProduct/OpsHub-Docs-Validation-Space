@@ -248,7 +248,7 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_AAD_1.png" alt=""></div>
 
-3 . Click on the add  **New registration ** as shown in the screenshot below. 
+3 . Click on the add  **New registration** as shown in the screenshot below. 
 
 
 <div align="center"><img src="../assets/MSD_AAD_2.png" alt=""></div>
@@ -325,7 +325,7 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_Power_Apps_3.png" alt=""></div>
 
-5 . Select the user for which you want to change the permissions and click on  **Edit security roles ** from the top as shown in the screenshot below.
+5 . Select the user for which you want to change the permissions and click on  **Edit security roles** from the top as shown in the screenshot below.
 
 <div align="center"><img src="../assets/MSD_Power_Apps_6.png" alt=""></div>
 
@@ -369,7 +369,7 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_Power_Apps_2.png" alt=""></div>
 
-4 . Navigate to the  **Column security profiles** under  *Users + permissions* section.
+4 . Navigate to the  **Column security profiles** under  **Users + permissions** section.
 
 <div align="center"><img src="../assets/MSD_Column_Security_Profile_1.png" alt=""></div>
 
@@ -466,7 +466,7 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_Custom_Field_4.png" alt=""></div>
 
-6 . Remember to enable the auditing from the  *Advanced options* to maintain the audit history for the field.
+6 . Remember to enable the auditing from the  **Advanced options** to maintain the audit history for the field.
 
 <div align="center"><img src="../assets/MSD_Custom_Field_5.png" alt=""></div>
 
