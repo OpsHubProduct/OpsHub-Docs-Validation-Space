@@ -454,7 +454,7 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 <div align="center"><img src="../assets/MSD_Custom_Field_1.png" alt=""></div>
 
-3 . Navigate to  **Schema ** and select the  **Columns**.
+3 . Navigate to  **Schema** and select the  **Columns**.
 
 <div align="center"><img src="../assets/MSD_Custom_Field_2.png" alt=""></div>
 
