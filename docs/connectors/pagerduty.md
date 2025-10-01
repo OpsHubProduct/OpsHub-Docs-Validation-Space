@@ -95,7 +95,7 @@ In this step, set a time to synchronize data between PagerDuty and the other sys
 Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
 
 <p align="center">
-  <img src="../assets/PagerDuty3.PNG" width="800"/>
+  <img src="../assets/PagerDuty3.PNG" width="1500"/>
 </p>
 
 > **Note** : **While configuring integration, the details appearing in the 'Projects' drop-down are services in PagerDuty.**
