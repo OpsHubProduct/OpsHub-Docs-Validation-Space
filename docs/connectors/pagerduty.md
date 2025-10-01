@@ -285,13 +285,13 @@ Login to the PagerDuty system with base role **Admin**, **Global Admin**, or **A
 3. Click user which is used for synchronization and go to **Permissions and Teams** tab:
 
 <p align="center">
-  <img src="../assets/PagerDuty5a.PNG" />
+  <img src="../assets/PagerDuty5a.png" />
 </p>
 
 4. Select Team Role to **Observer**. Here, you can select the role that you want to assign:
 
 <p align="center">
-  <img src="../assets/PagerDuty8a.PNG" />
+  <img src="../assets/PagerDuty8a.png" />
 </p>
 
 ## How to Generate API token
