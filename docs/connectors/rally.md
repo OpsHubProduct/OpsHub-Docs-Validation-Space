@@ -37,7 +37,10 @@ Click [System Configuration](../integrate/system-configuration.md) to learn the 
 
 Refer to the following screenshot for reference:
 
-![rally system](../assets/rally_system.png)
+<p align="center">
+  <img src="../assets/rally_system.png" width="1000"/>
+</p>
+
 
 If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
@@ -182,12 +185,12 @@ Target LookUp configuration is similar to the Criteria Configuration where in th
 
 * Target Lookup Query for the constraint on a **single field**: 
   `(Name = @Title@)` 
-  **Description:** 
-  It represents the query, which will select only those entities, whose "Name" field value is same as the value of the Source system's "Title" field value.
+ <br> **Description:** 
+<br>It represents the query, which will select only those entities, whose "Name" field value is same as the value of the Source system's "Title" field value.
 * Target Lookup Query for the constraint on **multiple fields**: 
   `((ScheduleState = @State@) and (Name = @Title@))` 
-  **Description:** 
-  It represents the query, which will select only those entities, whose "ScheduleState" field value is same as the value of the Source system's "State" field value and "Name" field value is same as the value of the Source system's "Title" field value.
+ <br> **Description:** 
+<br> It represents the query, which will select only those entities, whose "ScheduleState" field value is same as the value of the Source system's "State" field value and "Name" field value is same as the value of the Source system's "Title" field value.
 
 ## Synchronize SCM commit information to Change Set Workitem
 
@@ -237,13 +240,13 @@ If the parent project is mapped, then the child project should not be mapped in 
 * Watchers field synchronization is not supported for the Test Case Result entity.
 * Criteria query is not supported for the "Watchers" field. In case configured with the "Watchers" field then query execution will result in the error such as "Could not parse: Could not find attribute 'Watchers'".
 * For Rally as the source system, below are the limitations for 'Watchers' field synchronization due to the end system behavior which is 'No Revisions' are being generated for any updates of Watchers on Rally. 
-  &#xNAN;**-** Any updates performed for Watchers, will not get synchronized to the target system unless there is another update performed to the same entity, which generates a Revision for Rally. 
-  &#xNAN;**-** Watchers field will get synchronized with current value(s) only which are present at the time of synchronization, as no revisions available for the Watchers on the entity.
+    * Any updates performed for Watchers, will not get synchronized to the target system unless there is another update performed to the same entity, which generates a Revision for Rally. 
+    * Watchers field will get synchronized with current value(s) only which are present at the time of synchronization, as no revisions available for the Watchers on the entity.
 * For Rally as the source system, the HTML fields (like Description) containing more than 1985 characters are considered long descriptions. While synchronizing long description, the following issues may occur: 
-  &#xNAN;**-** Conflict will not be detected correctly. 
-  &#xNAN;**-** Intermediary revisions may not sync correctly. It may show that the value synced is "value too long to display" instead of actual value. However, the latest state of such fields will sync correctly. This issue is faced because revision history retrieved from the end system provides value as "value too long to display" instead of actual data (as shown in the example given below):
+    * Conflict will not be detected correctly. 
+    * Intermediary revisions may not sync correctly. It may show that the value synced is "value too long to display" instead of actual value. However, the latest state of such fields will sync correctly. This issue is faced because revision history retrieved from the end system provides value as "value too long to display" instead of actual data (as shown in the example given below):
 
-<div align="center"><img src="../assets/RallyDescription.png" alt=""></div>
+<div align="center"><img src="../assets/RallyDescription.png" alt="" width="600"></div>
 
 * Conflict detection is not supported for numeric field, when we set value such as "1234" to numeric field from UI, its API will return "1234.0" and conflict will be detected everytime.
 * Conflict detection is not supported for decimal field, when we set value such as "2345" to decimal field from UI, its API will return "2.345E" and conflict will be detected everytime.
