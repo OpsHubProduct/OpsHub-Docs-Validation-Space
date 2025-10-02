@@ -200,7 +200,7 @@ For viewing Change Sets from Rally UI, build and change set configuration should
 
 Creating Change Set is not possible from the Rally UI; therefore OpsHub Integration Manager does not support polling of Change Set, only creating Change Set is supported with Rally as the target system.
 
-<div align="center"><img src="../assets/rallyscm.png" alt="" width="700"></div>
+<div align="center"><img src="../assets/rallyscm.png" alt="" width="900"></div>
 
 ## Child Project Sync
 
