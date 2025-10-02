@@ -151,7 +151,7 @@ Set a time to synchronize data between Rally and the other system to be integrat
 
 Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
 
-<div align="center"><img src="../assets/Rally_Integration_Configuration.png" alt="" width="950"></div>
+<div align="center"><img src="../assets/Rally_Integration_Configuration.png" alt="" width="1500"></div>
 
 ## Criteria configuration
 
@@ -200,7 +200,7 @@ For viewing Change Sets from Rally UI, build and change set configuration should
 
 Creating Change Set is not possible from the Rally UI; therefore OpsHub Integration Manager does not support polling of Change Set, only creating Change Set is supported with Rally as the target system.
 
-<div align="center"><img src="../assets/rallyscm.png" alt=""></div>
+<div align="center"><img src="../assets/rallyscm.png" alt="" width="700"></div>
 
 ## Child Project Sync
 
@@ -246,7 +246,7 @@ If the parent project is mapped, then the child project should not be mapped in 
     * Conflict will not be detected correctly. 
     * Intermediary revisions may not sync correctly. It may show that the value synced is "value too long to display" instead of actual value. However, the latest state of such fields will sync correctly. This issue is faced because revision history retrieved from the end system provides value as "value too long to display" instead of actual data (as shown in the example given below):
 
-<div align="center"><img src="../assets/RallyDescription.png" alt="" width="600"></div>
+<div align="center"><img src="../assets/RallyDescription.png" alt="" width="900"></div>
 
 * Conflict detection is not supported for numeric field, when we set value such as "1234" to numeric field from UI, its API will return "1234.0" and conflict will be detected everytime.
 * Conflict detection is not supported for decimal field, when we set value such as "2345" to decimal field from UI, its API will return "2.345E" and conflict will be detected everytime.
@@ -287,18 +287,18 @@ For giving privileges to a user, follow the steps given below:
 * Log into Rally instance with **Administrator** privileges.
 * Navigate to **Setup** link on top right of Rally web interface.
 
-<div align="center"><img src="../assets/app1.png" alt=""></div>
+<div align="center"><img src="../assets/app1.png" alt="" width="800"></div>
 
 * Click the **Users** tab.
 * Make sure that All Users are selected in the dropdown list located at the top in the User panel.
 * Click the **Configuration** button located in the **left-most side** of the user you want to edit.
 * Now, click **Edit**.
 
-<div align="center"><img src="../assets/app3.png" alt=""></div>
+<div align="center"><img src="../assets/app3.png" alt="" width="800"></div>
 
 * If **Subscription Admin** checkbox is checked under **Permissions**, then there is no need to set permission. In this case, the given user already has admin permission on all the workspaces. If it is not checked, then either check it or go to the **Workspace** used in integration to synchronize entities and select **Admin** from **Permission** dropdown list.
 
-<div align="center"><img src="../assets/app4.png" alt=""></div>
+<div align="center"><img src="../assets/app4.png" alt="" width="800"></div>
 
 ## Create custom field
 
@@ -307,19 +307,19 @@ Integration requires a few special fields to be defined on the workitem that is 
 * Log into Rally instance with **Administrator** privileges.
 * Navigate to **Setup** link on top right of Rally web interface.
 
-<div align="center"><img src="../assets/app5.png" alt=""></div>
+<div align="center"><img src="../assets/app5.png" alt="" width="800"></div>
 
 <p align="center"><em>Rally Custom Fields</em></p>
 
 * Click the **Workspaces & Projects** tab.
 * Click the **Workspace** from the **Workspaces & Projects** list in which you want to create custom fields.
 
-<div align="center"><img src="../assets/app6.png" alt=""></div>
+<div align="center"><img src="../assets/app6.png" alt="" width="800"></div>
 
 * In the left panel, click **Fields**.
 * Select **Work Item** (workitem which has to be synchronized by integration) from the dropdown list.
 
-<div align="center"><img src="../assets/app7.png" alt=""></div>
+<div align="center"><img src="../assets/app7.png" alt="" width="800"></div>
 
 * Select **New Field** to create custom field.
 * Set **Name** of custom field.
@@ -331,7 +331,7 @@ Integration requires a few special fields to be defined on the workitem that is 
 * Select **Type** to create the new custom field.
 * Click **Save & Close**.
 
-<div align="center"><img src="../assets/app8.png" alt=""></div>
+<div align="center"><img src="../assets/app8.png" alt="" width="800"></div>
 
 ## Find custom field internal name
 
@@ -353,7 +353,7 @@ Integration requires a few special fields to be defined on the workitem that is 
 * Navigate to **Setup** link on top right of Rally web interface.
 * Click on **SUBSCRIPTION** tab.
 
-<div align="center"><img src="../assets/app9.png" alt=""></div>
+<div align="center"><img src="../assets/app9.png" alt="" width="800"></div>
 
 <div align="center"><img src="../assets/app10.png" alt=""></div>
 
@@ -367,15 +367,15 @@ Following are the steps to generate the Rally API key from any user account. If 
   [https://rally1.CA Agile Central.com/login](https:/rally1.CA%20Agile%20Central.com/login/)
 * Login to the account by providing a valid Rally username and password.
 
-<div align="center"><img src="../assets/rallykey1.png" alt=""></div>
+<div align="center"><img src="../assets/rallykey1.png" alt="" width="800"></div>
 
 * Open the **API KEYS** tab (second tab).
 
-<div align="center"><img src="../assets/rallykey2.png" alt=""></div>
+<div align="center"><img src="../assets/rallykey2.png" alt="" width="800"></div>
 
 * Click the **Create New API** key.
 
-<div align="center"><img src="../assets/rallykey3.png" alt=""></div>
+<div align="center"><img src="../assets/rallykey3.png" alt="" width="800"></div>
 
 * Provide the appropriate description.
 * Select the full access and click the create button.
