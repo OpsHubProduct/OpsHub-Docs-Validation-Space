@@ -137,7 +137,7 @@ The internal names of the properties are listed in the table below, and can be u
 6. Check the **Administrator** box.  
 7. Click the **Create** button.
 
-<p align="center"><img src="../assets/Redmine_Image_2.png" width="500"></p>
+<p align="center"><img src="../assets/Redmine_Image_2.png" width="300"></p>
 
 ## Assigning User to Projects
 * Log in to Redmine as a user with Administrator rights.
@@ -148,7 +148,7 @@ The internal names of the properties are listed in the table below, and can be u
 * Select the user to be assigned, along with the Role.
 * Click **Add** button.
 
-<p align="center"><img src="../assets/Redmine_Image_3.png" width="500"></p>
+<p align="center"><img src="../assets/Redmine_Image_3.png" width="800"></p>
 
 ## Custom Field Configuration
 OpsHub Integration Manager needs a few special fields to be defined on the entity that is being synchronized. These must be set up so that OpsHub Integration Manager can track the integration status of each item.
