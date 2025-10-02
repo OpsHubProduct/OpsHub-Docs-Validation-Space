@@ -37,7 +37,7 @@ Attachment name, data, and size field should be configured in the following form
   `Attachment1_attachmentOrigSize`.
 
 <p align="center">
-  <img src="../assets/Remedy_Image_1a.png" width="800" />
+  <img src="../assets/Remedy_Image_1a.png" width="1000" />
 </p>
 
 
@@ -49,11 +49,11 @@ Click [System Configuration](../integrate/system-configuration.md) to learn the 
 Refer the screenshot given below for reference:
 
 <p align="center">
-  <img src="../assets/Remedy_Image_2a.png"  />
+  <img src="../assets/Remedy_Image_2a.png" width="1000" />
 </p>
 
 <p align="center">
-  <img src="../assets/Remedy_Image_3a.png" />
+  <img src="../assets/Remedy_Image_3a.png" width="1000"/>
 </p>
 
 
@@ -95,22 +95,23 @@ To create a new custom field in Remedy, follow the steps given below:
 * As shown in the image below, right click **Remedy** form to add a new field.
 
 <p align="center">
-  <img src="../assets/Remedy_Image_4a.png" width="800"  />
+  <img src="../assets/Remedy_Image_4a.png" width="900"  />
 </p>
 
 
 * Add mapping for that field in web-service's operations: `OpGet`, `OpSet`, `OpCreate`.
   
 <p align="center">
-  <img src="../assets/Remedy_Image_5a.png" width="800"  />
+  <img src="../assets/Remedy_Image_5a.png" width="900"  />
 </p>
 
 <p align="center">
-  <img src="../assets/Remedy_Image_6a.png" width="800"  />
+  <img src="../assets/Remedy_Image_6a.png" width="900"  />
 </p>
 
 * Save web-service and the form.
 * Restart the Remedy Tomcat Server.
+
 
 
 
