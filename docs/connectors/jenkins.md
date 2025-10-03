@@ -21,7 +21,7 @@ A special parameter needs to be created on all Jenkins projects that need to be 
 Before you continue to the integration, you must first configure Jenkins. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system. Refer the screenshot given below for reference.
 
 <p align="center">
-  <img src="../assets/Jenkins_Image_3a.png" width="900" />
+  <img src="../assets/Jenkins_Image_3a.png" width="1500" />
 </p>
 
 In order to get the Jenkins API token from Jenkins instance for a given user account, please follow the [how-to-get-api-token-in-jenkins](#how-to-get-api-token-in-jenkins) section in appendix.
