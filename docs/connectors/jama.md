@@ -1,5 +1,4 @@
 # Pre-requisites
-
 ## User privileges
 
 *Create one user in Jama that is dedicated to OpsHub Integration Manager. This user should not do any operations from the system's interface.*  
@@ -13,13 +12,12 @@
     * For Jama Cloud versions earlier than 8.61 and/or a self-hosted version earlier than 8.62:  
       *  **Read Access** permission at the organization level to access user's meta information.
 
-
 > **Note**: The behavior of the Rest API(s) was changed from Jama Cloud version 8.61 and self-hosted version 8.62. Hence, there are specific additional permissions required for older versions as mentioned above to access User's meta information.
 
 * Refer to [Grant Project Permissions](https://help.jamasoftware.com/ah/en/administration/project-administrator/view-project-users/grant-project-permissions.html) for details on how to grant project permissions.  
 * To validate the permission of the user being used in the OpsHub Integration Manager, please refer to [Access Permission of Jama users](#access-permission-of-jama-users) section.  
 * Jama allows granting permissions to user on specific projects and within this projects also, user can limit the access at Component and Set level (user can revoke permissions for specific Component and Set).  
-  ** In such cases, only the Entities/Component/Set/Folder will be synchronized for which the sync user has access to.
+  * In such cases, only the Entities/Component/Set/Folder will be synchronized for which the sync user has access to.
 
 # System Configuration
 
@@ -30,7 +28,7 @@ Click [System Configuration](../integrate/system-configuration.md) to learn the 
 Refer the screenshot given below for reference.
 
 <p align="center">
-  <img src="../assets/Jama_Image_1c.png">
+  <img src="../assets/Jama_Image_1c.png" width="900">
 </p>
 
 | **Field Name**          | **When field is visible on the System form** | **Description** |
@@ -56,7 +54,7 @@ Map the fields between Jama and the other system to be integrated to ensure that
 Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
 <p align="center">
-  <img src="../assets/Jama_Image_2a.png">
+  <img src="../assets/Jama_Image_2a.png" width="900" >
 </p>
 
 ## Common Fields
@@ -85,12 +83,13 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
       * If the provided Component/Set/Folder does not exist:
         * If checkAndCreate is enabled, the component/set/folder will be checked and created and entity will be added under the final entity location  
         * If checkAndCreate is disabled, Processing failure will be observed with error code `[[OH-Jama-0102]]`
+    * By default, checkAndCreate will be disabled, to enable the same advance mapping will be required.
 
-```xml
-<OH_Set checkAndCreate="true">
-  <xsl:value-of select="SourceXML/updatedFields/Property/Custom-space-text"></xsl:value-of>
-</OH_Set>
-```
+        ```xml
+        <OH_Set checkAndCreate="true">
+          <xsl:value-of select="SourceXML/updatedFields/Property/Custom-space-text"></xsl:value-of>
+        </OH_Set>
+        ```
 > **Note** : If for any of these Location Related fields or Location or Location Path, any change is detected from source system, for Jama as the target system, the whole relative will always be reconstructed from all these fields together.
 
 #### Entity type wise specific configuration
@@ -116,7 +115,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
   * Now, you can select the location values for the value mapping.
 
 <p align="center">
-  <img src="../assets/JamaLocationField_1.png">
+  <img src="../assets/JamaLocationField_1.png" width="900"> 
 </p>
 
 > **Note** :The values mapped for location will be project specific. For example, in the image shown above, the location '/Defect' is selected only for '/DemoProject' project.
@@ -202,7 +201,7 @@ Set a time to synchronize data between Jama and the other system to be integrate
 Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.  
 
 <p align="center">
-  <img src="../assets/Jama_Image_3a.png" />
+  <img src="../assets/Jama_Image_3a.png" width="900" />
 </p>
 
 ## Add comment interval
@@ -212,7 +211,7 @@ Click [Integration Configuration](../integrate/integration-configuration.md) to 
 - As shown in below image, please specify the interval (in milliseconds) in the field 'Jama add comment interval'. The maximum acceptable value for this field is 2000 (milliseconds).
 
 <p align="center">
-  <img src="../assets/JAMA_add_comment_interval.png" />
+  <img src="../assets/JAMA_add_comment_interval.png" width="900" />
 </p>
 
 - The default value for this field is 0 milliseconds.  
@@ -249,35 +248,32 @@ For Component/Set/Folder entities, we can't have specific check for entity types
 Following needs to be done to configure filter for these entity types:
 - Select **All Item Types** in the option **Match** so that Component/Set/Folder can be filtered out. This will filter out all the entities which matches the rules provided.
 - One extra set of rule needs to be added to filter out only Components, Folders or Sets.
-  - For Component - ID contains word **\-CMP\-**
-  - For Set - ID contains word **\-SET\-**
-  - For Folder - ID contains word **\-FLD\-**
+  - For Component - ID contains word **-CMP-**
+  - For Set - ID contains word **-SET-**
+  - For Folder - ID contains word **-FLD-**
 
 <p align="center">
-  <img src="../assets/Jama_Image_13a.png" width="750px" />
+  <img src="../assets/Jama_Image_13a.png" width="800" />
 </p>
 
 ### Criteria Storage Type
 
-Set Select Criteria Storage Type according to the Integration Requirement.  
-Criteria can be stored in the Database or in the End system.  
-
-#### a) When criteria storage type is Database:
-
-Fill in the details for criteria query as shown in the image given below:
+Set Select Criteria Storage Type according to the Integration Requirement. Criteria can be stored in the Database or in the End system.
+a) When criteria storage type is Database:
+Fill in the details for criteria query as shown in the image given below: 
 
 <p align="center">
-  <img src="../assets/Jama_Image_4c.png" />
+  <img src="../assets/Jama_Image_4c.png" width="800"/>
 </p>
 
-#### b) When criteria storage type is End System:
+b) When criteria storage type is End System:
 
 Fill in the details for criteria query as shown in the image below.
 
 Refer [Create Custom Field](#connector-specific-field-custom-field-configuration) for creating a custom field.
 
 <p align="center">
-  <img src="../assets/Jama_End_System_Criteria_Filter.png" />
+  <img src="../assets/Jama_End_System_Criteria_Filter.png" width="800" />
 </p>
 
 > **Note**: Make sure you are using the same custom field in filter that is used in "Select where criteria info is to be stored" during advance integration configuration.
@@ -290,7 +286,7 @@ Click **Save** to save the filter.
 **Now put this filter id in Query field under "Criteria Configuration" as shown in the image given below:**
 
 <p align="center">
-  <img src="../assets/Jama_Image_11a.png" />
+  <img src="../assets/Jama_Image_11a.png" width="800"/>
 </p>
 
 ## Target Search Query
@@ -303,10 +299,8 @@ Provide query in Target Search Query such that it is possible to search the enti
 **Sample queries:**
 
 - `Custom_Text:"@oh_internal_id@"`
-- `"[Target Field]:$value"`: If the user needs to check for 'contains' in target search query.  
-  Example: `ID:100` → returns 100, 1001, 1002 etc.
-- `"[Target Field]:"$value""`: If the user needs to check for 'equals' in target search query.  
-  Example: `ID:"100"` → returns only exact match 100
+- `"[Target Field]:$value"`: If the user needs to check for 'contains' in target search query. For example, "ID:100", if there are values such as 100, 1001, 1002 etc. then all three results will come up as all of them contain value 100.
+- `"[Target Field]:"$value""`: If the user needs to check for 'equals' in target search query. For example, "ID:"100"" then it will result in only 1 which has ID equals 100.  
 
 > Note: In case target field is a text type of field, then the 'value part' in a query must be enclosed in double quotes.
 
@@ -363,14 +357,14 @@ Jama query is based on **OR** condition when there are more than one field.
   - If conflict detection is enabled on the TAGS field with manual conflict resolution strategy, then in the event of recovery, OpsHub Integration Manager will give a failure. To resolve this failure, conflict resolution strategy should be either of "Endpoint 1 Wins", "Endpoint 2 Wins" or "Custom Strategy".
   - Recovery is not guaranteed for Status field. 
   
- ### Entity Specific
+ ## Entity Specific
 
 #### Component/Set/Folder
 
 - Jama doesn't have workflow transitions for Component/Set/Folder. Hence, status transition is not supported for these entities.
 - Criteria is supported on only system fields in Jama.
 
-#### Test Run
+### Test Run
 
 - Fields cannot be updated [except Run Result and Status].  
   **Reason:** Unavailability of the Update API.
@@ -513,8 +507,7 @@ For proper synchronization, it is important to fill all the mandatory details wh
 
 - Login to Jama with the Admin User;
 - Go to Admin window;
-
-### To provide the permissions at the project level:
+To provide the permissions at the project level:
 
 - Select the project to be integrated from the **Project** tab;
 - Select **Project Permissions**;
@@ -531,7 +524,7 @@ For proper synchronization, it is important to fill all the mandatory details wh
   <img src="../assets/Jama_permissions4.png" />
 </p>
 
-### To provide the permissions at the organization level:
+To provide the permissions at the organization level:
 
 - Select **Permissions** in the Organization tab;
 - Select **Add Permissions** in the **Access Rights for Organization** as shown below:
