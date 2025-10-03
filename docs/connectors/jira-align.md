@@ -36,7 +36,7 @@
 - In the Appendix section, refer to [Grant permissions to Jira Align user](#grant-permissions-to-jira-align-user) for step-wise details on how to grant permissions to a Jira Align user.
 - To learn how to add a user in Jira Align, refer to [Add User](#add-user) section.
 
-### Entity Details
+## Entity Details
 
 | **Entity Type**         | **Project Type** | **projectFieldInternalName** | **Read Support** | **Write Support** | **Reading Mechanism** |
 |-------------------------|------------------|-------------------------------|------------------|-------------------|------------------------|
@@ -60,7 +60,7 @@
 
 > **Note**: For entity type as objectives, please provide "tier" as 1 for team objective, 2 for program objective, 4 for portfolio objective.
 
-## System Configuration
+# System Configuration
 
 Before the user starts with the integration configuration, first configure Jira Align system.
 
@@ -69,7 +69,7 @@ Click [System Configuration](../integrate/system-configuration.md) to learn the 
 Refer the screenshot given below:
 
 <p align="center">
-  <img src="../assets/Ja1.png" width="600px" />
+  <img src="../assets/Ja1.png" width="900px" />
 </p>
 
 
@@ -83,7 +83,7 @@ Refer the screenshot given below:
 | **API Token**       | Provide the API token generated in Jira Align for the user given in 'User Email' field. For help on how to generate API token, please refer to section.|
 | **Metadata Details**| This data is pre-populated in JSON format according to our knowledge of system metadata (entity type, field names, lookup...), the user can edit it based on his/her Jira Align instance details for system/custom metadata. For the format and guidance related to filling these details in JSON form, please refer to [Understanding JSON Input](#understanding-json-input) section. |
 
-### Understanding JSON Input
+## Understanding JSON Input
 
 - The field metadata details needed for integrating Jira Align system with other systems are provided at the time of system configuration in the field 'Metadata details' in the form of JSON.
 - For an entity, internal name of the entity is given as the API endpoint name of the entity.For example - for entity "Epic", the API end point name is - "Epics"
@@ -96,16 +96,16 @@ Refer the screenshot given below:
 
 # Mapping Configuration
 
-Map fields between Jira Align and the other system to ensure accurate synchronization.
+Map the fields between Jira Align and the other system to be integrated to ensure that the data between both the systems synchronizes correctly.
 
 <p align="center">
-  <img src="../assets/Ja9.png" width="600px" />
+  <img src="../assets/Ja9.png" width="900px" />
 </p>
 
 
-Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn how to configure mappings.
+Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
-> In Jira Align, entity type selection in mapping depends on the project. See [Project Selection](#project-selection).
+> In Jira Align, entity type selection in mapping depends on the project. To learn how, please refer [Project Selection](#project-selection).
 
 # Integration Configuration
 Set a time to synchronize data between Jira Align and the other system to be integrated. Also, define parameters and conditions, if any, for integration.
@@ -113,11 +113,10 @@ Set a time to synchronize data between Jira Align and the other system to be int
 Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
 
 <p align="center">
-  <img src="../assets/Ja8.png" width="600px" />
+  <img src="../assets/Ja8.png" width="900" />
 </p>
 
-
-> In Jira Align, entity selection depends on the project. See [Project Selection](#project-selection).
+> In Jira Align, entity type selection in integration configuration depends on the project selection. To learn how, please refer: [Project Selection](#project-selection).
 
 ## Criteria Configuration
 
@@ -134,11 +133,11 @@ Given below are the sample snippets of how the Jira Align queries can be used as
 
 | **Field Type** | **Criteria Description**                                          | **Criteria Snippet**                          |
 |----------------|--------------------------------------------------------------------|-----------------------------------------------|
-| Lookup         | Synchronize entities with high priority                           | `priority eq 2`                               |
-| Date           | Synchronize entities created after 10 March 2021                         | `createdDate ge 2021-03-10T00:00:00Z`         |
-| User           | Synchronize entities created by user 'ABC'                               | `createdBy eq 1159`                           |
-| User + Lookup  | Synchronize all entities which was created by user 'ABC' and also has 'Priority' as 'Critical'| `createdBy eq 1159 and priority eq 1`         |
-| Lookup         | Synchronize all entities which has 'Priority' as 'Critical' or 'Priority' as 'High'   | `priority eq 1 or priority eq 2`              |
+| Lookup         | Synchronize all entities which have high priority                        | priority eq 2  <br>Here, priority 2 belongs to the value 'high'.                              |
+| Date           | Synchronize all entities created after 10 March 2021                         | createdDate ge 2021-03-10T00:00:00Z <br>Format of date in Jira Align is: yyyy-MM-dd'T'HH:mm:ss'Z'         |
+| User           | Synchronize all entities which was created by user 'ABC'                              | createdBy eq 1159 <br> Here, 1159 is the uid of the user 'ABC' which can be obtained from 'People' table on Jira Align UI.                          |
+| User + Lookup  | Synchronize all entities which was created by user 'ABC' and also has 'Priority' as 'Critical'| createdBy eq 1159 and priority eq 1. <br> Here, priority 1 belongs to the value 'critical'.        |
+| Lookup         | Synchronize all entities which has 'Priority' as 'Critical' or 'Priority' as 'High'   | priority eq 1 or priority eq 2. <br> Here, priority 1 belongs to the value 'critical' and priority 2 belongs to value 'high'.|
 
 ## Target LookUp Configuration
 
@@ -159,7 +158,7 @@ For more details on how to configure criteria in Jira Align, refer: [Jira Align 
 
 ## Project Selection
 
-*For Jira Align system, user can organize their data at different levels, i.e., Enterprise, Portfolio or Program [as defined below]. Different entities can reside on different levels, for e.g., the Epic can belong to Program while Objective can belong to Portfolio. For more details on Project entity, please refer to [[#Entity Details | Entity Details]] section.*
+* For Jira Align system, user can organize their data at different levels, i.e., Enterprise, Portfolio or Program [as defined below]. Different entities can reside on different levels, for e.g., the Epic can belong to Program while Objective can belong to Portfolio. For more details on Project entity, please refer to [Entity Details](#entity-details) section.
 
 * **Enterprise**
   * **Portoflio**
@@ -171,31 +170,31 @@ And this hierarchy is inclusive of Parent. For example, Epic can be organized at
 
 # Known Limitations
 
-*Limitations due to the lack of API:*
-- Synchronization of comments and attachments is not supported.
-- If in the Jira Align more than one user having same full Name then we return the first value that matches the fullName.  
-  * **Reason: Jira Align API does not give any identification for two different users having same full name.**
-- For user type field synchronization advance mapping would be needed in the below mentioned usecase.  
-  * **If the first name or last name of the user is changed.**
-- Fields available in the following sections are not supported:
-  - Value  
-  - Finance  
-  - Responsibility Matrix  
-  - Skill set  
-  - Design  
-  - Members  
-  - Program, Products and Regions(Section): Regional Allotment(field), Program Allotment(field)
-- When Jira Align is target endpoint:
-  - Synchronization of Ideation's Category field:
-    - The category field should be marked as mandatory in the fields JSON metadata input and in the field mapping.
-    - In the field configuration, the **sync when** should be configured to create only.
-- When Jira Align is source endpoint:
-  - Conflict detection is not supported for 'State' field in the 'Epic' entity type.
-- When Jira Align is source endpoint, below entities will be synchronized without history. They will be synchronized with the entity state/details available at the time of synchronization.*
+- Limitations due to the lack of API:
+    - Synchronization of comments and attachments is not supported.
+    - If in the Jira Align more than one user having same full Name then we return the first value that matches the fullName.  
+      * **Reason: Jira Align API does not give any identification for two different users having same full name.**
+    - For user type field synchronization advance mapping would be needed in the below mentioned usecase.  
+      * **If the first name or last name of the user is changed.**
+    - Fields available in the following sections are not supported:
+      - Value  
+      - Finance  
+      - Responsibility Matrix  
+      - Skill set  
+      - Design  
+      - Members  
+      - Program, Products and Regions(Section): Regional Allotment(field), Program Allotment(field)
+    - When Jira Align is target endpoint:
+      - Synchronization of Ideation's Category field:
+        - The category field should be marked as mandatory in the fields JSON metadata input and in the field mapping.
+        - In the field configuration, the **sync when** should be configured to create only.
+    - When Jira Align is source endpoint:
+      - Conflict detection is not supported for 'State' field in the 'Epic' entity type.
+- When Jira Align is source endpoint, below entities will be synchronized without history. They will be synchronized with the entity state/details available at the time of synchronization.
   - Product, Value Stream, Release Vehicle, Snapshot, Region, Portfolio, Theme, Program, Program Increment, Team, Sprint
-- In case of One to Many links from Epic to Capability and Capability to Feature, configure link from child to parent, that is from Capability to Epic and enable **fail if not found** criteria.*  
+- In case of One to Many links from Epic to Capability and Capability to Feature, configure link from child to parent, that is from Capability to Epic and enable **fail if not found** criteria.
   - **Reason**: API limitation from Jira Align.**
-- When a link is added from Epic to Feature or vice versa, an additional update is needed as the last updated time of the entity does not change by adding link.*
+- When a link is added from Epic to Feature or vice versa, an additional update is needed as the last updated time of the entity does not change by adding link.
 
 # Appendix
 
@@ -247,7 +246,7 @@ And this hierarchy is inclusive of Parent. For example, Epic can be organized at
   <img src="../assets/Ja13.png" />
 </p>
 
-4. Give permissions as per mentioned in the [[#User privileges|User privileges]] Section to this role.<br>
+4. Give permissions as per mentioned in the [User privileges](#user-privileges) Section to this role.<br>
 5. For example, to give Administration access: click the '+' sign on the left side of **Administration** section and enable the needed permissions.<br>
 
 <p align="center">
@@ -283,6 +282,7 @@ And this hierarchy is inclusive of Parent. For example, Epic can be organized at
    User Token Copied: `user:1166|{.%Bb8_V6LPX5JY}03j|v+t<#M~V}8r`  
    Change to: `Bearer user:1166|{.%Bb8_V6LPX5JY}03j|v+t<#M~V}8r`
    ```
+
 
 
 
