@@ -160,7 +160,7 @@ Here is the screenshot:
 4. Enter the user details. The value provided in Login Name will be used later for login using that user. Default Role can also be set. If the **Force user to change password on first login** checkbox is selected, the user must change their password on first login.
    
    <p align="center">
-  <   img src="../assets/Snowflake_add_user_form.png" width="700">
+     <img src="../assets/Snowflake_add_user_form.png" width="900">
    </p>
 
 5. Save changes.
@@ -176,7 +176,7 @@ Here is the screenshot:
 
 4. Enter the **New Role** details. 
 
-     <p align="center">
+   <p align="center">
      <img src="../assets/Snowflake_add_role_form.png" width="700">
    </p>
 
