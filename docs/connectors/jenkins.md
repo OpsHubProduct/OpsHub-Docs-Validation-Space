@@ -21,7 +21,7 @@ A special parameter needs to be created on all Jenkins projects that need to be 
 Before you continue to the integration, you must first configure Jenkins. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system. Refer the screenshot given below for reference.
 
 <p align="center">
-  <img src="../assets/Jenkins_Image_3a.png" />
+  <img src="../assets/Jenkins_Image_3a.png" width="900" />
 </p>
 
 In order to get the Jenkins API token from Jenkins instance for a given user account, please follow the [how-to-get-api-token-in-jenkins](#how-to-get-api-token-in-jenkins) section in appendix.
@@ -77,11 +77,11 @@ Set a time to synchronize data between Jenkins and the other system to be integr
 * Login with the user credentials assigned to you. This will open the home page of the Jenkins account. On the home page, navigate to the top-right corner, and click the dropdown arrow adjacent to the user account's name and select **Configure** from the dropdown menu.
 
 <p align="center">
-  <img src="../assets/Jenkins_Image_1a.png" />
+  <img src="../assets/Jenkins_Image_1a.png" width="900"/>
 </p>
 
 It opens a Jenkins Configuration page. On that page in the center, click the **Show API Token** button in the **API Token** section. It will display the Jenkins instance API Token. You can use the same for configuration of Jenkins in OpsHub Integration Manager in the system configuration section.
 
 <p align="center">
-  <img src="../assets/Jenkins_Image_2a.png" />
+  <img src="../assets/Jenkins_Image_2a.png" width="900" />
 </p>
