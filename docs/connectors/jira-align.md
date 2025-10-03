@@ -99,7 +99,7 @@ Refer the screenshot given below:
 Map the fields between Jira Align and the other system to be integrated to ensure that the data between both the systems synchronizes correctly.
 
 <p align="center">
-  <img src="../assets/Ja9.png" width="900px" />
+  <img src="../assets/Ja9.png" width="1500px" />
 </p>
 
 
@@ -113,7 +113,7 @@ Set a time to synchronize data between Jira Align and the other system to be int
 Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
 
 <p align="center">
-  <img src="../assets/Ja8.png" width="900" />
+  <img src="../assets/Ja8.png" width="1500" />
 </p>
 
 > In Jira Align, entity type selection in integration configuration depends on the project selection. To learn how, please refer: [Project Selection](#project-selection).
@@ -262,19 +262,19 @@ And this hierarchy is inclusive of Parent. For example, Epic can be organized at
 1. Go to User menu and then navigate to Edit Profile option.<br>
 
 <p align="center">
-  <img src="../assets/JiraAlign_GenerateBearerToken1.png" width="800px" />
+  <img src="../assets/JiraAlign_GenerateBearerToken1.png" width="800" />
 </p>
 
 2. In the Account Details section, click API Token.<br>
 
 <p align="center">
-  <img src="../assets/JiraAlign_GenerateBearerToken2.png" width="800px" />
+  <img src="../assets/JiraAlign_GenerateBearerToken2.png" width="800" />
 </p>
 
 3. Click "Generate new API Token" and copy the "API 2.0 Token".<br>
 
 <p align="center">
-  <img src="../assets/JiraAlign_GenerateBearerToken3.png" width="800px" />
+  <img src="../assets/JiraAlign_GenerateBearerToken3.png" width="800" />
 </p>
 
 4. Add "Bearer" at the begining of the copied token to make it in the form of `Bearer <API 2.0 Token>`. For example:
@@ -282,6 +282,7 @@ And this hierarchy is inclusive of Parent. For example, Epic can be organized at
    User Token Copied: `user:1166|{.%Bb8_V6LPX5JY}03j|v+t<#M~V}8r`  
    Change to: `Bearer user:1166|{.%Bb8_V6LPX5JY}03j|v+t<#M~V}8r`
    ```
+
 
 
 
