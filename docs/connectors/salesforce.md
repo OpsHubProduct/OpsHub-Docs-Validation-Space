@@ -19,7 +19,7 @@
 * No Sharing Rules should be configured for the objects (need to be synchronized) through which the user permissions can be revoked.
 * User must have the 'write permission' of the entities that are mapped in the **Relationship Configuration** setting of OpsHub Integration Manager.
 
-### Custom field configuration
+## Custom field configuration
 
 OpsHub Integration Manager requires one special field to be defined on the entity that is being synchronized. These must be set up so that OpsHub Integration Manager can track the integration status of each item:
 
@@ -38,7 +38,7 @@ Click [System Configuration](../integrate/system-configuration.md) to learn the 
 Refer to the screenshot below:
 
 <p align="center">
-  <img src="../assets/SalesforceSystemForm.png" />
+  <img src="../assets/SalesforceSystemForm.png" width="1500" />
 </p>
 
 
@@ -47,22 +47,24 @@ Refer to the screenshot below:
 | **System Name**                | Always                                      | Provide a name to the Salesforce system                                                                                                                 |
 | **Version**                    | Always                                      | Provide the version for the Salesforce system. The version can be either Lightning or Classic                                                           |
 | **Salesforce Instance URL**    | Always                                      | Set the URL of your Salesforce instance<br>Format: `https://MyDomainName.my.salesforce.com`<br>To learn how to get the domain name URL, go to [Get MyDomain Name URL](#steps-to-get-mydomain-name-url) |
-| **Salesforce Authentication Type** | Always                                  | Select Salesforce Authentication Type. Options: <br>1. Basic Authentication<br>2. OAuth Authentication (see [Steps to enable OAuth settings in Salesforce](#steps-to-enable-oauth-settings-in-salesforce)) |
-| **Salesforce Username**        | Basic Authentication                        | Enter Username. User must have administrator privileges to use Salesforce API                                                                           |
-| **Salesforce User Password**   | Basic Authentication                        | Enter password of the user in format: password+security token (see [here](#get-security-token))                                                         |
-| **Salesforce Consumer Key**    | OAuth Authentication                        | Enter Consumer Key of the user (see [here](#steps-to-get-consumer-key-and-consumer-secret-for-user-in-connected-app))                                   |
-| **Salesforce Consumer Secret** | OAuth Authentication                        | Enter Consumer Secret (see [here](#steps-to-get-consumer-key-and-consumer-secret-for-user-in-connected-app))                                            |
+| **Salesforce Authentication Type** | Always                                  | Select Salesforce Authentication Type as per your requirement. There are two options to choose from:  <br>1. Basic Authentication<br>2. OAuth Authentication (To learn how to enable OAuth Settings in Salesforce System, go to [Steps to enable OAuth settings in Salesforce](#steps-to-enable-oauth-settings-in-salesforce)) |
+| **Salesforce Username**        | Basic Authentication                        | Enter Username. User must have administrator privileges to use Salesforce API                                                                         |
+| **Salesforce User Password**   | Basic Authentication                        | 	Enter password of the user added above. The value for password must be in the format of password+security token(To learn how to get the security token, click [here](#get-security-token)) |
+| **Salesforce Consumer Key**    | OAuth Authentication                        | Enter Consumer Key of the user. To learn how to get the Consumer Key in Salesforce system, click [Get Client Id/ Consumer key and Client Secret for user in Connected APP](#steps-to-get-consumer-key-and-consumer-secret-for-user-in-connected-app) |
+| **Salesforce Consumer Secret** | OAuth Authentication                        | Enter Consumer Secret of the user added above.To learn how to get the Consumer Secret in Salesforce system, click[Get Client Id/ Consumer key and Client Secret for user in Connected APP](#steps-to-get-consumer-key-and-consumer-secret-for-user-in-connected-app)|
 
 If the system is deployed on HTTPS and a self-signed certificate is used, import the SSL Certificate. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn more.
 
 # Mapping Configuration
-
-Map the fields between Salesforce and the other system to ensure correct synchronization. Click [Mapping Configuration](../integrate/mapping-configuration.md) for step-by-step details.
+Map the fields between Salesforce and the other system to be integrated to ensure that the data between both the systems synchronizes correctly. Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
 ## Configure Assignment Rules from Field Mapping
 
-* Use `assignmentRuleHeader` XSLT attribute in the `<OwnerId>` tag to control Salesforce assignment rule behavior (only for target = Salesforce).
-* Example field mapping for `Owner ID`:
+* When Salesforce is your target system, you can specify whether to use Assignment Rule from field mapping by specifying an XSLT Attribute in the field mapping XSLT. To read about Assignment Rules in Salesforce, refer https://help.salesforce.com/articleView?id=customize_leadrules.htm&type=5.
+* Assignment Rules can be configured and used for Account, Case and Lead entity type and will be used at the time of creating or updating an entity in Salesforce or when Salesforce is your target system.
+* If this attribute is not given, then by default the active Assignment Rule will be applied on any create or update performed on Account, Case and Lead. This is the default Salesforce behavior.
+* In case you do not want to apply any Assignment Rule at the time of create or update, then you can use the advanced mapping to either disable the Assignment Rule or use a specific Assignment Rule ID.
+* Here is an example how you can set Assignment Rule input from field mapping. Consider you have mapped the Owner ID field, then your default field mapping for Owner ID would be something like:
 
 ```xml
 <OwnerId>
@@ -84,13 +86,8 @@ Map the fields between Salesforce and the other system to ensure correct synchro
     </xsl:choose>
 </OwnerId>
 ```
-
-## Add `assignmentRuleHeader` Attribute in `<OwnerId>` Tag
-
-- Add an XSLT attribute in the `<OwnerId>` tag with name `assignmentRuleHeader` and input value to this attribute.  
-- Value can be either `'TRUE'`, `'FALSE'`, or a specific **Assignment Rule ID**.  
-- To get an Assignment Rule ID for an Assignment Rule, refer [Get Assignment Rule ID](#get-assignment-rule-id).  
-- This attribute is only used when Salesforce is a target system.
+* Add an XSLT attribute in the <OwnerId> tag with name assignmentRuleHeader and input value to this attribute. Value can be either 'TRUE', 'FALSE' or a specific Assignment Rule ID. To get an Assignment Rule ID * for an Assignment Rule, refer [Get Assignment Rule ID](#get-assignment-rule-id). This attribute is only used when Salesforce is a target system.
+* Here is a sample XSLT:
 
 ### Sample XSLT
 
@@ -115,7 +112,7 @@ Map the fields between Salesforce and the other system to ensure correct synchro
 </OwnerId>
 ```
 
-- To assign value according to some logic, refer [Write Custom logic to configure Assignment Rules](#write-custom-logic-to-configure-assignment-rules).
+- If you want to assign the value of this attribute according to some custom logic, then you can refer section to [Write Custom logic to configure Assignment Rules](#write-custom-logic-to-configure-assignment-rules).
 
 ## Configure Post As Comment
 
@@ -124,7 +121,7 @@ Map the fields between Salesforce and the other system to ensure correct synchro
   2. Public Text Post: This includes posts having visibility to **All Users**.
 
 <p align="center">
-  <img src="../assets/Salesforce_comment_type.png" />
+  <img src="../assets/Salesforce_comment_type.png" width="500"/>
 </p>
 
 
@@ -147,26 +144,25 @@ Set a time to synchronize data between Salesforce and the other system to be int
 * If the field is not selected in the Display ID Field, the Salesforce entity's internal id (which is a part of the entity URL) will be visible in OpsHub Integration Manager's sync report.
 
 <p align="center">
-  <img src="../assets/Salesforce_DisplayIdField.png" />
+  <img src="../assets/Salesforce_DisplayIdField.png" width="500"/>
 </p>
 
 **Post as Comment:**
 
-* For the Salesforce entity, the post can be synchronized as comment to the target system. To enable this feature, user needs to select "Yes" for **Post as Comment** field that is configured at the integration level.
+* For the Salesforce entity, the post can be synchronized as comment to the target system. To enable this feature, user needs to select "Yes" for Post as Comment field that is configured at the integration level.
 
 <p align="center">
-  <img src="../assets/Salesforce_PostAsComment.png" />
+  <img src="../assets/Salesforce_PostAsComment.png" width="500"/>
 </p>
 
-## Criteria Configuration
+# Criteria Configuration
 
-### Query
+## Query
 
 If you want to specify conditions for synchronizing an entity between SalesForce and the other system to be integrated, you can use the Criteria Configuration feature.
-
 Salesforce query is a normal SQL type query wherein you can frame simple queries on the basis of field names. For more details on writing a query, please refer to this [link](https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/).
 
-### Sample Query
+## Sample Query
 
 * Search entities with **High** Priority:
   * `Priority='High'`
@@ -223,7 +219,7 @@ It represents the query, which will select only those entities whose "Status" fi
 
 ## Inline Image Sync
 * To enable Inline Image Sync in OpsHub Integration Manager, you need to enable the **Content Deliveries and Public Links** Settings in your Salesforce Instance. The steps to enable **Content Deliveries and Public Links** is mentioned in [Steps to enable Content Deliveries and Public Links in Salesforce](#steps-to-enable-content-deliveries-and-public-links-in-salesforce)  
-  **Click here to learn how to enable Content deliveries and Public links in the Salesforce system** [Steps to enable Content Deliveries and Public Links in Salesforce](#steps-to-enable-content-deliveries-and-public-links-in-salesforce)
+   * Click here to learn how to enable Content deliveries and Public links in the Salesforce system** [Steps to enable Content Deliveries and Public Links in Salesforce](#steps-to-enable-content-deliveries-and-public-links-in-salesforce)
 
 # Appendix
 
@@ -437,5 +433,6 @@ Once the profile is created, click **Edit** to set the permissions
 <p align="center">
   <img src="../assets/ContentDeliveriesEnable.png" width="1150px">
 </p>
+
 
 
