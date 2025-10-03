@@ -154,7 +154,7 @@ Here is the screenshot:
 3. Click **+ User** button to create a new user.
    
   <p align="center">
-     <img src="../assets/Snowflake_add_user.png" width="700" >
+     <img src="../assets/Snowflake_add_user.png" width="900" >
   </p>
 
 4. Enter the user details. The value provided in Login Name will be used later for login using that user. Default Role can also be set. If the **Force user to change password on first login** checkbox is selected, the user must change their password on first login.
@@ -171,7 +171,7 @@ Here is the screenshot:
 2. Click **+ Role** button to create a new role.
 
    <p align="center">
-      <img src="../assets/Snowflake_add_role.png width="700">
+      <img src="../assets/Snowflake_add_role.png" width="700">
    </p>
 
 4. Enter the **New Role** details. 
