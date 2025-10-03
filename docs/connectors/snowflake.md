@@ -60,8 +60,12 @@ The following columns should exist in the Snowflake's tables and views for OpsHu
 * If a view is used as the source endpoint for integration, an ID field name must be provided. The view should have at least one column with unique records that can be considered as the ID field. Provide a list in the format `"view_name": "id_field_name"` for all views used in the integration.
 
 An example input for the metadata JSON:
-
-{ "views": { "ohrv_an_workitem_wise_dcc": "ID", "ohrv_an_wi_dcc_impactdcc": "primary_id" },
+{
+  views: {
+    "ohrv_an_workitem_wise_dcc": "ID",
+    "ohrv_an_wi_dcc_impactdcc": "primary_id"
+},
+{% include ".gitbook/includes/database-metadata-input.md" %}
 
 >**Note**:  All the names of table or field mentioned here will be treated as case-sensitive and should match the actual names in Snowflake instance.
 
@@ -73,7 +77,7 @@ An example input for the metadata JSON:
 Here is the screenshot:
 
 <p align="center">
-  <img src="../assets/Snowflake_mapping.png" width="900"/>
+  <img src="../assets/Snowflake_mapping.png" width="900">
 </p>
 
 
@@ -147,13 +151,13 @@ Here is the screenshot:
 3. Click **+ User** button to create a new user.
    
   <p align="center">
-  <img src="../assets/Snowflake_add_user.png" />
+  <img src="../assets/Snowflake_add_user.png" >
   </p>
 
 4. Enter the user details. The value provided in Login Name will be used later for login using that user. Default Role can also be set. If the **Force user to change password on first login** checkbox is selected, the user must change their password on first login.
    
    <p align="center">
-  <img src="../assets/Snowflake_add_user_form.png/>
+  <img src="../assets/Snowflake_add_user_form.png>
    </p>
 
 5. Save changes.
@@ -164,13 +168,13 @@ Here is the screenshot:
 2. Click **+ Role** button to create a new role.
 
    <p align="center">
-  <img src="../assets/Snowflake_add_role.png/>
+  <img src="../assets/Snowflake_add_role.png>
    </p>
 
 4. Enter the **New Role** details. 
 
      <p align="center">
-  <img src="../assets/Snowflake_add_role_form.png/>
+  <img src="../assets/Snowflake_add_role_form.png>
    </p>
 
 5. Save changes.
