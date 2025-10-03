@@ -553,7 +553,7 @@ For creating custom field in Jama follow the steps given below:
 * Select **config**.
 
 <p align="center">
-  <img src="../assets/Jama_Image_8b.png"  width="800"/>
+  <img src="../assets/Jama_Image_8b.png"  width="1500"/>
 </p>
 
 * Select **Add Field**.
@@ -580,7 +580,7 @@ For changing date field display format in Jama end system, follow the steps give
 * Change the date format in field **Java Date Time Format** accordingly.
 
 <p align="center">
-  <img src="../assets/Jama_Image_12a.png" width="800" />
+  <img src="../assets/Jama_Image_12a.png" width="1500" />
 </p>
 
 The recommended date format is the Jama system default date format i.e. `MM/dd/yyyy hh:mm:ss a z`. It is recommended that date format should include timezone.
