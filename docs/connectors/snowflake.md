@@ -67,9 +67,8 @@ An example input for the metadata JSON:
     "ohrv_an_workitem_wise_dcc": "ID",
     "ohrv_an_wi_dcc_impactdcc": "primary_id"
     },
-
-{% include "../.gitbook/includes/database_metadata_input.md" %}
 ```
+{% include "../.gitbook/includes/database_metadata_input.md" %}
 
 >**Note**:  All the names of table or field mentioned here will be treated as case-sensitive and should match the actual names in Snowflake instance.
 
@@ -172,7 +171,7 @@ Here is the screenshot:
 2. Click **+ Role** button to create a new role.
 
    <p align="center">
-      <img src="../assets/Snowflake_add_role.png" width="1500">
+      <img src="../assets/Snowflake_add_role.png" width="2000">
    </p>
 
 4. Enter the **New Role** details. 
