@@ -66,9 +66,10 @@ An example input for the metadata JSON:
   views: {
     "ohrv_an_workitem_wise_dcc": "ID",
     "ohrv_an_wi_dcc_impactdcc": "primary_id"
-},
-```
+    },
+
 {% include "../.gitbook/includes/database_metadata_input.md" %}
+```
 
 >**Note**:  All the names of table or field mentioned here will be treated as case-sensitive and should match the actual names in Snowflake instance.
 
@@ -154,7 +155,7 @@ Here is the screenshot:
 3. Click **+ User** button to create a new user.
    
   <p align="center">
-     <img src="../assets/Snowflake_add_user.png" width="1500" >
+     <img src="../assets/Snowflake_add_user.png" width="2000" >
   </p>
 
 4. Enter the user details. The value provided in Login Name will be used later for login using that user. Default Role can also be set. If the **Force user to change password on first login** checkbox is selected, the user must change their password on first login.
@@ -171,7 +172,7 @@ Here is the screenshot:
 2. Click **+ Role** button to create a new role.
 
    <p align="center">
-      <img src="../assets/Snowflake_add_role.png" width="900">
+      <img src="../assets/Snowflake_add_role.png" width="1500">
    </p>
 
 4. Enter the **New Role** details. 
