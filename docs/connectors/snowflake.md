@@ -61,13 +61,14 @@ The following columns should exist in the Snowflake's tables and views for OpsHu
 * If a view is used as the source endpoint for integration, an ID field name must be provided. The view should have at least one column with unique records that can be considered as the ID field. Provide a list in the format `"view_name": "id_field_name"` for all views used in the integration.
 
 An example input for the metadata JSON:
+```json
 {
   views: {
     "ohrv_an_workitem_wise_dcc": "ID",
     "ohrv_an_wi_dcc_impactdcc": "primary_id"
 },
-
-{% include ".gitbook/includes/database_metadata_input.md" %}
+```
+{% include "../.gitbook/includes/database_metadata_input.md" %}
 
 >**Note**:  All the names of table or field mentioned here will be treated as case-sensitive and should match the actual names in Snowflake instance.
 
