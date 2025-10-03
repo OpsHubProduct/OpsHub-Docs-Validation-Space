@@ -80,7 +80,7 @@ An example input for the metadata JSON:
 Here is the screenshot:
 
 <p align="center">
-  <img src="../assets/Snowflake_mapping.png" width="900">
+  <img src="../assets/Snowflake_mapping.png" width="1500">
 </p>
 
 
@@ -95,7 +95,7 @@ Here is the screenshot:
 Here is the screenshot:
 
 <p align="center">
-  <img src="../assets/Snowflake_integration.png" width="900"/>
+  <img src="../assets/Snowflake_integration.png" width="1500"/>
 </p>
 
 
@@ -154,13 +154,13 @@ Here is the screenshot:
 3. Click **+ User** button to create a new user.
    
   <p align="center">
-  <img src="../assets/Snowflake_add_user.png" >
+     <img src="../assets/Snowflake_add_user.png" width="700" >
   </p>
 
 4. Enter the user details. The value provided in Login Name will be used later for login using that user. Default Role can also be set. If the **Force user to change password on first login** checkbox is selected, the user must change their password on first login.
    
    <p align="center">
-  <img src="../assets/Snowflake_add_user_form.png">
+  <   img src="../assets/Snowflake_add_user_form.png" width="700">
    </p>
 
 5. Save changes.
@@ -171,13 +171,13 @@ Here is the screenshot:
 2. Click **+ Role** button to create a new role.
 
    <p align="center">
-  <img src="../assets/Snowflake_add_role.png">
+      <img src="../assets/Snowflake_add_role.png width="700">
    </p>
 
 4. Enter the **New Role** details. 
 
      <p align="center">
-     <img src="../assets/Snowflake_add_role_form.png">
+     <img src="../assets/Snowflake_add_role_form.png" width="700">
    </p>
 
 5. Save changes.
