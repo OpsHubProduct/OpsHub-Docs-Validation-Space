@@ -82,7 +82,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
       * If the provided Component/Set/Folder exists, entity will be added under final entity location  
       * If the provided Component/Set/Folder does not exist:
         * If checkAndCreate is enabled, the component/set/folder will be checked and created and entity will be added under the final entity location  
-        * If checkAndCreate is disabled, Processing failure will be observed with error code `[[OH-Jama-0102]]`
+        * If checkAndCreate is disabled, Processing failure will be observed with error code [OH-Jama-0102](../help-center/troubleshooting/errors/jama/oh-jama-0102.md)
     * By default, checkAndCreate will be disabled, to enable the same advance mapping will be required.
 
         ```xml
@@ -142,7 +142,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 - For **Set** entity, there is a need to specify the child item types that it can contain.  
 - This is a mandatory lookup field.  
 - The lookup shows all the entity types for which a set can be created.  
-- This field is only supported during **Create**. If any update comes on this field, then the update will fail with error [OH-Jama-0103]. This is due to the fact that Jama itself doesn't support this operation through their REST API.
+- This field is only supported during **Create**. If any update comes on this field, then the update will fail with error [OH-Jama-0103](../help-center/troubleshooting/errors/jama/oh-jama-0103.md). This is due to the fact that Jama itself doesn't support this operation through their REST API.
 
 ### Set Key field configuration
 
@@ -432,7 +432,7 @@ Jama query is based on **OR** condition when there are more than one field.
 
 - **Behavior during create:**
   - If location is found in both field and link, the folder will be created inside the location coming from link configuration.
-  - If location is not found in any, then error is thrown [OH-Jama-0100].
+  - If location is not found in any, then error is thrown [OH-Jama-0100](../help-center/troubleshooting/errors/jama/oh-jama-0100.md).
 
 ### For other entities
 
