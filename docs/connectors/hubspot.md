@@ -4,11 +4,11 @@
 * Create one user in HubSpot that is dedicated for OpsHub Integration Manager. This user shouldn't perform any other action from HubSpot's user interface. This user is referred as 'Integration User' in the documentation.
   * For this user to perform operations in HubSpot, various permission scopes are required, as outlined below. To know more about the permission scopes refer to [Manage Scopes in HubSpot](https://developers.hubspot.com/docs/guides/apps/authentication/scopes).
   * To know more about the User permissions in HubSpot refer to [HubSpot user permission guide](https://knowledge.hubspot.com/user-management/hubspot-user-permissions-guide).
-* Using the user created above, create a **Private App** in HubSpot to generate the **Access Token** and obtain the **Application Id** which is required in the system configuration form. Refer to [#create-private-app-in-hubspot](create-private-app-in-hubspot) to know how to create private app in HubSpot.
+* Using the user created above, create a **Private App** in HubSpot to generate the **Access Token** and obtain the **Application Id** which is required in the system configuration form. Refer to [Create Private App in HubSpot](create-private-app-in-hubspot) to know how to create private app in HubSpot.
 
 ## Required Scope/Permission
 * When configuring a Private App to work with HubSpot, it’s important to assign only the necessary scopes based on the operations plan to perform as per business need. These scopes control what data can access or modify using private App.
-* To **add or remove scopes** in private app, refer to [managing-permission-scopes-in-hubspot-private-app](#managing-permission-scopes-in-hubspot-private-app) section.
+* To **add or remove scopes** in private app, refer to [Managing Permission Scopes in HubSpot Private App ](#managing-permission-scopes-in-hubspot-private-app) section.
 > **Note** :If required scopes are missing or insufficient, the integration may fail. Always ensure the Private App has the necessary permissions before starting the integration setup.
 
 ### For Read
@@ -54,7 +54,7 @@
 
 Map the fields between HubSpot and the other system to be integrated to ensure that the data between both the systems synchronize correctly. Refer to the following screenshot:
 
-<p align="center"><img src="../assets/HubSpotMappingConfiguration.png" width="1000"/></p>
+<p align="center"><img src="../assets/HubSpotMappingConfiguration.png" width="1200"/></p>
 
 Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
@@ -79,7 +79,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 
 Set a time to synchronize data between HubSpot and the other system to be integrated. Also, define parameters and conditions (if any) for integration. Refer to [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure the integration between two systems.
 
-<p align="center"><img src="../assets/HubSpotIntegrationConfig.png" width="1800"/></p>
+<p align="center"><img src="../assets/HubSpotIntegrationConfig.png" width="2200"/></p>
 
 ## Criteria Configuration
 
@@ -95,7 +95,7 @@ Set the **Query** as per OpsHub Integration Manager's Native query format. While
 | `createdate`     | Synchronize all deal type of entities created after June 15,2025           | `[{"condition":"GREATER_THAN","field":"createdate","value":"2025-06-15T03:00:29.864Z"}]` *(timestamp in HubSpot format)* |
 | `dealname`       | Synchronize all deal type of entities with deal name, "new"                | `[{"condition":"EQUALS","field":"dealname","value":"new"}]`                                                              |
 
-* To get the internal field name for the HubSpot's entities, refer to the [#appendix](#appendix) section.
+* To get the internal field name for the HubSpot's entities, refer to the [Appendix](#appendix) section.
 
 * When the user wants to sync all Deal entities with the dealname set to 'new', the corresponding HubSpot Search API request to apply this criteria is shown below.
 
@@ -128,7 +128,7 @@ Set the **Query** as per OpsHub Integration Manager's Native query format. While
 
 * To learn in detail about how to configure Target LookUp, refer to **Search in Target Before Sync** section on [Integration Configuration](../integrate/integration-configuration.md) page.
 
-* Overall, Target LookUp Query is similar to [#criteria-configuration](#criteria-configuration), except that the value part contains a field name with '@' instead of static value.
+* Overall, Target LookUp Query is similar to [Criteria configuration](#criteria-configuration), except that the value part contains a field name with '@' instead of static value.
 
 **Target LookUp query samples:**
 
@@ -176,17 +176,17 @@ Set the **Query** as per OpsHub Integration Manager's Native query format. While
 
 2. Click on the **Settings** icon at the top right corner.
 
-<p align="center"><img src="../assets/HubSpotSettings.png" width="900" /></p>
+<p align="center"><img src="../assets/HubSpotSettings.png" width="1000" /></p>
 
 3. In the left sidebar, navigate to **Users & Teams**.
 
 4. Click on the **Create User** button at the top right.
 
-<p align="center"><img src="../assets/HubSpotUserCreation.png" width="900" /></p>
+<p align="center"><img src="../assets/HubSpotUserCreation.png" width="1000" /></p>
 
 5. Enter the **email address** of the user to invite.
 
-<p align="center"><img src="../assets/HubSpotAddUserEmail.png" width="900" /></p>
+<p align="center"><img src="../assets/HubSpotAddUserEmail.png" width="1000" /></p>
 
 6. Click **Next**, review the invite, and click **Send**.
 
@@ -194,7 +194,7 @@ Set the **Query** as per OpsHub Integration Manager's Native query format. While
 * The user will receive an invitation email to join HubSpot.
 * You can later modify the user’s permissions via **Users & Teams**.
 
-<p align="center"><img src="../assets/HubSpotUserPermissionEdit.png" width="900" /></p>
+<p align="center"><img src="../assets/HubSpotUserPermissionEdit.png" width="1000" /></p>
 
 * See [User Privileges](#user-privileges) for required permissions for different actions.
 
@@ -203,16 +203,16 @@ Set the **Query** as per OpsHub Integration Manager's Native query format. While
 1. Log in to your HubSpot Account with Admin privileges using the same user that you want to use as Integration User.
 2. Navigate to **Settings → Integrations → Private Apps**.
 
-<p align="center"><img src="../assets/HubSpotPrivateApp.png" width="900"/></p>
+<p align="center"><img src="../assets/HubSpotPrivateApp.png" width="1000"/></p>
 
 3. Click **Create a Private App**.
 4. Provide the App's Name (e.g., "OpsHub Integration Manager Integration").
 
-<p align="center"><img src="../assets/HubSpotCreatePrivateApp.png" width="900"  /></p>
+<p align="center"><img src="../assets/HubSpotCreatePrivateApp.png" width="1000"  /></p>
 
 5. Under **Scopes**, provide required scopes mentioned in [Privileges](#privileges).
 
-<p align="center"><img src="../assets/HubSpotPrivateAppScopesAndName.png" width="900"  /></p>
+<p align="center"><img src="../assets/HubSpotPrivateAppScopesAndName.png" width="1000"  /></p>
 
 6. Click **Create App**.
 7. Copy the Access Token (Auth Token).
@@ -237,15 +237,15 @@ Set the **Query** as per OpsHub Integration Manager's Native query format. While
 2. Go to **Settings → Account → Integrations → Private Apps**.
 3. From the list of Private Apps, **select the Private App** you want to update.
 
-<p align="center"><img src="../assets/HubSpotPrivateApp.png" width="800" /></p>
+<p align="center"><img src="../assets/HubSpotPrivateApp.png" width="1000" /></p>
 
 4. Navigate to the **Edit** button and go to the **Scopes** tab within the selected Private App.
 
-<p align="center"><img src="../assets/HubSpotEdit.png" width="800" /></p>
+<p align="center"><img src="../assets/HubSpotEdit.png" width="1000" /></p>
 
 5. **Add or remove scopes** as needed by selecting or deselecting the checkboxes next to the permissions the user wants to grant or revoke for the app.
 
-<p align="center"><img src="../assets/HubSpotScopes.png" width="800" /></p>
+<p align="center"><img src="../assets/HubSpotScopes.png" width="1000" /></p>
 
 6. Click **Save** to apply changes.
 
@@ -265,11 +265,11 @@ In HubSpot, each property (field) of an entity (like Contacts, Companies, Deals,
 1. Log in to your HubSpot account.
 2. Navigate to **Settings → Data Management → Objects**. Choose the entity (e.g., Deals).
 
-<p align="center"><img src="../assets/HubSpotPropertyDeal.png" width="800" /></p>
+<p align="center"><img src="../assets/HubSpotPropertyDeal.png" width="1000" /></p>
 
 3. Click **Manage Deal Properties** to view all deal entity fields.
 
-<p align="center"><img src="../assets/HubSpotManageProperty.png" width="800" /></p>.
+<p align="center"><img src="../assets/HubSpotManageProperty.png" width="1000" /></p>.
 
 4. Click any property to view its details.
 
@@ -278,7 +278,7 @@ In HubSpot, each property (field) of an entity (like Contacts, Companies, Deals,
 * **Label**: User-friendly display name.
 * **Internal Name**: Actual key used in API requests (e.g., `dealname`, `company_size`).
 
-<p align="center"><img src="../assets/HubSpotDealPropertyInformation.png"   /></p>
+<p align="center"><img src="../assets/HubSpotDealPropertyInformation.png" width="1000"  /></p>
 
 ## Lookup Values
 
