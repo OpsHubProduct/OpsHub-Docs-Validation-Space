@@ -101,7 +101,7 @@ If user wants to skip the prerequisite of 'Import Set Table and Transformation m
 *   For every field in original table that needs to be written through synchronization, create one field in your import set table as shown below (No field is required for synchronizing attachment and comment. For work notes though, you need to create a field in import set table).
 
   <p align="center">
-      <img src="../assets/SNow_Image_97.png" width="900" />
+      <img src="../assets/SNow_Image_97a.png" width="900" />
    </p>
     
 * For all the fields that are added to the import set table, please set the type to 'String'.
@@ -477,13 +477,13 @@ Provide 'read' access to a table
 * Click on 'Edit' under the 'Roles' section.
   
 <p align="center">
-  <img src="../assets/Snow_user_role.png" width="1000" />
+  <img src="../assets/snow_user_role.png" width="1000" />
 </p>
 
 * Select the role from the left section and click on the 'Add' button to add the role.
 
 <p align="center">
-  <img src="../assets/Snow_role_assign.png" width="1000" />
+  <img src="../assets/snow_role_assign.png" width="1000" />
 </p>
 
 
@@ -541,7 +541,7 @@ Provide 'read' access to a table
 2. Click **Attachment** table from the displayed list. It will display list of attachment tables's columns as per next step.
   
    <p align="center">
-      <img src="../assets/Snow_attachment_tablelist.png" width="1000" />
+      <img src="../assets/Snow_attachment_tablelist.png" width="700" />
    </p>
 
 4. Double click "Max Length" cell of the "File Name" column. It will open "Max Length" field in edit mode.
@@ -554,7 +554,7 @@ Provide 'read' access to a table
 4. Change value to maximum possible length and click the save icon.
    
    <p align="center">
-      <img src="../assets/Snow_attachment_filename_length.png" width="1000" />
+      <img src="../assets/Snow_attachment_filename_length.png" width="700" />
    </p>
 
 
@@ -565,6 +565,6 @@ Provide 'read' access to a table
 * The Security System Properties page will appear for the instance. Locate the property with the heading highlighted in the screenshot below. Enter file type extensions in the text field excluding the dot (.) e.g. xls,xlsx,doc,docx.
 
 <p align="center">
-  <img src="../assets/ServiceNowAttachmentExtension.png" width="1500" />
+  <img src="../assets/ServiceNowAttachmentExtension.png" width="2000" />
 </p>
 
