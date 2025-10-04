@@ -191,7 +191,7 @@ This will update the import set table as per the updated excel attached to the d
 *   Map 'target_sys_id' to 'Sys ID' and make Coalesce "True".
 
   <p align="center">
-    <img src="../assets/SNow_Image_92a.png" />
+    <img src="../assets/SNow_Image_92.png" />
   </p>
 
 
@@ -206,25 +206,25 @@ This will update the import set table as per the updated excel attached to the d
 *   For comments, no extra field needs to be added to Import set table as 'Comment' field is already available in the Import set row (table which is extended by the import set table you created).
 
     <p align="center">
-      <img src="../assets/Snow30.png" width="1200" />
+      <img src="../assets/Snow30.png" width="1600" />
     </p>
 
 *   In transform map, you need to map the available 'Comment' field in Import set table (source) with the 'Additional Comments' field of actual entity table (target).
 
      <p align="center">
-      <img src="../assets/Snow31.png" width="1200" />
+      <img src="../assets/Snow31.png" width="1600" />
     </p>
 
 *   For work notes, add a field to the import set table (you can set any meaningful name for this field) and ensure its type to be the same as given in the entity's actual table.
 
     <p align="center">
-      <img src="../assets/Snow32.png" width="1200" />
+      <img src="../assets/Snow32.png" width="1600" />
     </p>
 
 *   In transform map, map the work notes field added in Import set table (source) to the 'Work Notes' field of actual entity table. You can refer below screenshots for reference.
 
      <p align="center">
-      <img src="../assets/Snow33.png" width="1200" />
+      <img src="../assets/Snow33.png" width="1600" />
     </p>
 
 
@@ -237,7 +237,7 @@ If attachments or HTML/Rich type supported fields are mapped, then keep the atta
 Before you continue to the integration, you must first configure ServiceNow system. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system. Refer the screenshot given below for reference.
 
 <p align="center">
-  <img src="../assets/Snow_system_config.png" width="1500" />
+  <img src="../assets/Snow_system_config.png" width="2000" />
 </p>
 
 
@@ -288,7 +288,7 @@ For ServiceNow as a source system, any event pertaining to attachment (add/delet
   *   **Sample Business Rule Script**
 
       <p align="center">
-          <img src="../assets/snow_rule_audit_attachment.png" width="800" />
+          <img src="../assets/Snow_rule_audit_attachment.png" width="900" />
       </p>
 
   * >**Note**:  Refer to [Business Rules](https://docs.servicenow.com/bundle/quebec-application-development/page/script/business-rules/concept/c_BusinessRules.html) for more information about the ServiceNow's business rule configuration.
@@ -314,13 +314,13 @@ Provide query in 'Target Search Query' such that it is possible to search the en
 *   How to get value 1 for the state Open?
 
     <p align="center">
-    <img src="../assets/Snow4.png" width="1000" />
+    <img src="../assets/Snow4.png" width="800" />
     </p>
 
     Right click on state field and click on **Show Choice** List.
 
     <p align="center">
-       <img src="../assets/Snow5.png" width="1000" />
+       <img src="../assets/Snow5.png" width="800" />
     </p>
 
 
@@ -373,28 +373,28 @@ Provide query in 'Target Search Query' such that it is possible to search the en
 * Click on **New**.
 
 <p align="center">
-  <img src="../assets/Snow6.png"  width="1200" />
+  <img src="../assets/Snow6.png"  width="900" />
 </p>
 
 
 * Fill the details in the form and make sure that active checkbox is enabled.
 
 <p align="center">
-  <img src="../assets/Snow7.png" width="1200" />
+  <img src="../assets/Snow7.png" width="900" />
 </p>
 
 
 * Open created user and click on **Edit Roles**.
 
 <p align="center">
-  <img src="../assets/Snow8.png" width="1200" />
+  <img src="../assets/Snow8.png" width="900" />
 </p>
 
 
 * Add **admin** privileges from Collection and click on **Save**. In case you cannot provide admin privileges, please refer [User Privileges](servicenow.md#user-privileges) section for providing required permissions to the user.
 
 <p align="center">
-  <img src="../assets/Snow9.png" width="1200" />
+  <img src="../assets/Snow9.png" width="900" />
 </p>
 
 
@@ -427,13 +427,13 @@ Provide 'read' access to a table
 
 **Provide 'write' access to a table**
 
-* Navigate to System Definition > Tables and open the definition for sys\_audit table.
+* Navigate to System Definition > Tables and open the definition for sys_audit table.
 * Click on 'add' button in the 'Access Controls' section.
 * Select 'write' option in the 'Operation field'.
 * Under 'Requires role' section, add the role for which read access needs to be provided.
   
 <p align="center">
-  <img src="../assets/Snow_write.png" width="900" />
+  <img src="../assets/Snow_write.png" width="1000" />
 </p>
 
 * Click on 'Submit' and then click on 'Update' to update the table access controls.
@@ -446,7 +446,7 @@ Provide 'read' access to a table
 * Under 'Requires role' section, add the role for which read access needs to be provided.
 
 <p align="center">
-  <img src="../assets/Snow_delete" width="900" />
+  <img src="../assets/snow_delete" width="1000" />
 </p>
 
 * Click on 'Submit' and then click on 'Update' to update the table access controls.
@@ -470,7 +470,7 @@ Provide 'read' access to a table
 * Navigate to User administration > Roles.
 
 <p align="center">
-  <img src="../assets/Snow_role.png" width="1000" />
+  <img src="../assets/Snow_role.png" width="1200" />
 </p>
 
 
@@ -478,7 +478,7 @@ Provide 'read' access to a table
 * Fill the required details and click on submit.
 
 <p align="center">
-  <img src="../assets/Snow_role_create.png" width="1000" />
+  <img src="../assets/Snow_role_create.png" width="1200" />
 </p>
 
 
@@ -508,7 +508,7 @@ Provide 'read' access to a table
 * Select the dictionary entry for the table. The table name always has an empty column name and 'Type' 'Collection'.
 
 <p align="center">
-  <img src="../assets/Snow_audit.png" width="1500" />
+  <img src="../assets/Snow_audit.png" width="2000" />
 </p>
 
 
@@ -527,7 +527,7 @@ Provide 'read' access to a table
 1. Click **Tables** from **System Definition** on left side panel. It will display list of tables as per next step.
    
    <p align="center">
-      <img src="../assets/Snow_systemdef_panel.png" width="1000"/>
+      <img src="../assets/Snow_systemdef_panel.png" width="800"/>
   </p>
 
 
@@ -565,7 +565,7 @@ Provide 'read' access to a table
 4. Change value to maximum possible length and click the save icon.
    
    <p align="center">
-      <img src="../assets/Snow_attachment_filename_length.png" width="700" />
+      <img src="../assets/Snow_attachment_filename_length.png" width="400" />
    </p>
 
 
@@ -576,6 +576,6 @@ Provide 'read' access to a table
 * The Security System Properties page will appear for the instance. Locate the property with the heading highlighted in the screenshot below. Enter file type extensions in the text field excluding the dot (.) e.g. xls,xlsx,doc,docx.
 
 <p align="center">
-  <img src="../assets/ServiceNowAttachmentExtension.png" width="2000" />
+  <img src="../assets/ServiceNowAttachmentExtension.png" width="2200" />
 </p>
 
