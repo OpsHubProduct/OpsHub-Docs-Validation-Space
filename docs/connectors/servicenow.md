@@ -59,7 +59,7 @@ ServiceNow tracks incident, change, and problem history in the sys\_audit table.
 *   You will see OpsHub Integration Manager for ServiceNow in Downloads tab by navigating **System Applications -> Applications** in your ServiceNow instance [The example below shows OpsHub Integration Manager for ServiceNow Enterprise]. Click on Install for OpsHub Integration Manager for ServiceNow applications.
 
     <p align="center">
-       <img src="../assets/Snow2.png" width="800" />
+     <img src="../assets/Snow2.png" width="800" />
     </p>
 
 * On successful installation, OpsHub Integration Manager for ServiceNow application will be available.
@@ -75,22 +75,22 @@ If user wants to skip the prerequisite of 'Import Set Table and Transformation m
 * Select OpsHub Integration Manager for ServiceNow application in Settings, as shown below:
 
    <p align="center">
-      <img src="../assets/SNow_Image_100.png" width="700" />
+      <img src="../assets/SNow_Image_100.png" width="900" />
     </p>
 
     
 * Type tables in navigator of ServiceNow.
-*   Click on tables.
+* Click on tables.
 
     <p align="center">
-      <img src="../assets/SNow_Image_99.png" width="700" />
+      <img src="../assets/SNow_Image_99a.png" width="900" />
     </p>
 
   
 *   Click on New.
 
   <p align="center">
-      <img src="../assets/SNow_Image_98.png" width="700" />
+      <img src="../assets/SNow_Image_98.png" width="900" />
     </p>
    
 
@@ -101,7 +101,7 @@ If user wants to skip the prerequisite of 'Import Set Table and Transformation m
 *   For every field in original table that needs to be written through synchronization, create one field in your import set table as shown below (No field is required for synchronizing attachment and comment. For work notes though, you need to create a field in import set table).
 
   <p align="center">
-      <img src="../assets/SNow_Image_97.png" width="700" />
+      <img src="../assets/SNow_Image_97.png" width="900" />
    </p>
     
 * For all the fields that are added to the import set table, please set the type to 'String'.
@@ -133,7 +133,7 @@ ServiceNow provides the option of creating import set table (along with the requ
 *   Click 'Manage attachments' button and attach the Excel sheet prepared in the above step.
 
      <p align="center">
-        <img src="../assets/Data_source_attachment.png" width="700" />
+        <img src="../assets/Data_source_attachment.png" width="900" />
     </p>
 
     
@@ -149,7 +149,7 @@ If you want to update (add/remove fields) the import set created using above met
 *   Click 'Manage attachments' and remove the existing excel sheet attached to the data source.
 
    <p align="center">
-      <img src="../assets/Data_source_update.png" width="700" />
+      <img src="../assets/Data_source_update.png" width="900" />
     </p>
 
 
@@ -195,25 +195,25 @@ This will update the import set table as per the updated excel attached to the d
 *   For comments, no extra field needs to be added to Import set table as 'Comment' field is already available in the Import set row (table which is extended by the import set table you created).
 
     <p align="center">
-      <img src="../assets/snow30.png" width="800" />
+      <img src="../assets/Snow30.png" width="1200" />
     </p>
 
 *   In transform map, you need to map the available 'Comment' field in Import set table (source) with the 'Additional Comments' field of actual entity table (target).
 
      <p align="center">
-      <img src="../assets/snow31.png" width="800" />
+      <img src="../assets/Snow31.png" width="1200" />
     </p>
 
 *   For work notes, add a field to the import set table (you can set any meaningful name for this field) and ensure its type to be the same as given in the entity's actual table.
 
     <p align="center">
-      <img src="../assets/snow32.png" width="800" />
+      <img src="../assets/Snow32.png" width="1200" />
     </p>
 
 *   In transform map, map the work notes field added in Import set table (source) to the 'Work Notes' field of actual entity table. You can refer below screenshots for reference.
 
      <p align="center">
-      <img src="../assets/snow33.png" width="800" />
+      <img src="../assets/Snow33.png" width="1200" />
     </p>
 
 
@@ -226,7 +226,7 @@ If attachments or HTML/Rich type supported fields are mapped, then keep the atta
 Before you continue to the integration, you must first configure ServiceNow system. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system. Refer the screenshot given below for reference.
 
 <p align="center">
-  <img src="../assets/Snow_system_config.png" width="900" />
+  <img src="../assets/Snow_system_config.png" width="1500" />
 </p>
 
 
@@ -264,12 +264,12 @@ For ServiceNow as a source system, any event pertaining to attachment (add/delet
 
 * To overcome manual overhead of updating entity to reflect attachment changes immediately then, it is require to configure following business rule which will generate an audit(s) on the particular field whenever attachment being added or deleted.
   * Navigate to **System Definition** > **Business Rules** and click on new to define the business rule for attachment.
-  * **For Add Attachment Business Rule**: Create a Business Rule on the "sys\_attachment" table. This will update the particular field (custom field in this sample) in the record upon the attachment add.
+  * **For Add Attachment Business Rule**: Create a Business Rule on the "sys_attachment" table. This will update the particular field (custom field in this sample) in the record upon the attachment add.
     * Name: "Insert Attachment - Update Record"
     * When: After
     * Insert: true
     * Advance: enable advance setting to define the script to update the particular field upon add operation. Refer following sample business rule script.
-  * **For Delete Attachment Business Rule**: Create a Business Rule on the "sys\_attachment" table. This will update the particular field (custom field in this sample) in the record upon the attachment delete.
+  * **For Delete Attachment Business Rule**: Create a Business Rule on the "sys_attachment" table. This will update the particular field (custom field in this sample) in the record upon the attachment delete.
     * Name: "Delete Attachment - Update Record"
     * When: After
     * Delete: true
@@ -303,13 +303,13 @@ Provide query in 'Target Search Query' such that it is possible to search the en
 *   How to get value 1 for the state Open?
 
     <p align="center">
-    <img src="../assets/Snow4.png" />
+    <img src="../assets/Snow4.png" width="1000" />
     </p>
 
     Right click on state field and click on **Show Choice** List.
 
     <p align="center">
-       <img src="../assets/Snow5.png" />
+       <img src="../assets/Snow5.png" width="1000" />
     </p>
 
 
@@ -327,14 +327,14 @@ Provide query in 'Target Search Query' such that it is possible to search the en
 ### Audit Filter Query
 
 * The filter query helps to selectively process audits when fetching **update revisions** from ServiceNow.
-* This query will be used to filter audits from the **sys\_audit** table in ServiceNow.
+* This query will be used to filter audits from the **sys_audit** table in ServiceNow.
   * To understand the syntax, refer to [Criteria Configuration](servicenow.md#criteria-configuration).
   *   Example: Below is the query to filter out delete audits and audits made by John.
 
       ```
       record_checkpoint!=-1^sys_created_by!=John
       ```
-* Here make sure field names used in this query are of sys\_audit table.
+* Here make sure field names used in this query are of sys_audit table.
 * This field only filters update revisions.
 
 # Known Limitations
@@ -362,30 +362,29 @@ Provide query in 'Target Search Query' such that it is possible to search the en
 * Click on **New**.
 
 <p align="center">
-  <img src="../assets/snow6.png"  width="700" />
+  <img src="../assets/Snow6.png"  width="1200" />
 </p>
 
 
 * Fill the details in the form and make sure that active checkbox is enabled.
 
 <p align="center">
-  <img src="../assets/snow7.png" width="700" />
+  <img src="../assets/Snow7.png" width="1200" />
 </p>
 
 
 * Open created user and click on **Edit Roles**.
 
 <p align="center">
-  <img src="../assets/snow8.png" width="700" />
+  <img src="../assets/Snow8.png" width="1200" />
 </p>
 
 
 * Add **admin** privileges from Collection and click on **Save**. In case you cannot provide admin privileges, please refer [User Privileges](servicenow.md#user-privileges) section for providing required permissions to the user.
 
 <p align="center">
-  <img src="../assets/snow9.png" width="700" />
+  <img src="../assets/Snow9.png" width="1200" />
 </p>
-
 
 
 ### Add user access for table
@@ -400,7 +399,7 @@ Provide 'read' access to a table
 * Navigate to System Definition > Tables and open the definition for sys_audit table.
 
 <p align="center">
-  <img src="../assets/Snow_access.png" width="900" />
+  <img src="../assets/Snow_access.png" width="1200" />
 </p>
 
 
@@ -409,7 +408,7 @@ Provide 'read' access to a table
 * Under 'Requires role' section, add the role for which read access needs to be provided.
 
 <p align="center">
-  <img src="../assets/Snow_read.png" width="900" />
+  <img src="../assets/Snow_read.png" width="1200" />
 </p>
 
 
@@ -450,7 +449,7 @@ Provide 'read' access to a table
 * Under 'Requires role' section, add the role for which read access needs to be provided.
 
 <p align="center">
-  <img src="../assets/Snow_read_star.png" width="900" />
+  <img src="../assets/Snow_read_star.png" width="1000" />
 </p>
 
 * Click on 'Submit' and then click on 'Update' to update the table access controls.
@@ -460,7 +459,7 @@ Provide 'read' access to a table
 * Navigate to User administration > Roles.
 
 <p align="center">
-  <img src="../assets/Snow_role.png" width="800" />
+  <img src="../assets/Snow_role.png" width="1000" />
 </p>
 
 
@@ -468,7 +467,7 @@ Provide 'read' access to a table
 * Fill the required details and click on submit.
 
 <p align="center">
-  <img src="../assets/Snow_role_create.png" width="800" />
+  <img src="../assets/Snow_role_create.png" width="1000" />
 </p>
 
 
@@ -478,13 +477,13 @@ Provide 'read' access to a table
 * Click on 'Edit' under the 'Roles' section.
   
 <p align="center">
-  <img src="../assets/Snow_user_role.png" width="800" />
+  <img src="../assets/Snow_user_role.png" width="1000" />
 </p>
 
 * Select the role from the left section and click on the 'Add' button to add the role.
 
 <p align="center">
-  <img src="../assets/Snow_role_assign.png" width="800" />
+  <img src="../assets/Snow_role_assign.png" width="1000" />
 </p>
 
 
@@ -498,7 +497,7 @@ Provide 'read' access to a table
 * Select the dictionary entry for the table. The table name always has an empty column name and 'Type' 'Collection'.
 
 <p align="center">
-  <img src="../assets/Snow_audit.png" width="800" />
+  <img src="../assets/Snow_audit.png" width="1500" />
 </p>
 
 
@@ -517,7 +516,7 @@ Provide 'read' access to a table
 1. Click **Tables** from **System Definition** on left side panel. It will display list of tables as per next step.
    
    <p align="center">
-      <img src="../assets/snow_systemdef_panel.png" />
+      <img src="../assets/Snow_systemdef_panel.png" width="1000"/>
   </p>
 
 
@@ -526,14 +525,14 @@ Provide 'read' access to a table
 2. Click **ECC Queue** table from the displayed list. It will display list of ECC Queue tables's columns as per next step.
    
       <p align="center">
-        <img src="../assets/snow_ecc_queue_tablelist.png" alt="snow_ecc_queue_tablelist" />
+        <img src="../assets/Snow_ecc_queue_tablelist.png" width="1000" />
       </p>
 
    
 3. Double click "Max Length" cell of the "Name" column. It will open "Max Length" field in edit mode.
    
     <p align="center">
-      <img src="../assets/snow_ecc_queue_table_columnlist.png" />
+      <img src="../assets/Snow_ecc_queue_table_columnlist.png" width="1000" />
     </p>
 
 
@@ -542,20 +541,20 @@ Provide 'read' access to a table
 2. Click **Attachment** table from the displayed list. It will display list of attachment tables's columns as per next step.
   
    <p align="center">
-      <img src="../assets/snow_attachment_tablelist.png" />
+      <img src="../assets/Snow_attachment_tablelist.png" width="1000" />
    </p>
 
 4. Double click "Max Length" cell of the "File Name" column. It will open "Max Length" field in edit mode.
    
    <p align="center">
-       <img src="../assets/snow_attachment_table_columnlist.png" width="800" />
+       <img src="../assets/Snow_attachment_table_columnlist.png" width="1000" />
   </p>
 
    
 4. Change value to maximum possible length and click the save icon.
    
    <p align="center">
-      <img src="../assets/snow_attachment_filename_length.png" width="800" />
+      <img src="../assets/Snow_attachment_filename_length.png" width="1000" />
    </p>
 
 
@@ -566,6 +565,6 @@ Provide 'read' access to a table
 * The Security System Properties page will appear for the instance. Locate the property with the heading highlighted in the screenshot below. Enter file type extensions in the text field excluding the dot (.) e.g. xls,xlsx,doc,docx.
 
 <p align="center">
-  <img src="../assets/ServiceNowAttachmentExtension.png" width="900" />
+  <img src="../assets/ServiceNowAttachmentExtension.png" width="1500" />
 </p>
 
