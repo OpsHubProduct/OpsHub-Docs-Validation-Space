@@ -52,7 +52,7 @@ ServiceNow tracks incident, change, and problem history in the sys\_audit table.
 *   OpsHub Integration Manager must be enabled for the ServiceNow instance. You can get this app from ServiceNow appStore: [ServiceNow App Store](https://store.servicenow.com/sn_appstore_store.do#!/store/application/8e6f0b610f8ce6001f6fc3ace1050ebb)
 
     <p align="center">
-      <img src="../assets/Snow_Store.PNG" width="1500" />
+      <img src="../assets/Snow_Store.png" width="1500" />
     </p>
 
 * On the OpsHub Integration Manager App page, click on **Get** and provide your ServiceNow HI Credentials.
