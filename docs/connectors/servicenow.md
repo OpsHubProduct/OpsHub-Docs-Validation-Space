@@ -121,15 +121,15 @@ ServiceNow provides the option of creating import set table (along with the requ
 
 * Prepare an Excel sheet by listing the names of all fields (to be added to import set table) horizontally in the first row as shown in the screenshot below (No field is required for synchronizing attachment and comment, so there is no need to add these in excel sheet. For work notes though, you need to create a field in import set table, so you need to add it to the excel sheet).
 
-    ![Data\_source\_image](../assets/Data_source_image.PNG)
+    ![Data\_source\_image](../assets/Data_source_image.png)
 * Ensure you are adding 'target\_sys\_id' to the Excel sheet.
 * Now, please go back to ServiceNow, type 'Data source' in the navigator and click 'Data Sources' under 'System Import Sets'.
 * Click on New. Make sure you are creating the import set table under OpsHub Integration Manager for ServiceNow application.
 
-    ![Create\_data\_source](../assets/Create_data_source.PNG)
+    ![Create\_data\_source](../assets/Create_data_source.png)
 *   Select type as 'File', format as 'Excel' and file retrieval method as 'Attachment' as shown below.
 
-    ![Data\_source\_fields](../assets/Data_source_fields.PNG)
+    ![Data\_source\_fields](../assets/Data_source_fields.png)
 *   Click 'Manage attachments' button and attach the Excel sheet prepared in the above step.
 
      <p align="center">
@@ -149,7 +149,7 @@ If you want to update (add/remove fields) the import set created using above met
 *   Click 'Manage attachments' and remove the existing excel sheet attached to the data source.
 
    <p align="center">
-      <img src="../assets/Data_source_update.PNG" width="700" />
+      <img src="../assets/Data_source_update.png" width="700" />
     </p>
 
 
@@ -277,7 +277,7 @@ For ServiceNow as a source system, any event pertaining to attachment (add/delet
   *   **Sample Business Rule Script**
 
       <p align="center">
-          <img src="../assets/snow_rule_audit_attachment.PNG" width="800" />
+          <img src="../assets/snow_rule_audit_attachment.png" width="800" />
       </p>
 
   * >**Note**:  Refer to [Business Rules](https://docs.servicenow.com/bundle/quebec-application-development/page/script/business-rules/concept/c_BusinessRules.html) for more information about the ServiceNow's business rule configuration.
@@ -400,7 +400,7 @@ Provide 'read' access to a table
 * Navigate to System Definition > Tables and open the definition for sys_audit table.
 
 <p align="center">
-  <img src="../assets/Snow_access.PNG" width="900" />
+  <img src="../assets/Snow_access.png" width="900" />
 </p>
 
 
@@ -409,7 +409,7 @@ Provide 'read' access to a table
 * Under 'Requires role' section, add the role for which read access needs to be provided.
 
 <p align="center">
-  <img src="../assets/Snow_read.PNG" width="900" />
+  <img src="../assets/Snow_read.png" width="900" />
 </p>
 
 
@@ -423,7 +423,7 @@ Provide 'read' access to a table
 * Under 'Requires role' section, add the role for which read access needs to be provided.
   
 <p align="center">
-  <img src="../assets/Snow_write.PNG" width="900" />
+  <img src="../assets/Snow_write.png" width="900" />
 </p>
 
 * Click on 'Submit' and then click on 'Update' to update the table access controls.
@@ -450,7 +450,7 @@ Provide 'read' access to a table
 * Under 'Requires role' section, add the role for which read access needs to be provided.
 
 <p align="center">
-  <img src="../assets/Snow_read_star.PNG" width="900" />
+  <img src="../assets/Snow_read_star.png" width="900" />
 </p>
 
 * Click on 'Submit' and then click on 'Update' to update the table access controls.
@@ -460,7 +460,7 @@ Provide 'read' access to a table
 * Navigate to User administration > Roles.
 
 <p align="center">
-  <img src="../assets/Snow_role.PNG" width="800" />
+  <img src="../assets/Snow_role.png" width="800" />
 </p>
 
 
@@ -468,7 +468,7 @@ Provide 'read' access to a table
 * Fill the required details and click on submit.
 
 <p align="center">
-  <img src="../assets/Snow_role_create.PNG" width="800" />
+  <img src="../assets/Snow_role_create.png" width="800" />
 </p>
 
 
@@ -478,7 +478,7 @@ Provide 'read' access to a table
 * Click on 'Edit' under the 'Roles' section.
   
 <p align="center">
-  <img src="../assets/Snow_user_role.PNG" width="800" />
+  <img src="../assets/Snow_user_role.png" width="800" />
 </p>
 
 * Select the role from the left section and click on the 'Add' button to add the role.
@@ -498,7 +498,7 @@ Provide 'read' access to a table
 * Select the dictionary entry for the table. The table name always has an empty column name and 'Type' 'Collection'.
 
 <p align="center">
-  <img src="../assets/Snow_audit.PNG" width="800" />
+  <img src="../assets/Snow_audit.png" width="800" />
 </p>
 
 
