@@ -121,15 +121,26 @@ ServiceNow provides the option of creating import set table (along with the requ
 
 * Prepare an Excel sheet by listing the names of all fields (to be added to import set table) horizontally in the first row as shown in the screenshot below (No field is required for synchronizing attachment and comment, so there is no need to add these in excel sheet. For work notes though, you need to create a field in import set table, so you need to add it to the excel sheet).
 
-    ![Data\_source\_image](../assets/Data_source_image.png)
-* Ensure you are adding 'target\_sys\_id' to the Excel sheet.
+<p align="center">
+  <img src="../assets/Data_source_image.png" width="900"/>
+</p>
+
+
+* Ensure you are adding 'target_sys_id' to the Excel sheet.
 * Now, please go back to ServiceNow, type 'Data source' in the navigator and click 'Data Sources' under 'System Import Sets'.
 * Click on New. Make sure you are creating the import set table under OpsHub Integration Manager for ServiceNow application.
 
-    ![Create\_data\_source](../assets/Create_data_source.png)
+   <p align="center">
+   <img src="../assets/Create_data_source.png" width="900" />
+   </p>
+
 *   Select type as 'File', format as 'Excel' and file retrieval method as 'Attachment' as shown below.
 
-    ![Data\_source\_fields](../assets/Data_source_fields.png)
+    <p align="center">
+     <img src="../assets/Data_source_fields.png" width="900" />
+    </p>
+
+    
 *   Click 'Manage attachments' button and attach the Excel sheet prepared in the above step.
 
      <p align="center">
