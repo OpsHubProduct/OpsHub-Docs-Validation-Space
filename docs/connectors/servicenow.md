@@ -446,7 +446,7 @@ Provide 'read' access to a table
 * Under 'Requires role' section, add the role for which read access needs to be provided.
 
 <p align="center">
-  <img src="../assets/snow_delete" width="1000" />
+  <img src="../assets/Snow_delete" width="1000" />
 </p>
 
 * Click on 'Submit' and then click on 'Update' to update the table access controls.
