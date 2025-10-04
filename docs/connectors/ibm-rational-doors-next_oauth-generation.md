@@ -1,6 +1,6 @@
 # Overview
 
-*OpsHub Integration Manager supports OAuth-based authentication for IBM Engineering Requirements Management DOORS Next system. OpsHub Integration Manager requires the OAuth token and OAuth token secret.*
+* OpsHub Integration Manager supports OAuth-based authentication for IBM Engineering Requirements Management DOORS Next system. OpsHub Integration Manager requires the OAuth token and OAuth token secret.*
 
   * [Option 1](#generate-token-using-doorsng-token-generator-utility): Use a stand-alone utility bundled with OpsHub Integration Manager to generate the OAuth token.  
   * [Option 2](#generate-token-using-rest-client-postman): Generate an OAuth token using a third-party rest client such as postman.
@@ -18,7 +18,7 @@
 *  Extract the **DoorsNG_Oauth_Token_Generator.zip** located at `<Installation Directory of OpsHub Integration Manager>/Other_Resources/Resources`.*  
    * Execute the command **py token_generator.py** from the command line.*  
    * If IBM DOORS Next endpoint is configured with secured connection (HTTPS), then import the SSL certificate to the location `<Extracted Path>/DoorsNG_Oauth_Token_Generator/certificate/doorsnext`.*  
-   * If OpsHub Integration Manager is configured with secured connection (HTTPS) and push back OAuth token option is selected, then import the SSL certificate to the location `<Extracted Path>/DoorsNG_Oauth_Token_Generator/certificate/opshub`.*  
+   * If OpsHub Integration Manager is configured with secured connection (HTTPS) and push back OAuth token option is selected, then import the SSL certificate to the location `<Extracted Path>/DoorsNG_Oauth_Token_Generator/certificate/opshub`.
    *  Refer README.txt file present inside the extracted zip folder to learn more details about this utility.*
 
 ---
@@ -27,7 +27,7 @@
 
 * OAuth token generation is 3 steps once consumer key and consumer secret generated in end system.*
 
-## Get the OAuth Request Token
+### Get the OAuth Request Token
 
 * Get the OAuth Request Token using the generated **Customer Key** and **Customer Secret** as per the step [Generate Consumer Key](ibm_rational_doors_next_generation#steps_for_oauth_token_generation).*
   * Open PostMan or Rest client for sending the request for OAuth Token.  
@@ -41,12 +41,10 @@
 
 ---
 
-### Authorize OAuth Request Token
-
-* Authorize OAuth Token generated in above step.*
+### Authorize OAuth Request Token: Authorize OAuth Token generated in above step.
  * To authorize OAuth Request Token, prepare the request mentioned below and open in the browser. It requires the login with a user who has admin privileges.*  
- * Authorize URL:: `<Server+url>/jts/oauth-authorize?oauth_token=<oauth_token which was generated in previous request>&oauth_consumer_key=<consumer key which was generated in first step>`*  
- * For example: `https://10.13.28.146:9443/jts/oauth-authorize?oauth_token=795c926555f0433488e1211ccc8fa953&oauth_consumer_key=0efec206ae034e309c8470ca9779c128`*
+    * Authorize URL:: `<Server+url>/jts/oauth-authorize?oauth_token=<oauth_token which was generated in previous request>&oauth_consumer_key=<consumer key which was generated in first step>`*  
+    * For example: `https://10.13.28.146:9443/jts/oauth-authorize?oauth_token=795c926555f0433488e1211ccc8fa953&oauth_consumer_key=0efec206ae034e309c8470ca9779c128`*
 
 ---
 
@@ -61,4 +59,5 @@
 <p align="center">
   <img src="../assets/DoorsNG_8.png"  width="1400" />
 </p>
+
 
