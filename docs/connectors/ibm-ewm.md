@@ -10,7 +10,7 @@
 
 # System Configuration
 
-Before you continue to the integration, you must first configure EWM. Click [System Configuration](../integrate/system-configuration/) to learn the step-by-step process to configure a system.\
+Before you continue to the integration, you must first configure EWM. Click [System Configuration](../integrate/system-configuration/) to learn the step-by-step process to configure a system.
 Refer the screenshot given below for reference.
 
 <div align="center"><img src="../assets/RTC_System.png" alt="" width="1800"></div>
@@ -115,7 +115,7 @@ If you want to specify conditions for synchronizing an entity between EWM and th
 
 Refer to Criteria Configuration section on [Integration Configuration](../integration/integration-configuration.md) for more details.
 
-The criteria query for EWM can be either in JSON or Connector format. For details, refer to page \[OpsHub Query format] for specific JSON format and [Criteria query in connector format](ibm-ewm.md#criteria-query-in-connector-format) section.
+The criteria query for EWM can be either in JSON or Connector format. For details, refer to page [OpsHub Query format](../integrate/opshub-query-format.md) for specific JSON format and [Criteria query in connector format](ibm-ewm.md#criteria-query-in-connector-format) section.
 
 ### Conditions supported
 
@@ -135,13 +135,13 @@ _**EWM system Operators Usage**_
 ### Guidelines for Query in JSON format
 
 * **Query on fields and values with special characters**
-  * Fields and values with special characters like **\\** (backslash) and **"** (double quotes) should be escaped.\
+  * Fields and values with special characters like **\** (backslash) and **"** (double quotes) should be escaped.
     **For example:** Fields or values having special characters like `Special[]\:"text` will become `Special[]\\:\"text` in JSON criteria query.
   * **Example queries with special characters:**
-    * Query on field name `Special[]\:"` will be like:\
-      `{"condition":"=","field":"Special[]\\:\\"","value":"special"}`
-    * Query on field `SpecialField` and value with special characters `value\Low` will be like:\
-      `{"condition":"=","field":"SpecialField","value":"value\\Low"}`
+    * Query on field name `Special[]\:"` will be like:
+      `{"condition":"=","field":"Special[]\\:\"","value":"special"}`
+    * Query on field `SpecialField` and value with special characters `value\Low` will be like:
+      `{"condition":"=","field":"SpecialField","value":"value\\Low"}
 
 _**Sample queries for Criteria Configuration**_
 
@@ -159,13 +159,10 @@ _**Sample queries for Criteria Configuration**_
 # Limitations
 
 * EWM supports Entity Mention only in HTML fields and unidirectional integration configurations for Rest API configuration.
-* Entity Mention is detected using\
-  `(?<![\w@~$^_+=\\|])(?i)\b(?:[{User_Provided_Keywords}])(?:#| #| )(\d+)\b(?![a-zA-Z~$^_+=\\|])` Regex.\
-  If there is an Entity Mention that doesn't follow this Regex rule, those Mentions won't be processed.
+* Entity Mention is detected using`(?<![\w@~$^_+=\\|])(?i)\b(?:[{User_Provided_Keywords}])(?:#| #| )(\d+)\b(?![a-zA-Z~$^_+=\\|])` Regex. If there is an Entity Mention that doesn't follow this Regex rule, those Mentions won't be processed.
 * If a work item had multiple revisions simultaneously with exact modified time with millisecond precision, only one of those revisions would be processed and data loss might occur.
 * Wiki type of field is supported as Read-only text field.
   * The list of vulnerabilities depends on OpsHub Integration Manager version, your EWM version, and its system configuration.
-
 Here are the known limitations of EWM REST API based connector:
 
 * For criteria configuration in string type field, 'System Criteria' Query will work only if the datatype of string field is selected as 'medium string'.
@@ -291,7 +288,7 @@ For getting EWM version, follow the steps given below:
     }
 ```
 
-* To obtain the project's key, fetch all project details from {User EWM Instance URL}/ccm/oslc/workitems/catalog api endpoint. Look at the value of rdf:resource inside oslc\_disc:details/oslc:details. It contains the URL of the project and its id.
+* To obtain the project's key, fetch all project details from {User EWM Instance URL}/ccm/oslc/workitems/catalog api endpoint. Look at the value of rdf:resource inside oslc_disc:details/oslc:details. It contains the URL of the project and its id.
 * Possible keywords that can be used to mention an entity in EWM include the name of the entity type and its alias.
 * If the above field input is not provided, only those Entities Mentions will be detected that are mentioned using workitem, work item, and item keywords.
 
@@ -321,14 +318,19 @@ For getting EWM version, follow the steps given below:
 **Steps to get internal link name for any entity are mentioned below**
 
 * Identify the work item for which the link needs to be added
-* Construct the API URL for the work item using the following format:\
-  &#xNAN;_&#x68;ttps://\<RTC\_URL>/ccm/resource/itemName/com.ibm.team.workitem.WorkItem/\<RTC\_ENTITY\_ID>_
-* Inspect the response, and locate tags that represent existing internal links. These typically appear under elements such as:\
-  ![RTC\_Json](../assets/RTC-Json.png)
+* Construct the API URL for the work item using the following format:
+ https://<RTC_URL>/ccm/resource/itemName/com.ibm.team.workitem.WorkItem/<RTC_ENTITY_ID>
+* Inspect the response, and locate tags that represent existing internal links. These typically appear under elements such as:
+
+<p align="center">
+  <img src="../assets/RTC-Json.png" width="800" />
+</p>
+
+  
 * Copy the link name, this value must be used as the linkName field in your metadata configuration.
 * Example for the link name is given below:
-  * **Format**: \<prefix\_name>:
-  * **Example**: oslc\_cm:affectsRequirement
+  * **Format**: <prefix_name>:
+  * **Example**: oslc_cm:affectsRequirement
 
 ## Supported link types
 
@@ -376,17 +378,17 @@ This will give access for modifying and deleting attachments to all users for th
 
 Following are the steps to generate OAuth token for IBM Engineering Workflow Management.
 
-**'''Generate Customer Key:'''**
+**Generate Customer Key:**
 
 * Log in to **Admin panel (/JTS/admin)** with user whose OAuth token needs to be generated.
 * Navigate to **Server** > **Consumers (Inbound)** in **Communication** section.
 * Enter the **Consumer Name**, **Consumer Secret**, and click **Register**. A **Consumer Key** will be generated.
-* After successfully registeration, the **Consumer Name** and **Consumer Key** will be added in the **Authorized Keys** section. Refer to the screenshot:\
+* After successfully registeration, the **Consumer Name** and **Consumer Key** will be added in the **Authorized Keys** section. Refer to the screenshot:
   ![EWM Jts server](../assets/EWMOauth.png)
 
-**'Generate OAuth Token and OAuth Secret for given consumer key**
+**Generate OAuth Token and OAuth Secret for given consumer key**
 
-* Generate the OAuth token for IBM Engineering Workflow Management system using third-party rest client [Postman](IBM_Rational_Doors_Next_OAuth_Generation/#Generate_Token_Using_Rest_Client_\(Postman\)).
+* Generate the OAuth token for IBM Engineering Workflow Management system using third-party rest client [Postman](ibm-rational-doors-next-oauth-generation.md#generate-token-using-rest-client-Postman).
 
 > **Note**: The behavior of "OAuth" token:
 > * The OAuth token will be expired, if it is not used for the given time duration configured in the "OAuth access token timeout" of IBM Engineering Workflow Management.
@@ -415,6 +417,6 @@ The query includes expressions joined with `and` operator. Expression are in the
   * **Format:** `<prefix_name>:<attribute internal name><operator><field value>`
   * **Example:** `dcterms:created>"2017-03-26T12:11:08.183Z" and oslc_cmx:priority=priority.literal.l02`
 
-> **Note**: 'Large String' attribute type is not supported while configuring criteria query.\
-> **Note**: In the criteria query for enumeration fields such as priority, severity, etc., the criteria query should be formed as: `oslc_cmx:priority="priority.literal.l3"`. Here the `priority.literal.l3` is the internal name of the field value.\
+> **Note**: 'Large String' attribute type is not supported while configuring criteria query.
+> **Note**: In the criteria query for enumeration fields such as priority, severity, etc., the criteria query should be formed as: `oslc_cmx:priority="priority.literal.l3"`. Here the `priority.literal.l3` is the internal name of the field value.
 > **Note**: In multi-project polling, if the criteria query is on custom enumeration field, the lookup values of the custom enumeration field should be of the same name for the criteria to work across multi-projects.
