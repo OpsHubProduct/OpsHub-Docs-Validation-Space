@@ -488,13 +488,13 @@ Provide 'read' access to a table
 * Click on 'Edit' under the 'Roles' section.
   
 <p align="center">
-  <img src="../assets/snow_user_role.png" width="1000" />
+  <img src="../assets/Snow_user_role.png" width="1000" />
 </p>
 
 * Select the role from the left section and click on the 'Add' button to add the role.
 
 <p align="center">
-  <img src="../assets/snow_role_assign.png" width="1000" />
+  <img src="../assets/Snow_role_assign.png" width="1000" />
 </p>
 
 
