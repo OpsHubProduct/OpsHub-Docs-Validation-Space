@@ -1,8 +1,6 @@
-# ibm-ewm
+# Prerequisites
 
-## Prerequisites
-
-### User privileges
+## User privileges
 
 * Create one user of Engineering Workflow Management (EWM), dedicated to OpsHub Integration Manager. User should not be used to do any operations from system's user interface.
 * User should be member of a Project Area with permission to create/modify work-items. For help on how to assign membership and role, please refer [Assign Membership and Role](ibm-ewm.md#assign-membership-and-role).
@@ -10,12 +8,12 @@
 * Permissions are required for Delete and Modify attachments features. For help on how to set permission for attachments, please refer [User Privileges for Attachment Operations](ibm-ewm.md#user-privileges-for-attachment-operations).
 * For syncing user type of fields from source system to target system - EWM, it is necessary for the mapped user (in field value mapping of user type fields) to be a member of the corresponding project. For help on how to assign membership and role, please refer [Assign Membership and Role](ibm-ewm.md#assign-membership-and-role).
 
-## System Configuration
+# System Configuration
 
 Before you continue to the integration, you must first configure EWM. Click [System Configuration](../integrate/system-configuration/) to learn the step-by-step process to configure a system.\
 Refer the screenshot given below for reference.
 
-<div align="center"><img src="../assets/RTC_System.png" alt=""></div>
+<div align="center"><img src="../assets/RTC_System.png" alt="" width="1800"></div>
 
 If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
@@ -42,11 +40,11 @@ If user wants to configure EWM as source endpoint of the integration and wants t
 
 > **Note:** Refer to [OAuth configuration](ibm-ewm.md#oauth-configuration) section to configure OAuth authentication for IBM Engineering Workflow Management.
 
-## Mapping Configuration
+# Mapping Configuration
 
 Map the fields between EWM and the other system to be integrated to ensure that the data between both the systems synchronizes correctly. Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
-### Approvals Field Configuration
+## Approvals Field Configuration
 
 * **Approvals** field is supported as Read-only in OpsHub Integration Manager.
 * Here is the sample advanced mapping that can be used to access the Approvals field. The mapping should be changed based on the target field:
@@ -107,11 +105,11 @@ Map the fields between EWM and the other system to be integrated to ensure that 
 </target-field-name>
 ```
 
-## Integration Configuration
+# Integration Configuration
 
 In this step, set a time to synchronize data between EWM and the other system to be integrated. Also, define parameters and conditions, if any, for integration. Click [Integration Configuration](../integration/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
 
-### Criteria Configuration
+## Criteria Configuration
 
 If you want to specify conditions for synchronizing an entity between EWM and the other system to be integrated, you can use the Criteria Configuration feature.
 
@@ -119,7 +117,7 @@ Refer to Criteria Configuration section on [Integration Configuration](../integr
 
 The criteria query for EWM can be either in JSON or Connector format. For details, refer to page \[OpsHub Query format] for specific JSON format and [Criteria query in connector format](ibm-ewm.md#criteria-query-in-connector-format) section.
 
-#### Conditions supported
+### Conditions supported
 
 EWM supports the following conditions (operators) for querying in end system: **=, !=, >, <, >=, <=, in, and**
 
@@ -134,7 +132,7 @@ _**EWM system Operators Usage**_
 | in                 | When criteria needs to be added on multiple value for text, numeric or lookup type fields of EWM.     |
 | and                | When there are multiple criteria or conditions to apply.                                              |
 
-#### Guidelines for Query in JSON format
+### Guidelines for Query in JSON format
 
 * **Query on fields and values with special characters**
   * Fields and values with special characters like **\\** (backslash) and **"** (double quotes) should be escaped.\
@@ -158,7 +156,7 @@ _**Sample queries for Criteria Configuration**_
 | Sync all artifacts with CustomTime within a given range              | `{"condition":"and","criterias":[{"condition":">","field":"CustomTime","value":"2011-07-06T18:13:35.336Z"},{"condition":"<","field":"CustomTime","value":"2012-07-06T18:13:35.336Z"}]}` |
 | Sync all artifacts created by the user 'Robert'                      | `{"condition":"=","field":"Created By","value":"Robert"}`                                                                                                                               |
 
-## Limitations
+# Limitations
 
 * EWM supports Entity Mention only in HTML fields and unidirectional integration configurations for Rest API configuration.
 * Entity Mention is detected using\
@@ -191,9 +189,9 @@ Following types of fields are not supported:
 * E-Signature
 * Time Tracking
 
-## Appendix
+# Appendix
 
-### Assign membership and role
+## Assign membership and role
 
 To assign membership and role to integration user in project area follow the steps given below:
 
@@ -202,16 +200,16 @@ To assign membership and role to integration user in project area follow the ste
 * In Active Project Areas, select project area for synchronization.
 * Move to the Overview tab and in section Members, click 'Add'.
 
-<div align="center"><img src="../assets/RTC_Image_8.png" alt=""></div>
+<div align="center"><img src="../assets/RTC_Image_8.png" alt="" width="900"></div>
 
 * In the pop-up search and select integration user. Then, click 'Add'.
 * After the selected user appears as a member, click the 'Process Roles' image (appears on hover).
 
-<div align="center"><img src="../assets/RTC_Image_9.png" alt=""></div>
+<div align="center"><img src="../assets/RTC_Image_9.png" alt="" width="900"></div>
 
 * In the dialog box (as displayed), select roles from the available roles and click 'OK'.
 
-### User privileges
+## User privileges
 
 For giving privileges to integration user, follow the steps given below:
 
@@ -222,7 +220,7 @@ For giving privileges to integration user, follow the steps given below:
 * In 'Configuration' select Team Configuration.
 * In Roles: section under Details, select role of the integration user.
 
-<div align="center"><img src="../assets/RTC_Image_10a.png" alt=""></div>
+<div align="center"><img src="../assets/RTC_Image_10a.png" alt="" width="900"></div>
 
 * Check-in Permitted Actions: Work Items and Item Connectors are checked, if not then check it.
 
@@ -234,9 +232,9 @@ For assigning Client Access Licenses and Repository Permissions, follow the step
 * In **Repository Permissions** section, check at least one of the **JazzUsers**, **JazzProjectAdmins** and **JazzAdmins**.
 * The Integration User must have at least one out of 'Contributor Client Access License', 'Developer Client Access License' and 'Stakeholder Client Access License' to be able to create/modify work items (details of licenses can be read from tool-tip appearing on hover).
 
-<div align="center"><img src="../assets/RTC_Image_11b.png" alt=""></div>
+<div align="center"><img src="../assets/RTC_Image_11b.png" alt="" width="900"></div>
 
-### Custom field configuration
+## Custom field configuration
 
 A few special fields must be defined on the entity that is being synchronized. These must be set up so that the integration status of each item can be tracked.
 
@@ -247,25 +245,25 @@ A few special fields must be defined on the entity that is being synchronized. T
 * In Types and Attributes, select **Work Item Type** for which integration need to be configured.
 * In the **Attributes section** click the **Add...** link.
 
-<div align="center"><img src="../assets/RTC_Image_12.png" alt=""></div>
+<div align="center"><img src="../assets/RTC_Image_12.png" alt="" width="900"></div>
 
-### Find version
+## Find version
 
 For getting EWM version, follow the steps given below:
 
 * Log in to CCM admin (https://:/ccm/admin).
 
-<div align="center"><img src="../assets/RTC_Image_13.png" alt=""></div>
+<div align="center"><img src="../assets/RTC_Image_13.png" alt="" width="900"></div>
 
 * After successful login, version should be displayed as in above screen.
 
-<div align="center"><img src="../assets/RTC_Image_14a.png" alt=""></div>
+<div align="center"><img src="../assets/RTC_Image_14a.png" alt="" width="900"></div>
 
-### Entity mention detection configuration
+## Entity mention detection configuration
 
 * To mention an entity in the EWM system, the user must write an entity type and the entity id that they want to mention.
 
-<div align="center"><img src="../assets/RTC_Image_18.png" alt=""></div>
+<div align="center"><img src="../assets/RTC_Image_18.png" alt="" width="900"></div>
 
 * When EWM is configured as a source system, the user must provide keywords that could be used to mention an entity. As seen in the above screenshot, 'Defect' is used to mention an entity with id 123.
 * The user is required to provide those keywords in JSON format. The project key should be the key and the string array list of the keywords should be the value in the JSON map. Refer to the example below:
@@ -297,7 +295,7 @@ For getting EWM version, follow the steps given below:
 * Possible keywords that can be used to mention an entity in EWM include the name of the entity type and its alias.
 * If the above field input is not provided, only those Entities Mentions will be detected that are mentioned using workitem, work item, and item keywords.
 
-### Understanding Metadata Detail Input
+## Understanding Metadata Detail Input
 
 * Below is the sample JSON for link metadata. The JSON can be modified as needed — it allows users to define or override link metadata based on their specific use case.
 
@@ -332,27 +330,27 @@ For getting EWM version, follow the steps given below:
   * **Format**: \<prefix\_name>:
   * **Example**: oslc\_cm:affectsRequirement
 
-### Supported link types
+## Supported link types
 
-#### Reading-side supported link types
-
-* REST API: duplicates, duplicateOf, successor, predecessor, children, parent, blocks, dependsOn, related, resolves, resolvedBy, copies, copiedFrom, affected by defect, custom links of type Work Item, and Work Item List
-
-#### Writing-side supported link types
+### Reading-side supported link types
 
 * REST API: duplicates, duplicateOf, successor, predecessor, children, parent, blocks, dependsOn, related, resolves, resolvedBy, copies, copiedFrom, affected by defect, custom links of type Work Item, and Work Item List
 
-### HTML description support
+### Writing-side supported link types
 
-#### Reading-side HTML description
+* REST API: duplicates, duplicateOf, successor, predecessor, children, parent, blocks, dependsOn, related, resolves, resolvedBy, copies, copiedFrom, affected by defect, custom links of type Work Item, and Work Item List
+
+## HTML description support
+
+### Reading-side HTML description
 
 EWM as a source system, description will be read as HTML.
 
-#### Writing-side HTML description
+### Writing-side HTML description
 
 EWM as a target system, description will be written as plain text.
 
-### User Privileges for Attachment Operations
+## User Privileges for Attachment Operations
 
 For giving privileges to integration user, follow the steps given below:
 
@@ -366,15 +364,15 @@ For giving privileges to integration user, follow the steps given below:
 
 This will give access for modifying and deleting attachments to all users for the selected project.
 
-<div align="center"><img src="../assets/RTC-Image-15.png" alt=""></div>
+<div align="center"><img src="../assets/RTC-Image-15.png" alt="" width="900"></div>
 
-<div align="center"><img src="../assets/RTC-Image-16.png" alt=""></div>
+<div align="center"><img src="../assets/RTC-Image-16.png" alt="" width="900"></div>
 
-## Appendix
+# Appendix
 
-### OAuth configuration
+## OAuth configuration
 
-#### Steps for OAuth token generation
+### Steps for OAuth token generation
 
 Following are the steps to generate OAuth token for IBM Engineering Workflow Management.
 
@@ -386,29 +384,28 @@ Following are the steps to generate OAuth token for IBM Engineering Workflow Man
 * After successfully registeration, the **Consumer Name** and **Consumer Key** will be added in the **Authorized Keys** section. Refer to the screenshot:\
   ![EWM Jts server](../assets/EWMOauth.png)
 
-**'''Generate OAuth Token and OAuth Secret for given consumer key'''**
+**'Generate OAuth Token and OAuth Secret for given consumer key**
 
 * Generate the OAuth token for IBM Engineering Workflow Management system using third-party rest client [Postman](IBM_Rational_Doors_Next_OAuth_Generation/#Generate_Token_Using_Rest_Client_\(Postman\)).
 
 > **Note**: The behavior of "OAuth" token:
->
 > * The OAuth token will be expired, if it is not used for the given time duration configured in the "OAuth access token timeout" of IBM Engineering Workflow Management.
 > * Suppose the token mentioned in the System Configuration form in the OpsHub Integration Manager gets expired, then it must be updated by re-performing the above steps.
 > * To avoid the above case, it is recommended to set the value of the "OAuth access token timeout" configuration to the maximum time duration allowed in the system.
 
-### Criteria query in connector format
+## Criteria query in connector format
 
 The syntax of the end system criteria query depends on the connector API that is being used in EWM configuration.
 
-**REST API**:\
+**REST API**:
 The query includes expressions joined with `and` operator. Expression are in the format mentioned below, where operator is `=` or `!=` and for integer and Timestamp values `>` and `<` are also supported.
 
-**'''Steps to generate format for criteria for any field are as mentioned below''':**
+**Steps to generate format for criteria for any field are as mentioned below':**
 
 * Install any REST client
 * Fire the API for getting the information about any entity in EWM based on the entity ID
-  * **Request URL**:\
-    &#xNAN;_&#x68;ttps://\<EWM\_URL>/ccm/resource/itemName/com.ibm.team.workitem.WorkItem/\<EWM\_ENTITY\_ID>_
+  * **Request URL**:
+    `https://<EWM_URL>/ccm/resource/itemName/com.ibm.team.workitem.WorkItem/<EWM_ENTITY_ID>_`
   * **Headers**: Give values for following headers in the REST client
     * OSLC-Core-Version: 2.0
     * Accept: application/json
