@@ -37,7 +37,7 @@
 
 * As you kickstart the integration, the user must first configure HubSpot system in OpsHub Integration Manager. Click [System Configuration](../integrate/system-configuration.md) to learn step-by-step process to configure a system. Refer to the following screenshot:
 
-<p align="center"><img src="../assets/HubSpotSystemConfig.png" /></p>
+<p align="center"><img src="../assets/HubSpotSystemConfig.png" width="1500" /></p>
 
 **HubSpot System form details**
 
@@ -54,7 +54,7 @@
 
 Map the fields between HubSpot and the other system to be integrated to ensure that the data between both the systems synchronize correctly. Refer to the following screenshot:
 
-<p align="center"><img src="../assets/HubSpotMappingConfiguration.png" /></p>
+<p align="center"><img src="../assets/HubSpotMappingConfiguration.png" width="1000"/></p>
 
 Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
@@ -79,7 +79,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 
 Set a time to synchronize data between HubSpot and the other system to be integrated. Also, define parameters and conditions (if any) for integration. Refer to [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure the integration between two systems.
 
-<p align="center"><img src="../assets/HubSpotIntegrationConfig.png" /></p>
+<p align="center"><img src="../assets/HubSpotIntegrationConfig.png" width="1800"/></p>
 
 ## Criteria Configuration
 
@@ -166,7 +166,7 @@ Set the **Query** as per OpsHub Integration Manager's Native query format. While
   To fix:
   * Use the internal name of the field from the error.
   * Check if failure is due to a missing mandatory field or invalid data.
-  * Refer to [#get-internal-field-names-for-hubspot-entities](#get-internal-field-names-for-hubspot-entities) for internal-to-display name mapping.
+  * Refer to [Get Internal Field Names for HubSpot Entities ](#get-internal-field-names-for-hubspot-entities) for internal-to-display name mapping.
 
 # Appendix
 
@@ -176,17 +176,17 @@ Set the **Query** as per OpsHub Integration Manager's Native query format. While
 
 2. Click on the **Settings** icon at the top right corner.
 
-<p align="center"><img src="../assets/HubSpotSettings.png" /></p>
+<p align="center"><img src="../assets/HubSpotSettings.png" width="900" /></p>
 
 3. In the left sidebar, navigate to **Users & Teams**.
 
 4. Click on the **Create User** button at the top right.
 
-<p align="center"><img src="../assets/HubSpotUserCreation.png" /></p>
+<p align="center"><img src="../assets/HubSpotUserCreation.png" width="900" /></p>
 
 5. Enter the **email address** of the user to invite.
 
-<p align="center"><img src="../assets/HubSpotAddUserEmail.png" /></p>
+<p align="center"><img src="../assets/HubSpotAddUserEmail.png" width="900" /></p>
 
 6. Click **Next**, review the invite, and click **Send**.
 
@@ -194,42 +194,41 @@ Set the **Query** as per OpsHub Integration Manager's Native query format. While
 * The user will receive an invitation email to join HubSpot.
 * You can later modify the user’s permissions via **Users & Teams**.
 
-<p align="center"><img src="../assets/HubSpotUserPermissionEdit.png" /></p>
+<p align="center"><img src="../assets/HubSpotUserPermissionEdit.png" width="900" /></p>
 
-* See [#user-privileges](#user-privileges) for required permissions for different actions.
+* See [User Privileges](#user-privileges) for required permissions for different actions.
 
 ## Create Private App in HubSpot
 
 1. Log in to your HubSpot Account with Admin privileges using the same user that you want to use as Integration User.
 2. Navigate to **Settings → Integrations → Private Apps**.
 
-<p align="center"><img src="../assets/HubSpotPrivateApp.png" /></p>
+<p align="center"><img src="../assets/HubSpotPrivateApp.png" width="900"/></p>
 
 3. Click **Create a Private App**.
 4. Provide the App's Name (e.g., "OpsHub Integration Manager Integration").
 
-<p align="center"><img src="../assets/HubSpotCreatePrivateApp.png" /></p>
+<p align="center"><img src="../assets/HubSpotCreatePrivateApp.png" width="900"  /></p>
 
-5. Under **Scopes**, provide required scopes mentioned in [#privileges](#privileges).
+5. Under **Scopes**, provide required scopes mentioned in [Privileges](#privileges).
 
-<p align="center"><img src="../assets/HubSpotPrivateAppScopesAndName.png" /></p>
+<p align="center"><img src="../assets/HubSpotPrivateAppScopesAndName.png" width="900"  /></p>
 
 6. Click **Create App**.
-7. Copy the Access Token (Auth Token).  
+7. Copy the Access Token (Auth Token).
+   * To know more details about this private app, refer to [HubSpot Private App Documentation](https://developers.hubspot.com/docs/guides/apps/private-apps/overview)
    * This token will be used in the **API Token** field during system configuration in OpsHub Integration Manager.
-   * Refer to [#steps-to-get-the-application-id-for-hubspot](#steps-to-get-the-application-id-for-hubspot) for details.
-
-[HubSpot Private App Documentation](https://developers.hubspot.com/docs/guides/apps/private-apps/overview)
+   * Refer to [Steps to Get the Application ID for HubSpot ](#steps-to-get-the-application-id-for-hubspot) for details.
 
 ---
 
 ## Steps to Get the Application ID for HubSpot
 
-1. After creating the Private App, navigate to the app.
-2. The last part of the URL represents the **Application ID**.
-   * Example: `https://app.hubspot.com/private-apps/45105664/2851633` → `2851633` is the Application ID.
+1. Once the Private App is created, navigate to that app.
+2. In the URL of the created app, the last part of the URL represents the required Application ID.
+3. Example URL: https://app.hubspot.com/private-apps/45105664/2851633 → Here, 2851633 is the Application ID
 
-<p align="center"><img src="../assets/HubSpotPrivateAppId.png" /></p>
+<p align="center"><img src="../assets/HubSpotPrivateAppId.png" width="900" /></p>
 
 
 ## Managing Permission Scopes in HubSpot Private App
@@ -238,19 +237,21 @@ Set the **Query** as per OpsHub Integration Manager's Native query format. While
 2. Go to **Settings → Account → Integrations → Private Apps**.
 3. From the list of Private Apps, **select the Private App** you want to update.
 
-<p align="center"><img src="../assets/HubSpotPrivateApp.png" /></p>
+<p align="center"><img src="../assets/HubSpotPrivateApp.png" width="800" /></p>
 
-4. Click **Edit** and go to the **Scopes** tab.
+4. Navigate to the **Edit** button and go to the **Scopes** tab within the selected Private App.
 
-<p align="center"><img src="../assets/HubSpotEdit.png" /></p>
+<p align="center"><img src="../assets/HubSpotEdit.png" width="800" /></p>
 
-5. **Add or remove scopes** by checking/unchecking permissions.
-<p align="center"><img src="../assets/HubSpotScopes.png" /></p>
+5. **Add or remove scopes** as needed by selecting or deselecting the checkboxes next to the permissions the user wants to grant or revoke for the app.
+
+<p align="center"><img src="../assets/HubSpotScopes.png" width="800" /></p>
 
 6. Click **Save** to apply changes.
 
 > **Note** :
 * Changing scopes **will invalidate the existing access token**. A new token needs to be generated after saving.
+* Ensure the new scopes match the requirements of the integration you are configuring.
 * Assign only necessary scopes to follow best security practices.
 
 ---
@@ -264,11 +265,11 @@ In HubSpot, each property (field) of an entity (like Contacts, Companies, Deals,
 1. Log in to your HubSpot account.
 2. Navigate to **Settings → Data Management → Objects**. Choose the entity (e.g., Deals).
 
-<p align="center"><img src="../assets/HubSpotPropertyDeal.png" /></p>
+<p align="center"><img src="../assets/HubSpotPropertyDeal.png" width="800" /></p>
 
 3. Click **Manage Deal Properties** to view all deal entity fields.
 
-<p align="center"><img src="../assets/HubSpotManageProperty.png" /></p>.
+<p align="center"><img src="../assets/HubSpotManageProperty.png" width="800" /></p>.
 
 4. Click any property to view its details.
 
@@ -277,7 +278,8 @@ In HubSpot, each property (field) of an entity (like Contacts, Companies, Deals,
 * **Label**: User-friendly display name.
 * **Internal Name**: Actual key used in API requests (e.g., `dealname`, `company_size`).
 
-<p align="center"><img src="../assets/HubSpotDealPropertyInformation.png" /></p>
+<p align="center"><img src="../assets/HubSpotDealPropertyInformation.png"   /></p>
+
 ## Lookup Values
 
 * If the property is a **dropdown (enumeration)** or **association/lookup**, its internal name will be shown.
