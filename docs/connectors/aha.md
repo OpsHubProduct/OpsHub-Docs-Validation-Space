@@ -19,7 +19,7 @@
 
 Refer to the following screenshot for reference:
 
-<div align="center"><img src="../assets/Aha_System_Config.png" alt=""></div>
+<div align="center"><img src="../assets/Aha_System_Config.png" alt="" width="1000"></div>
 
 **Aha! System form details** 
 
@@ -77,7 +77,7 @@ Refer to the following screenshot for reference:
 
 Map the fields between Aha! and the other system to be integrated to ensure that the data between both the systems synchronize correctly.
 
-<div align="center"><img src="../assets/aha_entity_mapping.png" alt=""></div>
+<div align="center"><img src="../assets/aha_entity_mapping.png" alt="" width="1000"></div>
 
 Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
@@ -101,7 +101,7 @@ In Aha!, entity type selection in mapping configuration depends on the project/p
   * Attachment mapping can be configured to decide the field of Aha! to which the attachment needs to be synced.
     * If only attachment mapping toggle is enabled but the attachment type mapping is not configured, then attachment will sync to description field of Aha! as a part of default attachment behavior sync.
 
-<div align="center"><img src="../assets/aha_attachment_mapping.png" alt=""></div>
+<div align="center"><img src="../assets/aha_attachment_mapping.png" alt="" width="1000"></div>
 
 ## Relationship Configuration
 
@@ -118,13 +118,13 @@ In Aha!, Record links and Reference fields will be supported as relationships.
 * Reference fields are the fields that refer to some other Aha! entity we support.
 * Reference fields [System/Custom fields] will be synchronized through relationships. For references, the names of the Reference fields will be shown in link type mapping of the Relationship Configuration, as shown in the screenshot below:
 
-<div align="center"><img src="../assets/aha_reference_field_relation.png" alt=""></div>
+<div align="center"><img src="../assets/aha_reference_field_relation.png" alt="" width="1000"></div>
 
 # Integration Configuration
 
 Set a time to synchronize data between Aha! and the other system to be integrated. Also, define parameters and conditions (if any) for integration. Refer to [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure the integration between two systems. Refer to the screenshot given below:
 
-<div align="center"><img src="../assets/aha_integration.png" alt="" width="800"></div>
+<div align="center"><img src="../assets/aha_integration.png" alt="" width="1000"></div>
 
 In Aha!, the entity type selection in integration configuration depends on the project selection. For more details, please refer to [Project Selection](aha.md#project-selection) section.
 
@@ -140,7 +140,7 @@ Set the **Query** as per Aha! encoded query format. Criteria is only applicable 
 | `q`                      | Synchronize all entities named as 'test feature'                     | q=test%20feature                                                                          |
 | `updated_since`          | Synchronize all entities updated after 10 March 2021                 | <p>updated_since=2021-03-10T00%3A00%3A00.000Z<br>Format: yyyy-MM-dd'T'HH:mm:ss.SSS'Z'</p> |
 | `tag`                    | Synchronize all entities associated with the tag 'need review'       | tag=need%20review                                                                         |
-| `assigned_to_user`       | Synchronize all entities assigned to user 'ABC'                      | <p>assigned_to_user=7163902316942030700<br>or<br>assigned_to_user=email%40opshub.com</p>  |
+| `assigned_to_user`       | Synchronize all entities assigned to user 'ABC'                      | Filter can be applied on User ID or User email.<br> For an example, assigned_to_user=7163902316942030700 assigned_to_user=email%40opshub.com <br>Here, 7163902316942030700 is the id of the user 'ABC'.  |
 | `updated_since` + `name` | Synchronize entities named 'test r &d' and updated after 10 Mar 2021 | updated _since=2021-03-10T00%3A00%3A00.000Z &q=test%20r%26d                               |
 
 ## Target LookUp Configuration
