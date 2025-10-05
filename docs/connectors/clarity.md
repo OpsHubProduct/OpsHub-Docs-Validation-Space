@@ -109,7 +109,7 @@ Refer to [Mapping Configuration](../integrate/mapping-configuration.md) page to 
 </p>
 
 <p align="center">
-  <img src="../assets/CAPPM_Rel_3.png" width="900"/>
+  <img src="../assets/CAPPM_Rel_3.png" width="700"/>
 </p>
 
 
@@ -389,6 +389,7 @@ Given below are the sample snippets of how the queries can be used as target ent
 <p align="center">
   <img src="../assets/CAPPM_Custom_Object_3.png" width="900" />
 </p>
+
 
 
 
