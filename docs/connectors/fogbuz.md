@@ -13,7 +13,7 @@ Before you continue to the integration, you must first configure FogBugz. Click 
 Refer the screenshot given below for reference.  
 
 <p align="center">
-  <img src="../assets/FB_Image_9a.png" width="1500">
+  <img src="../assets/FB_Image_9a.png" width="2000">
 </p>
 
 For checking version and api_key, refer [How to get API URL and Version?](#how-to-get-api-url-and-version) section in appendix.
@@ -49,19 +49,19 @@ Click [Create Custom Fields](#create-custom-fields) to learn how to create custo
 * Click on **Admin** on the right top corner and select **Users**.
 
 <p align="center">
-  <img src="../assets/FB_Image_1.png" width="400">
+  <img src="../assets/FB_Image_1.png" width="1000">
 </p>
 
 * Click on **Add New User Account**.
 
 <p align="center">
-  <img src="../assets/FB_Image_2.png" width="400">
+  <img src="../assets/FB_Image_2.png" width="1000">
 </p>
 
 * Click on **Add New User Account.**
 
 <p align="center">
-  <img src="../assets/FB_Image_3.png">
+  <img src="../assets/FB_Image_3.png" width="1000">
 </p>
 
 ## Set User Time Zone
@@ -70,14 +70,14 @@ Click [Create Custom Fields](#create-custom-fields) to learn how to create custo
 * Click **Admin** tab on the top-right corner and select **Users**.
 
 <p align="center">
-  <img src="../assets/FB_Image_1.png" width="400">
+  <img src="../assets/FB_Image_1.png" width="1000">
 </p>
 
 * Select the user from the user list. Click **Edit**.
 * Set Time Zone to: **(UTC) Coordinated Universal Time**.
 
 <p align="center">
-  <img src="../assets/FB_Image_4.png" width="700">
+  <img src="../assets/FB_Image_4.png" width="1000">
 </p>
 
 ## Create Custom Fields
@@ -86,7 +86,7 @@ Click [Create Custom Fields](#create-custom-fields) to learn how to create custo
 * Click on **Admin** menu.
 
 <p align="center">
-  <img src="../assets/FB_Image_5.png" width="400">
+  <img src="../assets/FB_Image_5.png" width="700">
 </p>
 
 * Select **Plugins** from menu.
@@ -94,10 +94,10 @@ Click [Create Custom Fields](#create-custom-fields) to learn how to create custo
 * Click **Add New Custom Field**.
 
 <p align="center">
-  <img src="../assets/FB_Image_6b.png" width="800">
+  <img src="../assets/FB_Image_6b.png" width="1000">
 </p>
 <p align="center">
-  <img src="../assets/FB_Image_7.png" width="700">
+  <img src="../assets/FB_Image_7.png" width="1000">
 </p>
 <p align="center">
   <img src="../assets/FB_Image_8.png" >
