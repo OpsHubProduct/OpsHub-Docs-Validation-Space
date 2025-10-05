@@ -12,7 +12,7 @@
 * This field's "API Attribute ID" needs to be set to "**o_ohlastUpdate**". Here is the custom field details:
 
 | **Property Name**                  | **Type** | **Size** |
-|-----------------------------------|----------|----------|
+|           --|   -|   -|
 | API Attribute ID: o_ohLastUpdate  | String   | 255      |
 
 * For step-by-step guide to create a custom field, refer to [How to add custom field](#how-to-add-custom-field) section.
@@ -33,7 +33,7 @@ Refer to the screenshot given below:
 **Clarity form details**
 
 | **Field Name**       | **Description**                                                                                   |
-|----------------------|---------------------------------------------------------------------------------------------------|
+|       -|                                 |
 | System Name          | Provide the system name                                                                            |
 | Version              | Provide the version of Clarity. To know the version of the Clarity system, refer to [How to find Clarity Version](#how-to-find-clarity-version) in Appendix. |
 | URL                  | The URL is used for connecting to Clarity REST API. For example: https://[domainOfYourClarityPPMInstance] |
@@ -189,7 +189,7 @@ Click [Integration Configuration](../integrate/integration-configuration.md) to 
 * For fetching internal name for queries, refer to [How to get field's Internal name](#how-to-get-fields-internal-name).
 
 | **Field Type**       | **Criteria Description**                                                                 | **Criteria snippet**                                |
-|----------------------|------------------------------------------------------------------------------------------|------------------------------------------------------|
+|       -|                              |                  |
 | Lookup               | Synchronize all entities which have certain value in Lookup. Value = internal id        | (status = 1)                                         |
 | Text                 | Synchronize all entities which has 'UI' in a custom text field 'Effected Area'          | (c_effectedarea = 'UI')                              |
 | Boolean              | Synchronize all entities which have true in 'In Plan' Boolean type of field             | (inPlan = true)                                      |
@@ -209,7 +209,7 @@ Given below are the sample snippets of how the queries can be used as target ent
 **Target lookup query samples:**
 
 | **Field Type**     | **Target lookup use case**                                                                                          | **Snippet**                                                |
-|--------------------|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
+|      --|                                       -|                    -|
 | Text               | The id information of the source system entity id is stored in source_system_id. Target lookup on the entity which has source entity's id in 'remoteEntityIdFieldText' field                 | (remoteEntityIdFieldText = '@source_system_id@')            |
 | Text and Lookup    | Target lookup on the entity which has source entity's id in 'remoteEntityIdFieldText' field and has certain value in Status   | (remoteEntityIdFieldText = '@source_system_id@') and (status = 1) |
 | Lookup or Text     | Target lookup on the entity which has certain value in Status field or has source entity's id in 'remoteEntityIdFieldText' field | (status = 2) or (remoteEntityIdFieldText = '@source_system_id@') |
@@ -367,7 +367,7 @@ Given below are the sample snippets of how the queries can be used as target ent
   <img src="../assets/CAPPM_Users_2.png" width="900"/>
 </p>
 
----
+ 
 
 ## How to find Custom object's type
 
@@ -389,4 +389,5 @@ Given below are the sample snippets of how the queries can be used as target ent
 <p align="center">
   <img src="../assets/CAPPM_Custom_Object_3.png" width="900" />
 </p>
+
 
