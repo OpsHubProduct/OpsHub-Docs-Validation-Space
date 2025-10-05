@@ -1,25 +1,22 @@
-# ea
+# Prerequisites
 
-## Prerequisites
-
-### User Privileges
+## User Privileges
 
 * Create one administrator user of Enterprise Architect System , dedicated to \{{ spaceName \}}, only if the projects which will be used for synchronization have enabled security settings in Enterprise Architect System. This dedicated user should not do any operations from the system’s user interface.
 * User should have access to all the projects that need to be synchronized.
 
 > **Note**: The Enterprise Architect app must **NOT** be configured to 'Run this program as an Administrator'. If the user is facing the error, 'Retrieving the COM class factory for component with CLSID {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} failed due to the following error: 800702e4. The requested operation requires elevation.', then check if Enterprise Architect is configured to run as administrator. Uncheck this option if selected in the Compatibility tab in its Properties.
 
-### Proxy Service Prerequisites
+## Proxy Service Prerequisites
 
 * Operating System (Tested On) : Windows 7, Windows Server 2008, Windows Server 2012, Windows Server 2016, Windows Server 2019, Windows 10, Windows 11
 * OpsHubEAWindowsService must be installed on the same machine where Enterprise Architect application has been installed and should have .NET framework 4.7.2 or higher version installed on it.
 * It is recommended to install OpsHubEAWindowsService on a machine having quad-core processor, 4GB RAM (minimum) and 4GB disk space (minimum).
 * OpsHubEAWindowsService is configurable for Enterprise Architect installed on Windows 64-bit Operating System.
 
-> **Note**: This prerequisite is compulsory regardless of the version of Enterprise Architect that the user is trying to integrate.\
-> Client Profile versions of .NET framework are not supported. It is recommended that the user installs the full version of the .NET framework.
+> **Note**: This prerequisite is compulsory regardless of the version of Enterprise Architect that the user is trying to integrate. Client Profile versions of .NET framework are not supported. It is recommended that the user installs the full version of the .NET framework.
 
-### Setting up OpsHubEAWindowsService
+## Setting up OpsHubEAWindowsService
 
 * Check the availability of port 9393 as OpsHubEAWindowsService will be using port 9393 by default. Refer to [How to Change the Port of OpsHubEAWindowsService](enterprise-architect.md#how-to-change-the-port-of-opshubeawindowsservice) section to change the default port of the OpsHubEAWindowsService.
 * Locate the path `<{{ spaceName }}_INSTALLATION_PATH>\Other_Resources\Resources`.
@@ -35,7 +32,7 @@
 > **Note**: After system restarts, OpsHubEAWindowsService needs to be restarted. To configure the OpsHubEAWindowsService to auto-start at system startup, refer to [Auto start OpsHubEAWindowsService on system startup](enterprise-architect.md#auto-start-opshubeawindowsservice-on-system-startup) section.\
 > **Note**: It is recommended that OpsHubEAWindowsService be stopped by pressing the enter key and not directly using the close button to release EA connections made through \{{ spaceName \}}.
 
-### Register OpsHub's Extension for EA
+## Register OpsHub's Extension for EA
 
 * By default in Enterprise Architect (EA), the modified time of an entity does not update when link changes (additions, updates, or removals) occurs. As a result, these changes are not synchronized to the target because no modifications are detected in the modified time in EA.
 * To overcome this limitation of Enterprise Architect, we have developed one custom plugin named "OpsHubEAAddIn". So whenever there are changes to the links, this add-in ensures to update the modified time of an entity.
@@ -49,54 +46,54 @@
 5. Execute the `RegisterOpsHubEAAddIn.bat` here by entering its name.
 6. After executing the `RegisterOpsHubEAAddIn.bat`, select the Enterprise Architect (EA) version.
 
-<div align="center"><img src="../assets/EA_VERSION_SELECTION.png" alt="" width="600"></div>
+<div align="center"><img src="../assets/EA_VERSION_SELECTION.png" alt="" width="900"></div>
 
 To identify the EA version, go to **Start** → **Help** → **About EA** to know about the EA version.
 
-<div align="center"><img src="../assets/EA_HELP_SECTION.png" alt="" width="600"></div>
+<div align="center"><img src="../assets/EA_HELP_SECTION.png" alt="" width="900"></div>
 
-<div align="center"><img src="../assets/EA_DETAILS.png" alt="" width="600"></div>
+<div align="center"><img src="../assets/EA_DETAILS.png" alt="" width="900"></div>
 
 While executing if it's prompted with `Value exists, overwrite(Yes/No)?` Please type **Yes**.
 
-<div align="center"><img src="../assets/EA_ADDIN_REGISTER.png" alt="" width="600"></div>
+<div align="center"><img src="../assets/EA_ADDIN_REGISTER.png" alt="" width="900"></div>
 
 After the bat file is executed, open or restart the Enterprise Architect (EA) and go to **Specialize** section and see the **Manage Addin**, You will find OpsHub's extension added in the Available Add-Ins list with status Enabled.
 
 * Note: Status will show activated only when project present in the Enterprise Architect (EA).
 
-<div align="center"><img src="../assets/EA_ADDIN_FIND.png" alt="" width="600"></div>
+<div align="center"><img src="../assets/EA_ADDIN_FIND.png" alt="" width="900"></div>
 
 **Limitation of OpsHub's Extension**
 
 * This extension will not update the modified time if any link changes occur through the API. It only works for changes made through the UI.
 
-### Custom Field Configuration
+## Custom Field Configuration
 
-It is required to create following custom fields for \{{ spaceName \}} to track the integration status of each element of Enterprise Architect that will be synchronized.
+It is required to create following custom fields for {{ spaceName }} to track the integration status of each element of Enterprise Architect that will be synchronized.
 
 | Field Name       | Type  |
 | ---------------- | ----- |
-| OH\_Last\_Update | Const |
-| OH\_CreatedBy    | Const |
+| OH_Last_Update | Const |
+| OH_CreatedBy    | Const |
 
 Learn in detail about [Custom Field Creation in Enterprise Architect](enterprise-architect.md#custom-field-creation-in-enterprise-architect).
 
-### Enterprise Architect Data Sources Configuration for Running on a DBMS
+## Enterprise Architect Data Sources Configuration for Running on a DBMS
 
 * If the user is using Enterprise Architect with a MySQL database, then ensure that the MySQL Data Source is configured in his/her Enterprise Architect instance according to the documented steps given in [Set up a MySQL ODBC Driver](https://www.sparxsystems.com/enterprise_architect_user_guide/15.2/model_repository/setupmysqlodbcdriver.html).
 * If the user is using Enterprise Architect with a Microsoft SQL Server Database, then ensure that the MSSQL Server Data Source is configured in his/her Enterprise Architect instance according to the documented steps given in [Connect to a SQL Server Repository](https://www.sparxsystems.com/enterprise_architect_user_guide/15.2/model_repository/connecttosqlserver.html).
 
-### Accessing Enterprise Architect through Windows Remote Desktop
+## Accessing Enterprise Architect through Windows Remote Desktop
 
 * If the user has installed Enterprise Architect on a different machine that requires a Windows Remote Desktop connection to access, then Enterprise Architect instance will not be able to connect with \{{ spaceName \}} server when the Remote Desktop session expires. This occurs as disconnecting the Windows Remote Desktop connection will terminate the logged in user's session. Enterprise Architect requires an active logged on user.
 * If the user has such a scenario, then it is strongly recommended that he/she uses an alternative software for Windows Remote Desktop to connect to the machine where Enterprise Architect is installed, and does not require Windows authentication to log in to a remote machine.
 
-## System Configuration
+# System Configuration
 
 Before continuing the integration, the user must first configure Enterprise Architect. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system. Refer to the screenshot given below:
 
-<div align="center"><img src="../assets/EA_Image 1b.png" alt=""></div>
+<div align="center"><img src="../assets/EA_Image 1b.png" alt="" width="1500"></div>
 
 For the format and guidance related to filling Metadata details in JSON form, please refer to [Understanding Json Metadata Input](../integrate/system-configuration.md#understanding-json-metadata-input) section.
 
@@ -104,9 +101,9 @@ For the format and guidance related to filling Metadata details in JSON form, pl
 
 > **Note**: If the Enterprise Architect instance is configured to run on a database, then the user would need to save his/her database connection as a `.eap` file shortcut. Refer to [Create Project Shortcut](https://sparxsystems.com/enterprise_architect_user_guide/15.2/model_repository/create_copy_or_shortcut.html) for further details. Ensure that the Data Source in Enterprise Architect is configured according to the steps mentioned in the section [Enterprise Architect Data Sources Configuration for running on a DBMS](enterprise-architect.md#enterprise-architect-data-sources-configuration-for-running-on-a-dbms).
 
-### Supported File Types
+## Supported File Types
 
-\{{ spaceName \}} supports following repository types:
+{{ spaceName }} supports following repository types:
 
 * File Based Repositories:
   * .eap
@@ -119,12 +116,12 @@ For the format and guidance related to filling Metadata details in JSON form, pl
 
 > **Note**: The user can view [Supported DBMSs](https://sparxsystems.com/enterprise_architect_user_guide/15.2/model_domains/supported_databases.html) by Enterprise Architect to check whether the database is supported by Enterprise Architect or not.
 
-## Mapping Configuration
+# Mapping Configuration
 
-Map the fields between Enterprise Architect and the other system to be integrated to ensure that the data between both the systems synchronize correctly.\
+Map the fields between Enterprise Architect and the other system to be integrated to ensure that the data between both the systems synchronize correctly.
 Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
-### Synchronizing Diagram Image to the target system as an inline image
+## Synchronizing Diagram Image to the target system as an inline image
 
 When Enterprise Architect is a source system and the user wants to synchronize the Diagram entity, then the Diagram's visualization as seen in Enterprise Architect can be synchronized to the target system in a rich text field as an inline image.
 
@@ -133,7 +130,7 @@ When Enterprise Architect is a source system and the user wants to synchronize t
 * The name of the diagram image will be the diagram's GUID as visible in Enterprise Architect and is of PNG type. For example, if the diagram's GUID is `{4F5CD0CE-DC33-4d04-8537-DC0B57C6CB4E}`, then the name of the inline image in the target system will be `4F5CD0CE-DC33-4d04-8537-DC0B57C6CB4E.png`.
 * Whenever the diagram's visualization is updated in Enterprise Architect, then the latest visualization will be synchronized to the target system.
 
-### Synchronizing Diagram Image to the target system as an attachment
+## Synchronizing Diagram Image to the target system as an attachment
 
 * The user can synchronize the Diagram Image to the target system as an attachment. The user needs to follow these steps:
   * Map the Diagram Image field to any target field. This field should not be used anywhere else in the mapping.
@@ -186,35 +183,35 @@ When Enterprise Architect is a source system and the user wants to synchronize t
 ```
 
 * This XSLT will synchronize the Diagram Image as an attachment in the target system. If the user wants to revert the changes, then he/she can click on the _Restore Default_ button in the Advanced XSLT dialog box. This will synchronize the diagram image as an inline image.
-* If the user wants to change the file name of the diagram image attachment in the target system, then the user can change the above given advanced XSLT by replacing the value of `<xsl:value-of select="fileName"/>` to `<xsl:value-of select="'<new_file_name.png>'"/>` in the `<fileName>` tag.\
+* If the user wants to change the file name of the diagram image attachment in the target system, then the user can change the above given advanced XSLT by replacing the value of `<xsl:value-of select="fileName"/>` to `<xsl:value-of select="'<new_file_name.png>'"/>` in the `<fileName>` tag.
   For example: `<xsl:value-of select="'DiagramImage.png'"/>` and ensure that the file name has the extension as `.png`.
 
-### Synchronizing Operation and Attribute as entity to the target system
+## Synchronizing Operation and Attribute as entity to the target system
 
 * When Enterprise Architect is a source system, user can synchronize 'Operation' and 'Attribute' features of Element as separate entities to the target system.
 * For synchronizing entity types Operation and Attribute, the user needs to map the 'Operation'/'Attribute' entity of Enterprise Architect to any entity type in the target system.
 * Please refer [Known Behavior](enterprise-architect.md#known-behavior) section for more details on behavior of 'Operation' and 'Attribute' entities.
 * Please refer [Known Limitations](enterprise-architect.md#known-limitations) section for details on limitations of 'Operation' and 'Attribute' entities.
 
-### Mapping Stereotypes
+## Mapping Stereotypes
 
-* The stereotypes present in the `t_stereotypes` table (to find list, query in SQL editor) in Enterprise Architect will be listed in the list of stereotype values. If the user wants to set the value of stereotype other than listed, it can be done from _Advanced Mapping Configuration_.
+* The stereotypes present in the `t_stereotypes` table (to find list, query in SQL editor) in Enterprise Architect will be listed in the list of stereotype values. If the user wants to set the value of stereotype other than listed, it can be done from Advanced Mapping Configuration.
 * For synchronizing stereotype values not present in list of 'Stereotype' field values, provide the value of required stereotype in _Advanced Mapping Configuration_.
-  * For example, in Enterprise Architect `block` type of stereotype can be assigned to an element, but in \{{ spaceName \}}, this is not getting loaded in the list of values for 'Stereotype' field. So, if user wants to set the value of stereotype as `block`, its value should be provided as `block` from _Advanced Mapping Configuration_.
-* The fully qualified stereotype value must be used in the _Advanced Mapping_ of the stereotype field for synchronizing stereotype values along with profile details.
-  * For example, if the user wants to set profile `MARTE` for stereotype `allocated`, then `MARTE::allocated` value needs to be set for stereotype in the _Advanced Mapping_.
+  * For example, in Enterprise Architect `block` type of stereotype can be assigned to an element, but in {{ spaceName }}, this is not getting loaded in the list of values for 'Stereotype' field. So, if user wants to set the value of stereotype as `block`, its value should be provided as `block` from Advanced Mapping Configuration.
+* The fully qualified stereotype value must be used in the Advanced Mapping of the stereotype field for synchronizing stereotype values along with profile details.
+  * For example, if the user wants to set profile `MARTE` for stereotype `allocated`, then `MARTE::allocated` value needs to be set for stereotype in the Advanced Mapping.
 * It is recommended to analyze the EA's XML model before the sync of the profile of the stereotype field, as specific fully qualified stereotype values do not contain profile details. So, the EA XML model needs to be updated to sync with profile details.
-  * For more details, refer to [How to update EA's XML Model to sync stereotype with profile in \{{ spaceName \}}](enterprise-architect.md#how-to-update-eas-xml-model-to-sync-stereotype-with-profile-in-sitename) section.
+  * For more details, refer to [How to update EA's XML Model to sync stereotype with profile in {{ spaceName }}](enterprise-architect.md#how-to-update-eas-xml-model-to-sync-stereotype-with-profile-in-sitename) section.
 * Alternatively, to map MDG elements, user has to select base entity type while configuring mapping and integration.
   * **Reason**: MDG elements are not visible directly in the entity type list.
-* Stereotype field for any MDG element represents the _"Apply To"_ column which is the base element type. This element type can be mapped for fetching those MDG entities.
+* Stereotype field for any MDG element represents the "Apply To" column which is the base element type. This element type can be mapped for fetching those MDG entities.
 
-<div align="center"><img src="../assets/EA_Image_stereotype.png" alt=""></div>
+<div align="center"><img src="../assets/EA_Image_stereotype.png" alt="" width="900"></div>
 
-For example:\
+For example:
 The base element type name of `Block` type is `Class`. If we create configuration in OIM using Element-Class as entity type, we should be able to synchronize Blocks.
 
-### Mapping Different Link Types
+## Mapping Different Link Types
 
 * Enterprise Architect provides different possible directions for same link types. The different directions available for `Dependency` link type in Enterprise Architect are:
   * Unspecified
@@ -222,29 +219,28 @@ The base element type name of `Block` type is `Class`. If we create configuratio
   * Source → Destination
   * Destination → Source
 
-<div align="center"><img src="../assets/EA_Image_8.png" alt=""></div>
+<div align="center"><img src="../assets/EA_Image_8.png" alt="" width="900"></div>
 
-* For configuring links on the basis of directions, corresponding link types should be mapped.\
-  For example, for basic link type `Dependency` the other four link types available in \{{ spaceName \}} are:
-  * Dependency\_\_Bi-Directional
-  * Dependency\_\_Unspecified
-  * Dependency\_\_From\
-    &#xNAN;_&#x4D;ap this link type for synchronizing the dependency of current entity to the linked entity._
-  * Dependency\_\_To\
-    &#xNAN;_&#x4D;ap this link type for synchronizing the dependency of linked entity to the current entity._
+* For configuring links on the basis of directions, corresponding link types should be mapped. For example, for basic link type `Dependency` the other four link types available in {{ spaceName }} are:
+  * Dependency__Bi-Directional
+  * Dependency__Unspecified
+  * Dependency__From
+      * Map this link type for synchronizing the dependency of current entity to the linked entity.
+  * Dependency__To
+    * Map this link type for synchronizing the dependency of linked entity to the current entity.
 * **Examples of link configuration for Enterprise Architect as source and target:**
-  * **Source**:\
-    Suppose two `Requirement` elements are created in Enterprise Architect: E1 and E2.\
-    There is a dependency link from E1 to E2, the source entity is E1, target entity is E2 and the direction of link is from _Source → Destination_.\
-    Now this link needs to be synchronized in the target system with `Parent` link, where E2 will be the parent of E1.\
+  * **Source**:
+    Suppose two `Requirement` elements are created in Enterprise Architect: E1 and E2.
+    There is a dependency link from E1 to E2, the source entity is E1, target entity is E2 and the direction of link is from Source → Destination_.
+    Now this link needs to be synchronized in the target system with `Parent` link, where E2 will be the parent of E1.
     To achieve this, `Dependency__From` link type should be mapped with `Parent` link.
-  * **Target**:\
-    Suppose two entities e1 and e2 are created in the source system. Entity e1 is the parent of entity e2.\
-    So corresponding to this, e2 should be dependent on entity e1 in Enterprise Architect.\
-    To achieve this, `Parent` link type of source system can be mapped with `Dependency__From` link type of Enterprise Architect.\
+  * **Target**:
+    Suppose two entities e1 and e2 are created in the source system. Entity e1 is the parent of entity e2.
+    So corresponding to this, e2 should be dependent on entity e1 in Enterprise Architect.
+    To achieve this, `Parent` link type of source system can be mapped with `Dependency__From` link type of Enterprise Architect.
     The other way is to map the `Child` link type of source system with `Dependency__To` link type of Enterprise Architect.
 * **Limitations**
-  * For the link types: `Aggregation` and `Nesting`, only `Destination → Source` direction is supported.\
+  * For the link types: `Aggregation` and `Nesting`, only `Destination → Source` direction is supported.
     Due to Enterprise Architect API limitation, `Bi-Directional` and `Unspecified` directions will not be listed in the link types.
 
 ### Link Configuration in Operation and Attributes
@@ -283,13 +279,13 @@ When Enterprise Architect is the target system and the property to be synchroniz
 </allocatedFrom (Tagged Value)>
 ```
 
-<div align="center"><img src="../assets/EA_Image_11.png" alt=""></div>
+<div align="center"><img src="../assets/EA_Image_11.png" alt="" widt="900"></div>
 
 > **Note**: For Enterprise Architect, there must be an update in the field other than properties of stereotypes to sync changes in these properties.
 
 Reason: The modified time of entity in Enterprise Architect does not change for these types of properties.
 
-### Synchronizing Extra Properties of Links
+## Synchronizing Extra Properties of Links
 
 * Here is the advanced mapping configuration for entity reference mapping to synchronize the link's additional properties for the element entity:
 
@@ -311,47 +307,45 @@ Reason: The modified time of entity in Enterprise Architect does not change for 
 </xsl:element>
 ```
 
-## Integration Configuration
+# Integration Configuration
 
-Set a time to synchronize data between Enterprise Architect and the other system to be integrated. Also, define parameters and conditions, if any, for integration.\
+Set a time to synchronize data between Enterprise Architect and the other system to be integrated. Also, define parameters and conditions, if any, for integration.
 Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
 
 ## Criteria Configuration
 
-Criteria-based integration is supported for System Fields in Enterprise Architect. This feature is based on Enterprise Architect’s Filter feature.\
+Criteria-based integration is supported for System Fields in Enterprise Architect. This feature is based on Enterprise Architect’s Filter feature.
 Provide queries in a format that is acceptable by Enterprise Architect.
-
-* Criteria to get entities whose _Type_ is _Requirement_.\
-  **Example:** `Object_Type = 'Requirement'`
-* Criteria to get entities whose _Status_ is _Approved_.\
-  **Example:** `Status = 'Approved'`
-* In providing criteria for complexity of a field, give its internal value. Find its internal value from the table.\
-  Below is a criterion to get **entities whose&#x20;**_**Complexity**_**&#x20;is&#x20;**_**Medium**_**.**\
-  **Example:** `Complexity = '2'`
+* Criteria to get entities whose Type is Requirement
+  **Example:** `Object_Type = 'Requirement'
+* Criteria to get entities whose Status is Approved
+  **Example:** `Status = 'Approved'
+* In providing criteria for complexity of a field, give its internal value. Find its internal value from the table. Below is a criterion to get entities whose Complexity is Medium.
+Example: Complexity = '2'
 * Criteria can also contain and/or operators. Given below are two examples:
-  * To get entities whose **Complexity** is **Medium**, **AND** _Type_ is **Requirement**\
-    `Complexity = '2' and Object_Type = 'Requirement'`
-  * To get entities whose **Type** is **Issue** **OR** **Entity**\
-    `Object_Type = 'Issue' or Object_Type = 'Entity'`
+  * To get entities whose **Complexity** is **Medium**, **AND** Type is **Requirement**
+    `Complexity = '2' and Object_Type = 'Requirement'
+  * To get entities whose **Type** is **Issue** **OR** **Entity**
+    `Object_Type = 'Issue' or Object_Type = 'Entity'
 
-![](../assets/Note.jpg) To configure criteria on fields other than those stated above, find the field name in t\_object table of Enterprise Architect and create a query on it using above references.
+>**Note**: To configure criteria on fields other than those stated above, find the field name in t\_object table of Enterprise Architect and create a query on it using above references.
 
-### Criteria Configuration for 'Operation' and 'Attribute'
+## Criteria Configuration for 'Operation' and 'Attribute'
 
-* Criteria to get **Operation** entities whose _Name_ is _Operation1_\
+* Criteria to get **Operation** entities whose Name is Operation1
   `t_operation.Name = 'Operation1'`
-* Criteria to get **Operation** entities that are _Static_ and on _Position 2_\
+* Criteria to get **Operation** entities that are _Static_ and on _Position 2
   `t_operation.IsStatic = True AND t_operation.Pos = 2`
-* Criteria to get **Operation** entities that are _Protected_ or are _Leaf_ operations\
+* Criteria to get **Operation** entities that are _Protected_ or are Leaf operations
   `t_operation.Scope = 'Protected' OR t_operation.IsLeaf=False`
-* Criteria to get **Attribute** entities whose _Name_ is _Attribute1_ and is _Static_\
+* Criteria to get **Attribute** entities whose _Name_ is _Attribute1_ and is Static
   `t_attribute.Name = 'Attribute1' AND t_attribute.IsStatic=True`
-* Criteria to get **Attribute** entities that are of Type _char_ or has _Default_ value _Def\_Val_\
-  `t_operation.Type = 'char' OR t_operation.Default='Def_Val'`
+* Criteria to get **Attribute** entities that are of Type _char_ or has Default value Def_Val
+  `t_operation.Type = 'char' OR t_operation.Default='Def_Val'
 
 > **Note**: To configure criteria on fields other than the one stated above, find the field name in **t\_operation** or **t\_attribute** table of Enterprise Architect as per requirement and create a query on it using above references.
 
-## Known Behavior
+# Known Behavior
 
 * Enterprise Architect's entities will be synchronized without history because of API unavailability.
 * For Enterprise Architect configured on Version Control, integration first checks out the package, makes the changes, and then checks in the package. Consequently, the changes get saved in the repository.
@@ -369,7 +363,7 @@ Provide queries in a format that is acceptable by Enterprise Architect.
 * Following types of custom fields are supported as text type: `AddinBroadcast`, `Custom`, `ImageRef`.
 * When Enterprise Architect is the target system and Diagram entity is being synchronized, **Notes** field will be used to set few details that are required for `{{ spaceName }}`'s internal use.\
   In case that field is mapped in the field mapping, then this value is appended to the value that is available after synchronization.\
-  As this field contains the value which is used for synchronization purpose, it is strongly recommended to **not touch/change** the content of this section of the Notes. Rest of the content can be modified as per the need.\
+  As this field contains the value which is used for synchronization purpose, it is strongly recommended to **not touch/change** the content of this section of the Notes. Rest of the content can be modified as per the need.
   Here is a sample of the value which will be appended:
 
 ```
@@ -384,7 +378,7 @@ $$OH_Last_Update:1=1609163655000.0_0_1.0
 * **Package Path synchronization:**
   * In Enterprise Architect System, Package Path is not directly associated with entity type _Operation_/_Attribute_, but it is associated with the parent entity type _Element_.\
     So if link is configured, the _Package Path_ of parent _Element_ can be synchronized along with _Operation_/_Attribute_ to the synchronized target entity using _Advanced Mapping_.
-* _Operation_ and _Attribute_ will be synchronized without history from Enterprise Architect to the target system.\
+* Operation and Attribute will be synchronized without history from Enterprise Architect to the target system.\
   They will be synchronized with the entity state/details available at the time of synchronization.
 * **Known Behavior for Package:**
   * Additional field update(s) will be required to synchronize attachments, links and alias field.
@@ -392,11 +386,11 @@ $$OH_Last_Update:1=1609163655000.0_0_1.0
 * When Enterprise Architect is the target system, only the following formatting such as **Bold**, _Italics_, **Underline**, and Font color will be reflected in **Notes** field.
   * **Reason:** Enterprise Architect UI Limitations.
 
-### Known Limitations
+## Known Limitations
 
 * For Enterprise Architect version 10 and version 11, a manual update is mandatory for the cloned entities to get synchronized from Enterprise Architect (as modified time does not get modified for cloned entities and remains same as that of source).
 * Updates from Enterprise Architect is synchronized to the target only when the time of an entity is changed as displayed in the **'Modified'** property. In such case, the user would need to update some field which will cause the modified time of that entity to be updated. For instance, adding a link to an element or adding a tagged value to an element does not change its **'Modified'** property.
-* For Enterprise Architect as the target system, if the attachment file name contains **Windows invalid file name characters** (<, >, :, ", /, , |, ?, \*), then the file will not be added in Enterprise Architect. Consequently, the user will encounter a Processing Failure. To avoid this Processing Failure, it is recommended to follow file naming conventions as mentioned in [Microsoft File Naming Conventions](https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file#naming-conventions). Additionally, if the user still wants to synchronize attachments having Windows invalid file name characters, then the user needs to refer to [Synchronize attachments with file names having invalid Windows characters](../integrate/OH-EA-0002/).
+* For Enterprise Architect as the target system, if the attachment file name contains **Windows invalid file name characters** (<, >, :, ", /, , |, ?, \*), then the file will not be added in Enterprise Architect. Consequently, the user will encounter a Processing Failure. To avoid this Processing Failure, it is recommended to follow file naming conventions as mentioned in [Microsoft File Naming Conventions](https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file#naming-conventions). Additionally, if the user still wants to synchronize attachments having Windows invalid file name characters, then the user needs to refer to [Synchronize attachments with file names having invalid Windows characters](../help-center/troubleshooting/errors/ea/oh-ea-0002.md).
 * For Enterprise Architect as the source system, only attachments of type **'Local File'** will be synchronized to the target system. Attachments of type **'Web Address'** are not supported and will not be synchronized to the target system.
 * Fields added through any type of plugins or MDG technologies are not supported.
 * Inline files synchronization is not supported as of now. This limitation will be removed in future releases.
@@ -406,9 +400,9 @@ $$OH_Last_Update:1=1609163655000.0_0_1.0
 * Some stereotypes such as those associated with MDG profiles will not come in stereotypes list.
 * Synchronization of Requirements, Constraints and Scenarios (under the Responsibilities tab of the Properties option) is not supported because of the API unavailability.
 
-<div align="center"><img src="../assets/Properties_Path.png" alt=""></div>
+<div align="center"><img src="../assets/Properties_Path.png" alt="" width="900"></div>
 
-<div align="center"><img src="../assets/Properties_Panel.png" alt=""></div>
+<div align="center"><img src="../assets/Properties_Panel.png" alt="" width="500"></div>
 
 * **Limitations for 'Operation' and 'Attribute' Entities**
   * Common Limitations:
@@ -422,14 +416,14 @@ $$OH_Last_Update:1=1609163655000.0_0_1.0
       * Pre-Condition and Post-Condition
       * Behavior
 
-<div align="center"><img src="../assets/EA_Image_9.png" alt=""></div>
+<div align="center"><img src="../assets/EA_Image_9.png" alt="" width="900"></div>
 
 * Limitations specific to Attribute entity:
   * The following features available at location: Attribute -> Properties -> Properties in Enterprise Architect system, are not supported:
     * Redefined Property and Subsetted Property
     * Constraints
 
-<div align="center"><img src="../assets/EA_Image_10.png" alt=""></div>
+<div align="center"><img src="../assets/EA_Image_10.png" alt="" width="900"></div>
 
 * Limitations specific to Element entity:
   * Recovery Limitations:
@@ -438,9 +432,8 @@ $$OH_Last_Update:1=1609163655000.0_0_1.0
   * Link extra property Limitation:
     * Currently, we support the following link extra properties: Alias, Stereotype, and Aggregation.
 
-## Appendix
-
-### Add User
+# Appendix
+## Add User
 
 1. Open Enterprise Architect.
 2. Go to **File** menu, select **Open Project**.
@@ -452,22 +445,30 @@ $$OH_Last_Update:1=1609163655000.0_0_1.0
    4. Login with the credentials configured above.
 5. Security Users dialogue box will appear. Fill in the details.
 
-![EA\_Image 4](../assets/EA_Image_4.png)
+<p align="center">
+  <img src="../assets/EA_Image_4.png" width="900"/>
+</p>
+
 
 6. Click **Save**.
 7. Select the new user and **change the password** for that user, if required. By default, it will be set empty.
 
-![EA\_Image 5](../assets/EA_Image_5.png)
+<p align="center">
+  <img src="../assets/EA_Image_5.png" width="900"/>
+</p>
+
 
 8. The user’s group membership needs to be changed. Select the user, click **Group Membership**, and check **Administrators** checkbox.
 
-![EA\_Image 6](../assets/EA_Image_6.png)
+<p align="center">
+  <img src="../assets/EA_Image_6.png" width="900"/>
+</p>
+
 
 9. Finally, click **Ok** and **Close**. New user with administrator rights is created.
 
-***
 
-### Custom Field Creation in Enterprise Architect
+## Custom Field Creation in Enterprise Architect
 
 For creating a custom field in Enterprise Architect, follow the steps given below:
 
@@ -478,23 +479,26 @@ For creating a custom field in Enterprise Architect, follow the steps given belo
 5. In the blank text area in the **Detail** field, provide field specifications such as its type, values, default value, lower bound, upper bound, stereotypes, etc.
 6. After providing all the inputs, click **Save** to create the new field.
 
-In the image below, the inputs given will create a new field named “OH\_Last\_Update” of type “Const”.
+In the image below, the inputs given will create a new field named “OH_Last_Update” of type “Const”.
 
-![EA\_Image 7](../assets/EA_Image_7.png)
+<p align="center">
+  <img src="../assets/EA_Image_7.png" width="900"/>
+</p>
 
-***
 
-### How to Change the Port of OpsHubEAWindowsService
+
+## How to Change the Port of OpsHubEAWindowsService
 
 1. Open Windows File Explorer and navigate to the service installation folder at `<{{ spaceName }}_INSTALLATION_PATH>\Other_Resources\Resources\OpsHubEAService>`.
 2. Open the file named **EAService.exe.config** in any text editor.
 3. Search `<baseAddresses>` tag in the file. In the `<add>` tag under the `<baseAddresses>` tag, change the value of the attribute **baseAddress** which will be in the form of a URL. The default port of the URL will be 9393. Change it with the port on which the user wants to deploy the service. Save the changes.
 
-![EA\_Service\_Port\_Change](../assets/EA_Service_Port_Change.png)
+<p align="center">
+  <img src="../assets/EA_Service_Port_Change.png" width="900"/>
+</p>
 
-***
 
-### How to update EA's XML Model to sync stereotype with the profile in \{{ spaceName \}}
+## How to update EA's XML Model to sync stereotype with the profile in {{ spaceName }}
 
 * Open XML model in editor.
 * Navigate to the **Documentation** node of UMLProfile and verify that the profile contains **name** and **alias**. If it doesn't contain any value for name and alias, then mention values for them.
@@ -511,9 +515,8 @@ In the image below, the inputs given will create a new field named “OH\_Last\_
 * Open EA, Import MDG Technologies.
 * Create an element and validate that stereotype with a fully qualified name is getting assigned.
 
-***
 
-### Auto start OpsHubEAWindowsService on system startup
+## Auto start OpsHubEAWindowsService on system startup
 
 > **Note**: To auto-start OpsHubEAWindowsService from task scheduler requires a user session. To create a user session on system startup, refer to [Configure auto Logon for OpsHubEAWindowsService](enterprise-architect.md#configure-auto-logon-for-opshubeawindowsservice) section.
 
@@ -525,31 +528,41 @@ In the image below, the inputs given will create a new field named “OH\_Last\_
   * "Run only when user is logged on"
   * "Run with highest privileges"
 
-![](../assets/EA_TaskScheduler_GeneralTab.png)
+<p align="center">
+  <img src="../assets/EA_TaskScheduler_GeneralTab.png" width="900" />
+</p>
+
 
 * In the Triggers tab, click New to create a new trigger. In the new trigger window, select "At startup" from the "Begin the task" drop-down option.
 * In the advance settings of the new trigger, enable "Delay task for" checkbox and specify "3 minutes" in the textbox. Click OK to save the trigger.
 
 > **Note**: A delay is necessary because auto logon takes some time to create a user session. Without the user session, OpsHubEAWindowsService cannot run.
 
-![EA\_TriggerTab](../assets/EA_TriggerTab.png)
+<p align="center">
+  <img src="../assets/EA_TriggerTab.png" width="900"/>
+</p>
+
 
 * In the Actions tab, click New and provide the full path of `OpsHubEAServiceStartup.bat`. This file is present in OpsHubEA Service folder. Click OK.
 
-![EA\_ActionsTab](../assets/EA_ActionsTab.png)
+<p align="center">
+  <img src="../assets/EA_ActionsTab.png" width="900"/>
+</p>
+
 
 > **Note**: In the OpsHubEAServiceStartup.bat file, replace `<Path of OpsHubEAService folder>` with the full path where OpsHubEAService folder is extracted.
 
 * In the Settings tab, disable the checkbox, "Stop the task if it runs longer than", as this will stop the OpsHubEAWindowsService if it runs longer than the specified duration.
 
-![EA\_SettingsTab](../assets/EA_SettingsTab.png)
+<p align="center">
+  <img src="../assets/EA_SettingsTab.png" width="900" />
+</p>
+
 
 * Save the task.
 
-***
-
-#### Configure auto Logon for OpsHubEAWindowsService
-
+## Configure auto Logon for OpsHubEAWindowsService
+Follow any one of the steps below to configure auto login:
 > **Note**: The user provided for auto login should be an administrator user.
 
 **Configure auto login using "netplwiz":**
