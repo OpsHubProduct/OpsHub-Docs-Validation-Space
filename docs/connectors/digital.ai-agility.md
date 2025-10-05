@@ -279,7 +279,7 @@ When Digital.ai Agility is the source system, and the user type field is mapped 
 2. You can find the version of Digital.ai Agility instance on this page as shown in the image below:
    
 <p align="center">
-  <img src="../assets/Digital.ai_Agility.png" width="900"/>
+  <img src="../assets/Digital.ai_Agility.png" width="600"/>
 </p>
 
 
@@ -369,6 +369,7 @@ You can add inline images in rich text type of fields from Digital.ai Agility UI
 <p align="center">
   <img src="../assets/Digital.ai_Agility10.png" width="900">
 </p>
+
 
 
 
