@@ -11,7 +11,7 @@
 Before configuring the integration, user must first configure Gerrit. Refer to [System Configuration](../integrate/system-configuration.md) page to learn the step-by-step process to configure a system.
 
 <p align="center">
-  <img src="../assets/GerritSystemForm.png" width="600px">
+  <img src="../assets/GerritSystemForm.png" width="900">
 </p>
 
 ## Gerrit System Form Details
@@ -47,7 +47,7 @@ A sample JSON for Review Label is given below:
 Map the fields between Gerrit and the other system to be integrated to ensure data synchronizes correctly. Refer to [Mapping Configuration](../integrate/mapping-configuration.md) page for step-by-step process to configure mapping between the systems.
 
 <p align="center">
-  <img src="../assets/GerritMapping.png" width="1000px">
+  <img src="../assets/GerritMapping.png" width="1000">
 </p>
 
 # Integration Configuration
@@ -55,7 +55,7 @@ Map the fields between Gerrit and the other system to be integrated to ensure da
 In this step, set a time to synchronize data between Gerrit and the other system to be integrated. Also, define parameters and conditions, if any, for integration. Refer to [Integration Configuration](../integrate/integration-configuration.md) page for step-by-step process to configure integration.
 
 <p align="center">
-  <img src="../assets/GerritIntegration.png" width="1200px">
+  <img src="../assets/GerritIntegration.png" width="1500">
 </p>
 
 ### Configuring Related Work item Regex
@@ -77,7 +77,10 @@ and the related work item id on which you want to synchronize the Change entity 
 * If multiple work item IDs match the **Related Work item Regex**, list of all matching IDs will be given as a comma separated value. If using [Target Lookup Query](../integrate/integration-configuration.md#search-in-target-before-sync) on this field, the query should handle the value accordingly.
 * If no match is found, this field will have "-1" value.
 
-![](../assets/GerritRelatedIds.png)
+<p align="center">
+  <img src="../assets/GerritRelatedIds.png" width="1000"/>
+</p>
+
 
 ## Criteria Configuration
 
@@ -113,10 +116,16 @@ Refer to [this](https://gerrit-review.googlesource.com/Documentation/user-search
 
 ## HTTP Password Generation
 
-1. Go to Settings menu for the logged-in user from the user menu at top right corner.  
-   ![](../assets/GerritUserSetting.png)
+1. Go to Settings menu for the logged-in user from the user menu at top right corner.
+   
+   <p align="center">
+      <img src="../assets/GerritUserSetting.png" width="1000"/>
+   </p>
 
 2. Go to "HTTP Credentials" section and click "GENERATE NEW PASSWORD".  
-   ![](../assets/GerritHTTPPassword.png)
+ 
+   <p align="center">
+      <img src="../assets/GerritHTTPPassword.png" width="900"/>
+   </p>
 
 3. Copy the password displayed, and use it as password for the user in the system configuration.
