@@ -247,11 +247,11 @@ Refer to document [Search Syntax in GitHub](https://help.github.com/en/github/se
 
 ## Common
 * For GitHub HTML fields:
-	  * Content less than 400 KB will only be synchronized. If the field content is greater than 400 KB, then the field value will not be transformed correctly by {{SITENAME}}.
-	  * Synchronization of inline document is not supported for HTML fields of GitHub.
-	  * For synchronization of inline image which refers to the checked-in files of a repository, {{SITENAME}} is using keyword "blob" for processing the URL of such images. Thus, username and repositories with such inline images must not have "blob" keyword in their name. Otherwise, inline images which refer to the checked-in files in the repository won't be synchronized by {{SITENAME}}. In such cases, the source inline image URL will be written in the target system as it is.
-	  * Inline image synchronization for comments is not supported currently for GitHub as a target system due to API limitation. It will sync as a inline file.
-	  * Inline document synchronization for comments is not supported currently for GitHub as a target system due to API limitation.
+  * Content less than 400 KB will only be synchronized. If the field content is greater than 400 KB, then the field value will not be transformed correctly by {{SITENAME}}.
+  * Synchronization of inline document is not supported for HTML fields of GitHub.
+  * For synchronization of inline image which refers to the checked-in files of a repository, {{SITENAME}} is using keyword "blob" for processing the URL of such images. Thus, username and repositories with such inline images must not have "blob" keyword in their name. Otherwise, inline images which refer to the checked-in files in the repository won't be synchronized by {{SITENAME}}. In such cases, the source inline image URL will be written in the target system as it is.
+  * Inline image synchronization for comments is not supported currently for GitHub as a target system due to API limitation. It will sync as a inline file.
+  * Inline document synchronization for comments is not supported currently for GitHub as a target system due to API limitation.
 * GitHub doesn't give Updated By user information through API. Hence, this field won't be present in fields in mapping.
 
 ## Commit
@@ -443,6 +443,7 @@ Refer to document [Search Syntax in GitHub](https://help.github.com/en/github/se
 	]
 }
 ```
+
 
 
 
