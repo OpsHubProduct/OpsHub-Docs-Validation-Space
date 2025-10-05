@@ -50,7 +50,7 @@ Following is the description of fields that are available in GitHub for mapping 
 | **Commit** | Text fields | Commit ID | Each commit gets a unique identifier in GitHub. This field represents this unique identifier, often called SHA of commit. |
 |  |  | Files Committed | Files that were changed/committed in the commit. |
 |  |  | Branch Name | Name of branch in which that commit was done. |
-|  |  | Related Workitem Id(s) | Related workitem id given in Commit message is based on the regex given in integration configuration. For more details on regex configuration, refer to section [Regex configuration in Integration](##configuring-related-workitem-regex). |
+|  |  | Related Workitem Id(s) | Related workitem id given in Commit message is based on the regex given in integration configuration. For more details on regex configuration, refer to section [Regex configuration in Integration](#configuring-related-workitem-regex). |
 |  | Single-valued user field | Author | Details of user who is author of that commit. |
 |  |  | Committer | Details of user who did the commit. Note: Author and Committer can be different or they can be same. |
 |  | Date type field | Commit Date | Time the commit was done in repository. |
@@ -444,6 +444,7 @@ Refer to document [Search Syntax in GitHub](https://help.github.com/en/github/se
 	]
 }
 ```
+
 
 
 
