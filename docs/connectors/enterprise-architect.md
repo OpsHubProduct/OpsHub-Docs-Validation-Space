@@ -494,7 +494,7 @@ In the image below, the inputs given will create a new field named “OH_Last_Up
 3. Search `<baseAddresses>` tag in the file. In the `<add>` tag under the `<baseAddresses>` tag, change the value of the attribute **baseAddress** which will be in the form of a URL. The default port of the URL will be 9393. Change it with the port on which the user wants to deploy the service. Save the changes.
 
 <p align="center">
-  <img src="../assets/EA_Service_Port_Change.png" width="900"/>
+  <img src="../assets/EA_Service_Port_Change.png" width="1200"/>
 </p>
 
 
