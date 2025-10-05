@@ -1,4 +1,4 @@
-## Prerequisites
+# Prerequisites
 
 ## User privileges
 For integration, OpsHub Integration Manager requires user which is authorized to connect to Git Repository Server and can pull check-in information.
@@ -10,17 +10,17 @@ If the OpsHub Integration Manager is installed as a service in Linux distributed
 Git must be installed on the machine where OpsHub Integration Manager server is running. Clone the Git repository which you want to synchronize on the same machine where the server is installed. This repository will be used by OpsHub Integration Manager only.
 
 ## Install python and required modules
-*For hook configuration python and required modules are required, refer [Python Configuration](#configuration-python-2-6-0) under Appendix for installation.  
-*Validate Git configuration: Some Git clients do not add branch information on Git clone repositories. In such cases, you need to add it manually after Git repository is cloned to validate this behavior.  
+* For hook configuration python and required modules are required, refer [Python Configuration](#configuration-python-2-6-0) under Appendix for installation.  
+* Validate Git configuration: Some Git clients do not add branch information on Git clone repositories. In such cases, you need to add it manually after Git repository is cloned to validate this behavior.  
 
 Follow the steps given below to learn how to go about it:  
 *  Steps for validating branch section:  
-  *  Navigate to the cloned repository.  
-  *  Go to the `.git` folder.  
-  *  Open `config` file and if you find branch section like this:  
- [branch "master"]
- remote = origin
- merge = refs/heads/master
+   *  Navigate to the cloned repository.  
+   *  Go to the `.git` folder.  
+   *  Open `config` file and if you find branch section like this:  
+ [branch "master"] <br>
+ remote = origin <br>
+ merge = refs/heads/master <br>
 Here `"master"` is branch name, it could be other name as well depending on your clone repository path but if there is no section for branch then execute the command given below:  
 ```sh
 git branch -u origin/<branch_name> <branch_name>
@@ -33,7 +33,7 @@ For example:  git branch -u origin/master master
 Before you continue to the integration, you must first configure Git. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system. Refer the screenshot given below for reference.  
 
 <p align="center">
-  <img src="../assets/Git_Image_1b.png">
+  <img src="../assets/Git_Image_1b.png" width="1000">
 </p>
 
 If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
@@ -41,14 +41,14 @@ If the system is deployed on HTTPS and a self-signed certificate is used, then y
 ## Configure commit template
 
 * Clicking the Template will show you a table in a new pop-up window. The table will allow you to configure commit template for the system. Please note that out of the attributes shown in the image below, **Bug Id** represented by `issueid_int`/`issueid_str` attribute and **Reviewer** represented by `reviewer_usr` attribute are mandatory. Without these two attributes in the commit template, commit/check-in is not allowed. You may also specify pre/post commit default values for the attributes. Post-commit values are needed if no template is configured at SCM level. The values provided under **Attribute Display Name** are case sensitive and are compulsory to be provided while checking-in any file from the repository. For example, for the configured template shown here, you need to specify commit template as follows:  
-  * BugId::9999  
-  * Comments::A file is checked-in  
-  * EOT::5  
-  * Reviewer::admin  
-  * Status::Done
+   * BugId::9999  
+   * Comments::A file is checked-in  
+   * EOT::5  
+   * Reviewer::admin  
+   * Status::Done
 
 <p align="center">
-  <img src="../assets/Git_Image_2a.png">
+  <img src="../assets/Git_Image_2a.png" width="900">
 </p>
 
 * Here number 9999 against the attribute **Bug Id** should be the actual id of entity against which the SCM integration is configured. For example, for Git to QAComplete Requirement Traceability, 9999 should be the requirement id existing in QAComplete.
@@ -69,12 +69,12 @@ If the system is deployed on HTTPS and a self-signed certificate is used, then y
 * Set Git Repository Path to the absolute path where Git repository is cloned.
 > **Note** :It should be on the same machine where OpsHub Integration Manager is installed.
 
-### PasswordAuthentication
+## PasswordAuthentication
 
 * Set Git User Name to the user that you want to authenticate and use for synchronization.
 * Set Git User Password to the password of the corresponding user account that is used in the synchronization.
 
-### RSAAuthentication
+## RSAAuthentication
 
 * Select Git Authentication Type as per the configuration done on the Git server in order to connect to it. As per the Authentication Type selected, you will be asked to enter the credentials.
 * Set PassPhrase for the user with which you have logged on the machine. This user should have atleast R (Read) access for this Repository.
@@ -138,98 +138,114 @@ If you commit using Git repository through eclipse, then you need to follow the 
   * `commitOnConnectionFailure:=True`
 * Edit `template.txt` file in `.git/hooks/` folder to define default commit template message
 
-### Set Windows user/password in service
+## Set Windows user/password in service
 * To set Windows user/password in service:  
   Go to **Services**, in the services, select **OpsHub Integration Manager Server Service → Properties → Log On tab → Log on as: This account → add Windows user and its Password → Apply → Ok**.
 * After this, restart the server service.
 
 <p align="center">
-  <img src="../assets/Git_Image_3.png">
+  <img src="../assets/Git_Image_3.png" width="900">
 </p>
 
-### Find Commit Id
+## Find Commit Id
 * To find the Commit Id for a particular repository, open Git Bash at the location of the cloned repository.  
-  Example: `C:\Git_Testing\FORClientusage\DevlopmentRepo`  
-  Now, fire command:
+  Example: `C:\Git_Testing\FORClientusage\DevlopmentRepo`. Now, fire command git log. This will show all the commits.
+  Choose the desired Commit Id:
 ```sh
 git log
 ```
 This will show all the commits.
 * Choose the desired Commit Id.
 <p align="center">
-<img src="../assets/Git_Image_4.png">
+<img src="../assets/Git_Image_4.png" width="900">
 </p>
 > **Note** : If you want only last commit information you can fire:
 ```sh
 git log -1
 ```
 
-### SetUp SSH Key for RSA authentication
+## SetUp SSH Key for RSA authentication
 **Generate Git Key**:  
-In Git Bash, use the following command:  
+* In Git Bash, the following command should be used to generate RSA key. Write your email in place of "your_email@domain.com" within double quotes.:  
 ```sh
 ssh-keygen -t rsa -b 4096 -C "your_email@domain.com"
 ```
-Press Enter to accept default location or choose another.  
-If prompted to overwrite, enter `y` or `n`.  
-Provide passphrase when prompted.
+* When you're prompted to "Enter a file in which to save the key", press Enter to accept the default file location. Please note that if you have already created SSH keys before, ssh-keygen may ask you to rewrite another key. In that case, enter 'y' if you want to generate a new private-public key pair. Else, if you want to use the existing private-public key pair, then enter 'n' and go to 'Convert to RSA format' step.
+```sh
+Enter a  file in which to save the key (/c/Users/You/.ssh/id_rsa): [Press Enter]
+```
+* When asked to enter passphrase, type a secure passphrase:
+```sh
+       Enter passphrase (empty for no passphrase): [Type a passphrase]
+       Enter same passphrase again: [Type same passphrase again]
+```
 
 **Convert to RSA format**:  
-To convert to RSA PEM format:
+* To convert the format of RSA key from OPENSSH format to RSA format, type the following command in Git Bash. While converting the format of the SSH key, it will ask you to enter the old passphrase, type the passphrase which was provided while generating the SSH key. It will also ask for the new passphrasew which should be provided as well
 ```sh
 ssh-keygen -p -f ~/.ssh/id_rsa -m pem
 ```
 
 **Copy public key**:  
-If key pair is new, use:
+* If you have used the already existing private-public key pair and have public key in your Git Provider, then do not configure the public key again. Else, in case of newly generated private-public key pair, configure the public key of the key generated in your Git Provider. You can use the following command to copy public key and configure it in your Git Provider.:
+```sh
 clip < ~/.ssh/id_rsa.pub
-Paste into Git Provider.
+```
 
-### Configuration python 2.6.0
+## Configuration python 2.6.0
 Download, install, and configure Python 2.6.0 with SOAPpy, fpconst and PyXml.
 
-#### Download links
+### Download links
 * Python 2.6.6: http://www.python.org/download/releases/2.6.6/
 * PyXML-0.8.4: ftp://mirror.rit.edu/gentoo/distfiles/PyXML-0.8.4.tar.gz
 * SOAPPy0.12.0: http://sourceforge.net/projects/pywebsvcs/files/SOAP.py/0.12.0_rc1/
 * fpconst-0.7.2: http://pypi.python.org/pypi/fpconst
 
-#### Installation instruction
+### Installation instruction
 **Install Python 2.6.2 1.1**  
-Set environment variable: `classpath='c:\\python26'`
+* Set the environment variable for class path : Ex: classpath='c:\python26'
 
-**Install fpconst**  
-Extract, go to folder, then run:
-```sh
-python setup.py install
-```
+**Install fpconst 2.1**  
+* Extract the zip file fpconst-0.7.2.tar.gz
+* Open command prompt and go the folder till where fpconst is extracted
+* Cd fpconst-0.7.2
+* Execute command: python setup.py install
 
-**Install PyXML**  
-Extract, go to folder, then run:
-```sh
-python setup.py install -force -skip-build
-```
+**Install PyXML 3.1**  
+* Extract the zip file PyXML-0.8.4.tar.gz
+* Open command prompt and go the folder till where PyXML is extracted
+* Cd PyXML-0.8.4
+* Execute command: python setup.py install - force - skip-build
 
-**Install SOAPpy**  
-Extract, edit `Client.py`, `Server.py`, `Types.py`  
-Move `from __future__ import nested_scopes` to first line in each.  
-Run:
-```sh
-python setup.py install
-```
-#### Verifications
+**Install SOAPpy 4.1**  
+* Extract the zip file SOAPpy-0.12.0.zip
+* Extract the zip file SOAPpy-0.12.0.zip
+* Open command prompt and go the folder till where SOAPpy is extracted
+* Cd SOAPpy-0.12.0
+* Go to the SOAPpy-0.12.0\SOAPpy directory
+* Edit the Client.py file 4.5.1. find 'from __future__ import nested_scopes' line
+* Cut it and paste it at the first line of file
+* Edit the Server.py file 4.6.1. find 'from __future__ import nested_scopes' line
+* Cut it and paste it at the first line of file
+* Edit the Types.py file 4.7.1. find 'from __future__ import nested_scopes' line
+* Cut it and paste it at the first line of file
+* Execute command: python setup.py install
 
-Open Python shell and verify:
+### Verifications
+Open python ( type : python on command line):
 
+Verify PyXml
 ```python
 >>> import xml
 >>> xml.__version__
 '0.8.4'
 
+Verify fpConstants
 >>> import fpconst
 >>> fpconst.__version__
 '0.7.2'
 
+Verify SOAPpy
 >>> import SOAPpy
 >>> SOAPpy.__version__
 '0.12.0'
