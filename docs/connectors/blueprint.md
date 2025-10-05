@@ -146,7 +146,7 @@ If no such group is present then on the top panel click on **Manage Users and Gr
 A new window will open up where you can click on **New** to create a group with **Author** license. After the group has been created add the user to it.
 
 <p align="center">
-  <img src="../assets/user2.png" width="800"/>
+  <img src="../assets/User2.png" width="800"/>
 </p>
 
 <p align="center">
@@ -180,4 +180,5 @@ A new window will open up where you can click on **New** to create a group with 
 </p>
 
 - Click **Save** and you are done.
+
 
