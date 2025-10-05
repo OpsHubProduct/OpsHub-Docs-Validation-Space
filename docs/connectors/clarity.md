@@ -9,13 +9,13 @@
 
 ## Custom Field Configuration
 * One field must be defined on the entity that is being synchronized. This must be set up so that OpsHub Integration Manager can track the synchronization status of each item.
-* This field's "'''API Attribute ID'''" needs to be set to "'''o_ohlastUpdate'''". Here is the custom field details:
+* This field's "API Attribute ID" needs to be set to "**o_ohlastUpdate**". Here is the custom field details:
 
 | **Property Name**                  | **Type** | **Size** |
 |-----------------------------------|----------|----------|
 | API Attribute ID: o_ohLastUpdate  | String   | 255      |
 
-* For step-by-step guide to create a custom field, refer to [[#How to add custom field | How to add custom field]] section.
+* For step-by-step guide to create a custom field, refer to [How to add custom field](#how-to-add-custom-field) section.
 
 # System Configuration
 
@@ -26,7 +26,7 @@ Click [../integrate/system-configuration.md](../integrate/system-configuration.m
 Refer to the screenshot given below:
 
 <p align="center">
-  <img src="../assets/CAPPM_System.png" />
+  <img src="../assets/CAPPM_System.png"  width="1000"/>
 </p>
 
 
@@ -35,19 +35,19 @@ Refer to the screenshot given below:
 | **Field Name**       | **Description**                                                                                   |
 |----------------------|---------------------------------------------------------------------------------------------------|
 | System Name          | Provide the system name                                                                            |
-| Version              | Provide the version of Clarity. To know the version of the Clarity system, refer to [[#How to find Clarity Version | How to find Clarity Version]] in Appendix. |
+| Version              | Provide the version of Clarity. To know the version of the Clarity system, refer to [How to find Clarity Version](#how-to-find-clarity-version) in Appendix. |
 | URL                  | The URL is used for connecting to Clarity REST API. For example: https://[domainOfYourClarityPPMInstance] |
 | User Name            | Provide a dedicated user (Enter User Name not email id in this field) for API communication with the Clarity instance. This user should have the required privileges to use the Clarity API. For required privileges, refer to [[#User Privileges | User Privileges]] section. |
 | User Password        | Provide the password for the user given in "User Name" field.                                     |
-| Metadata Details     | This data is required in case the user wants to configure synchronization behaviour for specific entities. For the format and guidance related to filling these details in JSON form, refer to [[#Understanding JSON Input | Understanding JSON Input]] section. |
+| Metadata Details     | This data is required in case the user wants to configure synchronization behaviour for specific entities. For the format and guidance related to filling these details in JSON form, refer to [Understanding JSON Input](#understanding-json-input) section. |
 
 ## Understanding JSON Input
 
 > **Note**: Metadata details can be provided during system configuration in the field 'Metadata details' (in JSON format) for the following use cases:
 
-* **Use case 1**: For synchronization of comments, the default value of `"enableCommentSync"` is `true` for Project and Task entities. To disable comment sync, set `"enableCommentSync"` to `false`.
-* **Use case 2**: For synchronization of attachments, the default value of `"enableAttachmentSync"` is `true` for all entities. To disable, set this value to `false`.
-* **Use case 3**: Due to API limitation, OpsHub Integration Manager cannot identify the derived object type of the custom investment object. To synchronize the Remote Entity Link for such objects, the `"customObjectType"` must be specified. Refer to [[#How to find Custom object's type | How to find Custom object's type]].
+* **Use case 1**: For synchronization of comments, by default the value of "enableCommentSync" is set to true for Project and Task entities as Comment synchronization is supported for those entities only. In case the user doesn't want to synchronize comments, the following configuration can be changed by setting the value of "enableCommentSync" to false using JSON input.
+* **Use case 2**: For synchronization of attachments, by default the value of "enableAttachmentSync" is set to true for all the entities. In case the user doesn't want to synchronize attachments, the following configuration can be changed by setting the value of "enableAttachmentSync" to false using JSON input.
+* **Use case 3**: Due to API limitation, OpsHub Integration Manager is not able to identify the derived object type of the custom investment object. Hence, to synchronize the Remote Entity Link for custom investment object, value for derived object type is required for parameter "customObjectType". Refer to [How to find Custom object's type](#how-to-find-custom-objects-type)  type section for more details.
 
 Sample JSON input:
 
@@ -101,15 +101,15 @@ Refer to [../integrate/mapping-configuration.md](../integrate/mapping-configurat
 * Hence, to synchronize 'Task/To Do' when Clarity is target system, the default link must be configured in relationship mapping where link type must be 'Parent' and entity type must be 'Custom Investment Object/Project/Task'. Please refer to [../integrate/default-link-settings.md](../integrate/default-link-settings.md) for more details.
 
 <p align="center">
-  <img src="../assets/CAPPM_Rel_1.png" />
+  <img src="../assets/CAPPM_Rel_1.png" width="900" />
 </p>
 
 <p align="center">
-  <img src="../assets/CAPPM_Rel_2.png" />
+  <img src="../assets/CAPPM_Rel_2.png"width="900" />
 </p>
 
 <p align="center">
-  <img src="../assets/CAPPM_Rel_3.png" />
+  <img src="../assets/CAPPM_Rel_3.png" width="900"/>
 </p>
 
 
@@ -171,7 +171,7 @@ Set a time to synchronize data between Clarity and the other system to be integr
 Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
 
 <p align="center">
-  <img src="../assets/CAPPM_Integration.png">
+  <img src="../assets/CAPPM_Integration.png" width="1000">
 </p>
 
 # Criteria Configuration
@@ -182,9 +182,9 @@ Click [Integration Configuration](../integrate/integration-configuration.md) to 
 **Query Samples:**
 
 * Clarity provides filters in its REST API. The same filter format needs to be specified in the criteria and filter queries in OpsHub Integration Manager.
-  * **Syntax of a single filter**: `(attribute operator value)`  
+  * **Syntax of a single filter**: ` (<attribute> <operator> <value>)`  
     > **Note**: Parenthesis is required as part of filter.
-  * **Syntax to have multiple filters**: `filter1 and/or filter2 and/or filter3`
+  * **Syntax to have multiple filters**: `<filter1> and/or <filter2> and/or <filter2>`
 
 * For fetching internal name for queries, refer to [How to get field's Internal name](#how-to-get-fields-internal-name).
 
@@ -200,26 +200,19 @@ Click [Integration Configuration](../integrate/integration-configuration.md) to 
 
 # Target Lookup Configuration
 
-Provide query in **Target Search Query** field to search the entity in Clarity as a destination system.
+Provide Query in Target Search Query field such that it is possible to search the entity in the Clarity as a destination system. In the target search query field, user can provide a placeholder for the source system's field value in the '@' . Go to Search in Target Before Sync section on  [Integration Configuration](../integrate/integration-configuration.md) page to learn in detail about how to configure target lookup.
 
-In the target search query field, user can provide a placeholder for the source system's field value using `@`.
+For example there is an use case to search an entity in Clarity(Destination system), which has the entity id of the source system in a field named 'TargetCustomField'. The source system's entity id is stored in 'source_system_id'. If the Target Search Query is given as: (TargetCustomField = '@source_system_id@'), then while processing this query @source_system_id@ will be substituted with the value of source_system_id from the source system's entity and then the query will be made to Clarity.
 
-Go to **Search in Target Before Sync** section on [Integration Configuration](../integrate/integration-configuration.md) page to learn in detail about how to configure target lookup.
-
-For example, there is a use case to search an entity in Clarity (Destination system), which has the entity ID of the source system in a field named `TargetCustomField`. The source system's entity ID is stored in `source_system_id`.
-
-If the **Target Search Query** is given as: (TargetCustomField = '@source_system_id@')
-
-
-Then during execution, `@source_system_id@` will be substituted with the actual ID from the source system.
+Given below are the sample snippets of how the queries can be used as target entity lookup query in OpsHub Integration Manager:
 
 **Target lookup query samples:**
 
 | **Field Type**     | **Target lookup use case**                                                                                          | **Snippet**                                                |
 |--------------------|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| Text               | Target lookup on entity where `remoteEntityIdFieldText` contains source entity's ID                                 | (remoteEntityIdFieldText = '@source_system_id@')            |
-| Text and Lookup    | Lookup with status AND match on `remoteEntityIdFieldText`                                                            | (remoteEntityIdFieldText = '@source_system_id@') and (status = 1) |
-| Lookup or Text     | Match on either status OR `remoteEntityIdFieldText`                                                                  | (status = 2) or (remoteEntityIdFieldText = '@source_system_id@') |
+| Text               | The id information of the source system entity id is stored in source_system_id. Target lookup on the entity which has source entity's id in 'remoteEntityIdFieldText' field                 | (remoteEntityIdFieldText = '@source_system_id@')            |
+| Text and Lookup    | Target lookup on the entity which has source entity's id in 'remoteEntityIdFieldText' field and has certain value in Status   | (remoteEntityIdFieldText = '@source_system_id@') and (status = 1) |
+| Lookup or Text     | Target lookup on the entity which has certain value in Status field or has source entity's id in 'remoteEntityIdFieldText' field | (status = 2) or (remoteEntityIdFieldText = '@source_system_id@') |
 
 > **Note**: For more query samples, refer to 'Query Samples' section of Criteria Configuration.
 
@@ -269,14 +262,10 @@ Then during execution, `@source_system_id@` will be substituted with the actual 
   * Remote Entity Link is not supported.  
     It can only be navigated to through its parent Task, and Clarity does not provide a direct navigation URL for To Do.
 
----
+# Troubleshooting
 
-## Troubleshooting
-
-* [Clarity FAQs](../integrate/clarity-faqs.md)
-* [Clarity Error Solutions](../integrate/clarity-error-solutions.md)
-
----
+* [Clarity FAQs](../help-center/faqs/clarity-faqs.md)
+* [Clarity Error Solutions](../help-center/troubleshooting/errors/clarity-error-solutions.md)
 
 # Appendix
 
@@ -286,16 +275,14 @@ Then during execution, `@source_system_id@` will be substituted with the actual 
 2. Click the highlighted **New** button to open the new attribute form.
 
 <p align="center">
-  <img src="../assets/CAPPM_Attribute_New_1.png" />
+  <img src="../assets/CAPPM_Attribute_New_1.png" width="900"/>
 </p>
 
 3. Fill in the form as per your requirements and save it.
 
 <p align="center">
-  <img src="../assets/CAPPM_Attribute_New_2.png" />
+  <img src="../assets/CAPPM_Attribute_New_2.png" width="900" />
 </p>
-
----
 
 ## How to find Clarity version
 
@@ -303,16 +290,15 @@ Then during execution, `@source_system_id@` will be substituted with the actual 
 2. Click the **Username** icon → Click the **About** option.
 
 <p align="center">
-  <img src="../assets/CAPPM_version_1.png" />
+  <img src="../assets/CAPPM_version_1.png" width="900"/>
 </p>
 
 3. A popup opens. Use the **Modern User Experience Build Number** as your version.
 
 <p align="center">
-  <img src="../assets/CAPPM_version_2.png" />
+  <img src="../assets/CAPPM_version_2.png" width="900" />
 </p>
 
----
 
 ## How to get field's Internal name
 
@@ -320,12 +306,11 @@ Then during execution, `@source_system_id@` will be substituted with the actual 
 2. Search for the field in **Attribute Name**, then click the filter.
 
 <p align="center">
-  <img src="../assets/CAPPM_Attribute_7.png" />
+  <img src="../assets/CAPPM_Attribute_7.png" width="900"/>
 </p>
 
 3. The **API Attribute ID** is the internal name.
 
----
 
 ## How to find Attribute list of Specific Object/Entity type
 
@@ -333,40 +318,38 @@ Then during execution, `@source_system_id@` will be substituted with the actual 
 2. Click the **Classic PPM** icon.
 
 <p align="center">
-  <img src="../assets/CAPPM_Attribute_1.png" />
+  <img src="../assets/CAPPM_Attribute_1.png" width="900"/>
 </p>
 
 3. Click the **Administration** icon → Go to **Studio → Objects**.
 
 <p align="center">
-  <img src="../assets/CAPPM_Attribute_2.png" />
+  <img src="../assets/CAPPM_Attribute_2.png" width="900" />
 </p>
 
 4. A list of entity types appears.
 
 <p align="center">
-  <img src="../assets/CAPPM_Attribute_3.png" />
+  <img src="../assets/CAPPM_Attribute_3.png" width="900"/>
 </p>
 
 5. Search (e.g. `Project`) → Filter → Select desired entity.
 
 <p align="center">
-  <img src="../assets/CAPPM_Attribute_4.png" />
+  <img src="../assets/CAPPM_Attribute_4.png" width="900"/>
 </p>
 
 6. Go to the **Attributes** tab.
 
 <p align="center">
-  <img src="../assets/CAPPM_Attribute_5.png" />
+  <img src="../assets/CAPPM_Attribute_5.png" width="900" />
 </p>
 
 7. Attributes will be listed.
 
 <p align="center">
-  <img src="../assets/CAPPM_Attribute_6.png" />
+  <img src="../assets/CAPPM_Attribute_6.png" width="900"/>
 </p>
-
----
 
 ## How to find Users list
 
@@ -375,13 +358,13 @@ Then during execution, `@source_system_id@` will be substituted with the actual 
 3. Go to the **Users** tab.
 
 <p align="center">
-  <img src="../assets/CAPPM_Users_1.png" />
+  <img src="../assets/CAPPM_Users_1.png" width="900"/>
 </p>
 
 4. A list of **Active Users** will be displayed.
 
 <p align="center">
-  <img src="../assets/CAPPM_Users_2.png" />
+  <img src="../assets/CAPPM_Users_2.png" width="900"/>
 </p>
 
 ---
@@ -392,17 +375,18 @@ Then during execution, `@source_system_id@` will be substituted with the actual 
 2. Click the **Investments** icon from the left panel.
 
 <p align="center">
-  <img src="../assets/CAPPM_Custom_Object_1.png" />
+  <img src="../assets/CAPPM_Custom_Object_1.png" width="900"/>
 </p>
 
 3. Select the custom object.
 
 <p align="center">
-  <img src="../assets/CAPPM_Custom_Object_2.png" />
+  <img src="../assets/CAPPM_Custom_Object_2.png" width="900"/>
 </p>
 
 4. From the URL, get the object type value.
 
 <p align="center">
-  <img src="../assets/CAPPM_Custom_Object_3.png" />
+  <img src="../assets/CAPPM_Custom_Object_3.png" width="900" />
 </p>
+
