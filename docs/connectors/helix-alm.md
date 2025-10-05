@@ -23,7 +23,7 @@ Before you continue to the integration, you must first configure Helix ALM. Clic
 Refer the screenshot given below for reference.
 
 <p align="center">
-  <img src="../assets/Helix_System_Form2.png" />
+  <img src="../assets/Helix_System_Form2.png" width="1500"/>
 </p>
 
 
@@ -391,7 +391,7 @@ Recommended link configurations in Helix ALM:
 ## Add User
 
 <p align="center">
-  <img src="../assets/Helix_Image_2.png" width="900"/>
+  <img src="../assets/Helix_Image_2.png" width="1200"/>
 </p>
 
 
@@ -406,7 +406,7 @@ For adding a new user, follow the steps given below:
 ## Giving User Privileges
 
 <p align="center">
-  <img src="../assets/Helix_Image_3.png" width="900" />
+  <img src="../assets/Helix_Image_3.png" width="1200" />
 </p>
 
 
@@ -420,7 +420,7 @@ For giving privileges, follow the steps given below:
 - Click the **OK** button.
 
 <p align="center">
-  <img src="../assets/Helix_Image_4.png" width="900" />
+  <img src="../assets/Helix_Image_4.png" width="1200" />
 </p>
 
 
@@ -429,7 +429,7 @@ For giving privileges, follow the steps given below:
 {{SITENAME}} requires a few special fields to be defined on the entity that is being synchronized. These must be set up so that the integration status of each item can be tracked.
 
 <p align="center">
-  <img src="../assets/Helix_Image_5.png" width="900"/>
+  <img src="../assets/Helix_Image_5.png" width="1200"/>
 </p>
 
 * Log in to Helix ALM as a user with Administration security group.
@@ -464,6 +464,7 @@ For getting Helix ALM version, follow the steps given below:
 * For the active license:
   * if you have a X-user floating evaluation license, provide the **SOAP Session Limit** as X.
   * If you have a X-user named license, provide the **SOAP Session Limit** as 1.
+
 
 
 
