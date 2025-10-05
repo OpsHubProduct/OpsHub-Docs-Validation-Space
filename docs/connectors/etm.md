@@ -92,7 +92,7 @@ Refer to the following screenshot below with **Authentication Type** as OAuth 1.
 Map the fields between ETM and the other system to be integrated to ensure that the data between both the systems synchronizes correctly. Refer to [Mapping Configuration](../integrate/mapping-configuration.md) page to learn the step-by-step process to configure mapping between the systems.
 
 <p align="center">
-  <img src="../assets/ETMMappingform.png" width="950">
+  <img src="../assets/ETMMappingform.png" width="1500">
 </p>
 
 
@@ -161,7 +161,7 @@ This allows:
 Select projects & entities to be synchronized between ETM and the other system to be integrated. Also, define parameters and conditions, if any, for integration. Refer to [Integration Configuration](..integrate/integration-configuration.md) page to learn the step-by-step process to configure integration between two systems.
 
 <p align="center">
-  <img src="../assets/ETMIntegrationform.png" width="1100">
+  <img src="../assets/ETMIntegrationform.png" width="1500">
 </p>
 
 
@@ -266,7 +266,7 @@ Provide query in Target Search Query field to be able to search the entity in ET
 - Provide required **Repository Permissions**. Click **Save**.
 
 <p align="center">
-  <img src="../assets/ETMrepo.png" width="750">
+  <img src="../assets/ETMrepo.png" width="900">
 </p>
 
 
@@ -276,7 +276,7 @@ Provide query in Target Search Query field to be able to search the entity in ET
 - Provide required **Client Access Licenses**. Click **Save**.
   
 <p align="center">
-  <img src="../assets/ETMlicense.png" width="950">
+  <img src="../assets/ETMlicense.png" width="1000">
 </p>
 
 
@@ -286,7 +286,7 @@ Provide query in Target Search Query field to be able to search the entity in ET
 - Provide required **Permissions** to a role which is added to OpsHub Integration Manager's dedicated user. Click **Save**.
 
 <p align="center">
-  <img src="../assets/ETMpermission.png" width="900">
+  <img src="../assets/ETMpermission.png" width="1000">
 </p>
 
 ## Page-size Configuration
@@ -295,7 +295,7 @@ Provide query in Target Search Query field to be able to search the entity in ET
 - Provide required page-size to **Max Feed Entries/Page** (maximum page size - 512). Click **Save**.
 
 <p align="center">
-  <img src="../assets/ETMpagesize.png" width="800">
+  <img src="../assets/ETMpagesize.png" width="1000">
 </p>
 
 
@@ -310,7 +310,7 @@ Following are the steps to be performed for generating OAuth token for ETM syste
 - After successfully registering the consumer, the Consumer Name and Consumer Key will be added in the **Authorized Keys** section.
 
 <p align="center">
-  <img src="../assets/ETMoauth3.png" width="750">
+  <img src="../assets/ETMoauth3.png" width="1000">
 </p>
 
 
@@ -324,7 +324,7 @@ Generate an OAuth token using a third-party REST client such as Postman. Once co
 - In the response, OAuth token and OAuth token secret will be generated.
 
 <p align="center">
-  <img src="../assets/ETMoauth2.png" width="750">
+  <img src="../assets/ETMoauth2.png" width="1000">
 </p>
 
 
@@ -342,7 +342,7 @@ Generate an OAuth token using a third-party REST client such as Postman. Once co
 - In the response, OAuth token and OAuth token secret will be generated.
   
 <p align="center">
-  <img src="../assets/ETMoauth3.png" width="750">
+  <img src="../assets/ETMoauth3.png" width="950">
 </p>
 
 
@@ -357,7 +357,7 @@ While creating/updating ETM system configuration in OpsHub Integration Manager, 
 - Provide **Attribute Name** & **Type**. Click **Save**.
 
 <p align="center">
-  <img src="../assets/ETMCustomField.png" width="950">
+  <img src="../assets/ETMCustomField.png" width="1000">
 </p>
 
 ## Metadata Configuration
@@ -558,5 +558,6 @@ While creating/updating ETM system configuration in OpsHub Integration Manager, 
 * Prepare the following request and open it in the browser.  
   * List project URL: https://{instance}:{port}/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects
 * From the response, get the internal value of each project from `feed > entry > content > project > alias`.
+
 
 
