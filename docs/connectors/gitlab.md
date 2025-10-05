@@ -14,7 +14,7 @@ Click [System Configuration](../integrate/system-configuration.md) to learn th
 Refer to the screenshot given below for reference:
 
 <p align="center">
-  <img src="../assets/gitlab_system_config1.png" width="900">
+  <img src="../assets/gitlab_system_config1.png" width="1200">
 </p>
 
 If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
@@ -24,14 +24,14 @@ If the system is deployed on HTTPS and a self-signed certificate is used, then y
 Map the fields between GitLab and the other system to be integrated to ensure that the data between both the systems synchronizes correctly.  
 
 <p align="center">
-  <img src="../assets/gitlab_mapping1.png" width="900">
+  <img src="../assets/gitlab_mapping1.png" width="1200">
 </p>
 
 * Synchronization of Issue Types:
   * Issue Type field is to be configured where the Issue Type you want to sync to Gitlab is mapped.
 
 <p align="center">
-  <img src="../assets/Issue_Type2.png" width="900">
+  <img src="../assets/Issue_Type2.png" width="1200">
 </p>
 
 Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
@@ -50,7 +50,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 In this step, set a time to synchronize data between GitLab and the other system to be integrated. Also, define parameters and conditions, if any, for integration.  
 
 <p align="center">
-  <img src="../assets/gitlab_integration1.png" width="900">
+  <img src="../assets/gitlab_integration1.png" width="1200">
 </p>
 
 Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
@@ -174,5 +174,5 @@ For generating Personal Access Token, follow the steps given below:
 > **Note** : you leave or refresh the page, you will not be able to access the Personal Access Token again.
 
 <p align="center">
-  <img src="../assets/personal_access_token1.png" width="900">
+  <img src="../assets/personal_access_token1.png" width="1200">
 </p>
