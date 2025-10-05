@@ -55,7 +55,7 @@ Before you continue to the integration, you must first configure the DOORS syste
 <span style="color:blue">**DOORS System form details**</span>
 
 | **Field Name** | **When field is visible on the System form** | **Description** |
-|     -|               |     --|
+| ------------  -|  -----------------------------------------   |  ----------   --|
 | **System Name** | Always | Provide System name |
 | **Version** | Always | Set Version to version of your IBM Rational DOORS instance. |
 | **DOORS Service Configuration** | Always | Location where OpsHub's DOORS Services are configured. i.e., 'LOCAL' or 'REMOTE'. |
