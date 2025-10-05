@@ -55,7 +55,7 @@ Before you continue to the integration, you must first configure the DOORS syste
 <span style="color:blue">**DOORS System form details**</span>
 
 | **Field Name** | **When field is visible on the System form** | **Description** |
-| ------------  -|  -----------------------------------------   |  ----------   --|
+| ------------   |  -----------------------------------------   |  ----------     |
 | **System Name** | Always | Provide System name |
 | **Version** | Always | Set Version to version of your IBM Rational DOORS instance. |
 | **DOORS Service Configuration** | Always | Location where OpsHub's DOORS Services are configured. i.e., 'LOCAL' or 'REMOTE'. |
@@ -462,6 +462,7 @@ Steps to execute and verify:
 4. Click on Run to execute the DXL. If the download is successful, then DONE will be printed in the DXL output window, and an RTF file will be generated at the specified path;
 5. Now open this generated RTF file using Microsoft Word. Click on File menu then click on Save as. Save this file as HTML;
 6. Open the saved HTML file. This file's output is how the data of this field will be displayed in the target system's field.
+
 
 
 
