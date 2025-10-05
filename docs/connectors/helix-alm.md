@@ -191,8 +191,9 @@ For checking the version of your Helix ALM instance, refer [Find Version](#find-
 
 # Mapping Configuration
 
-Map the fields between Helix ALM and the other system to be integrated to ensure that the data between both the systems synchronizes correctly. Click [mapping-configuration](../integrate/mapping-configuration)
+Map the fields between Helix ALM and the other system to be integrated to ensure that the data between both the systems synchronizes correctly. Click [Mapping-configuration](../integrate/mapping-configuration)
 to learn the step-by-step process to configure mapping between the systems.  
+
 Click [Mapping Checkpoints](#mapping-checkpoints) to learn about mapping checkpoints for Helix ALM as a target system. 
 
 ## Get Requirement Document Id's for Requirement
@@ -374,7 +375,7 @@ Recommended link configurations in Helix ALM:
 - {{SITENAME}} does not support synchronization of **Test Config** field present under **Detail** tab in the **Issue** entity.
 - Synchronization of only **Comment Workflow event** is supported.
 - For Issue entity, the field label of all the Found By Records field should not be changed. It should be set to the default value.  
-  Found By Record fields supported by {{SITENAME}} are Description, Steps to Reproduce, Other Hardware and Software, Version Found, Found By, Date Found, Reproduced.
+    - Found By Record fields supported by {{SITENAME}} are Description, Steps to Reproduce, Other Hardware and Software, Version Found, Found By, Date Found, Reproduced.
 - If the label of the field is changed in the end system, the mapping needs to be updated in the {{SITENAME}}.
 - If Requirement entity is configured for synchronization and Relationships synchronization is enabled:
   - There should not be a custom link type in Helix ALM having same name as either "Requirement Relationships(Parent)" or "Requirement Relationships(Child)".
@@ -387,11 +388,10 @@ Recommended link configurations in Helix ALM:
   - Synchronization of different fields of the first Found By Record of Issue entity is supported.
 
 # Appendix
-
 ## Add User
 
 <p align="center">
-  <img src="../assets/Helix_Image_2.png" />
+  <img src="../assets/Helix_Image_2.png" width="900"/>
 </p>
 
 
@@ -406,7 +406,7 @@ For adding a new user, follow the steps given below:
 ## Giving User Privileges
 
 <p align="center">
-  <img src="../assets/Helix_Image_3.png" />
+  <img src="../assets/Helix_Image_3.png" width="900" />
 </p>
 
 
@@ -420,7 +420,7 @@ For giving privileges, follow the steps given below:
 - Click the **OK** button.
 
 <p align="center">
-  <img src="../assets/Helix_Image_4.png" />
+  <img src="../assets/Helix_Image_4.png" width="900" />
 </p>
 
 
@@ -429,7 +429,7 @@ For giving privileges, follow the steps given below:
 {{SITENAME}} requires a few special fields to be defined on the entity that is being synchronized. These must be set up so that the integration status of each item can be tracked.
 
 <p align="center">
-  <img src="../assets/Helix_Image_5.png" />
+  <img src="../assets/Helix_Image_5.png" width="900"/>
 </p>
 
 * Log in to Helix ALM as a user with Administration security group.
@@ -438,7 +438,7 @@ For giving privileges, follow the steps given below:
 * Click the **Add button** link, and click the **Add Custom** field link on the presented page. The **Add Custom** field screen will display.
 
 <p align="center">
-  <img src="../assets/Helix_Image_6.png" />
+  <img src="../assets/Helix_Image_6.png" width="1000"/>
 </p>
 
 * Fill in the **Field** name, **Long label** and **Field** code.
@@ -450,7 +450,7 @@ For giving privileges, follow the steps given below:
 For getting Helix ALM version, follow the steps given below:
 
 <p align="center">
-  <img src="../assets/Helix_Image_7.png" />
+  <img src="../assets/Helix_Image_7.png" width="400" />
 </p>
 
 * Log in to the Helix ALM project using Helix ALM client.
@@ -464,6 +464,7 @@ For getting Helix ALM version, follow the steps given below:
 * For the active license:
   * if you have a X-user floating evaluation license, provide the **SOAP Session Limit** as X.
   * If you have a X-user named license, provide the **SOAP Session Limit** as 1.
+
 
 
 
