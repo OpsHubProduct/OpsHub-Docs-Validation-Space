@@ -78,7 +78,7 @@ and the related work item id on which you want to synchronize the Change entity 
 * If no match is found, this field will have "-1" value.
 
 <p align="center">
-  <img src="../assets/GerritRelatedIds.png" width="1000"/>
+  <img src="../assets/GerritRelatedIds.png" width="800"/>
 </p>
 
 
@@ -119,13 +119,13 @@ Refer to [this](https://gerrit-review.googlesource.com/Documentation/user-search
 1. Go to Settings menu for the logged-in user from the user menu at top right corner.
    
    <p align="center">
-      <img src="../assets/GerritUserSetting.png" width="1000"/>
+      <img src="../assets/GerritUserSetting.png" width="1200"/>
    </p>
 
 2. Go to "HTTP Credentials" section and click "GENERATE NEW PASSWORD".  
  
    <p align="center">
-      <img src="../assets/GerritHTTPPassword.png" width="900"/>
+      <img src="../assets/GerritHTTPPassword.png" width="1200"/>
    </p>
 
 3. Copy the password displayed, and use it as password for the user in the system configuration.
