@@ -40,7 +40,6 @@ If the system is deployed on HTTPS and a self-signed certificate is used, then y
 Map the fields between GitHub and the other system to be integrated to ensure that the data between both the systems synchronize correctly.  
 <br>
 Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.  
-<br>
 
 ## Fields available in GitHub
 
@@ -92,7 +91,7 @@ Following is the description of fields that are available in GitHub for mapping 
 |  | Lookup type fields | Labels | Labels that can be added to Issue: The lookup contains all the labels present in your repository. |
 |  |  | Projects | Contains the list of the projects contained in the instance. |
 |  |  | Status | Indicates the state of the entity. It could be either in open state or in closed state. |
-|  |  | State_reason | Indicates the state reason of the entity. It could be 'Completed', 'Not_Planned' or 'Reopened'. For more details, refer to [Known Behavior](#known-behavior) section. |
+|  |  | State_reason | Indicates the state reason of the entity. It could be 'Completed', 'Not_Planned' or 'Reopened'. For more details, refer to [Known Behavior](#known-behaviors) section. |
 |  | HTML type fields | Body | Contains the description of the entity. |
 
 ---
@@ -102,8 +101,7 @@ Following is the description of fields that are available in GitHub for mapping 
 For HTML fields in **OpsHub Integration Manager**, GitHub allows to synchronization of inline images. Such content can be synchronized for GitHub with the following behavior:  
 * Images and other type of files are synced to the target system depending on whether the target system supports inline images or not.  
 
-For **limitations** of Inline image synchronization, refer to [Limitations](#limitations) section.
-
+For **limitations** of Inline image synchronization, refer to [Limitations](#known-limitations) section.
 
 ## User Mapping Configuration
 
@@ -113,8 +111,6 @@ For **limitations** of Inline image synchronization, refer to [Limitations](#lim
 
 **Issue entity:**  
 * User Lookup based on **Email** is not supported. Hence, to perform the user mapping based on username instead of email address, the username in both source and target end systems must be same. Otherwise, excel mapping will be required for one-to-one user mapping. Refer below mentioned sample examples.
-
-<br>
 
 **Below are few samples of user mapping:**  
 <br>  
@@ -161,7 +157,7 @@ For **limitations** of Inline image synchronization, refer to [Limitations](#lim
 In this step, we need to set a time to synchronize data between GitHub and the other system to be integrated.  
 Also, define parameters and conditions, that are needed to be configured for integration.  
 
-Click [Integration Configuration](../integrate/integration-configruation.md) to learn the step-by-step process to configure integration between two systems.
+Click [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure integration between two systems.
 
 
 ## Configuring Related Workitem Regex
@@ -448,6 +444,7 @@ Refer to document [Search Syntax in GitHub](https://help.github.com/en/github/se
 	]
 }
 ```
+
 
 
 
