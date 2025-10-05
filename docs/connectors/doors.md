@@ -48,14 +48,14 @@ DOORS system allows users to add Rich Text formatting to Text/String type of fie
 Before you continue to the integration, you must first configure the DOORS system. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system. Refer to the screenshot given below for reference. 
 
 <p align="center">
-  <img src="../assets/DOORS_Image_6f.png"/>
+  <img src="../assets/DOORS_Image_6f.png" width="1000"/>
 </p>
 
 
 <span style="color:blue">**DOORS System form details**</span>
 
 | **Field Name** | **When field is visible on the System form** | **Description** |
-|----------------|---------------------------------------------|-----------------|
+|     -|               |     --|
 | **System Name** | Always | Provide System name |
 | **Version** | Always | Set Version to version of your IBM Rational DOORS instance. |
 | **DOORS Service Configuration** | Always | Location where OpsHub's DOORS Services are configured. i.e., 'LOCAL' or 'REMOTE'. |
@@ -86,7 +86,7 @@ If the system is deployed over HTTPS with a self-signed certificate, you must im
 
 # Mapping Configuration
 
-Map the fields between DOORS and the other system to ensure correct synchronization. Click [Mapping Configuration](../integrate/mapping-configuration.md) for detailed instructions.
+Map the fields between DOORS and the other system to be integrated to ensure that the data between both the systems synchronizes correctly. Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems..
 
 ## Synchronization of formatting present in style attribute
 
@@ -147,7 +147,7 @@ Where, **attr:** The display name of the attribute .
 **text:** attribute value .  
 
 | **Syntax** | **Description** | **Snippet** |
-|------------|-----------------|-------------|
+|    |     --|    -|
 | (attribute 'attr' operator 'text') | Syntax for attribute comparison on 'Status'(Lookup type), 'Last Modified On'(Date type) and 'Created By'(User type) fields | (attribute 'Status' == 'Active')  <br><br> (attribute 'Last Modified On' > '05/25/2018')  <br><br> ((attribute 'Status' == 'Active') && (attribute 'Created By' == 'User1'))  <br><br> ((attribute 'Status' == 'Active') \|\| (attribute 'Created By' == 'User1')) |
 | includes(attribute 'attr', 'text') | Syntax for multi-valued attribute | includes(attribute 'MultiProject','Project1') |
 | excludes(attribute 'attr', 'text') | Syntax for multi-valued attribute | excludes(attribute 'MultiProject','Project1') |
@@ -155,10 +155,9 @@ Where, **attr:** The display name of the attribute .
 
 ## Criteria Using Special Characters
 * While using **'(single quote)'** in query, user will have to provide the escaping for it. i.e., the character **\\'** should be used instead of **'** wherever needed.
-  * Example: `(attribute 'Object Heading' == 'This object contains \' in Heading').`
-  * Here, the query for **Object Heading** in DOORS is: **This object contains ' in Heading'**, but the query to be used in {{SITENAME}} is: **This object contains \' in Heading'**.
+  * Example: `(attribute 'Object Heading' == 'This object contains `\`' in Heading').`
+  * Here, the query for **Object Heading** in DOORS is: **This object contains ' in Heading'**, but the query to be used in {{SITENAME}} is: **This object contains `\`' in Heading'**.
 
----
 
 # Configure OpsHub's DOORS Remote Services
 
@@ -171,7 +170,7 @@ When user wants to install OpsHub's DOORS Remote Services on any machine (which 
 * Fill the configuration data in `resources/config.properties`:
 
 | **Field Name** | **Description** |
-|----------------|-----------------|
+|     -|     --|
 | **protocol** | Enter protocol type to be used by File Server. The File Server can run on http/https. |
 | **port** | Enter port to be used by File Server. |
 | **keyStorePath** | keyStorePath settings is only considered for protocol=https. You can use your CA certified certificate file OR self-signed certificate file. The sample command to generate self-signed certificate : `keytool -genkeypair -alias OIMFileServerCert -keyalg RSA -keysize 2048 -validity 365 -storetype PKCS12 -keystore keystore.p12`. |
@@ -188,8 +187,6 @@ When user wants to install OpsHub's DOORS Remote Services on any machine (which 
   * Open the command prompt with admin access and navigate to the utility folder.
   * Run `OpsHubDoorsRemoteServiceUtility.bat`.
 
----
-
 # Known Synchronization Behavior
 ## Picture Object as Inline Image
 
@@ -198,19 +195,19 @@ When user wants to install OpsHub's DOORS Remote Services on any machine (which 
 * As no revision is created for updating/deletion of image in Picture Object, to sync any update in image in Picture Object, an update in any of the other fields for which revision created is required.
 * As per DOORS documentation, some pictures when exported/read using API, may have a black border.
 * The only supported export format is format PNG, so on the target side, the PNG image is always synced
----
+ 
 
 ## Object Number and Object Level
 
 * 'The Object Number' and 'Object Level' are calculated fields. OpsHub Integration Manager will synchronize with the value present at the time of entity synchronization. These fields don't have history so, if there is any change after synchronization, it will get reflected in other end systems only when it becomes eligible.
 * The field value of these fields also depends on the settings configured on the system page of DOORS under the field name, 'DOORS Sync Deleted Entities' option. If selected 'yes', OpsHub Integration Manager will take into consideration the deleted entities also, and if selected 'no', the field values will be synchronized accordingly.
----
+ 
 
 ## Fields Limitation
 
 * Synchronization of 'RTF NonShpPict' and 'RTF ShpPict' fields are not supported.
   * Reason: The above mentioned fields store large internal binary data at the time of RTF import, which causes the performance issues in the synchronization.
----
+ 
 
 ## OLE Object as Inline Image/Document
 
@@ -241,7 +238,7 @@ When user wants to install OpsHub's DOORS Remote Services on any machine (which 
 
 >**Note**: If you are trying to synchronize any other file formats, then it is suggested to validate on test instance first. In case of any queries, please reach out to OpsHub Support.
 
----
+ 
 
 ## Synchronizing Rich Text Data with Full Formatting
 
@@ -254,7 +251,6 @@ When user wants to install OpsHub's DOORS Remote Services on any machine (which 
 
 > **Note** : If the user wants to verify or visualize the output of the conversion, then refer to section [Verify output of Rich Text conversion from Rich Text Conversion Server](#verify-output-of-rich-text-conversion-from-rich-text-conversion-server).
 
----
 
 ## Synchronizing Entities with Deleted History
 * When DOORS system is the source:
@@ -262,7 +258,6 @@ When user wants to install OpsHub's DOORS Remote Services on any machine (which 
     * Baseline deletion is an example of entity history deletion.
   * If the history needs to be deleted during the synchronization process, it is recommended to let the synchronization complete first and then delete the history.
 
----
 
 # Appendix
 
@@ -296,7 +291,7 @@ OH_OutLink
 OH_InLink
 ```
 
----
+ 
 
 ## Custom Field Configuration
 
@@ -316,7 +311,7 @@ OH_InLink
 
 * Finally, click OK and save the module.
 
----
+ 
 
 ## How to Add Permissions on Module
 
@@ -467,6 +462,7 @@ Steps to execute and verify:
 4. Click on Run to execute the DXL. If the download is successful, then DONE will be printed in the DXL output window, and an RTF file will be generated at the specified path;
 5. Now open this generated RTF file using Microsoft Word. Click on File menu then click on Save as. Save this file as HTML;
 6. Open the saved HTML file. This file's output is how the data of this field will be displayed in the target system's field.
+
 
 
 
