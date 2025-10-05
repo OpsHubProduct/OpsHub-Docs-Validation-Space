@@ -49,19 +49,19 @@ Click [Create Custom Fields](#create-custom-fields) to learn how to create custo
 * Click on **Admin** on the right top corner and select **Users**.
 
 <p align="center">
-  <img src="../assets/FB_Image_1.png" width="1000">
+  <img src="../assets/FB_Image_1.png" width="800">
 </p>
 
 * Click on **Add New User Account**.
 
 <p align="center">
-  <img src="../assets/FB_Image_2.png" width="1000">
+  <img src="../assets/FB_Image_2.png" width="800">
 </p>
 
 * Click on **Add New User Account.**
 
 <p align="center">
-  <img src="../assets/FB_Image_3.png" width="1000">
+  <img src="../assets/FB_Image_3.png" width="800">
 </p>
 
 ## Set User Time Zone
@@ -70,14 +70,14 @@ Click [Create Custom Fields](#create-custom-fields) to learn how to create custo
 * Click **Admin** tab on the top-right corner and select **Users**.
 
 <p align="center">
-  <img src="../assets/FB_Image_1.png" width="1000">
+  <img src="../assets/FB_Image_1.png" width="800">
 </p>
 
 * Select the user from the user list. Click **Edit**.
 * Set Time Zone to: **(UTC) Coordinated Universal Time**.
 
 <p align="center">
-  <img src="../assets/FB_Image_4.png" width="1000">
+  <img src="../assets/FB_Image_4.png" width="800">
 </p>
 
 ## Create Custom Fields
@@ -86,7 +86,7 @@ Click [Create Custom Fields](#create-custom-fields) to learn how to create custo
 * Click on **Admin** menu.
 
 <p align="center">
-  <img src="../assets/FB_Image_5.png" width="700">
+  <img src="../assets/FB_Image_5.png" width="400">
 </p>
 
 * Select **Plugins** from menu.
