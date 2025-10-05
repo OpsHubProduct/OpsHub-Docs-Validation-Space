@@ -5,7 +5,7 @@
 - Create a dedicated integration user in ETM. This user shouldn't perform any other action from ETM interface.
 - User must be a member of projects used to synchronize entities/artifacts.
 - User can use **Forms-based authentication** or **OAuth 1.0** authentication mode to communicate with API for ETM.  
-  ** Refer to [OAuth Configuration](#oauth-configuration) section to learn how to create OAuth token.
+  * Refer to [OAuth Configuration](#oauth-configuration) section to learn how to create OAuth token.
 
 ## Required Permissions
 
@@ -60,11 +60,16 @@ Before configuring the integration, you must first configure ETM. Refer to [Syst
 
 Refer to the following screenshot below with **Authentication Type** as Form-based authentication:
 
-<img src="../assets/ETMSystemform1.png"  width="550px">
+<p align="center">
+  <img src="../assets/ETMSystemform1.png" width="900">
+</p>
+
 
 Refer to the following screenshot below with **Authentication Type** as OAuth 1.0:
 
-<img src="../assets/ETMSystemform2.png"  width="550px">
+<p align="center">
+  <img src="../assets/ETMSystemform2.png" width="900">
+</p>
 
 
 | **Field Name**           | **When is the field visible**                    | **Description**                                                                                                                                                                                                                                                                             |
@@ -86,7 +91,10 @@ Refer to the following screenshot below with **Authentication Type** as OAuth 1.
 
 Map the fields between ETM and the other system to be integrated to ensure that the data between both the systems synchronizes correctly. Refer to [Mapping Configuration](../integrate/mapping-configuration.md) page to learn the step-by-step process to configure mapping between the systems.
 
-![ETMMappingform.png](ETMMappingform.png){ width=950px }
+<p align="center">
+  <img src="../assets/ETMMappingform.png" width="950">
+</p>
+
 
 ## 'Manual Steps' & 'Step Result Details' fields configuration
 
@@ -152,7 +160,10 @@ This allows:
 
 Select projects & entities to be synchronized between ETM and the other system to be integrated. Also, define parameters and conditions, if any, for integration. Refer to [Integration Configuration](..integrate/integration-configuration.md) page to learn the step-by-step process to configure integration between two systems.
 
-<img src="../assets/ETMIntegrationform.png"  width="1100px">
+<p align="center">
+  <img src="../assets/ETMIntegrationform.png" width="1100">
+</p>
+
 
 ## Criteria Configuration
 
@@ -248,49 +259,62 @@ Provide query in Target Search Query field to be able to search the entity in ET
 | Test Case Result       | Defect, Test Environment, Build, Test Data, Iteration, Custom properties, Weight Distribution, Formal Review, Execution Variables, Associated Electronic Signatures |
 
 # Appendix
-
 ## Permission Configuration
-## Repository Permissions Configuration
+### Repository Permissions Configuration
 - Log in to Admin panel (`<ETM URL>`/qm/admin).
 - Navigate to Users > Active Users > select OpsHub Integration Manager's dedicated user.
 - Provide required **Repository Permissions**. Click **Save**.
 
-<img src="../assets/ETMrepo.png" width="750px">
+<p align="center">
+  <img src="../assets/ETMrepo.png" width="750">
+</p>
 
-## Client Access Licenses Configuration
+
+### Client Access Licenses Configuration
 - Log in to Admin panel (`<ETM URL>`/qm/admin).
 - Navigate to Users > Active Users > select OpsHub Integration Manager's dedicated user.
 - Provide required **Client Access Licenses**. Click **Save**.
   
-<img src="../assets/ETMlicense.pn" width="950px">
+<p align="center">
+  <img src="../assets/ETMlicense.png" width="950">
+</p>
 
-## User Permission Configuration
+
+### User Permission Configuration
 - Log in to Admin panel (`<ETM URL>`/qm/admin).
 - Navigate to Project Areas > Active Project Areas > select project > Permissions.
 - Provide required **Permissions** to a role which is added to OpsHub Integration Manager's dedicated user. Click **Save**.
 
-<img src="../assets/ETMpermission.png" width="900px">
+<p align="center">
+  <img src="../assets/ETMpermission.png" width="900">
+</p>
 
 ## Page-size Configuration
 - Log in to Admin panel (`<ETM URL>`/qm/admin).
 - Navigate to Application > Advanced Properties > ETM Integration Component.
 - Provide required page-size to **Max Feed Entries/Page** (maximum page size - 512). Click **Save**.
 
-<img src="../assets/ETMpagesize.png" width="800">
+<p align="center">
+  <img src="../assets/ETMpagesize.png" width="800">
+</p>
+
 
 ## OAuth Configuration
 
 Following are the steps to be performed for generating OAuth token for ETM system:
 
-## Generate Customer Key & Consumer Secret
+### Generate Customer Key & Consumer Secret
 - Log in to Admin panel (`<ETM URL>`/qm/admin) with user whose OAuth token needs to be generated.
 - Navigate to Application > Consumers (Inbound) > OAuth Consumers section.
 - Enter the **Consumer Name**, **Consumer Secret**, and click **Register**. A **Consumer Key** will be auto generated.
 - After successfully registering the consumer, the Consumer Name and Consumer Key will be added in the **Authorized Keys** section.
 
-<img src="../assets/ETMoauth1.png" width="950">
+<p align="center">
+  <img src="../assets/ETMoauth3.png" width="750">
+</p>
 
-## Generate OAuth Token and OAuth Token Secret for the generated Consumer Key
+
+### Generate OAuth Token and OAuth Token Secret for the generated Consumer Key
 Generate an OAuth token using a third-party REST client such as Postman. Once consumer key and consumer secret are generated in end system, following are the 3 steps to be performed: 
 
 **Get the OAuth Request Token**  
@@ -299,7 +323,10 @@ Generate an OAuth token using a third-party REST client such as Postman. Once co
 - Set **Consumer Key** and **Consumer Secret** in the request. Click **Send**.  
 - In the response, OAuth token and OAuth token secret will be generated.
 
-<img src="../assets/ETMoauth2.png" width="750px">
+<p align="center">
+  <img src="../assets/ETMoauth2.png" width="750">
+</p>
+
 
 **Authorize OAuth Request Token**  
 - To authorize OAuth Request Token, prepare the request mentioned below and open it in the browser. It requires login with a user who has admin privileges.  
@@ -314,7 +341,10 @@ Generate an OAuth token using a third-party REST client such as Postman. Once co
 - Set the required fields, i.e., **Customer Key** & **Customer Secret**. Provide the **OAuth token** and **OAuth token secret** that was generated in previous step. Click **Send**.  
 - In the response, OAuth token and OAuth token secret will be generated.
   
-<img src="../assets/ETMoauth3.png" width="750px">
+<p align="center">
+  <img src="../assets/ETMoauth3.png" width="750">
+</p>
+
 
 While creating/updating ETM system configuration in OpsHub Integration Manager, select **OAuth 1.0** as Authentication Type. Also, provide these 4 inputs:  
 - Consumer Key & Consumer Secret (generated in [Generate Customer Key & Consumer Secret](#consumer-key-secret))  
@@ -326,7 +356,9 @@ While creating/updating ETM system configuration in OpsHub Integration Manager, 
 - Go to **Administration** > **Manage Project Properties** > **Custom Attributes** > select entity.
 - Provide **Attribute Name** & **Type**. Click **Save**.
 
-<img src="../assets/ETMCustomField.png" width="950px">
+<p align="center">
+  <img src="../assets/ETMCustomField.png" width="950">
+</p>
 
 ## Metadata Configuration
 - If any custom field is added in ETM that requires synchronization via OpsHub Integration Manager, provide that in the custom field details of **Metadata Details** at system configuration level.
@@ -526,4 +558,5 @@ While creating/updating ETM system configuration in OpsHub Integration Manager, 
 * Prepare the following request and open it in the browser.  
   * List project URL: https://{instance}:{port}/qm/service/com.ibm.rqm.integration.service.IIntegrationService/projects
 * From the response, get the internal value of each project from `feed > entry > content > project > alias`.
+
 
