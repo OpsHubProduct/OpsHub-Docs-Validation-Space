@@ -104,7 +104,6 @@ For HTML fields in **OpsHub Integration Manager**, GitHub allows to synchronizat
 For **limitations** of Inline image synchronization, refer to [Limitations](#known-limitations) section.
 
 ## User Mapping Configuration
-
 **Pull Request entity:**  
 * By default, user field synchronization in **OpsHub Integration Manager** works on user email added in both source and target end systems.  
 * To make user mapping to work on username instead of email address, the username in both source and target end systems must be same. Otherwise, excel mapping will be required for one-to-one user mapping. Refer below mentioned sample examples.
@@ -171,9 +170,9 @@ For example, for commit information, if your commit message is:
 [A-Za-z]+-\d+
 ```
 
-* Use Case 1 - Create/Update against specific workitem: If you want to create entity against a work item in your target system, then you need to specify a [Target Lookup Query](../integrate/integration-configruation.md#search-in-target-before-sync) for your target system. The parameter for specifying related work item id is @Related Workitem Id(s)@.
-  ** Update against existing workitem: This query searches the related work item (for which you specified a RegEx) and will add the entity to TEST-123 according to the field mapping configured. If the entity is found, then the information will be updated on that entity according to the field mapping.
-  ** Create new work item, then update: If this entity is not found in your target system and you want integration to create this entity first, and then synchronize source entity to it, then you can set the "If no entity found matching above query?" option in Target Lookup Query to "Create new entity in target".
+* Use Case 1 - Create/Update against specific workitem: If you want to create entity against a work item in your target system, then you need to specify a [Target Lookup Query](../integrate/integration-configuration.md#search-in-target-before-sync) for your target system. The parameter for specifying related work item id is @Related Workitem Id(s)@.
+  	* Update against existing workitem: This query searches the related work item (for which you specified a RegEx) and will add the entity to TEST-123 according to the field mapping configured. If the entity is found, then the information will be updated on that entity according to the field mapping.
+  	* Create new work item, then update: If this entity is not found in your target system and you want integration to create this entity first, and then synchronize source entity to it, then you can set the "If no entity found matching above query?" option in Target Lookup Query to "Create new entity in target".
 * Use Case 2 - Create new work item everytime: If you want integration to synchronize and create an entity in your target system for every entity in source system, then provide an incorrect RegEx which will not match your work item id in your commit message. For example, you can provide RegEx as $OpsHub$. Since $OpsHub$ does not match your work item id, the integration will create a new entity in your target system according to the mapping configured. There is no need to enter a Target Lookup Query in this case.
 
 <p align="center">
@@ -189,7 +188,7 @@ Window size for delayed commits is used to fill in the gap between the day commi
 Window size for delay commit means the number of days for which the delayed commits are to be synced. For example, if the value is 5 and the poller has processed commits till 21st Jan and someone now pushes a commit that was actually committed on 18th Jan, then that commit will also be picked in the next polling cycle. However, if a commit of 11th Jan is pushed on 21st Jan, it will not be included in the synchronization. If this field is left blank, **1** would be considered as the default value.
 
 <p align="center">
-  <img src="../assets/GH8a.png" width="900"/>
+  <img src="../assets/GH8a.png" width="1200"/>
 </p>
 
 >**Note**: This parameter is only applicable for Commit Information.
@@ -199,7 +198,7 @@ Window size for delay commit means the number of days for which the delayed comm
 Days interval for data reading configures the window for which entities will be polled in one job cycle. For example, if the value is 10, then the data will be polled in intervals of 10 days in one job cycle. The default polling window is 30 days, i.e. entities will be polled for 30 days in one job cycle. This parameter helps in reducing the load on end system.
 
 <p align="center">
-  <img src="../assets/GH9a.png" width="1000"/>
+  <img src="../assets/GH9a.png" width="1200"/>
 </p>
 
 ## Criteria Configuration
@@ -444,6 +443,7 @@ Refer to document [Search Syntax in GitHub](https://help.github.com/en/github/se
 	]
 }
 ```
+
 
 
 
