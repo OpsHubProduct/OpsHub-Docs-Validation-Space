@@ -22,7 +22,7 @@
 > **Note** : OpsHub Integration Manager supports basic authentication.
 
 Before the user starts with the integration configuration, he/she must first configure Clarity system in OpsHub Integration Manager.  
-Click [../integrate/system-configuration.md](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.  
+Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.  
 Refer to the screenshot given below:
 
 <p align="center">
@@ -33,7 +33,7 @@ Refer to the screenshot given below:
 **Clarity form details**
 
 | **Field Name**       | **Description**                                                                                   |
-|                     -|                                 
+| --------------------| ---------------------------------------------------------------------------------------------------|                                
 | System Name          | Provide the system name                                                                            |
 | Version              | Provide the version of Clarity. To know the version of the Clarity system, refer to [How to find Clarity Version](#how-to-find-clarity-version) in Appendix. |
 | URL                  | The URL is used for connecting to Clarity REST API. For example: https://[domainOfYourClarityPPMInstance] |
@@ -93,12 +93,12 @@ Sample JSON input:
 # Mapping Configuration
 
 * Map the fields between Clarity and the other system to be integrated to ensure that the data between both the systems synchronize correctly.  
-Refer to [../integrate/mapping-configuration.md](../integrate/mapping-configuration.md) page to learn the step-by-step process to configure mapping between the systems.
+Refer to [Mapping Configuration](../integrate/mapping-configuration.md) page to learn the step-by-step process to configure mapping between the systems.
 
 ## Relationship Configuration
 
 * In Clarity, Task entity can only exist under a Project or Custom Investment Object. Similarly, To Do entity can only exist under a Task.
-* Hence, to synchronize 'Task/To Do' when Clarity is target system, the default link must be configured in relationship mapping where link type must be 'Parent' and entity type must be 'Custom Investment Object/Project/Task'. Please refer to [../integrate/default-link-settings.md](../integrate/default-link-settings.md) for more details.
+* Hence, to synchronize 'Task/To Do' when Clarity is target system, the default link must be configured in relationship mapping where link type must be 'Parent' and entity type must be 'Custom Investment Object/Project/Task'. Please refer to [Default Link Configuration](../integrate/default-link-settings.md) for more details.
 
 <p align="center">
   <img src="../assets/CAPPM_Rel_1.png" width="900" />
@@ -189,7 +189,7 @@ Click [Integration Configuration](../integrate/integration-configuration.md) to 
 * For fetching internal name for queries, refer to [How to get field's Internal name](#how-to-get-fields-internal-name).
 
 | **Field Type**       | **Criteria Description**                                                                 | **Criteria snippet**                                |
-|                     -|                                                                                          |                                                     |
+| ---------------------| -----------------------------------------------------------------------------------------|-----------------------------------------------------|
 | Lookup               | Synchronize all entities which have certain value in Lookup. Value = internal id        | (status = 1)                                         |
 | Text                 | Synchronize all entities which has 'UI' in a custom text field 'Effected Area'          | (c_effectedarea = 'UI')                              |
 | Boolean              | Synchronize all entities which have true in 'In Plan' Boolean type of field             | (inPlan = true)                                      |
@@ -389,6 +389,7 @@ Given below are the sample snippets of how the queries can be used as target ent
 <p align="center">
   <img src="../assets/CAPPM_Custom_Object_3.png" width="900" />
 </p>
+
 
 
 
