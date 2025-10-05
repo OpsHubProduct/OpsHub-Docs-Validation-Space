@@ -39,7 +39,7 @@ For Bugzilla versions below 5.0, the REST API Version 1.3 should be enabled. For
 Before you continue to the integration, you must first configure Bugzilla. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system. 
 Refer the screenshot given below for reference.
 
-<div align="center"><img src="../assets/Bugzilla_Image_9a.png" alt="" width="900"></div>
+<div align="center"><img src="../assets/Bugzilla_Image_9a.png" alt="" width="1200"></div>
 
 **Bugzilla System form details**
 
@@ -138,15 +138,15 @@ Example: `status=RESOLVED&priority=High`
 
 For adding the existing user as a group of 'editbug' and 'canconfirm', follow the steps given below:
 
-<div align="center"><img src="../assets/Bugzilla_Image_1a.png" alt="" width="900"></div>
+<div align="center"><img src="../assets/Bugzilla_Image_1a.png" alt="" width="1200"></div>
 
 **Bugzilla User Privilege Step 1**
 
-<div align="center"><img src="../assets/Bugzilla_Image_2.jpg" alt="" width="900"></div>
+<div align="center"><img src="../assets/Bugzilla_Image_2.jpg" alt="" width="1200"></div>
 
 **Bugzilla User Privilege Step 2**
 
-<div align="center"><img src="../assets/Bugzilla_Image_3.jpg" alt="" width="900"></div>
+<div align="center"><img src="../assets/Bugzilla_Image_3.jpg" alt="" width="1200"></div>
 
 **Bugzilla User Privilege Step 3**
 
@@ -183,15 +183,15 @@ For creating a new user as a group of 'editbug' and 'canconfirm', follow the ste
 * Click on **Administration** option on the top of the page as shown in the screenshot.
 * Click on **Parameters** on the Administration page as shown in the screenshot below:
 
-<div align="center"><img src="../assets/Bugzilla_Administration_Parameters.png" alt="" width="900"></div>
+<div align="center"><img src="../assets/Bugzilla_Administration_Parameters.png" alt="" width="1200"></div>
 
 * Click on **User Authentication** on the left pane as shown in the screenshot below:
 
-<div align="center"><img src="../assets/Bugzilla_User_Authentication.png" alt="" width="900"></div>
+<div align="center"><img src="../assets/Bugzilla_User_Authentication.png" alt="" width="1200"></div>
 
 * Scroll down to **requirelogin** option and select **off** as shown in the screenshot below:
 
-<div align="center"><img src="../assets/Bugzilla_requirelogin.png" alt="" width="900"></div>
+<div align="center"><img src="../assets/Bugzilla_requirelogin.png" alt="" width="1200"></div>
 
 * Scroll down to the bottom on the page and click on the **Save Changes** button.
 
@@ -199,9 +199,9 @@ For creating a new user as a group of 'editbug' and 'canconfirm', follow the ste
 
 Refer the steps given below to add custom field:
 
-<div align="center"><img src="../assets/Bugzilla_Image_4.jpg" alt="" width="900"></div>
+<div align="center"><img src="../assets/Bugzilla_Image_4.jpg" alt="" width="1200"></div>
 
-<div align="center"><img src="../assets/Bugzilla_Image_5.jpg" alt="" width="900"></div>
+<div align="center"><img src="../assets/Bugzilla_Image_5.jpg" alt="" width="1200"></div>
 
 * Log in into Bugzilla with the administrator user.
 * Navigate to **Administration** link on the top of the page.
@@ -219,14 +219,14 @@ For custom field, the internal name will be displayed in Administration section.
 * Navigate to the Administration section with admin privileges.
 * Then, click on Custom Fields section, which will show all the custom fields configured.
 
-<div align="center"><img src="../assets/Bugzilla_Image_6a.png" alt="" width="900"></div>
+<div align="center"><img src="../assets/Bugzilla_Image_6a.png" alt="" width="1200"></div>
 
 ## Find Version
 
 * Login into Bugzilla Web.
 * Click on Home tab, the Bugzilla Version will be visible on top right corner.
 
-<div align="center"><img src="../assets/Bugzilla_Image_7.jpg" alt="" width="900"></div>
+<div align="center"><img src="../assets/Bugzilla_Image_7.jpg" alt="" width="1200"></div>
 
 ## Custom Field Internal Name
 
@@ -243,7 +243,7 @@ For custom field, the internal name will be displayed in Administration section.
 * From the left panel, select **User Authentication**.
 * It will show **emailsuffix configuration parameter** as shown in image below.
 
-<div align="center"><img src="../assets/Bugzilla_Image_8a.png" alt="" width="900"></div>
+<div align="center"><img src="../assets/Bugzilla_Image_8a.png" alt="" width="1200"></div>
 
 ## Mapping checkpoints for Bugzilla as the target system
 
