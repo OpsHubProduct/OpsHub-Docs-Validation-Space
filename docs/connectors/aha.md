@@ -140,7 +140,7 @@ Set the **Query** as per Aha! encoded query format. Criteria is only applicable 
 | `q`                      | Synchronize all entities named as 'test feature'                     | q=test%20feature                                                                          |
 | `updated_since`          | Synchronize all entities updated after 10 March 2021                 | <p>updated_since=2021-03-10T00%3A00%3A00.000Z<br>Format: yyyy-MM-dd'T'HH:mm:ss.SSS'Z'</p> |
 | `tag`                    | Synchronize all entities associated with the tag 'need review'       | tag=need%20review                                                                         |
-| `assigned_to_user`       | Synchronize all entities assigned to user 'ABC'                      | Filter can be applied on User ID or User email.<br> For an example, assigned_to_user=7163902316942030700 assigned_to_user=email%40opshub.com <br>Here, 7163902316942030700 is the id of the user 'ABC'.  |
+| `assigned_to_user`       | Synchronize all entities assigned to user 'ABC'                      | Filter can be applied on User ID or User email.<br> For an example, assigned_to_user=7163902316942030700 /assigned_to_user=email%40opshub.com <br>Here, 7163902316942030700 is the id of the user 'ABC'.  |
 | `updated_since` + `name` | Synchronize entities named 'test r &d' and updated after 10 Mar 2021 | updated _since=2021-03-10T00%3A00%3A00.000Z &q=test%20r%26d                               |
 
 ## Target LookUp Configuration
