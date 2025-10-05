@@ -189,7 +189,7 @@ For example, for commit information, if your commit message is:
   <img src="../assets/GH7a.png" width="1000"/>
 </p>
 
-For knowing the behavior on RegEx matching multiple work items ids, please refer to section [RegEx Known Behavior](#GitHub_KnownBehavior).
+For knowing the behavior on RegEx matching multiple work items ids, please refer to section [RegEx Known Behavior](#known-behaviors).
 
 ## Configuring Window Size for delayed commits
 
@@ -208,7 +208,7 @@ Window size for delay commit means the number of days for which the delayed comm
 Days interval for data reading configures the window for which entities will be polled in one job cycle. For example, if the value is 10, then the data will be polled in intervals of 10 days in one job cycle. The default polling window is 30 days, i.e. entities will be polled for 30 days in one job cycle. This parameter helps in reducing the load on end system.
 
 <p align="center">
-  <img src="../assets/GH9a.png" alt="GH9a" width="1000"/>
+  <img src="../assets/GH9a.png" width="1000"/>
 </p>
 
 ## Criteria Configuration
@@ -301,31 +301,31 @@ Refer to document [Search Syntax in GitHub](https://help.github.com/en/github/se
 * Click on your user name at top right corner and select **Settings** option.
 
 <p align="center">
-  <img src="../assets/GH2a.png" alt="GH2a" width="900"/>
+  <img src="../assets/GH2a.png" width="900"/>
 </p>
 
 * Select **Developer Settings** as shown below:
 
 <p align="center">
-  <img src="../assets/GH3a.png" alt="GH3a" width="900"/>
+  <img src="../assets/GH3a.png"  width="900"/>
 </p>
 
 * Select **Personal access tokens** and click **Generate new token** option:
 
 <p align="center">
-  <img src="../assets/GH4a.png" alt="GH4a" width="900"/>
+  <img src="../assets/GH4a.png" width="900"/>
 </p>
 
 * Provide the Note for the token and select **repo** scope. Then click **Generate token** button at the bottom:
 
 <p align="center">
-  <img src="../assets/GH5a.png" alt="GH5a" width="900"/>
+  <img src="../assets/GH5a.png" width="900"/>
 </p>
 
 * Copy the token value and save it for future use:
 
 <p align="center">
-  <img src="../assets/GH6a.png" alt="GH6a" width="900"/>
+  <img src="../assets/GH6a.png"  width="900"/>
 </p>
 
 ## Understanding JSON Metadata Input
@@ -453,4 +453,5 @@ Refer to document [Search Syntax in GitHub](https://help.github.com/en/github/se
 	]
 }
 ```
+
 
