@@ -3,12 +3,8 @@
 ## User privileges
 
 Create one GitHub user for the repository(s) that is a part of synchronization. User should be dedicated to **OpsHub Integration Manager** and should not be used for any other operations from system's user interface.  
-<br>
-
 GitHub supports only Personal Access Token Authentication:  
-* Personal Access Token Authentication - The integration user should be added as a collaborator in the repository which is to be synced. Additionally, the following set of scopes are required while creating Personal Access Token for synchronization.*
-
-<br>
+* Personal Access Token Authentication - The integration user should be added as a collaborator in the repository which is to be synced. Additionally, the following set of scopes are required while creating Personal Access Token for synchronization.
 
 | **Entity Type** | **Permission/Role** |
 |------------------|---------------------|
@@ -16,9 +12,8 @@ GitHub supports only Personal Access Token Authentication:
 | **Pull Request** | repo: repo:status, repo_deployment, public_repo and repo:invite |
 | **Issue** | User should be added as a collaborator for the repository |
 
-<br>
-Refer to section [Creating Personal Access Token](#create-personal-access-token) of appendix on how to create Personal Access Token.
 
+Refer to section [Creating Personal Access Token](#create-personal-access-token) of appendix on how to create Personal Access Token.
 
 # System Configuration
 
@@ -307,25 +302,25 @@ Refer to document [Search Syntax in GitHub](https://help.github.com/en/github/se
 * Select **Developer Settings** as shown below:
 
 <p align="center">
-  <img src="../assets/GH3a.png"  width="900"/>
+  <img src="../assets/GH3a.png"  width="1200"/>
 </p>
 
 * Select **Personal access tokens** and click **Generate new token** option:
 
 <p align="center">
-  <img src="../assets/GH4a.png" width="900"/>
+  <img src="../assets/GH4a.png" width="1200"/>
 </p>
 
 * Provide the Note for the token and select **repo** scope. Then click **Generate token** button at the bottom:
 
 <p align="center">
-  <img src="../assets/GH5a.png" width="900"/>
+  <img src="../assets/GH5a.png" width="1200"/>
 </p>
 
 * Copy the token value and save it for future use:
 
 <p align="center">
-  <img src="../assets/GH6a.png"  width="900"/>
+  <img src="../assets/GH6a.png"  width="1200"/>
 </p>
 
 ## Understanding JSON Metadata Input
@@ -453,5 +448,6 @@ Refer to document [Search Syntax in GitHub](https://help.github.com/en/github/se
 	]
 }
 ```
+
 
 
