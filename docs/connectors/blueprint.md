@@ -59,13 +59,13 @@ If an inline image is present in a rich text type of field in Blueprint, and the
 For example if an inline image is added in blueprint description field as below:
 
 <p align="center">
-  <img src="../assets/BP.png" />
+  <img src="../assets/BP.png" width="400" />
 </p>
 
 It will be visible as below in target system:
 
 <p align="center">
-  <img src="../assets/BP1.png" />
+  <img src="../assets/BP1.png" width="400"/>
 </p>
 
 # Criteria Configuration
@@ -109,11 +109,11 @@ To create a new custom field in the blueprint, follow the steps given below:
 6. Click on **Save**.
 
 <p align="center">
-  <img src="../assets/custom1a.png" />
+  <img src="../assets/custom1a.png" width="800"/>
 </p>
 
 <p align="center">
-  <img src="../assets/custom2.png" />
+  <img src="../assets/custom2.png" width="800"/>
 </p>
 
 ## Add User
@@ -123,20 +123,20 @@ To add new user to the blueprint, follow the steps given below:
 - Bring up the Instance Administration page by selecting **Menu → Manage → Instance Administration**.
 
 <p align="center">
-  <img src="../assets/usera.png" />
+  <img src="../assets/usera.png" width="800"/>
 </p>
 
 - Click on **Users** under **Manage Users and Group** on top panel. Click on **New → New Database/Windows User.**
 
 <p align="center">
-  <img src="../assets/user8.png" />
+  <img src="../assets/user8.png" width="800"/>
 </p>
 
 - Provide details as shown below.  
   There are various **Instance Administrator Roles** and the allowed accesses to them are mentioned there, for example **Default Instance Administrator** is an *Instance administrator role with all instance privileges for managing the instance, all projects and access to all project data*. This is the highest level of privileges that can be given to a user. For minimum required privileges do not assign any **Instance Administrator Role** to the user and continue with the steps below.
 
 <p align="center">
-  <img src="../assets/user1a.png" />
+  <img src="../assets/user1a.png" width="800"/>
 </p>
 
 - Click on **Add** and add the user to a group with License Author as shown below and click **OK**.
@@ -146,17 +146,17 @@ If no such group is present then on the top panel click on **Manage Users and Gr
 A new window will open up where you can click on **New** to create a group with **Author** license. After the group has been created add the user to it.
 
 <p align="center">
-  <img src="../assets/user2.png" />
+  <img src="../assets/user2.png" width="800"/>
 </p>
 
 <p align="center">
-  <img src="../assets/user3a.png" />
+  <img src="../assets/user3a.png" width="800"/>
 </p>
 
 - Now click on **Projects** in the top panel (or **Home → Projects**), then **right click on the project** that you want the user to manage and select **Launch Project Administration**.
 
 <p align="center">
-  <img src="../assets/user4.png" />
+  <img src="../assets/user4.png" width="800"/>
 </p>
 
 - Click on **Project Roles**, here you can check all the roles that can be assigned to a user.  
@@ -165,18 +165,19 @@ A new window will open up where you can click on **New** to create a group with 
   Let us suppose **Author** has the required minimum privileges which are mentioned above.
 
 <p align="center">
-  <img src="../assets/user5.png" />
+  <img src="../assets/user5.png" width="800"/>
 </p>
 
 - Click on **Home → Project Role Assignments** in Project Administration and click on **New.**  
   A new window will open up where you can select the group in which you added the user previously and select the **Project Role** as **Author** which has the minimum required privileges.
 
 <p align="center">
-  <img src="../assets/user6.png" />
+  <img src="../assets/user6.png"width="800"  />
 </p>
 
 <p align="center">
-  <img src="../assets/user7.png" />
+  <img src="../assets/user7.png" width="800"/>
 </p>
 
 - Click **Save** and you are done.
+
