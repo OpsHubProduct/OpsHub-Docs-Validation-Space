@@ -11,7 +11,7 @@
 Before configuring the integration, user must first configure Gerrit. Refer to [System Configuration](../integrate/system-configuration.md) page to learn the step-by-step process to configure a system.
 
 <p align="center">
-  <img src="../assets/GerritSystemForm.png" width="900">
+  <img src="../assets/GerritSystemForm.png" width="1500">
 </p>
 
 ## Gerrit System Form Details
@@ -47,7 +47,7 @@ A sample JSON for Review Label is given below:
 Map the fields between Gerrit and the other system to be integrated to ensure data synchronizes correctly. Refer to [Mapping Configuration](../integrate/mapping-configuration.md) page for step-by-step process to configure mapping between the systems.
 
 <p align="center">
-  <img src="../assets/GerritMapping.png" width="1000">
+  <img src="../assets/GerritMapping.png" width="2000">
 </p>
 
 # Integration Configuration
