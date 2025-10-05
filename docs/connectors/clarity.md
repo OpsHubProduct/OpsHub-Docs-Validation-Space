@@ -33,7 +33,7 @@ Refer to the screenshot given below:
 **Clarity form details**
 
 | **Field Name**       | **Description**                                                                                   |
-|       -|                                 |
+|                     -|                                 
 | System Name          | Provide the system name                                                                            |
 | Version              | Provide the version of Clarity. To know the version of the Clarity system, refer to [How to find Clarity Version](#how-to-find-clarity-version) in Appendix. |
 | URL                  | The URL is used for connecting to Clarity REST API. For example: https://[domainOfYourClarityPPMInstance] |
@@ -189,7 +189,7 @@ Click [Integration Configuration](../integrate/integration-configuration.md) to 
 * For fetching internal name for queries, refer to [How to get field's Internal name](#how-to-get-fields-internal-name).
 
 | **Field Type**       | **Criteria Description**                                                                 | **Criteria snippet**                                |
-|       -|                              |                  |
+|                     -|                                                                                          |                                                     |
 | Lookup               | Synchronize all entities which have certain value in Lookup. Value = internal id        | (status = 1)                                         |
 | Text                 | Synchronize all entities which has 'UI' in a custom text field 'Effected Area'          | (c_effectedarea = 'UI')                              |
 | Boolean              | Synchronize all entities which have true in 'In Plan' Boolean type of field             | (inPlan = true)                                      |
@@ -389,5 +389,6 @@ Given below are the sample snippets of how the queries can be used as target ent
 <p align="center">
   <img src="../assets/CAPPM_Custom_Object_3.png" width="900" />
 </p>
+
 
 
