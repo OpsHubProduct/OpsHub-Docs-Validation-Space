@@ -12,7 +12,7 @@ Before you continue to the integration, you must first configure CA Service Desk
 Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.
 Refer the screenshot given below for reference.
 
-<div align="center"><img src="../assets/CASDM_Image_1a.png" alt="" width="800"></div>
+<div align="center"><img src="../assets/CASDM_Image_1a.png" alt="" width="1500"></div>
 
 If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
@@ -39,20 +39,20 @@ To configure criteria in CA Service Desk Manager, integration needs to be create
 * Polling all projects with status set to Acknowledged
     * User can view the status list of Request/ Incident/ Problem by Administration -> Service Desk -> Requests/Incidents/Problems -> Status.
 
-<div align="center"><img src="../assets/CASDM_Image_2a.png" alt="" width="800"></div>
+<div align="center"><img src="../assets/CASDM_Image_2a.png" alt="" width="1000"></div>
 
-<div align="center"><img src="../assets/CASDM_Image_3.png" alt="" width="800"></div>
+<div align="center"><img src="../assets/CASDM_Image_3.png" alt="" width="1000"></div>
 
 * Polling all projects with Areas set to Applications
   * For example, (Areas='Active') where Active = Record Status for symbol "Applications" User can view the Areas list of Request/Incident/Problem by Administration -> Service Desk -> Requests/Incidents/Problems -> Areas
 
-<div align="center"><img src="../assets/CASDM_Image_4a.png" alt=" width="800"></div>
+<div align="center"><img src="../assets/CASDM_Image_4a.png" alt=" width="1000"></div>
 
-<div align="center"><img src="../assets/CASDM_Image_5.png" alt="" width="800"></div>
+<div align="center"><img src="../assets/CASDM_Image_5.png" alt="" width="1000"></div>
 
 Go to the Criteria Configuration section on the [Integration Configuration](../integrate/integration-configuration.md) page to learn more.
 
-## Known Limitations
+# Known Limitations
 
 * Fields under properties tab of Additional Information are not supported for integration.
 * For synchronization from CA Service Desk Manager to any other system, entity update is needed when the comment is added from API to the source entity. This situation can occur for three-end systems integration where CA Service Desk Manager is the middle system. For example, integration from system A to CA Service Desk Manager and from CA Service Desk Manager to system B. So, if comment is added in CA Service Desk Manager from A system, then entity update is needed in CA Service Desk Manager to sync that comment to C system.
@@ -60,6 +60,4 @@ Go to the Criteria Configuration section on the [Integration Configuration](../i
 * Link type attachments are not supported in CA Service Desk Manager. These types of attachments need to be skipped by using appropriate advance mapping.
 * If other complex objects are created in CA Service Desk Manager schema, these complex objects are also displayed as lookup at field mapping.
 * If property fields are mapped and problem area (for problem entity), incident area (for incident entity), request area (for request entity), or category for change order entity, issue category for issue entity are not mapped, property fields will be added to the entity rather than the corresponding area.
-* Property fields that belongs to other area (Hardware, application, network) or category (hardware.pc.install, software.pc.install) than the selected ones will not be synchronized to the target system even when they are mapped. For example, property p1, p2 belongs to application area and property p3, p4 belongs to hardware area and one mapped property fields p3, p4 along with p1, p2. Then, only p1 and p2 are synchronized to the target system
-* If property fields are mapped and problem area (for problem entity), incident area (for incident entity), request area (for request entity), or category for change order entity, issue category for issue entity are not mapped, property fields will be added to the entity rather than the corresponding area.
-* Property fields that belong to other area (Hardware, application, network) or category (hardware.pc.install, software.pc.install) than the selected ones will not be synchronized to the target system even when they are mapped. For example, property p1, p2 belong to application area and property p3, p4 belong to hardware area and one mapped property fields p3, p4 along with p1, p2. Then, only p1 and p2 are synchronized to the target system.
+* Property fields that belongs to other area (Hardware, application, network) or category (hardware.pc.install, software.pc.install) than the selected ones will not be synchronized to the target system even when they are mapped. For example, property p1, p2 belongs to application area and property p3, p4 belongs to hardware area and one mapped property fields p3, p4 along with p1, p2. Then, only p1 and p2 are synchronized to the target system.
