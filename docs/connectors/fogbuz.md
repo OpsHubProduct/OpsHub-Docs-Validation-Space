@@ -100,7 +100,7 @@ Click [Create Custom Fields](#create-custom-fields) to learn how to create custo
   <img src="../assets/FB_Image_7.png" width="1000">
 </p>
 <p align="center">
-  <img src="../assets/FB_Image_8.png" >
+  <img src="../assets/FB_Image_8.png" wid >
 </p>
 
 ## How to get API URL and Version?
