@@ -23,7 +23,7 @@
 Before you continue with the integration, you must first configure Digital.ai Agility. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system. Refer to the screenshot given below:
 
 <p align="center">
-  <img src="../assets/Digital.ai_Agility1a.png"/>
+  <img src="../assets/Digital.ai_Agility1a.png" width="900"/>
 </p>
 
 
@@ -115,15 +115,17 @@ Click [Integration Configuration](../integrate/integration-configuration.md) to 
 </p>
 
 
-**Note:** As per OpsHub Integration Manager's default behavior, when you integrate projects that have child projects, child projects' entities also sync when integration starts.
-
-Look at the sample below. The 'Demo Project' shown here has two child projects as well. That means when you integrate 'Demo Project', child projects within it - CAB Approval and eCAB Approval - will also sync by default.
+**Note:** As per OpsHub Integration Manager's default behavior, when you integrate projects that have child projects, child projects' entities also sync when integration starts. Look at the sample below. The 'Demo Project' shown here has two child projects as well. That means when you integrate 'Demo Project', child projects within it - CAB Approval and eCAB Approval - will also sync by default.
 
 <p align="center">
   <img src="../assets/VersionOne_Project_Selection.png" />
 </p>
 
 To avoid this behavior, you can configure criteria in a manner that child projects are excluded during the integration. For example, you can set a query that specifies that data from only the project in the given integration's scope has to be synchronized.
+
+The criteria query, in this case, should be: Scope.Name = 'Project Name for which entities needs to be sync'.
+
+Let's look at the example below. In this case, 'Demo Project' is the parent project with child projects within. Now, as we only want to integrate the parent project, choose 'Yes' in the Criteria Configuration drop-down field and add the query in the format give above i.e. Scope.Name = 'Demo Project'.
 
 The criteria query, in this case, should be:  
 **Scope.Name = 'Project Name for which entities needs to be sync'.**
@@ -132,17 +134,14 @@ Example:
 **Scope.Name = 'Demo Project'**
 
 <p align="center">
-  <img src="../assets/VersionOne_Project_Selection_Criteria.png" />
+  <img src="../assets/VersionOne_Project_Selection_Criteria.png" width="900"/>
 </p>
 
-
-To sync multiple projects, the criteria query should be:  
-**Scope.Name='Project 1'\|Scope.Name='Project 2'**
+You can sync multiple projects as well. The criteria query, in this case, should be Scope.Name='Project 1'|Scope.Name='Project 2' as shown below: 
 
 <p align="center">
-  <img src="../assets/VersionOne_Multi_Project_Selection.png" />
+  <img src="../assets/VersionOne_Multi_Project_Selection.png" width="900"/>
 </p>
-
 
 Click [Criteria Configuration](#criteria-configuration) to learn how to configure criteria.
 
@@ -226,7 +225,6 @@ Where `Priority.Name` is a valid field on which one can specify query.
 * An example of criteria with 'contains on text field or created by (or some other user field) = some user':  
   `CreatedBy.Username="syncuser"`
 
----
 
 # Known Limitations
 
@@ -276,17 +274,14 @@ When Digital.ai Agility is the source system, and the user type field is mapped 
 
 ## Find the version of Digital.ai Agility Instance
 
-1. Open Digital.ai Agility instance login page e.g.,  
-   [https://www1.v1host.com/<appinstance>](https://www1.v1host.com/<appinstance>)
+1. Open Digital.ai Agility instance login page e.g.,  [https://www1.v1host.com/<appinstance>](https://www1.v1host.com/<appinstance>)
 
 2. You can find the version of Digital.ai Agility instance on this page as shown in the image below:
    
 <p align="center">
-  <img src="../assets/Digital.ai_Agility.png"/>
+  <img src="../assets/Digital.ai_Agility.png" width="900"/>
 </p>
 
-
----
 
 ## How to add permissions on Project
 
@@ -295,7 +290,7 @@ When Digital.ai Agility is the source system, and the user type field is mapped 
 3. In **Projects** tab navigate to **Member Roles** tab and find the project on which permission need to be granted.
 
 <p align="center">
-  <img src="../assets/Digital.ai_Agility2.png" />
+  <img src="../assets/Digital.ai_Agility2.png" width="900" />
 </p>
 
 
@@ -303,18 +298,16 @@ When Digital.ai Agility is the source system, and the user type field is mapped 
 4. Click on **Manage** button in front of the project.
 
 <p align="center">
-  <img src="../assets/Digital.ai_Agility3.png" />
+  <img src="../assets/Digital.ai_Agility3.png"  width="900"/>
 </p>
 
 
 5. For the user, select the role and click on **Apply** on the right-hand corner of the pop-up to save the changes.
 
 <p align="center">
-  <img src="../assets/Digital.ai_Agility4.png" />
+  <img src="../assets/Digital.ai_Agility4.png" width="900"/>
 </p>
 
-
----
 
 ## Custom Fields
 
@@ -326,14 +319,14 @@ To create a custom field in **Digital.ai Agility**:
 4. Select **Configuration > Custom Fields**.
    
 <p align="center">
-  <img src="../assets/Digital.ai_Agility5.png" />
+  <img src="../assets/Digital.ai_Agility5.png" width="900"/>
 </p>
 
 
 5. Click on the **Add Field** button in the row of the relevant asset in which you want to add the custom field (this is the story type configured in integration).
 
 <p align="center">
-  <img src="../assets/Digital.ai_Agility6.png" />
+  <img src="../assets/Digital.ai_Agility6.png" width="900" />
 </p>
 
 
@@ -342,40 +335,41 @@ To create a custom field in **Digital.ai Agility**:
 8. Click on OK.
 
 <p align="center">
-  <img src="../assets/Digital.ai_Agility7.png"/>
+  <img src="../assets/Digital.ai_Agility7.png" width="900"/>
 </p>
 
 
 9. Click on **Publish Changes**, shown in the previous window.  
 10. After field is created, System Name of the field is the Internal Name of custom fields.
 
----
 
 ## Inline Image Support for Digital.ai Agility
 
 You can add inline images in rich text type of fields from Digital.ai Agility UI. Such inline images will get synchronized from Digital.ai Agility to the target system. When Digital.ai Agility is your target system, then an inline image is just visible in the rich text type fields and not as an attachment.
 
----
 
 ## How to find out the project id
 
 * Navigate to Admin > Projects as shown in the image below.
 
 <p align="center">
-  <img src="../assets/Digital.ai_Agility8.png" />
+  <img src="../assets/Digital.ai_Agility8.png"  width="900"/>
 </p>
  
 
 * Open the project in a new tab, which is configured in integration as shown in the image below:
 
 <p align="center">
-  <img src="../assets/Digital.ai_Agility9.png" />
+  <img src="../assets/Digital.ai_Agility9.png" width="900"/>
 </p>
 
 
 * Copy the project id from Digital.ai Agility URL as shown in the image below:
 
-![Digital.ai Agility10](../assets/Digital.ai_Agility10.png)  
-<center>*Digital.ai Agility Project Management*</center>
+<p align="center">
+  <img src="../assets/Digital.ai_Agility10.png" width="900">
+</p>
+
+
 
 
