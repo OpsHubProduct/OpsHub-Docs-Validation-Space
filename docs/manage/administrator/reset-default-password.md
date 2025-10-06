@@ -1,6 +1,6 @@
 
 
-# Logging in to OpsHub Integration Manager (OIM) for the first time
+# Logging in to <code class="expression">space.vars.SITENAME</code> (OIM) for the first time
 
 Use **admin** as User Name and **password** as Password for log-in after installation.
 

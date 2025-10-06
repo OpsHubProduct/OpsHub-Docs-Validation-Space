@@ -1,30 +1,30 @@
 # Overview
 
-{{SITENAME}} has rich user interface for achieving the integration configurations and using other functionality of {{SITENAME}}. However, there can be various cases where the user might need to achieve/use them programmatically, i.e., with the external script, external software program, or with some API client, and {{SITENAME}} API is useful in such cases. It is an alternate way to communicate with the {{SITENAME}}.
+<code class="expression">space.vars.SITENAME</code> has rich user interface for achieving the integration configurations and using other functionality of <code class="expression">space.vars.SITENAME</code>. However, there can be various cases where the user might need to achieve/use them programmatically, i.e., with the external script, external software program, or with some API client, and <code class="expression">space.vars.SITENAME</code> API is useful in such cases. It is an alternate way to communicate with the <code class="expression">space.vars.SITENAME</code>.
 
-The {{SITENAME}} API is organized around REST and uses [JSON](https://www.json.org/json-en.html) format for data exchange.
+The <code class="expression">space.vars.SITENAME</code> API is organized around REST and uses [JSON](https://www.json.org/json-en.html) format for data exchange.
 
-To have a quick look on the use cases samples and {{SITENAME}} API usage examples, please refer to [Use Cases](sample-use-cases.md).
+To have a quick look on the use cases samples and <code class="expression">space.vars.SITENAME</code> API usage examples, please refer to [Use Cases](sample-use-cases.md).
 
 # Prerequisites
 
-Following are the prerequisites to use {{SITENAME}} API:
+Following are the prerequisites to use <code class="expression">space.vars.SITENAME</code> API:
 
-## Access to {{SITENAME}} Instance
+## Access to <code class="expression">space.vars.SITENAME</code> Instance
 
-- An active instance of {{SITENAME}} which needs to be accessible from the machine/[platform](#platforms) for invoking the {{SITENAME}} API.
-- URL of {{SITENAME}} instance. Example: `http://10.13.20.20:8989/OIM/` or `https://10.13.20.20:8443/OIM/`.
-- User credentials for accessing the {{SITENAME}} instance.  
+- An active instance of <code class="expression">space.vars.SITENAME</code> which needs to be accessible from the machine/[platform](#platforms) for invoking the <code class="expression">space.vars.SITENAME</code> API.
+- URL of <code class="expression">space.vars.SITENAME</code> instance. Example: `http://10.13.20.20:8989/OIM/` or `https://10.13.20.20:8443/OIM/`.
+- User credentials for accessing the <code class="expression">space.vars.SITENAME</code> instance.  
 >**Note**: Please refer to [Validate access](#validate-access-to-opshub-integration-manager-instance) for validating this prerequisite.
 
 ## API License
 
-- Usage of {{SITENAME}} API requires "API" add-on in the {{SITENAME}} license.  
->**Note**: Please refer to [Validate API feature](#validate-api-feature) to determine whether the "API" feature is enabled or not on your {{SITENAME}} instance.
+- Usage of <code class="expression">space.vars.SITENAME</code> API requires "API" add-on in the <code class="expression">space.vars.SITENAME</code> license.  
+>**Note**: Please refer to [Validate API feature](#validate-api-feature) to determine whether the "API" feature is enabled or not on your <code class="expression">space.vars.SITENAME</code> instance.
 
 ## Platforms
 
-- {{SITENAME}} APIs can be invoked from the platform which can make the REST API Calls.
+- <code class="expression">space.vars.SITENAME</code> APIs can be invoked from the platform which can make the REST API Calls.
   - API client such as [postman](https://www.postman.com/).
   - Programs written in any programing language which has support for HTTP or HTTPS communication.
   - Command line tool such as [curl](https://curl.se/).
@@ -33,7 +33,7 @@ Following are the prerequisites to use {{SITENAME}} API:
 
 Access to API will be available for your instance with URL like below:
 
-<center><code>&lt;Protocol&gt;://&lt;Host Name or IP address of {{SITENAME}} instance&gt;:&lt;Port Number&gt;/OIM/rest/api/docs</code></center>
+<center><code>&lt;Protocol&gt;://&lt;Host Name or IP address of <code class="expression">space.vars.SITENAME</code> instance&gt;:&lt;Port Number&gt;/OIM/rest/api/docs</code></center>
 
 **For example** – If the application url of {{SITENAME}} is `http://10.13.20.20:8989/OIM/`, then the Swagger UI will be available at `http://10.13.20.20:8989/OIM/rest/api/docs`.
 
@@ -59,7 +59,7 @@ To check whether the "API" feature is enabled in the {{SITENAME}} or not, please
 
  >**Note**: If this feature is disabled, and you have the license in which this feature is available, then please [install](Managing_Licenses) the correct license. If you don’t have a valid license, please reach out to OpsHub Sales/Support team for receiving the appropriate license.
 
-## Validate access to OpsHub Integration Manager instance
+## Validate access to <code class="expression">space.vars.SITENAME</code> instance
 
 To check whether the {{SITENAME}} instance is accessible or not, please perform the below steps:
 

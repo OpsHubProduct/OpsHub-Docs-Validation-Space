@@ -5,7 +5,7 @@ To retrieve and modify Integration Pair Log Settings.
 # Input
 
 - Instance details:
-  - Instance details like OpsHub Integration Manager instance URL, username and password are to be given in **instanceDetails.properties** file available within the script.
+  - Instance details like <code class="expression">space.vars.SITENAME</code> instance URL, username and password are to be given in **instanceDetails.properties** file available within the script.
 
 - Integration details (to be given at the time of script execution):
   - Integration Group id of the entity pair for which you want to retrieve or modify the logSettings.

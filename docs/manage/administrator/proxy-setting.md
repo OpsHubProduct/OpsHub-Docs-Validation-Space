@@ -1,4 +1,4 @@
-You need to configure proxy settings to be able to access the external resources from the machine which is behind a proxy server or when OpsHub Integration Manager is behind a proxy server.
+You need to configure proxy settings to be able to access the external resources from the machine which is behind a proxy server or when <code class="expression">space.vars.SITENAME</code> is behind a proxy server.
 
 # How to Configure Proxy Settings
 

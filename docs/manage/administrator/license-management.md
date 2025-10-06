@@ -54,14 +54,14 @@ A pop-up with **License Details** will open.
 
 # License Expiry Notification
 
-* **OpsHub Integration Manager UI Notifications**
-  * On OpsHub Integration Manager, upon login, upcoming license expiry warning notifications will be shown for each license starting 60 days till its expiry date.
+* **<code class="expression">space.vars.SITENAME</code> UI Notifications**
+  * On <code class="expression">space.vars.SITENAME</code>, upon login, upcoming license expiry warning notifications will be shown for each license starting 60 days till its expiry date.
   **Note** : No additional configuration is required to enable the same.
 
 * **Mail Notifications**
   * To get mail notifications regarding each upcoming license expiry, the SMTP mail server notifications can be configured
   * Refer to [Creating SMTP System](../../help-center/troubleshooting/configure-post-failure-notification.md#smtp-configuration) for creating an SMTP system.
-  * SMTP Mail Client system must be created in OpsHub Integration Manager and configured in **OpsHub System** under **SMTP System For Notification**.
+  * SMTP Mail Client system must be created in <code class="expression">space.vars.SITENAME</code> and configured in **OpsHub System** under **SMTP System For Notification**.
     
  <p align="center">
   <img src="../../assets/OpsHubSystemSMTP.png" width="900"/>
@@ -69,7 +69,7 @@ A pop-up with **License Details** will open.
 
   * Mails will be sent out to the **to** and **cc** configured in SMTP system.
   * It will notify the configured SMTP system regarding upcoming expiry at intermittent intervals starting from 60 days before its expiry date. It will send out mail notifications on 60, 45, 30, 15, and from 10 days until 1 day before the expiry of any license.
-  * If for any reason (such as the SMTP mail server is not connected or SMTP system configuration is not valid or OpsHub Integration Manager is down) license expiry notification doesn't come, it will be logged in OpsHub Integration Manager logs.
+  * If for any reason (such as the SMTP mail server is not connected or SMTP system configuration is not valid or <code class="expression">space.vars.SITENAME</code> is down) license expiry notification doesn't come, it will be logged in <code class="expression">space.vars.SITENAME</code> logs.
 
 # Uninstall License
 
@@ -98,7 +98,7 @@ For procuring a license, you have to contact our [Sales](mailto:sales@opshub.com
 
 If you want to renew your license, send your current license number and your requirement to our sales/support representatives.
 
-OpsHub Integration Manager works best with the following browsers: Google Chrome, Mozilla Firefox, and Safari.
+<code class="expression">space.vars.SITENAME</code> works best with the following browsers: Google Chrome, Mozilla Firefox, and Safari.
 
 
 

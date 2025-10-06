@@ -1,10 +1,10 @@
 
 # Overview
 
-* The **Purge** feature in OpsHub Integration Manager helps users clean up old or unnecessary data associated with integration configuration changes or previously synchronized records.
+* The **Purge** feature in <code class="expression">space.vars.SITENAME</code> helps users clean up old or unnecessary data associated with integration configuration changes or previously synchronized records.
 * Following are the types of **Purge** provided:
   * **Audit Logs**: It enables users to purge different types of change logs, such as **Excel upload audits**, **Job schedule audits**, **Roles audits**, etc. Refer to the [Purge Audit Logs](purge-records.md#purge-audit-logs) section for more details.
-  * **Integrated Data Records**: It enables users to purge integrated data records from the OpsHub Integration Manager database. Refer to the [Purge Integrated Data Records](purge-records.md#purge-integrated-data-records) section for more details.
+  * **Integrated Data Records**: It enables users to purge integrated data records from the <code class="expression">space.vars.SITENAME</code> database. Refer to the [Purge Integrated Data Records](purge-records.md#purge-integrated-data-records) section for more details.
 
 ## Steps to access the Purge Feature
 
@@ -68,7 +68,7 @@ Audit Logs of all the selected components before the specified date in the **Pur
 
 ## Overview
 
-* The **Purge Integrated Data Records** feature allows users to clean up integrated data directly from the OpsHub Integration Manager user interface, eliminating the need for standalone SQL utilities.
+* The **Purge Integrated Data Records** feature allows users to clean up integrated data directly from the <code class="expression">space.vars.SITENAME</code> user interface, eliminating the need for standalone SQL utilities.
   * This improves usability and accessibility and simplifies the cleanup process.
 * This feature is especially useful in **re-sync** or **re-migration** scenarios, where previously synchronized data needs to be purged before initiating a new sync.
 * Users can filter and control purge operations based on the following:
@@ -80,7 +80,7 @@ Audit Logs of all the selected components before the specified date in the **Pur
 
 ### User privileges
 
-Following are the privileges required for the dedicated {{SITENAME}} user to purge synchronized entities:
+Following are the privileges required for the dedicated <code class="expression">space.vars.SITENAME</code> user to purge synchronized entities:
 
 **Required role**
 
@@ -179,7 +179,7 @@ Refer to the [Permissions and Corresponding Actions](role-configuration.md#permi
      1. **Warning Alert:** The selected records will be marked as deleted in the OpsHub database. These records will be recreated during resynchronization. A backup of the database is strongly recommended before proceeding.
      2. **Records Preview Table:** Users can review detailed information about the records being purged, including integration name, systems involved, projects, entity types, and IDs.
      3. **Export Option:** An option to export the record list as a CSV file is available for offline review or audit purposes. The file will be downloaded to the **Downloads** folder in the user end-system.
-     4. **Data Preservation:** All deleted records are saved as CSV files in the {{SITENAME}} directory, `@INSTALLATION_PATH@\AppData\PurgedRecords` and kept permanently unless manually removed.
+     4. **Data Preservation:** All deleted records are saved as CSV files in the <code class="expression">space.vars.SITENAME</code> directory, `@INSTALLATION_PATH@\AppData\PurgedRecords` and kept permanently unless manually removed.
 
 Click on **Purge** to purge the selected records from the **OpsHub** database.
 
@@ -187,9 +187,9 @@ Click on **Purge** to purge the selected records from the **OpsHub** database.
 
 ### End System Data Not Cleaned Before Purging
 
-* Before purging records from {{SITENAME}}, make sure the synced data is also deleted or archived in the target (end) system.
-* If the end system still holds the data, {{SITENAME}} will lose reference to it after purge.
-* Upon reactivating the integration, {{SITENAME}} will treat the existing entities in the end system as new, resulting in:
+* Before purging records from <code class="expression">space.vars.SITENAME</code>, make sure the synced data is also deleted or archived in the target (end) system.
+* If the end system still holds the data, <code class="expression">space.vars.SITENAME</code> will lose reference to it after purge.
+* Upon reactivating the integration, <code class="expression">space.vars.SITENAME</code> will treat the existing entities in the end system as new, resulting in:
   * Duplicate records
   * Orphaned entities
   * Data inconsistencies and potential sync conflicts
@@ -209,14 +209,14 @@ Click on **Purge** to purge the selected records from the **OpsHub** database.
 
 ### Data Recovery and Audit Trail
 
-* All purged records are automatically saved as CSV files in the {{SITENAME}} installation directory:
+* All purged records are automatically saved as CSV files in the <code class="expression">space.vars.SITENAME</code> installation directory:
   `@INSTALLATION_PATH@\AppData\PurgedRecords`
 * Each purge operation generates a unique timestamped file, maintaining a complete audit trail of all cleanup operations.
 * These logs are kept permanently unless explicitly deleted.
 
 ### Selective Purging Based on Filters
 
-* If no specific integration or entity type filters are applied, {{SITENAME}} purges data for **all configured integrations and entity types** between the selected source and target systems.
+* If no specific integration or entity type filters are applied, <code class="expression">space.vars.SITENAME</code> purges data for **all configured integrations and entity types** between the selected source and target systems.
 * **Warning:** Use with caution, broad scope purging to avoid removing unintended data.
 
 ### REST API implementation

@@ -2,7 +2,7 @@
 
 ## User Privileges
 
-* Create one administrator user of Enterprise Architect System , dedicated to \{{ spaceName \}}, only if the projects which will be used for synchronization have enabled security settings in Enterprise Architect System. This dedicated user should not do any operations from the system’s user interface.
+* Create one administrator user of Enterprise Architect System , dedicated to <code class="expression">space.vars.SITENAME</code>, only if the projects which will be used for synchronization have enabled security settings in Enterprise Architect System. This dedicated user should not do any operations from the system’s user interface.
 * User should have access to all the projects that need to be synchronized.
 
 > **Note**: The Enterprise Architect app must **NOT** be configured to 'Run this program as an Administrator'. If the user is facing the error, 'Retrieving the COM class factory for component with CLSID {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} failed due to the following error: 800702e4. The requested operation requires elevation.', then check if Enterprise Architect is configured to run as administrator. Uncheck this option if selected in the Compatibility tab in its Properties.
@@ -19,18 +19,18 @@
 ## Setting up OpsHubEAWindowsService
 
 * Check the availability of port 9393 as OpsHubEAWindowsService will be using port 9393 by default. Refer to [How to Change the Port of OpsHubEAWindowsService](enterprise-architect.md#how-to-change-the-port-of-opshubeawindowsservice) section to change the default port of the OpsHubEAWindowsService.
-* Locate the path `<{{ spaceName }}_INSTALLATION_PATH>\Other_Resources\Resources`.
+* Locate the path `<<code class="expression">space.vars.SITENAME</code>_INSTALLATION_PATH>\Other_Resources\Resources`.
 * Extract the OpsHubEAService.zip package.
 * Open `EAService.exe.config` in text editor. Scroll to the end of the file for this line:\
   `<add key="ATTACHMENT_PATH" value="C:\EAAttachments"/>`
 * Set the value to a folder location where the local system has **write** access. (This step can be skipped if the user's local system has adequate write permissions in the local drive C). Attachments synchronizing from/to Enterprise Architect need to be saved locally. This folder will be used for saving the attachments locally.
   * This configuration is required even when attachment's synchronization is disabled.
-* Go to `<{{ spaceName }}_INSTALLATION_PATH>\OpsHubEAService` folder, and run `EAService.exe` in administrator mode to start OpsHubEAWindowsService.
+* Go to `<<code class="expression">space.vars.SITENAME</code>_INSTALLATION_PATH>\OpsHubEAService` folder, and run `EAService.exe` in administrator mode to start OpsHubEAWindowsService.
 * Test the web service by opening this URL in browser: `http://<hostname>:9393/EAService`.\
   E.g. `http://localhost:9393/EAService`
 
 > **Note**: After system restarts, OpsHubEAWindowsService needs to be restarted. To configure the OpsHubEAWindowsService to auto-start at system startup, refer to [Auto start OpsHubEAWindowsService on system startup](enterprise-architect.md#auto-start-opshubeawindowsservice-on-system-startup) section.\
-> **Note**: It is recommended that OpsHubEAWindowsService be stopped by pressing the enter key and not directly using the close button to release EA connections made through \{{ spaceName \}}.
+> **Note**: It is recommended that OpsHubEAWindowsService be stopped by pressing the enter key and not directly using the close button to release EA connections made through <code class="expression">space.vars.SITENAME</code>.
 
 ## Register OpsHub's Extension for EA
 
@@ -39,7 +39,7 @@
 
 **How to register OpsHub's Extension**
 
-1. Locate the path `<{{ spaceName }}_INSTALLATION_PATH>\Other_Resources\Resources` on the machine where \{{ spaceName \}} is installed.
+1. Locate the path `<<code class="expression">space.vars.SITENAME</code>_INSTALLATION_PATH>\Other_Resources\Resources` on the machine where <code class="expression">space.vars.SITENAME</code> is installed.
 2. Copy the `OpsHubEAAddIn.zip` package on the desired machine where EA Client is installed and this extension need to be configure.
 3. Extract `OpsHubEAAddIn.zip` package in the specific location on the same machine where zip file was copied.
 4. Open **Command Prompt as Administrator** and navigate to the extracted folder location of `OpsHubEAAddIn`.
@@ -70,7 +70,7 @@ After the bat file is executed, open or restart the Enterprise Architect (EA) an
 
 ## Custom Field Configuration
 
-It is required to create following custom fields for {{ spaceName }} to track the integration status of each element of Enterprise Architect that will be synchronized.
+It is required to create following custom fields for <code class="expression">space.vars.SITENAME</code> to track the integration status of each element of Enterprise Architect that will be synchronized.
 
 | Field Name       | Type  |
 | ---------------- | ----- |
@@ -86,7 +86,7 @@ Learn in detail about [Custom Field Creation in Enterprise Architect](enterprise
 
 ## Accessing Enterprise Architect through Windows Remote Desktop
 
-* If the user has installed Enterprise Architect on a different machine that requires a Windows Remote Desktop connection to access, then Enterprise Architect instance will not be able to connect with \{{ spaceName \}} server when the Remote Desktop session expires. This occurs as disconnecting the Windows Remote Desktop connection will terminate the logged in user's session. Enterprise Architect requires an active logged on user.
+* If the user has installed Enterprise Architect on a different machine that requires a Windows Remote Desktop connection to access, then Enterprise Architect instance will not be able to connect with <code class="expression">space.vars.SITENAME</code> server when the Remote Desktop session expires. This occurs as disconnecting the Windows Remote Desktop connection will terminate the logged in user's session. Enterprise Architect requires an active logged on user.
 * If the user has such a scenario, then it is strongly recommended that he/she uses an alternative software for Windows Remote Desktop to connect to the machine where Enterprise Architect is installed, and does not require Windows authentication to log in to a remote machine.
 
 # System Configuration
@@ -103,7 +103,7 @@ For the format and guidance related to filling Metadata details in JSON form, pl
 
 ## Supported File Types
 
-{{ spaceName }} supports following repository types:
+<code class="expression">space.vars.SITENAME</code> supports following repository types:
 
 * File Based Repositories:
   * .eap
@@ -197,11 +197,11 @@ When Enterprise Architect is a source system and the user wants to synchronize t
 
 * The stereotypes present in the `t_stereotypes` table (to find list, query in SQL editor) in Enterprise Architect will be listed in the list of stereotype values. If the user wants to set the value of stereotype other than listed, it can be done from Advanced Mapping Configuration.
 * For synchronizing stereotype values not present in list of 'Stereotype' field values, provide the value of required stereotype in _Advanced Mapping Configuration_.
-  * For example, in Enterprise Architect `block` type of stereotype can be assigned to an element, but in {{ spaceName }}, this is not getting loaded in the list of values for 'Stereotype' field. So, if user wants to set the value of stereotype as `block`, its value should be provided as `block` from Advanced Mapping Configuration.
+  * For example, in Enterprise Architect `block` type of stereotype can be assigned to an element, but in <code class="expression">space.vars.SITENAME</code>, this is not getting loaded in the list of values for 'Stereotype' field. So, if user wants to set the value of stereotype as `block`, its value should be provided as `block` from Advanced Mapping Configuration.
 * The fully qualified stereotype value must be used in the Advanced Mapping of the stereotype field for synchronizing stereotype values along with profile details.
   * For example, if the user wants to set profile `MARTE` for stereotype `allocated`, then `MARTE::allocated` value needs to be set for stereotype in the Advanced Mapping.
 * It is recommended to analyze the EA's XML model before the sync of the profile of the stereotype field, as specific fully qualified stereotype values do not contain profile details. So, the EA XML model needs to be updated to sync with profile details.
-  * For more details, refer to [How to update EA's XML Model to sync stereotype with profile in {{ spaceName }}](enterprise-architect.md#how-to-update-eas-xml-model-to-sync-stereotype-with-profile-in-sitename) section.
+  * For more details, refer to [How to update EA's XML Model to sync stereotype with profile in <code class="expression">space.vars.SITENAME</code>](enterprise-architect.md#how-to-update-eas-xml-model-to-sync-stereotype-with-profile-in-sitename) section.
 * Alternatively, to map MDG elements, user has to select base entity type while configuring mapping and integration.
   * **Reason**: MDG elements are not visible directly in the entity type list.
 * Stereotype field for any MDG element represents the "Apply To" column which is the base element type. This element type can be mapped for fetching those MDG entities.
@@ -221,7 +221,7 @@ The base element type name of `Block` type is `Class`. If we create configuratio
 
 <div align="center"><img src="../assets/EA_Image_8.png" alt="" width="900"></div>
 
-* For configuring links on the basis of directions, corresponding link types should be mapped. For example, for basic link type `Dependency` the other four link types available in {{ spaceName }} are:
+* For configuring links on the basis of directions, corresponding link types should be mapped. For example, for basic link type `Dependency` the other four link types available in <code class="expression">space.vars.SITENAME</code> are:
   * Dependency__Bi-Directional
   * Dependency__Unspecified
   * Dependency__From
@@ -353,7 +353,7 @@ Example: Complexity = '2'
   * For example, if integration fails after checkout and before check-in, integration will not be able to undo checkout for that package.
   * It will only be checked in when next event will come on that package. Until that time, if someone wants to checkout that package from the other machine, they will have to manually undo the earlier checkout from Enterprise Architect UI using the machine that has it currently checked out.
   * The checkout is based on the Windows users.
-* In EA, for the Notes field, the Bold, Italics, Underline, Font color formatting is allowed. Hence, for EA as the target system, `{{ spaceName }}` will support the above type of the formatting only.
+* In EA, for the Notes field, the Bold, Italics, Underline, Font color formatting is allowed. Hence, for EA as the target system, `<code class="expression">space.vars.SITENAME</code>` will support the above type of the formatting only.
   * Any formatting which is not allowed from EA UI, the formatting will be discarded.
 * For custom fields/tagged values of type **CheckList**, user can have a list of possible values.\
   It is recommended to maintain the order of those possible values list because the Enterprise Architect API has dependency on it. The values set for this field is based on their position of the possible value in the list of checklist values. Hence, if that is not maintained, then it may lead to incorrect data synchronization in target system.
@@ -361,7 +361,7 @@ Example: Complexity = '2'
   * Now if the list of values is updated to A,B,Z,C, then the value for that field will treat A,Z as checked instead of A,C.
   * The update, in that case, should ideally be A,B,C,Z.
 * Following types of custom fields are supported as text type: `AddinBroadcast`, `Custom`, `ImageRef`.
-* When Enterprise Architect is the target system and Diagram entity is being synchronized, **Notes** field will be used to set few details that are required for `{{ spaceName }}`'s internal use.\
+* When Enterprise Architect is the target system and Diagram entity is being synchronized, **Notes** field will be used to set few details that are required for `<code class="expression">space.vars.SITENAME</code>`'s internal use.\
   In case that field is mapped in the field mapping, then this value is appended to the value that is available after synchronization.\
   As this field contains the value which is used for synchronization purpose, it is strongly recommended to **not touch/change** the content of this section of the Notes. Rest of the content can be modified as per the need.
   Here is a sample of the value which will be appended:
@@ -427,7 +427,7 @@ $$OH_Last_Update:1=1609163655000.0_0_1.0
 
 * Limitations specific to Element entity:
   * Recovery Limitations:
-    * For Enterprise Architect as the target system, if during the update operation, any failure occurs, then as a part of update recovery of \{{ spaceName \}}, the properties\[system/custom] of Element entity might get overriden.
+    * For Enterprise Architect as the target system, if during the update operation, any failure occurs, then as a part of update recovery of <code class="expression">space.vars.SITENAME</code>, the properties\[system/custom] of Element entity might get overriden.
     * Reason: Enterprise Architect API limitation
   * Link extra property Limitation:
     * Currently, we support the following link extra properties: Alias, Stereotype, and Aggregation.
@@ -489,7 +489,7 @@ In the image below, the inputs given will create a new field named “OH_Last_Up
 
 ## How to Change the Port of OpsHubEAWindowsService
 
-1. Open Windows File Explorer and navigate to the service installation folder at `<{{ spaceName }}_INSTALLATION_PATH>\Other_Resources\Resources\OpsHubEAService>`.
+1. Open Windows File Explorer and navigate to the service installation folder at `<<code class="expression">space.vars.SITENAME</code>_INSTALLATION_PATH>\Other_Resources\Resources\OpsHubEAService>`.
 2. Open the file named **EAService.exe.config** in any text editor.
 3. Search `<baseAddresses>` tag in the file. In the `<add>` tag under the `<baseAddresses>` tag, change the value of the attribute **baseAddress** which will be in the form of a URL. The default port of the URL will be 9393. Change it with the port on which the user wants to deploy the service. Save the changes.
 
@@ -498,7 +498,7 @@ In the image below, the inputs given will create a new field named “OH_Last_Up
 </p>
 
 
-## How to update EA's XML Model to sync stereotype with the profile in {{ spaceName }}
+## How to update EA's XML Model to sync stereotype with the profile in <code class="expression">space.vars.SITENAME</code>
 
 * Open XML model in editor.
 * Navigate to the **Documentation** node of UMLProfile and verify that the profile contains **name** and **alias**. If it doesn't contain any value for name and alias, then mention values for them.

@@ -1,5 +1,5 @@
 # Overview
-* OpsHub Integration Manager allows to associate roles with users defining what actions a user can perform.
+* <code class="expression">space.vars.SITENAME</code> allows to associate roles with users defining what actions a user can perform.
 * One user can have multiple Integration and Administration Roles. The permissions available to that role will be a union of permissions associated with all individual roles.
 * Only users with permission **Permission Grant** can associate roles with users.
 * Roles can be associated with user from **View associated roles** button in rightmost column against a given user.

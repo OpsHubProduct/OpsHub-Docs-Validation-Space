@@ -12,4 +12,4 @@ The reason behind this error is invalid API request because of:
 * Invalid type of value passed in the Request body.
 
 # Solution
-Please provide the correct API request based on the formats explained in the [Forming calls with the OpsHub Integration Manager API](forming-calls-with-api.md).
+Please provide the correct API request based on the formats explained in the [Forming calls with the <code class="expression">space.vars.SITENAME</code> API](forming-calls-with-api.md).

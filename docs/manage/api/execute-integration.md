@@ -1,7 +1,7 @@
 # Description
 
-* Let's say the OpsHub Integration Manager is installed on 10.13.27.211 instance on HTTP and user credentials for this instance is “admin” and “password”.
-* A user has configured the integration on the OpsHub Integration Manager, which is having id 2 and this integration is in the Active mode.
+* Let's say the <code class="expression">space.vars.SITENAME</code> is installed on 10.13.27.211 instance on HTTP and user credentials for this instance is “admin” and “password”.
+* A user has configured the integration on the <code class="expression">space.vars.SITENAME</code>, which is having id 2 and this integration is in the Active mode.
 * User wants to execute this integration.
 
 # API Details

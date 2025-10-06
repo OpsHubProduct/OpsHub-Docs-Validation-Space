@@ -6,7 +6,7 @@ Example: [Integration](#integration) is an object for Integration resource which
 
 # Resource Objects
 
-Below are the objects schema details for the different available resources of OpsHub Integration Manager.  
+Below are the objects schema details for the different available resources of <code class="expression">space.vars.SITENAME</code>.  
 In the below schema structure:  
 - **Name**: Represents the name of the field.  
 - **Description**: Represents the description of the field.  
@@ -268,7 +268,7 @@ In the below schema structure:
 
 | **Name** | **Type** | **Description**                                                                            |
 |----------|----------|---------------------------------------------------------------------------------------------|
-| key      | String   | Unique key for each configuration for the system in OpsHub Integration Manager             |
+| key      | String   | Unique key for each configuration for the system in <code class="expression">space.vars.SITENAME</code>             |
 | value    | Object   | Value (primitive or complex) for the key                                                    |
 
 ## EntityPair
@@ -427,7 +427,7 @@ Enums represents the list of possible values for the field.
 
 | **Value**        | **Description**                                                       |
 |------------------|------------------------------------------------------------------------|
-| CREATE_FAILURE   | It will create processing failure in OpsHub Integration Manager       |
+| CREATE_FAILURE   | It will create processing failure in <code class="expression">space.vars.SITENAME</code>       |
 | RECREATE         | It will re-create the entity in the target system                     |
 | SKIP_UPDATE      | It will skip the synchronization of the update                        |
 

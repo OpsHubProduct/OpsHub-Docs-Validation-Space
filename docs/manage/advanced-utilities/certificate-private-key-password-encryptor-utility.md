@@ -3,7 +3,7 @@ If multiple certificates are imported into the Keystore, and the certificates ha
 Follow the steps given below for creating/updating the `cacerts_config.properties` file:
 
 * Stop OpsHub Server Service before execution of this utility.
-* Navigate to `<OpsHub Integration Manager Installation Folder>/Other_Resources/Resources`.
+* Navigate to `<<code class="expression">space.vars.SITENAME</code> Installation Folder>/Other_Resources/Resources`.
 * Unzip `OpsHub Certificate Passwords Utility.zip`.
 * Run `OpsHubCertificatePasswordsUtility.bat` for Windows system. In case of Linux system, run `OpsHubCertificatePasswordsUtility.sh`.
 * Enter the path for OpsHub Installation Directory.

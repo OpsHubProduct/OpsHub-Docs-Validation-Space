@@ -1,15 +1,15 @@
 # Different Types of Logs
 
-There are different logs maintained and stored under **`<{{SITENAME}} Installation Folder>\AppData\logs`** during the installation process and one log is maintained to track the ongoing processing in \{{SITENAME}}.
+There are different logs maintained and stored under **`<<code class="expression">space.vars.SITENAME</code> Installation Folder>\AppData\logs`** during the installation process and one log is maintained to track the ongoing processing in \<code class="expression">space.vars.SITENAME</code>.
 
 | **Log File Name**      | **Description**                                                                                                                                                                                                                                                                                                                                                         |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | DatabaseCreation.log   | Log generated during Database Creation phase of Installation                                                                                                                                                                                                                                                                                                            |
 | Install.log            | Log related to installation steps                                                                                                                                                                                                                                                                                                                                       |
-| OpsHubServer.log       | Log generated while {{SITENAME}} Installation (like launching URL).                                                                                                                                                                                                                                                                                                   |
-| Service.log            | Log generated while registering {{SITENAME}} Application as Service.                                                                                                                                                                                                                                                                                                  |
+| OpsHubServer.log       | Log generated while <code class="expression">space.vars.SITENAME</code> Installation (like launching URL).                                                                                                                                                                                                                                                                                                   |
+| Service.log            | Log generated while registering <code class="expression">space.vars.SITENAME</code> Application as Service.                                                                                                                                                                                                                                                                                                  |
 | ConnectionModeConf.log | Log related to the Connection Mode Configuration.                                                                                                                                                                                                                                                                                                                       |
-| OpsHub.log             | <p>{{SITENAME}} Application log file for all the</p><div data-gb-custom-block data-tag="if" data-expression="&#x22;OpsHub Migrator for Microsoft Azure DevOps&#x22; === space.vars.SITENAME"><p>migrations</p></div><div data-gb-custom-block data-tag="if" data-expression="&#x22;OpsHub Integration Manager&#x22; === space.vars.SITENAME"><p>integrations</p></div>  |
+| OpsHub.log             | <p><code class="expression">space.vars.SITENAME</code> Application log file for all the</p><div data-gb-custom-block data-tag="if" data-expression="&#x22;OpsHub Migrator for Microsoft Azure DevOps&#x22; === space.vars.SITENAME"><p>migrations</p></div><div data-gb-custom-block data-tag="if" data-expression="&#x22;OpsHub Integration Manager&#x22; === space.vars.SITENAME"><p>integrations</p></div>  |
 | OpsHubTFSService.log   | Common log file for TFS API interaction                                                                                                                                                                                                                                                                                                                                 |
 | Integrations           | <p>Folder contains the files for the logs of each</p><div data-gb-custom-block data-tag="if" data-expression="&#x22;OpsHub Migrator for Microsoft Azure DevOps&#x22; === space.vars.SITENAME"><p>migrations</p></div><div data-gb-custom-block data-tag="if" data-expression="&#x22;OpsHub Integration Manager&#x22; === space.vars.SITENAME"><p>integrations</p></div> |
 
@@ -17,7 +17,7 @@ There are different logs maintained and stored under **`<{{SITENAME}} Installati
 {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}
 # Log Settings
 
-System log helps to view logs for tracking backend activity in {{SITENAME}}. Usually logs are useful when any failure or unusual behavior is detected in integration. System log can store logs in 5 different levels. Logs will capture information based on logging level set in System log.
+System log helps to view logs for tracking backend activity in <code class="expression">space.vars.SITENAME</code>. Usually logs are useful when any failure or unusual behavior is detected in integration. System log can store logs in 5 different levels. Logs will capture information based on logging level set in System log.
 
 To navigate to System log
 
@@ -42,7 +42,7 @@ Click on Setting button on System log window to configure log settings as mentio
 
 **Class/Package Name:** The name of the package or class for which logs need to be monitored. To monitor the logs within the 'com.opshub', package 'com.opshub' should be entered here.
 
-**Log Level:** Represents the logging level which determines the amount of information recorded in the log files. By default, only Error logged in {{SITENAME}} are logged in logs. The coverage of information increases in ascending order from logging level 1 to 6.
+**Log Level:** Represents the logging level which determines the amount of information recorded in the log files. By default, only Error logged in <code class="expression">space.vars.SITENAME</code> are logged in logs. The coverage of information increases in ascending order from logging level 1 to 6.
 
 1-FATAL, 2-ERROR, 3-WARN, 4-INFO, 5-DEBUG, 6-TRACE
 
@@ -60,7 +60,7 @@ Click on Setting button on System log window to configure log settings as mentio
 
 **No. of max backup global log files:** Select the maximum number of backup files to store, excluding the current log file used by the UI logs.
 
-**Location to save logs:** Location where log files should be saved, this should be configured if default directory where {{SITENAME}} is installed do not have sufficient space to store log files. By default, logs are stored in default directory where {{SITENAME}} is installed.
+**Location to save logs:** Location where log files should be saved, this should be configured if default directory where <code class="expression">space.vars.SITENAME</code> is installed do not have sufficient space to store log files. By default, logs are stored in default directory where <code class="expression">space.vars.SITENAME</code> is installed.
 
 * If you change the default location to another location, all the older logs will be copied to the updated location, except for Tomcat Server logs. The new logs will be logged at the updated location.
 

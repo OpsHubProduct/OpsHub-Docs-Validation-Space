@@ -4,11 +4,11 @@ Please refer to [Database Prerequisites](../../getting-started/prerequisites.md#
 
 ### Introduction
 
-As HSQL is not suitable for production usage, \{{SITENAME\}} needs to be migrated to one of three databases supported by \{{SITENAME\}}. There is a utility provided with \{{SITENAME\}} installation and packaged in `<{{SITENAME}}_Installation>\OpsHub_Resources\DatabaseMigrator` directory \[Migrator directory].
+As HSQL is not suitable for production usage, \{{SITENAME\}} needs to be migrated to one of three databases supported by \{{SITENAME\}}. There is a utility provided with \{{SITENAME\}} installation and packaged in `<<code class="expression">space.vars.SITENAME</code>_Installation>\OpsHub_Resources\DatabaseMigrator` directory \[Migrator directory].
 
 ### Steps to migrate from HSQL to other supported databases
 
-* Keep driver for database for which migration needs to be done in: `<{{SITENAME}}_Installation>\OpsHubServer\lib` directory\
+* Keep driver for database for which migration needs to be done in: `<<code class="expression">space.vars.SITENAME</code>_Installation>\OpsHubServer\lib` directory\
   For MySQL connector driver jar 5.1.8 is not supported, hence the latest connector driver jar should be used from http://dev.mysql.com/downloads/connector/j/5.1.html
 * Change `destinationconnection.properties` and `sourceconnection.properties` in Migrator directory:
   * **sourceconnection.properties**: Change `CONNECTION_HSQL_FILE_PATH` property and replace `<installation path>` with installation path
@@ -35,10 +35,10 @@ If file execution fails with ^M bad interpreter error, use following steps:
 
 Following are the steps to be performed after successful database migration:
 
-* Go to `<{{SITENAME}}_Installation>\OpsHubServer\webapps\OpsHubWS\META-INF` directory
+* Go to `<<code class="expression">space.vars.SITENAME</code>_Installation>\OpsHubServer\webapps\OpsHubWS\META-INF` directory
 * Delete `war-tracker` file
-* Go to `<{{SITENAME}}_Installation>\OpsHubServer\webapps\OpsHubWS` directory
+* Go to `<<code class="expression">space.vars.SITENAME</code>_Installation>\OpsHubServer\webapps\OpsHubWS` directory
 * Select all the files and add to archive with name `OpsHubWS.zip`
 * Rename `OpsHubWS.zip` to `OpsHubWS.war`
-* Go to `<{{SITENAME}}_Installation>\OpsHubServer\webapps` and replace newly created `OpsHubWS.war` with the existing one
-* Delete `<{{SITENAME}}_Installation>\OpsHubServer\webapps\OpsHubWS` directory and
+* Go to `<<code class="expression">space.vars.SITENAME</code>_Installation>\OpsHubServer\webapps` and replace newly created `OpsHubWS.war` with the existing one
+* Delete `<<code class="expression">space.vars.SITENAME</code>_Installation>\OpsHubServer\webapps\OpsHubWS` directory and

@@ -2,7 +2,7 @@
 
 ## User privileges
 
-* Create a user in Jira that is dedicated for  {{ spaceName  }}. This user shouldn't perform any other action from Jira's user interface. 
+* Create a user in Jira that is dedicated for  {{ <code class="expression">space.vars.SITENAME</code>  }}. This user shouldn't perform any other action from Jira's user interface. 
   **Note** This user can be part of your Jira system's Lightweight Directory Access Protocol (LDAP) or Single sign-on (SSO) provider.
 * The user should be a member of the following user groups:
   * **For on-premises instance**:
@@ -93,7 +93,7 @@ Below are the cases where there is a need to generate an API Token:
   * Jira allows to create and use API Token natively or through a third-party plugin.
     * If the user is using **Jira native API Token generation**, refer [this](https://confluence.atlassian.com/enterprise/using-personal-access-tokens-1026032365.html) link for generating Jira API Token.
     * If the user is using **third party plugin for API Token generation**, please refer to the documentation of the third-party plugin for generating the API Token. For example, if the API Token provider is 'API Token Authentication Jira', the documentation for API Token generation is present in their [guide](https://www.resolution.de/post/how-to-create-api-tokens-for-jira-server-s-rest-api/).
-      * There are different ways in which the API Token can be generated and used for communication with Jira API through third-party plugins. To check whether the API Token provided by the third-party plugin is supported in  {{ spaceName  }} or not, please check if API Token is authenticated through any of these two 'Authorization' header formats:
+      * There are different ways in which the API Token can be generated and used for communication with Jira API through third-party plugins. To check whether the API Token provided by the third-party plugin is supported in  {{ <code class="expression">space.vars.SITENAME</code>  }} or not, please check if API Token is authenticated through any of these two 'Authorization' header formats:
         * Authorization **Basic `<credentials>`** - where **`<credentials>`** is the base64 encoding of username: API Token (token generated through third-party plugin).
         * Authorization **Bearer `<API token>`** - where **`<API token>`** is the API Token generated through third-party plugin.
 
@@ -130,7 +130,7 @@ For attachment synchronization, the attachment field must be visible while creat
     . For more details refer: [Advance Workflow Transition](jira.md#advance-workflow-transition)
 * For Jira as target if you are synchronizing both the fields **Original Estimate** and **Remaining Estimate** which is part of **Time Tracking** feature of Jira then the **Legacy Mode** for this field should be **disabled**. This is because in Legacy Mode, the Original Estimate and Remaining Estimate are linked and only one value can be updated at a time. Refer section [Disabling Legacy Mode](jira.md#disabling-legacy-mode) in the Appendix for knowing the steps relating to disabling the Legacy Mode.
 
-* ** {{ spaceName  }}** requires one special field to be defined on the entity that is being synchronized. These must be set up so that ** {{ spaceName  }}** can track the integration status of each item.
+* ** {{ <code class="expression">space.vars.SITENAME</code>  }}** requires one special field to be defined on the entity that is being synchronized. These must be set up so that ** {{ <code class="expression">space.vars.SITENAME</code>  }}** can track the integration status of each item.
 
 | Version                         | Type of field                 | Field Name                                               |
 | ------------------------------- | ----------------------------- | -------------------------------------------------------- |
@@ -142,7 +142,7 @@ Refer [Custom field for Jira version < 6.2 section](jira.md#custom-field-for-jir
 
 **Synchronize changes in Issue Type**
 
-* When Jira is the target system in ** {{ spaceName  }}**, to modify the issue type of the entity, the "Issue Type" field must be present on the edit screen of the configured entity types in ** {{ spaceName  }}**.
+* When Jira is the target system in ** {{ <code class="expression">space.vars.SITENAME</code>  }}**, to modify the issue type of the entity, the "Issue Type" field must be present on the edit screen of the configured entity types in ** {{ <code class="expression">space.vars.SITENAME</code>  }}**.
 
 # System Configuration
 
@@ -259,7 +259,7 @@ The **SLA Metric Fields** table describes the attributes of the SLA Metric field
 
 ## Select List (Cascading) Fields Mapping
 
-**Select List (Cascading)** is a field type in Jira that allows users to select multiple values using two select list. This field is supported in `{{ spaceName }}` with advance mapping.
+**Select List (Cascading)** is a field type in Jira that allows users to select multiple values using two select list. This field is supported in `<code class="expression">space.vars.SITENAME</code>` with advance mapping.
 
 Advance mapping can be done by following the steps given below:
 
@@ -335,23 +335,23 @@ Scenario 2: If a Jira Issue is in 'New' state and through the integration the st
 
 This issue can be resolved by following any of these approaches:
 
-1. Add/Edit Workflow transition XML in Mapping configuration of  {{ spaceName  }}
+1. Add/Edit Workflow transition XML in Mapping configuration of  {{ <code class="expression">space.vars.SITENAME</code>  }}
 2. Change workflow configuration in Jira for sync user
 
-**1. Add/Edit Workflow transition XML in Mapping configuration of  {{ spaceName  }}**
+**1. Add/Edit Workflow transition XML in Mapping configuration of  {{ <code class="expression">space.vars.SITENAME</code>  }}**
 
 Click [Workflow Transition](../integrate/mapping-configuration.md#workflow-transition) to learn when and how to configure workflow transition xml mapping. 
-With this option,  {{ spaceName  }} makes the required intermediate status transition automatically as per the transition(s) configuration on the end system.
+With this option,  <code class="expression">space.vars.SITENAME</code> makes the required intermediate status transition automatically as per the transition(s) configuration on the end system.
 
 **2. Change workflow configuration in Jira for sync user**
 
-Jira allows user/role base transition(s) configuration. Use this configuration to configure any-to-any transition(s) for the integration user on Jira. Workflow transition(s) mapping is not required to be configured in  {{ spaceName  }} if any-to-any transition(s) is configured. 
-With this option,  {{ spaceName  }} will be able to perform direct transition of the state field to the desired state as this option works when any-to-any transition is configured for an integration user. 
+Jira allows user/role base transition(s) configuration. Use this configuration to configure any-to-any transition(s) for the integration user on Jira. Workflow transition(s) mapping is not required to be configured in  <code class="expression">space.vars.SITENAME</code> if any-to-any transition(s) is configured. 
+With this option,  <code class="expression">space.vars.SITENAME</code> will be able to perform direct transition of the state field to the desired state as this option works when any-to-any transition is configured for an integration user. 
 For step-by-step instructions for configuring any-to-any transition refer: [Configuration to allow all transitions](jira.md#configuration-to-allow-all-transitions).
 
 ### Known Limitation
 
-* The synchronization of Jira **workflow transition configuration** is not supported by  {{ spaceName  }}.
+* The synchronization of Jira **workflow transition configuration** is not supported by  <code class="expression">space.vars.SITENAME</code>.
 
 ## Inline attachments synchronization
 
@@ -403,12 +403,12 @@ In the image below, inline image added previously in the description field repla
 ## Mapping for Entity mention field
 
 * When Jira is configured as source system in the integration and its field/comment type is WIKI or any external plugin is enabled like Jeditor to render as HTML, then the embedded entity link references will be translated as per mention sync option.
-*  {{ spaceName  }} will translate and synchronize those entity link references which are matching following text format as per mention sync option configured in mapping.
-  * When field is of Type Wiki and Jira is Cloud then  {{ spaceName  }} will translate those entity link references which are matching text ** [link display|{jira-server-url}/browse/{project-key}-{entityId}|smart-link]**
+*  <code class="expression">space.vars.SITENAME</code> will translate and synchronize those entity link references which are matching following text format as per mention sync option configured in mapping.
+  * When field is of Type Wiki and Jira is Cloud then  <code class="expression">space.vars.SITENAME</code> will translate those entity link references which are matching text ** [link display|{jira-server-url}/browse/{project-key}-{entityId}|smart-link]**
     * For example Description: "Sample text  [https://opshub.atlassian.net/browse/PROJ1-101|https://opshub.atlassian.net/browse/PROJ1-101|smart-link]"
-  * When field is of Type Wiki and Jira is On-Premise then  {{ spaceName  }} will translate those entity link references which are matching text ** [link display|{jira-server-url}/browse/{project-key}-{entityId}]**
+  * When field is of Type Wiki and Jira is On-Premise then  <code class="expression">space.vars.SITENAME</code> will translate those entity link references which are matching text ** [link display|{jira-server-url}/browse/{project-key}-{entityId}]**
     * For example Description: "Sample text  [http://jira-local:8080/browse/PROJ1-101|http://jira-local:8080/browse/PROJ1-101]"
-  * When Jeditor plugin is enabled on Jira end system to render field type as HTML then  {{ spaceName  }} will translate those entity link references which are matching text **{jira-server-url}/browse/{project-key}-{entityId}**
+  * When Jeditor plugin is enabled on Jira end system to render field type as HTML then  <code class="expression">space.vars.SITENAME</code> will translate those entity link references which are matching text **{jira-server-url}/browse/{project-key}-{entityId}**
     * For example Description is "Sample text" or Description is "Sample text"
 * Click on [**Mention Sync Setting**](../integrate/mapping-configuration.md#mention-setting) to know more about entity mention mapping and synchronization behavior in general.
 
@@ -448,7 +448,7 @@ OpsHub Integration Manager supports synchronization for R4J links  [R4J Child Li
 
 **Overview**
 
-*  {{ spaceName  }} supports Web Link as External/Hyperlink for synchronization with Jira entities when Jira is Source and/or Target End point.
+*  <code class="expression">space.vars.SITENAME</code> supports Web Link as External/Hyperlink for synchronization with Jira entities when Jira is Source and/or Target End point.
 * In Relationship Mapping, **Web Link** link type needs to be selected for External Link Synchronization.
 
 <div align="center"><img src="../assets/WebLinkTypeConfiguration.png" alt="" width="900"></div>
@@ -619,7 +619,7 @@ OpsHub Integration Manager supports synchronization for R4J links  [R4J Child Li
 **Known Limitations**
 
 * If any additional property apart from Link Title and Link URL has to be updated, then along with the additional property any one of Link Title or Link URL needs to be updated
-  * This needs to done because Link Title and Link URL combined, defines a unique key for Web Link in  {{ spaceName  }}
+  * This needs to done because Link Title and Link URL combined, defines a unique key for Web Link in  <code class="expression">space.vars.SITENAME</code>
 * Default Link Feature won't be supported in case of Weblink.
 * For Weblink synchronization, in Relationship mapping User needs to map at least one Entity Type pair as its mandatory. This Entity Type mapping won’t have any impact on Web Link synchronization.
 * Relationship Mapping for Web Link (as Source) to Standard Link (as Target) won't be supported.  [ {{fullurl:OH-Connector-0078 }} Link To Error Doc ]
@@ -628,12 +628,12 @@ OpsHub Integration Manager supports synchronization for R4J links  [R4J Child Li
 
 **Overview**
 
-*  {{ spaceName  }} supports Stagil Assets links bidirectional synchronization.
+*  <code class="expression">space.vars.SITENAME</code> supports Stagil Assets links bidirectional synchronization.
 * In relationship mapping, Stagil Assets link types need to be mapped for link synchronization.
 
 **Known behavior**
 
-* From Jira UI, the Stagil Assets links are visible in custom fields. However, these custom fields are supported as link types in  {{ spaceName  }}.
+* From Jira UI, the Stagil Assets links are visible in custom fields. However, these custom fields are supported as link types in  <code class="expression">space.vars.SITENAME</code>.
 * The Stagil Assets links will be synchronized based on current state only.
 * Reason: API limitation.
 
@@ -653,7 +653,7 @@ OpsHub Integration Manager supports synchronization for R4J links  [R4J Child Li
 ### Mapping for Archive Configuration
 
 * When Jira Data Center is the target system, the Archive operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md).
-* After the Archive operation is performed by  {{ spaceName  }} in Jira, the entity will be archived in Jira.
+* After the Archive operation is performed by  <code class="expression">space.vars.SITENAME</code> in Jira, the entity will be archived in Jira.
 * To only enable the Logical Delete operation in the target, "OH Archive" field should be mapped with the default value, "No" in the [Delete Mode](../integrate/mapping-configuration.md#delete-mode) mapping.
 
 ## Mapping limitations
@@ -666,16 +666,16 @@ If you have mapped custom fields, then:
 
 Jira allows users to translate issue types or fields name through Jira User Interface or using external plugins. However, there are certain behavioral limitations with such translations, which are listed below:
 
-* In case user has translated the issue type's name from 'Epic' to 'Feature'. So, the label 'Issues in Epic' will be translated to 'Issues in Feature' on Jira UI. But in  {{ spaceName  }}, mapping configuration for Issue Relationship, the link type will still remain/labeled as 'Issues in Epic'.
+* In case user has translated the issue type's name from 'Epic' to 'Feature'. So, the label 'Issues in Epic' will be translated to 'Issues in Feature' on Jira UI. But in  <code class="expression">space.vars.SITENAME</code>, mapping configuration for Issue Relationship, the link type will still remain/labeled as 'Issues in Epic'.
 * If a field is part of a synchronization and the user translates it later, then that field needs to be re-mapped in the mapping configuration.
 * Fields named **Status Category Changed** and **Status Category** were added as system fields in the On-Demand Jira version. We are checking with Atlassian team for more details, such as data type and values for these fields. As of now, synchronization of these fields is not supported.
 
 If any text type field is mapped for entities which do not support history in a bidirectional integration, additional revisions might be synchronized to the other system. 
 To resolve this issue, the text field should be trimmed in advance mapping configuration while writing to Jira._
 
-If you have enabled either Zephyr or Xray Plugin for Jira either as source or target system in  {{ spaceName  }} and mapped field of type **steps/iterations** during field mapping, then you should be aware of the following limitation:
+If you have enabled either Zephyr or Xray Plugin for Jira either as source or target system in  <code class="expression">space.vars.SITENAME</code> and mapped field of type **steps/iterations** during field mapping, then you should be aware of the following limitation:
 
-* For fields of data type **steps/iterations**,  {{ spaceName  }} does not support an auto conversion of rich text content like HTML or Wiki content as per data type of target mapped field unlike supports for HTML or Wiki type of field(s). Hence when this type of field is mapped either as the source or target end point, then  {{ spaceName  }} shows the following warning "Rich text content of HTML or Wiki type of field will not be synchronized to target end point in the correct format." It means that the formatted text is either sync in target along with tag or is rendered in a different format. So, to retain the Rich Text content in the target end point, it is required to perform an advance mapping for the content of steps that could be of types like HTML or Wiki. Advance mapping differs as per the content type of source and target end system for the mapped field. *
+* For fields of data type **steps/iterations**,  <code class="expression">space.vars.SITENAME</code> does not support an auto conversion of rich text content like HTML or Wiki content as per data type of target mapped field unlike supports for HTML or Wiki type of field(s). Hence when this type of field is mapped either as the source or target end point, then  <code class="expression">space.vars.SITENAME</code> shows the following warning "Rich text content of HTML or Wiki type of field will not be synchronized to target end point in the correct format." It means that the formatted text is either sync in target along with tag or is rendered in a different format. So, to retain the Rich Text content in the target end point, it is required to perform an advance mapping for the content of steps that could be of types like HTML or Wiki. Advance mapping differs as per the content type of source and target end system for the mapped field. *
 
 1.  Given below is a **sample advanced mapping** from Jira to RALLY for synchronizing **Manual Steps** of **Xray entity** along with formatting:
 
@@ -905,7 +905,7 @@ Go to Criteria Configuration section on [Integration Configuration](../integrate
 To configure criteria in Jira, integration needs to be created with Jira as the source system. Set the **Query** as per Jira JQL Format. For example: **Priority = "Must"**
 
 * To know more about JQL query in Jira refer this link: [JQL in Jira](https://confluence.atlassian.com/jirasoftwareserver0713/advanced-searching-965542847.html)
-* See the sample snippets below of how the JQL queries can be used as criteria in  {{ spaceName  }}.
+* See the sample snippets below of how the JQL queries can be used as criteria in  <code class="expression">space.vars.SITENAME</code>.
 
 **Criteria samples**
 
@@ -1008,9 +1008,9 @@ Go to **Fetch Mapped Data Only** section on [Integration Configuration](../integ
 * Jira allows users to translate issue types or fields name through Jira User Interface or using external plugins. However, there are certain behavioral limitations with such translations, which are listed below:
   * History synchronization will not be maintained for the changes done prior to the last translation, for the translated fields/Link type.
 * OIM does not support projects with `" and \ ` characters in their project names.
-* Jira version 8.7.0 onwards, [user can be anonymized](https://confluence.atlassian.com/adminjiraserver/anonymizing-users-992677655.html). So ** {{ spaceName  }}** can't synchronize data of such users based on their information that existed before user was anonymized. For example: If a Jira user 'John Doe' was anonymized, Jira will convert its username to an alias such as 'jirauser1001'. Hence, email or user-based lookup won't work for user fields with such user value.
+* Jira version 8.7.0 onwards, [user can be anonymized](https://confluence.atlassian.com/adminjiraserver/anonymizing-users-992677655.html). So ** <code class="expression">space.vars.SITENAME</code>** can't synchronize data of such users based on their information that existed before user was anonymized. For example: If a Jira user 'John Doe' was anonymized, Jira will convert its username to an alias such as 'jirauser1001'. Hence, email or user-based lookup won't work for user fields with such user value.
 * When R4J plugin is enabled for your project, an additional field named **Path(R4J)** will be available (as a ReadOnly Field) for synchronization. Editing this field will be only synchronized to target with Next Update on Issue which modifies Issue's 'Updated'.
-* In Jira, if the project key of the project  [configured for synchronization] has been changed, ** {{ spaceName  }}** server needs to be restarted.
+* In Jira, if the project key of the project  [configured for synchronization] has been changed, ** <code class="expression">space.vars.SITENAME</code>** server needs to be restarted.
 * When Jira is the source system and Jira's deployment mode is **Cloud**:
   * Synchronization of **Child issues** link type is not supported.
     * Reason: API limitation
@@ -1024,7 +1024,7 @@ In case of Sprint entity:
 * There are two lookup fields available for mapping the boards:
   * **Origin Board ID**
   * **Origin Board Name**
-* ** {{ spaceName  }}** allows for the selection of either field separately, but not both concurrently.
+* ** <code class="expression">space.vars.SITENAME</code>** allows for the selection of either field separately, but not both concurrently.
 * If you have unique board names, it is easy to use the Origin Board Name field for mapping as you can directly match the board name without the need for additional value mapping.
 * However, if there are multiple boards with the same name, you can use the Origin Board ID field, which contains values in form of `"BoardId:::BoardName"`, uniquely identifying the boards based on their ID.
 * Select boards from the list for which Sprints will be polled and synchronized to the target system. For doing so:
@@ -1036,15 +1036,15 @@ In case of Sprint entity:
 ### Overview
 
 * The [R4J plugin](https://easesolutions.atlassian.net/wiki/spaces/REQ4J/pages/5406729/User+Guide) allows user to organize entity within Folder to achieve a tree structure for Jira issues.
-* ** {{ spaceName  }}** supports synchronization of this Folder entity  [which will be visible as entity type `Folder(R4J)` while user is configuring an integration with Jira system].
+* ** <code class="expression">space.vars.SITENAME</code>** supports synchronization of this Folder entity  [which will be visible as entity type `Folder(R4J)` while user is configuring an integration with Jira system].
 * The entity type `Folder(R4J)` will be visible only for Jira on-premise instances.
 * To achieve the tree structure, through synchronization user needs to configure the [Relationships (R4J Plugin)](jira.md#relationships-r4j-plugin) and [Rank (R4J Plugin)](jira.md#rank-r4j-plugin) as well.
 
 ### Root Folder synchronization
 
 * When R4J plugin is enabled in a project, a root folder with the same name as the project is automatically created and visible on Jira R4J view.
-* The root folder ID in ** {{ spaceName  }}** is `-1_ROOT`.
-*   ** {{ spaceName  }}** synchronizes the root folder similar to any other folders available/created within R4J. In below example, 'TestR4J' is a Root Folder and rest are the custom folders created by User.
+* The root folder ID in ** <code class="expression">space.vars.SITENAME</code>** is `-1_ROOT`.
+*   ** <code class="expression">space.vars.SITENAME</code>** synchronizes the root folder similar to any other folders available/created within R4J. In below example, 'TestR4J' is a Root Folder and rest are the custom folders created by User.
 
     <p align="center">
      <img src="../assets/without-lkp.png" width="800">
@@ -1165,7 +1165,7 @@ Create a separate field mapping for synchronizing deleted worklogs with only one
 
 ## Zephyr Plugin Entities
 
-*  {{ spaceName  }} supports three Zephyr entities: Test, Test Cycle, Test Execution, Folder.
+*  <code class="expression">space.vars.SITENAME</code> supports three Zephyr entities: Test, Test Cycle, Test Execution, Folder.
 * The supported versions of Zephyr plugin with ZAPI plugin are specified in [Systems Supported List](../systemsupported/systems-supported-list.md)).
 
 > **Note** For Zephyr Cloud, ZAPI plugin is not required.
@@ -1548,23 +1548,23 @@ For Target Lookup Configuration of Zephyr entities, refer to [Target lookup for 
 * When Jira's deployment type is **Self-Managed**:
 * Synchronization of custom fields of Test Execution entity and Test Steps (field of Test entity) is not supported.
 * When Jira's deployment type is **Cloud**:
-* Synchronization of attachments of **Test Execution** entity is not supported. This feature will be supported in the upcoming versions of  {{ spaceName  }}.
+* Synchronization of attachments of **Test Execution** entity is not supported. This feature will be supported in the upcoming versions of  <code class="expression">space.vars.SITENAME</code>.
 * Write side support for attachments in the **Step Results** field (part of the **Test Execution** entity) is not available.
 * To synchronize custom fields in Zephyr Cloud, custom field id is required.
 * **Reason**: Zephyr doesn't provide an API to get the custom field details. Therefore, user needs to provide custom field id to synchronize custom fields. Refer to [Find Zephyr Custom Field Id](jira.md#find-zephyr-custom-field-id) section for the custom field ids.
 * To synchronize custom fields of Test Execution entity, refer to  [Synchronize Custom Fields of Test Execution](#test-execution) section.
 * To synchronize custom fields of Test Steps (field of Test entity), refer to [Synchronize Custom Fields of Test Steps](jira.md#test-steps) section.
-* Due to API limitation, if the project configured in integration has more than 10000 Test Execution entities,  {{ spaceName  }} will only synchronize the first 10000 entities based on creation date of the Test Execution entity.
+* Due to API limitation, if the project configured in integration has more than 10000 Test Execution entities,  <code class="expression">space.vars.SITENAME</code> will only synchronize the first 10000 entities based on creation date of the Test Execution entity.
 * **Folder(Zephyr) entity**
 * Target lookup is not supported for Jira cloud. Criteria, Target and Remote Link sync are not supported for Jira on premise.
   * Reason: Zephyr API unavailability.
 * Default Link Configuration for link type **Test Cycle Linkage** is not supported.
 * **Sprint Id** field synchronization is not supported.
-* Folders can be moved across different Test Cycles in Zephyr. However, the synchronization of the movement is not supported by  {{ spaceName  }}. Hence, if any folder movement will occur, then the synchronization will be failed.
+* Folders can be moved across different Test Cycles in Zephyr. However, the synchronization of the movement is not supported by  <code class="expression">space.vars.SITENAME</code>. Hence, if any folder movement will occur, then the synchronization will be failed.
 
 ## Xray plugin entities
 
-*  {{ spaceName  }} supports following Xray entities:
+*  <code class="expression">space.vars.SITENAME</code> supports following Xray entities:
   * For self-managed system: Test, Test Set, Test Plan, Test Execution, Sub Test Execution, Pre-Condition. 
   * For cloud system: Xray Test, Test Set, Test Plan, Test Execution, Test Run, Precondition. 
 * The supported versions of Xray plugin are specified in [Systems Supported List](../systemsupported/systems-supported-list.md). 
@@ -1584,7 +1584,7 @@ For Target Lookup Configuration of Zephyr entities, refer to [Target lookup for 
 * **1-1 value mapping:**
   * The user can do one to one mapping of source and target repositories by configuring the [value mapping](../integrate/mapping-configuratio.md#view-edit-xslt-configurations-options) of Test Repository Path field.
 * **When Jira [Xray] is the source system**, 'Test Repository Path' will contain the test repository full path with '' for hierarchy.
-* **When Jira [Xray] is the target**, the test will get synchronized to the selected test repository if it exists in Xray. If it does not exists on Xray side, it will be automatically created by  {{ spaceName  }}. This is default behavior of Xray plugin which can be changed using the advanced mapping as described [below](jira.md#turn-off-auto-creation-of-folders-repository) .
+* **When Jira [Xray] is the target**, the test will get synchronized to the selected test repository if it exists in Xray. If it does not exists on Xray side, it will be automatically created by  <code class="expression">space.vars.SITENAME</code>. This is default behavior of Xray plugin which can be changed using the advanced mapping as described [below](jira.md#turn-off-auto-creation-of-folders-repository) .
 
 **Turn off Auto-Creation of Folders/Repository**
 
@@ -1618,7 +1618,7 @@ Also, the user can rename the "Default Folder" as per his/her liking.
 
 **Manual Test Steps field**
 
-* In the Test entity of Xray, the user can add [test steps](https://docs.getxray.app/pages/viewpage.action?pageId=62267955) which specify the steps to be performed while executing the test case. To synchronize test steps using  {{ spaceName  }}, the user can map the 'Manual Test Steps' field.
+* In the Test entity of Xray, the user can add [test steps](https://docs.getxray.app/pages/viewpage.action?pageId=62267955) which specify the steps to be performed while executing the test case. To synchronize test steps using  <code class="expression">space.vars.SITENAME</code>, the user can map the 'Manual Test Steps' field.
 
 **Changes required to synchronize Manual Test Steps**
 
@@ -1649,14 +1649,14 @@ Also, the user can rename the "Default Folder" as per his/her liking.
   * Default Xray entity names are: Test, Test Set, Test Plan, Test Execution, Test Run, Precondition
 * In the Jira Xray, it is recommended not to create any new links with the below-mentioned names. Additionally, any existing link names should not have the below-mentioned link name (in this case, the link type name needs to be changed).
   * Link types: tests, preconditions, testExecutions, testSets, testPlans, testRuns, Xray Test, Test Execution
-    * **Reason:** The links above are reserved for the relationship sync in `{{ spaceName }}`.
+    * **Reason:** The links above are reserved for the relationship sync in `<code class="expression">space.vars.SITENAME</code>`.
 
 **Xray Test Entity**
 
 * In Jira, Xray Test is a test case. It can be of three types: Manual, Generic or Cucumber. The manual test case can be composed of multiple steps, and each step can contain actions, data & expected results.
-* The manual test steps can be synced through the `steps` field available on the `{{ spaceName }}` field configurations. Refer to [Mapping limitations](jira.md#mapping-limitations) section for reference.
-* The calculated value for the status of the Xray Test entity can be synchronized through the `OH_Xray_Test_Status` field, available on `{{ spaceName }}`'s mapping configuration screen.
-*   Test Repository paths can be synced using the `folder` field available on the `{{ spaceName }}` field configurations.
+* The manual test steps can be synced through the `steps` field available on the `<code class="expression">space.vars.SITENAME</code>` field configurations. Refer to [Mapping limitations](jira.md#mapping-limitations) section for reference.
+* The calculated value for the status of the Xray Test entity can be synchronized through the `OH_Xray_Test_Status` field, available on `<code class="expression">space.vars.SITENAME</code>`'s mapping configuration screen.
+*   Test Repository paths can be synced using the `folder` field available on the `<code class="expression">space.vars.SITENAME</code>` field configurations.
 
     **When Xray entity is the target system:**
 
@@ -1666,7 +1666,7 @@ Also, the user can rename the "Default Folder" as per his/her liking.
 **Test Run Entity**
 
 * In Jira, Test Run is used to sync the test case execution results.
-* To sync the step level results in case of the manual test steps, user must configure the `iterations` field available on the `{{ spaceName }}` field configurations.
+* To sync the step level results in case of the manual test steps, user must configure the `iterations` field available on the `<code class="expression">space.vars.SITENAME</code>` field configurations.
 
 **Known Limitations**
 
@@ -1687,7 +1687,7 @@ Also, the user can rename the "Default Folder" as per his/her liking.
 
       * Test Run entity will be synced without history.
 * **When Jira  [Xray] is target system:**
-  * If an in-flight failure occurs for the Xray fields during an Xray Test, Precondition, Test Plan, Test Set, or Test Execution entity synchronization, `{{ spaceName }}` will overwrite the data in the target system. Therefore, it is necessary to enable conflict resolution for these fields to ensure proper synchronization.
+  * If an in-flight failure occurs for the Xray fields during an Xray Test, Precondition, Test Plan, Test Set, or Test Execution entity synchronization, `<code class="expression">space.vars.SITENAME</code>` will overwrite the data in the target system. Therefore, it is necessary to enable conflict resolution for these fields to ensure proper synchronization.
   * Below links are not supported for create & update. They are only available for read operation:
     * Test Run entity – link types: Xray Test & Test Execution
     * Test Execution entity – link types: testRuns
@@ -1710,7 +1710,7 @@ Also, the user can rename the "Default Folder" as per his/her liking.
 
 ## QMetry plugin entities
 
-* `{{ spaceName }}` supports four QMetry entities: Test Case, Test Scenario, Test Run, QMetry Test Execution (Only for QMetry Self-Managed).
+* `<code class="expression">space.vars.SITENAME</code>` supports four QMetry entities: Test Case, Test Scenario, Test Run, QMetry Test Execution (Only for QMetry Self-Managed).
 * For the supported versions of QMetry plugin, refer to  [../supported-connectors/systems-supported.md].
 
 ### Supported Relationships
@@ -1727,7 +1727,7 @@ Following are the relationships that are supported for **QMetry Self-Managed** e
 
 ### Default Behavior
 
-* When Jira is the target system in  {{ spaceName  }}, to synchronize the QMetry Test Execution, either Target Lookup or 'QMetry TestCase' linkage with Test Case Entity, and 'QMetry TestRun' linkage with Test Run Entity must be configured.
+* When Jira is the target system in  <code class="expression">space.vars.SITENAME</code>, to synchronize the QMetry Test Execution, either Target Lookup or 'QMetry TestCase' linkage with Test Case Entity, and 'QMetry TestRun' linkage with Test Run Entity must be configured.
 
 ### Criteria Configuration
 
@@ -1746,16 +1746,16 @@ For Target Lookup configuration of QMetry entities, refer to [Target lookup for 
 * To synchronize the changes in test steps field, update some basic fields in Jira.
 * To get the changes synchronized in QMetry linkages, update some basic fields in Jira.
 * For QMetry Test Execution:
-  * When Jira is the source system in  {{ spaceName  }}:
+  * When Jira is the source system in  <code class="expression">space.vars.SITENAME</code>:
     * Synchronization is not supported.
-  * When Jira is the target system in  {{ spaceName  }}:
+  * When Jira is the target system in  <code class="expression">space.vars.SITENAME</code>:
     * Synchronization of step level result, Bug linkages are not supported.
     * [Target LookUp Configuration](jira.md#target-lookup-configuration) is only supported to find the unique Test Execution Id.
 
 
 ## AIO plugin entities
 
-*  {{ spaceName  }} supports three AIO entities: AIO Test Case, AIO Test Cycle, AIO Test Run.
+*  <code class="expression">space.vars.SITENAME</code> supports three AIO entities: AIO Test Case, AIO Test Cycle, AIO Test Run.
 * The supported versions of the AIO plugin are mentioned in [Systems Supported List](../supported-connectors/systems-supported.md).
 
 ### Supported Relationships
@@ -1782,7 +1782,7 @@ Following are the relationships supported for **AIO** entities:
 **AIO Test Case and AIO Test Cycle entities**
 
 * Navigate to Criteria Configuration section on [Integration Configuration](../integrate/integration-configuration.md) page to learn in detail about criteria configuration.
-* Set the **Query** in JSON format. Refer to the sample snippets below to know how JSON queries can be used as criteria in  {{ spaceName  }}.
+* Set the **Query** in JSON format. Refer to the sample snippets below to know how JSON queries can be used as criteria in  <code class="expression">space.vars.SITENAME</code>.
 
 **Criteria samples**
 
@@ -2049,7 +2049,7 @@ Following are the relationships supported for **AIO** entities:
 
 #### Common
 
-* AIO Test Entities' read only is supported in  {{ spaceName  }}.
+* AIO Test Entities' read only is supported in  <code class="expression">space.vars.SITENAME</code>.
 * AIO Test Entities' history-based sync is not supported due to API unavailability.
 * Comments and Attachments' sync are not supported.
 
@@ -2087,7 +2087,7 @@ The known limitations for Jira Service Desk are:
 ## Jira Elements Connect Plugin
 
 * With Jira Elements Connect plugin, the user can add custom fields which uses data from external data sources.
-*  {{ spaceName  }} supports all the variations of the field types supported by Elements Connect.
+*  <code class="expression">space.vars.SITENAME</code> supports all the variations of the field types supported by Elements Connect.
 
 | **Elements Connect Field** |
 | -------------------------- |
@@ -2097,38 +2097,38 @@ The known limitations for Jira Service Desk are:
 | Snapshot date              |
 | Snapshot datetime          |
 
-* Live text and snapshot text fields are considered as lookup fields in  {{ spaceName  }}. To configure value mappings of these type of fields, enable "include field values in /createmeta response" option from the field's advanced configuration of Elements Connect.
+* Live text and snapshot text fields are considered as lookup fields in  <code class="expression">space.vars.SITENAME</code>. To configure value mappings of these type of fields, enable "include field values in /createmeta response" option from the field's advanced configuration of Elements Connect.
 
 <div align="center"><img src="../assets/Elements%20Connect%20Advanced%20Config.png" alt="" width="700"></div>
 
-* If the above option is not enabled in Jira, the fields can still be mapped in  {{ spaceName  }}, but value mapping cannot be done. In such cases,  {{ spaceName  }} will sync the exact same value as it is retrieved from the end system.
+* If the above option is not enabled in Jira, the fields can still be mapped in  <code class="expression">space.vars.SITENAME</code>, but value mapping cannot be done. In such cases,  <code class="expression">space.vars.SITENAME</code> will sync the exact same value as it is retrieved from the end system.
 
 # Known behaviors and limitations
 
-* Elements Connect plugin provides different types of fields such as radio button, check box, multi-select list, etc. However, all these types of fields will appear as multi valued fields in  {{ spaceName  }} due to Jira API limitation.
+* Elements Connect plugin provides different types of fields such as radio button, check box, multi-select list, etc. However, all these types of fields will appear as multi valued fields in  <code class="expression">space.vars.SITENAME</code> due to Jira API limitation.
   * Read only fields:
-    * Read only fields will appear as writeable fields in  {{ spaceName  }}.
+    * Read only fields will appear as writeable fields in  <code class="expression">space.vars.SITENAME</code>.
       * Reason: Jira does not provide any way to identify the read only fields. Additonally, Jira API allows to update read only fields.
   * Single valued fields:
-    * Single valued fields will appear as multi valued field in  {{ spaceName  }}.
-    * In this case,  {{ spaceName  }} sends mutliple values to Jira but the Jira UI will show only a single value of the field. However, The reverse sync will work properly in this case.
+    * Single valued fields will appear as multi valued field in  <code class="expression">space.vars.SITENAME</code>.
+    * In this case,  <code class="expression">space.vars.SITENAME</code> sends mutliple values to Jira but the Jira UI will show only a single value of the field. However, The reverse sync will work properly in this case.
       * Reason: Jira does not provide any way to differentiate between single valued and multi valued fields. Additonally, Jira API allows to update single valued field with multiple values.
 * Dependent fields:
-  * All the dependent fields are considered as Text type fields in  {{ spaceName  }} and value mapping cannot be performed for these fields.
-    * In case value mapping is required, the advanced mapping can be configured in the  {{ spaceName  }}.
+  * All the dependent fields are considered as Text type fields in  <code class="expression">space.vars.SITENAME</code> and value mapping cannot be performed for these fields.
+    * In case value mapping is required, the advanced mapping can be configured in the  <code class="expression">space.vars.SITENAME</code>.
       * Reason: Jira API does not return lookup values for dependent fields even if the "include field values in /createmeta response" option is enabled in Jira.
 * Data source as Jira REST API:
-  * In the below mentioned use case, the lookup values will not be loaded for the Elements Connect field. Hence, the user will not able to perform value mappings in  {{ spaceName  }}.
-    * Jira REST API is used as data source for Elements Connect field. The authentication type configured in Jira system configuration form of  {{ spaceName  }} is not cookie-based authentication. In such case, Jira API does not return any lookup values even if the "include field values in /createmeta response" option is enabled in Jira.
-    * It is recommended to configure the cookie-based authentication for value mapping in  {{ spaceName  }} for Jira system. However, if the cookie-based authentication is not possible and value mapping is still required, here is an alternative way to use 'Jira REST API' as data source:
+  * In the below mentioned use case, the lookup values will not be loaded for the Elements Connect field. Hence, the user will not able to perform value mappings in  <code class="expression">space.vars.SITENAME</code>.
+    * Jira REST API is used as data source for Elements Connect field. The authentication type configured in Jira system configuration form of  <code class="expression">space.vars.SITENAME</code> is not cookie-based authentication. In such case, Jira API does not return any lookup values even if the "include field values in /createmeta response" option is enabled in Jira.
+    * It is recommended to configure the cookie-based authentication for value mapping in  <code class="expression">space.vars.SITENAME</code> for Jira system. However, if the cookie-based authentication is not possible and value mapping is still required, here is an alternative way to use 'Jira REST API' as data source:
       * Create a custom 'URL' data source having the URL field as the base URL of the in-built 'Jira REST API'.
-      * For the fields to be mapped in  {{ spaceName  }}, select the above created custom Jira REST API data source from the drop down available in the fields configuration on Elements Connect's screen.
+      * For the fields to be mapped in  <code class="expression">space.vars.SITENAME</code>, select the above created custom Jira REST API data source from the drop down available in the fields configuration on Elements Connect's screen.
 
 # Known Behaviours
 
 ## Dependent timespent field in status transition
 
-* When the timespent field is mentioned as a dependent field in status transition XML in  {{ spaceName  }}, the timespent field value only gets added in Jira due to its API. Hence, whenever a timespent value is provided as a dependent field, the field value gets increased cumulatively.
+* When the timespent field is mentioned as a dependent field in status transition XML in  <code class="expression">space.vars.SITENAME</code>, the timespent field value only gets added in Jira due to its API. Hence, whenever a timespent value is provided as a dependent field, the field value gets increased cumulatively.
   * For example, if the timespent field value of Jira is X, and the Y value is synced to that field, the final value of that field will become X+Y.
 * However, due to Jira's timespent field behavior, it is recommended to set the default value for the timespent field as 0 in transition XML to keep the field value unchanged.
 
@@ -2182,13 +2182,13 @@ The known limitations for Jira Service Desk are:
 
 # Known Limitations
 
-* Impersonation is not supported in  {{ spaceName  }}.
-* Read Only fields in  {{ spaceName  }} will not be writable due to end system API limitations/behaviours.
+* Impersonation is not supported in  <code class="expression">space.vars.SITENAME</code>.
+* Read Only fields in  <code class="expression">space.vars.SITENAME</code> will not be writable due to end system API limitations/behaviours.
   * E.g., Created date, Creator, Modified Date, Modified by, etc.
-* To load all the custom fields associated with the selected project and issue type in  {{ spaceName  }} mapping, there must be at least one entity present (of selected entity type in the given project of  {{ spaceName  }} mapping) in Jira.
-  * In case, the above mentioned entity is not present in Jira, the fields associated with the create screen will only be loaded in  {{ spaceName  }} mapping.
-* Custom look up field must be present on create/edit screen to perform value mappings in  {{ spaceName  }}.
-  * If the field is not present in create/edit screen, advanced mapping needs to be configured in  {{ spaceName  }} to sync custom look up field values.
+* To load all the custom fields associated with the selected project and issue type in  <code class="expression">space.vars.SITENAME</code> mapping, there must be at least one entity present (of selected entity type in the given project of  <code class="expression">space.vars.SITENAME</code> mapping) in Jira.
+  * In case, the above mentioned entity is not present in Jira, the fields associated with the create screen will only be loaded in  <code class="expression">space.vars.SITENAME</code> mapping.
+* Custom look up field must be present on create/edit screen to perform value mappings in  <code class="expression">space.vars.SITENAME</code>.
+  * If the field is not present in create/edit screen, advanced mapping needs to be configured in  <code class="expression">space.vars.SITENAME</code> to sync custom look up field values.
 * "Sprint Details" field will be synced based on the current state only. Its historic values will not be synced due to the end system API limitations/behaviors.
 * In Jira On-Premise, updating the mandatory "Sub Task Parent" link for the "SubTask" entity is not possible due to limitations in the REST API.
   * It is recommended to configure "Sub Task Parent" link with the settings, **Fail if not found** and no default link. It ensures that incorrect link associations are avoided during entity creation via integration.
@@ -2464,10 +2464,10 @@ To create a new custom field:
 	  <img src="../assets/jira-custom-field-old-a2.png" width="800">
 	</p>
 
-* From the **Field Type** list, select the appropriate field. For  {{ spaceName  }}, select **Read-only Text Field**.
+* From the **Field Type** list, select the appropriate field. For  <code class="expression">space.vars.SITENAME</code>, select **Read-only Text Field**.
 * Click the **Next >>** button.
 * Add a field name and optionally a description.
-* Select **Free Text Searcher** as the **Search Template** for  {{ spaceName  }}.
+* Select **Free Text Searcher** as the **Search Template** for  <code class="expression">space.vars.SITENAME</code>.
 * Select applicable **Issue Types** or choose **Any issue type**.
 * Select a **Project context** or use **Global context**.
 * Click **Finish**, then associate the field with screens (at minimum, the Default Screen).
@@ -2575,7 +2575,7 @@ Steps to allow any-to-any state transitions:
 8. Repeat for all required transitions.
 9. Click **Publish Draft** to save.
 
-> **Note:** This approach is valid if you do not wish to configure advanced workflow mapping in  {{ spaceName  }}.
+> **Note:** This approach is valid if you do not wish to configure advanced workflow mapping in  <code class="expression">space.vars.SITENAME</code>.
 
  
 

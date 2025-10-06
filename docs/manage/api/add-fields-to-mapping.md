@@ -5,7 +5,7 @@
 # Input
 
 - Instance details:
-  - Instance details like OpsHub Integration Manager instance URL, username and password are to be given in **instanceDetails.properties** file available within script.
+  - Instance details like <code class="expression">space.vars.SITENAME</code> instance URL, username and password are to be given in **instanceDetails.properties** file available within script.
 
 - Mapping details (to be given at the time of script execution):
   - Mapping id to be updated.

@@ -28,7 +28,7 @@ CREATE DATABASE reportsdb CHARACTER SET latin1 COLLATE latin1_general_cs;
 
 If your end systems support multiple language characters, it's essential to choose a collation that supports **UTF** characters.
 
-To enable UTF character support in **OpsHub Integration Manager**, install it on **Microsoft SQL Server 2019 or above**.
+To enable UTF character support in **<code class="expression">space.vars.SITENAME</code>**, install it on **Microsoft SQL Server 2019 or above**.
 
 Select a collation with a `UTF` postfix, for example:
 
@@ -38,7 +38,7 @@ Select a collation with a `UTF` postfix, for example:
 
 If your end systems use a single language and your selected collation includes all necessary characters and is supported in **SQL Server versions below 2019**, you can install on SQL Server below 2019.
 
-Select an appropriate collation that suits your end systems (which will be configured in **OpsHub Integration Manager**).
+Select an appropriate collation that suits your end systems (which will be configured in **<code class="expression">space.vars.SITENAME</code>**).
 
 This guide may help you decide the right collation.
 

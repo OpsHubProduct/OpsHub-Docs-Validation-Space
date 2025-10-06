@@ -2,9 +2,9 @@ In this section, you will learn how to create and manage users.
 
 # Create User
 
-Here is a video on how to create and manage users for different operations within OpsHub Integration Manager:
+Here is a video on how to create and manage users for different operations within <code class="expression">space.vars.SITENAME</code>:
 
-> **Note** : All the new users in OpsHub Integration Manager have administrator-level permissions. With the administrator-level permissions, the users will have access to all features.
+> **Note** : All the new users in <code class="expression">space.vars.SITENAME</code> have administrator-level permissions. With the administrator-level permissions, the users will have access to all features.
 
 {% embed url="https://youtu.be/r8HbL_Kz-rQ" %}
 
@@ -62,7 +62,7 @@ To add a new user, follow the steps given below:
        <img src="../../assets/Azure_UserAttribute.png""  width="800" />
      </p>
 
-> **Note** : The attribute which is specified in 'Unique User Identifer' should be used while defining the user's 'User name' in OpsHub Integration Manager. For example, here 'user.mail' is the selected attribute and so this property of the user from Azure Active Directory is to be used while defining 'User name' in OpsHub Integration Manager.
+> **Note** : The attribute which is specified in 'Unique User Identifer' should be used while defining the user's 'User name' in <code class="expression">space.vars.SITENAME</code>. For example, here 'user.mail' is the selected attribute and so this property of the user from Azure Active Directory is to be used while defining 'User name' in <code class="expression">space.vars.SITENAME</code>.
 
 
 

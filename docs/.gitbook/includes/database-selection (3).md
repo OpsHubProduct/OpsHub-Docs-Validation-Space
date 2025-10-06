@@ -9,10 +9,10 @@ The user should select the Database type for installation from the dropdown list
 Click the checkbox adjacent to \*\*Advance configuration\*\* option if you have one of the following requirements:
 
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
-* Install OpsHub Integration Manager in https
+* Install <code class="expression">space.vars.SITENAME</code> in https
 {% endif %}
 
-* Install multiple instances of OpsHub Integration Manager on a single instance
+* Install multiple instances of <code class="expression">space.vars.SITENAME</code> on a single instance
 * Need to create database manually
 
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
@@ -25,11 +25,11 @@ The installer progresses to next panel in accordance with the user selection.
 
 | **Database Type**             | **Installation Details**                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Embedded HSQL**             | <p>This type of installation starts from the next panel. No more inputs from the user are required. It installs OpsHub Integration Manager on HSQL database packaged along with OpsHub Integration Manager installer.<br>> <strong>Note</strong>: This installation is not recommended for production.<br>Read more: <a href="broken-reference">Installation with embedded HSQL (Default)</a></p>                                                                                             |
-| **MySQL Server**              | <p>This type of installation further asks for MySQL Server database parameters. You need to specify connection parameters to connect to MySQL and the path of the connector jar, which is required for database transaction done by OpsHub Integration Manager.<br>Read more: <a href="broken-reference">Installation with MySQL Server</a><br>> <strong>Note</strong>: Here for the Connector Jar, select the path of the executable Jar file named mysql-connector-java-5.1.35-bin.jar.</p> |
-| **Oracle**                    | <p>This type of installation further asks for Oracle Server database parameters. You need to specify connection parameters to connect to Oracle and the path of the connector jar, which is required for database transaction done by OpsHub Integration Manager.<br>Read more: <a href="broken-reference">Installation with Oracle</a></p>                                                                                                                                                   |
+| **Embedded HSQL**             | <p>This type of installation starts from the next panel. No more inputs from the user are required. It installs <code class="expression">space.vars.SITENAME</code> on HSQL database packaged along with <code class="expression">space.vars.SITENAME</code> installer.<br>> <strong>Note</strong>: This installation is not recommended for production.<br>Read more: <a href="broken-reference">Installation with embedded HSQL (Default)</a></p>                                                                                             |
+| **MySQL Server**              | <p>This type of installation further asks for MySQL Server database parameters. You need to specify connection parameters to connect to MySQL and the path of the connector jar, which is required for database transaction done by <code class="expression">space.vars.SITENAME</code>.<br>Read more: <a href="broken-reference">Installation with MySQL Server</a><br>> <strong>Note</strong>: Here for the Connector Jar, select the path of the executable Jar file named mysql-connector-java-5.1.35-bin.jar.</p> |
+| **Oracle**                    | <p>This type of installation further asks for Oracle Server database parameters. You need to specify connection parameters to connect to Oracle and the path of the connector jar, which is required for database transaction done by <code class="expression">space.vars.SITENAME</code>.<br>Read more: <a href="broken-reference">Installation with Oracle</a></p>                                                                                                                                                   |
 | **MS SQL / Azure SQL Server** | <p>The input form allows you to select Authentication mode.<br>Read more: <a href="broken-reference">Installation with MS SQL/Azure SQL Server</a></p>                                                                                                                                                                                                                                                                                                                                        |
-| **PostgreSQL**                | <p>This type of installation further asks for PostgreSQL database parameters. You need to specify connection parameters to connect to PostgreSQL and the path of the connector jar, which is required for database transaction done by OpsHub Integration Manager.<br>Read more: <a href="broken-reference">Installation with PostgreSQL</a></p>                                                                                                                                              |
+| **PostgreSQL**                | <p>This type of installation further asks for PostgreSQL database parameters. You need to specify connection parameters to connect to PostgreSQL and the path of the connector jar, which is required for database transaction done by <code class="expression">space.vars.SITENAME</code>.<br>Read more: <a href="broken-reference">Installation with PostgreSQL</a></p>                                                                                                                                              |
 
 Notes:
 
@@ -83,7 +83,7 @@ Notes:
 * The default user name will be 'C##opshub' and 'C##reportsdb' for Oracle CDB instance with CDB$ROOT container.
 * The default user name will be 'opshub' and 'reportsdb' for Oracle Non-CDB instance or CDB instance with container other than CDB$ROOT.
 
-For the **Oracle cluster** instance, to get the instance name for OpsHub Integration Manager installation, please check the below SQL to get the
+For the **Oracle cluster** instance, to get the instance name for <code class="expression">space.vars.SITENAME</code> installation, please check the below SQL to get the
 
 currently logged in instance name.
 
@@ -106,11 +106,11 @@ If you have to install the pre-requisite for Oracle with **version 11g (Release 
 
 * **Pre-requisite for Oracle with version 11g**:
 
-For Oracle 11g version, ojdbc6.jar or ojdbc5.jar is required. The path for ojdbc6.jar or ojdbc5.jar is required while installing OpsHub Integration Manager with Oracle database.
+For Oracle 11g version, ojdbc6.jar or ojdbc5.jar is required. The path for ojdbc6.jar or ojdbc5.jar is required while installing <code class="expression">space.vars.SITENAME</code> with Oracle database.
 
 * **Pre-requisite for Oracle with version 12c**':
 
-For Oracle 12c version, ojdbc7.jar or ojdbc6.jar is required. The path of the executable jar files (such as ojdbc7.jar or ojdbc6.jar)is required while installing OpsHub Integration Manager with Oracle database.
+For Oracle 12c version, ojdbc7.jar or ojdbc6.jar is required. The path of the executable jar files (such as ojdbc7.jar or ojdbc6.jar)is required while installing <code class="expression">space.vars.SITENAME</code> with Oracle database.
 
 * **Pre-requisite for Oracle with version 19c**:
 

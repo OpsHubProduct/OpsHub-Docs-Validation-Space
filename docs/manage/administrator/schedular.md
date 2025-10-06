@@ -1,4 +1,4 @@
-All the users in OpsHub Integration Manager, who have a 'Professional' or 'Ultimate' license , will have access to 'Job Schedules' [which are associated with the integrations].
+All the users in <code class="expression">space.vars.SITENAME</code>, who have a 'Professional' or 'Ultimate' license , will have access to 'Job Schedules' [which are associated with the integrations].
 
 # Create Schedules
 

@@ -1,5 +1,5 @@
 {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} *Close OM4ADO application before execution of the utility | Stop OpsHub Server Service before execution of the utility {% endif %} 
-* Go to `<{{SITENAME}} Installation Folder>/Other_Resources/Resources` 
+* Go to `<<code class="expression">space.vars.SITENAME</code> Installation Folder>/Other_Resources/Resources` 
 * Unzip `HostChange.zip` 
 * Open Command Prompt with administrator privileges and go to directory `<{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} OM4ADO{% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} OpsHub {% endif %} Installation Folder>/Other_Resources/Resources/HostChange` using command  **`cd <{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} OM4ADO{% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} OpsHub {% endif %} Installation Folder>/Other_Resources/Resources/HostChange`**
 * Run `HostChange.bat` for Windows system. {% if "OpsHub Integration Manager" === space.vars.SITENAME %} In case of linux system, run HostChange.sh {% endif %}
@@ -18,7 +18,7 @@
   <img src="../../assets/Mysql1.png">
 </p>
 
-* If the Host Name input is not entered in the above step, then user will get the notification mentioned in the screen shot below. As the Host Name is a mandatory input that defines the new Host Name you want {{SITENAME}} database to refer to: 
+* If the Host Name input is not entered in the above step, then user will get the notification mentioned in the screen shot below. As the Host Name is a mandatory input that defines the new Host Name you want <code class="expression">space.vars.SITENAME</code> database to refer to: 
 
 <p align="center">
   <img src="../../assets/Mysql2.png">
@@ -30,7 +30,7 @@
   <img src="../../assets/Mysql3.png">
 </p>
 
-* If the Port input is not entered in the above step, then utility will use the existing Port [entered at a time of {{SITENAME}} installation]. If that is not the case, then enter the Port here:
+* If the Port input is not entered in the above step, then utility will use the existing Port [entered at a time of <code class="expression">space.vars.SITENAME</code> installation]. If that is not the case, then enter the Port here:
 
 <p align="center">
   <img src="../../assets/Mysql4.png">
@@ -50,7 +50,7 @@
   <img src="../../assets/Oracle21.png">
 </p>
 
-* If the Host Name input is not entered in the above step, then user will get the notification mentioned in the screen shot below. As the Host Name is a mandatory input that defines the new Host Name you want {{SITENAME}} database to refer to:  
+* If the Host Name input is not entered in the above step, then user will get the notification mentioned in the screen shot below. As the Host Name is a mandatory input that defines the new Host Name you want <code class="expression">space.vars.SITENAME</code> database to refer to:  
 
 <p align="center">
   <img src="../../assets/Oracle22.png">
@@ -62,7 +62,7 @@
   <img src="../../assets/Oracle33.png">
 </p>
 
-* If the Port input is not entered in the above step, then utility will use the existing Port [entered at the time of {{SITENAME}} installation]. If that is not the case, then enter the Port here:
+* If the Port input is not entered in the above step, then utility will use the existing Port [entered at the time of <code class="expression">space.vars.SITENAME</code> installation]. If that is not the case, then enter the Port here:
 
 <p align="center">
   <img src="../../assets/Oracle44.png">
@@ -76,7 +76,7 @@
 
 ## HostChange with MSSQL Server
 
-* **Note**: If {{SITENAME}} is installed with Windows Authentication mode, then before running the utility, the user needs to make sure that the user who is logged into the Windows [where the {{SITENAME}} is installed] also logs into the new host's MSSQL instance with the same credentials.
+* **Note**: If <code class="expression">space.vars.SITENAME</code> is installed with Windows Authentication mode, then before running the utility, the user needs to make sure that the user who is logged into the Windows [where the <code class="expression">space.vars.SITENAME</code> is installed] also logs into the new host's MSSQL instance with the same credentials.
 
 * Enter the new Host Name for MSSQL Server: 
 
@@ -84,7 +84,7 @@
   <img src="../../assets/MssqlSer1.png">
 </p>
 
-* If the Host Name input is not entered in the above step, then user will get the notification mentioned in the screen shot below. As the Host Name is a mandatory input that defines the new Host Name you want {{SITENAME}} database to refer to: 
+* If the Host Name input is not entered in the above step, then user will get the notification mentioned in the screen shot below. As the Host Name is a mandatory input that defines the new Host Name you want <code class="expression">space.vars.SITENAME</code> database to refer to: 
 
 <p align="center">
   <img src="../../assets/MssqlSer2.png">

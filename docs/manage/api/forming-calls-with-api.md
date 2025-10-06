@@ -1,26 +1,26 @@
 # Overview
-With the {{SITENAME}} API, the user can communicate with {{SITENAME}} where the defined format needs to be used for making the API Calls. The below sections will help you with the format and examples around it and give an idea of the generic API format.
+With the <code class="expression">space.vars.SITENAME</code> API, the user can communicate with <code class="expression">space.vars.SITENAME</code> where the defined format needs to be used for making the API Calls. The below sections will help you with the format and examples around it and give an idea of the generic API format.
 
 # Format
 * **Request Method Type**: GET/POST/PUT/DELETE
 * **Request URL**: <Instance API URL>[?query=<Encoded Query Structure>]
 * **Request Body**: [JSON request body]
-* **Authentication Data**: {{SITENAME}} user credentials
+* **Authentication Data**: <code class="expression">space.vars.SITENAME</code> user credentials
 * **Headers**: api_version:1, Content-Type: application/json
 
 **Explanation:**
 
 * **Request URL**
-  * It contains <Instance API URL> and optional parameter [?query=<Encoded Query Structure>]. For reading the data from the {{SITENAME}}, the query parameter is needed with the encoded query structure.
+  * It contains <Instance API URL> and optional parameter [?query=<Encoded Query Structure>]. For reading the data from the <code class="expression">space.vars.SITENAME</code>, the query parameter is needed with the encoded query structure.
   * **Instance API URL**
-    * It is an API URL specific to your {{SITENAME}} instance. For any API call to be performed for your instance, it would be a common URL with additional details around operation to be performed.
-    * Its format is predefined, which is formed with the details of {{SITENAME}} instance and a static postfix.  
-      `<Protocol>://<Host Name/IP address of {{SITENAME}} instance>:<Port Number>/<API endpoint>`
+    * It is an API URL specific to your <code class="expression">space.vars.SITENAME</code> instance. For any API call to be performed for your instance, it would be a common URL with additional details around operation to be performed.
+    * Its format is predefined, which is formed with the details of <code class="expression">space.vars.SITENAME</code> instance and a static postfix.  
+      `<Protocol>://<Host Name/IP address of <code class="expression">space.vars.SITENAME</code> instance>:<Port Number>/<API endpoint>`
 
 | Element | Description |
 |--------|-------------|
-| `<Protocol>` | Http/https based on your {{SITENAME}} instance setup |
-| `<Host Name/IP address of {{SITENAME}} instance>` | IP address or the configured host name for {{SITENAME}} instance |
+| `<Protocol>` | Http/https based on your <code class="expression">space.vars.SITENAME</code> instance setup |
+| `<Host Name/IP address of <code class="expression">space.vars.SITENAME</code> instance>` | IP address or the configured host name for <code class="expression">space.vars.SITENAME</code> instance |
 | `<Port Number>` | Port number of your {{SITENAME}} instance. Default port for the HTTP is 8989 and HTTPS is 8443 |
 | `<API endpoint>` | OpsHubWS/queryNode/execute |
 

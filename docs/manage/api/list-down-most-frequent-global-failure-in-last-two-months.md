@@ -1,6 +1,6 @@
 # Description
 
-- Let’s say the {{SITENAME}} is installed on 10.13.27.211 instance on HTTP and user credentials for this instance is “admin” and “password”
+- Let’s say the <code class="expression">space.vars.SITENAME</code> is installed on 10.13.27.211 instance on HTTP and user credentials for this instance is “admin” and “password”
 - A user wants to retrieve the basic details of the most frequent 20 global failures of last two months from all integrations.
 - The basic details of global failure including the id of the failure, failure message, failure code and failure count, corresponding integration group id.
 

@@ -1,8 +1,8 @@
 
 > 👉 **Looking for older version steps?**\
-> Refer to the [Post-Migration Checklist (MediaWiki)](https://docs.myopshub.com/oim/index.php/Post-Migration_Checklist) for {{SITENAME}} versions prior to 7.195.
+> Refer to the [Post-Migration Checklist (MediaWiki)](https://docs.myopshub.com/oim/index.php/Post-Migration_Checklist) for <code class="expression">space.vars.SITENAME</code> versions prior to 7.195.
 
-# Migrating {{SITENAME}} version to 7.175 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.175 or above
 
 ## Update the Advance XSLT used for Jira Zephyr Test-step results
 
@@ -30,24 +30,24 @@
 
 **Applicable When**
 
-* SAML-based authentication is configured in {{SITENAME}}.
+* SAML-based authentication is configured in <code class="expression">space.vars.SITENAME</code>.
 
 **Actions**
 
 * The user has already configured SAML Identity Provider. Example., OKTA, Azure Active Directory, etc.
 * In SAML Identity Provider configuration, the user can find the single sign-on URL field under the SAML settings.
-* The user must change the single sign-on URL in SAML Identity Provider when {{SITENAME}} is installed with HTTP protocol:
+* The user must change the single sign-on URL in SAML Identity Provider when <code class="expression">space.vars.SITENAME</code> is installed with HTTP protocol:
   * Current configuration: `http://localhost:8989/OpsHubWS/saml/SSO`
   * Updated URL configuration must be: `http://localhost:8989/OpsHubWS/login/saml2/sso/opshubsaml`
-* The user must change the single sign-on URL in SAML Identity Provider when {{SITENAME}} is installed with HTTPS protocol:
+* The user must change the single sign-on URL in SAML Identity Provider when <code class="expression">space.vars.SITENAME</code> is installed with HTTPS protocol:
   * Current configuration: `https://localhost:8443/OpsHubWS/saml/SSO`
   * Updated URL configuration must be: `https://localhost:8443/OpsHubWS/login/saml2/sso/opshubsaml`
 
 **Reason**
 
-* Going forward, {{SITENAME}} will use Spring Security Saml2 service provider to support SAML-based authentication. It will also eliminate vulnerabilities of older SAML framework.
+* Going forward, <code class="expression">space.vars.SITENAME</code> will use Spring Security Saml2 service provider to support SAML-based authentication. It will also eliminate vulnerabilities of older SAML framework.
 
-# Migrating {{SITENAME}} version to 7.176 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.176 or above
 
 ## Update .NET framework to 4.7.2 or above
 
@@ -67,7 +67,7 @@
 
 * .NET Framework version 4.0 is out of support. Therefore, dependency on .NET framework version 4.0 has also been removed.
 
-# Migrating {{SITENAME}} version to 7.177 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.177 or above
 
 ## Workflow Change for Any Customized Workflow
 
@@ -116,17 +116,17 @@ Starting with version 7.177, all properties are directly accessible from the old
 
 ***
 
-# Migrating {{SITENAME}} version to 7.181 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.181 or above
 
 ## Remap values of lookup field when it contains special character(s)
 
 ### Applicable When
 
-Values for lookup field contains special characters (tab space) in the source/target system, even though these special characters are not visible in the lookup values of {{SITENAME}}.
+Values for lookup field contains special characters (tab space) in the source/target system, even though these special characters are not visible in the lookup values of <code class="expression">space.vars.SITENAME</code>.
 
 ### Actions
 
-After upgrading {{SITENAME}}, remap the lookup field that contains lookup values with the above specified special characters.
+After upgrading <code class="expression">space.vars.SITENAME</code>, remap the lookup field that contains lookup values with the above specified special characters.
 
 The following specified characters need to have their lookup field values remapped:
 
@@ -167,9 +167,9 @@ Open mapping configurations with mention relationships configured. Remove mentio
 
 ### Reason
 
-This makes link names visible in {{SITENAME}} aligned with link names visible in OpenText ALM Octane UI for respective entity types.
+This makes link names visible in <code class="expression">space.vars.SITENAME</code> aligned with link names visible in OpenText ALM Octane UI for respective entity types.
 
-# Migrating {{SITENAME}} version to 7.184 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.184 or above
 
 ## Update the Criteria Query Or Lookup Query for Tricentis qTest Module
 
@@ -190,7 +190,7 @@ This makes link names visible in {{SITENAME}} aligned with link names visible in
 
 * Enhanced filtering for qTest module entity to support **expand** and **parentId** along with search query parameters.
 
-# Migrating {{SITENAME}} version to 7.186 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.186 or above
 
 ## Update Relationship Mapping for Cycle Entity in OpenText ALM Quality Center
 
@@ -233,7 +233,7 @@ For more details, please refer to [Gitlab connector mapping configurations](../.
 
 ***
 
-# Migrating {{SITENAME}} version to 7.189 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.189 or above
 
 ## Update the JSON input for Jira Xray Cloud Entity Display Name
 

@@ -1,10 +1,10 @@
-OpsHub Integration Manager supports LDAP and SAML Authentication, so that user can login with their own LDAP or SAML credentials.
+<code class="expression">space.vars.SITENAME</code> supports LDAP and SAML Authentication, so that user can login with their own LDAP or SAML credentials.
 
 # LDAP
 
 ## LDAP Server Limitations
 
-OpsHub Integration Manager does not support configuration and authentication of LDAP servers that are running behind the proxy.
+<code class="expression">space.vars.SITENAME</code> does not support configuration and authentication of LDAP servers that are running behind the proxy.
 
 ## New LDAP Server Configuration
 
@@ -48,20 +48,20 @@ If you want to give permission to these two OU's "Sales" and "Engineering" only 
 - **Use SSL Encryption**: Select YES if the connection to the LDAP Server is secured, otherwise select NO.
 - **Password**: Provide a password for the above given username.
 
-**Note** : For LDAPS, the certificates will be auto imported by OpsHub Integration Manager and if not, then user can manually import it as specified in [Import SSL Certificates](../../getting-started/ssl-certificate-configuration.md).
+**Note** : For LDAPS, the certificates will be auto imported by <code class="expression">space.vars.SITENAME</code> and if not, then user can manually import it as specified in [Import SSL Certificates](../../getting-started/ssl-certificate-configuration.md).
 
 - **Allow Anonymous Login**: Select "Yes" if you want to allow Anonymous login. If the anonymous login feature is enabled on your remote LDAP server and this option is activated in the login server configuration, users can log in without a password.
 - Select **Test Connection Before Adding Server** when users want to test the connection before adding it to the records. Otherwise, it would only be added to the database but not validated.
 
 After providing all the inputs, user can test or save the configuration.
 
-- **Save Configuration**: It will save the entire configuration of LDAP Server to database. If **Test Connection Before Adding Server** is put on, then, OpsHub Integration Manager would first test the connection and if the connection to the server is successful, it would save the configuration to the database. The server would be added in the Inactive state.
+- **Save Configuration**: It will save the entire configuration of LDAP Server to database. If **Test Connection Before Adding Server** is put on, then, <code class="expression">space.vars.SITENAME</code> would first test the connection and if the connection to the server is successful, it would save the configuration to the database. The server would be added in the Inactive state.
 
 - **Test Configuration**: This will validate the connection to the LDAP server using the provided configuration details. If no connection username and password are specified, the test will verify only the connectivity to the LDAP server host, without performing a bind or login request.
 
 Once the server is configured, user needs to activate it to authenticate with that server.
 
-**Note** : To use OpsHub Integration Manager using LDAP user, we need to create LDAP user in OpsHub Integration Manager. Refer to Create User section on [User Management](../administrator/user-management.md) page to create LDAP user.
+**Note** : To use <code class="expression">space.vars.SITENAME</code> using LDAP user, we need to create LDAP user in <code class="expression">space.vars.SITENAME</code>. Refer to Create User section on [User Management](../administrator/user-management.md) page to create LDAP user.
 
 ---
 
@@ -71,16 +71,16 @@ Identity Providers following SAML 2.0 standards and having HTTP/HTTPS metadata U
 
 ## Service Provider Metadata
 
-Below information should be used for configuring OpsHub Integration Manager as a Service Provider for Identity Provider(s):
+Below information should be used for configuring <code class="expression">space.vars.SITENAME</code> as a Service Provider for Identity Provider(s):
 
 - **Assertion Consumer Service (ACS) URL** or **Single sign on URL** → `<protocol>://<hostname>:<port>/OpsHubWS/login/saml2/sso/opshubsaml`  
-  - protocol: `http` or `https` depending on the type of OpsHub Integration Manager installation  
-  - hostname: hostname of machine where OpsHub Integration Manager is installed  
-  - port: port on which OpsHub Integration Manager is installed
+  - protocol: `http` or `https` depending on the type of <code class="expression">space.vars.SITENAME</code> installation  
+  - hostname: hostname of machine where <code class="expression">space.vars.SITENAME</code> is installed  
+  - port: port on which <code class="expression">space.vars.SITENAME</code> is installed
 
 - **Audience URI** or **Service Provider Entity ID** → `opshubsaml`
 
-**Note** : The complete OpsHub Integration Manager SAML Service Provider metadata can be downloaded from:  
+**Note** : The complete <code class="expression">space.vars.SITENAME</code> SAML Service Provider metadata can be downloaded from:  
 `<protocol>://<hostname>:<port>/OpsHubWS/saml/metadata`
 
 ## New SAML Login Server Configuration
@@ -98,7 +98,7 @@ Select Login Server Type as SAML 2.0 and the form shown below would be displayed
 - SSL certificate needs to be imported when SAML Identity Server is on HTTPS. To import the SSL certificate, please follow the steps given on [Import SSL Certificates](../../getting-started/ssl-certificate-configuration.md).  
   **Note:** In case of Azure SAML, refer to [Azure Active Directory Configuration](#azure-active-directory-configuration)
 
-- Once the server is configured, user needs to create equivalent SAML Users in OpsHub Integration Manager and then Activate the SAML login server, in order to authenticate with that server.
+- Once the server is configured, user needs to create equivalent SAML Users in <code class="expression">space.vars.SITENAME</code> and then Activate the SAML login server, in order to authenticate with that server.
 **Note** :Refer to Create User section on [User Management](../administrator/user-management.md) page to create SAML user.
 
 ---
@@ -149,13 +149,13 @@ Select Login Server Type as SAML 2.0 and the form shown below would be displayed
 
 ## Known Behaviors
 
-- If OpsHub Integration Manager is behind the proxy server, and you want to configure SAML authentication, then after configuring proxy using [Proxy Setting](../administrator/proxy-setting.md), you need to re-start the OpsHub Integration Manager server.
+- If <code class="expression">space.vars.SITENAME</code> is behind the proxy server, and you want to configure SAML authentication, then after configuring proxy using [Proxy Setting](../administrator/proxy-setting.md), you need to re-start the <code class="expression">space.vars.SITENAME</code> server.
 
 ---
 
-# Default OpsHub Integration Manager Server
+# Default <code class="expression">space.vars.SITENAME</code> Server
 
-In the list of login servers, users can find a record for **Default Server** of type **OpsHub Integration Manager**.  
+In the list of login servers, users can find a record for **Default Server** of type **<code class="expression">space.vars.SITENAME</code>**.  
 Using this, users can login with the default credentials or the users configured in OpsHub Integration Manager itself fall in this category.
 
 <p align="center">

@@ -80,7 +80,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
   * In case of HP to TFS mapping, find **`<xsl:value-of select="value"/>`** in default mapping and replace with **`<xsl:value-of select="utils:convertHTMLToPlainText(value)"/>`**.
   * In case of HP to TFS mapping, find **`<xsl:value-of select="parameterName"/>`** in default mapping and replace with **`<xsl:value-of select="utils:replace(parameterName,' ','_')"/>`**. Here in replace method, you can use any character which will be replaced in place of space.
   * In case of Bi-directional configuration from TFS to HP, find **`<xsl:value-of select="parameterName"/>`** in default mapping and replace with **`<xsl:value-of select="utils:replace(parameterName,'_','')"/>`**. Here character provided in second parameter of replace method should be same which is given in previous configuration, during HP to TFS mapping.
-* To synchronize **Steps** field \[having "Shared Steps"] of Test Case entity to other systems, the advanced mapping needs to be configured in \{{ spaceName \}} to convert Shared Steps to single level steps.\
+* To synchronize **Steps** field \[having "Shared Steps"] of Test Case entity to other systems, the advanced mapping needs to be configured in <code class="expression">space.vars.SITENAME</code> to convert Shared Steps to single level steps.\
   **Given below is a sample advanced mapping from TFS to Jira to synchronize&#x20;**_**Steps**_**&#x20;field \[having "Shared Steps"] of Test Case entity to&#x20;**_**Zephyr Teststep**_**&#x20;field of Test entity along with formatting:**
 
 ```xml
@@ -298,9 +298,9 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 
 #### Git Commit/Branch Link Configuration
 
-* To synchronize **Git Commit/Branch** links of an entity to other systems, the Commit/Branch links need to be mapped in \{{ spaceName \}} relationship mapping.
-* When the **Git Commit/Branch** links are mapped in \{{ spaceName \}}:
-  * While synchronizing a workitem, if any GIT artifact's project or repository is not found in the target system, this artifact will get skipped by \{{ spaceName \}}.
+* To synchronize **Git Commit/Branch** links of an entity to other systems, the Commit/Branch links need to be mapped in <code class="expression">space.vars.SITENAME</code> relationship mapping.
+* When the **Git Commit/Branch** links are mapped in <code class="expression">space.vars.SITENAME</code>:
+  * While synchronizing a workitem, if any GIT artifact's project or repository is not found in the target system, this artifact will get skipped by <code class="expression">space.vars.SITENAME</code>.
   * If any GIT artifact is missing in target repository, workitem's artifact link will be synced with the missing object. On syncing delta changes, those links will be re-establised with an artifact object if it is found in target repository.
   * To sync delta changes from source repository to target repository, refer to this link for more details: https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository#mirroring-a-repository.
 * For syncing the link **Git Commit/Branch** with a workitem to target \[TFS/VSTS] systems, you must import source repository into target repository to bring all the Git commit and branch links into target repository.
@@ -362,7 +362,7 @@ to this:
 
 ### Kanban Board Field Configuration
 
-* To sync the Kanban Board field, advanced mapping is required in \{{ spaceName \}}.
+* To sync the Kanban Board field, advanced mapping is required in <code class="expression">space.vars.SITENAME</code>.
 * Below is the sample advanced mapping for syncing Kanban Board field between Azure DevOps to Azure DevOps systems.
 
 ```xml
@@ -391,7 +391,7 @@ to this:
 
 ### Pipeline Variables Advance Mapping Configuration
 
-* To sync variables of pipeline, advance mapping is required in \{{ spaceName \}}.
+* To sync variables of pipeline, advance mapping is required in <code class="expression">space.vars.SITENAME</code>.
 * Below is the sample advanced mapping for syncing Variables field:
 
 ```xml
@@ -428,7 +428,7 @@ to this:
 ### Perform check & create for Variable Groups in Pipeline
 
 * To perform check & create for **Variable Groups** in pipeline, **Variable Group details** field should be mapped.
-* Advanced mapping is required for the same in \{{ spaceName \}}. Below is the sample advanced mapping:
+* Advanced mapping is required for the same in <code class="expression">space.vars.SITENAME</code>. Below is the sample advanced mapping:
 
 ```xml
 <Variable-space-group-space-details>
@@ -608,7 +608,7 @@ Supported versions of Team Foundation Server are listed in the [Systems Supporte
 * **Pre-requisite:** Same set of users must exist in both source and target systems and domain names must match for successful migration.
 * **Behavior:**\
   Users are not created in the target system but rather linked to their equivalents.\
-  This enables \{{ spaceName \}} to use source user equivalents during other migrations (e.g., assign work-items, impersonation).
+  This enables <code class="expression">space.vars.SITENAME</code> to use source user equivalents during other migrations (e.g., assign work-items, impersonation).
 * **Known Issues:**\
   If a user exists in the source but not in the target, the migration user (i.e., the integration user) will be assigned to all related changes.
 
@@ -682,7 +682,7 @@ Widgets can refer to various items like Queries, Teams, Projects. To resolve the
   * Referenced item types per widget
   * Their location within the API response
 
-If not provided, \{{ spaceName \}} uses a default JSON.
+If not provided, <code class="expression">space.vars.SITENAME</code> uses a default JSON.
 
 <div align="center"><img src="../assets/WIdgetSettingIntegration.png" alt=""></div>
 
@@ -691,7 +691,7 @@ If not provided, \{{ spaceName \}} uses a default JSON.
 The JSON input consists of the following sections:
 
 * **generic**: Defines a set of default reference rules for widgets that do not have specific configurations in the JSON input. Each object in this section contains:\
-  **referenceTypes** (array of strings): Specifies the types of referenced items (e.g., "Query", "Team"). Other than the entities synced by \{{ spaceName \}}, it can have following values - Release (for Release Pipelines), Project, Repository (for Git Repos).\
+  **referenceTypes** (array of strings): Specifies the types of referenced items (e.g., "Query", "Team"). Other than the entities synced by <code class="expression">space.vars.SITENAME</code>, it can have following values - Release (for Release Pipelines), Project, Repository (for Git Repos).\
   **jsonPath** (string): A valid JSON Path expression to locate values in the API response. Either **jsonPath** or **regex** must be provided.\
   **regex** (string): A regular expression to search for referenced IDs within the API response. When combined with **jsonPath**, the search is confined to values found at the specified path.
 * **widgetSpecific**: Defines widget-specific reference rules for certain widget types. Each object in this section contains:\
@@ -762,7 +762,7 @@ for processing.
 
 }
 
-> **Note**: If field name is present in WIQL, which is not in this format, then \{{ spaceName \}} will not do any transformation and the details will be available as stated in the "Team Foundation Server/Azure DevOps End point Format" only. In such case, if any transformation is needed, you can do it with the help of advance mapping as per the expected format.
+> **Note**: If field name is present in WIQL, which is not in this format, then <code class="expression">space.vars.SITENAME</code> will not do any transformation and the details will be available as stated in the "Team Foundation Server/Azure DevOps End point Format" only. In such case, if any transformation is needed, you can do it with the help of advance mapping as per the expected format.
 
 * **What happens when the source field is not present in target system**\
   During synchronization, failures will occur for the entities to which the missing target field is referred.\
@@ -810,7 +810,7 @@ In WIQL, an id of a work item can be referred in the field value.
   **Example:** `[ID] = [12345]`\
   \[No change is done here and hence the source work item id will be synchronized/visible in the target end point]\
   {}
-* In case, you want the Source workitem id to be replaced with its corresponding target id \[Which is synchronized by \{{ spaceName \}}], please use a customized workflow - **Default Integration Workflow - TFS to TFS - Query.xml**.\
+* In case, you want the Source workitem id to be replaced with its corresponding target id \[Which is synchronized by <code class="expression">space.vars.SITENAME</code>], please use a customized workflow - **Default Integration Workflow - TFS to TFS - Query.xml**.\
   {} **For example -**\
   Consider a WIQL :\
   `select [System.ID], [System.WorkItemType] from WorkItems where [System.ID] = 1234 and [System.AssignedTo]`\
@@ -839,7 +839,7 @@ In WIQL, an id of a work item can be referred in the field value.
 
 ### Proxy settings for the Service
 
-1. Click [Proxy Setting](../manage/administrator/proxy-setting.md) to see step by step details about how to configure proxy in \{{ spaceName \}}. After configuring the proxy in \{{ spaceName \}} please follow given steps.
+1. Click [Proxy Setting](../manage/administrator/proxy-setting.md) to see step by step details about how to configure proxy in <code class="expression">space.vars.SITENAME</code>. After configuring the proxy in <code class="expression">space.vars.SITENAME</code> please follow given steps.
 2.  Open file explorer and navigate to the service installation folder (Ex: `<OPSHUB_INSTALLATION_PATH>\Other_Resources\Resources\OpsHubTFSService`) and open file named **OpsHubTFSService.exe.config** in any text editor. Un-comment the following code from **OpsHubTFSService.exe.config** file:
 
     ```xml
@@ -1010,8 +1010,8 @@ please follow given steps fo find Team Foundation Server version.
 
 ### QTP MTM Test Extension Installation and Configuration
 
-1. QtpMtmTestInstall.zip is bundled with the \{{ spaceName \}} installation.
-2. On \{{ spaceName \}} installation machine, navigate to: `<OpsHub_Installation_Directory>\Other_Resources\Resources` and copy and extract QtpMtmTestInstall.zip to machine where QTP MTM Test Extension has to be installed (i.e. MTM Test Agent, MTM Test Controller, etc.).
+1. QtpMtmTestInstall.zip is bundled with the <code class="expression">space.vars.SITENAME</code> installation.
+2. On <code class="expression">space.vars.SITENAME</code> installation machine, navigate to: `<OpsHub_Installation_Directory>\Other_Resources\Resources` and copy and extract QtpMtmTestInstall.zip to machine where QTP MTM Test Extension has to be installed (i.e. MTM Test Agent, MTM Test Controller, etc.).
 3. For installation of QTP MTM Test Extension for MTM 2010 launch `Install QTP MTM Test Extension - MTM 2010.bat`.
 
 > **Note**: Launch as Administrator
@@ -1032,7 +1032,7 @@ please follow given steps fo find Team Foundation Server version.
 Web Hooks provides functionality to trigger synchronization process on create/update of any workitem on Azure DevOps. This enables real-time synchronization of any changes made on Azure DevOps to any target system. For more details on Azure DevOps Web Hooks, please refer the following document link for configuring web hook:\
 [https://docs.microsoft.com/en-us/azure/devops/service-hooks/services/webhooks?view=azure-devops](https://docs.microsoft.com/en-us/azure/devops/service-hooks/services/webhooks?view=azure-devops)
 
-\{{ spaceName \}} supports the following workitem events:
+<code class="expression">space.vars.SITENAME</code> supports the following workitem events:
 
 * Work item created
 * Work item updated
@@ -1048,9 +1048,9 @@ for sending Web Hook request to valid OpsHub instance. Provide the URL of OpsHub
 
 ### Bypass Rule with User Impersonation
 
-* If an integration is configured to Azure DevOps from any other system with 'Bypass Rule' option enabled, \{{ spaceName \}} will consider the audit revision's author as the user on the basis of which impersonation is to be performed.
+* If an integration is configured to Azure DevOps from any other system with 'Bypass Rule' option enabled, <code class="expression">space.vars.SITENAME</code> will consider the audit revision's author as the user on the basis of which impersonation is to be performed.
 * Link impersonation will be supported between Azure DevOps systems. When two entities are linked then on Azure DevOps side, only one entity will contain actual linked added by user while on another entity link will be added by default integration user.
-* Bypass rules also allow Azure DevOps system to write any data ( valid or invalid ) data into server. \{{ spaceName \}} can create data on past dates as well by enabling this feature.
+* Bypass rules also allow Azure DevOps system to write any data ( valid or invalid ) data into server. <code class="expression">space.vars.SITENAME</code> can create data on past dates as well by enabling this feature.
 * In case of Current State Synchronization/ Reconciliation:
   * Fields and Attachments:
     * They will be impersonated with the **last changed by user** of source entity.
@@ -1059,7 +1059,7 @@ for sending Web Hook request to valid OpsHub instance. Provide the URL of OpsHub
 
 ### Bypass Rule with Time Impersonation
 
-* If an integration is configured to Azure DevOps from any other system with 'Bypass Rule' option enabled, \{{ spaceName \}} will consider the audit revision's timestamp as the timestamp on the basis of which impersonation is to be performed.
+* If an integration is configured to Azure DevOps from any other system with 'Bypass Rule' option enabled, <code class="expression">space.vars.SITENAME</code> will consider the audit revision's timestamp as the timestamp on the basis of which impersonation is to be performed.
 * In case of Current State Synchronization/ Reconciliation:
   * Fields, Comments and Attachments will be impersonated with the **last changed time** of source entity.
 

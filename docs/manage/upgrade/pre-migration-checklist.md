@@ -1,20 +1,20 @@
 
-> For migration steps for older versions of OpsHub Integration Manager, please refer to the [Pre-Migration Checklist](https://docs.myopshub.com/oim/index.php/Pre-Migration_Checklist).
+> For migration steps for older versions of <code class="expression">space.vars.SITENAME</code>, please refer to the [Pre-Migration Checklist](https://docs.myopshub.com/oim/index.php/Pre-Migration_Checklist).
 
-# Migrating OpsHub Integration Manager version to 7.121 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.121 or above
 
 ## Upgradation of MySQL Server
-**Applicable When:** OpsHub Integration Manager is installed with MySQL database.
+**Applicable When:** <code class="expression">space.vars.SITENAME</code> is installed with MySQL database.
 
-**Reason:** From version 7.121 onward, the special characters having 4 byte UTF8 encoding can be stored in OpsHub Integration Manager database.
+**Reason:** From version 7.121 onward, the special characters having 4 byte UTF8 encoding can be stored in <code class="expression">space.vars.SITENAME</code> database.
 
 **Actions:** Upgrade MySQL database to 5.7.18 or above versions.
 
 ---
 
-# Migrating OpsHub Integration Manager version to 7.134 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.134 or above
 
-**Applicable When:** If OpsHub Integration Manager is installed with MSSQL database and the base installation version of OpsHub Integration Manager is 6.03 or an earlier version.
+**Applicable When:** If <code class="expression">space.vars.SITENAME</code> is installed with MSSQL database and the base installation version of <code class="expression">space.vars.SITENAME</code> is 6.03 or an earlier version.
 
 **Actions:**
 - Execute the following queries to remove the default value constraint for column `Is_marked_deleted` of table `OHMT_EAI_entity_info` in MSSQL:
@@ -31,13 +31,13 @@
   ALTER TABLE DATABASE_NAME.TABLE_NAME DROP CONSTRAINT CONSTRAINT_NAME_FOUND_FROM_ABOVE_QUERY_FOR_COLUMN_IS_MARKED_DELETED;
   ```
 
-**Reason:** In the 6.03 version, the default value was added to the `Is_marked_deleted` column of `OHMT_EAI_entity_info`. Because of this, MSSQL implicitly added a default constraint on this table. In the 7.134 version, the column `Is_marked_deleted` was dropped as a part of one feature of OpsHub Integration Manager.
+**Reason:** In the 6.03 version, the default value was added to the `Is_marked_deleted` column of `OHMT_EAI_entity_info`. Because of this, MSSQL implicitly added a default constraint on this table. In the 7.134 version, the column `Is_marked_deleted` was dropped as a part of one feature of <code class="expression">space.vars.SITENAME</code>.
 
 ---
 
-# Migrating OpsHub Integration Manager version to 7.139 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.139 or above
 
-**Applicable When:** If the initial installation version of OpsHub Integration Manager is 6.11 Update 2 HF4 or earlier, the actions mentioned must be performed.
+**Applicable When:** If the initial installation version of <code class="expression">space.vars.SITENAME</code> is 6.11 Update 2 HF4 or earlier, the actions mentioned must be performed.
 
 **Reason:** In the `reportsdb` database's `ReportsDBVersion` table, `6.11.02.00.00` entry was wrongly added to the `version` column.
 
@@ -48,21 +48,21 @@ DELETE FROM reportsdb.ReportsDBVersion WHERE version='6.11.02.00.00';
 
 ---
 
-# Migrating OpsHub Integration Manager version to 7.145 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.145 or above
 
 ## Upgradation of MS SQL Server to enabled support for TLS 1.2 or above
 
-**Applicable When:** OpsHub Integration Manager is installed with MSSQL database and that MSSQL version does not support TLS v1.2 or above.
+**Applicable When:** <code class="expression">space.vars.SITENAME</code> is installed with MSSQL database and that MSSQL version does not support TLS v1.2 or above.
 
-**Reason:** From version 7.145 onward, TLSv1.0 and TLSv1.1 protocols are not supported by OpsHub Integration Manager.
+**Reason:** From version 7.145 onward, TLSv1.0 and TLSv1.1 protocols are not supported by <code class="expression">space.vars.SITENAME</code>.
 
 **Actions:** An upgrade to MS SQL version will be needed, which supports TLSv1.2 or above. Refer to [this Microsoft link](https://support.microsoft.com/en-us/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe) for upgrading MS SQL version.
 
 ---
 
-# Migrating OpsHub Integration Manager version to 7.149 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.149 or above
 
-## Link changes in OpsHub Integration Manager for Jira Cloud
+## Link changes in <code class="expression">space.vars.SITENAME</code> for Jira Cloud
 
 **Applicable When:**
 - Jira Cloud is configured as one of the end points in the integration and the Epic link/Parent link/Issues in Epic/Child issues are configured in the OpsHub Integration Manager mapping.

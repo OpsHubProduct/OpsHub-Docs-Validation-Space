@@ -6,7 +6,7 @@ The user should select the Database type for installation from the dropdown list
 Click the checkbox adjacent to **Advance configuration** option if you have one of the following requirements:
 
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
-* Install OpsHub Integration Manager in https
+* Install <code class="expression">space.vars.SITENAME</code> in https
 {% endif %}
 
 - Install multiple instances of OpsHub Integration Manager on a single instance  

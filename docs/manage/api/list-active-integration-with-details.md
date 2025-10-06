@@ -1,6 +1,6 @@
 # Description
 
-- Let us say the {{SITENAME}} is installed on 10.13.27.211 instance on HTTP and user credentials for this instance is “admin” and “password”.
+- Let us say the <code class="expression">space.vars.SITENAME</code> is installed on 10.13.27.211 instance on HTTP and user credentials for this instance is “admin” and “password”.
 - A user wants to retrieve the basic details [like] of the most recently updated top 50 active integrations configured in the folder with the folder id 3 and its parent folders.
 - The basic details of integration include the id of the integration, integration name, projects and entities configured in the integration and status of the integration.
 

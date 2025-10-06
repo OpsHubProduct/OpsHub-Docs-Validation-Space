@@ -42,7 +42,7 @@ Please follow below given steps for execution of this utility:
 </p>
 
 
-* In case of HTTPS deployment of **OpsHub Integration Manager**, run [Change Keystore and Private Key passwords utility](change-keystore-and-private-key-passwords.md) to store the passwords in encrypted form.
+* In case of HTTPS deployment of **<code class="expression">space.vars.SITENAME</code>**, run [Change Keystore and Private Key passwords utility](change-keystore-and-private-key-passwords.md) to store the passwords in encrypted form.
 
 * Start OpsHub Server/ Service.  
 * Re-enter passwords for all configured systems, configured database connections, configured proxy settings and overridden passwords in Advance Configuration of Integration.

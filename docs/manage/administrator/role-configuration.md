@@ -1,5 +1,5 @@
 # Overview
-OpsHub Integration Manager supports User Access Control, enabling users manage permissions in OpsHub Integration Manager by associating users with specific roles. Each role encapsulates a set of permissions suited to particular responsibilities.
+<code class="expression">space.vars.SITENAME</code> supports User Access Control, enabling users manage permissions in <code class="expression">space.vars.SITENAME</code> by associating users with specific roles. Each role encapsulates a set of permissions suited to particular responsibilities.
 
 # Permission
 Permission refers to specific rights like Read, Write, Delete, Grant on different resources like System, Mapping, Integration, User Management associated with a given role.
@@ -7,14 +7,14 @@ Permission refers to specific rights like Read, Write, Delete, Grant on differen
 # Role
 - A Role is a set of permissions that define what actions a user is permitted to perform on a resource.
 - Integration Role:
-  - An Integration role allows user to configure permissions for operations that can be performed on **Integration** tab in OpsHub Integration Manager like System, Mapping, Integration, etc.
+  - An Integration role allows user to configure permissions for operations that can be performed on **Integration** tab in <code class="expression">space.vars.SITENAME</code> like System, Mapping, Integration, etc.
   - Refer to [Associating Integration Role to a User](user-role-association.md#associating-integration-role-to-a-user) section to understand how integration roles can be associated with user.
 - Administration Role: 
-  - An Administration role allows user to configure permissions for operations that can be performed on **Administration** in OpsHub Integration Manager tab like Proxy Settings, License Management, etc.
+  - An Administration role allows user to configure permissions for operations that can be performed on **Administration** in <code class="expression">space.vars.SITENAME</code> tab like Proxy Settings, License Management, etc.
   - Refer to [Associating Administration Role to a User](user-role-association.md#associating-administration-role-to-a-user) section to understand how administration roles can be associated with user.
 
 # Default Roles
-OpsHub Integration Manager provides with the following default roles:
+<code class="expression">space.vars.SITENAME</code> provides with the following default roles:
 
 | **Role Name** | **Description** |
 |---------------|------------------|
