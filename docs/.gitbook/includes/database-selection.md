@@ -119,11 +119,11 @@ currently logged in instance name.
 
   - If service name is configured for the oracle instance: 
 
-    ```sql SELECT sys_context('USERENV','SERVICE_NAME') AS Instance FROM dual; ```
+    ```SELECT sys_context('USERENV','SERVICE_NAME') AS Instance FROM dual; ```
 
   - If SID is configured for the oracle instance:
 
-    ```sql select instance_name from v$instance; ``` 
+    ```select instance_name from v$instance; ``` 
   
 
 The output value is the instance name that will be used in installation process.  
@@ -275,6 +275,7 @@ If Windows credentials are not added correctly during installation, the OpsHub S
 </p>
 
 Notes : For this application, the default database name will be 'opshub' and 'reportsdb'.
+
 
 
 
