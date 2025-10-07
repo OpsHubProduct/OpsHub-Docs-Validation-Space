@@ -1,7 +1,7 @@
 The user should select the Database type for installation from the dropdown list. Database connector jar is required to connect to the database. Refer [Download Database Connector jar](../../getting-started/prerequisites.md#download-database-connector-jar) to get the download link of the database connector jar.
 
 <p align="center">
-  <img src="../../assets/Installation_DatabaseSelection.png" alt="Installation_DatabaseSelection">
+  <img src="../../assets/Installation_DatabaseSelection.png" width="700">
 </p>
 Click the checkbox adjacent to **Advance configuration** option if you have one of the following requirements:
 
@@ -73,12 +73,12 @@ Given below are further details associated with each installation selection.
 ## Installation with embedded HSQL (Default)
 
 <p align="center">
-  <img src="../../assets/Installation_DatabaseSelection1.png" alt="Installation_DatabaseSelection1">
+  <img src="../../assets/Installation_DatabaseSelection1.png" >
 </p>
 
 ## Installation with MySQL Server
 <p align="center">
-  <img src="../../assets/Installer_Image_2b_C1.png" alt="Installer Image_2b_C1">
+  <img src="../../assets/Installer_Image_2b_C1.png" >
 </p>
 
 Notes : For this application, the default database name will be 'opshub' and 'reportsdb'.
@@ -92,12 +92,12 @@ Select Oracle Database Type
 
 - The user must select the connection type based on the oracle configuration used to connect the above selected database type. It can be either SID or Service name.**  
 <p align="center">
-  <img src="../../assets/Installer_Image_4Ob.png" alt="Installer Image_4Ob">
+  <img src="../../assets/Installer_Image_4Ob.png" >
 </p>
 
 Follow the instructions shown in installer for downloading connector jar.
 <p align="center">
-  <img src="../../assets/Installer_Image_3c_OD1.png" alt="Installer_Image_3c_OD1">
+  <img src="../../assets/Installer_Image_3c_OD1.png" >
 </p>
 
 
@@ -182,7 +182,7 @@ with the Latin1_General_CS_AS collation (default collation), consider [Advance I
 - Mark the checkbox, "Check this if you will be creating databases manually" option during installation. The instructions to create databases are mentioned in the section [Manual creation of databases](../../getting-started/installation.md#manual-creation-of-databases)
 
 <p align="center">
-  <img src="../../assets/MSSQL_AuthMode_Windows.png" alt="MSSQL_AuthMode_Windows">
+  <img src="../../assets/MSSQL_AuthMode_Windows.png" >
 </p>
 
 - For using Named Instance of MS SQL Server, append the Instance Name to the Database Host Name, separated by %. For e.g.,
@@ -219,20 +219,20 @@ with the Latin1_General_CS_AS collation (default collation), consider [Advance I
 **a) SQL Authentication Mode**  
 
 <p align="center">
-  <img src="../../assets/Installer_MYSQL_b.png" alt="Installer_MYSQL_b">
+  <img src="../../assets/Installer_MYSQL_b.png" >
 </p>
 
 **b) Windows Authentication Mode**  
 
 <p align="center">
-  <img src="../../assets/Installer_Image_7MSb_1_b.png" alt="Installer_Image_7MSb_1_b">
+  <img src="../../assets/Installer_Image_7MSb_1_b.png" >
 </p>
 
 - The option to set logon user for the OpsHub Server Service appears in either of the two cases: When you have not selected advance configuration option, or when you have selected "Install OpsHub as a service" option in the advance installation screen.
 
 Enter the required details to set logon user for the OpsHub Server Service.
 <p align="center">
-  <img src="../../assets/Installer_Image_11a.png" alt="Installer Image_11a">
+  <img src="../../assets/Installer_Image_11a.png">
 </p>
 
 If Windows credentials are not added correctly during installation, the OpsHub Server service will not be started. To avoid such an occurrence, the user will have to manually set the service log-on credentials for OpsHub Server Service in case wrong Windows credentials are added at the installation time.
@@ -273,8 +273,9 @@ If Windows credentials are not added correctly during installation, the OpsHub S
 
 ## Installation with PostgreSQL
 <p align="center">
-  <img src="../../assets/Installer_Image_5b_C1.png" alt="Installer Image_5b_C1">
+  <img src="../../assets/Installer_Image_5b_C1.png" >
 </p>
 
 Notes : For this application, the default database name will be 'opshub' and 'reportsdb'.
+
 
