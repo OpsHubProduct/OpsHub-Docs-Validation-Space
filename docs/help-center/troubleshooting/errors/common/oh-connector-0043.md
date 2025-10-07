@@ -8,9 +8,9 @@ When you encounter OH-Connector-0043, then the following error message appears:
 
 There can be multiple reasons:
 
-1. {{SITENAME}} uses same field mapping for multiple integrations or multiple projects that share common field mapping template. It is recommended to use same mapping for similar fields. Sometimes, the mapped fields may not exists in some projects. Now for those projects if this common field mapping is being used, then {{SITENAME}} can fail with this error.
+1. <code class="expression">space.vars.SITENAME</code> uses same field mapping for multiple integrations or multiple projects that share common field mapping template. It is recommended to use same mapping for similar fields. Sometimes, the mapped fields may not exists in some projects. Now for those projects if this common field mapping is being used, then <code class="expression">space.vars.SITENAME</code> can fail with this error.
 
-2. Fields are deleted or disabled from the target system/project and therefore {{SITENAME}} will not be able to find those fields. It is possible that when the field mapping was setup, these fields were there but later they got deleted or disabled from the target system/project.
+2. Fields are deleted or disabled from the target system/project and therefore <code class="expression">space.vars.SITENAME</code> will not be able to find those fields. It is possible that when the field mapping was setup, these fields were there but later they got deleted or disabled from the target system/project.
 
 ## Solution
 
@@ -18,7 +18,7 @@ There are multiple solutions. Choose the one that is suitable to you.
 
 ### **Skip Absent Field**
 
-If you want to ignore the fields that don't exists in that target project and keep synchronizing other mapped fields, then choose this option. Please note that once you select this option then {{SITENAME}} will not throw any error when such fields won't found in any of the projects for this integration. This option can be configured at the integration level. For more information on how to configure this option, refer [Skip Absent Field](../../../../integrate/integration-configuration.md#skip-absent-field). Once you configure this option, then retry this failure by clicking **Retry All With Dependents** failure option. For more information on how to retry failed event, refer [Action on failures](../../../troubleshooting/manage-integration-failures.md#action-on-failures).
+If you want to ignore the fields that don't exists in that target project and keep synchronizing other mapped fields, then choose this option. Please note that once you select this option then <code class="expression">space.vars.SITENAME</code> will not throw any error when such fields won't found in any of the projects for this integration. This option can be configured at the integration level. For more information on how to configure this option, refer [Skip Absent Field](../../../../integrate/integration-configuration.md#skip-absent-field). Once you configure this option, then retry this failure by clicking **Retry All With Dependents** failure option. For more information on how to retry failed event, refer [Action on failures](../../../troubleshooting/manage-integration-failures.md#action-on-failures).
 
 ### **Create/Enable missing fields on target project**
 

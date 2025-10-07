@@ -1,10 +1,10 @@
 # Description
 
-{{SITENAME}} has been installed with HTTP. However, even after installation with a few steps, the user can enable it to connect with HTTPS. 
+<code class="expression">space.vars.SITENAME</code> has been installed with HTTP. However, even after installation with a few steps, the user can enable it to connect with HTTPS. 
 
 # Solution
 
-Follow the steps given below to enable HTTPS on {{SITENAME}} which has already been installed with HTTP:
+Follow the steps given below to enable HTTPS on <code class="expression">space.vars.SITENAME</code> which has already been installed with HTTP:
 
 1. Take a backup of the OpsHub Installation Folder; so that in case of any problem the user can restore it.  
 2. Stop the OpsHub Server.  
@@ -12,7 +12,7 @@ Follow the steps given below to enable HTTPS on {{SITENAME}} which has already b
 `<OpsHub Installation Directory>\OpsHub_Resources\jre`
 4. Below are the steps/commands that help the user to create a CSR (which can be provided to CA to get the valid certificate) and will import the certificates (provided by CA).  
 
-* Following are the commands that need to be executed in the given sequence within the Command Prompt on the machine where {{SITENAME}} has been installed:  
+* Following are the commands that need to be executed in the given sequence within the Command Prompt on the machine where <code class="expression">space.vars.SITENAME</code> has been installed:  
 * Open the command prompt with the administrative privileges and go to the bin directory path of the OpsHub’s JRE:  
   ```
   cd <OpsHub Installation Directory>\OpsHub_Resources\jre\bin
@@ -25,7 +25,7 @@ cd keytool -genkey -keyalg RSA -alias opshub.com -keysize 2048 -keystore <OpsHub
 **Note:**  
 * The alias provided in the above command should be used for Command 2 as well as while importing the certificate, so please take a note of the alias name used.  
 * Upon successful execution, it will prompt the user to enter the keystore password for `AppData\OpsHubData\cacerts`. The default password for the keystore is `changeit`.  
-* After entering the password, the user is prompted to enter various certificate details. For the **first name and last name**, the user must provide the **hostname of the machine** where {{SITENAME}} is installed. Otherwise, the signed certificate will not be visible even after successful import.  
+* After entering the password, the user is prompted to enter various certificate details. For the **first name and last name**, the user must provide the **hostname of the machine** where <code class="expression">space.vars.SITENAME</code> is installed. Otherwise, the signed certificate will not be visible even after successful import.  
 
 **Command 2:**  
 ``` 
@@ -54,10 +54,10 @@ cd keytool -import -alias opshub.com -keystore <OpsHub Installation Path>\AppDat
 * If your certificate chain is `root → chain cert1 → opshub.cer`, then import `chain cert1` with a different alias.  
 * For the main certificate (`opshub.cer` in this case), the alias must be the same as used in Command 1 and Command 2 (`opshub.com`).  
 
-5. To access {{SITENAME}} with HTTPS, please refer to the [Configurations for HTTPS](#configurations-for-https) section.  
+5. To access <code class="expression">space.vars.SITENAME</code> with HTTPS, please refer to the [Configurations for HTTPS](#configurations-for-https) section.  
 6. Save the `server.xml` file.  
 7. Start the OpsHub Server.  
-8. Access {{SITENAME}} with the URL:  
+8. Access <code class="expression">space.vars.SITENAME</code> with the URL:  
 `https://[hostname]:8443/OpsHubWS/`
 
 **Note:** All the above steps should be executed by a user having administrator rights.

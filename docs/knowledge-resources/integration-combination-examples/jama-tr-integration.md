@@ -26,8 +26,8 @@ Integrating Jama and TestRail helps product team get real-time insights into the
 ### Pre-requisites for integration
 
 To create an integration between Jama and TestRail, you need to:  
-- First, install **{{SITENAME}}**.  
-- Then, configure Jama and TestRail onto **{{SITENAME}}**.  
+- First, install **<code class="expression">space.vars.SITENAME</code>**.  
+- Then, configure Jama and TestRail onto **<code class="expression">space.vars.SITENAME</code>**.  
 
 <p align="center">
   <img src="../../assets/TR-Jama_Image_21a.png" alt="Pre-requisites"/>
@@ -48,7 +48,7 @@ Before you proceed with Jama and TestRail integration, let's understand the limi
 - Test Case ↔ Test Case  
 
 **Notes:**  
-- Section is a mandatory entity in TestRail system to create a Test Case. In Jama → TestRail integration, as per **{{SITENAME}}**'s modeling structure, one pre-defined section is mapped for default mapping.  
+- Section is a mandatory entity in TestRail system to create a Test Case. In Jama → TestRail integration, as per **<code class="expression">space.vars.SITENAME</code>**'s modeling structure, one pre-defined section is mapped for default mapping.  
 - If a user requires syncing a Test Case in a different section corresponding to the Test Group, the following issues occur:  
   - While fetching the test case, Jama system will not provide association information of the Test Group; therefore, the test case in TestRail will have to be created with the default section provided in mapping.  
   - In TestRail, once a test case is associated with any section via API, the user **cannot change/modify** the 'section' association of the Test Case from the API.  

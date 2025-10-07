@@ -28,7 +28,7 @@ It contains search criteria which is required to be applied in the end system to
 
 - OpsHub has developed its own query format to query any end system.
 - Refer to **[OpsHub Query Format Guide](../integrate/opshub-query-format.md)** for a detailed understanding of the OpsHub queries.
-- {{SITENAME}} will pass the query object as JSON payload which Connector SDK will parse and convert to end system’s native query.
+- <code class="expression">space.vars.SITENAME</code> will pass the query object as JSON payload which Connector SDK will parse and convert to end system’s native query.
 - Most queries done by OpsHub contain complex queries with the following fields:
   - project
   - entity id

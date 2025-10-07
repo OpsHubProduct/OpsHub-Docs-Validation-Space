@@ -35,17 +35,17 @@ Access to API will be available for your instance with URL like below:
 
 <center><code>&lt;Protocol&gt;://&lt;Host Name or IP address of <code class="expression">space.vars.SITENAME</code> instance&gt;:&lt;Port Number&gt;/OIM/rest/api/docs</code></center>
 
-**For example** – If the application url of {{SITENAME}} is `http://10.13.20.20:8989/OIM/`, then the Swagger UI will be available at `http://10.13.20.20:8989/OIM/rest/api/docs`.
+**For example** – If the application url of <code class="expression">space.vars.SITENAME</code> is `http://10.13.20.20:8989/OIM/`, then the Swagger UI will be available at `http://10.13.20.20:8989/OIM/rest/api/docs`.
 
 # Appendix
 
 ## Validate API feature
 
-To check whether the "API" feature is enabled in the {{SITENAME}} or not, please perform the below steps:
+To check whether the "API" feature is enabled in the <code class="expression">space.vars.SITENAME</code> or not, please perform the below steps:
 
-1. [Login](../../getting-started/logging-in.md) to {{SITENAME}} with the valid {{SITENAME}} user credentials.
+1. [Login](../../getting-started/logging-in.md) to <code class="expression">space.vars.SITENAME</code> with the valid <code class="expression">space.vars.SITENAME</code> user credentials.
 2. Navigate to the Footer and find "Edition" value.
-3. Click on the Edition value of the {{SITENAME}}
+3. Click on the Edition value of the <code class="expression">space.vars.SITENAME</code>
    
 <p align="center">
 <img src="../../assets/API1.png" width="800"/>
@@ -61,12 +61,12 @@ To check whether the "API" feature is enabled in the {{SITENAME}} or not, please
 
 ## Validate access to <code class="expression">space.vars.SITENAME</code> instance
 
-To check whether the {{SITENAME}} instance is accessible or not, please perform the below steps:
+To check whether the <code class="expression">space.vars.SITENAME</code> instance is accessible or not, please perform the below steps:
 
-1. Open {{SITENAME}} instance URL from any browser from the machine/platform where {{SITENAME}} APIs are invoked.
-2. Access the {{SITENAME}} instance from browser using the credentials you want to use for {{SITENAME}} API communication.
+1. Open <code class="expression">space.vars.SITENAME</code> instance URL from any browser from the machine/platform where <code class="expression">space.vars.SITENAME</code> APIs are invoked.
+2. Access the <code class="expression">space.vars.SITENAME</code> instance from browser using the credentials you want to use for <code class="expression">space.vars.SITENAME</code> API communication.
 3. If you can successfully login, this prerequisite is met.  
- >**Note**: If {{SITENAME}} is configured on HTTPS, then SSL certificates needs to be imported based on the chosen platform:
+ >**Note**: If <code class="expression">space.vars.SITENAME</code> is configured on HTTPS, then SSL certificates needs to be imported based on the chosen platform:
    - For the API clients like [postman](https://www.postman.com/), there are some [steps](https://learning.postman.com/docs/sending-requests/certificates/) to configure it.
    - For the [curl](https://curl.se/) command, this can be [configured using -cert](https://curl.se/docs/manpage.html) option.
    - For the programs, the steps will differ based on the expectation of the programming languages in which it was written.

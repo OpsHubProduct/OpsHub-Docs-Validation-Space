@@ -24,5 +24,5 @@ com.opshub.eai.core.exceptions.OIMAttachmentException: OH-Connector-0450: An err
 </p>
 
 
->**Note**: This option will start skipping the attachments from all the systems for which {{SITENAME}} can determine the attachments which are not found.
+>**Note**: This option will start skipping the attachments from all the systems for which <code class="expression">space.vars.SITENAME</code> can determine the attachments which are not found.
 

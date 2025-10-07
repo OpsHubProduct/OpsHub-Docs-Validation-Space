@@ -6,8 +6,8 @@ When you encounter error OH-Jama-0020, then following error message will appear:
 ## Cause
 
 Probable cause for this issue is:  
-The error is usually thrown when the filter which has been used in the Criteria Configuration section of {{SITENAME}} does not exist.
+The error is usually thrown when the filter which has been used in the Criteria Configuration section of <code class="expression">space.vars.SITENAME</code> does not exist.
 
 ## Solution
 
-To resolve this kindly use the correct filter id of the Jama filter in the Criteria Configuration section of {{SITENAME}}.
+To resolve this kindly use the correct filter id of the Jama filter in the Criteria Configuration section of <code class="expression">space.vars.SITENAME</code>.

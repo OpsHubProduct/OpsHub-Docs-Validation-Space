@@ -4,4 +4,4 @@ OpsHub’s integration solutions empower enterprises on this journey by breaking
 
 To support this mission, we regularly host webinars featuring industry experts and product specialists who share insights, best practices, and real-world demonstrations.  
 
-👉 Watch our sessions and learn how {{SITENAME}} solutions can accelerate your agile transformation at [OpsHub Webinars](https://www.opshub.com/webinars/).
+👉 Watch our sessions and learn how <code class="expression">space.vars.SITENAME</code> solutions can accelerate your agile transformation at [OpsHub Webinars](https://www.opshub.com/webinars/).

@@ -1,6 +1,6 @@
 ## Description
 
-{{SITENAME}} is installed on HSQL database. Now is there any way to migrate HSQL database to other supported database like MySQL, MSSQL, PostgreSQL or Oracle?  
+<code class="expression">space.vars.SITENAME</code> is installed on HSQL database. Now is there any way to migrate HSQL database to other supported database like MySQL, MSSQL, PostgreSQL or Oracle?  
 
 ## Solution
 

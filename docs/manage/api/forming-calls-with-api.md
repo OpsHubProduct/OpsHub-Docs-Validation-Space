@@ -21,15 +21,15 @@ With the <code class="expression">space.vars.SITENAME</code> API, the user can c
 |--------|-------------|
 | `<Protocol>` | Http/https based on your <code class="expression">space.vars.SITENAME</code> instance setup |
 | `<Host Name/IP address of <code class="expression">space.vars.SITENAME</code> instance>` | IP address or the configured host name for <code class="expression">space.vars.SITENAME</code> instance |
-| `<Port Number>` | Port number of your {{SITENAME}} instance. Default port for the HTTP is 8989 and HTTPS is 8443 |
+| `<Port Number>` | Port number of your <code class="expression">space.vars.SITENAME</code> instance. Default port for the HTTP is 8989 and HTTPS is 8443 |
 | `<API endpoint>` | OpsHubWS/queryNode/execute |
 
 * **Request Body**
-  * For modifying the data of the {{SITENAME}} [JSON](https://www.json.org/json-en.html) request body is mentioned in the API request.
+  * For modifying the data of the <code class="expression">space.vars.SITENAME</code> [JSON](https://www.json.org/json-en.html) request body is mentioned in the API request.
 
 * **Authentication Data**
-  * {{SITENAME}} API supports Basic Authentication, and so a valid “Username” and “Password” need to be mentioned in each API request.
-  * Based on the format of the platform used for invoking the {{SITENAME}} API, user credentials are set at different levels:
+  * <code class="expression">space.vars.SITENAME</code> API supports Basic Authentication, and so a valid “Username” and “Password” need to be mentioned in each API request.
+  * Based on the format of the platform used for invoking the <code class="expression">space.vars.SITENAME</code> API, user credentials are set at different levels:
     * In the API clients like [postman](https://www.postman.com/), there is a separate section of Authorization for setting this data.
     * In the [curl](https://curl.se/) command, credentials are mentioned with option –u.
     * In the programs written in any programming language, credentials are set based on the expectation of the library which supports HTTP communication
@@ -37,20 +37,20 @@ With the <code class="expression">space.vars.SITENAME</code> API, the user can c
 * **Headers**
   * Below API headers need to be mentioned in each API request:
     * api_version:1  
-      * It is the required static header in all the {{SITENAME}} API request.
+      * It is the required static header in all the <code class="expression">space.vars.SITENAME</code> API request.
     * Content-Type: application/json  
-      * {{SITENAME}} API uses JSON format for data exchange, and so this header is required.
-  * Based on the format of the platform used for invoking the {{SITENAME}} API, headers are set at different levels:
+      * <code class="expression">space.vars.SITENAME</code> API uses JSON format for data exchange, and so this header is required.
+  * Based on the format of the platform used for invoking the <code class="expression">space.vars.SITENAME</code> API, headers are set at different levels:
     * In the API clients like [postman](https://www.postman.com/), there is a separate section of Headers for setting this data.
     * In the [curl](https://curl.se/) command, headers are mentioned with option –header.
     * In the programs written in any programming language, headers are set based on the expectation of the library that supports HTTP communication.
 
 # Operations supported in API
 
-Two types of operations are supported in {{SITENAME}} API:
+Two types of operations are supported in <code class="expression">space.vars.SITENAME</code> API:
 
 ## Queries[/Read]
-Queries can be used to perform read operations via {{SITENAME}} API. For example, reading the configurations like integration or reading the failures details.  
+Queries can be used to perform read operations via <code class="expression">space.vars.SITENAME</code> API. For example, reading the configurations like integration or reading the failures details.  
 Please refer to [GraphQL API query](https://graphql.org/learn/queries/) for basic understanding of GraphQL Query.
 
 ## Basic Queries
@@ -122,7 +122,7 @@ query {
 ```
 # Advanced Queries
 
-{{SITENAME}} API queries for list objects (integration list, global failure list, event failure list) supports the advanced queries with the [Filters](#queries-with-filters), [Sorting](#queries-with-sorting), and [Pagination](#queries-with-pagination).
+<code class="expression">space.vars.SITENAME</code> API queries for list objects (integration list, global failure list, event failure list) supports the advanced queries with the [Filters](#queries-with-filters), [Sorting](#queries-with-sorting), and [Pagination](#queries-with-pagination).
 
 ## Queries with Pagination
 
@@ -239,7 +239,7 @@ query {
 
 # Mutations[/Write]
 
-Mutations are used to perform write operations via {{SITENAME}} API, such as creating/updating/deleting configurations.
+Mutations are used to perform write operations via <code class="expression">space.vars.SITENAME</code> API, such as creating/updating/deleting configurations.
 
 Please refer to [GraphQL Mutations](https://graphql.org/graphql-js/mutations-and-input-types/) for details.
 
@@ -289,9 +289,9 @@ mutation {
 - Let's take an example where we want to create a bidirectional integration between two systems with below specifications:
   - Systems involved:
     - System1:
-      - Jira [pre-created in {{SITENAME}} with ID 2]
+      - Jira [pre-created in <code class="expression">space.vars.SITENAME</code> with ID 2]
     - System2:
-      - Micro Focus ALM/QC [pre-created in {{SITENAME}} with ID 3]
+      - Micro Focus ALM/QC [pre-created in <code class="expression">space.vars.SITENAME</code> with ID 3]
   - Entities involved:
     - System1:
       - Bug [EntityType(internalName:10004)]
@@ -319,7 +319,7 @@ mutation {
 
 ## Update Integration
 
-- Let's consider we have an integration configured in {{SITENAME}} with id 1, and we want to update this integration [Criteria](Integration_Configuration#Criteria_Configuration) for synchronizing only the entities having Id>0 for forward direction of the integration.
+- Let's consider we have an integration configured in <code class="expression">space.vars.SITENAME</code> with id 1, and we want to update this integration [Criteria](Integration_Configuration#Criteria_Configuration) for synchronizing only the entities having Id>0 for forward direction of the integration.
 
 - To form the request for updating the integration, we need the details for the integration. To retrieve the details of the integration, query given in [example](Forming_Calls_with_API#Example) 1 can be used in which id will be 1, and the object to be retrieved will be [Integration](objects-and-enums.md#integration).
 
@@ -334,7 +334,7 @@ mutation {
 
 ## Delete Integration
 
-Let's consider we have an integration configured in {{SITENAME}} with id 1, and if we want to delete that integration, then below API request can be used:
+Let's consider we have an integration configured in <code class="expression">space.vars.SITENAME</code> with id 1, and if we want to delete that integration, then below API request can be used:
 
 **Request Method Type:** DELETE  
 **Request URL:** `http://10.13.27.222:8989/OpsHubWS/queryNode/execute`  

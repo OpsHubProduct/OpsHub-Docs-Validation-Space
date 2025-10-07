@@ -1,6 +1,6 @@
 # Supported Systems
 
-Given below are the systems supported currently by {{SITENAME}}:
+Given below are the systems supported currently by <code class="expression">space.vars.SITENAME</code>:
 
 | No. | System | Versions Supported | Entities Supported | Formerly Known as |
 |-----|--------|--------------------|--------------------|-------------------|
@@ -50,7 +50,7 @@ Given below are the systems supported currently by {{SITENAME}}:
 | 44 | Jira R4J | 4.4.x–4.18.4 | Folders, R4J Relationships (Folders ↔ Jira Issues) | |
 | 45 | Jira Service Management | Cloud<br/>On Premise: 3.1.10–5.12.1 | All System & Custom Issue Types | Jira Service Desk |
 | 46 | Jira SLA Powerbox | 3.x–4.2.x (excl. 3.5.x) | SLA Metric field (read only) | |
-| 47 | Jira Stagil Assets Management | On Premise: Stagil Assets – Advanced Link 5.0.86 | All Entities Supported By {{SITENAME}} In JIRA | |
+| 47 | Jira Stagil Assets Management | On Premise: Stagil Assets – Advanced Link 5.0.86 | All Entities Supported By <code class="expression">space.vars.SITENAME</code> In JIRA | |
 | 48 | Jira Xray** | On Premise: 3.6.x–6.1.3<br/>Cloud: V1.1.90-AC-4.004.000 | On Premise: Test, Test Plan, Test Execution, Test Set, Sub Test Execution, Pre-Condition<br/>Cloud: Xray Test, Test Plan, Test Execution, Test Set, Test Run, Precondition | |
 | 49 | Jira Zephyr Essential** | Data Center: 9.x, 10.x<br/>Cloud: 8.x (1.3.33-AC) | Test, Test Cycle, Test Execution, Folder | Zephyr Squad |
 | 50 | Mercurial* | 2.0–2.0.1, 2.6.1, 2.6.2 | Commit Information | |

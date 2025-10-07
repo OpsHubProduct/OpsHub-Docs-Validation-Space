@@ -164,7 +164,7 @@
             * [An excessive number of EA connections causes slowness in the system and high RAM usage](docs/help-center/faqs/enterprise-architect/an-excessive-number-of-ea-connections-causes-slowness-in-the-system-and-high-ram-usage.md)  
 
       * Troubleshooting
-          * [{{SITENAME}}'s System Information](docs/help-center/troubleshooting/system-information.md)  
+          * [<code class="expression">space.vars.SITENAME</code>'s System Information](docs/help-center/troubleshooting/system-information.md)  
           * [Manage Integration Failures](docs/help-center/troubleshooting/manage-integration-failures.md)  
           * [Configure Failure Notification](docs/help-center/troubleshooting/configure-post-failure-notification.md)  
           * [Integration Sync Report](docs/help-center/troubleshooting/integration-sync-report.md)  

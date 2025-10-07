@@ -1,9 +1,9 @@
 
 # Description
-{{SITENAME}} supports a polling mechanism for retrieving data from source systems. The polling mechanism can be categorized based on the richness of the end system's API.
+<code class="expression">space.vars.SITENAME</code> supports a polling mechanism for retrieving data from source systems. The polling mechanism can be categorized based on the richness of the end system's API.
 
 # Category of Read Mechanism
-{{SITENAME}} supports 3 types of Reading Mechanism Techniques.
+<code class="expression">space.vars.SITENAME</code> supports 3 types of Reading Mechanism Techniques.
 
 ## History
 * "History" means that the end system provides APIs that allow access to the history or audit data of the items.

@@ -6,9 +6,9 @@
 
 ## Solution
 
-* Please refer to [Purge Audit Logs](../../../manage/administrator/purge-records.md#purge-audit-logs) page to know more about how to remove the audits data in {{SITENAME}}.  
+* Please refer to [Purge Audit Logs](../../../manage/administrator/purge-records.md#purge-audit-logs) page to know more about how to remove the audits data in <code class="expression">space.vars.SITENAME</code>.  
 * Use small time frame/window (e.g., 6 months or 1 year) for purge operations.  
-  - **For example:** The {{SITENAME}} was installed in Jan-2015, then {{SITENAME}} will have audits since Jan-2015 till date.  
+  - **For example:** The <code class="expression">space.vars.SITENAME</code> was installed in Jan-2015, then <code class="expression">space.vars.SITENAME</code> will have audits since Jan-2015 till date.  
     - In first go, purge audits till Dec-2015.  
     - In second go, purge audits till Dec-2016.  
     - Follow the same process till the date you want to remove the audit.  

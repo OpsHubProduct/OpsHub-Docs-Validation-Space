@@ -1,10 +1,10 @@
 ## Description
 
-Out of the multiple authentication modes supported by Team Foundation Server (TFS)/Azure DevOps, {{SITENAME}} supports 2 modes.
+Out of the multiple authentication modes supported by Team Foundation Server (TFS)/Azure DevOps, <code class="expression">space.vars.SITENAME</code> supports 2 modes.
 
 ## Solution
 
-Following are the authentication modes that are supported by {{SITENAME}} for Team Foundation Server (TFS)/Azure DevOps:
+Following are the authentication modes that are supported by <code class="expression">space.vars.SITENAME</code> for Team Foundation Server (TFS)/Azure DevOps:
 
 * **Basic**  
   * For Team Foundation Server (TFS), **Basic** authentication requires UserName prefixed with Domain Name and Password. For NTLM, **Basic** authentication mode is used.  

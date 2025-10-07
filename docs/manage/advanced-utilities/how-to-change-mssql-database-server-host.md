@@ -102,7 +102,7 @@
   <img src="../../assets/MssqlSer4.png">
 </p>
 
-* If the Port input is not entered in the above step, then utility will use the existing Port [entered at the time of {{SITENAME}} installation]. If that is not the case, then enter the Port here:
+* If the Port input is not entered in the above step, then utility will use the existing Port [entered at the time of <code class="expression">space.vars.SITENAME</code> installation]. If that is not the case, then enter the Port here:
 
 <p align="center">
   <img src="../../assets/MssqlSer5.png">
@@ -128,7 +128,7 @@
   <img src="../assets/postgresql1.png">
 </p>
 
-* If the Host Name input is not entered in the above step, then user will get the notification mentioned in the screenshot below. The Host Name is a mandatory input that defines the new Host Name user wants {{SITENAME}} database to refer to:
+* If the Host Name input is not entered in the above step, then user will get the notification mentioned in the screenshot below. The Host Name is a mandatory input that defines the new Host Name user wants <code class="expression">space.vars.SITENAME</code> database to refer to:
 
 <p align="center">
   <img src="../assets/postgresql2.png">
@@ -140,7 +140,7 @@
   <img src="../assets/postgresql3.png">
 </p>
 
-* If the Port's input is not entered in the above step, then the utility will use the existing Port [entered at the time of {{SITENAME}} installation]. If that is not the case, enter the Port as shown in the screenshot below:
+* If the Port's input is not entered in the above step, then the utility will use the existing Port [entered at the time of <code class="expression">space.vars.SITENAME</code> installation]. If that is not the case, enter the Port as shown in the screenshot below:
 
 <p align="center">
   <img src="../assets/postgresql4.png">

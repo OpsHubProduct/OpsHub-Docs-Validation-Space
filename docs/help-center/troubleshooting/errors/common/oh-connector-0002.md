@@ -6,7 +6,7 @@ When you encounter OH-Connector-0002, then the following error message appears:
 
 ## Cause
 
-When you have an existing integration from system A to system B and entity 'E1' is also synchronized from system A to system B. Now, someone deletes 'E1' from system B and someone updates 'E1' in system A. In this case, {{SITENAME}} will not be able to update 'E1' on system B as entity was deleted and therefore, it will fail with this error.
+When you have an existing integration from system A to system B and entity 'E1' is also synchronized from system A to system B. Now, someone deletes 'E1' from system B and someone updates 'E1' in system A. In this case, <code class="expression">space.vars.SITENAME</code> will not be able to update 'E1' on system B as entity was deleted and therefore, it will fail with this error.
 
 ## Solution
 

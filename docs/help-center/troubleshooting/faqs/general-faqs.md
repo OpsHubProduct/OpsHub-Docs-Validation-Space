@@ -3,8 +3,8 @@
 * [How to know which system/entity/version are supported ?](./general/supported-system-entity-version.md)  
 * [How to migrate from HSQL to other enterprise database?](./general/hsql-other-database.md)  
 * [How to move application server from one machine to other?](how-to-move-application-server-from-one-machine-to-other.md)  
-* [Are there any vulnerabilities in {{SITENAME}} ?](./general/vulnerabilities.md)  
-{{#ifeq: {{SITENAME}} | OpsHub Migrator for Microsoft Azure DevOps  ||
+* [Are there any vulnerabilities in <code class="expression">space.vars.SITENAME</code> ?](./general/vulnerabilities.md)  
+{{#ifeq: <code class="expression">space.vars.SITENAME</code> | OpsHub Migrator for Microsoft Azure DevOps  ||
 * [Integrations are configured but synchronization is not happening, What can be potentials reasons?](./general/integration-sync-not-working.md) }}  
 * [Not able to see the newly added projects or lookup values, What can be potentials reasons?](./general/not-able-to-see-newly-added-projects-or-lookup-values.md)  
 * [How to put default value for any mandatory field of destination system?](./general/default-value-mandatory-field-target-system.md)  
@@ -23,7 +23,7 @@
 * [How to enable OpsHub Integration Manager with HTTPS when it has already been installed with HTTP?](./general/enable-oim-with-https.md)  
 * [How to remove unnecessary audits to improve audit loading time?](./general/how-to-remove-audits.md)  
 * [How to enable compression in database?](./general/how-to-enable-compression.md)  
-* [How to move {{SITENAME}} from CentOS to Ubuntu?](./general/move-application-server.md)  
+* [How to move <code class="expression">space.vars.SITENAME</code> from CentOS to Ubuntu?](./general/move-application-server.md)  
 * [How to identify between Custom and Default Workflows and their associated integrations?](./general/how-to-identify-between-custom-and-default-workflows-and-their-associated-integrations.md)  
 * [How to configure cross system linkages between IBM systems?](./general/how-to-configure-cross-system-linkage-in-ibm-systems.md)  
 

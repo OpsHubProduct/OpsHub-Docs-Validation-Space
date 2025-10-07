@@ -25,7 +25,7 @@ This section shows SMTP Mail Client System Configuration steps in detail.
 4. Select **Is Authentication Required** to **Yes** if SMTP Server requires authentication credentials for sending mails. If no authentication is required and sending anonymous mails is supported by SMTP Server, then set it to **No**.  
 5. Set the value of **Sender Email-id** as it is a **mandatory** field irrespective of the value of field **Is Authentication Required** being **Yes or No**. Give a name of a valid email account which can be used for sending e-mails.  
 6. If **Is Authentication Required** is set to **Yes** then **Password** will appear, give email login password for user in **Sender Email-id**.  
-7. **TimeOut** is optional field, it is maximum time for which {{SITENAME}} will try to send email, after time out period that specific mail will not be sent.  
+7. **TimeOut** is optional field, it is maximum time for which <code class="expression">space.vars.SITENAME</code> will try to send email, after time out period that specific mail will not be sent.  
 8. Give email id of recipient of notifications in **To Email-Id**.  
 9. Click **Save** to save the configuration.
 

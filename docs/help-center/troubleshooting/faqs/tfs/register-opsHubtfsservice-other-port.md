@@ -6,7 +6,7 @@ By default OpsHubTFSService is registered on port number `9090`. If `9090` port 
 
 To change default OpsHubTFSService port number you need to perform the following steps:
 
-* Open file `<{{SITENAME}}_INSTALLATION_PATH>\Other_Resources\Resources\OpsHubTFSService\opshubtfsservice.exe.config`.
+* Open file `<<code class="expression">space.vars.SITENAME</code>_INSTALLATION_PATH>\Other_Resources\Resources\OpsHubTFSService\opshubtfsservice.exe.config`.
 * Find the line `<add baseAddress="http://localhost:9090/TFSService"/>` and instead of `9090` change port number with which you are going to register.  
   e.g. If you want to register with `9191` then change the line as `<add baseAddress="http://localhost:9191/TFSService"/>`.
 * If you have not registered the OpsHubTFSService then refer [this](register-opshubtfsservice.md) for registering OpsHubTFSService.  

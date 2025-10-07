@@ -1,5 +1,5 @@
 ## Description
-The user has configured the Verisium Manager System in the {{SITENAME}}. However, vPlans are not loaded in the Project list of Integration Configuration / Mapping configuration.
+The user has configured the Verisium Manager System in the <code class="expression">space.vars.SITENAME</code>. However, vPlans are not loaded in the Project list of Integration Configuration / Mapping configuration.
 
 ## Cause
 Integration is supported with the vPlan in the database only. Hence, vPlans will be loaded in the Project list of Integration Configuration / Mapping configuration only if there exist a vPlan in the database.

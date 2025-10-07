@@ -9,7 +9,7 @@ Are you facing formatting issue while synchronizing these field cases:
 This page will guide you through the cause and solution for the same.
 
 ## Cause
-If {{SITENAME}} is able to decide whether the source or target Jira field is of type text or wiki then {{SITENAME}} would be able to handle the formatting by itself. But the formatting cannot be handled by default by {{SITENAME}} as the Jira API doesn't provide the information whether a text field is a simple text field or wiki type of field.
+If <code class="expression">space.vars.SITENAME</code> is able to decide whether the source or target Jira field is of type text or wiki then <code class="expression">space.vars.SITENAME</code> would be able to handle the formatting by itself. But the formatting cannot be handled by default by <code class="expression">space.vars.SITENAME</code> as the Jira API doesn't provide the information whether a text field is a simple text field or wiki type of field.
 
 Therefore, irrespective of whether the field is wiki or text type of field in Jira, it is by default considered as text type of field during the field mapping.
 

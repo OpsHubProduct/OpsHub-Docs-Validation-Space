@@ -25,7 +25,7 @@ All the URLs entered will be checked if they are implemented with the same conne
 
 After entering valid details, click the **Save** button to register the connector with the given name.
 
->**Note**: System Type Name must be unique as {{SITENAME}} won't allow you to use the same name for registering the connector.
+>**Note**: System Type Name must be unique as <code class="expression">space.vars.SITENAME</code> won't allow you to use the same name for registering the connector.
 
 # View Connectors
 The registered connectors are available in the form of a list on the "Registered Connectors" page as shown in the image below:

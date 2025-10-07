@@ -1,7 +1,7 @@
 # Pre-requisites
 
 ## User privileges
-* Create one user for Micro Focus ALM/QC, dedicated to {{SITENAME}}. This user should not do any other operations from the Micro Focus ALM/QC's user interface. For creating user, please refer [Add User to Project](https://admhelp.microfocus.com/alm/en/12.60/online_help/Content/Admin/cust_users_add_to_proj.htm). 
+* Create one user for Micro Focus ALM/QC, dedicated to <code class="expression">space.vars.SITENAME</code>. This user should not do any other operations from the Micro Focus ALM/QC's user interface. For creating user, please refer [Add User to Project](https://admhelp.microfocus.com/alm/en/12.60/online_help/Content/Admin/cust_users_add_to_proj.htm). 
 * Micro Focus ALM/QC user must be an **Active site user** in Micro Focus ALM/QC. If the user is deactive user in Micro Focus ALM/QC, then activate the user. For help on how to activate the user, please refer [Activate the User](#Activate-the-User-as-a-Site-User) in Appendix.
 * To use a particular project in Micro Focus ALM/QC, the user must be present as a **Project User** for that project. For help on how to add a project user in the project, please refer [Add project user in project](#Add-project-user-in-project) in Appendix.
 * Micro Focus ALM/QC user must have **Project Administrator** rights on the Project that is to be synchronized. For help on how to set the access rights on project, please refer [Add Permissions To Project](#Add-permissions-to-project) in Appendix.  
@@ -42,7 +42,7 @@ Following additional configurations are required to copy QTP script:
 * **Quick Test Professional** and appropriate **QuickTest Professional Add-In** must be installed on the machine on which OpsHub ALM/QC proxy is configured. To download QuickTest Professional Add-In, please follow [this link](https://hpln.hp.com/page/quicktest-professional-add).
 
 ## Enable history of fields to be mapped
-* It is recommended to enable history at least on those fields that are going to be mapped in the integration for {{SITENAME}} and on **Modified** field to ascertain whether any modifications are made on a particular field. Click [Enable history of fields to be mapped](#How-to-enable-history-of-fields-to-be-mapped) to learn the steps.  
+* It is recommended to enable history at least on those fields that are going to be mapped in the integration for <code class="expression">space.vars.SITENAME</code> and on **Modified** field to ascertain whether any modifications are made on a particular field. Click [Enable history of fields to be mapped](#How-to-enable-history-of-fields-to-be-mapped) to learn the steps.  
 * If Micro Focus ALM/QC is the target system, then integration recovery will not work if the history has not been enabled. The integration recovery can, in fact, create duplicate entities in Micro Focus ALM/QC. Integration will throw error before performing create/update if history has not been enabled on any mapped field.  
 * If Micro Focus ALM/QC is the source system and history has not been enabled, then integration needs to be configured in **Current State Sync** mode only. You can learn about **Current State Sync** mode from [here](../integrate/integration-configuration.md#sync-only-current-state).
 
@@ -224,13 +224,13 @@ There is no need to create a new Cycle entity if a cycle entity already exists. 
 ## Synchronize Responsible Tester field of Test Instance
 
 * Test Instance is a relationship/link between `Test Set`, `Test`, and `Test Configurations` entities.  
-* {{SITENAME}} supports above relationship synchronization using the following link type(s):  
+* <code class="expression">space.vars.SITENAME</code> supports above relationship synchronization using the following link type(s):  
   * `TEST_INSTANCE`  
     * Map this linkage to synchronize association between Test Set and Test entities.  
   * `TEST_INSTANCE(Configuration)`  
     * Map this linkage to synchronize association between Test Set and Test Configurations entities.  
 
-* To synchronize the Responsible Tester field of the above Test Instance linkage(s), advanced XSLT needs to be written in the relationship mapping of {{SITENAME}}.  
+* To synchronize the Responsible Tester field of the above Test Instance linkage(s), advanced XSLT needs to be written in the relationship mapping of <code class="expression">space.vars.SITENAME</code>.  
 * In the advanced mapping, the Responsible Tester field will be referred to as `owner`.  
 
 >**Note**: The advanced mapping can be customized as per the target system.
@@ -307,7 +307,7 @@ Learn [How to find out internal name/key in versions](#how-to-find-out-internal-
 * The usage of Micro Focus ALM/QC comments is based on certain assumptions. Click [Micro Focus ALM/QC Comments](#micro-focus-alm-qc-comments) to learn more.  
 * In Micro Focus ALM/QC, the details of the user who has updated the entity is known through history. Hence, the **OH_UpdatedBy** field information can be synchronized only if the information related to history is present at the time of synchronization for a given entity.  
   * For checking if the history is present or not for an entity, refer to [Check if entity has history](#check-if-entity-has-history).  
-  * **OH_UpdatedBy**: This is a field provided by {{SITENAME}} for synchronization of the user details who updated the given entity.  
+  * **OH_UpdatedBy**: This is a field provided by <code class="expression">space.vars.SITENAME</code> for synchronization of the user details who updated the given entity.  
 * **User field synchronization**: For Micro Focus ALM/QC version ≥ 15.0, the user email address detail can be accessed only by site administrator users. Therefore, to synchronize the User field, one of the following must be done:  
   * The sync user must be a site administrator for user field sync to work on email (with default mapping).  
   * If sync user can't be given site administrator rights, then user field sync will work if the **Usernames are the same** in both the end systems with default mapping. If the Usernames are not the same, the user can do advanced mapping to achieve one-to-one mapping on username.  
@@ -316,7 +316,7 @@ Learn [How to find out internal name/key in versions](#how-to-find-out-internal-
   * If you want to create the Test Set Folder under any other Test Set Folder, you can achieve that using the parent/child [Relationship Configuration](../integrate/mapping-configuration.md#relationships).  
 * When Micro Focus ALM is the target system (Test Set Folder entity), if the Test Set Folder being synchronized has the same name as an already present Test Set Folder (at the same level), then you will receive a processing failure message, [OH-Micro_Focus_ALM/QC-012656](../help-center/troubleshooting/errors/microfocus/oh-microfocus-012656.md).  
   * **Reason:** Micro Focus ALM doesn't allow a Test Set Folder with the same name under a parent.  
-* While getting baseline name for an entity, if {{SITENAME}} encounters an error like `Item does not exist`, the synchronization of the Baseline field will be skipped for that entity. However, this information will be added to the logs.  
+* While getting baseline name for an entity, if <code class="expression">space.vars.SITENAME</code> encounters an error like `Item does not exist`, the synchronization of the Baseline field will be skipped for that entity. However, this information will be added to the logs.  
 * The Test Set Folder and Test Plan Folder entities do not have history. Hence, they can be synchronized in **current state only**.  
 * **Design steps and Parameters sync:**  
   * For versioned projects, Design steps and Parameters will be synced along with the history.  

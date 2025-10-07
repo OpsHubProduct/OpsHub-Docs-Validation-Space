@@ -1,4 +1,4 @@
 - For each list API, OpsHub will send **startIndex** and **maxResults**.  
   - SDK API needs to define the maximum records (**maxResults**) that can be fetched in one page in **server-info** API.  
 - OpsHub will take care of looking through the results and calling list API again, if required, for the next page.  
-- SDK API should only give {{SITENAME}} the result for the given **startIndex** and **maxResults**.
+- SDK API should only give <code class="expression">space.vars.SITENAME</code> the result for the given **startIndex** and **maxResults**.

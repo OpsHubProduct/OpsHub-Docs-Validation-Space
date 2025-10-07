@@ -37,7 +37,7 @@ This is the situation where you have *TFS Object Model 2013* already installed o
 
 ## Resolution
 
-To resolve this issue, it is suggested that you uninstall the *TFS Object Model 2013* and then install the *TFS Object Model 2012* (as required by {{SITENAME}} Proxy Service)
+To resolve this issue, it is suggested that you uninstall the *TFS Object Model 2013* and then install the *TFS Object Model 2012* (as required by <code class="expression">space.vars.SITENAME</code> Proxy Service)
 
 Service will **NOT** work with TFS Object Model 2013.
 

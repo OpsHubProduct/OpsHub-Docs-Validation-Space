@@ -1,6 +1,6 @@
 ## Description
 
-To configure integrations for Team Foundation Server (TFS)/Azure DevOps, registering for OpsHubTFSService is a pre-requisite. At the time of upgrading the {{SITENAME}} to a new version, this service also must be upgraded. What are the steps for the upgradation of OpsHubTFSService?
+To configure integrations for Team Foundation Server (TFS)/Azure DevOps, registering for OpsHubTFSService is a pre-requisite. At the time of upgrading the <code class="expression">space.vars.SITENAME</code> to a new version, this service also must be upgraded. What are the steps for the upgradation of OpsHubTFSService?
 
 ## Solution
 

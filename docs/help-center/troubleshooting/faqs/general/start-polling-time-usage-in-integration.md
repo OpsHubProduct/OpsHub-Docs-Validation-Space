@@ -4,7 +4,7 @@ While configuring integration there is one setting called 'Start Polling Time' a
 
 ## Solution
 
-'Start Polling Time' means the time from when {{SITENAME}} should start polling data from the source system. {{SITENAME}} fetches only those changes/entities that are updated after given 'Start Polling Time'.
+'Start Polling Time' means the time from when <code class="expression">space.vars.SITENAME</code> should start polling data from the source system. <code class="expression">space.vars.SITENAME</code> fetches only those changes/entities that are updated after given 'Start Polling Time'.
 
 While creating new integration, 'Start Polling Time' will be default set to latest updated time of the source system. If you want to sync older entities then change it accordingly. To change 'Start Polling Time', navigate to 'Entity level Mandatory settings' and change it.
 

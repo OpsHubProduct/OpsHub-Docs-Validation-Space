@@ -240,7 +240,7 @@ Refer to [Helix REST API Documentation](https://help.perforce.com/helix-alm/heli
 - Speed of synchronization will be affected in the **following scenarios:**
   - The integration user is associated with a named license.
   - The integration user is associated with a floating license, but the number of projects configured for integration exceeds the **SOAP Session Limit** provided in the system configuration form.  
-    **Reason for above-mentioned scenarios:** To execute a SOAP API, {{SITENAME}} needs to first log into the project. Every login consumes a license. If more projects are configured, login and logout operations will be performed repeatedly, causing slowness in synchronization.
+    **Reason for above-mentioned scenarios:** To execute a SOAP API, <code class="expression">space.vars.SITENAME</code> needs to first log into the project. Every login consumes a license. If more projects are configured, login and logout operations will be performed repeatedly, causing slowness in synchronization.
 
 ## Attachment Synchronization
 
@@ -263,15 +263,15 @@ Let's assume that we have a bidirectional integration configured between Helix A
 
 Given below are the expected behaviors while writing links to Helix ALM:
 
-- Links created by {{SITENAME}} will have only two entities participating in it. Suppose three issues "issue1", "issue2", and "issue3" are linked by "Related Items" in some source system. These links will be synced to Helix ALM as two different links for all of them. So, for the above case, it will be three different links "issue1" related to "issue2", "issue2" related to "issue3" and "issue3" related to "issue1".
+- Links created by <code class="expression">space.vars.SITENAME</code> will have only two entities participating in it. Suppose three issues "issue1", "issue2", and "issue3" are linked by "Related Items" in some source system. These links will be synced to Helix ALM as two different links for all of them. So, for the above case, it will be three different links "issue1" related to "issue2", "issue2" related to "issue3" and "issue3" related to "issue1".
 - Link won't be added if link type "Require Comment" is enabled for link type. 
 
 Following are expected behaviors while reading links from Helix ALM:
 
-- If there are two links having same parent and same set of children, {{SITENAME}} will consider only one link.
+- If there are two links having same parent and same set of children, <code class="expression">space.vars.SITENAME</code> will consider only one link.
 - If there are more than 2 items participating in any link, it will be split in more than one link.
 
-Suppose Requirement "req1" is related to 2 test cases "test1" and "test2" through "Requirement Tested By" type of link (it is one link with single parent and two children). In this case, two links will be synced by {{SITENAME}}, one with each child "test1" and "test2". 
+Suppose Requirement "req1" is related to 2 test cases "test1" and "test2" through "Requirement Tested By" type of link (it is one link with single parent and two children). In this case, two links will be synced by <code class="expression">space.vars.SITENAME</code>, one with each child "test1" and "test2". 
 
 ## Workflow Transition Configuration
 
@@ -372,11 +372,11 @@ Recommended link configurations in Helix ALM:
 
 ## Known Limitations
 
-- {{SITENAME}} does not support synchronization of **Test Config** field present under **Detail** tab in the **Issue** entity.
+- <code class="expression">space.vars.SITENAME</code> does not support synchronization of **Test Config** field present under **Detail** tab in the **Issue** entity.
 - Synchronization of only **Comment Workflow event** is supported.
 - For Issue entity, the field label of all the Found By Records field should not be changed. It should be set to the default value.  
-    - Found By Record fields supported by {{SITENAME}} are Description, Steps to Reproduce, Other Hardware and Software, Version Found, Found By, Date Found, Reproduced.
-- If the label of the field is changed in the end system, the mapping needs to be updated in the {{SITENAME}}.
+    - Found By Record fields supported by <code class="expression">space.vars.SITENAME</code> are Description, Steps to Reproduce, Other Hardware and Software, Version Found, Found By, Date Found, Reproduced.
+- If the label of the field is changed in the end system, the mapping needs to be updated in the <code class="expression">space.vars.SITENAME</code>.
 - If Requirement entity is configured for synchronization and Relationships synchronization is enabled:
   - There should not be a custom link type in Helix ALM having same name as either "Requirement Relationships(Parent)" or "Requirement Relationships(Child)".
 - If Helix ALM is the source system:
@@ -426,7 +426,7 @@ For giving privileges, follow the steps given below:
 
 ## Custom fields
 
-{{SITENAME}} requires a few special fields to be defined on the entity that is being synchronized. These must be set up so that the integration status of each item can be tracked.
+<code class="expression">space.vars.SITENAME</code> requires a few special fields to be defined on the entity that is being synchronized. These must be set up so that the integration status of each item can be tracked.
 
 <p align="center">
   <img src="../assets/Helix_Image_5.png" width="1200"/>

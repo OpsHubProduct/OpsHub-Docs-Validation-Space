@@ -6,7 +6,7 @@ When you encounter OH-Connector-0030, then the following error message appears:
 
 ## Cause
 
-The entity on which failure has occurred is linked to another entity in the source system. Therefore, {{SITENAME}} is trying to set the link relationship on the target side/system as per link mapping. But as the other/linked entity of the source system is not yet synchronized in destination system, this link can't be added and synchronization failed with this error.
+The entity on which failure has occurred is linked to another entity in the source system. Therefore, <code class="expression">space.vars.SITENAME</code> is trying to set the link relationship on the target side/system as per link mapping. But as the other/linked entity of the source system is not yet synchronized in destination system, this link can't be added and synchronization failed with this error.
 
 This failure occurred as you have selected 'Fail event if linked entity doesn't exist' option in link configuration mapping. For more information on where this option is configured, refer [Mapping Configuration - Relationships](../../../../integrate/mapping-configuration.md#relationships)
 

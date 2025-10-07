@@ -1,7 +1,7 @@
 # Overview
 Best of breed tools such as Azure DevOps Services (VSTS) and Micro Focus ALM bring richness to the enterprise ecosystem. The integration of Azure DevOps Services (VSTS) with Micro Focus ALM enhances collaboration between the development and quality assurance (QA) teams. This, in turn, helps deliver better quality products faster. There is no manual effort required from either of the teams to keep each other updated on the latest work status.  
 
-**{{SITENAME}}** integrates Azure DevOps Services (VSTS) and Micro Focus ALM bidirectionally. On this page, we will discuss the bi-directional integration of:  
+**<code class="expression">space.vars.SITENAME</code>** integrates Azure DevOps Services (VSTS) and Micro Focus ALM bidirectionally. On this page, we will discuss the bi-directional integration of:  
 
 <p align="center">
   <img src="../../assets/VSTS-Micro_Focus_ALM.png" width="900px"/>
@@ -13,13 +13,13 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 Check out the pre-requisites for [Azure DevOps Services (VSTS)](../../connectors/team-foundation-server.md#prerequisites) and [Micro Focus ALM](../../connectors/microfocus-alm-qc.md#prerequisites) systems before you proceed with the integration.  
 
 # Integration Configuration
-* Log in into **{{SITENAME}}**. The default credentials are:  
+* Log in into **<code class="expression">space.vars.SITENAME</code>**. The default credentials are:  
   **User Name:** admin, **Password:** password  
 <p align="center">
   <img src="../../assets/Getting_Started_With_Application_Image_1G_a.png"/>
 </p>  
 
->**Note**: **Proxy parameters:** Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](../../manage/administrator/proxy-setting.md) in **{{SITENAME}}**.  
+>**Note**: **Proxy parameters:** Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](../../manage/administrator/proxy-setting.md) in **<code class="expression">space.vars.SITENAME</code>**.  
 
 * Click **Integrate** on the top right corner of the screen and then click the plus [+] icon.  
 <p align="center">
@@ -59,7 +59,7 @@ Check out the pre-requisites for [Azure DevOps Services (VSTS)](../../connectors
   <img src="../../assets/VSTS_7.png" width="950px"/>
 </p>  
 
-* **{{SITENAME}}** fetches entities available in both systems and shows them in entities list for both systems. From the **Select Entities to Sync** section, select the relevant entities for both systems.  
+* **<code class="expression">space.vars.SITENAME</code>** fetches entities available in both systems and shows them in entities list for both systems. From the **Select Entities to Sync** section, select the relevant entities for both systems.  
   Example: **Feature** from Azure DevOps Services (VSTS) and **Micro Focus Quality Center Requirement** from Micro Focus ALM.  
 
 * The next step is to define the fields that need to be integrated for every entity mapped. Once the entities are selected, click the plus icon [+] adjacent to **Select fields to be Synced** to create the mapping between these two entities. You will now be navigated to Mapping Configuration screen.  
@@ -71,7 +71,7 @@ Check out the pre-requisites for [Azure DevOps Services (VSTS)](../../connectors
 ### Entity: Feature and Requirement
 * Following details are automatically populated in the Mapping section: **Systems, Projects, Entities, and Mapping Name**. If you wish, change the name for the mapping in the **Name** field.  
 * Now, either click **Create from Scratch** to define the mapping from scratch or click **Auto Map** to automatically map all fields with the same name.  
-Even if you select the **Auto Map**, **{{SITENAME}}** will allow you to remove or add more fields before saving mapping.  
+Even if you select the **Auto Map**, **<code class="expression">space.vars.SITENAME</code>** will allow you to remove or add more fields before saving mapping.  
 We select **Create from Scratch**.  
 
 <p align="center">

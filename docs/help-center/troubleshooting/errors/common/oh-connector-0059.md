@@ -8,7 +8,7 @@ OH-Connector-0059: Error occurred while processing entity, because Parent link i
 
 ## Cause
 
-For some entity types, having a Parent/Dependent entity is required to create the entity in end System. With the same alignment, when {{SITENAME}} is trying to create an entity in such system, the {{SITENAME}} would expect the Parent/Dependent entity should be available. In case such Parent/Dependent entity is not present/found in the target end system, user would receive such processing failure.
+For some entity types, having a Parent/Dependent entity is required to create the entity in end System. With the same alignment, when <code class="expression">space.vars.SITENAME</code> is trying to create an entity in such system, the <code class="expression">space.vars.SITENAME</code> would expect the Parent/Dependent entity should be available. In case such Parent/Dependent entity is not present/found in the target end system, user would receive such processing failure.
 
 **For example:**  
 Let's assume we have configured an integration for Task entity with Clarity being the target end point. Now in Clarity, Task can't be created without Project. So while synchronizing Task, if there is no specification of Project (under which this task is to be created) then user would receive a processing failure.

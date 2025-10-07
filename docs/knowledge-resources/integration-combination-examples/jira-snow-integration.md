@@ -192,7 +192,7 @@ Refer to the video on this page to learn in detail about [Attachments](../../int
 * As the final step, click **Save** to save the integration.
 * The integration will be created.
 
-> **Note**: Create an Incident in either ServiceNow or Jira. Incidents will be synchronized to the other system. Remember to use a user other than the integration user provided for ServiceNow and Jira in `{{SITENAME}}`.
+> **Note**: Create an Incident in either ServiceNow or Jira. Incidents will be synchronized to the other system. Remember to use a user other than the integration user provided for ServiceNow and Jira in `<code class="expression">space.vars.SITENAME</code>`.
 
 ## Basic Troubleshooting
 

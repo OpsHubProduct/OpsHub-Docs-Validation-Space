@@ -1,1 +1,1 @@
-Watch detailed guides and walkthroughs to get the most out of {{SITENAME}} on [OpsHub Videos](https://www.opshub.com/videos/).
+Watch detailed guides and walkthroughs to get the most out of <code class="expression">space.vars.SITENAME</code> on [OpsHub Videos](https://www.opshub.com/videos/).

@@ -7,7 +7,7 @@ When you encounter error OH-Jama-0041, then following error message will appear:
 
 Probable causes for this issue are:
 
-- Either username, password or both provided for Jama system configuration in {{SITENAME}} is incorrect.
+- Either username, password or both provided for Jama system configuration in <code class="expression">space.vars.SITENAME</code> is incorrect.
 - User doesn't have required privileges in Jama for making this particular REST API request.
 
 ## Solution

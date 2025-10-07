@@ -9,7 +9,7 @@ Example:
 
 ## Cause
 
-*This issue occurs when upgrading {{SITENAME}} to version 7.78 or higher. It throws event failure as the query filters format is changed.*  
+*This issue occurs when upgrading <code class="expression">space.vars.SITENAME</code> to version 7.78 or higher. It throws event failure as the query filters format is changed.*  
 *The **query filters** for the particular query are not correctly selected.*
 
 ## Solution

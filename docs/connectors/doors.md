@@ -156,7 +156,7 @@ Where, **attr:** The display name of the attribute .
 ## Criteria Using Special Characters
 * While using **'(single quote)'** in query, user will have to provide the escaping for it. i.e., the character **\\'** should be used instead of **'** wherever needed.
   * Example: `(attribute 'Object Heading' == 'This object contains `\`' in Heading').`
-  * Here, the query for **Object Heading** in DOORS is: **This object contains ' in Heading'**, but the query to be used in {{SITENAME}} is: **This object contains `\`' in Heading'**.
+  * Here, the query for **Object Heading** in DOORS is: **This object contains ' in Heading'**, but the query to be used in <code class="expression">space.vars.SITENAME</code> is: **This object contains `\`' in Heading'**.
 
 
 # Configure OpsHub's DOORS Remote Services

@@ -6,7 +6,7 @@ OH-JIRA-0181: Link Type Parent association is mandatory and should have unique P
 Sample error message:  
 OH-JIRA-0181: Link Type Parent association is mandatory and should have unique Parent for issue types Sub-Task. Number of Parent links found was 0
 
-In Jira, for a Sub task type of issue, exactly one parent relation with an another issue type is needed. This error will come up when integration is configured from any source system to Jira for Sub task issue type and {{SITENAME}} is trying to create an issue of Sub-Task type in Jira that does not have exactly one Parent relation with any other entity.
+In Jira, for a Sub task type of issue, exactly one parent relation with an another issue type is needed. This error will come up when integration is configured from any source system to Jira for Sub task issue type and <code class="expression">space.vars.SITENAME</code> is trying to create an issue of Sub-Task type in Jira that does not have exactly one Parent relation with any other entity.
 
 ## Cause
 User might be getting this error due to any of these two possibilities:
@@ -15,7 +15,7 @@ User might be getting this error due to any of these two possibilities:
 There can be three cases in which such an issue can occur:  
 **Case 1:** The configuration is not made for the 'Sub Task Parent' link type in Relationship configuration of corresponding mapping.  
 **Case 2:** The configuration is made for the 'Sub Task Parent' link type in Relationship configuration of corresponding mapping, but for the entity in source system, the link was not added.  
-**Case 3:** While creating an entity of Sub-Task type, there is not even one parent entity that is recognized by {{SITENAME}} found in the target Jira system. This parent entity will be known to {{SITENAME}} only if this entity has been polled or created through some integration in {{SITENAME}}.
+**Case 3:** While creating an entity of Sub-Task type, there is not even one parent entity that is recognized by <code class="expression">space.vars.SITENAME</code> found in the target Jira system. This parent entity will be known to <code class="expression">space.vars.SITENAME</code> only if this entity has been polled or created through some integration in <code class="expression">space.vars.SITENAME</code>.
 
 For solving this issue refer to **Solution 1** in the Solution section.
 
@@ -34,6 +34,6 @@ For solving the issue specified in **Possibility 1** follow these steps:
 2. If the parent entity is already synchronized and then the user receives this error message for the Sub-Task integration, there is a possibility that at the time when this Sub-Task was synchronized, the parent entity might not have been synchronized through the parent integration. As the parent integration has now synchronized the entity, this error can be retried. For learning how to retry an event refer: [Manage Integration Failures](../../../troubleshooting/manage-integration-failures.md). After the error is retried, check whether the issue has been resolved when the Sub-Task related integration has ran once again for this Sub-Task entity.
 
 **Solution 2.**  
-For the case in **Possibility 2** part of the **Cause**, there needs to be exactly one parent relationship for the Sub-Task. It is an ambiguous case for {{SITENAME}} and it cannot take the decision to which parent relationship should be selected for the Sub-Task.  
+For the case in **Possibility 2** part of the **Cause**, there needs to be exactly one parent relationship for the Sub-Task. It is an ambiguous case for <code class="expression">space.vars.SITENAME</code> and it cannot take the decision to which parent relationship should be selected for the Sub-Task.  
 For solving this model-mismatch scenario, modification can be made in the [Relationship configuration](../../../../integrate/mapping-configuration.md#relationships). The modifications must ensure that user is allowed to select a link type (to be mapped to 'Sub Task Parent' link type) from the available source entity link types for which the source system does not allow more than one such link to be added to the source entity. If the solution is not as per the use-case then please contact us on our support portal for further guidance.
 

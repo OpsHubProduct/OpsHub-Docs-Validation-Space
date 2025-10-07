@@ -8,4 +8,4 @@ OH-Connector-0078: Source Link is Hyperlink which cannot be mapped with Target L
 
 ## Cause
 
-When a Web Link is mapped with Standard Link, then incoming Web Link for synchronization in {{SITENAME}} will have limited details like link URL and link title. Standard Linkages are established based on issues that are synchronized by {{SITENAME}}. As Web Link does not have enough information to establish the Standard Linkage, this combination is not supported.
+When a Web Link is mapped with Standard Link, then incoming Web Link for synchronization in <code class="expression">space.vars.SITENAME</code> will have limited details like link URL and link title. Standard Linkages are established based on issues that are synchronized by <code class="expression">space.vars.SITENAME</code>. As Web Link does not have enough information to establish the Standard Linkage, this combination is not supported.

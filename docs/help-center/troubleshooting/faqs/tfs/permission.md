@@ -1,6 +1,6 @@
 ## Description
 
-{{SITENAME}} requires one dedicated system user to communicate with the system. This user needs specific permissions. 
+<code class="expression">space.vars.SITENAME</code> requires one dedicated system user to communicate with the system. This user needs specific permissions. 
 
 ## Solution
 

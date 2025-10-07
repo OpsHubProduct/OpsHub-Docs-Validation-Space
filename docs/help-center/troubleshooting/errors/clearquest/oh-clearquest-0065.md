@@ -9,7 +9,7 @@ OH-ClearQuest-0065: Expected display field(s) id,action_timestamp of Query Prese
 
 ## Cause
 
-*This issue occurs when upgrading {{SITENAME}} to version 7.78 or higher. It throws event failure as the query filters format is changed.*  
+*This issue occurs when upgrading <code class="expression">space.vars.SITENAME</code> to version 7.78 or higher. It throws event failure as the query filters format is changed.*  
 *The **query presentation fields** or their names for the particular query are not correct.*
 
 ## Solution

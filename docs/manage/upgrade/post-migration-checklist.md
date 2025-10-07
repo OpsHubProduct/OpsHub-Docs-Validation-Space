@@ -280,7 +280,7 @@ For more details, please refer to [Gitlab connector mapping configurations](../.
 **Reason**
 The prerequisite to rename Jira Xray entities has been removed.
 
-# Migrating {{SITENAME}} version to 7.195 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.195 or above
 
 ## Data type changes for Text type of fields in TestRail
 
@@ -298,7 +298,7 @@ The prerequisite to rename Jira Xray entities has been removed.
 
 ***
 
-# Migrating {{SITENAME}} version to 7.196 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.196 or above
 
 ## Update .py files used in commit hooks
 
@@ -347,7 +347,7 @@ Refer to respective section links for Commit Hooks setup: [SVN](../../connectors
 Removed entity type mappings are saved at the following path:\
 &#xNAN;**`<OpsHub Installation Dir>/AppData/LinkEntityTypeMapping`**
 
-# Migrating {{SITENAME}} version to 7.199 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.199 or above
 
 ## Remap values of lookup field **Planned For** in IBM Engineering Workflow Management
 
@@ -367,7 +367,7 @@ Removed entity type mappings are saved at the following path:\
 
 ***
 
-# Migrating {{SITENAME}} version to 7.201 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.201 or above
 
 ## Map the lookup field **Test Run Type** in Codebeamer
 
@@ -384,22 +384,22 @@ Removed entity type mappings are saved at the following path:\
 
 * Previously, only the **Test Run (Parent)** entity was supported. Now, both **Test Run (Parent)** and **Test Run (Child)** are supported; the latter is automatically generated during Parent creation and is handled as a separate synchronization entity.
 
-# Migrating {{SITENAME}} version to 7.203 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.203 or above
 
 ## Update Relationship Mapping for Jira
 
 **Applicable When**
-* Jira is configured as one of the endpoints in the integration and a not supported link type from Jira has been mapped in the {{SITENAME}}. In such cases, after the upgrade, the mapping cannot be updated until the unsupported link type is removed.
+* Jira is configured as one of the endpoints in the integration and a not supported link type from Jira has been mapped in the <code class="expression">space.vars.SITENAME</code>. In such cases, after the upgrade, the mapping cannot be updated until the unsupported link type is removed.
 
 **Actions**
 * If the this kind of link is configured, after upgrading to 7.203, the user needs to remove the mapped link type from the mapping.
 
 **Reason**
-* Previously, {{SITENAME}} displayed both the link type and its reverse link type in the link type mapping.
+* Previously, <code class="expression">space.vars.SITENAME</code> displayed both the link type and its reverse link type in the link type mapping.
 * Now, only the supported link type will be shown.
 * For example  
   * In Jira, for the **Test Plan** entity, two supported link types exist: ***tests*** and ***testExecution***.  
   * The link type ***testplans*** is the reverse of both, meaning that from **Test** and **Test Execution** entities, a **Test Plan** could be linked back using ***testplans***.  
-  * Earlier, {{SITENAME}} displayed all three — ***tests***, ***testExecution***, and ***testplans*** — in the mapping screen of Test Plan entity.  
+  * Earlier, <code class="expression">space.vars.SITENAME</code> displayed all three — ***tests***, ***testExecution***, and ***testplans*** — in the mapping screen of Test Plan entity.  
   * Going forward, only the supported link types (***tests*** and ***testExecution***) will be shown.  
   * **Note:** ***testplans*** is not a supported link type for the **Test Plan** entity in Jira as well.

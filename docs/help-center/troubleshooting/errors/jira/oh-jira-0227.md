@@ -2,7 +2,7 @@
 
 When you encounter error OH-JIRA-0227, then following error message will appear:
 
- **OH-JIRA-0227**: Unexpected response received from JIRA. Please check whether user has sufficient permissions and whether user has access to JIRA Software. Refer Jira prerequisites in the {{SITENAME}} documentation.
+ **OH-JIRA-0227**: Unexpected response received from JIRA. Please check whether user has sufficient permissions and whether user has access to JIRA Software. Refer Jira prerequisites in the <code class="expression">space.vars.SITENAME</code> documentation.
 
 ## Cause
 

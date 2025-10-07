@@ -9,7 +9,7 @@ OH-ClearQuest-0023: Query Parameter(s) not matched, Expected query parameter(s) 
 
 ## Cause
 
-*This issue occurs when upgrading {{SITENAME}} to version 7.78 or higher. It throws event failure as the query filters format is changed.*  
+*This issue occurs when upgrading <code class="expression">space.vars.SITENAME</code> to version 7.78 or higher. It throws event failure as the query filters format is changed.*  
 *All the required **query filters** for this particular query are not added to the end-system query.*
 
 ## Solution

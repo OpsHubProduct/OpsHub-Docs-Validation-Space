@@ -2,7 +2,7 @@
 
 {% include "../.gitbook/includes/docker-prerequisites.md" %}
 
-# Steps to Run {{SITENAME}}
+# Steps to Run <code class="expression">space.vars.SITENAME</code>
 
 {% include "../.gitbook/includes/oim-docker-configurations.md" %}
 

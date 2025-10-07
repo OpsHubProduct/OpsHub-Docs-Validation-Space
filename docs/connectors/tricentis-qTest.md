@@ -137,7 +137,7 @@ To configure an integration based on criteria, follow the steps given below:
   * For example, if the module path is set to "Default/Test/Test1" and the checkAndCreate option is not configured, then OpsHub Integration Manager will attempt to locate the specified path.  
     * If the path exists, it will be used for create/update operations.  
     * If the path does not exist, an error will be thrown.
-* {{SITENAME}} uses the "/" character to separate modules in a '''Module Path'''. If the source system uses a different path separator, users must create advanced mapping to convert that separator to the "/" string.
+* <code class="expression">space.vars.SITENAME</code> uses the "/" character to separate modules in a '''Module Path'''. If the source system uses a different path separator, users must create advanced mapping to convert that separator to the "/" string.
     ```xml
    <Module-space-Path>
      <xsl:value-of xmlns:xsl="http://www.w3.org/1999/XSL/Transform" select="replace(SourceXML/updatedFields/Property/Subject, '\\', '/')"/>

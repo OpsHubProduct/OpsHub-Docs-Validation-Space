@@ -9,14 +9,14 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 
 To create an integration between IBM DOORS and Jira, you need to:
 
-- Log in into {{SITENAME}}. The default credentials are: **User Name**: admin, **Password**: password.  
+- Log in into <code class="expression">space.vars.SITENAME</code>. The default credentials are: **User Name**: admin, **Password**: password.  
 
 <p align="center">
   <img src="../../assets/Getting_Started_With_Application_Image_1G_a.png" />
 </p>
 
  
->**Note**: Proxy parameters: Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](../../manage/administrator/proxy-setting.md) in {{SITENAME}}.
+>**Note**: Proxy parameters: Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](../../manage/administrator/proxy-setting.md) in <code class="expression">space.vars.SITENAME</code>.
 
 - Click **Integrate** on the top right corner of the screen and then click the plus [+] icon.  
 
@@ -56,7 +56,7 @@ Once the direction is selected, the arrows would turn grey. We have selected the
 </p>
 
 - The next step is to define entities that need to be integrated and fields that need to be integrated for every entity mapped.  
-- {{SITENAME}} fetches entities available in both systems and shows them in entities list for both systems. From the **Select Entities to Sync** section, select the relevant entities for both systems. In this case, we select **Requirement** from IBM DOORS and **Story** from Jira.  
+- <code class="expression">space.vars.SITENAME</code> fetches entities available in both systems and shows them in entities list for both systems. From the **Select Entities to Sync** section, select the relevant entities for both systems. In this case, we select **Requirement** from IBM DOORS and **Story** from Jira.  
 
 <p align="center">
   <img src="../../assets/IBM_DOORS_8.png" width="950px"/>

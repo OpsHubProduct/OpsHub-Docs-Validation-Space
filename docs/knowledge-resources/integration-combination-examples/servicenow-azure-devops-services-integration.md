@@ -1,7 +1,7 @@
 # Overview
 
 Best of breed tools such as ServiceNow and Azure DevOps Services (VSTS) bring richness to the enterprise ecosystem. The integration of ServiceNow with Azure DevOps Services (VSTS) enhances collaboration between the customer service and development teams. This, in turn, helps resolve the customer issues faster and gives visibility to both teams into customer priorities. There is no manual effort required from either of the teams to keep each other updated on the latest work status or customer expectations.  
-{{SITENAME}} integrates ServiceNow and Azure DevOps Services (VSTS) bi-directionally. On this page, we will discuss the bi-directional integration of:
+<code class="expression">space.vars.SITENAME</code> integrates ServiceNow and Azure DevOps Services (VSTS) bi-directionally. On this page, we will discuss the bi-directional integration of:
 
 <p align="center">
   <img src="../../assets/ServiceNow-Azure_DevOps_Services_entities.png" alt="ServiceNow – Azure DevOps Services entities" width="900px"/>
@@ -13,13 +13,13 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 
 # Integration Configuration
 
-* Log in into {{SITENAME}}. The default credentials are: User Name: admin, Password: password.
+* Log in into <code class="expression">space.vars.SITENAME</code>. The default credentials are: User Name: admin, Password: password.
 
 <p align="center">
   <img src="../../assets/Getting_Started_With_Application_Image_1G_a.png" alt="Getting Started" />
 </p>
 
->**Note**: Proxy parameters: Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](../../manage/administrator/proxy-setting.md) in {{SITENAME}}.
+>**Note**: Proxy parameters: Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](../../manage/administrator/proxy-setting.md) in <code class="expression">space.vars.SITENAME</code>.
 
 * Click **Integrate** on the top right corner of the screen and then click the plus [+] icon.
 
@@ -64,7 +64,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
   <img src="../../assets/SNT_4.png" alt="Select Projects" width="950px"/>
 </p>
 
-* {{SITENAME}} fetches entities available in both systems and shows them in the entities list. From the **Select Entities to Sync** section, select the relevant entities for both systems. Here we select **Feature** from Azure DevOps Server (TFS) and **Requirement** from Micro Focus ALM.
+* <code class="expression">space.vars.SITENAME</code> fetches entities available in both systems and shows them in the entities list. From the **Select Entities to Sync** section, select the relevant entities for both systems. Here we select **Feature** from Azure DevOps Server (TFS) and **Requirement** from Micro Focus ALM.
 * Define the fields that need to be integrated for every entity mapped. Click the plus [+] icon adjacent to **Select fields to be Synced** to create the mapping between these entities. You will be navigated to Mapping Configuration screen.
 
 <p align="center">
@@ -76,7 +76,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 ### Entity: Enhancement and Feature
 
 * Details automatically populated: **Systems, Projects, Entities, and Mapping Name**. Change the name in the Name field if desired.
-* Click **Create from Scratch** to define mapping manually or **Auto Map** to map all fields with the same name. Even if you select **Auto Map**, {{SITENAME}} allows adding/removing fields before saving. We select **Create from Scratch**.
+* Click **Create from Scratch** to define mapping manually or **Auto Map** to map all fields with the same name. Even if you select **Auto Map**, <code class="expression">space.vars.SITENAME</code> allows adding/removing fields before saving. We select **Create from Scratch**.
 
 <p align="center">
   <img src="../../assets/SNT_6.png" alt="Create Mapping" width="950px"/>

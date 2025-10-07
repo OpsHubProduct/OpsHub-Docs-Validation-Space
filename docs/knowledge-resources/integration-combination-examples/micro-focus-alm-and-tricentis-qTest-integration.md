@@ -2,7 +2,7 @@
 # Overview
 Best-of-breed systems such as Micro Focus ALM/QC and Tricentis qTest bring rich functionalities to the ecosystem. The integration of Micro Focus ALM and Tricentis qTest makes it easier for the development, and quality assurance (QA) teams to collaborate with each other. This, in turn, helps in delivering a high quality product to customers at a faster pace. With this integration, there is no manual effort required to keep the teams updated on the latest work status.  
 
-{{SITENAME}} integrates Micro Focus ALM and Tricentis qTest bi-directionally. On this page, we will discuss the bi-directional integration of:  
+<code class="expression">space.vars.SITENAME</code> integrates Micro Focus ALM and Tricentis qTest bi-directionally. On this page, we will discuss the bi-directional integration of:  
 
 <p align="center">
   <img src="../../assets/Micro_Focus_ALM_Tricentis_qTest_entities.png" width="900px" />
@@ -12,13 +12,13 @@ Best-of-breed systems such as Micro Focus ALM/QC and Tricentis qTest bring rich 
 Configuring [system pre-requisites](../../integrate/integration-prerequisites.md) is mandatory for successful system configuration.  Check out the prerequisites for [Micro Focus ALM](../../connectors/microfocus-alm-qc.md#prerequisites) and [Tricentis qTest](../../connectors/tricentis_qTest.md#prerequisites) systems before you proceed with the integration.  
 
 # Integration Configuration
-* Log in into {{SITENAME}}. The default credentials are: User Name: `admin`, Password: `password`.  
+* Log in into <code class="expression">space.vars.SITENAME</code>. The default credentials are: User Name: `admin`, Password: `password`.  
 
 <p align="center">
   <img src="../../assets/Getting_Started_With_Application_Image_1G_a.png" />
 </p>
 
->**Note** **Proxy parameters**: Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](../../manage/administrator/proxy-setting.md) in {{SITENAME}}.  
+>**Note** **Proxy parameters**: Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](../../manage/administrator/proxy-setting.md) in <code class="expression">space.vars.SITENAME</code>.  
 
 * Click **Integrate** on the top right corner of the screen and then click the plus [+] icon.  
 
@@ -52,7 +52,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 >**Note** If you receive the following error: **PKIX certification path not found** and the projects and entities don’t load properly, then [import SSL certificate](../../getting-started/ssl-certificate-configuration.md) onto OpsHub Integration Manager’s Java KeyStore before you proceed.  
 
 * In the **Add Project(s) to Sync** section, select the projects you want to synchronize between Tricentis qTest and Micro Focus ALM by clicking them.  
-For example, here we select {{SITENAME}} Demo Project from Tricentis qTest and TestProject from Micro Focus ALM.  
+For example, here we select <code class="expression">space.vars.SITENAME</code> Demo Project from Tricentis qTest and TestProject from Micro Focus ALM.  
 
 * Once the projects are selected, define the source project and target project:  
   * If you select forward arrow (>) icon, the data would flow from Tricentis qTest to Micro Focus ALM.  
@@ -65,7 +65,7 @@ For example, here we select {{SITENAME}} Demo Project from Tricentis qTest and T
   <img src="../../assets/ALM-QTEST_4.png" width="950px" />
 </p>
 
-* {{SITENAME}} fetches entities available in both systems and shows them in the entities list for both systems.  
+* <code class="expression">space.vars.SITENAME</code> fetches entities available in both systems and shows them in the entities list for both systems.  
 From the **Select Entities to Sync** section, select the relevant entities for both systems.  
 In this case, we will select **Test** from Micro Focus ALM and **Test Case** from Tricentis qTest.  
 
@@ -83,7 +83,7 @@ You will be navigated to Mapping Configuration screen.
 If you wish, change the name for the mapping in the **Name** field.  
 
 * Now, either click **Create from Scratch** to define the mapping from scratch or click **Auto Map** to automatically map all fields with same name.  
-Even if you select **Auto Map**, {{SITENAME}} will allow you to remove or add more fields before saving mapping.  
+Even if you select **Auto Map**, <code class="expression">space.vars.SITENAME</code> will allow you to remove or add more fields before saving mapping.  
 We select **Create from Scratch**.  
 
 <p align="center">
