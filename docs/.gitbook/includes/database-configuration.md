@@ -14,7 +14,9 @@
 
 # Create Connection
 
-![Connection1](../../assets/Connection1.png)
+<p style="text-align: center;">
+  <img src="../../assets/Connection1.png" width="600">
+</p>
 
 Steps for Creating Database Connection:
 
@@ -34,7 +36,10 @@ Steps for Creating Database Connection:
 
 # View Connections
 
-![Connection2](../../assets/Connection2.png)
+<p style="text-align: center;">
+  <img src="../../assets/Connection2.png" width="600">
+</p>
+
 
 Steps for viewing Database Connections:
 
@@ -44,10 +49,14 @@ Steps for viewing Database Connections:
 
 # Edit Connection
 
-![Connection3](../../assets/Connection3.png)
+<p style="text-align: center;">
+  <img src="../../assets/Connection3.png" width="600">
+</p>
+
 
 1. Navigate to **Administration -> Connection Management**.
 2. Click on **View Connections**.
 3. Click on **Edit Connection** next to the Database Connection you want to edit in the configured connections.
 4. Edit the properties you want to change.
 5. Click on **Save** button, for saving the edited connection.
+
