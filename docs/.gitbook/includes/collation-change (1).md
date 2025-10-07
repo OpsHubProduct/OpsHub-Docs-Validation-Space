@@ -1,12 +1,8 @@
----
-title: collation change
----
-
 If the user needs to change the collation of OpsHub Integration Manager's database, follow the below-mentioned steps:
 
 **Important Note**
 
-* When changing the collation, compare the code pages of the old and new collations to ensure that character representations are consistent and prevent data conversion issues. For example, changing Turkish\_CS\_AS collation to Latin1\_General\_CS\_AS will convert "ı"(dott-less i) to "i".
+* When changing the collation, compare the code pages of the old and new collations to ensure that character representations are consistent and prevent data conversion issues. For example, changing Turkish_CS_AS collation to Latin1_General_CS_AS will convert "ı"(dott-less i) to "i".
 * When considering a collation change, it's important to be aware about variations in character encoding and sorting rules between the old and new collation settings. Character conversion will occur during the process of collation change as mentioned in the above example. This conversion can lead to the irreversible loss of the original data.
 
 **Procedure:**
