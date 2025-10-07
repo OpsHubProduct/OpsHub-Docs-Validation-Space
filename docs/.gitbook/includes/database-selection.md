@@ -113,19 +113,17 @@ For the **Oracle cluster** instance, to get the instance name for OpsHub Integra
 currently logged in instance name.
 
 
-- Log in to the oracle instance \[Cluster\] using SQL plus with username, password and service name:**sqlplus username/password@connect_identifier**
+- Log in to the oracle instance [Cluster] using SQL plus with username, password and service name:**sqlplus username/password@connect_identifier**
 
 - Run the below SQL:
 
   - If service name is configured for the oracle instance: 
 
-    **SELECT sys_context('USERENV','SERVICE_NAME') AS Instance FROM
-
-    dual**;
+    ```sql SELECT sys_context('USERENV','SERVICE_NAME') AS Instance FROM dual; ```
 
   - If SID is configured for the oracle instance:
 
-    **select instance_name from v\$instance**;
+    ```sql select instance_name from v$instance; ``` 
   
 
 The output value is the instance name that will be used in installation process.  
@@ -250,11 +248,11 @@ If Windows credentials are not added correctly during installation, the OpsHub S
 
 3.  Enter Windows credentials in **This account**.
 
-- If the user is registered with a domain, the username format will be "{username}@{domain}" or "{domain}\\username}". Otherwise, the username format will be ".\username".
+- If the user is registered with a domain, the username format will be "{username}@{domain}" or "{domain}\username}". Otherwise, the username format will be ".\username".
 
 **Windows Username should have the following pre-requisites met:**
 
-- If the user is being registered with a domain, the format of the username will be "{username}@{domain}" or "{domain}\\username}". Otherwise, the format of the username will be ".\username".
+- If the user is being registered with a domain, the format of the username will be "{username}@{domain}" or "{domain}\username}". Otherwise, the format of the username will be ".\username".
 
 <!-- -->
 
@@ -277,6 +275,7 @@ If Windows credentials are not added correctly during installation, the OpsHub S
 </p>
 
 Notes : For this application, the default database name will be 'opshub' and 'reportsdb'.
+
 
 
 
