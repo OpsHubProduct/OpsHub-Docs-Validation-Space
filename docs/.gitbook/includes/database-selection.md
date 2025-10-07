@@ -78,7 +78,7 @@ Given below are further details associated with each installation selection.
 
 ## Installation with MySQL Server
 <p align="center">
-  <img src="../../assets/Installer_Image_2b_C1.png" >
+  <img src="../../assets/Installer_Image_2b_C1.png" width="900">
 </p>
 
 Notes : For this application, the default database name will be 'opshub' and 'reportsdb'.
@@ -92,12 +92,12 @@ Select Oracle Database Type
 
 - The user must select the connection type based on the oracle configuration used to connect the above selected database type. It can be either SID or Service name.**  
 <p align="center">
-  <img src="../../assets/Installer_Image_4Ob.png" >
+  <img src="../../assets/Installer_Image_4Ob.png" width="900">
 </p>
 
 Follow the instructions shown in installer for downloading connector jar.
 <p align="center">
-  <img src="../../assets/Installer_Image_3c_OD1.png" >
+  <img src="../../assets/Installer_Image_3c_OD1.png" width="900">
 </p>
 
 
@@ -174,7 +174,7 @@ For Oracle 19c version, ojdbc8.jar or ojdbc10.jar is required.  The path of the 
 
 **Character Encoding Considerations**:  
 
-\* If the end systems to be configured in the OpsHub Integration Manager include characters beyond standard English or ASCII and are incompatible
+* If the end systems to be configured in the OpsHub Integration Manager include characters beyond standard English or ASCII and are incompatible
 
 with the Latin1_General_CS_AS collation (default collation), consider [Advance Installation](../../getting-started/installation.md#advance-installation) option.
 
@@ -182,7 +182,7 @@ with the Latin1_General_CS_AS collation (default collation), consider [Advance I
 - Mark the checkbox, "Check this if you will be creating databases manually" option during installation. The instructions to create databases are mentioned in the section [Manual creation of databases](../../getting-started/installation.md#manual-creation-of-databases)
 
 <p align="center">
-  <img src="../../assets/MSSQL_AuthMode_Windows.png" >
+  <img src="../../assets/MSSQL_AuthMode_Windows.png" width="900">
 </p>
 
 - For using Named Instance of MS SQL Server, append the Instance Name to the Database Host Name, separated by %. For e.g.,
@@ -225,14 +225,14 @@ with the Latin1_General_CS_AS collation (default collation), consider [Advance I
 **b) Windows Authentication Mode**  
 
 <p align="center">
-  <img src="../../assets/Installer_Image_7MSb_1_b.png" >
+  <img src="../../assets/Installer_Image_7MSb_1_b.png" width="900" >
 </p>
 
 - The option to set logon user for the OpsHub Server Service appears in either of the two cases: When you have not selected advance configuration option, or when you have selected "Install OpsHub as a service" option in the advance installation screen.
 
 Enter the required details to set logon user for the OpsHub Server Service.
 <p align="center">
-  <img src="../../assets/Installer_Image_11a.png">
+  <img src="../../assets/Installer_Image_11a.png" width="900">
 </p>
 
 If Windows credentials are not added correctly during installation, the OpsHub Server service will not be started. To avoid such an occurrence, the user will have to manually set the service log-on credentials for OpsHub Server Service in case wrong Windows credentials are added at the installation time.
@@ -273,10 +273,11 @@ If Windows credentials are not added correctly during installation, the OpsHub S
 
 ## Installation with PostgreSQL
 <p align="center">
-  <img src="../../assets/Installer_Image_5b_C1.png" >
+  <img src="../../assets/Installer_Image_5b_C1.png" width="900">
 </p>
 
 Notes : For this application, the default database name will be 'opshub' and 'reportsdb'.
+
 
 
 
