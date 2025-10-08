@@ -183,14 +183,14 @@ If comments' synchronization is enabled in the Mapping Configuration:
     * Navigate to 'Override parameters for read operations' in Entity level advance configuration and configure the **Comment Field**.
 
   <p align="center">
-    <img src="../assets/Windchill_Comments_Config_Src.png" width="800">
+    <img src="../assets/Windchill_Comments_Config_Src.png" width="600">
   </p>
 
   * If Windchill RV&S is the target system:
     * Navigate to 'Override parameters for write operations(Destination)' in Entity level advance configuration and configure the **Comment Field**.
  
    <p align="center">
-    <img src="../assets/Windchill_Comments_Config_Tgt.png">
+    <img src="../assets/Windchill_Comments_Config_Tgt.png" width="700">
   </p>
 
 
@@ -404,13 +404,13 @@ In Windchill RV&S, you can enable logging for a long-text field, which can work 
 * Create a long-text field and enable logging: 
 
 <p align="center">
-  <img src="../assets/PTC_Image 1.png" width="900">
+  <img src="../assets/PTC_Image 1.png" width="600">
 </p>
 
 * Make this field visible on an entity type:
 
 <p align="center">
-  <img src="../assets/PTC_Image 2.png" width="900">
+  <img src="../assets/PTC_Image 2.png" width="700">
 </p>
 
 ## Configuration to allow all transitions
@@ -422,34 +422,30 @@ Here are the steps to configure any-to-any transitions for the selected entity t
 * Go to Windchill RV&S Integrity Admin Client > Workflows and Documents > Types
 
 <p align="center">
-  <img src="../assets/WorkflowTransitionStep.png" width="900">
+  <img src="../assets/WorkflowTransitionStep.png" width="1200">
 </p>
 
 * Go to 'Edit Type' of the entity type for which you need to configure the transition
 
 <p align="center">
-  <img src="../assets/WorkflowTransitionStep2.png" width="900">
+  <img src="../assets/WorkflowTransitionStep2.png" width="1200">
 </p>
 			
 * Go to Workflow and then Drag and drop the available state from right side panel, for example, 'Test State'
 
 <p align="center">
-  <img src="../assets/WorkflowTransitionStep3.png" width="900">
+  <img src="../assets/WorkflowTransitionStep3.png" width="1200">
 </p>
 			
 * Now create a transition from any state (as in 'New') to 'Test State'. Also select the user from the Groups section to whom the transition permission shall be allotted. Click OK to save this transition.
 
 <p align="center">
-  <img src="../assets/WorkflowTransitionStep4.png" width="900">
+  <img src="../assets/WorkflowTransitionStep4.png" width="1200">
 </p>
 
 **Note:** Above steps includes only 'New' -> 'Test State' as an example, but these steps can be followed for all the required state transitions.<br>
 
-<p align="center">
-  <img src="../assets/Note.jpg" width="900">
-</p>
-
-This option is applicable if the user does not wish to configure advanced transition's workflow mapping in space.vars.SITENAME. Advanced workflow mapping is required when workflow transition is configured on the end system.
+>**Note**: This option is applicable if the user does not wish to configure advanced transition's workflow mapping in space.vars.SITENAME. Advanced workflow mapping is required when workflow transition is configured on the end system.
 
 ## Find the role type of the entity type
 
@@ -458,19 +454,19 @@ This option is applicable if the user does not wish to configure advanced transi
 * Go to Windchill RV&S Integrity Admin Client > Workflows and Documents > Types.
 
 <p align="center">
-  <img src="../assets/WindChill_EntityTypes.png" width="900">
+  <img src="../assets/WindChill_EntityTypes.png" width="1200">
 </p>
 
 * Go to **Edit Type** of the entity type for which you need to find the role type.
 
 <p align="center">
-  <img src="../assets/WindChill_EditEntityType.png" width="900">
+  <img src="../assets/WindChill_EditEntityType.png" width="100">
 </p>
 
 * Look for the **Document Model** option inside the left panel to find the role of the selected entity type.
 
 <p align="center">
-  <img src="../assets/WindChill_DocModelOfEntityType.png" width="900">
+  <img src="../assets/WindChill_DocModelOfEntityType.png" width="1200">
 </p>
 
 ## Sample Default Link's mapping(s) for the relationship Contained By
@@ -486,7 +482,7 @@ Following are a few of default link's use case(s) to configure the default **Con
 * Refer to the below screenshot. Here, in this example, the Input Document entity '239363' will be considered as the default **Contained By** entity when no relationship corresponds to **Contained By** coming from the source end system.
 
 <p align="center">
-  <img src="../assets/WindChill_DefaultLinkSetting2.png" width="900">
+  <img src="../assets/WindChill_DefaultLinkSetting2.png" width="1200">
 </p>
 
 ### Default with a one-to-one entity as per the source project in the target
@@ -686,7 +682,7 @@ Following are a few of default link's use case(s) to configure the default **Con
 Refer to the image given below:  
 
 <p align="center">
-  <img src="../assets/Windchill_Global_Session_Limit.png" width="900">
+  <img src="../assets/Windchill_Global_Session_Limit.png" width="1200">
 </p>
 
 >**Note**: If the user belongs to a group, then the user session limit may be overridden on a group basis. Refer to [Modify Session Limit of a group](#modify-session-limit-of-a-group) section for more information.
@@ -706,7 +702,7 @@ Follow the steps given below to modify session limit of a group:
 Refer to the image given below:
 
 <p align="center">
-  <img src="../assets/Windchill_Group_Session_Limit.png" width="900">
+  <img src="../assets/Windchill_Group_Session_Limit.png" width="1200">
 </p>
 
 ## Add attachment extension to configuration property
