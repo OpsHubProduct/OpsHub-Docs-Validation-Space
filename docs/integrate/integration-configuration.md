@@ -112,7 +112,7 @@ Criteria Configuration helps in integration of subset of entities based on some 
 2. A pop-up window - **Criteria Configuration** appears on the right. In this window, for a bidirectional mapping, sections specific to both systems involved in the integration will appear in backward and forward criteria configuration tabs. Fill the requisite details.
 
 <p align="center">
-  <img src="../assets/Integration_Configuration_Image_6a.png" width="900" />
+  <img src="../assets/Integration_Configuration_Image_6a.png" width="700" />
 </p>
 
 
@@ -214,7 +214,7 @@ In the given pop-up, the **Entity Id Field Name**, the **Link Field Name**, and 
     The default schedule is 1 Minute Schedule.
 
    <p align="center">
-    <img src="../assets/Global_Level_Confg.png" />
+    <img src="../assets/Global_Level_Confg.png" width="800" />
    </p>
 
 
@@ -241,7 +241,7 @@ From the **Sync only current state** drop-down list, select:
 These fields are shown in the image below:
 
 <p align="center">
-  <img src="../assets/Integration_Configuration_Image_7a.png" width="700"/>
+  <img src="../assets/Integration_Configuration_Image_7a.png" width="600"/>
 </p>
 
 
@@ -332,7 +332,7 @@ If a Wiki or HTML field is selected for **Remote Entity Link Field Name**, Remot
 * Consider the following image where **Notes** (HTML field) is selected for **Remote Entity Link Field Name**:
 
    <p align="center">
-     <img src="../assets/Remote_link_as_hyperlink.png" width="700" />
+     <img src="../assets/Remote_link_as_hyperlink.png" width="1000" />
    </p>
 
 * Here, **ABC-123** is the Remote Entity Id. The Remote Entity Link (`http://www.jira.com/project/ABC-123`) is added as a hyperlink of Remote Entity Id.
@@ -349,7 +349,7 @@ Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Sele
 > 💡 Consider whether you are making this configuration for forward or backward settings. Source and Target will change accordingly.
 
 <p align="center">
-  <img src="../assets/Integration_Configuration_Image_9a.png" width="800"/>
+  <img src="../assets/Integration_Configuration_Image_9a.png" width="700"/>
 </p>
 
 
@@ -358,7 +358,7 @@ Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Sele
 Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > Select **Override parameters for write operations (Destination)** > Go to **Search in Target Before Sync**.
 
 <p align="center">
-  <img src="../assets/Integration_Configuration_Image_10a.png" width="800"/>
+  <img src="../assets/Integration_Configuration_Image_10a.png" width="700"/>
 </p>
 
 
@@ -403,7 +403,7 @@ Once you select **Yes**, the following fields will appear. You need to enter app
 Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > Select **Workflow Association**.
 
 <p align="center">
-  <img src="../assets/Integration_Configuration_Image_11a.png" width="700" />
+  <img src="../assets/Integration_Configuration_Image_11a.png" width="600" />
 </p>
 
 OpsHub Integration Manager provides default workflow, which comes with default installation. If you want a customized workflow, please contact your sales/support point of contact.
@@ -421,7 +421,7 @@ Click the **Integrate** button to complete the integration process.
 
 **Supported Connectors**
 
-1. [**IBM Rational DOORS**](../connectors/door.md#event-detection-generation)
+1. [**IBM Rational DOORS**](../connectors/doors.md#event-detection-generation)
 
 > **Note** :The feature will be visible only when DOORS is the source system in the integration.
 
@@ -504,7 +504,7 @@ Select a single integration, then click the **Options** button to perform the fo
 > **Note** : Always inactivate an integration to be able to edit it.
 
 <p align="center">
-  <img src="../assets/Integration_Configuration_Image_27a.png" width="300" />
+  <img src="../assets/Integration_Configuration_Image_27a.png" width="400" />
 </p>
 
 
@@ -515,7 +515,7 @@ Some of these actions: Activate/Inactivate, Execute, Execute Delete, Merge Integ
 On the Integrations page, select multiple integration groups and hover on the **Actions** button to open the action bar as seen in the image below:
 
 <p align="center">
-  <img src="../assets/IntegrationListScreen.png" width="600"/>
+  <img src="../assets/IntegrationListScreen.png" width="1200"/>
 </p>
 
 
