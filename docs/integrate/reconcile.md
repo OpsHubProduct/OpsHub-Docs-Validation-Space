@@ -18,13 +18,13 @@ An important point to remember is that Reconciliation is not Integration or Migr
 - To configure Reconciliation, navigate to the integration to be reconciled. Click on reconcile icon as shown below:  
 
 <p align="center">
-  <img src="../assets/reconcileicon.png" alt="Reconcile Icon" width="900"/>
+  <img src="../assets/reconcileicon.png" alt="Reconcile Icon" width="1500"/>
 </p>
 
 - The window will come up for the given integration:  
 
 <p align="center">
-  <img src="../assets/Config1.PNG" alt="Config" width="700"/>
+  <img src="../assets/Config1.PNG" alt="Config" width="900"/>
 </p>
 
 - User can select direction  ![Direction](../assets/directionforreconcile.png) based on: the system or the entity type that is to be reconciled. Reconcile can be configured in one direction at a time. By default, all fields that are mapped in associated mapping for selected entity will be reconciled with source data being copied over to target.
@@ -40,7 +40,7 @@ An important point to remember is that Reconciliation is not Integration or Migr
 - To change default setting click on ![Config Rule](../assets/configrule.png) to configure Reconciliation. A new window which displays all the mapped fields will come up.  
 
 <p align="center">
-  <img src="../assets/Mapping.png" alt="Mapping Fields" width="600"/>
+  <img src="../assets/Mapping.png" alt="Mapping Fields" width="700"/>
 </p>
 
 - **Configure Mismatch** option:  
@@ -60,7 +60,7 @@ An important point to remember is that Reconciliation is not Integration or Migr
 - Below window will appear to insert custom XSL rule:  
 
 <p align="center">
-  <img src="../assets/editrule.png" alt="Custom Rule" width="600"/>
+  <img src="../assets/editrule.png" alt="Custom Rule" width="700"/>
 </p>
 
 > **Note** : If user wants to define rules for reconciling field based on a condition, then custom rules can be defined.  
@@ -84,6 +84,7 @@ An important point to remember is that Reconciliation is not Integration or Migr
 - If the reconciliation is completed, the status will change to green on Reconcile page.  
 - Go back to the same integration and set the polling time in integration to a time after reconciliation is completed to poll old updates which are already reconciled.  
 - To re-run the Reconciliation, follow same steps. You can change the settings on Reconciliation page.
+
 
 
 
