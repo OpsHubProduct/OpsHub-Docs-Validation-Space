@@ -473,7 +473,7 @@ Select a single integration, then click the **Options** button to perform the fo
 * **Dump Integration Data**: You will get a zip file named **IntegrationDetails.zip**.
   The zip file will contain the integration configurations, synchronization logs, mappings, and failure details. It will not include any sensitive data related to the integration user.
 * **Delete Integration**: Delete the selected integration
-* **Configure** [**Reconciliation**](../Reconciliation/): Set reconciliation rules
+* **Configure** [**Reconciliation**](reconcile.md): Set reconciliation rules
 * **Clone Integration**: Create a copy of the selected integration
 * **Failure Notification**: Allow OpsHub Integration Manager to send failure notifications after the integration is active
 * **Activate/Inactivate Integration**: Activate or Inactivate the selected integration
