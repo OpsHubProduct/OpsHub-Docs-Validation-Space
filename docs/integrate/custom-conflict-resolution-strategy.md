@@ -10,13 +10,13 @@ Given below are steps to provide XSLT for custom strategy:
 * Click the edit adjacent to the **Custom Strategy** drop-down option. 
 
 <div align="center">
-  <img src="../assets/XSLT1.png"  />
+  <img src="../assets/XSLT1.png" width="600" />
 </div>
 
 * Remove comments and provide XSLT in the open box.
 
 <div align="center">
-  <img src="../assets/XSLT.png"  />
+  <img src="../assets/XSLT.png"  width="600"/>
 </div>
 
 ---
@@ -49,4 +49,5 @@ We can provide the script:
   </xsl:choose>
 </Title>
 ```
+
 
