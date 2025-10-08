@@ -18,7 +18,7 @@ User can synchronize data between two systems by providing the sheet name, sourc
 * The user has to fill the mandatory fields(Name and Excel File) given as shown in the screenshot below:
   
   <p align="center">
-  <img src="../assets/Excel_Upload3.png" width="1500">
+  <img src="../assets/Excel_Upload3.png" width="2000">
   </p>
 
 
@@ -26,25 +26,25 @@ User can synchronize data between two systems by providing the sheet name, sourc
 * Click on the excel file which needs to be edited as shown in the screenshot below:
 
   <p align="center">
-  <img src="../assets/UpdateExcel1.png" width="1500">
+  <img src="../assets/UpdateExcel1.png" width="2000">
   </p>
 
   In the edit page, the user can change name, description and upload another excel file  
   (in case there any changes in the excel file content). User can click on the pencil icon to edit the details.
   
   <p align="center">
-  <img src="../assets/UpdateExcel2.png" width="1500">
+  <img src="../assets/UpdateExcel2.png" width="2000">
   </p>
 
 # Delete Excel
 ## Delete Single Excel File
 * The user can delete the excel file by clicking on the delete icon that appears on expanding the three dots icon as shown in the screenshot below:  
  <p align="center">
-  <img src="../assets/ExcelDelete1.png"  width="1500">
+  <img src="../assets/ExcelDelete1.png"  width="2000">
 </p>
 
 <p align="center">
-  <img src="../assets/ExcelDelete2.png"  width="1500">
+  <img src="../assets/ExcelDelete2.png"  width="2000">
 </p>
 
 
@@ -52,7 +52,7 @@ User can synchronize data between two systems by providing the sheet name, sourc
 * To delete more than one file at a time, the user can select the radio buttons beside the respective files and click on delete icon to delete more than one file at a time.
   
   <p align="center">
-  <img src="../assets/MultipleFileDelete.png"  width="1500">
+  <img src="../assets/MultipleFileDelete.png"  width="2000">
   </p>
   
 * To delete all the excel files at a time, the user can select the radio button in the Excel Files column.
@@ -61,23 +61,24 @@ User can synchronize data between two systems by providing the sheet name, sourc
 ## Export Single Excel File
 * The user can export the excel file by clicking on the export icon that appears on expanding the three dots icon as shown in the screenshot below:  
   <p align="center">
-    <img src="../assets/ExcelDelete1.png"  width="1500">
+    <img src="../assets/ExcelDelete1.png"  width="2000">
   </p>
 
 * On clicking the highlighted icon in the given screenshot, the excel file will be downloaded(zip file format).
   
   <p align="center">
-  <img src="../assets/ExcelExport1.png" width="1500">
+  <img src="../assets/ExcelExport1.png" width="2000">
   </p>
 
 ## Export Multiple Excel Files
 * The user can select the radio buttons beside the respective files and click on export icon to export more than one file at a time.
   
   <p align="center">
-  <img src="../assets/MultipleFileExport.png" width="1500">
+  <img src="../assets/MultipleFileExport.png" width="2000">
   </p>
 
 * Similarly user can select the radio button in the Excel Files column to export all the files at once.
+
 
 
 
