@@ -8,7 +8,7 @@ Here is a video on how to use the dashboard in OIM:
 
 - Login into **OpsHub Integration Manager**.
 - Dashboard will appear on home page.
-- Click on (../assets/rotate.png) at top right corner of dashboard to rotate graphical representation of integration.
+- Click on ![](../assets/rotate.png) at top right corner of dashboard to rotate graphical representation of integration.
 
 <p align="center">
   <img src="../assets/dashboard.png" />
@@ -22,7 +22,10 @@ Here is a video on how to use the dashboard in OIM:
   - **Orange:** Processing failures in integration.
   - Click on ![](../assets/integrationbranch.png) to view integration details from dashboard.
 
-![](../assets/integrationdetail.png)
+<p align="center">
+  <img src="../assets/integrationdetail.png" width="1000"/>
+</p>
+
 
 In integration details window, the following information is shown:
 
@@ -42,15 +45,16 @@ Users can filter the integrations according to the system and integration status
 - Click the funnel icon to view the filter options.
 
 <p align="center">
-  <img src="../assets/dashboard_filter.PNG" />
+  <img src="../assets/dashboard_filter.PNG"  />
 </p>
 
 
 - Select the **systems** and click **Filter** button. All the integrations that use the selected systems will be displayed.
 - The available options for **integration status** are: All, Active, Inactive, and In error. Select one and click **Filter**.
 - You can try combinations — for example: set Jira as a system filter and Active as an integration status filter to view all active Jira integrations.
+  
 <p align="center">
-  <img src="../assets/dashboard_filter_graph.PNG" />
+  <img src="../assets/dashboard_filter_graph.PNG" width="800"/>
 </p>
 
 
@@ -63,7 +67,7 @@ Users can filter the integrations according to the system and integration status
 - Click on a system node in the graph. For example, clicking on the “Team Foundation Server” icon will open that system’s configuration.
 
 <p align="center">
-  <img src="../assets/Dashboard_Image3.png" />
+  <img src="../assets/Dashboard_Image3.png" width="2000"/>
 </p>
 
 
@@ -72,7 +76,7 @@ Users can filter the integrations according to the system and integration status
 - Click on the integration name in the graph to open its details.
 
 <p align="center">
-  <img src="../assets/Dashboard_Image1.png" width="800"/>
+  <img src="../assets/Dashboard_Image1.png" width="2000"/>
 </p>
 
 
@@ -81,8 +85,9 @@ Users can filter the integrations according to the system and integration status
 - Click on "Global Failure(s)" or "Processing Failure(s)" to go directly to the Failures module.
 
 <p align="center">
-  <img src="../assets/Dashboard_Image2.png" width="800"/>
+  <img src="../assets/Dashboard_Image2.png" width="2000"/>
 </p>
+
 
 
 
