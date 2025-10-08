@@ -40,7 +40,7 @@ In this section, you will learn how to configure a system onto OpsHub Integratio
 You can also directly go to the System Configuration screen by clicking the System Configuration icon shown in the image below.
 
 <div align="center">
-  <img src="../assets/System_Configuration_Image_11F.png" width="500" />
+  <img src="../assets/System_Configuration_Image_11F.png"  />
 </div>
 
 # Edit System Details
@@ -48,19 +48,19 @@ You can also directly go to the System Configuration screen by clicking the Syst
 * If the system you want to configure to OpsHub Integration Manager is already configured, but you want to update some configuration details, you can click the pencil icon shown adjacent to the system name after you enable the edit mode in integration by clicking the icon show below. 
 
 <div align="center">
-  <img src="../assets/System_Configuration_Image_12F.png" width="900"/>
+  <img src="../assets/System_Configuration_Image_12F.png" width="1200"/>
 </div>
 
 * The form containing details will open. You will then get an option to edit the system details. 
 
 <div align="center">
-  <img src="../assets/Integration_Configuration_Image_16a.png" width="900"/>
+  <img src="../assets/Integration_Configuration_Image_16a.png" width="1500"/>
 </div>
 
 * Update the details and click the **Save** button to save the details. You will receive a prompt when the system details are updated.  
 
 <div align="center">
-  <img src="../assets/System_Configuration_Image_7.png" width="900" />
+  <img src="../assets/System_Configuration_Image_7.png" width="1500" />
 </div>
 
 ## Understanding Json Metadata Input
@@ -325,5 +325,6 @@ You can also directly go to the System Configuration screen by clicking the Syst
   ]
 }
 ```
+
 
 
