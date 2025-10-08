@@ -67,7 +67,7 @@ Users can filter the integrations according to the system and integration status
 - Click on a system node in the graph. For example, clicking on the “Team Foundation Server” icon will open that system’s configuration.
 
 <p align="center">
-  <img src="../assets/Dashboard_Image3.png" width="1500"/>
+  <img src="../assets/Dashboard_Image3.png" width="1000"/>
 </p>
 
 
@@ -87,6 +87,7 @@ Users can filter the integrations according to the system and integration status
 <p align="center">
   <img src="../assets/Dashboard_Image2.png" width="2000"/>
 </p>
+
 
 
 
