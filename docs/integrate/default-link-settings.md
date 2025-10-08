@@ -22,7 +22,7 @@
 </p>
 
 <p align="center">
-  <img src="../assets/Default_Link_Configuration.png" width="700">
+  <img src="../assets/Default_Link_Configuration.png" width="600">
 </p>
 
 
@@ -110,6 +110,7 @@ For any of the query type, if your target system's native format expects `{` or 
 
 > **Note**: Here, `name['<evaluating expression>']` is as per target system native query format whereas, `<evaluating expression>` is the dynamic part which you want to evaluate.  
 > The above query fetches the first test-set matching the name equivalent to the incoming project name from JIRA. The property path `SourceXML/opshubProjectName` refers to the source system project name i.e. Name of the project to which incoming entity from system belongs to. Here, `opshubProjectName` is a source field. The source field name is an internal field name which can be found from advance mapping XSL corresponding to the field mapped.
+
 
 
 
