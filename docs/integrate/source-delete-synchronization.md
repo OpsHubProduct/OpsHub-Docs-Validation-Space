@@ -43,7 +43,10 @@
   - The Delete configuration of Bug integration includes soft deletion or archive operation on the target entity in System 2.
   - **OpsHub Integration Manager** has synchronized 6 entities from System 1 to System 2, i.e., source entities SE1, SE2,...,SE6 to target entities TE1, TE2,...,TE6, respectively.
 
-![BaseConfigs](../assets/BaseConfigs.png)
+<p align="center">
+  <img src="../assets/BaseConfigs.png" width="800"/>
+</p>
+
 
 - Now, the user in the System 1 performs the following actions:
 
@@ -61,7 +64,11 @@
   - Updates on the SE3 and SE4 will be synchronized to the target entities TE3 and TE4 respectively via Task and Story integration.
   - TE5 (as SE5 fails to meet the criteria of Story integration) and TE6 (as the configuration related to Feature is missing in **OpsHub Integration Manager**) will be soft deleted or archived in the target as per the configuration, and the sync report will be updated with the "Not Applicable" state for this entity.
     
-![](../assets/DeleteActions.png)
+<p align="center">
+  <img src="../assets/DeleteActions.png" width="800" />
+</p>
+
+
 
 
 
