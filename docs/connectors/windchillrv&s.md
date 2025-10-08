@@ -97,7 +97,7 @@ This issue can be resolved by applying any of the following approaches:
 
 **1. Add/Edit workflow transition XML in mapping configuration of space.vars.SITENAME**
 
-Click [Workflow Transition](../integrate/mapping-configuration.md#workflow-transition) to learn when and how to configure workflow transition XML mapping.\
+Click [Workflow Transition](../integrate/mapping-configuration.md#workflow-transition) to learn when and how to configure workflow transition XML mapping.
 With this option, space.vars.SITENAME makes the required intermediate status transition automatically as per the transition(s) configuration on the end system.
 
 **2. Change workflow configuration in Windchill RV&S**
@@ -123,7 +123,7 @@ In Windchill RV&S, user gets an option to configure a field as Rich Text Field a
   * The entities of role `segment` type are like Input Document, Specification Document, Software Document.
   * The entities of role `node` types are like Input, Specification, Software Requirement.
 
-**Note**:  To check the role type of the entity, please refer to: [Find the role type](find-the-role-type-of-the-entity-type).
+**Note**:  To check the role type of the entity, please refer to: [Find the role type](#find-the-role-type-of-the-entity-type).
 
 * To synchronize the entities maintaining the above structure, the user can configure the `Contains` and `Contained By` relationship as per the standard [Relationships Configuration](../integrate/mapping-configuration.md#relationships). Within this structure, to maintain the rank (order) of entities, the user should enable the Rank Synchronization as explained in [Rank Configuration](../integrate/mapping-configuration.md#configuration).
 
@@ -354,7 +354,7 @@ Go to **Search in Target Before Sync** section on [Integration Configuration](..
  **Known Behaviour**
 
 * OIM provides conflict management configuration for all fields. Conflict management configuration is also supported for Test Steps since it treats Test Steps as a field too. However, following behaviour should be taken into consideration by the user:
-* Test Steps field is considered as a list of test steps. Conflict handling is not done for individual test steps. Even if one step has conflict, event failure will occur for complete test case. For example, we have steps 1,2,3 in source system and target system. If the user changes step 2 in source and step 3 in target, it will be considered as conflict case not only for a single test step but, for complete test step field. By default, the data in the target system always gets overwritten by data in the source system. User can also configure settings for conflict management. For conflict management of Test Steps field, please refer to section [Conflict Management](../integrate/mapping-configuration#conflict-management)
+* Test Steps field is considered as a list of test steps. Conflict handling is not done for individual test steps. Even if one step has conflict, event failure will occur for complete test case. For example, we have steps 1,2,3 in source system and target system. If the user changes step 2 in source and step 3 in target, it will be considered as conflict case not only for a single test step but, for complete test step field. By default, the data in the target system always gets overwritten by data in the source system. User can also configure settings for conflict management. For conflict management of Test Steps field, please refer to section [Conflict Management](../integrate/mapping-configuration.md#conflict-management)
 * The case when Windchill RV&S is the target system, during Test Steps synchronization with any of the operations, i.e., add, remove, the actions will be logged in the history of Test Case.
 * The case when Windchill RV&S is the target system, in case of delete operation, the Test Steps do not get deleted from Windchill RV&S. They get dereferenced from the associated test case and exist as an unassociated workitem.
 
@@ -478,7 +478,7 @@ This option is applicable if the user does not wish to configure advanced transi
 Following are a few of default link's use case(s) to configure the default **Contained By** relationship when association corresponds to **Contained By** removed from the source end system:
 
 * When entities from source end system get synchronized to target Windchill in a single document then default the **Contained By** relationship with particular entity of document type or requirement type. Refer to this [Section](#default-with-a-specific-entity-in-the-target-end-system).	
-* When entities from source end system get synchronized to target Windchill RV&S in the particular document as per the project then default the **Contained By** relationship with one-to-one project-based default association. i.e. When x is the source project then the default **Contained By** link as entity E1, and When y is the source project then the default **Contained By** link as entity E2. Refer to this [Section](#Default with a one-to-one entity as per the source project in the target).
+* When entities from source end system get synchronized to target Windchill RV&S in the particular document as per the project then default the **Contained By** relationship with one-to-one project-based default association. i.e. When x is the source project then the default **Contained By** link as entity E1, and When y is the source project then the default **Contained By** link as entity E2. Refer to this [Section](#default-with-a-one-to-one-entity-as-per-the-source-project-in-the-target).
 * When entities from source end system get synchronized to target Windchill RV&S across multiple documents within a project then default the **Contained By** relationship with the document corresponds to the target entity in sync. Refer to this [Section](#default-with-a-document-of-the-target-entity-document-in-which-entity-belongs-to-in-target-end-system).
 
 ### Default with a specific entity in the target end system
@@ -491,7 +491,7 @@ Following are a few of default link's use case(s) to configure the default **Con
 
 ### Default with a one-to-one entity as per the source project in the target
 
-* Configure the default link with the **Target Lookup Query** as `(field[ID]={$projectDefaultId})`. Click on [Relationship](Mapping Configuration#Relationships) for more details on default link configuration.
+* Configure the default link with the **Target Lookup Query** as `(field[ID]={$projectDefaultId})`. Click on [Relationship](../integrate/mapping-configuration.md#relationships) for more details on default link configuration.
 * An advance relationship mapping is required to configure. Click on the **Edit relationship configuration xsl** icon against the Relationship option in mapping to configure below advance mapping.
   * Search for the below snippet in the existing XSL script.
 
@@ -521,7 +521,7 @@ Following are a few of default link's use case(s) to configure the default **Con
    </xsl:choose>
 ```
 * Here in this example, when source project is Test Project then consider the default **Contained By**link as entity **267511**, when source project is Demo Project then the default link as entity **267512**otherwise for any other unknown project consider the default link as entity **267513**.
-*Click on **Save**to submit the above script changes.
+* Click on **Save**to submit the above script changes.
 
 ### Default with a document of the target entity (Document in which entity belongs to in target end system) 
 * Configure the default link with the **Target Lookup Query** as **(field[ID]={$defaultParentAsDocId})**. Click on [Relationship](../integrate/mapping-configuration.md#relationships) for more details on default link configuration.
