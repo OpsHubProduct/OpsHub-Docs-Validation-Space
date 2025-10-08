@@ -1,10 +1,8 @@
-# integration-configuration
-
 Systems here refer to the applications such as Team Foundation Server (TFS) and JIRA that you are using in your Application Lifecycle Management (ALM) ecosystem.
 
 In this section, you will learn how to configure a system onto OpsHub Integration Manager and how to update the system details after configuration, if required.
 
-## Basic Integration
+# Basic Integration
 
 * The dashboard, by default, shows all integrations created so far on the selected instance.
 
@@ -48,21 +46,20 @@ Click [Mapping Configuration](mapping-configuration.md) to learn the steps to cr
     ![Activate Integration](../assets/Integration_Configuration_Image_3a.png)
 * Click **Save** to save the integration.
 
-***
 
-## Child Project Synchronization
+# Child Project Synchronization
 
 There are few connectors who support child project synchronization. Enabling this feature will synchronize entities from selected projects and their child projects to other system.
 
 If you have created integration with parent project mapping and later if a child project is added to that parent project in the end system, then such child projects will be automatically polled and no manual configuration changes will be required in the OpsHub Integration Manager integration.
 
-### Setting up child project sync
+## Setting up child project sync
 
 If the systems that you have mapped support child project polling, then you'll see a checkbox called **'Sync child projects'** below the name of that system in 'Synced projects' section. By default, this checkbox will be unchecked, which means it won’t poll child project's data. If you check the checkbox then OpsHub Integration Manager will read events from the parent project including all child projects, and will sync them to the target project as per the project mapping.
 
 If the checkbox is checked, this feature will be enabled for every project mapping in that integration and will be applicable to all the configured issue types.
 
-### Scenarios
+## Scenarios
 
 **Scenario 1:**\
 Now in this example if “Sync child projects” is selected for Rally (which support child project polling) then integration will read events from the _Rally R1_ including its child projects & _Rally R2_ including its child projects. After sync, entities will be synchronized to related target project(s). This means event from _Rally R1.1_ project (a child project under R1) will go to _Jira J1_ project and event from _Rally R2.1_ project (a child project under R2) will go to _Jira J2_ project.
@@ -84,11 +81,7 @@ If project mapping is done at mapping level, it will be prioritized over integra
 
 > **Note** : For this feature to work properly, all the child projects must have the same permission as the parent project. i.e. all the prerequisites that are applicable for parent projects will also be applicable to child projects.
 
-***
-
-## Criteria Configuration
-
-#### Criteria Configuration
+# Criteria Configuration
 
 Criteria Configuration helps in integration of subset of entities based on some conditions. For example, you can specify that only bugs with high priority are to be synchronized or tickets that are closed should be synchronized. Even after the entities are integrated, this synchronization based on defined criteria is retained.
 
@@ -151,7 +144,7 @@ The scenario mentioned above will be the expected behavior as entity **C2** does
 
 > **Note** : **If integration gets deleted and created with the same configuration, the older criteria data synced by deleted integration will not remain in sync.**
 
-## Advance Settings
+# Advance Settings
 
 Here is the video on Advanced Configuration settings:
 
@@ -169,7 +162,7 @@ These features help the user specify custom conditions during integration config
 
     ![Advance Settings Fields](../assets/Integration_Configuration_Image_24a.png)
 
-### Global Settings
+## Global Settings
 
 The Global level settings allow customizing default behaviour of integration for all mapped entity types.\
 When the Global level setting button is clicked, the **Global level advance configurations pop-up** opens on the right.
@@ -186,7 +179,7 @@ In the given pop-up, the **Entity Id Field Name**, the **Link Field Name**, and 
   If set, the integration will maintain the time of the last successful sync for every entity in the selected text field.\
   The time represents the audit time until which changes have been successfully synced to the target.
 
-### Common Sections
+## Common Sections
 
 * **Max Retry Count:** Set the maximum number of times the failed events should be retried. The default value is 3.
 *   **Associate Schedule:** Set an interval at which the data between the source and the target systems should be synchronized.\
@@ -198,13 +191,13 @@ Once the Global level settings are configured, continue with other configuration
 
 ***
 
-### Maximum Retry Count
+## Maximum Retry Count
 
 Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Select **Override parameters for read operations** > Go to **Maximum Retry Count**.
 
 ***
 
-### Sync Only Current State
+## Sync Only Current State
 
 This configuration is useful to switch 'History'-based (each change performed on bug will be considered for synchronization) processing to 'Current State'-based (only the state of the entity at the time of synchronization is considered) processing.
 
@@ -223,7 +216,7 @@ These fields are shown in the image below:
 
 ***
 
-### Behavior for Absent Fields
+## Behavior for Absent Fields
 
 Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Select **Other configurations** > Go to **Behavior for Absent Fields**.
 
@@ -235,7 +228,7 @@ From the **Behavior for absent fields** drop-down list, select one of the follow
 
 ***
 
-### Action on Entity Deleted in Target
+## Action on Entity Deleted in Target
 
 Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Select Other configurations > Go to Action on Entity Deleted in Target.
 
@@ -245,13 +238,13 @@ From the **Action on entity deleted in target** drop-down list, select **Create 
 * When you select **Recreate**, entity is recreated in the target system when the selected entity has been deleted from the target system.
 * When you select **Skip Update**, no action is taken when the selected entity has been deleted from the target system.
 
-### Associate Schedule
+## Associate Schedule
 
 Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Select Other configurations > Go to Associate Schedule.
 
 From the **Associate Schedule** drop-down list, select an interval at which you want to synchronize the data between the source and the target systems. The default schedule is 1 Minute Schedule.
 
-### Enable Delete Sync
+## Enable Delete Sync
 
 To update the target entity for the corresponding sync-abandoned source entity, which are no longer a part of the synchronization, follow these steps:
 
@@ -279,7 +272,7 @@ To update the target entity for the corresponding sync-abandoned source entity, 
 
 > 💡 There are certain known behaviors associated with this configuration, please refer to [Known Behaviors in Source Delete Synchronization](source-delete-synchronization.md#known-behavior) for further details.
 
-### Sync New, Failed, or Both Events
+## Sync New, Failed, or Both Events
 
 Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Select Other configurations > Go to Sync.
 
@@ -289,7 +282,7 @@ Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Sele
 
     !\[Integration Configuration]\(../assets/Integration\_Configuration\_Image 8a.png)
 
-### Tracking Id and Link of Entities Across Systems
+## Tracking Id and Link of Entities Across Systems
 
 OpsHub Integration Manager provides Remote Entity Id and Link settings that help in tracing synchronized entities across systems using their unique Ids and navigation URLs. You need to provide the names of fields in which you want to save this information.
 
@@ -310,11 +303,11 @@ If a Wiki or HTML field is selected for **Remote Entity Link Field Name**, Remot
 * Here, **ABC-123** is the Remote Entity Id. The Remote Entity Link (`http://www.jira.com/project/ABC-123`) is added as a hyperlink of Remote Entity Id.
 * On clicking **ABC-123**, you will be redirected to the Remote Entity having Id **ABC-123**.
 
-#### To store the Id and link of the target entity in the source entity:
+## To store the Id and link of the target entity in the source entity:
 
 Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Select **Override parameters for write operations (Source)** > Go to **Remote Entity Id Field Name** and **Remote Entity Link Field Name** > Select field name from the drop-down list.
 
-#### To store the Id and link of the source entity in the target entity:
+## To store the Id and link of the source entity in the target entity:
 
 Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Select **Override parameters for write operations (Destination)** > Go to **Remote Entity Id Field Name** and **Remote Entity Link Field Name** > Select field name from the drop-down list.
 
@@ -322,7 +315,7 @@ Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Sele
 
 ![Tracking Config](Integration_Configuration_Image_9a.png)
 
-### Search in Target Before Sync
+## Search in Target Before Sync
 
 Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > Select **Override parameters for write operations (Destination)** > Go to **Search in Target Before Sync**.
 
@@ -340,7 +333,7 @@ If you select **Yes**, you will have to define the course of action that OpsHub 
 
 Once you select **Yes**, the following fields will appear. You need to enter appropriate data in these fields as described below.
 
-#### **Target Search Query**
+### **Target Search Query**
 
 1. Provide query to be used for search entity in the target system in native target system format.\
    For example, `Title=@Name@ and CustomId=@ID@`. Here **Name** and **ID** are the field names of source system.
@@ -364,7 +357,7 @@ Once you select **Yes**, the following fields will appear. You need to enter app
    * **Create new entity in the target**: Select this option if you want to create a new entity in the target field if the search query doesn't yield any matching results.
    * **Skip the event**: Select this option if you want OpsHub Integration Manager to ignore the search information and not take any action.
 
-### Workflow Association
+## Workflow Association
 
 Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > Select **Workflow Association**.
 
@@ -379,7 +372,7 @@ Click the **Integrate** button to complete the integration process.
 
 ***
 
-### Event Detection & Generation
+## Event Detection & Generation
 
 * The **Event Detection & Generation** feature is used to generate the events for the attributes/fields, which do not generate any history on entity updates.
 * Many systems have the calculated attributes/fields, which are calculated at runtime.
@@ -401,9 +394,8 @@ Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > 
 
 > **Note** : Additional user credentials are required if the integration runs on the **history based synchronization**. Please check the respective connectors' documentation to check the user inputs.
 
-***
 
-### Fetch Mapped Data Only
+## Fetch Mapped Data Only
 
 By default, OIM fetches complete entity details from the end system. When **Fetch Mapped Data Only** is enabled, only mapped data (including fields, comments, attachments, links) will be fetched from end system.
 
@@ -413,9 +405,9 @@ By default, OIM fetches complete entity details from the end system. When **Fetc
 
 **Enable Fetch Mapped Data Only**
 
-* For source end point:\
+* For source end point:
   Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > Select **Override parameters for read operations** > Fetch Mapped Data Only.
-* For target end point:\
+* For target end point:
   Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > Select **Override parameters for write operations** > Fetch Mapped Data Only.
 
 **Known behaviors due to inconsistency caused by the functionality**
@@ -428,15 +420,16 @@ By default, OIM fetches complete entity details from the end system. When **Fetc
 * Conflict detection will not work as expected in the following scenario:
   * A field was initially mapped and field data was synced using OIM. Now that field is removed from the mapping and updates are synced. Later on, if that same field is mapped again, conflict detection will not work as expected and false conflict might be detected.
 
-***
 
-## Managing Integrations
+# Managing Integrations
 
 Select a single integration, then click the **Options** button to perform the following actions on the integration:
 
-![Integration\_Configuration\_Image\_With\_Export.png](../assets/Integration_Configuration_Image_With_Export.png)
+<p align="center">
+  <img src="../assets/Integration_Configuration_Image_With_Export.png" width="600" />
+</p>
 
-* **Dump Integration Data**: You will get a zip file named **IntegrationDetails.zip**.\
+* **Dump Integration Data**: You will get a zip file named **IntegrationDetails.zip**.
   The zip file will contain the integration configurations, synchronization logs, mappings, and failure details. It will not include any sensitive data related to the integration user.
 * **Delete Integration**: Delete the selected integration
 * **Configure** [**Reconciliation**](../Reconciliation/): Set reconciliation rules
@@ -446,10 +439,10 @@ Select a single integration, then click the **Options** button to perform the fo
 * **Execute Integration**: Click this to trigger the sync job for the selected integration manually
 *   **Execute Delete Integration**: Click this to trigger the delete job for selected integration manually
 
-    > **Note**: This button will only be visible when the integration is configured with delete sync.\_
+    > **Note**: This button will only be visible when the integration is configured with delete sync.
 
 <p align="center">
-  <img src="../assets/Integration_Configuration_Image_With_Forward_Backward_Actions.png"  />
+  <img src="../assets/Integration_Configuration_Image_With_Forward_Backward_Actions.png" width="600" />
 </p>
 
 * **Action Buttons**
@@ -463,27 +456,34 @@ Select a single integration, then click the **Options** button to perform the fo
     * **Execute Delete:** Trigger a delete job for the selected direction.
 
 
-#### How to edit Integration
+## How to edit Integration
 
 **Edit Integration**: Open the integration in a view mode and get an option to edit it
 
 > **Note** : Always inactivate an integration to be able to edit it.
 
-![Integration\_Configuration\_Image 27a.png](../assets/Integration_Configuration_Image_27a.png)
+<p align="center">
+  <img src="../assets/Integration_Configuration_Image_27a.png" width="600" />
+</p>
+
 
 Some of these actions: Activate/Inactivate, Execute, Execute Delete, Merge Integration and Failure Notification can be performed as a bulk operation for multiple integrations. You can also select multiple integrations and move them to another folder.
 
-***
-
-## Bulk Edit Integration Groups
+# Bulk Edit Integration Groups
 
 On the Integrations page, select multiple integration groups and hover on the **Actions** button to open the action bar as seen in the image below:
 
-![IntegrationListScreen.png](../assets/IntegrationListScreen.png)
+<p align="center">
+  <img src="../assets/IntegrationListScreen.png" width="600"/>
+</p>
+
 
 You will see a **Bulk Edit** button on the right side of the action bar. Hovering over the Bulk Edit button will provide you with three options as seen in the image below:
 
-![BulkEditButtons.png](../assets/BulkEditButtons.png)
+<p align="center">
+  <img src="../assets/BulkEditButtons.png" width="600" />
+</p>
+
 
 * **Bulk Edit Backward**: Configure the bulk edit settings in backward direction for the selected integration groups.
 * **Bulk Edit Forward**: Configure the bulk edit settings in forward direction for the selected integration groups.
@@ -492,12 +492,17 @@ You will see a **Bulk Edit** button on the right side of the action bar. Hoverin
 
 Clicking the first three options will open the Bulk Edit Sidebar with your preferred direction selected for Bulk Edit operations.
 
-![BulkEditSidebar.png](../assets/BulkEditSidebar.png)
+<p align="center">
+  <img src="../assets/BulkEditSidebar.png" />
+</p>
 
-On top of the sidebar, you can see the count of selected integration groups. You can click the\
-![infoButton.png](../assets/infoButton.png) button to open a dialog box displaying the names of selected integration groups. Click the 'close' button to close the dialog box.
 
-![BulkEditIButtonList.png](../assets/BulkEditIButtonList.png)
+On top of the sidebar, you can see the count of selected integration groups. You can click the ![infoButton.png](../assets/infoButton.png) button to open a dialog box displaying the names of selected integration groups. Click the 'close' button to close the dialog box.
+
+<p align="center">
+  <img src="../assets/BulkEditIButtonList.png" width="600"/>
+</p>
+
 
 The Bulk Edit supports the following settings:
 
@@ -510,5 +515,5 @@ The Bulk Edit supports the following settings:
 * [Sync](integration-configuration.md#sync-new-failed-or-both-events)
 * [Behaviour for absent fields](integration-configuration.md#behavior-for-absent-fields)
 
-> **Note** :\
+> **Note** :
 > Only the settings that you change for the selected groups are committed.
