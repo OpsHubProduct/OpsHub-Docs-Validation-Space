@@ -183,14 +183,14 @@ If comments' synchronization is enabled in the Mapping Configuration:
     * Navigate to 'Override parameters for read operations' in Entity level advance configuration and configure the **Comment Field**.
 
   <p align="center">
-    <img src="../assets/Windchill_Comments_Config_Src.png" width="600">
+    <img src="../assets/Windchill_Comments_Config_Src.png" width="500">
   </p>
 
   * If Windchill RV&S is the target system:
     * Navigate to 'Override parameters for write operations(Destination)' in Entity level advance configuration and configure the **Comment Field**.
  
    <p align="center">
-    <img src="../assets/Windchill_Comments_Config_Tgt.png" width="700">
+    <img src="../assets/Windchill_Comments_Config_Tgt.png" width="500">
   </p>
 
 
@@ -404,13 +404,13 @@ In Windchill RV&S, you can enable logging for a long-text field, which can work 
 * Create a long-text field and enable logging: 
 
 <p align="center">
-  <img src="../assets/PTC_Image 1.png" width="600">
+  <img src="../assets/PTC_Image_1.png" width="600">
 </p>
 
 * Make this field visible on an entity type:
 
 <p align="center">
-  <img src="../assets/PTC_Image 2.png" width="700">
+  <img src="../assets/PTC_Image_2.png" width="700">
 </p>
 
 ## Configuration to allow all transitions
