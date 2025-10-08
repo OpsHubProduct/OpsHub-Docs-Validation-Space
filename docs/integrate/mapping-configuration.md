@@ -774,7 +774,7 @@ Entity mention sync is supported only when the following systems are configured 
 3. [**CodebeamerX**](../connectors/codebeamer.md#mapping-for-entity-mention-field)
 4. [**Rally**](../connectors/rally.md#mapping-for-entity-mention-field)
 5. [**Jira**](../connectors/jira.md#mapping-for-entity-mention-field)
-6. [**GitHub**](../connectors/github.md#mapping-for-entity-mention-field)
+6. [**GitHub**](../connectors/github.md#entity-mention)
 
 ### User Mention Configuration When User Search On Email Not Supported
 
