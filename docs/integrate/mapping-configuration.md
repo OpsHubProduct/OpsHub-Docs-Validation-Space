@@ -4,11 +4,14 @@ Mapping is the process of defining the fields that are to be integrated between 
 
 In this section, you will learn how to configure a mapping between two systems and how to update or edit the mapping after configuration, if required.
 
-If the systems you want to map are not configured onto OpsHub Integration Manager, click the plus buttons \[+] adjacent to System 1 and System 2 fields to configure the systems. Follow the steps given on [System Configuration](system-configuration.md) page to learn the steps to configure a system.
+If the systems you want to map are not configured onto OpsHub Integration Manager, click the plus buttons [+] adjacent to System 1 and System 2 fields to configure the systems. Follow the steps given on [System Configuration](system-configuration.md) page to learn the steps to configure a system.
 
 In the image below, we show TFS and JIRA selected as the two systems.
 
-![](../assets/Integration_Configuration_Image_1F.png)
+<p align="center">
+  <img src="../assets/Integration_Configuration_Image_1F.png" width="700">
+</p>
+
 
 # Create a Mapping
 
@@ -24,31 +27,33 @@ If you are coming from the integration page to the mapping page, the systems wil
 
 Once you select the systems involved in integration, other relevant fields such as **Project** and **Entity Type** (Issue Type) appear. These fields might differ from one system to another.
 
-## Mapping the Fields
+# Mapping the Fields
 
 * From the **Project** drop-down lists, select the project that you want to integrate. For example, we select DemoProject in JIRA.
 * From the **Issue/Entity Type** drop-down lists, select the relevant entity within the project that you want to integrate. For example, we select Bug in both the systems.
 * Click the **Auto Map** button if you want OpsHub Integration Manager to automatically map the system fields with similar names. You can also additionally map more fields once Auto Mapping is completed.
 
-![](../assets/Mapping_Configuration_Image_3.png)
+<p align="center">
+  <img src="../assets/Mapping_Configuration_Image_3.png" width="800">
+</p>
 
 * Click **Create from Scratch** button to define the mapping from scratch. Search the fields from System 1 and System 2 that you want to map. Click them to select them.
 
-### Define the Mode for Mapping Fields
+# Define the Mode for Mapping Fields
 
 Fields can be mapped for two different modes using the toggle button.
 
 <p align="center">
-  <img src="../assets/DeleteModeMapping.png" width="400px" />
+  <img src="../assets/DeleteModeMapping.png" width="600" />
 </p>
 
 
-#### Create-Update Mode
+## Create-Update Mode
 
 * This mode will be selected by default.
 * The fields configured in this mode will be used for the synchronization of Create/Update type of events
 
-#### **Delete Mode**
+## **Delete Mode**
 
 * The fields configured in this mode will be used for the synchronization of Delete type of events
 * OpsHub Integration Manager cannot fetch any data from the end system for the entity which is deleted in the source system. Hence, [Default Target Field Mapping](mapping-configuration.md#default-target-field-mapping) shall be done for each of the target fields to be mapped.
@@ -68,32 +73,32 @@ Fields can be mapped for two different modes using the toggle button.
   * However, when upgrading to **7.181 or later**, the functionality remains **disabled by default** to prevent unintended archival actions during the migration.
     * Follow these steps to activate the Archive Entity functionality post-upgrade:
       * Go to the **Mappings** page.
-      * Remove the mapping from **None** to **OH\_ARCHIVE**.
+      * Remove the mapping from **None** to **OH_ARCHIVE**.
 * To perform only the Logical Delete in target, the field corresponding to the Soft Delete or Archive operation should be mapped with default value 'No'. Example, for details on how to perform the logical delete operation in "Rally" endpoint, please refer to [Soft Delete Configuration](../connectors/rally.md#mapping-for-soft-delete-configuration).
 * In [Entity Move Synchronization → Overview](entity-move-synchronization.md#overview), Deprecation will be performed in the target entity if the field corresponding to the Soft Delete or Archive operation are mapped with default value 'Yes'. If the field corresponding to Soft Delete or Archive operation is not mapped/mapped with default value "No", then the Logical delete will be performed based on the configured fields.
 
 > **Note** : In both modes, you can also filter the fields as "All Fields", "Mandatory Fields", "Read Only Fields", "Custom Fields", and "System Fields".
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_4F1.png">
+  <img src="../assets/Mapping_Configuration_Image_4F1.png" width="700">
 </p>
 
 Here is how the mapping will look like:
 
 <p align="center">
-  <img src="../assets/Integration_Configuration_Image_17a.png">
+  <img src="../assets/Integration_Configuration_Image_17a.png" width="700">
 </p>
 
 
 # Define the Flow of Data and Conditions to Synchronize It
 
 * The mapped fields appear on the sliding pop-up on the right.
-* In the pop-up, click the arrows under the **Flow** column to define the flow of data. Selecting both arrows signifies that the flow is bi-directional.\
+* In the pop-up, click the arrows under the **Flow** column to define the flow of data. Selecting both arrows signifies that the flow is bi-directional.
   The default flow is bi-directional.
 * **None** is generally used to put default values for fields on target side, which do not have relevant source field to be mapped. Click ![defaultemapping](../assets/defaultemapping.png) to define the default value.
 
 <p align="center">
-  <img src="../assets/Map2.png">
+  <img src="../assets/Map2.png" width="700">
 </p>
 
 # Default Mapping
@@ -110,7 +115,7 @@ Here is how the mapping will look like:
 * For lookup value mapping, the default value is written to the target if the matching value is not found in the target.
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_34.png">
+  <img src="../assets/Mapping_Configuration_Image_34.png" width="700">
 </p>
 
 * Click **Save** button to save default value mapping.
@@ -129,7 +134,7 @@ Here is how the mapping will look like:
 * In the Value Mapping pop-up, select the relevant values for both the systems. Other actions that can be performed within Value Mapping tab are also listed in the image.
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_31F1.png">
+  <img src="../assets/Mapping_Configuration_Image_31F1.png" width="700">
 </p>
 
 * Click **Save** button to save your selection.
@@ -140,7 +145,7 @@ Here is how the mapping will look like:
 * The project mapping is defined at the integration level in OpsHub Integration Manager. If there are no intended modifications in the project field's value mapping, the "Same as Integration" option within the value mapping can be used. This will avoid redundant project value mappings for the "Projects" field.
 
 <p align="center">
-  <img src="../assets/Same_As_Integration.png" >
+  <img src="../assets/Same_As_Integration.png" width="600">
 </p>
 
 > **Note** : This option becomes available only if there is no default value configuration, one-to-one value mapping configuration, and advanced mapping configuration applied to the Projects field in the specified direction. Similarly, enabling this option in a specific direction will disable the default value configuration, one-to-one value mapping configuration, and advanced mapping configuration for that direction.
@@ -194,8 +199,8 @@ Here is how the mapping will look like:
 
 * The field names are normalized to be valid element names in XML. Some of the characters such as \~, @, #, ©, $, etc. are invalid XML characters and therefore, these characters are normalized when stored as XML.
 * By default, when the 'View/Edit XSLT Configurations' is selected, then for a field name its element name is loaded in normalized format. So, if you want to perform customization on an element name that has invalid unicode character then first map the field and then from 'View/Edit XSLT Configurations' and then copy the field name. (You can remove this field mapping if it is not needed, as it was needed to get the field name.)
-* If the field that you are using in advanced XSLT configuration is not available as a field in the available fields section, and if it contains invalid characters for element names, then you can add such invalid character in this format:\
-  &#xNAN;**`Ust__<<Unicode character Code>>__Uend`**\
+* If the field that you are using in advanced XSLT configuration is not available as a field in the available fields section, and if it contains invalid characters for element names, then you can add such invalid character in this format:
+  &#xNAN;**`Ust__<<Unicode character Code>>__Uend`**
   where `<<Unicode character Code>>` is character code in UTF-16.
 
 **For example:**
@@ -205,19 +210,18 @@ Here is how the mapping will look like:
 * Now if this field is available as a part of list of fields, then you can get the element name by mapping the field and clicking ![](../assets/XSLT_icon_blue.png). Copy this field name and it would not be an invalid character for element name as it will be in normalized format. (You can remove this field mapping if it is not needed, as it was only needed get the field name.)
 * If this field containing character © is part of field name for which the advanced XSLT has to be configured and this field is not present in the field mapping, then the normalization of the © has to be done manually.
 * For this, find the decimal Unicode for © which is 169. And now replace the place where © occurs with `Ust__169__Uend`.
-* The final field name will be:\
-  &#xNAN;**`ProductUst__169__Uendversion`**
+* The final field name will be:
+  **`ProductUst__169__Uendversion`**
 
 You can map attachments, comments and relationships between System 1 and System 2. You can also configure workflow transition between System 1 and System 2.
 
-***
 
 ## Specifying Unicode for values in lookup fields
 
 * Lookup field values containing special characters such as tab space (`\t`) are normalized for XML compatibility, as these characters are not directly supported in XML.
 * By default, when 'View/Edit XSLT Configurations' option is selected, the fields values for a lookup field are loaded in normalized format.
 * For advanced XSLT configuration of field values, if the value includes any of the aforementioned characters, you can manage them using the following format:
-  &#xNAN;**`Ust_<<Unicode character Code>>_Uend`**
+  **`Ust_<<Unicode character Code>>_Uend`**
   Here, `<<Unicode character Code>>` is the character code in UTF-16 decimal value.
 
 **Examples of values normalization:**
@@ -225,7 +229,7 @@ You can map attachments, comments and relationships between System 1 and System 
 * The source and target system contains value with a tab character. These values are mapped as follows:
  
  <p align="center">
-  <img src="../assets/SpecialCharacter_Tab.png" width="500px" />
+  <img src="../assets/SpecialCharacter_Tab.png" width="700" />
 </p>
 
 * Following is the advanced XSLT for the above mapped field values:
@@ -271,8 +275,7 @@ You can map attachments, comments and relationships between System 1 and System 
 </xsl:element>
 ```
 
-**XSLT snippet for multi valued reference field:**\
-&#xNAN;_(if decision to sync the entity is taken based on name)_
+**XSLT snippet for multi valued reference field:**(if decision to sync the entity is taken based on name)
 
 ```xml
 <xsl:for-each xmlns:xsl="http://www.w3.org/1999/XSL/Transform" select="SourceXML/updatedFields/Property/SourceReferenceField/com.opshub.eai.ReferenceValue">
@@ -324,7 +327,7 @@ You can map attachments, comments and relationships between System 1 and System 
 </{fieldvalue}>
 ```
 
-**For example**, if in a entity if referenced entity type is **Sprint** and the field id of the reference field is **customfield\_10103** and name field of the referenced entity is **Name**, the XSLT would be as follows:
+**For example**, if in a entity if referenced entity type is **Sprint** and the field id of the reference field is **customfield_10103** and name field of the referenced entity is **Name**, the XSLT would be as follows:
 
 ```xml
 <customfield_10103 op_type="Reference">
@@ -347,8 +350,6 @@ You can map attachments, comments and relationships between System 1 and System 
 </customfield_10103>
 ```
 
-***
-
 # Comments
 
 The following video shows how to configure comments synchronization during integration configuration:
@@ -360,23 +361,23 @@ The following video shows how to configure comments synchronization during integ
 * Comment time impersonation is not supported by OpsHub Integration Manager via comment mapping.
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_21F2.PNG" />
+  <img src="../assets/Mapping_Configuration_Image_21F2.PNG"  width="700"/>
 </p>
 
 
-* Click the (\</>) icon to define comments mapping.
+* Click the (</>) icon to define comments mapping.
 * Map the correct fields and define the flow by selecting backward (<), forward (>), or bi-directional (<-->) arrows.
 * As you can see in the screenshot below, you can map public reply and internal notes as well. You can also include author details and/or comment-time in the comment.
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_22F1.png" />
+  <img src="../assets/Mapping_Configuration_Image_22F1.png" width="700"/>
 </p>
 
 
 * Click the edit icon (right icon) to edit comments XSLT.
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_25F12.png" />
+  <img src="../assets/Mapping_Configuration_Image_25F12.png" width="700"/>
 </p>
 
 
@@ -389,16 +390,16 @@ The following video shows how to configure attachments synchronization during in
 * Slide the button adjacent to **Attachments** to the right to map attachments.
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_21F1.png" />
+  <img src="../assets/Mapping_Configuration_Image_21F1.png" width="700" />
 </p>
 
 
-* Click the (\</>) icon to define mapping.
+* Click the (</>) icon to define mapping.
 * Map the correct fields and define the flow by selecting backward (<), forward (>), or bi-directional (<-->) arrows.
 * As you can see in the screenshot below, you can map status, projects, and priority for the attachments.
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_24F1.png" />
+  <img src="../assets/Mapping_Configuration_Image_24F1.png" width="800" />
 </p>
 
 * Click the edit icon (right icon) to edit attachments XSLT.
@@ -416,7 +417,7 @@ Relationship synchronizes the relationship between the selected entities.
 * Link Type mapping will be displayed by default.
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_6.png" />
+  <img src="../assets/Mapping_Configuration_Image_6.png" width="700"/>
 </p>
 
 
@@ -450,7 +451,7 @@ Read in detail about [Default Link Settings](default-link-settings.md) here.
 **Note:** The **Bypass Link Entity Type Mapping** add-on is required in your license to enable manual entity type mapping.
 
 <p align="center">
-  <img src="../assets/Entity_Type_Mapping.png" />
+  <img src="../assets/Entity_Type_Mapping.png" width="800" />
 </p>
 
 
@@ -463,7 +464,7 @@ For example, consider a system in which Transition Workflow exists, a certain st
 To solve this problem, OpsHub Integration Manager allows the user to configure Workflow Transition Handling. Some systems provide workflow transition information through API. For these systems, the workflow transition information is picked from the API by default. Irrespective of the availability of the workflow transition through API, user can configure Workflow Transition by providing the information through XSL.
 
 * Slide the button adjacent to **Workflow Transition** to the right.
-* Click the (\</>) icon to edit the workflow transition XSL. A default sample XSL is loaded using which a user can build his own XSL as per his requirement.
+* Click the (</>) icon to edit the workflow transition XSL. A default sample XSL is loaded using which a user can build his own XSL as per his requirement.
 
 **Workflow Behaviour for Workflow Transition when the reference field is added as a dependent field:**
 
@@ -471,7 +472,7 @@ To solve this problem, OpsHub Integration Manager allows the user to configure W
 * If the user wants to perform target lookup based on the target entity id, they can achieve this by specifying the attribute `"lookupBy"` in the dependent field. For more details, refer to [Reference Field Working](mapping-configuration.md#reference-field).
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_32.PNG" />
+  <img src="../assets/Mapping_Configuration_Image_32.PNG" width="900" />
 </p>
 
 
@@ -484,7 +485,7 @@ For example, consider a system in which Transition Workflow exists, a certain st
 To solve this problem, OpsHub Integration Manager allows the user to configure Workflow Transition Handling. Some systems provide workflow transition information through API. For these systems, the workflow transition information is picked from the API by default. Irrespective of the availability of the workflow transition through API, user can configure Workflow Transition by providing the information through XSL.
 
 * Slide the button adjacent to **Workflow Transition** to the right.
-* Click the (\</>) icon to edit the workflow transition XSL. A default sample XSL is loaded using which a user can build his own XSL as per his requirement.
+* Click the (</>) icon to edit the workflow transition XSL. A default sample XSL is loaded using which a user can build his own XSL as per his requirement.
 
 **Workflow Behaviour for Workflow Transition when the reference field is added as a dependent field:**
 
@@ -548,7 +549,7 @@ To solve this problem, OpsHub Integration Manager allows the user to configure W
     * `<defaultTransition type="string">` : When `true`: The field transition under which this is defined is set as the default transition. The attribute `type` is optional. In case of multi-valued fields, provide `type="string-array"`.
     * `<dependentField>` : These fields have to be changed when the `<toField>` is changed to a particular value.
       * `lookupBy="defaultTargetId"` : This attribute is used to perform lookup by using Id of the target entity.
-      * `<fieldName>` : field internal name that is a dependent field.\
+      * `<fieldName>` : field internal name that is a dependent field.
         &#xNAN;_&#x49;f Comment is mandatory for the transition, user can mention `OH_Dependent_Comments` as a dependent field in XML._
       * `<possibleTargetValues>` : These values are the values that are available after the field is transformed to `<targetValue>`.
         * `<possibleValue>` : Used for pre-validation of the possible values available in the target end system. Optional. If specified, OpsHub Integration Manager will validate and fail if incoming value is not in this list.
@@ -589,7 +590,7 @@ To solve this problem, OpsHub Integration Manager allows the user to configure W
 </dependentField>
 ```
 
-> **Note** : All the values provided for Advance Transition XSL are related to the target system.\
+> **Note** : All the values provided for Advance Transition XSL are related to the target system.
 > **Note** : `<fromField>` and `<toField>` refer to the same field, provided end system's transition flow is configured on a single transition field. Otherwise, they refer to different fields as per the end system's transition flow.
 
 * If the Workflow Transition is configured, then during the integration, the transition of entities based on incoming values is done automatically by OpsHub Integration Manager. This makes it easier to synchronize such systems.
@@ -642,7 +643,7 @@ Below is workflow transition XML configuration sample for OpsHub Integration Man
 
 ## Known Behavior and Limitations
 
-* If comment is mandatory on state/status transitions and user has configured the `OH_Dependent_Comments` in workflow transition XML, the N number of comment from source will be processed with N number of transition in target. If there is no comment coming from the source, default comment \[mentioned in the Workflow transition XML] will be synced to the target system.
+* If comment is mandatory on state/status transitions and user has configured the `OH_Dependent_Comments` in workflow transition XML, the N number of comment from source will be processed with N number of transition in target. If there is no comment coming from the source, default comment [mentioned in the Workflow transition XML] will be synced to the target system.
 
 **E.g.,**
 
@@ -658,7 +659,7 @@ Below is workflow transition XML configuration sample for OpsHub Integration Man
   * New => Active, and comment added: "Comment added for testing1"
   * Active => Close, and comment added: "Comment added for testing2"
 
-**Note:** Currently, only Jira and Windchill RV\&S as the target systems support using such dependent `OH_Dependent_Comments` along with the transitions.
+**Note:** Currently, only Jira and Windchill RV&S as the target systems support using such dependent `OH_Dependent_Comments` along with the transitions.
 
 # Mention Setting
 
@@ -676,7 +677,7 @@ End user can edit this **Mention Setting** in **OpsHub Integration Manager** to 
   This option will synchronize the source id corresponding to source's mentioned entity in the target end system.
 * **Option2: Source entity url**
   If none of the options is configured, then this will be the default selected option. This option will synchronize the source entity URL corresponding to source's mentioned entity in the target end system.
-* **Option3: Mentioned target entity (if found) else redirection via opshub**\
+* **Option3: Mentioned target entity (if found) else redirection via opshub**
   This option will synchronize the entity mentioned in the target system if the target system supports the entity mention. Otherwise, this option will synchronize the target entity link. If the mentioned entity is not synchronized to the target system, then this option will synchronize the OpsHub redirection URL to redirect to the desired (source or target) entity whenever the user clicks on this URL. For this option, it is mandatory to provide the **OpsHub Base URI** against OpsHub system, otherwise sync error will be encountered.
 
 > **Note** : In case the redirection via OpsHub option is set in the Mention Setting of the **OpsHub Integration Manager** mapping, then if the requests by a particular client (host) exceed the threshold request count within threshold time, then further requests from same client will result in HTTP error "429 Too many requests". This error indicates that further requests from this client will be blocked for a predefined interval. Refer to the response header(s) for more details or contact OpsHub support in case any configuration changes are required for this setting.
@@ -701,7 +702,7 @@ End user can edit this **Mention Setting** in **OpsHub Integration Manager** to 
 
 Say, for example, if the rich text field **description** of the source end system is mapped to target **repo-steps** field, and the source end system supports entity mention.
 
-> **Note** : **Defect101** is a mentioned entity in source end system with internal id 101 and display id Defect101.\
+> **Note** : **Defect101** is a mentioned entity in source end system with internal id 101 and display id Defect101.
 > **Note** : **DefectT101** is the target entity corresponding to source mentioned entity Defect101.
 
 #### When entity mention is supported for both mapped field of source and target end system
@@ -709,20 +710,20 @@ Say, for example, if the rich text field **description** of the source end syste
 | Description value | Is mentioned entity synchronized to target? | Target field type | Repo-Steps with Option1 | Repo-Steps with Option2                                                      | Repo-Steps with Option3                                                                                          |
 | ----------------- | ------------------------------------------- | ----------------- | ----------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | `#Defect101`      | Yes                                         | HTML              | Defect101               | [Defect101](https:/source-end-host:port/SourceProject1/_workitems/edit/101/) | [#DefectT101](https:/target-endpoint:port/TargetProject1/_workitems/edit/T101/)                                  |
-| `#Defect101`      | No                                          | HTML              | Defect101               | [Defect101](https:/source-end-host:port/SourceProject1/_workitems/edit/101/) | [OHDefect101](https://oim-host:8989/OpsHubWS/mentionsync?src_mention_sync_id={no}\&tgt_host_entity_info_id={no}) |
+| `#Defect101`      | No                                          | HTML              | Defect101               | [Defect101](https:/source-end-host:port/SourceProject1/_workitems/edit/101/) | [OHDefect101](https://oim-host:8989/OpsHubWS/mentionsync?src_mention_sync_id={no}&tgt_host_entity_info_id={no}) |
 | `#Defect101`      | Yes                                         | WIKI              | Defect101               | [Defect101](https:/source-end-host:port/SourceProject1/_workitems/edit/101/) | [#DefectT101](https:/target-endpoint-host:port/TargetProject1/_workitems/edit/T101/)                             |
-| `#Defect101`      | No                                          | WIKI              | Defect101               | [Defect101](https:/source-end-host:port/SourceProject1/_workitems/edit/101/) | [OHDefect101](https://oim-host:8989/OpsHubWS/mentionsync?src_mention_sync_id={no}\&tgt_host_entity_info_id={no}) |
-| `#Defect101`      | Yes                                         | Text              | Defect101               | https://source-end-host:port/SourceProject1/\_workitems/edit/101             | https://target-endpoint-host:port/TargetProject1/\_workitems/edit/T101                                           |
-| `#Defect101`      | No                                          | Text              | Defect101               | https://source-end-host:port/SourceProject1/\_workitems/edit/101             | https://oim-host:8989/OpsHubWS/mentionsync?src\_mention\_sync\_id={no}\&tgt\_host\_entity\_info\_id={no}         |
+| `#Defect101`      | No                                          | WIKI              | Defect101               | [Defect101](https:/source-end-host:port/SourceProject1/_workitems/edit/101/) | [OHDefect101](https://oim-host:8989/OpsHubWS/mentionsync?src_mention_sync_id={no}&tgt_host_entity_info_id={no}) |
+| `#Defect101`      | Yes                                         | Text              | Defect101               | https://source-end-host:port/SourceProject1/_workitems/edit/101             | https://target-endpoint-host:port/TargetProject1/_workitems/edit/T101                                           |
+| `#Defect101`      | No                                          | Text              | Defect101               | https://source-end-host:port/SourceProject1/_workitems/edit/101             | https://oim-host:8989/OpsHubWS/mentionsync?src_mention_sync_id={no}&tgt_host_entity_info_id={no}         |
 
 #### When entity mention is supported for target end system but not for target mapped field
 
 | Description value | Is mentioned entity synchronized to target? | Target field type | Repo-Steps with Option1 | Repo-Steps with Option2                                                      | Repo-Steps with Option3                                                                                          |
 | ----------------- | ------------------------------------------- | ----------------- | ----------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | `#Defect101`      | Yes                                         | HTML              | Defect101               | [Defect101](https:/source-end-host:port/SourceProject1/_workitems/edit/101/) | [DefectT101](https:/target-endpoint:port/TargetProject1/_workitems/edit/T101/)                                   |
-| `#Defect101`      | No                                          | HTML              | Defect101               | [Defect101](https:/source-end-host:port/SourceProject1/_workitems/edit/101/) | [OHDefect101](https://oim-host:8989/OpsHubWS/mentionsync?src_mention_sync_id={no}\&tgt_host_entity_info_id={no}) |
+| `#Defect101`      | No                                          | HTML              | Defect101               | [Defect101](https:/source-end-host:port/SourceProject1/_workitems/edit/101/) | [OHDefect101](https://oim-host:8989/OpsHubWS/mentionsync?src_mention_sync_id={no}&tgt_host_entity_info_id={no}) |
 | `#Defect101`      | Yes                                         | WIKI              | Defect101               | [Defect101](https:/source-end-host:port/SourceProject1/_workitems/edit/101/) | [DefectT101](https:/target-endpoint-host:port/TargetProject1/_workitems/edit/T101/)                              |
-| `#Defect101`      | No                                          | WIKI              | Defect101               | [Defect101](https:/source-end-host:port/SourceProject1/_workitems/edit/101/) | [OHDefect101](https://oim-host:8989/OpsHubWS/mentionsync?src_mention_sync_id={no}\&tgt_host_entity_info_id={no}) |
+| `#Defect101`      | No                                          | WIKI              | Defect101               | [Defect101](https:/source-end-host:port/SourceProject1/_workitems/edit/101/) | [OHDefect101](https://oim-host:8989/OpsHubWS/mentionsync?src_mention_sync_id={no}&tgt_host_entity_info_id={no}) |
 
 ## Entity Mention Sync Behaviour
 
@@ -840,7 +841,7 @@ _If source system or target system doesn't support user search on Email API then
 
 In given excel mapping, in Sheet1 the column A will contain username of source system and column B will contain the username target system corresponding to source username for which user mention needs to be done.
 
-The `{fieldvalue}`, `{Excel Id}`, `{Sheet Name}`, `{System1 Column}`, `{System2 Column}` should be replaced with the corresponding mapped field and excel upload details.\
+The `{fieldvalue}`, `{Excel Id}`, `{Sheet Name}`, `{System1 Column}`, `{System2 Column}` should be replaced with the corresponding mapped field and excel upload details.
 Example for excel mapping: `excel:lookup(1,'Sheet1','A','B',userName)`
 
 **Sample 3** – This is excel mapping example where we need to have an excel file which will have one-to-one user mapping. This will get the username of a user in target end system corresponding to the source system user email address from excel sheet.
@@ -882,7 +883,7 @@ Example for excel mapping: `excel:lookup(1,'Sheet1','A','B',userName)`
 
 In given excel mapping, in Sheet1 the column A will contain userEmail address of source system and column B will contain the username target system.
 
-The `{fieldvalue}`, `{Excel Id}`, `{Sheet Name}`, `{System1 Column}`, `{System2 Column}` should be replaced with the corresponding mapped field and excel upload details.\
+The `{fieldvalue}`, `{Excel Id}`, `{Sheet Name}`, `{System1 Column}`, `{System2 Column}` should be replaced with the corresponding mapped field and excel upload details.
 Example for excel mapping: `excel:lookup(1,'Sheet1','A','B',userName)`
 
 ### User Field Configuration When User Search On Email Not Supported
@@ -933,7 +934,7 @@ The **{fieldvalue}** should be replaced with the corresponding mapped field.
 
 In given excel mapping, in Sheet1 the column A will contain username of source system and column B will contain the username target system.
 
-The `{fieldvalue}`, `{Excel Id}`, `{Sheet Name}`, `{System1 Column}`, `{System2 Column}` should be replaced with the corresponding mapped field and excel upload details.\
+The `{fieldvalue}`, `{Excel Id}`, `{Sheet Name}`, `{System1 Column}`, `{System2 Column}` should be replaced with the corresponding mapped field and excel upload details.
 Example for excel mapping: `excel:lookup(1,'Sheet1','A','B',userName)`
 
 **Sample 3** – This is excel mapping example where we need to have an excel file which will have one-to-one user mapping. This will get the username of a user in target end system corresponding to the source system user email address from excel sheet.
@@ -958,16 +959,16 @@ Example for excel mapping: `excel:lookup(1,'Sheet1','A','B',userName)`
 
 In given excel mapping, in Sheet1 the column A will contain userEmail address of source system and column B will contain the username target system.
 
-The `{fieldvalue}`, `{Excel Id}`, `{Sheet Name}`, `{System1 Column}`, `{System2 Column}` should be replaced with the corresponding mapped field and excel upload details.\
+The `{fieldvalue}`, `{Excel Id}`, `{Sheet Name}`, `{System1 Column}`, `{System2 Column}` should be replaced with the corresponding mapped field and excel upload details.
 Example for excel mapping: `excel:lookup(1,'Sheet1','A','B',userName)`
 
 # Rank
 
 ## Overview
 
-The Rank Synchronization is used to maintain the Rank of the entity in target system view \[equivalent to its Rank in source system view]. The Rank will position the entity in the correct sequence among its siblings through synchronization, which can help users to visualize the data in a more meaningful manner. Below details will help better understand the meaning of Rank for various systems.
+The Rank Synchronization is used to maintain the Rank of the entity in target system view [equivalent to its Rank in source system view]. The Rank will position the entity in the correct sequence among its siblings through synchronization, which can help users to visualize the data in a more meaningful manner. Below details will help better understand the meaning of Rank for various systems.
 
-**Windchill RV\&S view**
+**Windchill RV&S view**
 
 <p align="center">
   <img src="../assets/ptc_hierarchy.png" width="900" />
@@ -977,7 +978,7 @@ The Rank Synchronization is used to maintain the Rank of the entity in target sy
 In the above image, each entity Rank can be determined based on the structure displayed on the left panel under 'Outline' or, with the 'Section' value of the entity display on the right panel. For example:
 
 * The respective Ranks of entities, 268100, 268102, and 268104 are 1, 2 and 3. The respective Ranks of entities, 268106, 268108, and 268110 within the entity 268102 are 2.1, 2.2, and 2.3.
-  * If user synchronizes all these entities without Rank synchronization, they will see the target entities in different sequence as compared to the source sequence \[based on their processing order and the target system behaviour]. If the user synchronizes all of these entities with Rank synchronization, they will see a similar view where the target entity for 268100, 268102, 268104 and 268106, 268108, 268110 is in the equivalent sequence similar to the source sequence.
+  * If user synchronizes all these entities without Rank synchronization, they will see the target entities in different sequence as compared to the source sequence [based on their processing order and the target system behaviour]. If the user synchronizes all of these entities with Rank synchronization, they will see a similar view where the target entity for 268100, 268102, 268104 and 268106, 268108, 268110 is in the equivalent sequence similar to the source sequence.
 
 Hence, Rank Synchronization helps the user synchronize these entities and visualize Rank/Structure on the target system similar to the source Rank/Structure.
 
@@ -993,7 +994,7 @@ In the above image, the respective Ranks of entities, PROJ3-883, and PROJ3-884 w
 
 Rank Synchronization is supported by following connectors:
 
-1. [**Windchill RV\&S**](../connectors/windchill_RV\&S.md#rank)
+1. [**Windchill RV&S**](../connectors/windchill_RV&S.md#rank)
 2. [**Jira R4J Plugin**](../connectors/jira.md#rank_.28r4j_plugin.29)
 3. [**Verisium Manager**](../connectors/verisium-manager.md#rank)
 4. [**Codebeamer**](../connectors/codebeamer.md#rank)
@@ -1008,7 +1009,7 @@ A field named **OH Enable Rank** is required to be mapped in order to enable the
 > **Value**: This field value contains the Boolean value. It is used to decide whether rank processing is required or not.
 
 > **Note** : If the target system is having multi-level structure view, then please configure the relationship mapping to have a level structure view in addition to enable the Rank synchronization. Please refer to the below examples for better understanding:
-> * Windchill RV\&S system allows Multi Level Structure with Contains-Contained By relationship. The entity within this structure can have a particular Rank. Hence, the user can enable the Relationship configuration to maintain the relationship between the entities. Also, the user can enable Rank Synchronization to maintain the entity rank within the structure.
+> * Windchill RV&S system allows Multi Level Structure with Contains-Contained By relationship. The entity within this structure can have a particular Rank. Hence, the user can enable the Relationship configuration to maintain the relationship between the entities. Also, the user can enable Rank Synchronization to maintain the entity rank within the structure.
 > * R4J system allows Multi Level Structure with R4J Parent Link-R4J Child Link relationship. The entity within this structure can be in a particular Rank. Hence, the user can enable the [Relationship configuration](../connectors/jira.md#relationships) to maintain the relationship between the entities. Also, the user can enable Rank synchronization to maintain the entity rank within the structure.
 
 Refer to the [Relationship configuration](mapping-configuration.md#relationships) section to learn more about how to configure relationship.
@@ -1053,14 +1054,19 @@ State changed from [Proposed] to [Active]
 **To change/customize the comment message, please refer the below steps:**
 
 1. In the mapping, the **OH Comment** field needs to be mapped.
-2. Navigate to the icon ![](../assets/OH_Comment_Settings.png), which will appear adjacent to the **Comments**. Click on this icon and a window will open as shown below: ![](../assets/OH_Comment_Advance_Settings_2.png)
-3. Here, the comment type and comment body format can be configured for each field mapped with **OH Comment** field.
-4. To configure the comment body format, OpsHub Integration Manager provides special tokens as mentioned below to access various values of the source field:
+2. Navigate to the icon ![](../assets/OH_Comment_Settings.png), which will appear adjacent to the **Comments**. Click on this icon and a window will open as shown below:
+
+    <p align="center">
+    <img src="../assets/OH_Comment_Advance_Settings_2.png" width="900">
+    </p>
+
+4. Here, the comment type and comment body format can be configured for each field mapped with **OH Comment** field.
+5. To configure the comment body format, OpsHub Integration Manager provides special tokens as mentioned below to access various values of the source field:
    * `@field_name@`: This token is used to access the display name of the source field.
    * `@old_value@`: This token is used to access the old value of the source field.
    * `@new_value@`: This token is used to access the new value of the source field.
-   * For example, comment body format can be:\
-     &#xNAN;**@field\_name@ updated in source from "@old\_value@" to "@new\_value@"**
+   * For example, comment body format can be:
+     **@field_name@ updated in source from "@old_value@" to "@new_value@"**
 
 ## Known Behavior and Limitations
 
@@ -1088,7 +1094,10 @@ State changed from [Proposed] to [Active]
 
 Expand the pop-up by clicking the arrow icon.
 
-![Map3](../assets/Map3.png)
+<p align="center">
+  <img src="../assets/Map3.png" width="900">
+</p>
+
 
 ## Conflict Management
 
@@ -1103,7 +1112,7 @@ From the **Detect Conflict** drop-down list:
 * Select **Custom Strategy** when you want the user to define the action with a pre-defined condition, for example the system in which the entity was updated last is allowed to overwrite the information in the other system.
 
 <p align="center">
-  <img src="../assets/ConflictM1.png" />
+  <img src="../assets/ConflictM1.png" width="900"/>
 </p>
 
 
@@ -1121,11 +1130,11 @@ From the **Sync When?** drop-down list against a field in [Create-Update Mode](m
 * Select **Create** when you want to sync the field when an entity gets created in the target system.
 * Select **Update** when you want to sync the field when an entity gets updated in the target system.
 
-> **Note**: Do not set the **Conflict Resolution Strategy** as **Manual** when you have set **Sync When?** to Update.\
+> **Note**: Do not set the **Conflict Resolution Strategy** as **Manual** when you have set **Sync When?** to Update.
 > Reason: As the field was not created at sync time, this will result into conflict error.
 
 <p align="center">
-  <img src="../assets/SyncWhen1.png"  />
+  <img src="../assets/SyncWhen1.png" width="800" />
 </p>
 
 For the [Delete Mode](mapping-configuration.md#delete-mode) mapping configuration, the default **Sync When?** mode is **Soft Delete**.
@@ -1150,7 +1159,7 @@ For the [Delete Mode](mapping-configuration.md#delete-mode) mapping configuratio
 * Open the mapping from the integration page. Alternatively, you can also click the mapping name on the mapping configuration page. You will be navigated to the Mapping Configuration page. You can click the option highlighted in the image below to edit the mappping.
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_26F.png" />
+  <img src="../assets/Mapping_Configuration_Image_26F.png" width="500" />
 </p>
 
 
@@ -1161,7 +1170,7 @@ For the [Delete Mode](mapping-configuration.md#delete-mode) mapping configuratio
 Apart from updating, you can also take multiple other actions on an existing mappings. Roll over the icon on the right most corner against the mapping name to see all actions that you can take.
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_27F.png"  />
+  <img src="../assets/Mapping_Configuration_Image_27F.png"  width="500"/>
 </p>
 
 
@@ -1177,7 +1186,7 @@ You can:
 Refer to the image below.
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_29F.png" />
+  <img src="../assets/Mapping_Configuration_Image_29F.png" width="500"/>
 </p>
 
 
@@ -1188,6 +1197,6 @@ Refer to the image below.
 You can also perform other actions on multiple selected mappings:
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_30F1.png" />
+  <img src="../assets/Mapping_Configuration_Image_30F1.png" width="500"/>
 </p>
 
