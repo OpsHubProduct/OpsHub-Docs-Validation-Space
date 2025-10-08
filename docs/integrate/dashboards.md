@@ -71,13 +71,20 @@ Users can filter the integrations according to the system and integration status
 
 - Click on the integration name in the graph to open its details.
 
-![](../assets/Dashboard_Image1.png)
+<p align="center">
+  <img src="../assets/Dashboard_Image1.png" width="800"/>
+</p>
+
 
 ## Navigate to Failure
 
 - Click on "Global Failure(s)" or "Processing Failure(s)" to go directly to the Failures module.
 
-![](../assets/Dashboard_Image2.png)
+<p align="center">
+  <img src="../assets/Dashboard_Image2.png" width="800"/>
+</p>
+
+
 
 
 
