@@ -214,7 +214,7 @@ In the given pop-up, the **Entity Id Field Name**, the **Link Field Name**, and 
     The default schedule is 1 Minute Schedule.
 
    <p align="center">
-    <img src="../assets/Global_Level_Confg.png" width="800" />
+    <img src="../assets/Global_Level_Confg.png" width="600" />
    </p>
 
 
@@ -358,7 +358,7 @@ Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Sele
 Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > Select **Override parameters for write operations (Destination)** > Go to **Search in Target Before Sync**.
 
 <p align="center">
-  <img src="../assets/Integration_Configuration_Image_10a.png" width="700"/>
+  <img src="../assets/Integration_Configuration_Image_10a.png" width="600"/>
 </p>
 
 
