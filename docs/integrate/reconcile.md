@@ -18,7 +18,7 @@ An important point to remember is that Reconciliation is not Integration or Migr
 - To configure Reconciliation, navigate to the integration to be reconciled. Click on reconcile icon as shown below:  
 
 <p align="center">
-  <img src="../assets/reconcileicon.png" alt="Reconcile Icon" width="600px"/>
+  <img src="../assets/reconcileicon.png" alt="Reconcile Icon" width="700"/>
 </p>
 
 - The window will come up for the given integration:  
@@ -84,4 +84,5 @@ An important point to remember is that Reconciliation is not Integration or Migr
 - If the reconciliation is completed, the status will change to green on Reconcile page.  
 - Go back to the same integration and set the polling time in integration to a time after reconciliation is completed to poll old updates which are already reconciled.  
 - To re-run the Reconciliation, follow same steps. You can change the settings on Reconciliation page.
+
 
