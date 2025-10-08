@@ -60,7 +60,7 @@ You can also directly go to the System Configuration screen by clicking the Syst
 * Update the details and click the **Save** button to save the details. You will receive a prompt when the system details are updated.  
 
 <div align="center">
-  <img src="../assets/System_Configuration_Image_7.png" width="1500" />
+  <img src="../assets/System_Configuration_Image_7.png" width="900" />
 </div>
 
 ## Understanding Json Metadata Input
@@ -325,6 +325,7 @@ You can also directly go to the System Configuration screen by clicking the Syst
   ]
 }
 ```
+
 
 
 
