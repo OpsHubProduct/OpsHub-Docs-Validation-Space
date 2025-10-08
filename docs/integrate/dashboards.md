@@ -23,7 +23,7 @@ Here is a video on how to use the dashboard in OIM:
   - Click on ![](../assets/integrationbranch.png) to view integration details from dashboard.
 
 <p align="center">
-  <img src="../assets/integrationdetail.png" width="1000"/>
+  <img src="../assets/integrationdetail.png" width="1500"/>
 </p>
 
 
@@ -54,7 +54,7 @@ Users can filter the integrations according to the system and integration status
 - You can try combinations — for example: set Jira as a system filter and Active as an integration status filter to view all active Jira integrations.
   
 <p align="center">
-  <img src="../assets/dashboard_filter_graph.PNG" width="800"/>
+  <img src="../assets/dashboard_filter_graph.PNG" width="1500"/>
 </p>
 
 
@@ -67,7 +67,7 @@ Users can filter the integrations according to the system and integration status
 - Click on a system node in the graph. For example, clicking on the “Team Foundation Server” icon will open that system’s configuration.
 
 <p align="center">
-  <img src="../assets/Dashboard_Image3.png" width="2000"/>
+  <img src="../assets/Dashboard_Image3.png" width="1500"/>
 </p>
 
 
@@ -87,6 +87,7 @@ Users can filter the integrations according to the system and integration status
 <p align="center">
   <img src="../assets/Dashboard_Image2.png" width="2000"/>
 </p>
+
 
 
 
