@@ -24,7 +24,7 @@ OpsHub Integration Manager supports the synchronization of images and files acro
 ## Server/ Base64 Storage System Combinations
 
 <p align="center">
-  <img src="../assets/Server_to_server_inline.png" width="400"/>
+  <img src="../assets/Server_to_server_inline.png" width="800"/>
 </p>
 
 
@@ -33,7 +33,7 @@ OpsHub Integration Manager supports the synchronization of images and files acro
 ## Entity Storage System Combinations
 
 <p align="center">
-  <img src="../assets/Entity_to_entity_inline.png" width="400" />
+  <img src="../assets/Entity_to_entity_inline.png" width="800" />
 </p>
 
 
@@ -99,6 +99,7 @@ Following are the **Before** and **After** behaviors for the given scenarios:
 | 10 | - Comment synchronization is enabled<br>- Rich text field is mapped to text field in target<br>- Both have same inline image | Entity Storage | Server Storage | - Image will be uploaded to server system & text field data added with `<ImageTag src = ”Server storage uploaded URL”>Img1.png</ImageTag>`<br>- Comment will be added with referred inline image | Same as before |
 | 11 | - Source HTML field is mapped to target text field<br>- Create entity with inline image & synchronize<br>- Update target text field & start reverse synchronization (from target to source) | ALL | Base64 Storage | - Inline image with base64 storage is not supported | - If same name image is found in source entity, it will be replaced with source URI<br>- In case, image with same name is not found, the image will be removed from the source entity |
 | 12 | - Create entity with rich text field having image 1<br>- In next revision, image 2 is uploaded on the same field<br>- If the events fail and are in retry but image 1’s base64 data is missing from the write-side cache | Base64 Storage | ALL | - Inline image with base64 storage is not supported | - Base64 content for image 1's hashcode will be queried in source entity<br>- Since, it is no longer present on entity now, image 1 will not be synchronized<br>- In the next revision, image 2 will be synchronized |
+
 
 
 
