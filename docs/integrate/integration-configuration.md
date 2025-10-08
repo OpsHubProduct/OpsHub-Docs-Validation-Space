@@ -6,44 +6,61 @@ In this section, you will learn how to configure a system onto OpsHub Integratio
 
 * The dashboard, by default, shows all integrations created so far on the selected instance.
 
-<div align="center"><img src="../assets/Integration_Configuration_Image_20F.png" alt="Integration_Configuration_Image_20F.png"></div>
+<div align="center"><img src="../assets/Integration_Configuration_Image_20F.png" width="600"></div>
 
 *   If the integration you want to use is not present in the list, follow the steps here:
 
     *   Click the **Integrate** button on the screen.
 
-        ![Integrate Button](../assets/Integration_Configuration_Image_21C.png)
-    * Click the plus icon **\[+]** on the top right corner of the screen. You will be prompted to enter the **Integration Name** and names of the systems you want to integrate.
+         <p align="center">
+           <img src="../assets/Integration_Configuration_Image_21C.png" width="600" />
+         </p>
 
-    ![Add Integration](../assets/Integration_Configuration_Image_21C1.png)
+    * Click the plus icon **[+]** on the top right corner of the screen. You will be prompted to enter the **Integration Name** and names of the systems you want to integrate.
+
+   <p align="center">
+   <img src="../assets/Integration_Configuration_Image_21C1.png" width="600" />
+   </p>
+
 
 > **Note**: You are free to choose any name for the integration; however, we advise you to choose a name that helps identify the systems involved in the integration.
 
-![Integration Form](../assets/Integration_Configuration_Image_1a.png)
+<p align="center">
+  <img src="../assets/Integration_Configuration_Image_1a.png" width="600" />
+</p>
 
-* Click the plus sign \[+] adjacent to the System 1 and System 2 fields. You will be navigated to the System Configuration screen. Check the [System Configuration](system-configuration.md) steps here.
+* Click the plus sign [+] adjacent to the System 1 and System 2 fields. You will be navigated to the System Configuration screen. Check the [System Configuration](system-configuration.md) steps here.
 * In the **Select Project to Sync** section, select the projects you want to synchronize between the systems by clicking them. For example, in this case, we select Demo Project from TFS and OpsHub project from JIRA.
 * Click the forward arrow (>), bi-directional arrow (<-->), or backward arrow (<) depending upon whether you want to integrate projects from System 1 and System 2, or do a bi-directional synchronization.
-* In the **Select Entities to Sync** section, select the entities (issue types) you want to synchronize between the systems. A list of entities that are common for both projects would appear for both systems. Click the ones you want to synchronize. You can synchronize multiple entities in one integration. To add more entities, click the plus sign \[+] adjacent to **Select Entities to Sync**.
+* In the **Select Entities to Sync** section, select the entities (issue types) you want to synchronize between the systems. A list of entities that are common for both projects would appear for both systems. Click the ones you want to synchronize. You can synchronize multiple entities in one integration. To add more entities, click the plus sign  [+] adjacent to **Select Entities to Sync**.
 
 > **Note** : Some systems will have entities that require special settings. These entities would appear on the right side of the screen.
 
-* If the required mapping doesn't exist, click the the plus button \[+] adjacent to **Select fields to be synced** (In one of the screenshots above, select fields to be synced section is populated with TFS-JIRA map). You will be navigated to Mapping Configuration screen.
+* If the required mapping doesn't exist, click the the plus button [+] adjacent to **Select fields to be synced** (In one of the screenshots above, select fields to be synced section is populated with TFS-JIRA map). You will be navigated to Mapping Configuration screen.
 
 Click [Mapping Configuration](mapping-configuration.md) to learn the steps to create a new mapping.
 
 *   You can configure some global settings for the integration using the option shown in the image below. The Global Settings allows you define: Entity Id Field Name, Entity Link Name i.e. [Tracking Id and Link of Entities Across Systems](integration-configuration.md#tracking-id-and-link-of-entities-across-systems) for both systems, [Maximum Retry Count](integration-configuration.md#maximum-retry-count) and [Associate Schedule](integration-configuration.md#associate-schedule) for integration.
 
-    ![Global Settings](../assets/Integration_Configuration_Image_23a.png)
+   <p align="center">
+     <img src="../assets/Integration_Configuration_Image_23a.png" width="900" />
+   </p>
+   
 * Polling time automatically set for the integration based on the system used for integration.
   * For Build systems and Source Control Management systems, last updated|created changeset/revision will be set as start polling time. If source does not have any data created then by default, it will be set to **0**.
   * For ALM (Application Lifecycle Management), PLM (Product Lifecycle Management), and Test Management systems, polling time is set to the last updated time on the selected source projects. If the project does not have data then polling time is set to the CurrentTime - 24 Hours.
 *   If you want to change the default polling time, then click the **Entity Level Mandatory Settings** button given beside entity mapping option.
 
-    ![Edit Polling Time](../assets/Integration_Polling_Time_Edit1.png)
+<p align="center">
+  <img src="../assets/Integration_Polling_Time_Edit1.png" width="900"/>
+</p>
+
 *   To save the integration in active mode, slide the **Activate Integration** button to the right. Select **Yes** in the **Are you sure?** pop-up.
 
-    ![Activate Integration](../assets/Integration_Configuration_Image_3a.png)
+<p align="center">
+  <img src="../assets/Integration_Configuration_Image_3a.png" width="900" />
+</p>
+
 * Click **Save** to save the integration.
 
 
@@ -61,22 +78,22 @@ If the checkbox is checked, this feature will be enabled for every project mappi
 
 ## Scenarios
 
-**Scenario 1:**\
+**Scenario 1:**
 Now in this example if “Sync child projects” is selected for Rally (which support child project polling) then integration will read events from the _Rally R1_ including its child projects & _Rally R2_ including its child projects. After sync, entities will be synchronized to related target project(s). This means event from _Rally R1.1_ project (a child project under R1) will go to _Jira J1_ project and event from _Rally R2.1_ project (a child project under R2) will go to _Jira J2_ project.
 
-**Scenario 2:**\
+**Scenario 2:**
 If we consider the case of bidirectional sync, in our example, the events generated by _Jira J1_ will be synced to relevant projects in target. i.e.
 
 * New entities created in _Jira J1_ will synced to _Rally R1_.
 * Any updates in already synchronized entities in _Jira J1_ will be synchronized to relevant target project i.e. if the entity updated is of parent project _Rally R1_, updates will be synced in _Rally R1_. If the entity updated is of child project _Rally R1.1_, its update will be synced to _Rally R1.1_.
 
-**Scenario 3:**\
+**Scenario 3:**
 If you need a specific child project to be synchronized to a specific target project then you can map that child project separately. So in our example, if you don't want _Rally R1.1_ to be synced with _Jira J1_ and want it to be synced with _Jira J2_ instead, you can simply map _Rally R1.1_ to _Jira J2_ separately. So after doing this, events from _Rally R1_ and all of its child projects except _Rally R1.1_ will sync to _Jira J1_ and events from _Rally R1.1_ will sync to _Jira J2_.
 
-**Scenario 4:**\
+**Scenario 4:**
 If you don't want certain project’s child project to be polled, then you can configure separate integration for it in which the 'Sync child project' checkbox is not selected. Also ensure that this project or any of its parent (predecessor) projects are not a part of any other integration where 'sync child project' feature is turned on.
 
-**Scenario 5:**\
+**Scenario 5:**
 If project mapping is done at mapping level, it will be prioritized over integration-level mapping.
 
 > **Note** : For this feature to work properly, all the child projects must have the same permission as the parent project. i.e. all the prerequisites that are applicable for parent projects will also be applicable to child projects.
@@ -87,17 +104,23 @@ Criteria Configuration helps in integration of subset of entities based on some 
 
 * Click the icon shown in the image below for enabling **Criteria Configuration**.
 
-![Integration\_Configuration\_Image 5b.png](../assets/Integration_Configuration_Image_5b.png)
+<p align="center">
+  <img src="../assets/Integration_Configuration_Image_5b.png" width="900" />
+</p>
+
 
 2. A pop-up window - **Criteria Configuration** appears on the right. In this window, for a bidirectional mapping, sections specific to both systems involved in the integration will appear in backward and forward criteria configuration tabs. Fill the requisite details.
 
-![Integration\_Configuration\_Image 6a.png](../assets/Integration_Configuration_Image_6a.png)
+<p align="center">
+  <img src="../assets/Integration_Configuration_Image_6a.png" width="900" />
+</p>
+
 
 3. First, select **Yes** in the Configure Criteria drop-down list. Once you select **Yes** in the Configure Criteria drop-down list, two more fields, **Query** and **Select criteria storage type field**, appear. Note that it is mandatory to select values for these three fields.
 
 * In the **Query** field, enter the condition that you want OpsHub Integration Manager to consider when it synchronizes the selected entity between the source system and the destination system. For example, if you enter `PRIORITY='High'` in the Query field for this integration, it means you are instructing to synchronize only those entities that are high priority.
 
-> **Note** : The format in which you enter condition in the Query field will vary from one system to another. Refer the [Connectors](../connectors.md) section to learn more.
+> **Note** : The format in which you enter condition in the Query field will vary from one system to another. Refer the [Connectors](../connectors/connectors.md) section to learn more.
 
 * From the **Select criteria storage type** drop-down list, select whether you want to store the entities from the source system in the database, directly in the end system or select **No Storage** option. The default behavior is to store the data in the database.
   * When you select **In Database**, the selected entities synchronize between both systems even when the conditions defined in the **Query** field has been updated.
@@ -109,7 +132,7 @@ Criteria Configuration helps in integration of subset of entities based on some 
 
 To read in detail about Criteria information storage in end system, click [here](criteria-information-storage.md).
 
-> **Note** : **Hierarchy Synchronization behavior when criteria is Configured in integration**:\
+> **Note** : **Hierarchy Synchronization behavior when criteria is Configured in integration**:
 > When criteria is configured, the position/order of the entity for hierarchy synchronization will be considered for the entities which are meeting the criteria at the time of synchronization. For example if some of the entities in the source end system view do not meet the criteria, then, in such cases, the target system view may be different in terms of position/order of the entities. Please check the below scenario for better understanding:
 
 **Example**
@@ -123,17 +146,17 @@ Consider the following view of the end system for entities:
   * **CC1**
   * **CC2**
 
-**P2**\
+**P2**
 **P3**
 
 The entity **CC1** and **CC2** are sibling to each other. In this case, **CC1** entity placed before **CC2** entity position/order, and both entities added on first level as entity **C2** is not meeting criteria. After synchronization, then the expected view in the target end system will be:
 
 **P1**
 
-* **C1**\
-  **P2**\
-  **P3**\
-  **CC1**\
+* **C1**
+  **P2**
+  **P3**
+  **CC1**
   **CC2**
 
 The scenario mentioned above will be the expected behavior as entity **C2** does not exist in the target end system. The entity view in the target system will get corrected once the source entity **C2** fulfills the criteria, and is synchronized to the target end system.
@@ -153,49 +176,54 @@ Here is the video on Advanced Configuration settings:
 These features help the user specify custom conditions during integration configuration.
 
 1. Click the **Configure Advance** icon to define custom configuration settings. A pop-up window appears on the right.
-2.  Within the pop-up window, there are two tabs: **Forward Advance Settings** and **Backward Advance Settings**.\
-    When you select the **Forward Advance Settings** tab, you specify configuration settings for System 1.\
-    When you select the **Backward Advance Settings** tab, you specify configuration settings for System 2.\
+2.  Within the pop-up window, there are two tabs: **Forward Advance Settings** and **Backward Advance Settings**. 
+    When you select the **Forward Advance Settings** tab, you specify configuration settings for System 1. 
+    When you select the **Backward Advance Settings** tab, you specify configuration settings for System 2. 
     Here you can define the following key parameters:
 
-    ![Advance Settings](../assets/Integration_Configuration_Image_19a.png)
+   <p align="center">
+    <img src="../assets/Integration_Configuration_Image_19a.png" width="900" />
+   </p>
 
-    ![Advance Settings Fields](../assets/Integration_Configuration_Image_24a.png)
+   <p align="center">
+     <img src="../assets/Integration_Configuration_Image_24a.png" width="900"/>
+   </p>
+
 
 ## Global Settings
 
-The Global level settings allow customizing default behaviour of integration for all mapped entity types.\
+The Global level settings allow customizing default behaviour of integration for all mapped entity types. 
 When the Global level setting button is clicked, the **Global level advance configurations pop-up** opens on the right.
 
 In the given pop-up, the **Entity Id Field Name**, the **Link Field Name**, and the **Sync Field Name** for the integrated systems can be selected and common parameters such as **Max Retry Count** and **Associate Schedule** can be set at once.
 
-* **Entity ID Field Name:** Set this to a custom text property available in the end system. Ensure the field is available in all entity types in a given integration.\
-  If set, this will sync Entity ID of the other system in the system for which it is set.\
-  &#xNAN;_&#x45;xample:_ If Entity ID Field Name is set for Jira, then once an entity is created in VSTS or Jira, the integration will set the VSTS Entity ID (bug ID, requirement ID, etc.) in this field.
-* **Link Field Name:** Set this to a custom text property available in the end system. Make sure the field is available in all entity types in a given integration.\
-  If set, this will sync the entity web URL of the other system in the system for which it is set.\
-  &#xNAN;_&#x45;xample:_ If Link Field Name is set for Jira, then once an entity is created in VSTS or Jira, the integration will set the VSTS entity URL (e.g., `https://<companyname>.visualstudio.com/project/_workitems/edit/84701`) in this field.
-* **Sync Field Name:** Set this to a custom text property in the end system. Ensure it is available in all entity types in the integration.\
-  If set, the integration will maintain the time of the last successful sync for every entity in the selected text field.\
+* **Entity ID Field Name:** Set this to a custom text property available in the end system. Ensure the field is available in all entity types in a given integration. 
+  If set, this will sync Entity ID of the other system in the system for which it is set. 
+  example: If Entity ID Field Name is set for Jira, then once an entity is created in VSTS or Jira, the integration will set the VSTS Entity ID (bug ID, requirement ID, etc.) in this field.
+* **Link Field Name:** Set this to a custom text property available in the end system. Make sure the field is available in all entity types in a given integration. 
+  If set, this will sync the entity web URL of the other system in the system for which it is set. 
+  example: If Link Field Name is set for Jira, then once an entity is created in VSTS or Jira, the integration will set the VSTS entity URL (e.g., `https://<companyname>.visualstudio.com/project/_workitems/edit/84701`) in this field.
+* **Sync Field Name:** Set this to a custom text property in the end system. Ensure it is available in all entity types in the integration. 
+  If set, the integration will maintain the time of the last successful sync for every entity in the selected text field. 
   The time represents the audit time until which changes have been successfully synced to the target.
 
 ## Common Sections
 
 * **Max Retry Count:** Set the maximum number of times the failed events should be retried. The default value is 3.
-*   **Associate Schedule:** Set an interval at which the data between the source and the target systems should be synchronized.\
+*   **Associate Schedule:** Set an interval at which the data between the source and the target systems should be synchronized. 
     The default schedule is 1 Minute Schedule.
 
-    ![Global Config](../assets/Global_Level_Confg.png)
+   <p align="center">
+    <img src="../assets/Global_Level_Confg.png" alt="Global Config" />
+   </p>
+
 
 Once the Global level settings are configured, continue with other configurations.
-
-***
 
 ## Maximum Retry Count
 
 Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Select **Override parameters for read operations** > Go to **Maximum Retry Count**.
 
-***
 
 ## Sync Only Current State
 
@@ -212,9 +240,10 @@ From the **Sync only current state** drop-down list, select:
 
 These fields are shown in the image below:
 
-![Sync Current State](../assets/Integration_Configuration_Image_7a.png)
+<p align="center">
+  <img src="../assets/Integration_Configuration_Image_7a.png" width="700"/>
+</p>
 
-***
 
 ## Behavior for Absent Fields
 
@@ -225,8 +254,6 @@ From the **Behavior for absent fields** drop-down list, select one of the follow
 * **Skip** – Fields not present in the target system are skipped without failure. Other fields are synchronized.
 * **Sync** – All fields, including those not in the target system metadata, are sent to the target API. This might result in failure if the field is invalid.
 * **Validate** – A failure will occur if any field not present in the target system's metadata is added in mapping.
-
-***
 
 ## Action on Entity Deleted in Target
 
@@ -280,7 +307,10 @@ Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Sele
 * Select 'Failed Event' when you only want to synchronize events that are failed.
 *   Select 'Both (Failed and New Events)' when you only want to synchronize failed as well as new events.
 
-    !\[Integration Configuration]\(../assets/Integration\_Configuration\_Image 8a.png)
+    <p align="center">
+     <img src="../assets/Integration_Configuration_Image_8a.png" width="800" />
+    </p>
+
 
 ## Tracking Id and Link of Entities Across Systems
 
@@ -292,10 +322,10 @@ Suppose, a "Defect" with Id "D123" and navigation URL `systemA_url/project1/defe
 
 * In System A:
   * **Remote Entity Id Field** of the **Defect** will store value **P12345**.
-  * **Remote Entity Link Field** of the **Defect** will store value **systemB\_url/project2/problem/P12345**.
+  * **Remote Entity Link Field** of the **Defect** will store value **systemB _url/project2/problem/P12345**.
 * In System B:
   * **Remote Entity Id Field** of the **Problem** will store value **D123**.
-  * **Remote Entity Link Field** of the **Problem** will store value **systemA\_url/project1/defect/D123**.
+  * **Remote Entity Link Field** of the **Problem** will store value **systemA _url/project1/defect/D123**.
 
 If a Wiki or HTML field is selected for **Remote Entity Link Field Name**, Remote Entity Link will be added as a hyperlink of Remote Entity Id.
 
@@ -303,56 +333,62 @@ If a Wiki or HTML field is selected for **Remote Entity Link Field Name**, Remot
 * Here, **ABC-123** is the Remote Entity Id. The Remote Entity Link (`http://www.jira.com/project/ABC-123`) is added as a hyperlink of Remote Entity Id.
 * On clicking **ABC-123**, you will be redirected to the Remote Entity having Id **ABC-123**.
 
-## To store the Id and link of the target entity in the source entity:
+### To store the Id and link of the target entity in the source entity:
 
 Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Select **Override parameters for write operations (Source)** > Go to **Remote Entity Id Field Name** and **Remote Entity Link Field Name** > Select field name from the drop-down list.
 
-## To store the Id and link of the source entity in the target entity:
+### To store the Id and link of the source entity in the target entity:
 
 Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Select **Override parameters for write operations (Destination)** > Go to **Remote Entity Id Field Name** and **Remote Entity Link Field Name** > Select field name from the drop-down list.
 
 > 💡 Consider whether you are making this configuration for forward or backward settings. Source and Target will change accordingly.
 
-![Tracking Config](Integration_Configuration_Image_9a.png)
+<p align="center">
+  <img src="../assets/Integration_Configuration_Image_9a.png" width="800"/>
+</p>
+
 
 ## Search in Target Before Sync
 
 Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > Select **Override parameters for write operations (Destination)** > Go to **Search in Target Before Sync**.
 
-![Integration\_Configuration\_Image 10a.png](../assets/Integration_Configuration_Image_10a.png)
+<p align="center">
+  <img src="../assets/Integration_Configuration_Image_10a.png" width="800"/>
+</p>
+
 
 **The Search In Target Before Sync** feature allows OpsHub Integration Manager to search whether the selected entities from the source system already exist in the target system, and if yes, then what is the course of action that should be followed.
 
-This feature is generally recommended when synchronization between systems being integrated was tried earlier either manually or by any other tool and user still wants to keep those synchronized entities in the integration with OpsHub Integration Manager without creating their duplicate entries.\
+This feature is generally recommended when synchronization between systems being integrated was tried earlier either manually or by any other tool and user still wants to keep those synchronized entities in the integration with OpsHub Integration Manager without creating their duplicate entries. 
 Search can be configured to be done on any target system field which holds values similar to any one source system field or transformed fields from mapping. For example, entity id of source system is stored in **Original Entity ID** field in the target system, search can be configured on **Original Entity ID** field.
 
 > **Note** : The priority will be given to the source system field value. If the field is not found in the source system, then the transformed fields from mapping will be used.
 
-If you select **No** from the **Search In Target Before Sync** drop-down field, then OpsHub Integration Manager will synchronize entities normally and create them on target if it was not already synchronized.\
+If you select **No** from the **Search In Target Before Sync** drop-down field, then OpsHub Integration Manager will synchronize entities normally and create them on target if it was not already synchronized. 
 If you select **Yes**, you will have to define the course of action that OpsHub Integration Manager should take when matching entities are found in the source and the target systems.
 
 Once you select **Yes**, the following fields will appear. You need to enter appropriate data in these fields as described below.
 
 ### **Target Search Query**
 
-1. Provide query to be used for search entity in the target system in native target system format.\
+1. Provide query to be used for search entity in the target system in native target system format. 
    For example, `Title=@Name@ and CustomId=@ID@`. Here **Name** and **ID** are the field names of source system.
 2. Fields of the target system's entity can also be used in the Target Search Query in case the source system and target system's field values format are different.
    * For example, if the source and target system have a different entity ID format or entity display name, the target search query on the source entity fields may not be useful. In such case, a user can convert the source entity ID to the target entity Id format using the mapped target system's field; that target system field can be used in the target search query.
    * Source entity ID: `XYZ-50` and Target entity ID: `50`, then the user can do the advanced mapping to convert the source ID format to Target entity ID format under the target field named **"ID converter."**
-     * In such case, the target look-up query can be: `Entity ID = @ID converter@`.\
-       &#xNAN;_\[Where **Entity ID** and **ID converter** both are target system fields]_
-     * **Note**: Here, instead of the target field **"ID converter,"** the user can utilize the pseudo/virtual field in the mapping to have source-to-target format conversion, and then the pseudo/virtual field can be used in the target look-up, too \[as per the use case].
+     * In such case, the target look-up query can be: `Entity ID = @ID converter@`. 
+       &#xNAN;_ [Where **Entity ID** and **ID converter** both are target system fields]_
+     * **Note**: Here, instead of the target field **"ID converter,"** the user can utilize the pseudo/virtual field in the mapping to have source-to-target format conversion, and then the pseudo/virtual field can be used in the target look-up, too  [as per the use case].
 3. For native form of end system query to be given for your system, you can refer **Target LookUp Configuration** section in the specific connector document.
-4. **What if multiple entities found in Target System matching above Query?**\
+4. **What if multiple entities found in Target System matching above Query?** 
    Here you can define the action to be taken when there are multiple entities found in the target system matching query provided above in **Target Search Query**. Select appropriate options from the drop-down list.
    * **Continue with the first entity found**: Select **Continue with the first entity found** if you want to update the first entity from the multiple matching entities found in the target system.
    * **Fail the sync**: Select **Fail the sync** if you want OpsHub Integration Manager to notify that multiple entities exist in target system and fail the sync in this case.
-5. **Continue sync to the entity matching above query**:\
+5. **Continue sync to the entity matching above query**: 
    Here you can define the behavior you want for the matching entity found in the target system. Select appropriate options from the drop-down list.
    * **Yes**: Select **Yes** if you want OpsHub Integration Manager to update the existing entity in the target system.
    * **No**: Select **No** if you want OpsHub Integration Manager to skip the source event to be synchronized to the target system.
-6. **If no entity found matching above query**:\
+6. **If no entity found matching above query**: 
    Here you can define the behavior that you want when there is no matching entity found in target system. Select appropriate options from the drop-down list.
    * **Create new entity in the target**: Select this option if you want to create a new entity in the target field if the search query doesn't yield any matching results.
    * **Skip the event**: Select this option if you want OpsHub Integration Manager to ignore the search information and not take any action.
@@ -361,7 +397,9 @@ Once you select **Yes**, the following fields will appear. You need to enter app
 
 Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > Select **Workflow Association**.
 
-![Integration\_Configuration\_Image 11a.png](../assets/Integration_Configuration_Image_11a.png)
+<p align="center">
+  <img src="../assets/Integration_Configuration_Image_11a.png" width="800" />
+</p>
 
 OpsHub Integration Manager provides default workflow, which comes with default installation. If you want a customized workflow, please contact your sales/support point of contact.
 
@@ -369,8 +407,6 @@ OpsHub Integration Manager provides default workflow, which comes with default i
 * Select **Update** option if you don't want to synchronize those entities that are updated in the source system.
 
 Click the **Integrate** button to complete the integration process.
-
-***
 
 ## Event Detection & Generation
 
@@ -380,7 +416,7 @@ Click the **Integrate** button to complete the integration process.
 
 **Supported Connectors**
 
-1. [**IBM Rational DOORS**](../IBM_Rational_Doors/#Event_Detection_.26_Generation)
+1. [**IBM Rational DOORS**](../connectors/door.md#event-detection-generation)
 
 > **Note** :The feature will be visible only when DOORS is the source system in the integration.
 
