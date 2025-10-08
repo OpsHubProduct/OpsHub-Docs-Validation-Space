@@ -6,27 +6,27 @@ In this section, you will learn how to configure a system onto OpsHub Integratio
 
 * The dashboard, by default, shows all integrations created so far on the selected instance.
 
-<div align="center"><img src="../assets/Integration_Configuration_Image_20F.png" width="600"></div>
+<div align="center"><img src="../assets/Integration_Configuration_Image_20F.png" width="700"></div>
 
 *   If the integration you want to use is not present in the list, follow the steps here:
 
     *   Click the **Integrate** button on the screen.
 
          <p align="center">
-           <img src="../assets/Integration_Configuration_Image_21C.png" width="600" />
+           <img src="../assets/Integration_Configuration_Image_21C.png" width="700" />
          </p>
 
     * Click the plus icon **[+]** on the top right corner of the screen. You will be prompted to enter the **Integration Name** and names of the systems you want to integrate.
 
    <p align="center">
-   <img src="../assets/Integration_Configuration_Image_21C1.png" width="600" />
+   <img src="../assets/Integration_Configuration_Image_21C1.png" width="300" />
    </p>
 
 
 > **Note**: You are free to choose any name for the integration; however, we advise you to choose a name that helps identify the systems involved in the integration.
 
 <p align="center">
-  <img src="../assets/Integration_Configuration_Image_1a.png" width="600" />
+  <img src="../assets/Integration_Configuration_Image_1a.png" width="900" />
 </p>
 
 * Click the plus sign [+] adjacent to the System 1 and System 2 fields. You will be navigated to the System Configuration screen. Check the [System Configuration](system-configuration.md) steps here.
