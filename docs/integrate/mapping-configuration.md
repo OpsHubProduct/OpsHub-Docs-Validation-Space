@@ -15,7 +15,7 @@ In the image below, we show TFS and JIRA selected as the two systems.
 
 # Create a Mapping
 
-* Once the systems are selected, on the Integration Configuration screen, click the the plus button \[+] adjacent to **Select fields to be synced**.
+* Once the systems are selected, on the Integration Configuration screen, click the the plus button [+] adjacent to **Select fields to be synced**.
 * The Mapping Configuration form will open. You will be prompted to enter the **Mapping Name** and name of systems you want to map.
   * **Name:** Enter the name you want to assign to the mapping you are configuring
   * **System 1:** From the drop-down list, select the name of the first system you want to integrate
@@ -1013,7 +1013,7 @@ Rank Synchronization is supported by following connectors:
 
 1. [**Windchill RV&S**](../connectors/windchillrv&s.md#rank)
 2. [**Jira R4J Plugin**](../connectors/jira.md#rank-r4j-plugin)
-3. [**Verisium Manager**](../connectors/verisium-manager.md#rank)
+3. [**Verisium Manager**](../connectors/vManager.md#rank)
 4. [**Codebeamer**](../connectors/codebeamer.md#rank)
 5. [**IBM Rational Doors**](../connectors/doors.md#rank)
 
