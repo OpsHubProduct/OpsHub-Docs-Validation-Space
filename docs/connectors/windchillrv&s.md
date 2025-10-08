@@ -1,6 +1,4 @@
-# windchill rv\&s
-
-## Prerequisites
+# Prerequisites
 
 ### User privileges
 
