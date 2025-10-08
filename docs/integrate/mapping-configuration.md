@@ -22,7 +22,7 @@ In the image below, we show TFS and JIRA selected as the two systems.
   * **System 2:** From the drop-down list, select the name of the second system you want to integrate
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_2a.png" width="800">
+  <img src="../assets/Mapping_Configuration_Image_2a.png" width="1500">
 </p>
 
 
@@ -37,7 +37,7 @@ Once you select the systems involved in integration, other relevant fields such 
 * Click the **Auto Map** button if you want OpsHub Integration Manager to automatically map the system fields with similar names. You can also additionally map more fields once Auto Mapping is completed.
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_3.png" width="700">
+  <img src="../assets/Mapping_Configuration_Image_3.png" width="1500">
 </p>
 
 * Click **Create from Scratch** button to define the mapping from scratch. Search the fields from System 1 and System 2 that you want to map. Click them to select them.
