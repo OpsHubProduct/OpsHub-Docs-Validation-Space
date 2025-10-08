@@ -44,7 +44,7 @@
   - **OpsHub Integration Manager** has synchronized 6 entities from System 1 to System 2, i.e., source entities SE1, SE2,...,SE6 to target entities TE1, TE2,...,TE6, respectively.
 
 <p align="center">
-  <img src="../assets/BaseConfigs.png" width="800"/>
+  <img src="../assets/BaseConfigs.png" width="900"/>
 </p>
 
 
@@ -65,8 +65,9 @@
   - TE5 (as SE5 fails to meet the criteria of Story integration) and TE6 (as the configuration related to Feature is missing in **OpsHub Integration Manager**) will be soft deleted or archived in the target as per the configuration, and the sync report will be updated with the "Not Applicable" state for this entity.
     
 <p align="center">
-  <img src="../assets/DeleteActions.png" width="800" />
+  <img src="../assets/DeleteActions.png" width="900" />
 </p>
+
 
 
 
