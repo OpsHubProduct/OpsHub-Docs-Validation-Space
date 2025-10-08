@@ -9,7 +9,7 @@ If the systems you want to map are not configured onto OpsHub Integration Manage
 In the image below, we show TFS and JIRA selected as the two systems.
 
 <p align="center">
-  <img src="../assets/Integration_Configuration_Image_1F.png" width="700">
+  <img src="../assets/Integration_Configuration_Image_1F.png" width="900">
 </p>
 
 
@@ -21,7 +21,10 @@ In the image below, we show TFS and JIRA selected as the two systems.
   * **System 1:** From the drop-down list, select the name of the first system you want to integrate
   * **System 2:** From the drop-down list, select the name of the second system you want to integrate
 
-![](../assets/Mapping_Configuration_Image_2a.png)
+<p align="center">
+  <img src="../assets/Mapping_Configuration_Image_2a.png" width="800">
+</p>
+
 
 If you are coming from the integration page to the mapping page, the systems will be already selected.
 
@@ -34,7 +37,7 @@ Once you select the systems involved in integration, other relevant fields such 
 * Click the **Auto Map** button if you want OpsHub Integration Manager to automatically map the system fields with similar names. You can also additionally map more fields once Auto Mapping is completed.
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_3.png" width="800">
+  <img src="../assets/Mapping_Configuration_Image_3.png" width="700">
 </p>
 
 * Click **Create from Scratch** button to define the mapping from scratch. Search the fields from System 1 and System 2 that you want to map. Click them to select them.
@@ -80,13 +83,13 @@ Fields can be mapped for two different modes using the toggle button.
 > **Note** : In both modes, you can also filter the fields as "All Fields", "Mandatory Fields", "Read Only Fields", "Custom Fields", and "System Fields".
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_4F1.png" width="700">
+  <img src="../assets/Mapping_Configuration_Image_4F1.png" width="900">
 </p>
 
 Here is how the mapping will look like:
 
 <p align="center">
-  <img src="../assets/Integration_Configuration_Image_17a.png" width="700">
+  <img src="../assets/Integration_Configuration_Image_17a.png" width="900">
 </p>
 
 
@@ -163,15 +166,22 @@ Here is how the mapping will look like:
   * Lookup, reference, and user fields.
 * To associate excel file with the field mapping, user can select the excel icon as highlighted in the below screenshot:
 
-![ExcelMapping5](../assets/ExcelMapping5.png)
+<p align="center">
+  <img src="../assets/ExcelMapping5.png" width="1200">
+</p>
+
 
 * On clicking the excel icon, the following form will appear:
 
-![ExcelMapping1](../assets/ExcelMapping1.png)
+<p align="center">
+  <img src="../assets/ExcelMapping1.png" width="1200">
+</p>
 
 * An excel file can be selected from the drop-down menu:
 
-![ExcelMapping2](../assets/ExcelMapping2.png)
+<p align="center">
+  <img src="../assets/ExcelMapping2.png" width="1200">
+</p>
 
 * In the sheet name, write the sheet name of the excel file containing the values.
 * In system1 column, mention the column of the sheet which should be considered as source value.
@@ -370,14 +380,14 @@ The following video shows how to configure comments synchronization during integ
 * As you can see in the screenshot below, you can map public reply and internal notes as well. You can also include author details and/or comment-time in the comment.
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_22F1.png" width="700"/>
+  <img src="../assets/Mapping_Configuration_Image_22F1.png" width="500"/>
 </p>
 
 
 * Click the edit icon (right icon) to edit comments XSLT.
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_25F12.png" width="700"/>
+  <img src="../assets/Mapping_Configuration_Image_25F12.png" width="500"/>
 </p>
 
 
@@ -390,7 +400,7 @@ The following video shows how to configure attachments synchronization during in
 * Slide the button adjacent to **Attachments** to the right to map attachments.
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_21F1.png" width="700" />
+  <img src="../assets/Mapping_Configuration_Image_21F1.png" width="500" />
 </p>
 
 
@@ -696,7 +706,14 @@ End user can edit this **Mention Setting** in **OpsHub Integration Manager** to 
 
 ## Mention Sync Setting View
 
-![](../assets/mention_setting.png) ![](../assets/mention_sync_option_new.png)
+<p align="center">
+  <img src="../assets/mention_setting.png">
+</p>
+
+<p align="center">
+  <img src="../assets/mention_sync_option_new.png">
+</p>
+
 
 ### Entity Mention Sync Example
 
@@ -754,7 +771,7 @@ Entity mention sync is supported only when the following systems are configured 
 
 1. [**Team Foundation Server ALM and Azure DevOps Services**](../connectors/team-foundation-server.md#mapping-for-entity-mention-field)
 2. [**Codebeamer**](../connectors/codebeamer.md#mapping-for-entity-mention-field)
-3. [**CodebeamerX**](../connectors/codebeamerX.md#mapping-for-entity-mention-field)
+3. [**CodebeamerX**](../connectors/codebeamer.md#mapping-for-entity-mention-field)
 4. [**Rally**](../connectors/rally.md#mapping-for-entity-mention-field)
 5. [**Jira**](../connectors/jira.md#mapping-for-entity-mention-field)
 6. [**GitHub**](../connectors/gitHub.md#mapping-for-entity-mention-field)
@@ -994,11 +1011,11 @@ In the above image, the respective Ranks of entities, PROJ3-883, and PROJ3-884 w
 
 Rank Synchronization is supported by following connectors:
 
-1. [**Windchill RV&S**](../connectors/windchill_RV&S.md#rank)
-2. [**Jira R4J Plugin**](../connectors/jira.md#rank_.28r4j_plugin.29)
+1. [**Windchill RV&S**](../connectors/windchillrv&s.md#rank)
+2. [**Jira R4J Plugin**](../connectors/jira.md#rank-r4j-plugin)
 3. [**Verisium Manager**](../connectors/verisium-manager.md#rank)
 4. [**Codebeamer**](../connectors/codebeamer.md#rank)
-5. [**IBM Rational Doors**](../connectors/ibm-rational-doors.md#rank)
+5. [**IBM Rational Doors**](../connectors/doors.md#rank)
 
 ## Configuration
 
@@ -1095,7 +1112,7 @@ State changed from [Proposed] to [Active]
 Expand the pop-up by clicking the arrow icon.
 
 <p align="center">
-  <img src="../assets/Map3.png" width="900">
+  <img src="../assets/Map3.png" width="1200">
 </p>
 
 
@@ -1112,7 +1129,7 @@ From the **Detect Conflict** drop-down list:
 * Select **Custom Strategy** when you want the user to define the action with a pre-defined condition, for example the system in which the entity was updated last is allowed to overwrite the information in the other system.
 
 <p align="center">
-  <img src="../assets/ConflictM1.png" width="900"/>
+  <img src="../assets/ConflictM1.png" width="1200"/>
 </p>
 
 
@@ -1170,7 +1187,7 @@ For the [Delete Mode](mapping-configuration.md#delete-mode) mapping configuratio
 Apart from updating, you can also take multiple other actions on an existing mappings. Roll over the icon on the right most corner against the mapping name to see all actions that you can take.
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_27F.png"  width="500"/>
+  <img src="../assets/Mapping_Configuration_Image_27F.png"  width="300"/>
 </p>
 
 
@@ -1186,7 +1203,7 @@ You can:
 Refer to the image below.
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_29F.png" width="500"/>
+  <img src="../assets/Mapping_Configuration_Image_29F.png" width="800"/>
 </p>
 
 
@@ -1197,6 +1214,6 @@ Refer to the image below.
 You can also perform other actions on multiple selected mappings:
 
 <p align="center">
-  <img src="../assets/Mapping_Configuration_Image_30F1.png" width="500"/>
+  <img src="../assets/Mapping_Configuration_Image_30F1.png" width="900"/>
 </p>
 
