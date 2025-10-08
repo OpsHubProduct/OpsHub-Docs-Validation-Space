@@ -5,7 +5,9 @@ OpsHub Integration Manager supports the synchronization of source "Entity type" 
 1. Change the target "Entity type" and/or "Project", if the target system supports the conversion of the "Entity type" and/or "Project".
 2. Deprecation of previously synced target entity and creation of new entity on the target if the target system doesn't support the conversion of the "Entity type" and/or "Project."
 
-![EntityMove\_Basic\_flow](../assets/EntityMove_Basic_flow.png)
+<p align="center">
+  <img src="../assets/EntityMove_Basic_flow.png" width="800" />
+</p>
 
 * As a part of "Deprecation", the Logical Delete, Soft Delete or Archive operation will be performed on the entity.
   * In the "Logical Delete", the fields of the target entity can be marked with predefined values(configured from "Delete Mode" mapping of OpsHub Integration Manager) to represent that the corresponding source entity's "Entity type" and/or "Project" is changed.
@@ -44,7 +46,9 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
 * If the source entity is restored to the older "Entity type" and/or "Project", it will be treated as a new change on that source entity. As a result, deprecation and new creation of the entity will be performed in the target system.
 * OpsHub Integration Manager has integration configurations, involving multiple systems:
 
-![EntityMoveCase\_1](../assets/EntityMoveCase_1.png)
+<p align="center">
+  <img src="../assets/EntityMoveCase_1.png" width="900" />
+</p>
 
 * Here, if the "Entity type" and/or "Project" are changed in the source system, "Endpoint 1":
   * If both the target systems, "Endpoint 2", and "Endpoint 3" support the conversion, the "Entity type" and/or "Project" conversions will be performed in the target systems.
@@ -61,7 +65,9 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
   * For the older "Entity type" and/or "Project":
     * The last updated entity by OpsHub Integration Manager is applicable for conversion, and the rest entities will be deprecated as shown:
 
-![EntityMoveCase\_2](../assets/EntityMoveCase_2.png)
+<p align="center">
+  <img src="../assets/EntityMoveCase_2.png" width="900" />
+</p>
 
 ```
 - In the above example, a "Bug" has been synced as "Defect" and "Problem" in the target, and "Problem" was last updated. Now, "Bug" is converted to "Story". OpsHub Integration Manager will convert "Problem" to "Story" and deprecate "Defect".
@@ -70,7 +76,9 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
 * For the newer "Entity type" and/or "Project":
   * The integration which fetches the updated entity first will perform the type/project change in the target. Others will do normal create/update.
 
-![EntityMoveCase\_3](../assets/EntityMoveCase_3.png)
+<p align="center">
+  <img src="../assets/EntityMoveCase_3.png" width="900" />
+</p>
 
 ```
 - In this example, "Bug" → "Story", first fetched by "Story - Story" integration. So "Defect" → "Story" and a new "Requirement" is created by "Story - Requirement" integration.
@@ -78,7 +86,9 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
 
 * If the "Entity type" and/or "Project" has been updated multiple times immediately, and the integration relevant to each is present in OpsHub Integration Manager, some interim conversions may get skipped if not fully fetched:
 
-![EntityMoveCase\_4](../assets/EntityMoveCase_4.png)
+<p align="center">
+  <img src="../assets/EntityMoveCase_4.png" width="900" />
+</p>
 
 * In this case: "Bug" → "Story" → "Requirement" → "Feature"
   * If "Requirement" update is not fetched, result is "Bug" → "Story" → "Feature". The skipped steps will be missed.
@@ -125,7 +135,9 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
 
 * Here, if the project of the Defect entity SE1 is updated to 'Project C' in Endpoint 1, **OpsHub Integration Manager** will synchronize this update to the Bug of Project B, i.e., TE1 in Endpoint 2 (instead of updating the project to Project D):
 
-![RetainCase\_0](../assets/RetainCase_0.png)
+<p align="center">
+  <img src="../assets/RetainCase_0.png" width="900" />
+</p>
 
 # Known behaviors
 
@@ -152,7 +164,9 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
 
 * Here, if the project of the Defect entity SE1 is updated to 'Project C' in Endpoint 1, **OpsHub Integration Manager** will synchronize this update to the Bug entity of Project B, i.e. TE1 in Endpoint 2 by modifying the Entity Type to 'Story':
 
-![RetainCase\_1](../assets/RetainCase_1.png)
+<p align="center">
+  <img src="../assets/RetainCase_1.png" width="900" />
+</p>
 
 * If the Endpoint 2 does not support the "Entity Type" modification, then it will mark the Entity TE1 as deprecated and create a new entity TE2 in the Project B of Endpoint 2.
 
@@ -170,7 +184,9 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
 * Here, if the project of the Defect entity SE1 is updated to 'Project C' in Endpoint 1, **OpsHub Integration Manager** will synchronize this update to the Bug of Project B, i.e., TE1 in Endpoint 2.
 * Afterwards, if the Bug entity TE1 is updated in the Endpoint 2, it will create a new Defect entity in 'Project A' of Endpoint 1, i.e., SE2:
 
-![RetainCase\_2](../assets/RetainCase_2.png)
+<p align="center">
+  <img src="../assets/RetainCase_2.png" width="900" />
+</p>
 
 * Hence, for one Endpoint 2 entity, i.e., TE1, there will be two entities in Endpoint 1, i.e., SE1 and SE2.
 
@@ -191,7 +207,9 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
 * If the project of the Defect entity SE1 is updated to 'Project D', **OpsHub Integration Manager** will synchronize this update by updating the project of Rally Bug entity TE1 to 'Project E'.
 * If the project of the Bug entity TE2 is updated to 'Project E', **OpsHub Integration Manager** will synchronize this update to Jira Defect entity SE2 of Project A in Endpoint 1 without modifying its project:
 
-![RetainCase\_3](../assets/RetainCase_3.png)
+<p align="center">
+  <img src="../assets/RetainCase_3.png" width="900" />
+</p>
 
 ## Single entity to multiple entities sync with project update restriction
 
@@ -206,7 +224,9 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
 
 * The Defect entity SE1 of the Project A in Endpoint 1 will be synchronized as a Bug entity TE1 in 'Project B' of Endpoint 2 via Integration 1 and Integration 2. So, there will be no entity corresponding to SE1 in the 'Project C' of the Endpoint 2:
 
-![RetainCase\_4](../assets/RetainCase_4.png)
+<p align="center">
+  <img src="../assets/RetainCase_4.png" width="900" />
+</p>
 
 ## Syncing the older entity to multiple entities with project update restriction
 
@@ -222,7 +242,9 @@ Furthermore, OpsHub Integration Manager supports the synchronization of project 
 * Here, the Defect entity SE1 of Endpoint 1 will be synchronized in Endpoint 2 as Bug in Project B (TE1) and as a Problem entity in Project C (TE2).
 * If the project of the Defect entity SE1 is updated to 'Project D', **OpsHub Integration Manager** will synchronize this update to TE2 of Project C (the last updated entity) in Endpoint 2 by modifying the Entity Type from 'Problem' to 'Bug' and deprecate the older entity TE1 (to avoid orphan entities) in Endpoint 2:
 
-![RetainCase\_5](../assets/RetainCase_5.png)
+<p align="center">
+  <img src="../assets/RetainCase_5.png" width="900" />
+</p>
 
 * If the Endpoint 2 does not support the "Entity Type" modification, it will mark the Entity TE1 and TE2 as deprecated and create a new entity TE3 in the target project B.
 
