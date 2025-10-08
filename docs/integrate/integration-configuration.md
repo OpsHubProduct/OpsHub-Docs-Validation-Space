@@ -214,7 +214,7 @@ In the given pop-up, the **Entity Id Field Name**, the **Link Field Name**, and 
     The default schedule is 1 Minute Schedule.
 
    <p align="center">
-    <img src="../assets/Global_Level_Confg.png" alt="Global Config" />
+    <img src="../assets/Global_Level_Confg.png" />
    </p>
 
 
@@ -329,7 +329,12 @@ Suppose, a "Defect" with Id "D123" and navigation URL `systemA_url/project1/defe
 
 If a Wiki or HTML field is selected for **Remote Entity Link Field Name**, Remote Entity Link will be added as a hyperlink of Remote Entity Id.
 
-* Consider the following image where **Notes** (HTML field) is selected for **Remote Entity Link Field Name**: ![Remote Link](../assets/Remote_link_as_hyperlink.png)
+* Consider the following image where **Notes** (HTML field) is selected for **Remote Entity Link Field Name**:
+
+   <p align="center">
+     <img src="../assets/Remote_link_as_hyperlink.png" width="700" />
+   </p>
+
 * Here, **ABC-123** is the Remote Entity Id. The Remote Entity Link (`http://www.jira.com/project/ABC-123`) is added as a hyperlink of Remote Entity Id.
 * On clicking **ABC-123**, you will be redirected to the Remote Entity having Id **ABC-123**.
 
@@ -398,7 +403,7 @@ Once you select **Yes**, the following fields will appear. You need to enter app
 Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > Select **Workflow Association**.
 
 <p align="center">
-  <img src="../assets/Integration_Configuration_Image_11a.png" width="800" />
+  <img src="../assets/Integration_Configuration_Image_11a.png" width="700" />
 </p>
 
 OpsHub Integration Manager provides default workflow, which comes with default installation. If you want a customized workflow, please contact your sales/support point of contact.
@@ -499,7 +504,7 @@ Select a single integration, then click the **Options** button to perform the fo
 > **Note** : Always inactivate an integration to be able to edit it.
 
 <p align="center">
-  <img src="../assets/Integration_Configuration_Image_27a.png" width="600" />
+  <img src="../assets/Integration_Configuration_Image_27a.png" width="300" />
 </p>
 
 
