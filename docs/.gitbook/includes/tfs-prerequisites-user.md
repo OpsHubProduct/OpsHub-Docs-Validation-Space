@@ -88,6 +88,4 @@ Refer [Create Personal Access Token](../../connectors/team-foundation-server.md#
 * Azure DevOps collection must be connected to Microsoft Entra (Azure Active Directory) for which Service Principal is being used.
 * Refer to [Secret key & Certificate](../../connectors/team-foundation-server.md#secret-key-and-certificate-in-microsoft-entra-azure-active-directory) section to generate **Secret key** or to upload **Certificate** in Microsoft Entra (Azure Active Directory).
 
-
-## Internet Information Services (IIS) Configurations
 .
