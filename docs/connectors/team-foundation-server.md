@@ -10,9 +10,9 @@ Click [System Configuration](../integrate/system-configuration.md) to learn the 
 
 Refer the screenshot given below for reference.
 
-<div align="center"><img src="../assets/Team_Foundation_Server_Image_System_Configuration_Edit4.png" alt="" width="1500"></div>
+<div align="center"><img src="../assets/Team_Foundation_Server_Image_System_Configuration_Edit4.png" alt="" width="1100"></div>
 
-<div align="center"><img src="../assets/VSTS_SP_system.png" alt="" width="1500"></div>
+<div align="center"><img src="../assets/VSTS_SP_system.png" alt="" width="1100"></div>
 
 **Azure DevOps System Form Details**
 
