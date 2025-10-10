@@ -15,12 +15,12 @@ I have <code class="expression">space.vars.SITENAME</code> installed on one mach
 ## Steps
 
 {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}1. Stop all migrations {% endif %}
-{% if "OpsHub Integration Manager" === space.vars.SITENAME %}1. Inactivate all integrations {% endif %} 
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}1. Inactivate all integrations {% endif %}
 {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}2. Close <code class="expression">space.vars.SITENAME</code>.{% endif %}
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}2. Stop the <code class="expression">space.vars.SITENAME</code> server. {% endif %} 
-3. Take application and database backup:  
-   * Take Application backup. For more information on how to take application backup, refer [Application Backup](../../../manage/upgrade/taking-application-backup.md#application-backup).  
-   * Take Database backup. For more information on how to take database backup, refer [Database Backup](../../../manage/upgrade/taking-application-backup.md#database-backup).  
+3. Take application and database backup:
+   * Take Application backup. For more information on how to take application backup, refer [Application Backup](../../../manage/upgrade/taking-application-backup.md#application-backup).
+   * Take Database backup. For more information on how to take database backup, refer [Database Backup](../../../manage/upgrade/taking-application-backup.md#database-backup).
    * Make sure you have taken application and database backup properly. If you miss this backup and any of the subsequent steps fail, then you won't be able to restore the application.  
 4. Remove the data of the old instance:  
    * After taking database backup, drop the database.  
