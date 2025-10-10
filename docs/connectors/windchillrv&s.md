@@ -2,7 +2,7 @@
 
 ## User privileges
 
-* Create one user of Windchill RV&S, dedicated to space.vars.SITENAME. User should not be used to do any operations from system's user interface.
+* Create one user of Windchill RV&S, dedicated to <code class="expression">space.vars.SITENAME</code>. User should not be used to do any operations from system's user interface.
 * User should have access to all the projects that needs to be integrated.
 * Integration user should at least have the following ACL permissions:
   * Login
@@ -18,7 +18,7 @@
 
 * For integrating or migrating links, the service user must have the required access to the linked entity.
   * For example, while integrating defects from Windchill RV&S to any other end system, if the release entity linked with defects needs to be synchronized, the user must have the required access to the release entity.
-  * If the user does not have the required access to the linked entity, space.vars.SITENAME will skip that link and add a log at the warning level.
+  * If the user does not have the required access to the linked entity, <code class="expression">space.vars.SITENAME</code> will skip that link and add a log at the warning level.
 
 ## Custom field configuration
 
@@ -45,14 +45,14 @@ One special field is required on the entity that is being synchronized. This mus
 * Start Server Service.
 * Provide the exact version when configuring Windchill RV&S.
 
-**Note**:  For version 2009, 10.7, 12.0, 12.3, 13.1 and 13.3 `ptc.jar` is already present in your space.vars.SITENAME installation directory. The user needs to place only `mksapi.jar`. Follow the steps given above if you have some different Windchill RV&S version.
+**Note**:  For version 2009, 10.7, 12.0, 12.3, 13.1 and 13.3 `ptc.jar` is already present in your <code class="expression">space.vars.SITENAME</code> installation directory. The user needs to place only `mksapi.jar`. Follow the steps given above if you have some different Windchill RV&S version.
 
 ## Configuration for fields to be synchronized
 
 * All the fields, which are to be synchronized from or to Windchill RV&S, should be visible for the configured type. For example, if you want to sync `Bug`, then, make all the required fields visible in `Bug` type.
 * **Item Backed Pick List (IBPL)**
   * To synchronize the above fields, the `Item Identifier` input in the field configuration should have the format like `{ID} {Summary}`. Here, the Backed Item ID should be the first field and its display name should be given after the ID.
-  * If the `Item Identifier` does not have the above mentioned format, the synchronization of IBPL field will not occur. In this case, the error will be logged in space.vars.SITENAME's synchronization logs.
+  * If the `Item Identifier` does not have the above mentioned format, the synchronization of IBPL field will not occur. In this case, the error will be logged in <code class="expression">space.vars.SITENAME</code>'s synchronization logs.
     
 <p align="center">
   <img src="../assets/PTCFieldConfiguration.png" width="800">
@@ -70,7 +70,7 @@ Before you continue to the integration, you must first configure Windchill RV&S.
 
 If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from TEST MEDIAWIKI. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
-The **User Session Limit** in System Configuration is used to limit the number of sessions used by space.vars.SITENAME. The default session limit is 25.
+The **User Session Limit** in System Configuration is used to limit the number of sessions used by <code class="expression">space.vars.SITENAME</code>. The default session limit is 25.
 
 **Note**:  Synchronization time will be affected if less number of sessions are available. Refer to [Modify User Session Limit](#modify-user-session-limit) section to learn more on how to configure the user session limit in Windchill RV&S.
 
@@ -92,13 +92,13 @@ In such scenarios, simply mapping the State field and their look-up values can c
 
 This issue can be resolved by applying any of the following approaches:
 
-1. Add/Edit workflow transition XML in mapping configuration of space.vars.SITENAME
+1. Add/Edit workflow transition XML in mapping configuration of <code class="expression">space.vars.SITENAME</code>
 2. Change the workflow configuration for the failed state in Windchill RV&S for sync user
 
-**1. Add/Edit workflow transition XML in mapping configuration of space.vars.SITENAME**
+**1. Add/Edit workflow transition XML in mapping configuration of <code class="expression">space.vars.SITENAME</code>**
 
 Click [Workflow Transition](../integrate/mapping-configuration.md#workflow-transition) to learn when and how to configure workflow transition XML mapping.
-With this option, space.vars.SITENAME makes the required intermediate status transition automatically as per the transition(s) configuration on the end system.
+With this option, <code class="expression">space.vars.SITENAME</code> makes the required intermediate status transition automatically as per the transition(s) configuration on the end system.
 
 **2. Change workflow configuration in Windchill RV&S**
 
@@ -112,8 +112,8 @@ In Windchill RV&S, user gets an option to configure a field as Rich Text Field a
   <img src="../assets/Windchill_Field_Config.png" width="1000">
 </p>
 
-* If the **Data Type** of the field is **Long Text** and it is configured as a **Rich Text** field in Windchill RV&S system, then only, it will be considered a **Rich Text** field in space.vars.SITENAME mapping; otherwise, it will be considered a **Text** type field in the mapping.
-* Hence, if the user has mapped a Long Text field in mapping and then changes the Rich Text configuration of that field in Windchill RV&S or vice versa, the respective field should be re-mapped in space.vars.SITENAME mapping to accommodate the field configuration changes.
+* If the **Data Type** of the field is **Long Text** and it is configured as a **Rich Text** field in Windchill RV&S system, then only, it will be considered a **Rich Text** field in <code class="expression">space.vars.SITENAME</code> mapping; otherwise, it will be considered a **Text** type field in the mapping.
+* Hence, if the user has mapped a Long Text field in mapping and then changes the Rich Text configuration of that field in Windchill RV&S or vice versa, the respective field should be re-mapped in <code class="expression">space.vars.SITENAME</code> mapping to accommodate the field configuration changes.
 
 ## Rank
 
@@ -129,7 +129,7 @@ In Windchill RV&S, user gets an option to configure a field as Rich Text Field a
 
 ### Known Limitations
 
-* space.vars.SITENAME is not able to connect to Windchill RV&S via proxy for the operations (like loading projects, entities, etc) due to API limitation.
+* <code class="expression">space.vars.SITENAME</code> is not able to connect to Windchill RV&S via proxy for the operations (like loading projects, entities, etc) due to API limitation.
 * When Windchill RV&S is source end system in synchronization:
   * In Windchill RV&S, when a rank (order) is changed for any entity, neither its `Modified Date` is changed nor revision gets generated. Once operation of the rank (order) change is performed, it is reflected in the target end system upon the next update on the entity, which leads to the change in the `Modified Date` of the entity.
 
@@ -219,7 +219,7 @@ Example:
 (field[Type]="Bug")
 ```
 
-* In Query Configuration of the field with value containing special characters **"** (Double Quotes) or **\** (Back slash), the special characters should be escaped (by adding escaping character `\`) while setting the criteria query in the space.vars.SITENAME.
+* In Query Configuration of the field with value containing special characters **"** (Double Quotes) or **\** (Back slash), the special characters should be escaped (by adding escaping character `\`) while setting the criteria query in the <code class="expression">space.vars.SITENAME</code>.
 * Below is the example of the criteria query with the value containing special characters:\
   `(field[Description] ="\"Test Successful!\"")`
 
@@ -252,13 +252,13 @@ Go to **Search in Target Before Sync** section on [Integration Configuration](..
 # Known Behaviour
 
 * **Use Case:** Reducing the **User Session Limit** [field in System configuration]
-  * The **User Session Limit** should be first reduced in space.vars.SITENAME and then in Windchill RV&S.
-  * Mismatch in this limit between space.vars.SITENAME and Windchill RV&S can lead to temporary failures with error message: "MKS161774: Too many concurrent logins. Maximum allowed number of concurrent logins is 1. Please log out from unused Windchill RV&S clients to allow for new logins."_
+  * The **User Session Limit** should be first reduced in <code class="expression">space.vars.SITENAME</code> and then in Windchill RV&S.
+  * Mismatch in this limit between <code class="expression">space.vars.SITENAME</code> and Windchill RV&S can lead to temporary failures with error message: "MKS161774: Too many concurrent logins. Maximum allowed number of concurrent logins is 1. Please log out from unused Windchill RV&S clients to allow for new logins."_
 
  **Entity specific information**
 
 ## Test Suite
-* space.vars.SITENAME does not support **Branches**, **Labels** and **Change Packages** actions for Test Suite synchronization.
+* <code class="expression">space.vars.SITENAME</code> does not support **Branches**, **Labels** and **Change Packages** actions for Test Suite synchronization.
 
 ## Test Case and Test Steps
 
@@ -268,7 +268,7 @@ Go to **Search in Target Before Sync** section on [Integration Configuration](..
 
 ### Test Step fields synchronization and Test Steps subfields
 
-* The user should map the 'Test Steps' field to synchronize test steps using space.vars.SITENAME.
+* The user should map the 'Test Steps' field to synchronize test steps using <code class="expression">space.vars.SITENAME</code>.
 * The Test Steps entity in Windchill RV&S has multiple fields. However, the user can choose to map any number of fields he/she wants by mentioning those fields in advance mapping as shown in the templates below.
 
 ## Mapping for Test Steps field
@@ -364,7 +364,7 @@ Go to **Search in Target Before Sync** section on [Integration Configuration](..
 
 ## Windchill RV&S Requirements
 
-* space.vars.SITENAME supports synchronization of Windchill RV&S Requirements.
+* <code class="expression">space.vars.SITENAME</code> supports synchronization of Windchill RV&S Requirements.
 
  **Known Behaviour**
 
@@ -445,7 +445,7 @@ Here are the steps to configure any-to-any transitions for the selected entity t
 
 **Note:** Above steps includes only 'New' -> 'Test State' as an example, but these steps can be followed for all the required state transitions.<br>
 
->**Note**: This option is applicable if the user does not wish to configure advanced transition's workflow mapping in space.vars.SITENAME. Advanced workflow mapping is required when workflow transition is configured on the end system.
+>**Note**: This option is applicable if the user does not wish to configure advanced transition's workflow mapping in <code class="expression">space.vars.SITENAME</code>. Advanced workflow mapping is required when workflow transition is configured on the end system.
 
 ## Find the role type of the entity type
 
@@ -666,7 +666,7 @@ Following are a few of default link's use case(s) to configure the default **Con
 ```
 ## Handling POST request redirects
 
-* space.vars.SITENAME does not allow redirects for POST requests due to security reasons.
+* <code class="expression">space.vars.SITENAME</code> does not allow redirects for POST requests due to security reasons.
 * If a POST redirect request will be sent to Windchill RV&S, then it may throw an error with **code 302**.
 * Please refer to: [Redirect errors with SOAP based services](../help-center/troubleshooting/errors/common/redirect-errors-with-soap-based-services.md) to resolve the error.
 
