@@ -1,6 +1,13 @@
 # Prerequisites
 
-{% include "../.gitbook/includes/tfs-prerequisites.md" %}
+## Privileges for User
+{% include "../.gitbook/includes/tfs-prerequisites-user.md" %}
+
+## Service configuration
+{% include "../.gitbook/includes/tfs-prerequisites-service-configuration.md" %}
+
+## Internet Information Services(IIS) Configurations
+{% include "../.gitbook/includes/tfs-prerequisites-IIS.md" %}
 
 # System Configuration
 
