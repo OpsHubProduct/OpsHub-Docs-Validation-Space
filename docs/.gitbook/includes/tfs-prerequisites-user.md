@@ -1,5 +1,3 @@
-# Privileges for User
-
 These are the common privileges for **user**. To know specific privileges required for user, refer to [User Privileges](tfs-prerequisites.md#user-privileges).
 
 * Add a user in Azure DevOps that is dedicated for <code class="expression">space.vars.SITENAME</code>. This user shouldn't perform any other action from Azure DevOps user interface. Please make sure this user or Service Principal has a unique display name across the instance.
@@ -76,9 +74,6 @@ Refer [Create Personal Access Token](../../connectors/team-foundation-server.md#
 
 <div align="center"><img src="../../assets/PAT_CUSTOM_PERMISSION.png" alt=""></div>
 
-\
-
-
 > **Note**: In case build pipeline is created with TFSGit as source code, you will need to provide additional permission for Git (as specified in Additional permissions for specific entities) data while creating Personal access token.
 
 #### For On-Premises Deployment
@@ -93,51 +88,6 @@ Refer [Create Personal Access Token](../../connectors/team-foundation-server.md#
 * Azure DevOps collection must be connected to Microsoft Entra (Azure Active Directory) for which Service Principal is being used.
 * Refer to [Secret key & Certificate](../../connectors/team-foundation-server.md#secret-key-and-certificate-in-microsoft-entra-azure-active-directory) section to generate **Secret key** or to upload **Certificate** in Microsoft Entra (Azure Active Directory).
 
-## Service configuration
-
-<code class="expression">space.vars.SITENAME</code> requires this service to communicate with the Azure DevOps. It acts as a translation layer between Azure DevOps and <code class="expression">space.vars.SITENAME</code> and must be configured for synchronization with Azure DevOps.
-
-### Service pre-requisites
-
-* Operating System (Tested On): Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows 7, Windows 8, Windows 8.1, Windows 10
-* It is recommended to install Service on a machine having quad-core processor and minimum 4 GB RAM.
-* Required disk space for the service depends upon the data size of the source control data. It is recommended to have disk space greater than the total data size of source control.
-* It is recommended to install Service on different machine where Team Foundation Server is not installed.
-* The <code class="expression">space.vars.SITENAME</code> Service requires the machine to have .NET framework 4.7.2 or higher installed on it.
-
-> **Note**: Refer to the table below to check which entity types require this pre-requisite. A check mark indicates a mandatory pre-requisite, while a cross mark indicates an optional one.
-
-| **Entity Type**            | **Azure DevOps Services** | **Azure DevOps Server (version >= 2020)** | **Azure DevOps Server (version < 2020)** |
-| -------------------------- | ------------------------- | ----------------------------------------- | ---------------------------------------- |
-| **Work Items**             | ❌                         | ❌                                         | ✅                                        |
-| **Git Commit Information** | ❌                         | ❌                                         | ✅                                        |
-| **Pipeline**               | ❌                         | ❌                                         | ✅                                        |
-| **Build**                  | ❌                         | ❌                                         | ❌                                        |
-| **Other entities**         | ✅                         | ✅                                         | ✅                                        |
-
-Follow the steps given below for installation:
-
-* Navigate to the path `<OPSHUB_INSTALLATION_PATH>\Other_Resources\Resources`.
-* Extract the `OpsHubTFSService.zip` package.
-* Service will be installed on port **<9090>** by default. Please check the port available for service which you configure for the service (Default port is <9090>). Refer section [How to change the port of service](../../connectors/team-foundation-server.md#how-to-change-the-port-of-service) to learn how to change the default port of service.
-* Open the command prompt as _Run As Administrator_ and navigate to the extracted folder in which the `registerTFSWCFService.bat` is placed and execute `registerTFSWCFService.bat`.
-* Once the command is executed, go to Windows Services, and look for a service with the name **OpsHubTFSService**. Check if the service has started or not. If it has not started, then start the service.
-* Test the web service by opening this URL in browser: `http://<hostname>:<port>/TFSService`.\
-  E.g. `http://localhost:9090/TFSService`. For Troubleshooting, refer [Service Troubleshooting](../../connectors/service-troubleshooting.md) section.
-
-In case the machine on which <code class="expression">space.vars.SITENAME</code> installed is behind the proxy (network proxy), then perform the steps mentioned in the [Proxy settings](../../manage/administrator/proxy-setting.md) section.
-
-It is also required to configure the proxy settings for <code class="expression">space.vars.SITENAME</code> Service, refer to [Proxy settings](../../connectors/team-foundation-server.md#proxy-settings-for-the-service) in appendix section for the <code class="expression">space.vars.SITENAME</code> Service to learn the configuration steps.
-{% endif %}
 
 ## Internet Information Services (IIS) Configurations
-
-### For Team Foundation Server \[TFS On-Premise]
-
-* **When TFS System is to be configured with 'Basic Authentication' in <code class="expression">space.vars.SITENAME</code>**
-  * If TFS Server Version is >=2015, the IIS setting for **Basic Authentication** needs to **Enable**, for the steps to enable basic authentication on IIS, please refer [this](https://docs.microsoft.com/en-us/iis/configuration/system.webserver/security/authentication/basicauthentication#how-to)
-  * **Note**: If we use Basic Authentication and this option is **Disabled** in the IIS Manager, then you might receive a processing failure of 'Unauthorized Access'.
-* **When TFS System is to be configured with Personal Access Token in <code class="expression">space.vars.SITENAME</code>**
-  * The IIS setting for **Basic Authentication** needs to be kept **Disabled**.
-  * **Note**: If we use Personal Access Token and **Basic Authentication** option is **Enabled** in the IIS Manager, then you might receive a processing failure of 'Unauthorized Access'.
-  * Please refer [this](https://docs.microsoft.com/en-us/azure/devops/integrate/get-started/authentication/iis-basic-auth?view=azure-devops) link for more information.
+.
