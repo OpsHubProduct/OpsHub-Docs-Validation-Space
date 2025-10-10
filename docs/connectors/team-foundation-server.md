@@ -666,7 +666,7 @@ Widgets can refer to various items like Queries, Teams, Projects. To resolve the
 
 If not provided, <code class="expression">space.vars.SITENAME</code> uses a default JSON.
 
-<div align="center"><img src="../assets/WIdgetSettingIntegration.png" alt="" width="900"></div>
+<div align="center"><img src="../assets/WIdgetSettingIntegration.png" alt="" width="700"></div>
 
 ### JSON Structure Overview
 
@@ -808,7 +808,7 @@ In WIQL, an id of a work item can be referred in the field value.
 
 * Select **Personal Access Tokens** and click on **New Token** option.
 
-<div align="center"><img src="../assets/TFS_CREATE_TOKEN_1.png" alt="" width="1000"></div>
+<div align="center"><img src="../assets/TFS_CREATE_TOKEN_1.png" alt="" width="800"></div>
 
 * Provide the name for the token and select **All accessible organizations** option for the Organization. Then choose the scope for the Personal Access Token, and click on the **create** button.
 
@@ -921,23 +921,23 @@ In WIQL, an id of a work item can be referred in the field value.
 
 For Team Foundation Server click on "Settings".
 
-<div align="center"><img src="../assets/TFS_Collection_Settings_Edit1.png" alt="" width="1000"></div>
+<div align="center"><img src="../assets/TFS_Collection_Settings_Edit1.png" alt="" width="800"></div>
 
 3. Click on the "Security" option.
 
-<div align="center"><img src="../assets/TFS_Security_Option_Edit1.png" alt="" width="1000"></div>
+<div align="center"><img src="../assets/TFS_Security_Option_Edit1.png" alt="" width="800"></div>
 
 4. Click on the "Project Collection Administrators" group. Then click on "Members".
 
-<div align="center"><img src="../assets/Azure_Project_Collection_Administrator_Group_Edit1.png" alt="" width="1000"></div>
+<div align="center"><img src="../assets/Azure_Project_Collection_Administrator_Group_Edit1.png" alt="" width="800"></div>
 
 5. Click on "+ Add" button.
 
-<div align="center"><img src="../assets/TFS_Group_Add_Member_Edit1.png" alt="" width="1000"></div>
+<div align="center"><img src="../assets/TFS_Group_Add_Member_Edit1.png" alt="" width="800"></div>
 
 6. Search the User or Service Principal or user group name in searchbox. Then click on "Save Changes" button.
 
-<div align="center"><img src="../assets/TFS_Save_User_In_User_Group_Edit_2.png" alt="" width="1000"></div>
+<div align="center"><img src="../assets/TFS_Save_User_In_User_Group_Edit_2.png" alt="" width="800"></div>
 
 ### Add User or Service Principal in Project Administration Group
 
@@ -980,7 +980,7 @@ please follow given steps fo find Team Foundation Server version.
 * Open **Team Foundation Server Administration Console**.
 * You can see the Team Foundation Server instance version detila in right side of panel. Please refere given screenshot for reference.
 
-<div align="center"><img src="../assets/TFS_Server_Version_Edit1.png" alt="" width="1000"></div>
+<div align="center"><img src="../assets/TFS_Server_Version_Edit1.png" alt="" width="800"></div>
 
 ## QTP MTM Test Extension Installation and Configuration
 
