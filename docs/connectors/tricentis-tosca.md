@@ -3,8 +3,12 @@
 
 ## User Permissions
 
-* Basic-level access must be granted to the service account for synchronization as shown in the screenshot below.  
-![Tosca_User_Deatils](../assets/Tosca_User_Deatils.PNG)
+* Basic-level access must be granted to the service account for synchronization as shown in the screenshot below.
+* 
+<p align="center">
+  <img src="../assets/Tosca_User_Deatils.PNG" width="900" />
+</p>
+
 * To know how to add a user, refer to [Add Users](#add-users) section in Appendix.
 
 ## Custom Field
@@ -40,8 +44,12 @@ Based on our observations of the timeout behavior from the Tosca server, we reco
 }
 ```
 6. Save and close the `ocelot.json` file.  
-7. After the changes it should look like as shown in the screenshot below.  
-![Tosca_TimeOut](../assets/Tosca_TimeOut.png)
+7. After the changes it should look like as shown in the screenshot below.
+   
+<p align="center">
+  <img src="../assets/Tosca_TimeOut.png" width="900" />
+</p>
+
 8. Restart both the **Tricentis.GatewayService** and **Tricentis.Tosca.RestApiService** for the changes to take effect.
 
 # System Configuration
@@ -51,7 +59,11 @@ Before you start with the integration configuration, you must first configure To
 Refer to [System Configuration](../integrate/system-configuration.md) page to learn the steps to configure a system.
 
 Refer to the screenshot below:  
-![Tosca_System_config_6](../assets/Tosca_System_config_6.png)
+
+<p align="center">
+  <img src="../assets/Tosca_System_config_6.png" width="900" />
+</p>
+
 
 | **Field Name** | **Description** |
 |----------------|-----------------|
@@ -99,7 +111,11 @@ Refer to the screenshot below:
 # Mapping Configuration
 
 Map the fields between Tosca and the other system to be integrated to ensure that the data between both the systems synchronize correctly. Refer to [Mapping Configuration](../integrate/mapping-configuration.md) page to learn the step-by-step process to configure mapping between the systems.  
-![Tosca_System_mapping_5](../assets/Tosca_System_mapping_5.png)
+
+<p align="center">
+  <img src="../assets/Tosca_System_mapping_5.png" width="900" />
+</p>
+
 
 ## Relationship Configuration
 
@@ -114,7 +130,11 @@ In Tosca, Associations will be supported as Relationships.
 # Integration Configuration
 
 Set polling time as the time after which the user wants to synchronize data between Tosca and the other system to be integrated. Also, define parameters and conditions for integration (if any). Refer to [Integration Configuration](../integrate/integration-configuration.md) page to learn the step-by-step process to configure integration between two systems.  
-![Tosca_System_Integration_4](../assets/Tosca_System_Integration_4.png)
+
+<p align="center">
+  <img src="../assets/Tosca_System_Integration_4.png" width="900" />
+</p>
+
 
 # Criteria Configuration
 
@@ -164,21 +184,33 @@ Set polling time as the time after which the user wants to synchronize data betw
 ## Create or Clone Workspace
 
 1. Open Tosca Commander -> Create New option for creating a new workspace.  
-2. You can select database (Repository) as per your use case.  
-   ![Tosca_Project_Creation](../assets/Tosca_Project_Creation.png)
+2. You can select database (Repository) as per your use case.
+   
+<p align="center">
+  <img src="../assets/Tosca_Project_Creation.png" width="900"/>
+</p>
+
 
 ## Add Users
 
 1. Log in to the Tosca Commander with the user having administrator privileges (by default admin user has administrator privileges).  
 2. Navigate to WorkSpace -> Checkout -> Usermanagement.  
 3. Provide necessary details for the fields such as Login Name, Password, etc.  
-   ![Tosca_User_Creation](../assets/Tosca_User_Creation.png)
+
+<p align="center">
+  <img src="../assets/Tosca_User_Creation.png" width="900" />
+</p>
+
 
 ## Create Custom Property
 
 1. Log in to the Tosca Commander with the user having administrator privileges (by default admin user has administrator privileges).  
 2. Navigate to Project -> Properties definition. Now, checkout on project -> select entity in which you want to add custom field -> select create property  
-   ![Tosca_Custom_Field](../assets/Tosca_Custom_Field.png)
+
+<p align="center">
+  <img src="../assets/Tosca_Custom_Field.png" />
+</p>
+
 
 ## Select Date Format
 
@@ -231,7 +263,12 @@ Set polling time as the time after which the user wants to synchronize data betw
 
 * You can identify UI date format from one of the CreatedAt And ModifiedAt fields from Tosca Commander as shown below.
 * According to below example, date format will be **dd-MM-yyyy HH:mm:ss**  
-  ![Tosca_UI_Date_Format](../assets/Tosca_UI_Date_Format.PNG)
+
+<p align="center">
+  <img src="../assets/Tosca_UI_Date_Format.PNG" width="900" />
+</p>
+
+
 
 
 
