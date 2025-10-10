@@ -81,7 +81,7 @@
             * [What are the security aspects of on-premise deployment?](docs/help-center/faqs/general/security-aspects.md)  
             * [How to know which system/entity/version are supported ?](docs/help-center/faqs/general/supported-system-entity-version.md)  
             * [How to migrate from HSQL to other enterprise database?](docs/help-center/faqs/general/hsql-other-database.md)  
-            * [How to move application server from one machine to other?](docs/help-center/faqs/general/how-to-move-application-server-from-one-machine-to-other.md)  
+            * [How to move application server from one machine to other?](docs/help-center/troubleshooting/faqs/general/how-to-move-application-server-from-one-machine-to-other.md)  
             * [Are there any vulnerabilities in <code class="expression">space.vars.SITENAME</code> ?](docs/help-center/faqs/general/vulnerabilities.md)  
             * [Integrations are configured but synchronization is not happening, What can be potentials reasons?](docs/help-center/faqs/general/integration-sync-not-working.md) }}  
             * [Not able to see the newly added projects or lookup values, What can be potentials reasons?](docs/help-center/faqs/general/not-able-to-see-newly-added-projects-or-lookup-values.md)  
