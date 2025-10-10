@@ -6,7 +6,7 @@
 * Basic-level access must be granted to the service account for synchronization as shown in the screenshot below.
 * 
 <p align="center">
-  <img src="../assets/Tosca_User_Deatils.PNG" width="900" />
+  <img src="../assets/Tosca_User_Deatils.PNG" ="1200" />
 </p>
 
 * To know how to add a user, refer to [Add Users](#add-users) section in Appendix.
@@ -47,7 +47,7 @@ Based on our observations of the timeout behavior from the Tosca server, we reco
 7. After the changes it should look like as shown in the screenshot below.
    
 <p align="center">
-  <img src="../assets/Tosca_TimeOut.png" width="900" />
+  <img src="../assets/Tosca_TimeOut.png" width="1500" />
 </p>
 
 8. Restart both the **Tricentis.GatewayService** and **Tricentis.Tosca.RestApiService** for the changes to take effect.
@@ -61,7 +61,7 @@ Refer to [System Configuration](../integrate/system-configuration.md) page to l
 Refer to the screenshot below:  
 
 <p align="center">
-  <img src="../assets/Tosca_System_config_6.png" width="900" />
+  <img src="../assets/Tosca_System_config_6.png" width="1500" />
 </p>
 
 
@@ -267,6 +267,7 @@ Set polling time as the time after which the user wants to synchronize data betw
 <p align="center">
   <img src="../assets/Tosca_UI_Date_Format.PNG" width="900" />
 </p>
+
 
 
 
