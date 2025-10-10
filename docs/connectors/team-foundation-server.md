@@ -808,15 +808,15 @@ In WIQL, an id of a work item can be referred in the field value.
 
 * Select **Personal Access Tokens** and click on **New Token** option.
 
-<div align="center"><img src="../assets/TFS_CREATE_TOKEN_1.png" alt="" width="800"></div>
+<div align="center"><img src="../assets/TFS_CREATE_TOKEN_1.png" alt="" width="900"></div>
 
 * Provide the name for the token and select **All accessible organizations** option for the Organization. Then choose the scope for the Personal Access Token, and click on the **create** button.
 
-<div align="center"><img src="../assets/TFS_CREATE_TOKEN_2.png" alt="" width="500"></div>
+<div align="center"><img src="../assets/TFS_CREATE_TOKEN_2.png" alt="" width="900"></div>
 
 * Copy the token value.
 
-<div align="center"><img src="../assets/TFS_CREATE_TOKEN_3.png" alt="" width="500"></div>
+<div align="center"><img src="../assets/TFS_CREATE_TOKEN_3.png" alt="" width="900"></div>
 
 ## Proxy settings for the Service
 
@@ -848,11 +848,11 @@ In WIQL, an id of a work item can be referred in the field value.
 4. Expand the project and then select the entity which is used for synchronization(in this case Bug).
 5. Click **'OK'** to open the Work Item Type Fields screen.
 
-<div align="center"><img src="../assets/TFS_WORK_ITEMS.png" alt="" width="800"></div>
+<div align="center"><img src="../assets/TFS_WORK_ITEMS.png" alt="" width="600"></div>
 
 6. Here the user will see the list of all the fields with it's data-type and reference name for selected work-item.
 
-<div align="center"><img src="../assets/TFS_Field_Ref_Name_Edit1.png" alt="" width="800"></div>
+<div align="center"><img src="../assets/TFS_Field_Ref_Name_Edit1.png" alt="" width="700"></div>
 
 ## How to change the port of service
 
@@ -877,15 +877,15 @@ In WIQL, an id of a work item can be referred in the field value.
 2. Click "Team Foundation Collection" under "Application Tier".
 3. Select Collection and click "Administer Security".
 
-<div align="center"><img src="../assets/Select_collection.png" alt="" width="900"></div>
+<div align="center"><img src="../assets/Select_collection.png" alt="" width="700"></div>
 
 4. Under "Add Users and Groups", select "Windows User or Group" option and Click "Add".
 
-<div align="center"><img src="../assets/Add_user_tfs.png" alt="" width="900"></div>
+<div align="center"><img src="../assets/Add_user_tfs.png" alt="" width="700"></div>
 
 5. Enter the name of the user and then click "Check Names" to check user existence.
 
-<div align="center"><img src="../assets/Check_name.png" alt="" width="900"></div>
+<div align="center"><img src="../assets/Check_name.png" alt="" width="700"></div>
 
 6. Click "Ok". This will add the user in the selected collection.
 
@@ -899,12 +899,12 @@ In WIQL, an id of a work item can be referred in the field value.
 
 3. In the left panel, under "General" option, click "Users" option and then click "Add New Users".
 
-<div align="center"><img src="../assets/Adure_devops_add_user.png" alt="" width="800"></div>
+<div align="center"><img src="../assets/Adure_devops_add_user.png" alt="" width="700"></div>
 
 4. Add the email address of the user/s under "Users" field and select "Access Level".
 
 
-<div align="center"><img src="../assets/Add_emailid.png" alt="" width="900"></div>
+<div align="center"><img src="../assets/Add_emailid.png" alt="" width="700"></div>
 
 5. Click "Ok".
 
@@ -921,19 +921,19 @@ In WIQL, an id of a work item can be referred in the field value.
 
 For Team Foundation Server click on "Settings".
 
-<div align="center"><img src="../assets/TFS_Collection_Settings_Edit1.png" alt="" width="800"></div>
+<div align="center"><img src="../assets/TFS_Collection_Settings_Edit1.png" alt="" width="700"></div>
 
 3. Click on the "Security" option.
 
-<div align="center"><img src="../assets/TFS_Security_Option_Edit1.png" alt="" width="800"></div>
+<div align="center"><img src="../assets/TFS_Security_Option_Edit1.png" alt="" width="700"></div>
 
 4. Click on the "Project Collection Administrators" group. Then click on "Members".
 
-<div align="center"><img src="../assets/Azure_Project_Collection_Administrator_Group_Edit1.png" alt="" width="800"></div>
+<div align="center"><img src="../assets/Azure_Project_Collection_Administrator_Group_Edit1.png" alt="" width="700"></div>
 
 5. Click on "+ Add" button.
 
-<div align="center"><img src="../assets/TFS_Group_Add_Member_Edit1.png" alt="" width="800"></div>
+<div align="center"><img src="../assets/TFS_Group_Add_Member_Edit1.png" alt="" width="700"></div>
 
 6. Search the User or Service Principal or user group name in searchbox. Then click on "Save Changes" button.
 
@@ -945,7 +945,7 @@ For Team Foundation Server click on "Settings".
 
 2. Navigate to the project. Then click on "Settings" icon and select "Security" option.
 
-<div align="center"><img src="../assets/TFS_Project_Security_Settings_Edit1.png" alt="" width="900"></div>
+<div align="center"><img src="../assets/TFS_Project_Security_Settings_Edit1.png" alt="" width="700"></div>
 
 3. Select "Project Administration" group and select members.
 
@@ -971,7 +971,7 @@ For Team Foundation Server click on "Settings".
 
 3. Navigate to **Certificates** tab and upload a new certificate.
 
-<div align="center"><img src="../assets/VSTS_SP_Certificate.png" alt="" width="900"></div>
+<div align="center"><img src="../assets/VSTS_SP_Certificate.png" alt="" width="700"></div>
 
 ## How to find Team Foundation Server's version
 
