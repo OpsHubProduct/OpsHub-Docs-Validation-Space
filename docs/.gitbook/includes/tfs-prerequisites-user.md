@@ -72,7 +72,7 @@ Refer [Create Personal Access Token](../../connectors/team-foundation-server.md#
 | Variable Groups      | Read & Create                  |
 | Agent Pools          | Read                           |
 
-<div align="center"><img src="../../assets/PAT_CUSTOM_PERMISSION.png" alt="" width="1200"></div>
+<div align="center"><img src="../../assets/PAT_CUSTOM_PERMISSION.png" alt="" width="800"></div>
 
 > **Note**: In case build pipeline is created with TFSGit as source code, you will need to provide additional permission for Git (as specified in Additional permissions for specific entities) data while creating Personal access token.
 
