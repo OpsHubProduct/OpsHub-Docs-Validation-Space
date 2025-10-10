@@ -122,7 +122,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 
 * **Test Point** is an association between Test Suite and Test Case with configuration and tester. This association is synchronized by configuring the **Test-Case linkage** with Test Suite integration.
 
-<div align="center"><img src="../assets/TFSTestPoint.png" alt="" width="1200"></div>
+<div align="center"><img src="../assets/TFSTestPoint.png" alt="" width="1600"></div>
 
 * The **Advance Mapping** required for synchronizing configuration/tester with **Test-Case linkage** is given in the snippet below:
 
@@ -271,9 +271,9 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 
 * The images below show that value list of State field and one of the lookup fields. In both the lists, the "In progress" option is common but alphabetical case is different.
 
-<div align="center"><img src="../assets/Mapping_Configuration_TFS_LookupFieldConf_1.png" alt="" width="800"></div>
+<div align="center"><img src="../assets/Mapping_Configuration_TFS_LookupFieldConf_1.png" alt="" width="600"></div>
 
-<div align="center"><img src="../assets/Mapping_Configuration_TFS_LookupFieldConf_2.png" alt="" width="800"></div>
+<div align="center"><img src="../assets/Mapping_Configuration_TFS_LookupFieldConf_2.png" alt="" width="1000"></div>
 
 * The images below depicts the sample mapping which will be generated, when the lookup field contains the "in progress" option. The "In Progress" value is visible in the mapping.
 
