@@ -14,10 +14,8 @@ I have <code class="expression">space.vars.SITENAME</code> installed on one mach
 
 ## Steps
 
-{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}1. Stop all migrations {% endif %}
-{% if "OpsHub Integration Manager" === space.vars.SITENAME %}1. Inactivate all integrations {% endif %}
-{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}2. Close <code class="expression">space.vars.SITENAME</code>.{% endif %}
-{% if "OpsHub Integration Manager" === space.vars.SITENAME %}2. Stop the <code class="expression">space.vars.SITENAME</code> server. {% endif %}
+1. {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}Stop all migrations {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %}1. Inactivate all integrations {% endif %}
+2. {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}Close <code class="expression">space.vars.SITENAME</code>.{% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %}2. Stop the <code class="expression">space.vars.SITENAME</code> server. {% endif %}
 3. Take application and database backup:
    * Take Application backup. For more information on how to take application backup, refer [Application Backup](../../../manage/upgrade/taking-application-backup.md#application-backup).
    * Take Database backup. For more information on how to take database backup, refer [Database Backup](../../../manage/upgrade/taking-application-backup.md#database-backup). 
