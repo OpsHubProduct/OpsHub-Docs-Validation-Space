@@ -13,7 +13,8 @@ I have <code class="expression">space.vars.SITENAME</code> installed on one mach
 5. Database name of older and newer server is same.  
 
 ## Steps
-1. {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}Stop all migrations {% endif %}
+1. 
+{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}Stop all migrations {% endif %}
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}Inactivate all integrations.{% endif %} 
 2. {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}2. Close <code class="expression">space.vars.SITENAME</code>.{% endif %}
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}2. Stop the <code class="expression">space.vars.SITENAME</code> server. {% endif %} 
