@@ -132,7 +132,7 @@ In Tosca, Associations will be supported as Relationships.
 Set polling time as the time after which the user wants to synchronize data between Tosca and the other system to be integrated. Also, define parameters and conditions for integration (if any). Refer to [Integration Configuration](../integrate/integration-configuration.md) page to learn the step-by-step process to configure integration between two systems.  
 
 <p align="center">
-  <img src="../assets/Tosca_System_Integration_4.png" width="900" />
+  <img src="../assets/Tosca_System_Integration_4.png" width="1500" />
 </p>
 
 
@@ -267,6 +267,7 @@ Set polling time as the time after which the user wants to synchronize data betw
 <p align="center">
   <img src="../assets/Tosca_UI_Date_Format.PNG" width="900" />
 </p>
+
 
 
 
