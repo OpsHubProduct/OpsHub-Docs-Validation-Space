@@ -3,7 +3,7 @@ In case of HTTPS deployment of **<code class="expression">space.vars.SITENAME</c
 Follow the steps given below for updating the encrypted keystore and private key passwords in **<code class="expression">space.vars.SITENAME</code>**:
 
 * Stop OpsHub Server Service before execution of this utility.
-* Navigate to `<<code class="expression">space.vars.SITENAME</code> Installation Folder>/Other_Resources/Resources`.
+* Navigate to `<code class="expression">space.vars.SITENAME</code> Installation Folder>/Other_Resources/Resources`.
 * Unzip `"OpsHub Keystore Password Encryptor Utility.zip"`.
 * Run `KeystorePasswordEncryptorUtility.bat` for Windows system. In case of Linux system, run `KeystorePasswordEncryptorUtility.sh`.
 * Enter the path for OpsHub Installation Directory.

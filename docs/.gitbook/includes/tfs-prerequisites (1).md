@@ -4,7 +4,7 @@ title: Privileges for User
 
 These are the common privileges for **user**. To know specific privileges required for user, refer to [User Privileges](broken-reference).
 
-* Add a user in Azure DevOps that is dedicated for OpsHub Integration Manager. This user shouldn't perform any other action from Azure DevOps user interface. Please make sure this user or Service Principal has a unique display name across the instance.
+* Add a user in Azure DevOps that is dedicated for <code class="expression">space.vars.SITENAME</code>. This user shouldn't perform any other action from Azure DevOps user interface. Please make sure this user or Service Principal has a unique display name across the instance.
 * User must be a member of **Project Administrators** group for work item entities and Build entity migration. For Meta entities like Group, User entities, integration user must be a member of **Project Collection Administrators** group or **Project Administrators** group. Refer section [How to Add User or Service Principal in group](../../connectors/team-foundation-server.md#how-to-add-user-or-service-principal-in-group).
 
 > **Note**: If integration user is not a member of **Project Collection Administrators** group, collection level permissions will not be synchronized.

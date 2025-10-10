@@ -65,30 +65,30 @@ DELETE FROM reportsdb.ReportsDBVersion WHERE version='6.11.02.00.00';
 ## Link changes in <code class="expression">space.vars.SITENAME</code> for Jira Cloud
 
 **Applicable When:**
-- Jira Cloud is configured as one of the end points in the integration and the Epic link/Parent link/Issues in Epic/Child issues are configured in the OpsHub Integration Manager mapping.
+- Jira Cloud is configured as one of the end points in the integration and the Epic link/Parent link/Issues in Epic/Child issues are configured in the <code class="expression">space.vars.SITENAME</code> mapping.
 
 **Actions:**
-- If the user has mapped both the Epic and the Parent links in the OpsHub Integration Manager's relationship mapping:
+- If the user has mapped both the Epic and the Parent links in the <code class="expression">space.vars.SITENAME</code>'s relationship mapping:
   - The user needs to remove one of them from the mapping. For example, they can remove Epic link/Parent link. Both these links must not be mapped.
-- If the user has mapped both Child issues and Issues in the Epic link in the OpsHub Integration Manager's relationship mapping:
+- If the user has mapped both Child issues and Issues in the Epic link in the <code class="expression">space.vars.SITENAME</code>'s relationship mapping:
   - The user needs to remove one of them from the mapping. For example, they can remove Child issues/Issues in Epic. Both these links must not be mapped.
 
 **Reason:**
-- In Jira Cloud, the Epic link and the Parent link are merged to Parent link and Child issues & Issues in Epic are merged to the Child link. To adopt the Jira cloud behavior changes, the link changes are executed in the OpsHub Integration Manager.
+- In Jira Cloud, the Epic link and the Parent link are merged to Parent link and Child issues & Issues in Epic are merged to the Child link. To adopt the Jira cloud behavior changes, the link changes are executed in the <code class="expression">space.vars.SITENAME</code>.
 
 ---
 
-# Migrating OpsHub Integration Manager version to 7.151 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.151 or above
 
-## Link changes in OpsHub Integration Manager for Codebeamer
+## Link changes in <code class="expression">space.vars.SITENAME</code> for Codebeamer
 
 **Applicable When:**
-- Codebeamer/Codebeamer X is configured as one of the end points in the integration and the Parent/Hierarchy Parent/Child/Hierarchy Child links are configured in the OpsHub Integration Manager mapping.
+- Codebeamer/Codebeamer X is configured as one of the end points in the integration and the Parent/Hierarchy Parent/Child/Hierarchy Child links are configured in the <code class="expression">space.vars.SITENAME</code> mapping.
 
 **Actions:**
-- If the user has mapped both Parent and Hierarchy Parent links in the OpsHub Integration Manager's relationship mapping:
+- If the user has mapped both Parent and Hierarchy Parent links in the <code class="expression">space.vars.SITENAME</code>'s relationship mapping:
   - The user needs to remove one of them from the mapping. For example, Parent/Hierarchy Parent link can be removed. Both these links must not be mapped.
-- If the user has mapped both Child and Hierarchy Child links in the OpsHub Integration Manager's relationship mapping:
+- If the user has mapped both Child and Hierarchy Child links in the <code class="expression">space.vars.SITENAME</code>'s relationship mapping:
   - The user needs to remove one of them from the mapping. For example, Child/Hierarchy Child link can be removed. Both these links must not be mapped.
 
 **Reason:**
@@ -98,7 +98,7 @@ DELETE FROM reportsdb.ReportsDBVersion WHERE version='6.11.02.00.00';
 
 ---
 
-# Migrating OpsHub Integration Manager version to 7.160 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.160 or above
 
 ## Integration configuration changes for Milestone entity in Rally
 
@@ -122,7 +122,7 @@ DELETE FROM reportsdb.ReportsDBVersion WHERE version='6.11.02.00.00';
 
 ---
 
-# Migrating OpsHub Integration Manager version to 7.162 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.162 or above
 
 ## Provide additional permission for the Personal Access Token of Azure DevOps Services (Cloud Deployment)
 
@@ -140,12 +140,12 @@ DELETE FROM reportsdb.ReportsDBVersion WHERE version='6.11.02.00.00';
 
 ---
 
-# Migrating OpsHub Integration Manager version to 7.172 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.172 or above
 
 ## Upgrade MSSQL Server to 2012 or above
 
 **Applicable When:**
-- If OpsHub Integration Manager is installed with Microsoft SQL Server database version below 2012.
+- If <code class="expression">space.vars.SITENAME</code> is installed with Microsoft SQL Server database version below 2012.
 
 **Actions:**
 - Upgrade Microsoft SQL Server to 2012 or above versions.
@@ -159,12 +159,12 @@ DELETE FROM reportsdb.ReportsDBVersion WHERE version='6.11.02.00.00';
 ## Updating the MSSQL 2012 database connector JAR
 
 **Applicable When:**
-- This update is necessary if OpsHub Integration Manager is running on MSSQL 2012 and currently using the connector JAR package `sqljdbc_6.0.8112.100_enu.tar.gz`.
+- This update is necessary if <code class="expression">space.vars.SITENAME</code> is running on MSSQL 2012 and currently using the connector JAR package `sqljdbc_6.0.8112.100_enu.tar.gz`.
 
 **Actions:**
 **Prerequisites**
-1. If the current OIM version is lower than OpsHub Integration Manager 7.143 and an upgrade to 7.172 is required, follow these steps:
-   - First, upgrade to OpsHub Integration Manager 7.143 using the old JAR file, `sqljdbc_6.0.8112.100_enu.tar.gz`.
+1. If the current OIM version is lower than <code class="expression">space.vars.SITENAME</code> 7.143 and an upgrade to 7.172 is required, follow these steps:
+   - First, upgrade to <code class="expression">space.vars.SITENAME</code> 7.143 using the old JAR file, `sqljdbc_6.0.8112.100_enu.tar.gz`.
    - After completing the migration to version 7.143, proceed with the steps mentioned below and then upgrade to version 7.172.
 
 - Locate the old JAR file `sqljdbc42.jar` in the following directories:
@@ -182,7 +182,7 @@ DELETE FROM reportsdb.ReportsDBVersion WHERE version='6.11.02.00.00';
   - Delete the existing `sqljdbc_auth.dll` located in `<INSTALLATION_PATH>/OpsHub_Resources/jre/bin`.
 
 **Reason:**
-- Flyway has been updated from version 4.2 to 10.15, and the newer version does not support the connector JAR `sqljdbc42.jar`. Therefore, it is necessary to upgrade to `mssql-jdbc-10.2.0.jre11.jar` to maintain compatibility and avoid OpsHub Integration Manager upgrade failure.
+- Flyway has been updated from version 4.2 to 10.15, and the newer version does not support the connector JAR `sqljdbc42.jar`. Therefore, it is necessary to upgrade to `mssql-jdbc-10.2.0.jre11.jar` to maintain compatibility and avoid <code class="expression">space.vars.SITENAME</code> upgrade failure.
 
 ---
 

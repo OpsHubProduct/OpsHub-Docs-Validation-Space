@@ -10,7 +10,7 @@ Follow the steps given below for updating database password in OpsHub:
 * Close OM4ADO application before execution of the utility.
   {% endif %}
 
-* Go to `<<code class="expression">space.vars.SITENAME</code> Installation Folder>/Other_Resources/Resources`.
+* Go to `<code class="expression">space.vars.SITENAME</code> Installation Folder>/Other_Resources/Resources`.
 * Unzip `OpsHub Database Management utility.zip`.
 * Run `OpsHubDatabaseManagementUtility.bat` for Windows system.  
   {% if "OpsHub Integration Manager" === space.vars.SITENAME %} In case of Linux system, run `OpsHubDatabaseManagementUtility.sh`.{% endif %}

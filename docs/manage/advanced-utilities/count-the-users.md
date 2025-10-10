@@ -7,7 +7,7 @@
   * Total Users across all systems configured
   * Total Users count per system
   * Detailed list for each of the users as per their availability in the systems configured
-* The utility **UserCountUtility.zip** is by default bundled with \{{SITENAME\}} installation and can be found at `<<code class="expression">space.vars.SITENAME</code> Installation Folder>/Other_Resources/Resources/UserCountUtility.zip`.
+* The utility **UserCountUtility.zip** is by default bundled with \{{SITENAME\}} installation and can be found at `<code class="expression">space.vars.SITENAME</code> Installation Folder>/Other_Resources/Resources/UserCountUtility.zip`.
 * The utility can be executed only from the machine where \{{SITENAME\}} is installed.
 * The utility folder contains following files:
   * input.properties: To provide the input details required to run the utility.
@@ -30,13 +30,13 @@ Below is an example of input.properties file:
 
 Following are the steps to run the utility:
 
-* Go to `<<code class="expression">space.vars.SITENAME</code> Installation Folder>/Other_Resources/Resources`.
+* Go to `<code class="expression">space.vars.SITENAME</code> Installation Folder>/Other_Resources/Resources`.
 * Unzip `UserCountUtility.zip`.
 * Update the `input.properties` file as stated [here](count-the-users.md#input).
 *
 * If your \{{SITENAME\}} is installed on Windows machine, then refer to the steps given below:
   * Open Command Prompt
-  * Navigate to `<<code class="expression">space.vars.SITENAME</code> Installation Folder>/Other_Resources/Resources` path
+  * Navigate to `<code class="expression">space.vars.SITENAME</code> Installation Folder>/Other_Resources/Resources` path
   * Execute the bat using command `UserCountUtility.bat` as shown below:
 
 <div align="center"><img src="../../assets/User_Count_Utility_5_a.png" alt="" width="800"></div>
@@ -44,7 +44,7 @@ Following are the steps to run the utility:
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
 * If your \{{SITENAME\}} is installed on Linux machine, then refer to the steps given below:
   * Open Shell Script
-  * Navigate to `<<code class="expression">space.vars.SITENAME</code> Installation Folder>/Other_Resources/Resources` path
+  * Navigate to `<code class="expression">space.vars.SITENAME</code> Installation Folder>/Other_Resources/Resources` path
   * Execute the bat using command `sh UserCountUtility.sh` as shown below:
 
 <div align="center"><img src="../../assets/User_Count_Utility_6_a.png" alt="" width="800"></div>

@@ -19,13 +19,13 @@
 ## Setting up OpsHubEAWindowsService
 
 * Check the availability of port 9393 as OpsHubEAWindowsService will be using port 9393 by default. Refer to [How to Change the Port of OpsHubEAWindowsService](enterprise-architect.md#how-to-change-the-port-of-opshubeawindowsservice) section to change the default port of the OpsHubEAWindowsService.
-* Locate the path `<<code class="expression">space.vars.SITENAME</code>_INSTALLATION_PATH>\Other_Resources\Resources`.
+* Locate the path `<code class="expression">space.vars.SITENAME</code>_INSTALLATION_PATH>\Other_Resources\Resources`.
 * Extract the OpsHubEAService.zip package.
 * Open `EAService.exe.config` in text editor. Scroll to the end of the file for this line:\
   `<add key="ATTACHMENT_PATH" value="C:\EAAttachments"/>`
 * Set the value to a folder location where the local system has **write** access. (This step can be skipped if the user's local system has adequate write permissions in the local drive C). Attachments synchronizing from/to Enterprise Architect need to be saved locally. This folder will be used for saving the attachments locally.
   * This configuration is required even when attachment's synchronization is disabled.
-* Go to `<<code class="expression">space.vars.SITENAME</code>_INSTALLATION_PATH>\OpsHubEAService` folder, and run `EAService.exe` in administrator mode to start OpsHubEAWindowsService.
+* Go to `<code class="expression">space.vars.SITENAME</code>_INSTALLATION_PATH>\OpsHubEAService` folder, and run `EAService.exe` in administrator mode to start OpsHubEAWindowsService.
 * Test the web service by opening this URL in browser: `http://<hostname>:9393/EAService`.\
   E.g. `http://localhost:9393/EAService`
 
@@ -39,7 +39,7 @@
 
 **How to register OpsHub's Extension**
 
-1. Locate the path `<<code class="expression">space.vars.SITENAME</code>_INSTALLATION_PATH>\Other_Resources\Resources` on the machine where <code class="expression">space.vars.SITENAME</code> is installed.
+1. Locate the path `<code class="expression">space.vars.SITENAME</code>_INSTALLATION_PATH>\Other_Resources\Resources` on the machine where <code class="expression">space.vars.SITENAME</code> is installed.
 2. Copy the `OpsHubEAAddIn.zip` package on the desired machine where EA Client is installed and this extension need to be configure.
 3. Extract `OpsHubEAAddIn.zip` package in the specific location on the same machine where zip file was copied.
 4. Open **Command Prompt as Administrator** and navigate to the extracted folder location of `OpsHubEAAddIn`.
@@ -489,7 +489,7 @@ In the image below, the inputs given will create a new field named “OH_Last_Up
 
 ## How to Change the Port of OpsHubEAWindowsService
 
-1. Open Windows File Explorer and navigate to the service installation folder at `<<code class="expression">space.vars.SITENAME</code>_INSTALLATION_PATH>\Other_Resources\Resources\OpsHubEAService>`.
+1. Open Windows File Explorer and navigate to the service installation folder at `<code class="expression">space.vars.SITENAME</code>_INSTALLATION_PATH>\Other_Resources\Resources\OpsHubEAService>`.
 2. Open the file named **EAService.exe.config** in any text editor.
 3. Search `<baseAddresses>` tag in the file. In the `<add>` tag under the `<baseAddresses>` tag, change the value of the attribute **baseAddress** which will be in the form of a URL. The default port of the URL will be 9393. Change it with the port on which the user wants to deploy the service. Save the changes.
 

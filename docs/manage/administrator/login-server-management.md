@@ -156,7 +156,7 @@ Select Login Server Type as SAML 2.0 and the form shown below would be displayed
 # Default <code class="expression">space.vars.SITENAME</code> Server
 
 In the list of login servers, users can find a record for **Default Server** of type **<code class="expression">space.vars.SITENAME</code>**.  
-Using this, users can login with the default credentials or the users configured in OpsHub Integration Manager itself fall in this category.
+Using this, users can login with the default credentials or the users configured in <code class="expression">space.vars.SITENAME</code> itself fall in this category.
 
 <p align="center">
   <img src="../../assets/LDAP_Image_3.png"  style="width:1000px;" />
@@ -164,7 +164,7 @@ Using this, users can login with the default credentials or the users configured
 
 This server cannot be deleted.
 
-**Note** : If the Default Server is inactivated and OpsHub Integration Manager is unable to connect with any of the active LDAP servers, please contact sales/support representative.
+**Note** : If the Default Server is inactivated and <code class="expression">space.vars.SITENAME</code> is unable to connect with any of the active LDAP servers, please contact sales/support representative.
 
 ---
 
@@ -183,7 +183,7 @@ One can search configured login servers using the search options available.
 
 - **Server Name**: Search could be done by name of server.
 - **Status**: Login servers could be filtered by the state **Active** or **Inactive**.
-- **Server Type**: Login Servers could be filtered on the basis of Server type, i.e. LDAP, SAML 2.0 or OpsHub Integration Manager.
+- **Server Type**: Login Servers could be filtered on the basis of Server type, i.e. LDAP, SAML 2.0 or <code class="expression">space.vars.SITENAME</code>.
 
 **Login Server view has the following information:**
 

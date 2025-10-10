@@ -1,6 +1,6 @@
 # Different Types of Logs
 
-There are different logs maintained and stored under **`<<code class="expression">space.vars.SITENAME</code> Installation Folder>\AppData\logs`** during the installation process and one log is maintained to track the ongoing processing in \<code class="expression">space.vars.SITENAME</code>.
+There are different logs maintained and stored under **`<code class="expression">space.vars.SITENAME</code> Installation Folder>\AppData\logs`** during the installation process and one log is maintained to track the ongoing processing in \<code class="expression">space.vars.SITENAME</code>.
 
 | **Log File Name**      | **Description**                                                                                                                                                                                                                                                                                                                                                         |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
