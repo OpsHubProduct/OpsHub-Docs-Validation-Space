@@ -93,11 +93,11 @@ Following are the limitations and behaviors specific to the individual entities 
    * Example: Suppose bi-directional integration is being configured between X system and TFS system. Further, criteria with end system storage is configured for the integration between **TFS Bug to X System Bug**, and the bypass rule is enabled for the TFS system used with integration between **X System Bug to TFS Bug**. Those entities which are created by OIM into TFS system via integration **X System Bug to TFS Bug** won't get polled by integration of **TFS Bug to X System Bug**, given those entities are not meeting the criteria configured for the integration **TFS Bug to X System Bug**. Refer the below screenshots for more clarity on the configuration along with the workaround.
    * **Workaround:** Edit the mapping of the **X System Bug to TFS Bug** to map the field used for an end system storage criteria setting on integration **TFS Bug to X System Bug** to -NONE- with value as 'True'.
 
-<div align="center"><img src="../../assets/tfs_Integration_Criteria_Settings3.PNG" alt=""></div>
+<div align="center"><img src="../../assets/tfs_Integration_Criteria_Settings3.PNG" alt="" width="900"></div>
 
-<div align="center"><img src="../../assets/tfs_target_system_with_bypass3.PNG" alt=""></div>
+<div align="center"><img src="../../assets/tfs_target_system_with_bypass3.PNG" alt="" width="900"></div>
 
-<div align="center"><img src="../../assets/tfs_mapping_field_defaultVal3.PNG" alt=""></div>
+<div align="center"><img src="../../assets/tfs_mapping_field_defaultVal3.PNG" alt="" width="900"></div>
 
 8. For Team Foundation Server with version equal to or above 2017, the Remote URL will be different from the remote URLs of the older versions of Team Foundation Server. Also, for Azure DevOps, the Remote URLs will be different.
 
@@ -312,42 +312,42 @@ Following are the limitations and behaviors specific to the individual entities 
 
       * Azure DevOps End point Format - User Display Name . **Example:** demouser1 [demouser1@opshub.com](mailto:demouser1@opshub.com)
       * Format being used for processing/synchronization - User Display Name . **Example:** demouser1 [demouser1@opshub.com](mailto:demouser1@opshub.com)\
-        \[No change is done here and hence it's expected that User Display Name is same in Source and Target End Point and based on that the user values will be synchronized/visible in the target end point]\
-        In case the user with same display name is not available in target end point then the source user display name will be synchronized as text in the WIQL field in the target end system.\
-        **For example -**\
-        Consider a WIQL:\
-        `select [System.ID], [System.WorkItemType] from WorkItems where [System.State] = 'Active' and [System.AssignedTo] in ('demouser1 <demouser1@opshub.com>', 'demouser2 <demouser2@opshub.com>')`\
-        This will be synchronized as:\
-        `select [System.ID], [System.WorkItemType] from WorkItems where [System.State] = 'Active' and [System.AssignedTo] in ('demouser1 <demouser1@opshub.com>', demouser2)`\
+        [No change is done here and hence it's expected that User Display Name is same in Source and Target End Point and based on that the user values will be synchronized/visible in the target end point]
+        In case the user with same display name is not available in target end point then the source user display name will be synchronized as text in the WIQL field in the target end system.
+        **For example -**
+        Consider a WIQL:
+        `select [System.ID], [System.WorkItemType] from WorkItems where [System.State] = 'Active' and [System.AssignedTo] in ('demouser1 <demouser1@opshub.com>', 'demouser2 <demouser2@opshub.com>')`
+        This will be synchronized as:
+        `select [System.ID], [System.WorkItemType] from WorkItems where [System.State] = 'Active' and [System.AssignedTo] in ('demouser1 <demouser1@opshub.com>', demouser2)`
         if no user with user name **demouser2** exists in target end system.
 
       **Id values mentioned in WIQL**
 
       * In WIQL, an id of a work item can be referred in the field value.
-      * Azure DevOps End point Format - \[ID] \[=, <, >, <=, >=, <>, in] \[Source entity id]. **Example:** `[ID] = [12345]`
-      * Format being used for processing/synchronization - `[ID] = [12345]`\
-        \[No change is done here and hence the source work item id will be synchronized/visible in the target end point]\
-        In case, you want the Source workitem id to be replaced with its corresponding target id \[Which is synchronized by \{{SITENAME\}}], please use a customized workflow - **Default Integration Workflow - TFS to TFS - Query.xml**\
-        **For example -**\
-        Consider a WIQL:\
-        `select [System.ID], [System.WorkItemType] from WorkItems where [System.ID] = 1234 and [System.AssignedTo]`\
-        This will be synchronized as:\
-        `select [System.ID], [System.WorkItemType] from WorkItems where [System.ID] = 6789 and [System.AssignedTo]`\
+      * Azure DevOps End point Format - [ID] [=, <, >, <=, >=, <>, in] [Source entity id]. **Example:** `[ID] = [12345]`
+      * Format being used for processing/synchronization - `[ID] = [12345]`
+        \[No change is done here and hence the source work item id will be synchronized/visible in the target end point]
+        In case, you want the Source workitem id to be replaced with its corresponding target id [Which is synchronized by {{SITENAME}}], please use a customized workflow - **Default Integration Workflow - TFS to TFS - Query.xml**
+        **For example **
+        Consider a WIQL:
+        `select [System.ID], [System.WorkItemType] from WorkItems where [System.ID] = 1234 and [System.AssignedTo]`
+        This will be synchronized as:
+        `select [System.ID], [System.WorkItemType] from WorkItems where [System.ID] = 6789 and [System.AssignedTo]`
         Here, "1234" is the source workitem id and "6789" is the corresponding target work item id.
 * Azure DevOps is configured as target:
   * **Folder synchronization**
     * In Azure DevOps, **Query** entities can be organized in different folders.
-    * In \{{SITENAME\}}, the field **Folder** corresponds to the folders present in the end system.
-    * While Query synchronization, if the Query's folder is not available in target, then \{{SITENAME\}} will first create the folder and then the query will be synchronized to that folder.
+    * In {{SITENAME}}, the field **Folder** corresponds to the folders present in the end system.
+    * While Query synchronization, if the Query's folder is not available in target, then {{SITENAME}} will first create the folder and then the query will be synchronized to that folder.
 
 #### Widget Entity
 
 * **Remote Entity Link** is not supported for Widget entity because in Azure DevOps itself there is no independent URL to access a widget. Refer to [Tracking Link of Entities Across Systems](../../integrate/integration-configuration.md#tracking-id-and-link-of-entities-across-systems) for more information on this feature.
 * When Azure DevOps is configured as target:
   * In Azure DevOps, a widget can be only created within a dashboard. Hence, configuring a relationship of type **Dashboard** is mandatory so that widget gets created within that dashboard.
-    * A failure \[OH-Connector-0059] will be generated in case a dashboard is not synchronized and its widget is getting synchronized. In such cases, dashboard must be synchronized first and then widget creation failure should be retried.
+    * A failure [OH-Connector-0059] will be generated in case a dashboard is not synchronized and its widget is getting synchronized. In such cases, dashboard must be synchronized first and then widget creation failure should be retried.
 * **Configuration field behavior**
-  * There can be variety of widgets and each widget can have its own configuration. Widget configuration can be synchronized using **Configuration** field in \{{SITENAME\}}.
+  * There can be variety of widgets and each widget can have its own configuration. Widget configuration can be synchronized using **Configuration** field in {{SITENAME}}.
 * **Widgets re-positioning behavior**
   * A Dashboard has pre-defined number of tiles where widgets can be added or re-positioned.
   * As long as the source and target dashboard have same widgets positioning i.e same position and size, the synchronization will work as per expectation. If the widget positioning differs, synchronization will fail with "widget collision" exception.
@@ -364,8 +364,8 @@ Following are the limitations and behaviors specific to the individual entities 
 
     * When widgets are re-positioned in source, the dashboard in target needs to be re-positioned as well using following configuration:
       * The **Widget** link must be configured in Dashboard mapping.
-    * The dashboard must be re-synchronized through \{{SITENAME\}}.
-    * In case of widget collision failure, the user will have to move the existing widget in target to another position, and then retry the processing failure of Dashboard integration in \{{SITENAME\}} to synchronize the widget re-positioning.
+    * The dashboard must be re-synchronized through {{SITENAME}}.
+    * In case of widget collision failure, the user will have to move the existing widget in target to another position, and then retry the processing failure of Dashboard integration in {{SITENAME}} to synchronize the widget re-positioning.
 
     > **Note** Any update on fields - **Position Row, Position Column, Size Row Span and Size Column Span** will be ignored during widget update synchronization.
 * **Query Charts used as Dashboard Widgets:**
@@ -373,7 +373,7 @@ Following are the limitations and behaviors specific to the individual entities 
     * **Reason:** The API for widget does not provide the required query link information in the above use case.
     * **Solution:** The issue can be resolved by saving these type of widgets on source side without any changes. This will unlink the widget from the chart and link to the original query, providing the correct query link information.
 * For accurate ID transformation using [Transformation JSON](../../connectors/team-foundation-server.md#json-structure-overview), these items must have corresponding target items with the same name - Release, Project, Team, Repository. If not present, those configurations will be synchronized with empty values.
-* For widgets with team configurations where the selected teams belong to projects different from the one being synchronized, values for these cross-project teams will be synchronized only in version 2018 and above.\
+* For widgets with team configurations where the selected teams belong to projects different from the one being synchronized, values for these cross-project teams will be synchronized only in version 2018 and above.
   **Reason:** API to fetch teams across-project teams is available from version 2018.
 * From the widgets provided by Azure DevOps out-of-the-box, following widgets synchronization have some limitations:
   * The Cumulative Flow Diagram widget will be synchronized with empty values in Backlog, Swimlane, and Column fields.
@@ -402,7 +402,7 @@ Following are the limitations and behaviors specific to the individual entities 
 
 To synchronize Pull Request, you need to select the repositories of the respective projects selected for the synchronization as shown in the screenshot:
 
-<div align="center"><img src="../../assets/ADOPullReqRepoSelection.png" alt="" width="600"></div>
+<div align="center"><img src="../../assets/ADOPullReqRepoSelection.png" alt="" width="1000"></div>
 
 #### Configuring Related Workitem Regex
 
@@ -414,7 +414,7 @@ User can provide the target entity Ids in the Pull Request fields like Title/Des
 [A-Za-z]+-\d+
 ```
 
-<div align="center"><img src="../../assets/ADOPullReqRegexInput.png" alt="" width="600"></div>
+<div align="center"><img src="../../assets/ADOPullReqRegexInput.png" alt="" width="1000"></div>
 
 ### Build Entity
 
@@ -424,16 +424,15 @@ User can provide the target entity Ids in the Pull Request fields like Title/Des
 * Build entity does not have historical data, hence historical data are not supported.
 * Stage update will be synchronized to target system.
 *   If user wants to sync the Build only after particular stage of the pipeline, it can be achieved via the OpsHub Workflow changes and utility functions defined into com.opshub.eai.tfs.buildentity.TFSBuildUtility class \[for example getMatchedNodes function from the TFSBuildUtility can be called from the advanced integration workflow to get the builds that matches with particular stage mentioned into argument].
-
-    > **Note** For Workflow changes and utility function, contact the OpsHub Sales team.
+  > **Note** For Workflow changes and utility function, contact the OpsHub Sales team.
 * Criteria configuration with Select criteria storage type as In End System not supported due to build entity does not have custom fields.
 * **Shelveset name** and **drop location root** field details will not be available for synchronization.
   * Reason: ADO/TFS API Limitation.
 * To sync the stages' approvals, the following points must be considered:
   * Three text types of the fields need to be created for stage identifier(in YML file of pipeline for particular stage), approval status, approval comments in source system, from which the data will be synced to Build entity.
   * To approve the build stage, user needs to give the above three values in the above fields.
-  * Map the 'None' field of the source system to the OH\_StageApproval field of build entity in \{{SITENAME\}}. The following advance mapping should be utilized for mapping the 'None' field to OH\_StageApproval:
-
+  * Map the 'None' field of the source system to the OH_StageApproval field of build entity in {{SITENAME}}. The following advance mapping should be utilized for mapping the 'None' field to OH_StageApproval:
+    
 ```xml
 <oh_stageApproval xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:variable name="sap" select="'SEPARATOR'"/>
@@ -451,15 +450,13 @@ User can provide the target entity Ids in the Pull Request fields like Title/Des
 </oh_stageApproval>
 ```
 
-* Put the field's internal name of stage identifier, approval status, approval comments in the advanced mapping in place of FIELD\_INTERNAL\_NAME\_OF\_STAGE\_IDENTIFIER, FIELD\_INTERNAL\_NAME\_OF\_STATUS, FIELD\_INTERNAL\_NAME\_OF\_COMMENTS respectively.
+* Put the field's internal name of stage identifier, approval status, approval comments in the advanced mapping in place of FIELD_INTERNAL_NAME_OF_STAGE_IDENTIFIER, FIELD_INTERNAL_NAME_OF_STATUS, FIELD_INTERNAL_NAME_OF_COMMENTS respectively.
 * Put any separator in place of SEPARATOR. In multiple stage approvals, user needs to give three fields' data with SEPARATOR separated value in the opposite entity.
 * The approval sync requires the status and stage identifier to approve the stage. For example, if there is ',' as SEPARATOR in advanced mapping, to approve stage 1 and stage 2 at a time, the following values must be inserted:
-  * Put **stage1Identifier,stage2Identifier** value in FIELD\_INTERNAL\_NAME\_OF\_STAGE\_IDENTIFIER
-  * Put **comment1,comment2** value in FIELD\_INTERNAL\_NAME\_OF\_COMMENTS (here comment1 is for stage 1 and comment2 is for stage 2 approval)
-  * Put **approved,rejected** value in FIELD\_INTERNAL\_NAME\_OF\_STATUS (here stage 1 will be approved and stage 2 will be rejected)
+* Put **stage1Identifier,stage2Identifier** value in FIELD_INTERNAL_NAME_OF_STAGE_IDENTIFIER
+* Put **comment1,comment2** value in FIELD_INTERNAL_NAME_OF_COMMENTS (here comment1 is for stage 1 and comment2 is for stage 2 approval)
+* Put **approved,rejected** value in FIELD_INTERNAL_NAME_OF_STATUS (here stage 1 will be approved and stage 2 will be rejected)
 * The user needs to insert these three values at the time of stages' approval for the build.
-
-***
 
 ### Pipeline Entity
 
@@ -469,18 +466,21 @@ User can provide the target entity Ids in the Pull Request fields like Title/Des
   * Reason: Pipeline does not have any custom fields.
 * Service Connections, Agent Pools, Secure Files, Task Groups, and Azure Git Repositories with the same names in the source system must be present in the target system to avoid any sync failures.
 * Impersonation is not supported.
-* Release Pipeline is not supported \[only Build Pipeline is supported].
-* For on-premise deployment, there is a Retention tab in the Pipeline entity \[not available in cloud deployment]. This Retention tab synchronization is not supported.
+* Release Pipeline is not supported [only Build Pipeline is supported].
+* For on-premise deployment, there is a Retention tab in the Pipeline entity [not available in cloud deployment]. This Retention tab synchronization is not supported.
 * Process parameters are not supported.
 * During the Pipeline entity synchronization, the processing failure may come while syncing the Service Connection for the below mentioned use case. For more details around the next steps, refer to [this](How_to_resolve_processing_failure_for_Pipeline_integration_when_there_is_a_Service_Connection_which_is_deleted_in_the_end_system) section.
   * Use case: Service Connection 1 was associated with some steps of any job in the Pipeline entity. The user changed the Service Connection from Service Connection 1 to Service Connection 2 and deleted the Service Connection 1 from the end system.
-
+    
 {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}
-\- Actual revision time and user email are suffixed to the comment of that particular revision.
+
+* Actual revision time and user email are suffixed to the comment of that particular revision.
+
 {% endif %}
 
 {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}
-\## Version Control Entity (TFS Commit Information)
+
+## Version Control Entity (TFS Commit Information)
 
 * Original commit date will not be migrated.
   * Commit date will be added by default in Commit Comments.
@@ -489,4 +489,5 @@ User can provide the target entity Ids in the Pull Request fields like Title/Des
 * Original committer user would be suffixed to Commit comment.
 * For all the merges in source which are performed only on particular changesets and not on latest version, there is a possibility that there can be difference in the merge history (not the file content) for those files after sync. Difference like certain number of changeset pending in source might be seen merged in target or certain changesets merged in source might be seen pending in target.
 * If a folder is created and later converted to a branch in the source, then the branch will be synced as a folder in the target system. Please contact the support team for post migration to reconcile branches and folders.
+  
 {% endif %}

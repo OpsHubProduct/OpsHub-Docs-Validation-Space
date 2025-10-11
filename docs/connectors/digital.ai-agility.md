@@ -353,22 +353,23 @@ You can add inline images in rich text type of fields from Digital.ai Agility UI
 * Navigate to Admin > Projects as shown in the image below.
 
 <p align="center">
-  <img src="../assets/Digital.ai_Agility8.png"  width="900"/>
+  <img src="../assets/Digital.ai_Agility8.png"  width="1300"/>
 </p>
  
 
 * Open the project in a new tab, which is configured in integration as shown in the image below:
 
 <p align="center">
-  <img src="../assets/Digital.ai_Agility9.png" width="900"/>
+  <img src="../assets/Digital.ai_Agility9.png" width="1300"/>
 </p>
 
 
 * Copy the project id from Digital.ai Agility URL as shown in the image below:
 
 <p align="center">
-  <img src="../assets/Digital.ai_Agility10.png" width="900">
+  <img src="../assets/Digital.ai_Agility10.png" width="100">
 </p>
+
 
 
 
