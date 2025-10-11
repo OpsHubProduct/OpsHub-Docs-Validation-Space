@@ -51,7 +51,7 @@ Refer to the following screenshot for reference: **codebeamer**
 | **User Name**                          | Always                                       | Provide the username of a dedicated user who will be used for communicating with codebeamer/codebeamerX API. This user should have the required privileges as mentioned in section, [User privileges](codebeamer.md#user-privileges).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | **User Password**                      | Always                                       | Enter password of the user added above.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | **Instance Time Zone**                 | Always                                       | <p>Provide the codebeamer/codebeamerX instance's timezone.<br><strong>Note</strong>:The instance's timezone and the service user's timezone should be same. To verify the user's timezone, navigate to <code>System Administration / Server Status Dashboard / JVM system properties / user.timezone</code>.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| **Formatting support for Wiki fields** | Always                                       | Select **True** if you want to enable synchronization of formatting for the 'Wiki' fields of codebeamer/codebeamerX instances. <br> * This step involves an additional action of placing a JAR file on the codebeamer/codebeamerXs' server. <br> * To obtain this JAR, there are two approaches outlined below: <br> * **Approach 1**: Use the JAR already built by OpsHub. Click [here](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EVFSOUYC091GttarNbMULEoBVPpTsljgG-sYLbdlLrINJA?e=R3tCBq) to Download. <br> **Approach 2**: Build your own JAR. Refer to the steps for [How to generate conversion JAR](codebeamer.md#how-to-generate-the-html-to-jspwiki-conversion-jar). <br> * Copy the JAR file to the `<CB_INSTALLATION>/tomcat/webapps/cb/WEB-INF/lib` folder, and then restart the codebeamer/codebeamerX server to apply the changes.  <br> * Select **False** if you do not want to enable the synchronization of formatting for Wiki fields. In this case, the Wiki field's value will be displayed as plain text when synchronizing the Wiki fields to codebeamer/codebeamerX. For more details, please refer to [Known Limitations/Behavior](codebeamer.md#known-limitationsbehavior). |
+| **Formatting support for Wiki fields** | Always                                       | Select **True** if you want to enable synchronization of formatting for the 'Wiki' fields of codebeamer/codebeamerX instances. <br> * This step involves an additional action of placing a JAR file on the codebeamer/codebeamerXs' server. <br> * To obtain this JAR, there are two approaches outlined below: <br>* **Approach 1**: Use the JAR already built by OpsHub. Click [here](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EVFSOUYC091GttarNbMULEoBVPpTsljgG-sYLbdlLrINJA?e=R3tCBq) to Download. <br> **Approach 2**: Build your own JAR. Refer to the steps for [How to generate conversion JAR](codebeamer.md#how-to-generate-the-html-to-jspwiki-conversion-jar). <br> * Copy the JAR file to the `<CB_INSTALLATION>/tomcat/webapps/cb/WEB-INF/lib` folder, and then restart the codebeamer/codebeamerX server to apply the changes.  <br> * Select **False** if you do not want to enable the synchronization of formatting for Wiki fields. In this case, the Wiki field's value will be displayed as plain text when synchronizing the Wiki fields to codebeamer/codebeamerX. For more details, please refer to [Known Limitations/Behavior](codebeamer.md#known-limitationsbehavior). |
 
 # Mapping Configuration
 
@@ -483,28 +483,28 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
   * Click on the Members option.
     
 <p align="center">
-  <img src="../assets/Codebeamer_Image_5_5_a.png" />
+  <img src="../assets/Codebeamer_Image_5_5_a.png" width="800" />
 </p>
 
 
 * Click three blue dots and select "Join Requests" option as shown in the screenshot below:
 
 <p align="center">
-  <img src="../assets/Codebeamer_Image_5_5_b.png" />
+  <img src="../assets/Codebeamer_Image_5_5_b.png" width="800" />
 </p>
 
 
 * Click the green check mark to approve the request and red mark to decline as shown in the screenshot below:
 
 <p align="center">
-  <img src="../assets/Codebeamer_Image_5_5_c.png" />
+  <img src="../assets/Codebeamer_Image_5_5_c.png" width="800"/>
 </p>
 
 
 * Provide Notification Comment and select Accept/Reject button accordingly as shown in the screenshot below:
 
 <p align="center">
-  <img src="../assets/Codebeamer_Image_5_5_d.png" />
+  <img src="../assets/Codebeamer_Image_5_5_d.png" width="800"/>
 </p>
 
 
@@ -756,17 +756,17 @@ Following are the steps to configure any-to-any transition:
 
 **codebeamer X:**
 
-<div align="center"><img src="../assets/CodebeamerX_Add_Transition_Dropdown.png" alt="" width="800"></div>
+<div align="center"><img src="../assets/CodebeamerX_Add_Transition_Dropdown.png" alt="" width="1000"></div>
 
 * Provide the details.
 
 **codebeamer:**
 
-<div align="center"><img src="../assets/Codebeamer_Add_Transition_Form.png" alt="" width="800"></div>
+<div align="center"><img src="../assets/Codebeamer_Add_Transition_Form.png" alt="" width="1000"></div>
 
 **codebeamer X:**
 
-<div align="center"><img src="../assets/CodebeamerX_Add_Transition_Form.png" alt="" width="800"></div>
+<div align="center"><img src="../assets/CodebeamerX_Add_Transition_Form.png" alt="" width="1000"></div>
 
 * Click on **OK** and **Save** buttons to save the changes.
 
