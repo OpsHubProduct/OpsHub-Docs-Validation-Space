@@ -28,7 +28,7 @@
 
 # System Configuration
 
-Before you continue with the integration, you must first configure codebeamer/codebeamer X system in {{SITENAME}}.
+Before you continue with the integration, you must first configure codebeamer/codebeamer X system in <code class="expression">space.vars.SITENAME</code>.
 
 Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.
 
@@ -51,7 +51,7 @@ Refer to the following screenshot for reference: **codebeamer**
 | **User Name**                          | Always                                       | Provide the username of a dedicated user who will be used for communicating with codebeamer/codebeamerX API. This user should have the required privileges as mentioned in section, [User privileges](codebeamer.md#user-privileges).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | **User Password**                      | Always                                       | Enter password of the user added above.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | **Instance Time Zone**                 | Always                                       | <p>Provide the codebeamer/codebeamerX instance's timezone.<br><strong>Note</strong>:The instance's timezone and the service user's timezone should be same. To verify the user's timezone, navigate to <code>System Administration / Server Status Dashboard / JVM system properties / user.timezone</code>.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| **Formatting support for Wiki fields** | Always                                       | Select **True** if you want to enable synchronization of formatting for the 'Wiki' fields of codebeamer/codebeamerX instances. <br> * This step involves an additional action of placing a JAR file on the codebeamer/codebeamerXs' server. <br> * To obtain this JAR, there are two approaches outlined below: <br>* **Approach 1**: Use the JAR already built by OpsHub. Click [here](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EVFSOUYC091GttarNbMULEoBVPpTsljgG-sYLbdlLrINJA?e=R3tCBq) to Download. <br> **Approach 2**: Build your own JAR. Refer to the steps for [How to generate conversion JAR](codebeamer.md#how-to-generate-the-html-to-jspwiki-conversion-jar). <br> * Copy the JAR file to the `<CB_INSTALLATION>/tomcat/webapps/cb/WEB-INF/lib` folder, and then restart the codebeamer/codebeamerX server to apply the changes.  <br> * Select **False** if you do not want to enable the synchronization of formatting for Wiki fields. In this case, the Wiki field's value will be displayed as plain text when synchronizing the Wiki fields to codebeamer/codebeamerX. For more details, please refer to [Known Limitations/Behavior](codebeamer.md#known-limitationsbehavior). |
+| **Formatting support for Wiki fields** | Always                                       | Select **True** if you want to enable synchronization of formatting for the 'Wiki' fields of codebeamer/codebeamerX instances. <br> * This step involves an additional action of placing a JAR file on the codebeamer/codebeamerXs' server. <br> * To obtain this JAR, there are two approaches outlined below: <br> **Approach 1**: Use the JAR already built by OpsHub. Click [here](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EVFSOUYC091GttarNbMULEoBVPpTsljgG-sYLbdlLrINJA?e=R3tCBq) to Download. <br> **Approach 2**: Build your own JAR. Refer to the steps for [How to generate conversion JAR](codebeamer.md#how-to-generate-the-html-to-jspwiki-conversion-jar). <br> Copy the JAR file to the `<CB_INSTALLATION>/tomcat/webapps/cb/WEB-INF/lib` folder, and then restart the codebeamer/codebeamerX server to apply the changes.  <br>  Select **False** if you do not want to enable the synchronization of formatting for Wiki fields. In this case, the Wiki field's value will be displayed as plain text when synchronizing the Wiki fields to codebeamer/codebeamerX. For more details, please refer to [Known Limitations/Behavior](codebeamer.md#known-limitationsbehavior). |
 
 # Mapping Configuration
 
@@ -90,10 +90,10 @@ For mapping additional fields for test steps like 'Critical' and other custom fi
 
 * The "Test Step Results" field of the Test Run entity's behaviour as in `codebeamer/codebeamerX`:
   * When a test run is created, `codebeamer/codebeamerX` creates a child run for each associated test case, and the original run serves as the Parent(Main) Run.
-  * When `codebeamer/codebeamerX` is the target system in {{SITENAME}}:
-    * {{SITENAME}} will consider the test steps available at the time of Test Run creation to update the test step result. Consequently, the source system's test step data will be discarded. If the number of test steps to be updated differs from the test steps on the targeted Test Runs, the {{SITENAME}} will fail to update the Test Step Results.
+  * When `codebeamer/codebeamerX` is the target system in <code class="expression">space.vars.SITENAME</code>:
+    * <code class="expression">space.vars.SITENAME</code> will consider the test steps available at the time of Test Run creation to update the test step result. Consequently, the source system's test step data will be discarded. If the number of test steps to be updated differs from the test steps on the targeted Test Runs, the <code class="expression">space.vars.SITENAME</code> will fail to update the Test Step Results.
       * Reason: Test Step Results are associated with the specific version of the test case. Hence, only Test Step Results can be updated, and the original test steps cannot be updated.
-    * If the "Test Step Results" need to be updated more than once, ensure that the {{SITENAME}} is configured in a way that the status is updated to a valid value to allow further updates to the Test Step Result. It can be achieved using the [Workflow Transition](../integrate/mapping-configuration.md#workflow-transition).
+    * If the "Test Step Results" need to be updated more than once, ensure that the <code class="expression">space.vars.SITENAME</code> is configured in a way that the status is updated to a valid value to allow further updates to the Test Step Result. It can be achieved using the [Workflow Transition](../integrate/mapping-configuration.md#workflow-transition).
       * Reason: Test Step Results can be updated only when the Parent (Main) Test Run and Child Test Run are not in a Finished, Suspended, or Closed state. Additionally, once the Test Step Results are updated, `codebeamer/codebeamerX` sets the status of the test run to "Finished", which means it cannot be updated until it is restarted/ its status is updated.
 
 > **Note**: Since `codebeamer/codebeamerX` creates the child test run, configure the Status field settings with the "Set" distribution rule so the Child Test Run's status can also be updated based on the status of the Parent Test Run.
@@ -132,9 +132,9 @@ In codebeamer/codebeamerX, Associations and Reference fields will be supported a
 ### Associations
 
 * All associations will be synchronized as links to the target system.
-* On {{SITENAME}} User Interface, for every association type, two link types will be shown.
-* Associations added by marking Reverse Order check box on codebeamer/codebeamerX User Interface (refer to the following screenshot) will be marked as "<association_name> (reverse order)" on {{SITENAME}} User Interface.
-* Associations added without marking Reverse Order check box on codebeamer/codebeamerX User Interface will be marked as "<association_name>" on {{SITENAME}} User Interface.
+* On <code class="expression">space.vars.SITENAME</code> User Interface, for every association type, two link types will be shown.
+* Associations added by marking Reverse Order check box on codebeamer/codebeamerX User Interface (refer to the following screenshot) will be marked as "<association_name> (reverse order)" on <code class="expression">space.vars.SITENAME</code> User Interface.
+* Associations added without marking Reverse Order check box on codebeamer/codebeamerX User Interface will be marked as "<association_name>" on <code class="expression">space.vars.SITENAME</code> User Interface.
 
 <div align="center"><img src="../assets/Codebeamer_Image_3_2_a.png" alt="" width="800"></div>
 
@@ -173,10 +173,10 @@ In such scenarios, simply mapping State field and their look-up values can cause
 
 This issue can be resolved by following any of these approaches:
 
-**1. Add/Edit Workflow transition XML in Mapping configuration of {{SITENAME}}**
+**1. Add/Edit Workflow transition XML in Mapping configuration of <code class="expression">space.vars.SITENAME</code>**
 
 Click [Workflow Transition](../integrate/mapping-configuration.md#workflow-transition) to learn when and how to configure workflow transition xml mapping.
-With this option, {{SITENAME}} makes the required intermediate status transition automatically as per the transition(s) configuration on the end system.
+With this option, <code class="expression">space.vars.SITENAME</code> makes the required intermediate status transition automatically as per the transition(s) configuration on the end system.
 
 **2. Add State Transitions in codebeamer/codebeamerX**
 For step-by-step instructions for configuring any-to-any transition refer: [Configure a new State Transition](codebeamer.md#configure-a-new-state-transition).
@@ -184,34 +184,34 @@ For step-by-step instructions for configuring any-to-any transition refer: [Conf
 ## Mapping for Soft Delete Configuration
 
 * When Codebeamer is the target system in the integration, the Soft Delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md).
-* After the Soft Delete operation is performed by {{SITENAME}} in Codebeamer, the entity will be deleted in the Codebeamer. It can be found in the "Trash" of the corresponding project, where it existed earlier.
+* After the Soft Delete operation is performed by <code class="expression">space.vars.SITENAME</code> in Codebeamer, the entity will be deleted in the Codebeamer. It can be found in the "Trash" of the corresponding project, where it existed earlier.
 * To only enable the Logical Delete operation in the target, "OH Soft Delete" field should be mapped with the default value, "No" in the [Delete Mode](../integrate/mapping-configuration.md/#delete-mode) mapping.
 
 ## Rank
 
-* Codebeamer allows to organize the tracker items in tree structure. To synchronize the tracker items maintaining the tree structure, below configurations need to be performed in {{SITENAME}}.
+* Codebeamer allows to organize the tracker items in tree structure. To synchronize the tracker items maintaining the tree structure, below configurations need to be performed in <code class="expression">space.vars.SITENAME</code>.
   * Configure the **Hierarchy Child** and **Hierarchy Parent** relationship as per the standard [relationship configuration](../integrate/mapping-configuration.md#relationships).
   * Enable the rank synchronization, as described in [Rank configuration](../integrate/mapping-configuration.md#configuration) section.
     * Here make sure, the overwrite option is enabled for the Codebeamer system for OH ENABLE RANK field.
 
 **Known Limitations**:
 
-* When Codebeamer is configured as the source system in {{SITENAME}}:
+* When Codebeamer is configured as the source system in <code class="expression">space.vars.SITENAME</code>:
   * When rank change is performed on tracker item within same parent item, any field needs to be updated after changing the rank of the tracker item.
     * Reason: When rank is changed for any tracker item within the same parent, neither its **Updated** time is changed nor revision gets generated in codebeamer.
 
 ## Mapping For Test Run
 
 * Codebeamer allows the creation of only a Test Run (Parent). The corresponding Test Run (Child), which contains the result information, is automatically generated.
-* {{SITENAME}} supports independent synchronization of both entities. To configure this, set the appropriate field value for Test Run Type (for writing) and define the Criteria (for reading):
+* <code class="expression">space.vars.SITENAME</code> supports independent synchronization of both entities. To configure this, set the appropriate field value for Test Run Type (for writing) and define the Criteria (for reading):
   * **Test Run (Parent)**
     * To read only the Test Run (Parent), set the criteria as: parentId IS NULL
     * To create a Test Run (Parent), set the **Test Run Type** to **Parent**
   * **Test Run (Child)**
     * To read only the Test Run (Child), set the criteria as: parentId IS NOT NULL
     * To create a Test Run (Child), set the **Test Run Type** to **Child**
-      * Additionally, configure the **Parent Test Run** relationship. This is not a mandatory link type for Child creation, but if it's defined and contains valid data, {{SITENAME}} will not create a new child. Instead, it will locate the automatically generated Test Run (Child) under the specified parent and update it.
-      * If this relationship is not configured, {{SITENAME}} will first create a new Test Run (Parent) and then update the Test Run (Child). The source entity will always be associated with the Test Run (Child), based on the Test Run Type being set to Child.
+      * Additionally, configure the **Parent Test Run** relationship. This is not a mandatory link type for Child creation, but if it's defined and contains valid data, <code class="expression">space.vars.SITENAME</code> will not create a new child. Instead, it will locate the automatically generated Test Run (Child) under the specified parent and update it.
+      * If this relationship is not configured, <code class="expression">space.vars.SITENAME</code> will first create a new Test Run (Parent) and then update the Test Run (Child). The source entity will always be associated with the Test Run (Child), based on the Test Run Type being set to Child.
 
 # Integration Configuration
 
@@ -287,7 +287,7 @@ To configure criteria in codebeamer/codebeamerX, integration needs to be created
 
 # Known Limitations/Behavior
 
-1. Once the tracker is configured in the {{SITENAME}}, it must not be renamed or else the integration configured for that tracker item would be invalid.
+1. Once the tracker is configured in the <code class="expression">space.vars.SITENAME</code>, it must not be renamed or else the integration configured for that tracker item would be invalid.
 2. Following tracker item types/entities will not be supported:
    * **Working Sets** (earlier known as Branches): Synchronize is only applicable for Master Branch. All the revisions which are done on the tracker item in the master (merge operations or normal revisions) will be synchronized.
    * **Baselines**: Synchronize will not consider the Baselines and will be only considering the HEAD\Default Baseline.
@@ -296,7 +296,7 @@ To configure criteria in codebeamer/codebeamerX, integration needs to be created
    * **Timekeeping tracker types (Worklogs)** will not be supported.
 3. Currently, Table type fields are not supported.
 4. Adding an association does not change the modified time of the entity. Hence, entity's associations will not synchronize until the next update on the entity updates its modified time.
-5. JSPWiki fields will be shown as HTML in {{SITENAME}}.
+5. JSPWiki fields will be shown as HTML in <code class="expression">space.vars.SITENAME</code>.
 6. When codebeamer is the source system in OpsHub Integration Manager, and the content or name of inline image/file in JSPWiki field contains special characters like `â€¢, â‚¬, Â£, Â¥, Â©, Â®, â„¢, Âµ, Î±, Î², Ï€, Î©, Î£, Â°, Î”, â˜º, â™¥, â‚¹, Â¿, Â¡, â€¦, Ã€, Ã , Ã‚, Ãƒ, Ã„, Ã…, Ã†, Ã‡, Ãˆ, Ã‰, ÃŠ, Ã‹, ÃŒ, Ã , ÃŽ, Ã , Ã‘, Ã’, Ã“, Ã”, Ã•, Ã–, Ã™, Ãš, Ã›, Ãœ, ÃŸ, Ã , Ã¡, Ã¢, Ã£, Ã¤, Ã¥, Ã¦, Ã§, Ã¨, Ã©, Ãª, Ã«, Ã¬, Ã­, Ã®, Ã¯, Ã±, Ã², Ã³, Ã´, Ãµ, Ã¶, Ã¹, Ãº, Ã», Ã¼, Ã¿, Äž, ÄŸ, Ä°, Ä±, Å’, Å“, Åž, ÅŸ, Å¸,` etc, then due to API limitations, such characters might get lost during the synchronization. Additionally, formatting of the content will also not be preserved.
 7. Lookup values for **Repository Choice field** will not be loaded. If the field is mapped and contains a value, then its value will be synchronized as plain text.
 8. Currently, only Wiki is supported as Description format.
