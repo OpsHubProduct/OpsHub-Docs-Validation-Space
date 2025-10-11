@@ -48,7 +48,7 @@ Refer to section [Enable Configuration Management](#enable-configuration-managem
       > **Note**: In this case, OpsHub Integration Manager will treat and synchronize all the 3 artifacts as individual entities.
 
   * OpsHub Integration Manager provides a provision to restrict the synchronization to only shared artifacts i.e. synchronize only the shared artifacts present in the stream.
-    * **Restrict reading of artifacts from the DOORS Next module(s)** - An additional input is required to be added in integration configuration. Refer to section [Synchronize artifacts from specific module](#synchronize_artifacts_from_specific_module28s29) for knowing the input usage and how to configure it.
+    * **Restrict reading of artifacts from the DOORS Next module(s)** - An additional input is required to be added in integration configuration. Refer to section [Synchronize artifacts from specific module](#synchronize-artifacts-from-specific-module) for knowing the input usage and how to configure it.
     * **Restrict writing of artifacts to DOORS Next module(s)** - OpsHub Integration Manager supports writing of any artifact in a specific module. This is done through field mapping in DOORS Next system. The field purpose is to decide which module is used to create the shared artifacts. Refer to **Field - Module** section of [Fields available in DOORS Next](#fields-available-in-doors-next).
 
     > **Note**: Refer to section [Known Limitation](#known-limitation) for knowing the synchronization limitation.
@@ -58,7 +58,7 @@ Refer to section [Enable Configuration Management](#enable-configuration-managem
 Before you continue to the integration, you must first configure DOORS Next system. Refer to [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system. Refer the screenshot given below for reference.
 
 <p style="text-align: center;">
-  <img src="../assets/DoorsNG_123c.png" />
+  <img src="../assets/DoorsNG_123c.png" width="1500" />
 </p>
 
 
@@ -87,11 +87,11 @@ Before you continue to the integration, you must first configure DOORS Next syst
 Map the fields between DOORS Next and the other system to be integrated to ensure that the data between both the systems synchronizes correctly. Refer to [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
 <p align="center">
-  <img src="../assets/DoorsNG_24e.png" />
+  <img src="../assets/DoorsNG_24e.png" width="800" />
 </p>
 
 <p align="center">
-  <img src="../assets/DoorsNG_25b.png" />
+  <img src="../assets/DoorsNG_25b.png" width="800"/>
 </p>
 
 
@@ -109,7 +109,10 @@ Along with above fields, there are few fields which are added by OpsHub Integrat
   * The top level represents the stream path. The hierarchy of folders gets loaded when the stream path is expanded. All folders in stream are shown along with their path.  
   * **For example -** If there is a root folder "Component 1" and child folder "Folder A" with another child folder "Child Folder A", then in value mapping, there will be three folders displayed - "Component 1", "Component 1/Folder A" and "Component 1/Folder A/Child Folder A". Refer to below image for the value mapping on OpsHub Integration Manager UI.
 
-  ![In Folder Value Mapping](../assets/DoorsNG_21c.png)
+		<p align="center">
+		  <img src="../assets/DoorsNG_21c.png" width="1000" />
+		</p>
+
 
   > **Note**: Refer to section [In Folder field Behavior](#in-folder-and-module-field-behavior) for more information on how "In Folder" field impacts synchronization.
 
@@ -124,7 +127,10 @@ Along with above fields, there are few fields which are added by OpsHub Integrat
   * The top level represents the stream path. The modules of the stream gets loaded when the stream path is expanded.  
   * **For example -** If there are two modules "Module 1" and "Module 2" in stream, then in value mapping, there will be two modules displayed under that stream - "Module 1", "Module 2". Refer to below image for the value mapping on OpsHub Integration Manager UI.
 
-  ![Module Value Mapping](../assets/DoorsNG_22c.png)
+	  <p align="center">
+	  <img src="../assets/DoorsNG_22c.png" width="900" />
+	  </p>
+
 
   > **Note**: If multiple modules with same name are found, then OpsHub Integration Manager will create the entity in the first found module.
 
@@ -259,7 +265,7 @@ In such scenarios, simply mapping State (Default) field and their look-up values
 
 This issue can be resolved by adding **Workflow Transition** XML in mapping configuration of OpsHub Integration Manager.
 
-Refer to [Workflow Transition](../integrate/mapping-configuration#workflow-transition) to learn when and how to configure workflow transition xml mapping.  
+Refer to [Workflow Transition](../integrate/mapping-configuration.md#workflow-transition) to learn when and how to configure workflow transition xml mapping.  
 With this option, OpsHub Integration Manager makes the required intermediate status transition automatically as per the transition(s) configuration in the end system.
 
 
@@ -270,7 +276,7 @@ Set a time to synchronize data between DOORS Next and the other system to be int
 For DOORS Next system, on the first level, projects are displayed. On the second level, components of the project are displayed. On the third level of hierarchy initial stream of components is listed for associated project. Streams created from the initial stream will be displayed below the initial stream as child streams in a hierarchy. User can select the initial streams or child streams for synchronization.
 
 <p align="center">
-  <img src="../assets/DoorsNG_2c.png" width="1000px" alt="DOORS Next Integration Configuration"/>
+  <img src="../assets/DoorsNG_2c.png" width="1000px" width="1500"/>
 </p>
 
 In the above image, for the source system **DOORS Next**, **Demo Project** at the first-level hierarchy is a Project of DOORS Next, **Demo Project** at second-level hierarchy is a Component of DOORS Next, **Demo Project Initial Stream** at the third-level hierarchy is the initial stream present in the component "Demo Project" and **Demo Stream 1** is the child stream of Initial Stream i.e. the stream created from **Demo Project Initial Stream**.
@@ -280,10 +286,10 @@ In the above image, for the source system **DOORS Next**, **Demo Project** at th
 When DOORS Next is a source system, OpsHub Integration Manager supports synchronization of data from specific module(s).  
 **For example:** If there are multiple module(s) in your stream and you want to synchronize artifacts from some specific module(s) only, then you can do so by configuring input **Module Filter Query**.
 
-For synchronizing the artifacts from specific module(s), a JSON query needs to be specified in the input **Module Filter Query**. The query will be used to select the module(s) from which the artifacts are to be synchronized. The artifacts which belong to these module(s) would only be considered for the synchronization. Refer to page [OpsHub Query format](OpsHub Query format) for details on specific JSON format. Given below is the screenshot for the input.
+For synchronizing the artifacts from specific module(s), a JSON query needs to be specified in the input **Module Filter Query**. The query will be used to select the module(s) from which the artifacts are to be synchronized. The artifacts which belong to these module(s) would only be considered for the synchronization. Refer to page [OpsHub Query format](../integrate/opshub-query-format.md) for details on specific JSON format. Given below is the screenshot for the input.
 
 <p align="center">
-  <img src="../assets/DoorsNG_12e.png" width="1100px" alt="DOORS Next Module Filter Query"/>
+  <img src="../assets/DoorsNG_12e.png" width="1100"/>
 </p>
 
 In the above configuration, the filter given is `{"condition":"=","field":"Custom_Text","value":"Sync This Module"}`. This will filter out module(s) whose **Custom_Text** is **Sync This Module** and the integration will synchronize all the artifacts from those filtered module(s).
@@ -304,7 +310,7 @@ To benefit from this functionality, the user can set the value **Yes** for the o
 By default, this option is considered **No**, which means OpsHub Integration Manager will not read the module history, and the user can expect the ordering change to be synchronized with the next update operation on the artifact.
 
 <p align="center">
-  <img src="../assets/DoorsNg_modulehistory.png" width="1100px" alt="DOORS Next Read module history to detect an artifact order change"/>
+  <img src="../assets/DoorsNg_modulehistory.png" width="1100"/>
 </p>
 
 
@@ -338,7 +344,9 @@ DOORS Next supports the following conditions (operators) for querying in end sys
 - **Query with User fields**  
   The criteria query or target lookup query on user field takes user id of the DOORS Next user. If the user id is invalid or is not present, then error is thrown by DOORS Next connector. For knowing user id, click on "User Profile", and take "User ID". Refer to below image for more information.
 
-  ![User Id for User](../assets/DoorsNG_23b.png)
+  <p align="center">
+  <img src="../assets/DoorsNG_23b.png" width="900" />
+  </p>
 
 - Criteria with **In Folder** field  
   - When query is configured on **In Folder** field, then the folder that is configured, must be present in all the streams that are configured in integration.
@@ -419,11 +427,14 @@ For the examples below, the id information of the source system entity id is sto
 
 ## Child Project Synchronization
 
-Enabling this feature will synchronize entities from selected streams and their child streams to other system. Refer to document [Child Project Synchronization](..integrate/integration-configuration.md#child_project_synchronization) for more information of this feature.
+Enabling this feature will synchronize entities from selected streams and their child streams to other system. Refer to document [Child Project Synchronization](..integrate/integration-configuration.md#child-project-synchronization) for more information of this feature.
 
 User can synchronize all the streams of the project by selecting the initial stream and enabling the child project polling feature. This will automatically keep synchronizing all the artifacts of existing child streams of project in the integration as well as if any new child stream is added later in end system.
 
-![Child Project Polling Configuration](DoorsNG_20c.png)
+<p align="center">
+  <img src="DoorsNG_20c.png" width="900"/>
+</p>
+
 
 > **Note:** For this feature to work properly, all the child streams must have the same permission and configuration as the parent stream. i.e. all the prerequisites that are applicable for parent streams will also be applicable to child streams.
 
@@ -448,7 +459,7 @@ User can synchronize all the streams of the project by selecting the initial str
   - The `Override parameters for read operations` of the `Entity level advance` setting of integration in OpsHub Integration Manager, when IBM Doors Next is source system in OpsHub Integration Manager  
   - The `Override parameters for write operations` of the `Entity level advance` setting of integration in OpsHub Integration Manager, when IBM Doors Next is target system in OpsHub Integration Manager
 
-- Please note that this setting shall be enabled with the [current state sync mode](../integrate/integration-configuration.m#sync-only-current-state).
+- Please note that this setting shall be enabled with the [current state sync mode](../integrate/integration-configuration.md#sync-only-current-state).
 - Additionally, this setting shall not be enabled in the migration use case.
 
 
@@ -460,7 +471,7 @@ User can synchronize all the streams of the project by selecting the initial str
 
 **End System behaviour**
 
-- In DOORS Next, users can work in their respective [streams](#Glossary) and then can merge their streams as per need. Please refer to [DOORS Next Stream merge](https://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.6/com.ibm.jazz.vvc.doc/topics/t_accept_chgs.html) for more understanding on stream merge in DOORS Next.
+- In DOORS Next, users can work in their respective [streams](#glossary) and then can merge their streams as per need. Please refer to [DOORS Next Stream merge](https://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.6/com.ibm.jazz.vvc.doc/topics/t_accept_chgs.html) for more understanding on stream merge in DOORS Next.
 - Let's consider that there are two streams `Stream A` and `Stream A.1` (where `Stream A.1` is created from `Stream A`). Now users have worked on `Stream A.1` and few new artifacts are created and/or some of the existing artifacts are updated. So now when the `Stream A.1` is merged with `Stream A`, then in `Stream A`, users will only see a single update/merge revision for all the create/update operations performed in `Stream A.1` (not the complete history of the actions performed in `Stream A.1`).
 
 **Synchronization behaviour**
@@ -552,7 +563,7 @@ If the Primary Text field is mapped during field mapping, then do not map attach
 When the **In Folder** or **Module** field is mapped in field mapping for DOORS Next acting as a target system, then the following will be the synchronization behavior:
 
 **Synchronizing the artifacts in folders**
-- When user wants to synchronize the artifacts in different folders, then user can map the **In Folder** field in mapping and based on that artifacts will be created in different folders as per value mapping.
+- When user wants to synchronize the artifacts in different folders, then user can map the **In Folder** field in mapping and based on that artifacts will be created	 in different folders as per value mapping.
 
 **Synchronizing the artifacts in modules**
 - When user wants to synchronize the artifacts in modules, then, user can map the "Module" field in mapping.
@@ -581,7 +592,7 @@ When the **In Folder** or **Module** field is mapped in field mapping for DOORS 
   There are two types of configuration in DOORS Next - Local configuration and Global configuration. Local configuration is the individual configuration of any stream whereas Global configuration allows multiple streams of different systems to collaborate with each other. For information on Global Configuration, refer to link [Global Configuration in DOORS Next](https://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.6/com.ibm.rational.gcapp.doc/topics/c_gcm_node_product.html)
   * OpsHub Integration Manager supports synchronization in local configuration scope. Synchronization of Global configuration streams are not supported by OpsHub Integration Manager. Thus, cross component links are not supported for DOORS Next by OpsHub Integration Manager.
 
-### When DOORS Next is configured as source system
+## When DOORS Next is configured as source system
 
 In addition to above limitations, following are some limitations in synchronization when DOORS Next system is configured as source end system in integration.
 
@@ -603,7 +614,7 @@ In addition to above limitations, following are some limitations in synchronizat
 * If **Tags** are edited after being synced, it will be synchronized to target system with next update.
   * Reason: After Tags are edited, entity's last modified time does not update.
 
-### When DOORS Next is configured as target system
+## When DOORS Next is configured as target system
 
 In addition to the [Common Limitations](#common-limitations), the following are a few limitations in synchronization when DOORS Next system is configured as a target end system in integration.
 
@@ -618,7 +629,7 @@ In addition to the [Common Limitations](#common-limitations), the following are 
 
 # Troubleshoot
 
-Refer to document [IBM Engineering Requirements Management DOORS Next Error Solutions] for errors and solutions.
+Refer to document [IBM Engineering Requirements Management DOORS Next Error Solutions](../help-center/troubleshooting/errors/ibm-rational-doors-next-generation-error-solutions.md) for errors and solutions.
 
 # Appendix
 
@@ -647,7 +658,6 @@ Refer to document [IBM Engineering Requirements Management DOORS Next Error Solu
          xmlns:dng_task="http://jazz.net/ns/rm/dng/task#"
          xmlns:rm="http://www.ibm.com/xmlns/rdm/rdf/"
          xmlns:oslc_auto="http://open-services.net/ns/auto#">
-
   <rdf:Description rdf:about="<baseUrl>/rm/resources/TX_GAwmgRgEEe-ig-64BS_eRQ">
     <rdf:type rdf:resource="http://jazz.net/ns/rm#Text"/>
     <rdf:type rdf:resource="http://open-services.net/ns/rm#Requirement"/>
@@ -666,9 +676,42 @@ Refer to document [IBM Engineering Requirements Management DOORS Next Error Solu
 </rdf:RDF>
 ```
 
-* Here, the field <comments:updated>2024-05-21T22:08:45.000-0700</comments:updated> represents the modified time of the comment given in the API response above. Hence, for the date 2024-05-21T22:08:45.000-0700, the format will be yyyy-MM-dd'T'HH:mm:ss.SSSZ.
+* Here, this field `<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"> 2024-05-22T06:25:33.416Z</dcterms:modified>` represents the modified time of the artifact given in the API response above. Hence, for the date 2024-05-22T06:25:33.416Z, the format will be yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
+* To get the date format, user should hit the API: `GET <baseURL>/rm/publish/comments?resourceURI=<resourceURL>`. The response of the API call will be:- If the configured timeout is not large enough, and the token is not used by OpsHub Integration Manager in the configured timespan for some reason (Inactive integration/Inactive OpsHub Integration Manager server), then token will get expired.
 
-  - If the configured timeout is not large enough, and the token is not used by OpsHub Integration Manager in the configured timespan for some reason (Inactive integration/Inactive OpsHub Integration Manager server), then token will get expired.
+```xml
+<ds:dataSource xmlns:attribute="http://jazz.net/xmlns/alm/rm/attribute/v0.1" xmlns:comments="http://jazz.net/xmlns/alm/rm/comments/v0.1" xmlns:ds="http://jazz.net/xmlns/alm/rm/datasource/v0.1" xmlns:field="http://jazz.net/xmlns/alm/rm/field/v0.1" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:history="http://jazz.net/xmlns/alm/rm/history/v0.1" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rm="http://www.ibm.com/xmlns/rdm/rdf/" xmlns:rrm="http://www.ibm.com/xmlns/rrm/1.0/" xmlns:term="http://jazz.net/xmlns/alm/rm/term/v0.1" xmlns:text="http://jazz.net/xmlns/alm/rm/text/v0.1" xmlns:view="http://jazz.net/xmlns/alm/rm/view/v0.1" xmlns:xhtml="http://www.w3.org/1999/xhtml" appId="RRC" vMajor="70" vMinor="10">
+       <ds:artifact>
+           <rrm:title>2024_05_22_10_38_43_717_N7</rrm:title>
+           <rrm:description/>
+           <rrm:identifier>TX_TXf_IBf5Ee-ig-64BS_eRQ#1</rrm:identifier>
+           <commentNumber>1</commentNumber>
+           <rrm:about/>
+           <rrm:format/>
+           <ds:location/>
+           <ds:content>
+               <comments:comments lang="english">
+                   <comments:text>
+                       <h:div>
+                           <h:p xmlns:h="http://www.w3.org/TR/REC-html40">
+                               2024_05_22_10_38_43_719_XGK6LDO3DVH8RXGMFKX8726Z16U
+                           </h:p>
+                       </h:div>
+                   </comments:text>
+                   <comments:plaintext> 2024_05_22_10_38_43_719_XGK6LDO3DVH8RXGMFKX8726Z16U </comments:plaintext>
+                   <comments:priority>Low</comments:priority>
+                   <comments:isResolved>false</comments:isResolved>
+                   <comments:reviewId/>
+                   <comments:parentComment/>
+                   <comments:updated>2024-05-21T22:08:45.000-0700</comments:updated>
+               </comments:comments>
+           </ds:content>
+           <ds:aggregatedContent/>
+       </ds:artifact>
+   </ds:dataSource>
+```
+
+* Here, the field `<comments:updated>2024-05-21T22:08:45.000-0700</comments:updated>` represents the modified time of the comment given in the API response above. Hence, for the date 2024-05-21T22:08:45.000-0700, the format will be yyyy-MM-dd'T'HH:mm:ss.SSSZ.
 
 ## OAuth configuration
 
@@ -681,25 +724,31 @@ Following are the steps that needs to be done for generating OAuth token for DOO
   - Navigate to **Server > Consumers (Inbound)** in **Communication** section.
   - Enter the **Consumer Name**, **Consumer Secret**, and click **Register**. A **Consumer Key** will be generated.
   - After successfully registering the consumer, the **Consumer Name** and **Consumer Key** will be added in the **Authorized Keys** section.  
-    ![DOORS Next Jts server](../assets/DoorsNG_6a.png)
+  
+  <p align="center">
+  <img src="../assets/DoorsNG_6a.png" width="1000" />
+ </p>
 
 - **Generate OAuth Token and OAuth Secret for given consumer key**  
   The following two ways can be used to generate the OAuth token for IBM Engineering Requirements Management DOORS Next system:
-  - [Option 1 (Utility)](IBM_Rational_Doors_Next_OAuth_Generation#Generate_Token_Using_DoorsNG_Token_Generator_Utility): Generate the OAuth token using a stand-alone utility bundled with OpsHub Integration Manager to generate the OAuth token.
-  - [Option 2 (Postman)](IBM_Rational_Doors_Next_OAuth_Generation#Generate_Token_Using_Rest_Client_(Postman)): Generate an OAuth token using a third-party rest client such as postman.
+  - [Option 1 (Utility)](ibm-rational-doors-next-oauth-generation.md#generate-token-using_doorsng-token-generator-utility): Generate the OAuth token using a stand-alone utility bundled with OpsHub Integration Manager to generate the OAuth token.
+  - [Option 2 (Postman)](ibm-rational-doors-next-oauth-generation.md#generate-token-using-rest-client-postman)): Generate an OAuth token using a third-party rest client such as postman.
 
 > **Note**:  
-> **The behavior of "OAuth" token:**
-> - The OAuth token will be expired, if it is not used for the time span, which is configured in the "OAuth access token timeout" configuration of IBM Engineering Requirements Management DOORS Next server.
-> - Suppose the token mentioned in the System Configuration form in the OpsHub Integration Manager gets expired, then it must be updated by reperforming the above steps.
-> - To avoid the above case, the value of the "OAuth access token timeout" configuration would be larger than the synchronization interval (Integration schedule) of the integration, which is configured with DOORS Next using OAuth authentication.
->   - If the configured timeout is not large enough, and the token is not used by OpsHub Integration Manager in the configured timespan for some reason (Inactive integration/Inactive OpsHub Integration Manager server), then token will get expired.
+**The behavior of "OAuth" token:**
+- The OAuth token will be expired, if it is not used for the time span, which is configured in the "OAuth access token timeout" configuration of IBM Engineering Requirements Management DOORS Next server.
+- Suppose the token mentioned in the System Configuration form in the OpsHub Integration Manager gets expired, then it must be updated by reperforming the above steps.
+- To avoid the above case, the value of the "OAuth access token timeout" configuration would be larger than the synchronization interval (Integration schedule) of the integration, which is configured with DOORS Next using OAuth authentication.
+	- If the configured timeout is not large enough, and the token is not used by OpsHub Integration Manager in the configured timespan for some reason (Inactive integration/Inactive OpsHub Integration Manager server), then token will get expired.
 
 ## How to find DOORS Next version
 
 - Log in into DOORS Next.  
 - Click on **Help Contents** as shown below. In the drop-down panel, click **About This Application** as shown below.  
-  ![Help Contents](../assets/DoorsNG_10b.png)
+ 
+ <p align="center">
+  <img src="../assets/DoorsNG_10b.png" width="1000" />
+ </p>
 
 - Under section **About the Requirements Management Application**, check **Version** against section **Rational DOORS Next**. Refer to below image.  
   ![About the Requirements Management Application](../assets/DoorsNG_11c.png)
@@ -708,36 +757,51 @@ Following are the steps that needs to be done for generating OAuth token for DOO
 
 - Log in to DOORS Next UI with user who is Project Administrator.
 - Go to the project for which **Configuration Management** needs to be enabled. Go to **Manage This Project Area** from **Settings** icon.  
-  ![Manage This Project Area](../assets/DoorsNG_18c.png)
+  
+  <p align="center">
+  <img src="../assets/DoorsNG_18c.png" width="1000" />
+ </p>
 
 - Go to **Configuration Management** and click on **Enable Configuration Management**.  
-  ![Enable Configuration Management](../assets/DoorsNG_19b.png)
-
+  
+  <p align="center">
+  <img src="../assets/DoorsNG_19b.png" width="1000" />
+ </p>
+ 
 ## How to Create a User
 
 - Login to **Admin panel (`<DOORS Next URL>/JTS/admin`)** with user who has Administrator privileges.
 - In **Server Administration**, go to **Users** tab and open **Active Users**.  
-  ![Server Administration](../assets/DoorsNG_27c.png)
-
+	
+	<p align="center">
+	  <img src="../assets/DoorsNG_27c.png" width="1000" />
+	</p>
+	
 - On top-right corner, click on **Create User** option.  
-  ![Active Users](../assets/DoorsNG_28c.png)
+  
+  <p align="center">
+  <img src="../assets/DoorsNG_28c.png" width="1000" />
+ </p>
 
 - Give your User Name, User ID and E-mail Address as input and click on **Save** on the top-right corner.  
-  ![Create User](../assets/DoorsNG_29d.png)
+  
+  <p align="center">
+  <img src="../assets/DoorsNG_29d.png" width="1000" />
+  </p>
 
 > **Note**:  
 > The sync user should have **JazzUsers** Repository permissions for both read/write access.  
 > Refer to link: [DOORS Next Repository Permissions](https://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.6.1/com.ibm.jazz.repository.web.admin.doc/topics/taddnewuser.html)
 
-**_DOORS Next License details for sync user_**
+**DOORS Next License details for sync user**
 
 | **License** | **Justification** | **Needed When** |
 |-------------|-------------------|------------------|
 | **IBM Engineering Requirements Management DOORS Next - Contributor** | This is the minimal license required by the user for having read access in DOORS Next | DOORS Next is source system |
-| **IBM Engineering Requirements Management DOORS Next - Analyst** | This is the minimal license required by the user for having read/write access in DOORS Next | DOORS Next is target system. Also, when DOORS Next is source system, then this license is required for [Remote Id or Remote Link configuration](Integration_Configuration#Tracking_Id_and_Link_of_Entities_Across_Systems) in integration. |
+| **IBM Engineering Requirements Management DOORS Next - Analyst** | This is the minimal license required by the user for having read/write access in DOORS Next | DOORS Next is target system. Also, when DOORS Next is source system, then this license is required for [Remote Id or Remote Link configuration](../integrate/integration-configuration.md#tracking-id-and-link-of-entities-across-systems) in integration. |
 
 > **Note**:  
-> Refer to link: [DOORS Next Client access license management](https://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.6.1/com.ibm.jazz.repository.web.admin.doc/topics/c_license_mgmt_over.html) for more information on licenses.
+Refer to link: [DOORS Next Client access license management](https://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.6.1/com.ibm.jazz.repository.web.admin.doc/topics/c_license_mgmt_over.html) for more information on licenses.
 
 ## Access Control
 
@@ -745,11 +809,17 @@ In DOORS Next, the **read access** can be restricted using **Access Control** se
 
 - Log in to DOORS Next UI with user who is a Project Administrator.
 - Go to **Manage This Project Area** from **Settings** icon in your project at top-right corner.  
-  ![Manage This Project Area](../assets/DoorsNG_30b.png)
+  
+  <p align="center">
+  <img src="../assets/DoorsNG_30b.png" width="900" />
+ </p>
 
 - Under **Project Area**, click on **Access Control**. There is an option for giving **Grant read access to**. For complete information on options available in access control for a project, refer to:  
   [Restricting read access in DOORS Next project](https://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.6/com.ibm.jazz.platform.doc/topics/t_restricting_read_access_to_project_web.html)  
-  ![Access Control](../assets/DoorsNG_33b.png)
+  
+  <p align="center">
+  <img src="../assets/DoorsNG_33b.png" width="900" />
+ </p>
 
 - Following is an overview of the options. You can choose any one of them as per your project configuration.
   - **Everyone**
@@ -772,68 +842,124 @@ In DOORS Next, the **read access** can be restricted using **Access Control** se
 
 * Log in to DOORS Next UI with user who is Project Administrator.
 * Go to **Manage This Project Area** from **Settings** icon in your project at top-right corner.  
-![Manage This Project Area](../assets/DoorsNG_30b.png)
 
-* Go to **Overview** section in left panel.  
-![Overview](../assets/DoorsNG_39b.png)
+ <p align="center">
+  <img src="../assets/DoorsNG_30b.png" width="900" />
+ </p>
+
+* Go to **Overview** section in left panel. 
+ 
+  <p align="center">
+  <img src="../assets/DoorsNG_39b.png" width="900" />
+ </p>
 
 * There will be a list of **Administrators**. Click on **Add** button to add a new administrator in the project.  
-![Add Administrators](../assets/DoorsNG_55b.png)
+ 
+ <p align="center">
+  <img src="../assets/DoorsNG_55b.png" width="1000" />
+ </p>
 
 * A **Select Users** window will open. Select the user you want to add in the project as administrator from **Matching users** list. Click **Add**.  
-![Select Users](../assets/DoorsNG_53b.png)
+
+ <p align="center">
+  <img src="../assets/DoorsNG_53b.png" width="1000" />
+ </p>
 
 * The user will be added in the **Administrators** list as shown below.  
-![Administrators](../assets/DoorsNG_54b.png)
 
+ <p align="center">
+  <img src="../assets/DoorsNG_54b.png" width="1000" />
+ </p>
+ 
 * Click on **Save** button at the top right corner for saving your changes.  
-![Save Changes](../assets/DoorsNG_56b.png)
+
+ <p align="center">
+  <img src="../assets/DoorsNG_56b.png" width="1000" />
+ </p>
 
 
 ## How to add User in a Project as member/How to assign user with specific role
 
 * Log in to DOORS Next UI with user who is Project Administrator.
 * Go to **Manage This Project Area** from **Settings** icon in your project at top-right corner.  
-![Manage This Project Area](../assets/DoorsNG_30b.png)
+
+<p align="center">
+  <img src="../assets/DoorsNG_30b.png" width="900" />
+</p>
 
 * Go to **Overview** section in left panel.  
-![Overview](../assets/DoorsNG_39b.png)
+
+<p align="center">
+  <img src="../assets/DoorsNG_39b.png" width="900" />
+</p>
 
 * There will be a list of **Members**. Click on **Add** button to add a new member in the project.  
-![Add Members](../assets/DoorsNG_40b.png)
+
+<p align="center">
+  <img src="../assets/DoorsNG_40b.png" width="900" />
+</p>
 
 * A **Select Users** window will open. Select the user you want to add in the project from **From Matching users** list and click on **Right** arrow as shown in the below image. The user will be added in the **Selected users** list. Click **Next**.  
-![Select Users](../assets/DoorsNG_41b.png)
+
+<p align="center">
+  <img src="../assets/DoorsNG_41b.png" width="900" />
+</p>
 
 * Then, a **Select Roles** window will open. Select the role you want to assign to the user from **Available Roles** and click on **Right** arrow as shown in the below image.  
-![Select Roles](../assets/DoorsNG_42b.png)
+
+<p align="center">
+  <img src="../assets/DoorsNG_42b.png" width="900" />
+</p>
 
 * The selected role will be added in **Selected Roles** list. Click on **Finish** button.  
-![Add selected roles](../assets/DoorsNG_43b.png)
+<p align="center">
+  <img src="../assets/DoorsNG_43b.png" width="900" />
+</p>
 
 * The user with the role will be added in the **Members** list.  
-![Members](../assets/DoorsNG_44b.png)
+
+<p align="center">
+  <img src="../assets/DoorsNG_44b.png" width="900" />
+</p>
 
 * Click on **Save** button at the top right corner for saving your changes.  
-![Save Changes](../assets/DoorsNG_56b.png)
+
+<p align="center">
+  <img src="../assets/DoorsNG_56b.png" width="900" />
+</p>
 
 
 ## How to give read access to single user
 
 * Select option "Users in access list only" or "Members of the project area hierarchy and users in the access list" under section **Grant read access to** as per your setting for access control. Below steps are the same for any of the option selected.  
-![Access Control](../assets/DoorsNG_33b.png)
+
+<p align="center">
+  <img src="../assets/DoorsNG_33b.png" width="900" />
+</p>
 
 * Under **Users to be Added to the Access List**, there is an option of **Add** in the right panel. Click on **Add**.  
-![Users to be Added to the Access List](../assets/DoorsNG_34b.png)
+
+<p align="center">
+  <img src="../assets/DoorsNG_34b.png" width="900" />
+</p>
 
 * Select the sync user to be added. Click **Add** button.  
-![Add User](../assets/DoorsNG_36b.png)
+
+<p align="center">
+  <img src="../assets/DoorsNG_36b.png" width="900" />
+</p>
 
 * The sync user will be added in list **Users to be Added to the Access List**. Then click **Save**.  
-![Save Access List](../assets/DoorsNG_37b.png)
+
+<p align="center">
+  <img src="../assets/DoorsNG_37b.png" width="900" />
+</p>
 
 * The user will be added under **Browse Access List**.  
-![Browse Access List](../assets/DoorsNG_38b.png)
+
+<p align="center">
+  <img src="../assets/DoorsNG_38b.png" width="900" />
+</p>
 
 
 ## Permissions
@@ -844,7 +970,7 @@ In DOORS Next, the **read access** can be restricted using **Access Control** se
 **Note**: For DOORS Next full guide on role-based permissions, refer to link [Modify Permissions in DOORS Next](https://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.6/com.ibm.jazz.platform.doc/topics/t_mod_permissions_web.html).
 
 
-## Steps to give Permissions
+### Steps to give Permissions
 
 * Log in to DOORS Next UI with user who is Project Administrator.
 
@@ -852,39 +978,70 @@ In DOORS Next, the **read access** can be restricted using **Access Control** se
   ![Manage This Project Area](../assets/DoorsNG_30b.png)
 
 * Under **Project Area**, click on **Permissions**. Select option **Show by Role**. Select the role assigned to sync user. All the permissions will be added to this role.  
-  ![Permissions](../assets/DoorsNG_46b.png)
+  
+  <p align="center">
+  <img src="../assets/DoorsNG_46b.png" width="900" />
+ </p>
 
 * Select the permission, and click **Allow** to give the specific permissions. A green tick will appear.  
-  ![Specific Permissions](../assets/DoorsNG_48b.png)
+ 
+ <p align="center">
+  <img src="../assets/DoorsNG_48b.png" width="900" />
+ </p>
 
   * **Restricting to required Artifact types and Component** – With the above steps, the permissions are given at project-level. In case, you want to restrict it to specific artifact type and/or component wise, you can do that with the help of below steps.  
     > **Note**: Permissions **Save Artifact** and **Save Link** can be restricted to specific artifact type and/or components that are to be synchronized. Permissions **Save comment** and **Save Folder** are not allowed to be restricted to artifact type and/or components. Hence, these permissions must be given at project level.
 
     * When a specific permission is expanded, different combinations of artifact types and components are shown. The permissions can be enabled for only those artifact types of component which are to be synchronized. Refer to below image for more understanding.  
-      ![Restricting to required Artifact types and Component](../assets/DoorsNG_47b.png)
+           <p align="center">
+			<img src="../assets/DoorsNG_47b.png" width="900" />
+           </p>
 
 * **Restricting to certain time period** – The permissions can be configured for a certain time period. For synchronization, the time period can be set to **Always**. If time period is set to **Iteration Types** or **Timelines**, then the defined timeline must have all the permissions until the synchronization gets completed.
 
   * Select the **Configure for a time period** option for the sync user's role.  
-    ![Configure for a time period](../assets/DoorsNG_51b.png)
+    
+	<p align="center">
+     <img src="../assets/DoorsNG_51b.png" width="900" />
+    </p>
+
 
   * By default, the time period is set to **Always**. If it is custom, then for the sync user's role, set it to **Always** and click on **Save**.  
-    ![Configure for a time period - Always](../assets/DoorsNG_50b.png)
+    
+	<p align="center">
+     <img src="../assets/DoorsNG_50b.png" width="900" />
+   </p>
+
 
 * Click **Save** button at the top right corner.  
-  ![Save Changes](../assets/DoorsNG_49b.png)
+  
+  <p align="center">
+  <img src="../assets/DoorsNG_49b.png" width="1000" />
+  </p>
+
 
 ## How to Create a Role
 
 * Log in to DOORS Next UI with user who is Project Administrator.
 * Go to **Manage This Project Area** from **Settings** icon in your project at top-right corner.  
-  ![Manage This Project Area](../assets/DoorsNG_30b.png)
+
+  <p align="center">
+    <img src="../assets/DoorsNG_30b.png" width="900" />
+  </p>
+
 
 * Under **Project Area**, click on **Roles**. There will be an icon for **Create Role** above the list of roles. Click on the **Create Role** icon.  
-  ![Add a Role](../assets/DoorsNG_31b.png)
+  
+  <p align="center">
+  <img src="../assets/DoorsNG_31b.png" width="900" />
+ </p>
 
 * Add the **Role Details**. Add **Identifier**, **Name** and click on **Save** at top-right corner. A new role will be created.  
-  ![Role Details](../assets/DoorsNG_32b.png)
+	
+	<p align="center">
+	  <img src="../assets/DoorsNG_32b.png" width="900" />
+	</p>
+
 
 # Glossary
 
@@ -896,5 +1053,6 @@ In DOORS Next, the **read access** can be restricted using **Access Control** se
     * When a base/core artifact is added into module, it creates a replica of artifact in the module. The artifact created in the module is called shared artifact. The identifier of shared artifact and the core artifact is identical. But, their resource id (UUID) are different.
     * A shared artifact is always bounded with a core artifact but a core artifact may or may not have a shared artifact.
     * **Module artifact** – It's an alternate terminology to represent shared artifact.
+
 
 
