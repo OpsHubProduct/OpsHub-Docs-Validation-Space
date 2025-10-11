@@ -27,19 +27,19 @@ I have <code class="expression">space.vars.SITENAME</code> installed on one mach
 4. Remove the data of the old instance:
    * After taking database backup, drop the database.
    * Uninstall <code class="expression">space.vars.SITENAME</code> from the older instance.
-5. Install the same <code class="expression">space.vars.SITENAME</code> version on the machine where you want to move <code class="expression">space.vars.SITENAME</code> server. During installation, select the database server where you want your <code class="expression">space.vars.SITENAME</code> database. While configuring installation, make sure database name is same as old installation. If your old <code class="expression">space.vars.SITENAME</code> instance database name is custom (other than 'opshub' and 'reportsdb'), then make sure in this new installation the database name remains the same.  
-{% if "OpsHub Integration Manager" === space.vars.SITENAME %} You can refer [OpsHub Database Custom Configuration](../../../getting-started/installation.md#opshub-database-custom-configuration) documentation for selecting database name during installation time.{% endif %}
+5. Install the same <code class="expression">space.vars.SITENAME</code> version on the machine where you want to move <code class="expression">space.vars.SITENAME</code> server. During installation, select the database server where you want your <code class="expression">space.vars.SITENAME</code> database. While configuring installation, make sure database name is same as old installation. If your old <code class="expression">space.vars.SITENAME</code> instance database name is custom (other than 'opshub' and 'reportsdb'), then make sure in this new installation the database name remains the same.
+ {% if "OpsHub Integration Manager" === space.vars.SITENAME %} You can refer [OpsHub Database Custom Configuration](../../../getting-started/installation.md#opshub-database-custom-configuration) documentation for selecting database name during installation time. {% endif %}
 6. If for any reason, installation failed, follow the steps below:  
    * See installation fail error and try to resolve it. You can also refer logs to get more error information on this error. Navigate `<Install_Folder>/logs` folder and see `install.log` file.  
    * Once you find the error and resolve it, re-install the application. First clean the installation folder on which installation failed and then re-install it on the same folder.  
    * If you are not able to resolve this error, then send the `<Install_Folder>/logs` folder to <code class="expression">space.vars.SITENAME</code> support team. Restore application to earlier state until this issue is fixed:
    * Restore applicable folder by following [Application Restore](../../../manage/upgrade/taking-application-backup.md#application-restore) documentation.
    * Restore database by following [Database Restore](../../../manage/upgrade/taking-application-backup.md#database-restore) documentation.  
-7. If installation finished successfully, follow the steps below:  
-  * {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}Close <code class="expression">space.vars.SITENAME</code>.{% endif %}
-  * {% if "OpsHub Integration Manager" === space.vars.SITENAME %}Stop the <code class="expression">space.vars.SITENAME</code>.{% endif %}  
-  * Restore the database(s) from the backup taken from old <code class="expression">space.vars.SITENAME</code> instance/server into the new <code class="expression">space.vars.SITENAME</code> database instance/server. For more information, refer [Database Restore](../../../manage/upgrade/taking-application-backup.md#database-restore).  
-  * Start new <code class="expression">space.vars.SITENAME</code> server.  
-  * Re-enter the password for sync user configured in systems{% if "OpsHub Integration Manager" === space.vars.SITENAME %} and integration {% endif %}.  
-  {% if "OpsHub Integration Manager" === space.vars.SITENAME %} #* Load field mapping and integration to validate connectivity.{% endif %}  
+7. If installation finished successfully, follow the steps below:
+   * {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}Close <code class="expression">space.vars.SITENAME</code>.{% endif %}
+   * {% if "OpsHub Integration Manager" === space.vars.SITENAME %}Stop the <code class="expression">space.vars.SITENAME</code>.{% endif %}
+   * Restore the database(s) from the backup taken from old <code class="expression">space.vars.SITENAME</code> instance/server into the new <code class="expression">space.vars.SITENAME</code> database instance/server. For more information, refer [Database Restore](../../../manage/upgrade/taking-application-backup.md#database-restore).
+   * Start new <code class="expression">space.vars.SITENAME</code> server.
+   * Re-enter the password for sync user configured in systems{% if "OpsHub Integration Manager" === space.vars.SITENAME %} and integration {% endif %}.
+   {% if "OpsHub Integration Manager" === space.vars.SITENAME %} #* Load field mapping and integration to validate connectivity.{% endif %}
 8. Now you can {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}start migrations{% endif %}{% if "OpsHub Integration Manager" === space.vars.SITENAME %}activate integrations{% endif %} as per your requirement.
