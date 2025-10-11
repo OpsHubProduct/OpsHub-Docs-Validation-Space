@@ -13,10 +13,10 @@ For example:
 
 Operating System: **Windows**  
 Installation Path: `C:\Program Files\{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}OM4ADO{% endif %}{% if "OpsHub Integration Manager" === space.vars.SITENAME %}OpsHub{% endif %}`  
-Location of log file: `C:\Program Files\{{#ifeq: <code class="expression">space.vars.SITENAME</code> | OpsHub Migrator for Microsoft Azure DevOps |OM4ADO|OpsHub}}\logs\Install.log`
+Location of log file: `C:\Program Files\{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}OM4ADO{% endif %}{% if "OpsHub Integration Manager" === space.vars.SITENAME %}OpsHub{% endif %}\logs\Install.log`
 
-{{#ifeq: <code class="expression">space.vars.SITENAME</code> | OpsHub Migrator for Microsoft Azure DevOps ||
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}
 Operating System: **Linux**  
 Installation Path: `/usr/local/OpsHub`  
 Location of log file: `/usr/local/OpsHub/logs/Install.log`
-}}
+{% endif %}
