@@ -1,10 +1,8 @@
-# codebeamer
+# Pre-requisites
 
-## Pre-requisites
+## User privileges
 
-### User privileges
-
-* Create one user in codebeamer/codebeamer X that is dedicated to \{{SITENAME\}}. This user should not do any operations from the system's interface. This user should not do any operations from the system's interface. This user's timezone should be same as end system's server timezone. Refer to [Add User](codebeamer.md#add-user) section to create a user in codebeamer/codebeamerX.
+* Create one user in codebeamer/codebeamer X that is dedicated to <code class="expression">space.vars.SITENAME</code>. This user should not do any operations from the system's interface. This user should not do any operations from the system's interface. This user's timezone should be same as end system's server timezone. Refer to [Add User](codebeamer.md#add-user) section to create a user in codebeamer/codebeamerX.
 * The user must be a member of all the projects that needs to be synchronized. To add a Project member refer to section [Add Project Member](codebeamer.md#add-project-member).
 * The User group of user should have the following permissions. Refer to section [Add User Group](codebeamer.md#add-user-group) to create user group.
   * Own Account - Admin
@@ -28,21 +26,21 @@
   * Item - Edit Associations
 * To synchronize Test case from any connector to codebeamer/codebeamer X, Integration User should be project admin and project admin role should have both read and edit permissions.
 
-## System Configuration
+# System Configuration
 
-Before you continue with the integration, you must first configure codebeamer/codebeamer X system in \{{SITENAME\}}.
+Before you continue with the integration, you must first configure codebeamer/codebeamer X system in {{SITENAME}}.
 
 Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.
 
 Refer to the following screenshot for reference: **codebeamer**
 
-<div align="center"><img src="../assets/Codebeamer_Image_1c_new.png" alt=""></div>
+<div align="center"><img src="../assets/Codebeamer_Image_1c_new.png" alt="" width="1100"></div>
 
 **codebeamer X**
 
-<div align="center"><img src="../assets/CodebeamerX_Image_1c_new.png" alt=""></div>
+<div align="center"><img src="../assets/CodebeamerX_Image_1c_new.png" alt="" width="1100"></div>
 
-### codebeamer/codebeamer X System Form Details
+## codebeamer/codebeamer X System Form Details
 
 | **Field Name**                         | **When field is visible on the System form** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | -------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -53,15 +51,15 @@ Refer to the following screenshot for reference: **codebeamer**
 | **User Name**                          | Always                                       | Provide the username of a dedicated user who will be used for communicating with codebeamer/codebeamerX API. This user should have the required privileges as mentioned in section, [User privileges](codebeamer.md#user-privileges).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | **User Password**                      | Always                                       | Enter password of the user added above.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | **Instance Time Zone**                 | Always                                       | <p>Provide the codebeamer/codebeamerX instance's timezone.<br><strong>Note</strong>:The instance's timezone and the service user's timezone should be same. To verify the user's timezone, navigate to <code>System Administration / Server Status Dashboard / JVM system properties / user.timezone</code>.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| **Formatting support for Wiki fields** | Always                                       | Select **True** if you want to enable synchronization of formatting for the 'Wiki' fields of codebeamer/codebeamerX instances. \* This step involves an additional action of placing a JAR file on the codebeamer/codebeamerXs' server. \* To obtain this JAR, there are two approaches outlined below: \* **Approach 1**: Use the JAR already built by OpsHub. Click \[here] to Download. \* **Approach 2**: Build your own JAR. Refer to the steps for [How to generate conversion JAR](codebeamer.md#how-to-generate-the-html-to-jspwiki-conversion-jar). \* Copy the JAR file to the `<CB_INSTALLATION>/tomcat/webapps/cb/WEB-INF/lib` folder, and then restart the codebeamer/codebeamerX server to apply the changes. \* Select **False** if you do not want to enable the synchronization of formatting for Wiki fields. In this case, the Wiki field's value will be displayed as plain text when synchronizing the Wiki fields to codebeamer/codebeamerX. For more details, please refer to [Known Limitations/Behavior](codebeamer.md#known-limitationsbehavior). |
+| **Formatting support for Wiki fields** | Always                                       | Select **True** if you want to enable synchronization of formatting for the 'Wiki' fields of codebeamer/codebeamerX instances. * This step involves an additional action of placing a JAR file on the codebeamer/codebeamerXs' server. * To obtain this JAR, there are two approaches outlined below: * **Approach 1**: Use the JAR already built by OpsHub. Click [here](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EVFSOUYC091GttarNbMULEoBVPpTsljgG-sYLbdlLrINJA?e=R3tCBq) to Download.  **Approach 2**: Build your own JAR. Refer to the steps for [How to generate conversion JAR](codebeamer.md#how-to-generate-the-html-to-jspwiki-conversion-jar). * Copy the JAR file to the `<CB_INSTALLATION>/tomcat/webapps/cb/WEB-INF/lib` folder, and then restart the codebeamer/codebeamerX server to apply the changes. * Select **False** if you do not want to enable the synchronization of formatting for Wiki fields. In this case, the Wiki field's value will be displayed as plain text when synchronizing the Wiki fields to codebeamer/codebeamerX. For more details, please refer to [Known Limitations/Behavior](codebeamer.md#known-limitationsbehavior). |
 
-## Mapping Configuration
+# Mapping Configuration
 
 Map the fields between codebeamer/codebeamer X and the other system to be integrated to ensure that the data between both the systems synchronize correctly.
 
 Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
 
-### Test Step Field Configuration
+## Test Step Field Configuration
 
 For mapping additional fields for test steps like 'Critical' and other custom fields, advance XSLT will be modified. Add the following sample xslt in default xslt to map additional fields:
 
@@ -88,14 +86,14 @@ For mapping additional fields for test steps like 'Critical' and other custom fi
 
 > **Note**: For Test Step field all the columns must have some value. Null value or empty string will work only for text and lookup fields, not for integer, decimal, duration, boolean or date fields. `codebeamer/codebeamerX` will throw an error if fields or their values are absent. Based on this, the user can provide advance XSLT which provides default values as well.
 
-### Synchronizing Test Step Results Field
+## Synchronizing Test Step Results Field
 
 * The "Test Step Results" field of the Test Run entity's behaviour as in `codebeamer/codebeamerX`:
   * When a test run is created, `codebeamer/codebeamerX` creates a child run for each associated test case, and the original run serves as the Parent(Main) Run.
-  * When `codebeamer/codebeamerX` is the target system in \{{SITENAME\}}:
-    * \{{SITENAME\}} will consider the test steps available at the time of Test Run creation to update the test step result. Consequently, the source system's test step data will be discarded. If the number of test steps to be updated differs from the test steps on the targeted Test Runs, the \{{SITENAME\}} will fail to update the Test Step Results.
+  * When `codebeamer/codebeamerX` is the target system in {{SITENAME}}:
+    * {{SITENAME}} will consider the test steps available at the time of Test Run creation to update the test step result. Consequently, the source system's test step data will be discarded. If the number of test steps to be updated differs from the test steps on the targeted Test Runs, the {{SITENAME}} will fail to update the Test Step Results.
       * Reason: Test Step Results are associated with the specific version of the test case. Hence, only Test Step Results can be updated, and the original test steps cannot be updated.
-    * If the "Test Step Results" need to be updated more than once, ensure that the \{{SITENAME\}} is configured in a way that the status is updated to a valid value to allow further updates to the Test Step Result. It can be achieved using the [Workflow Transition](../integrate/mapping-configuration.md#workflow-transition).
+    * If the "Test Step Results" need to be updated more than once, ensure that the {{SITENAME}} is configured in a way that the status is updated to a valid value to allow further updates to the Test Step Result. It can be achieved using the [Workflow Transition](../integrate/mapping-configuration.md#workflow-transition).
       * Reason: Test Step Results can be updated only when the Parent (Main) Test Run and Child Test Run are not in a Finished, Suspended, or Closed state. Additionally, once the Test Step Results are updated, `codebeamer/codebeamerX` sets the status of the test run to "Finished", which means it cannot be updated until it is restarted/ its status is updated.
 
 > **Note**: Since `codebeamer/codebeamerX` creates the child test run, configure the Status field settings with the "Set" distribution rule so the Child Test Run's status can also be updated based on the status of the Parent Test Run.
@@ -105,21 +103,21 @@ For mapping additional fields for test steps like 'Critical' and other custom fi
   * Inline file/image synchronization
   * Reconciliation
 
-### Synchronizing the Emojis
+## Synchronizing the Emojis
 
 * When the codebeamer is the source system, advanced mapping is required for the synchronization of emojis of HTML fields.
 * Given below is the sample advanced mapping for synchronizing the smile emoji from codebeamer to Visual Studio Team Services(ADO).
 
 ```xml
-<Repro-space-Steps xmlns:xsl="http://www.w3.org/1999/XSL/Transform">    
-    <xsl:variable name="Description" select="SourceXML/updatedFields/Property/Description"/>
-    <xsl:value-of select="replace($Description,'&lt;img.*/cb/images/emoticons/smile.png.*ALT_WIKI:EMOTICON:%3A%29%20&quot;&gt;','&amp;amp;#128522;')"/>
+ <Repro-space-Steps xmlns:xsl="http://www.w3.org/1999/XSL/Transform">    
+       <xsl:variable name="Description" select="SourceXML/updatedFields/Property/Description"/>
+       <xsl:value-of select="replace($Description,'<img.*/cb/images/emoticons/smile.png.*ALT_WIKI:EMOTICON:%3A%29%20">','&amp;#128522;')"/>
 </Repro-space-Steps>
 ```
 
 > **Note**:In the advanced mapping, the emoji image will be replaced by the target format of specified emoji image. For multiple image occurances, they all must be replaced by target format of emojis.
 
-### Comments and Attachments Configuration
+## Comments and Attachments Configuration
 
 Comments and Attachments do not exist independently. These are added through a section on a tracker named **Comments/Attachments**
 
@@ -127,32 +125,32 @@ Comments and Attachments do not exist independently. These are added through a s
 * If only comments are mapped in Mapping Configuration, then only comments will be synchronized along with inline images inside comments. If there are comments which have attachments, but they are not inline, then they will not be synchronized.
 * If only attachments are mapped in Mapping Configuration then no comments will be synchronized. Only attachments will synchronize to the target system.
 
-### Relationship Configuration
+## Relationship Configuration
 
 In codebeamer/codebeamerX, Associations and Reference fields will be supported as relationships.
 
-#### Associations
+### Associations
 
 * All associations will be synchronized as links to the target system.
-* On \{{SITENAME\}} User Interface, for every association type, two link types will be shown.
-* Associations added by marking Reverse Order check box on codebeamer/codebeamerX User Interface (refer to the following screenshot) will be marked as "\<association\_name> (reverse order)" on \{{SITENAME\}} User Interface.
-* Associations added without marking Reverse Order check box on codebeamer/codebeamerX User Interface will be marked as "\<association\_name>" on \{{SITENAME\}} User Interface.
+* On {{SITENAME}} User Interface, for every association type, two link types will be shown.
+* Associations added by marking Reverse Order check box on codebeamer/codebeamerX User Interface (refer to the following screenshot) will be marked as "<association_name> (reverse order)" on {{SITENAME}} User Interface.
+* Associations added without marking Reverse Order check box on codebeamer/codebeamerX User Interface will be marked as "<association_name>" on {{SITENAME}} User Interface.
 
-<div align="center"><img src="../assets/Codebeamer_Image_3_2_a.png" alt=""></div>
+<div align="center"><img src="../assets/Codebeamer_Image_3_2_a.png" alt="" width="800"></div>
 
-<div align="center"><img src="../assets/Codebeamer_Image_3_b.png" alt=""></div>
+<div align="center"><img src="../assets/Codebeamer_Image_3_b.png" alt="" width="800"></div>
 
 ### Reference fields
 
 * Reference fields are the fields that refer to some other codebeamer/codebeamerX entity.
 * Reference fields will be synchronized through relationships. For references, the names of the Reference fields will be shown in link type mapping of the Relationship Configuration, as shown in screenshot below:
 
-<div align="center"><img src="../assets/Codebeamer_Image_2a.png" alt=""></div>
+<div align="center"><img src="../assets/Codebeamer_Image_2a.png" width="800"></div>
 
 * Custom reference field's name would also be shown in the link types.
 * For synchronizing reference fields value, map the reference field as links, as shown in screenshot below:
 
-<div align="center"><img src="../assets/Codebeamer_Image_3_c.png" alt=""></div>
+<div align="center"><img src="../assets/Codebeamer_Image_3_c.png" alt="" width="800"></div>
 
 > **Note**: Reference fields in field mapping will be read-only fields.
 
@@ -161,69 +159,69 @@ In codebeamer/codebeamerX, Associations and Reference fields will be supported a
 * When codebeamer/codebeamerX is configured as source system in the integration and its field/comment type is rich text (HTML), then the entity mention synchronization is supported.
 * Click on [Mention-Setting](../integrate/mapping-configuration.md#mention-setting) to know more about entity mention mapping and synchronization behavior in general.
 
-### Advance Workflow Transition
+## Advance Workflow Transition
 
 To understand the need for handling workflow transition in codebeamer/codebeamerX, let us take an example: A 'Bug' in codebeamer/codebeamerX, when created should have 'New' status. It's status can then be set to 'Verified' or 'In progress' or 'Closed'. But it's status cannot be directly marked as 'Closed' from 'Verified' state because of the state transition constraints configured through codebeamer/codebeamerX tracker state transition.
 
 Here is the diagram for this example:
 
-<div align="center"><img src="../assets/Codebeamer_Status_Transition_Flowchart.PNG" alt=""></div>
+<div align="center"><img src="../assets/Codebeamer_Status_Transition_Flowchart.PNG" alt="" width="800"></div>
 
 In such scenarios, simply mapping State field and their look-up values can cause failure(s). If a codebeamer/codebeamerX Bug is in 'Verified' state and through the integration the status of it is attempted to be updated to 'Closed', codebeamer/codebeamerX will throw an error that the possible transition for codebeamer/codebeamerX Bug is from 'Verified' to 'In progress' and then from 'In progress'' to 'Closed'.
 
-#### Solution for handling workflow transition
+### Solution for handling workflow transition
 
 This issue can be resolved by following any of these approaches:
 
-**1. Add/Edit Workflow transition XML in Mapping configuration of \{{SITENAME\}}**
+**1. Add/Edit Workflow transition XML in Mapping configuration of {{SITENAME}}**
 
-Click [Workflow Transition](../integrate/mapping-configuration.md#workflow-transition) to learn when and how to configure workflow transition xml mapping.\
-With this option, \{{SITENAME\}} makes the required intermediate status transition automatically as per the transition(s) configuration on the end system.
+Click [Workflow Transition](../integrate/mapping-configuration.md#workflow-transition) to learn when and how to configure workflow transition xml mapping.
+With this option, {{SITENAME}} makes the required intermediate status transition automatically as per the transition(s) configuration on the end system.
 
-**2. Add State Transitions in codebeamer/codebeamerX**\
+**2. Add State Transitions in codebeamer/codebeamerX**
 For step-by-step instructions for configuring any-to-any transition refer: [Configure a new State Transition](codebeamer.md#configure-a-new-state-transition).
 
-### Mapping for Soft Delete Configuration
+## Mapping for Soft Delete Configuration
 
 * When Codebeamer is the target system in the integration, the Soft Delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md).
-* After the Soft Delete operation is performed by \{{SITENAME\}} in Codebeamer, the entity will be deleted in the Codebeamer. It can be found in the "Trash" of the corresponding project, where it existed earlier.
-* To only enable the Logical Delete operation in the target, "OH Soft Delete" field should be mapped with the default value, "No" in the [Delete Mode](../integrate/mapping-configuration/#delete-mode) mapping.
+* After the Soft Delete operation is performed by {{SITENAME}} in Codebeamer, the entity will be deleted in the Codebeamer. It can be found in the "Trash" of the corresponding project, where it existed earlier.
+* To only enable the Logical Delete operation in the target, "OH Soft Delete" field should be mapped with the default value, "No" in the [Delete Mode](../integrate/mapping-configuration.md/#delete-mode) mapping.
 
-### Rank
+## Rank
 
-* Codebeamer allows to organize the tracker items in tree structure. To synchronize the tracker items maintaining the tree structure, below configurations need to be performed in \{{SITENAME\}}.
+* Codebeamer allows to organize the tracker items in tree structure. To synchronize the tracker items maintaining the tree structure, below configurations need to be performed in {{SITENAME}}.
   * Configure the **Hierarchy Child** and **Hierarchy Parent** relationship as per the standard [relationship configuration](../integrate/mapping-configuration.md#relationships).
   * Enable the rank synchronization, as described in [Rank configuration](../integrate/mapping-configuration.md#configuration) section.
     * Here make sure, the overwrite option is enabled for the Codebeamer system for OH ENABLE RANK field.
 
 **Known Limitations**:
 
-* When Codebeamer is configured as the source system in \{{SITENAME\}}:
+* When Codebeamer is configured as the source system in {{SITENAME}}:
   * When rank change is performed on tracker item within same parent item, any field needs to be updated after changing the rank of the tracker item.
     * Reason: When rank is changed for any tracker item within the same parent, neither its **Updated** time is changed nor revision gets generated in codebeamer.
 
-### Mapping For Test Run
+## Mapping For Test Run
 
 * Codebeamer allows the creation of only a Test Run (Parent). The corresponding Test Run (Child), which contains the result information, is automatically generated.
-* \{{SITENAME\}} supports independent synchronization of both entities. To configure this, set the appropriate field value for _Test Run Type_ (for writing) and define the _Criteria_ (for reading):
+* {{SITENAME}} supports independent synchronization of both entities. To configure this, set the appropriate field value for Test Run Type (for writing) and define the Criteria (for reading):
   * **Test Run (Parent)**
-    * To read only the Test Run (Parent), set the criteria as: _parentId IS NULL_
+    * To read only the Test Run (Parent), set the criteria as: parentId IS NULL
     * To create a Test Run (Parent), set the **Test Run Type** to **Parent**
   * **Test Run (Child)**
-    * To read only the Test Run (Child), set the criteria as: _parentId IS NOT NULL_
+    * To read only the Test Run (Child), set the criteria as: parentId IS NOT NULL
     * To create a Test Run (Child), set the **Test Run Type** to **Child**
-      * Additionally, configure the **Parent Test Run** relationship. This is not a mandatory link type for Child creation, but if it's defined and contains valid data, \{{SITENAME\}} will not create a new child. Instead, it will locate the automatically generated Test Run (Child) under the specified parent and update it.
-      * If this relationship is not configured, \{{SITENAME\}} will first create a new Test Run (Parent) and then update the Test Run (Child). The source entity will always be associated with the Test Run (Child), based on the _Test Run Type_ being set to _Child_.
+      * Additionally, configure the **Parent Test Run** relationship. This is not a mandatory link type for Child creation, but if it's defined and contains valid data, {{SITENAME}} will not create a new child. Instead, it will locate the automatically generated Test Run (Child) under the specified parent and update it.
+      * If this relationship is not configured, {{SITENAME}} will first create a new Test Run (Parent) and then update the Test Run (Child). The source entity will always be associated with the Test Run (Child), based on the Test Run Type being set to Child.
 
-## Integration Configuration
+# Integration Configuration
 
 In this step, set a time to synchronize data between codebeamer/codebeamerX and the other system to be integrated. Also, define parameters and conditions, if any, for integration.
 
 Refer to [Integration Configuration](../integrate/integration-configuration.md) to learn the step-by-step process to configure the integration between two systems.
 
-<div align="center"><img src="../assets/Codebeamer_Image_3a.png" alt=""></div>
+<div align="center"><img src="../assets/Codebeamer_Image_3a.png" alt="" width="1500"></div>
 
-### Criteria Configuration
+## Criteria Configuration
 
 If you want to specify conditions for synchronizing an entity between codebeamer/codebeamerX and the other system to be integrated, you can use the Criteria Configuration feature.
 
@@ -245,19 +243,20 @@ To configure criteria in codebeamer/codebeamerX, integration needs to be created
 | **Lookup**              | Synchronizes all the entities having priority as "High". Here, 1 is codebeamer/codebeamer X's project/workspace id and 2 is tracker's id.                                                     | `'1.2.priority' = 'High'`                          |
 | **Date**                | Synchronizes all the entities whose startDate is greater than the given date.                                                                                                                 | `startDate > '2021-01-01'`                         |
 | **Text**                | Synchronizes all the entities containing 'item' within Summary field.                                                                                                                         | `summary LIKE '%item%'`                            |
-| **User**                | Synchronizes all the entities assigned to user with id 3. Refer to section \[\[#Determine User ID                                                                                             | Determine User ID]] to find id of user.            |
+| **User**                | Synchronizes all the entities assigned to user with id 3. Refer to section [Determine User ID](#determine-user-id)
+ to find id of user.   |
 | **User** and **Lookup** | Synchronizes all the entities which are assigned to user with id 3 and has 'Priority' as 'High'. Here, 1 is codebeamer/codebeamer X's project/workspace id and 2 is tracker's id.             | `assignedTo = 3 and '1.2.priority' = 'High'`       |
 | **Lookup** or **Text**  | Synchronizes all the entities having Priority as 'High' or containing 'item' within Summary field. Here, 1 is codebeamer/codebeamer X's project/workspace id and 2 is tracker's id            | `'1.2.priority' = 'High' or summary LIKE '%item%'` |
-| **Custom Field**        | Synchronizes all the entities belonging to tracker type 1, whose field with Property Name as customField\[1] has value 'Verified'                                                             | `'1.customField[1]' = 'Verified'`                  |
-| **Custom Choice Field** | Synchronizes all the entities belonging to codebeamer/codebeamer X project/workspace having Id as 1 and tracker type 2, whose field with Property Name as choiceList\[1] has value 'Option A' | `'1.2.choiceList[1]' = 'Option A'`                 |
+| **Custom Field**        | Synchronizes all the entities belonging to tracker type 1, whose field with Property Name as customField[1] has value 'Verified'                                                             | `'1.customField[1]' = 'Verified'`                  |
+| **Custom Choice Field** | Synchronizes all the entities belonging to codebeamer/codebeamer X project/workspace having Id as 1 and tracker type 2, whose field with Property Name as choiceList[1] has value 'Option A' | `'1.2.choiceList[1]' = 'Option A'`                 |
 
 > **Note**: For the integration with multiple projects configuration, query specific to each configured project/workspace can be combined using `or`.
 
-### Target LookUp Configuration
+## Target LookUp Configuration
 
 * Provide query in Target Search Query such that it is possible to search the entity in the codebeamer/codebeamer X as target system. Set the **'Query'** as per cbQL Format.
-  * Syntax: \[Target Field] = @\[Source-Field-Name]@
-  * Replace \[Target Field] as per the cbQL query.
+  * Syntax: [Target Field] = @[Source-Field-Name]@
+  * Replace [Target Field] as per the cbQL query.
 * To know more about cbQL query in codebeamer/codebeamer X, refer to this link: [cbQL in codebeamer/codebeamer X](https://codebeamer.com/cb/wiki/871101).
 
 #### Sample queries:
@@ -266,7 +265,7 @@ To configure criteria in codebeamer/codebeamerX, integration needs to be created
 
     `Summary = '@Summary@'`
 
-    **Description**:\
+    **Description**:
     It represents the query, which will select entities whose Summary field value is same as the value of the Source system's Summary.
 *   **Target Lookup Query for the constraint on the `multiple fields`:**
 
@@ -274,7 +273,7 @@ To configure criteria in codebeamer/codebeamerX, integration needs to be created
 
     `Summary = '@Summary@' and startDate = '@Start Date@'`
 
-    **Description**:\
+    **Description**:
     This query will select entities whose Summary field value is same as the value of the Source system's Summary and Start Date is same as value mentioned in Start Date of Source System.
 *   **Target Lookup Query for the constraint on the `custom field`:**
 
@@ -283,12 +282,12 @@ To configure criteria in codebeamer/codebeamerX, integration needs to be created
 
     `'16869.customField[1]' = '@oh_internal_id@'`
 
-    **Description**:\
-    It represents the query, which will select entities belonging to tracker type 16869, whose field with Property Name as customField\[1] has value same as the value of the Source system's entity id.
+    **Description**:
+    It represents the query, which will select entities belonging to tracker type 16869, whose field with Property Name as customField[1] has value same as the value of the Source system's entity id.
 
-## Known Limitations/Behavior
+# Known Limitations/Behavior
 
-1. Once the tracker is configured in the \{{SITENAME\}}, it must not be renamed or else the integration configured for that tracker item would be invalid.
+1. Once the tracker is configured in the {{SITENAME}}, it must not be renamed or else the integration configured for that tracker item would be invalid.
 2. Following tracker item types/entities will not be supported:
    * **Working Sets** (earlier known as Branches): Synchronize is only applicable for Master Branch. All the revisions which are done on the tracker item in the master (merge operations or normal revisions) will be synchronized.
    * **Baselines**: Synchronize will not consider the Baselines and will be only considering the HEAD\Default Baseline.
@@ -297,9 +296,8 @@ To configure criteria in codebeamer/codebeamerX, integration needs to be created
    * **Timekeeping tracker types (Worklogs)** will not be supported.
 3. Currently, Table type fields are not supported.
 4. Adding an association does not change the modified time of the entity. Hence, entity's associations will not synchronize until the next update on the entity updates its modified time.
-5. JSPWiki fields will be shown as HTML in \{{SITENAME\}}.
-6. When codebeamer/codebeamer X is the source system in \{{SITENAME\}}, and the content or name of inline image/file in JSPWiki field contains special characters like: â€¢, â‚¬, Â£, Â¥, Â©, Â®, ™, Âµ, α, β, π, Ω, Σ, °, Δ, ☺, ♥, ₹, ¿, ¡, …, À, à, Â, Ã, Ä, Å, Æ, Ç, È, É, Ê, Ë, Ì, ì, Î, ì, Ñ, Ò, Ó, Ô, Õ, Ö, Ù, Ú, Û, Ü, ß, à, á, â, ã, ä, å, æ, ç, è, é, ê, ë, ì, í, î, ï, ñ, ò, ó, ô, õ, ö, ù, ú, û, ü, ÿ, Ğ, ğ, İ, ı, Œ, œ, Ş, ş, Ÿ\
-   then due to API limitations, such characters might get lost during the synchronization. Additionally, formatting of the content will also not be preserved.
+5. JSPWiki fields will be shown as HTML in {{SITENAME}}.
+6. When codebeamer is the source system in OpsHub Integration Manager, and the content or name of inline image/file in JSPWiki field contains special characters like `â€¢, â‚¬, Â£, Â¥, Â©, Â®, â„¢, Âµ, Î±, Î², Ï€, Î©, Î£, Â°, Î”, â˜º, â™¥, â‚¹, Â¿, Â¡, â€¦, Ã€, Ã , Ã‚, Ãƒ, Ã„, Ã…, Ã†, Ã‡, Ãˆ, Ã‰, ÃŠ, Ã‹, ÃŒ, Ã , ÃŽ, Ã , Ã‘, Ã’, Ã“, Ã”, Ã•, Ã–, Ã™, Ãš, Ã›, Ãœ, ÃŸ, Ã , Ã¡, Ã¢, Ã£, Ã¤, Ã¥, Ã¦, Ã§, Ã¨, Ã©, Ãª, Ã«, Ã¬, Ã­, Ã®, Ã¯, Ã±, Ã², Ã³, Ã´, Ãµ, Ã¶, Ã¹, Ãº, Ã», Ã¼, Ã¿, Äž, ÄŸ, Ä°, Ä±, Å’, Å“, Åž, ÅŸ, Å¸,` etc, then due to API limitations, such characters might get lost during the synchronization. Additionally, formatting of the content will also not be preserved.
 7. Lookup values for **Repository Choice field** will not be loaded. If the field is mapped and contains a value, then its value will be synchronized as plain text.
 8. Currently, only Wiki is supported as Description format.
 9. History for Test Step will not be synchronized. Test Step will be synchronized in the current state only.
@@ -318,14 +316,14 @@ To configure criteria in codebeamer/codebeamerX, integration needs to be created
     * For Project Choice Field, all projects will be retrieved.
 18. Entity can get locked in codebeamer/codebeamer X. User must edit and click Cancel/Save to unlock manually.
 19. Parent and Child are not supported in codebeamer/codebeamer X across tracker types.
-20. For Test Cases, if status is **Accepted** or **Rejected**, fields like Test Step, Pre Action, and Post Action cannot be edited.\
+20. For Test Cases, if status is **Accepted** or **Rejected**, fields like Test Step, Pre Action, and Post Action cannot be edited.
     &#xNAN;_(To edit these fields, change status to redesign and then edit.)_
 21. Attachment with fileComment is supported as a write operation. It will be read as a comment with an attachment when Codebeamer is the source system.
 22. If **False** is selected in codebeamer/codebeamer X system configuration for **"Formatting support for Wiki fields"**, then:
     * As **target system**: Wiki fields sync as plain text.
     * As **source system**: Formatting is preserved, but updates will convert content to plain text (both source and target will lose formatting).
-23. **Wiki Link/URL should not be mapped** in the mapping as they will lead to processing failures in synchronization.
-24. For syncing of emojis in HTML fields with codebeamer as source system:
+    * Wiki Link/URL should not be mapped** in the mapping as they will lead to processing failures in synchronization.
+23. For syncing of emojis in HTML fields with codebeamer as source system:
 
     * **Advanced Mapping** is used.
     * The emoji image is replaced with the target-specific emoji format.
@@ -335,21 +333,21 @@ To configure criteria in codebeamer/codebeamerX, integration needs to be created
     ```xml
     <xsl:value-of select="replace(fieldName, image tag of the emoji to be replaced, Format of the emoji in the target system)"/>
     ```
-25. Diagram synchronization is **not supported** in rich text field.
-26. For **Test Sets** entity, it is recommended to configure **"Test Cases"** link with the setting:\
-    **Fail if not found**\
+24. Diagram synchronization is **not supported** in rich text field.
+25. For **Test Sets** entity, it is recommended to configure **"Test Cases"** link with the setting:
+    **Fail if not found**
     **Reason**: Due to API limitations, other-way link operation is not supported.
 
-## Appendix
+# Appendix
 
-### Find version of codebeamer/codebeamer X Instance
+## Find version of codebeamer/codebeamer X Instance
 
 To find the codebeamer / codebeamer X version, follow the steps given below:
 
 * Login to codebeamer / codebeamer X.
 * The version is mentioned:
   * **For codebeamer**: at the bottom of the page
-  * **For codebeamer X**: in the help section\
+  * **For codebeamer X**: in the help section
     as shown in the screenshots below:
 
 **codebeamer:**
@@ -360,11 +358,9 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 
 <div align="center"><img src="../assets/CodebeamerX_Version.png" alt=""></div>
 
-***
+## Add User
 
-### Add User
-
-#### Add User Group
+### Add User Group
 
 * Login to codebeamer / codebeamer X with the Admin User.
 * Select **System Admin** tab.
@@ -400,9 +396,7 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 
 * Click on **Save** button.
 
-***
-
-#### Add User Account
+## Add User Account
 
 * Login to codebeamer / codebeamer X with the Admin User.
 * Select **System Admin** tab.
@@ -444,11 +438,12 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 
 <div align="center"><img src="../assets/CodebeamerX_Image_5_3_d.png" alt=""></div>
 
-#### Add Project Member
+## Add Project Member
 
 **Project Admin can directly add Project Members**
 
-* Login to codebeamer / codebeamer X with user having the project administrator role for the project in which you want to add member. cg\* Open a **project** (codebeamer) / **workspace** (codebeamer X) in which you want to add member.
+* Login to codebeamer / codebeamer X with user having the project administrator role for the project in which you want to add member.
+* Open a **project** (codebeamer) / **workspace** (codebeamer X) in which you want to add member.
 * Click the **three dots** (codebeamer) / **dropdown** (codebeamer X) beside Admin tab.
 * Click **Members** (codebeamer) / **Members & roles** (codebeamer X) option.
 
@@ -466,10 +461,8 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 
 ![CodebeamerX Add Member](../assets/CodebeamerX_Image_5g_1.png)
 
-* For further steps, refer to the codebeamer / codebeamer X documentation for adding a project member:\
+* For further steps, refer to the codebeamer / codebeamer X documentation for adding a project member:
   [Add new Member](https://codebeamer.com/cb/wiki/11113#section-Add+or+invite+members)
-
-***
 
 **Members added by Project Admin via User's Join Request (Only for codebeamer)**
 
@@ -494,14 +487,10 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 
 ![Accept/Reject with Comment](../assets/Codebeamer_Image_5_5_d.png)
 
-***
-
 **Joining a public project without further approval (Only for codebeamer)**
 
 * If project Membership is **Public**, then any user can join any time, without further approval.
 * Login as user who wants to become Member and follow the steps mentioned in section [Make Join Request for a Project](codebeamer.md#make-join-request-for-a-project)
-
-***
 
 **Make Join Request for a Project (Only for codebeamer)**
 
@@ -515,9 +504,7 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 
 <div align="center"><img src="../assets/Codebeamer_Image_5_7_b.png" alt=""></div>
 
-***
-
-### Add User Permission Over Tracker
+## Add User Permission Over Tracker
 
 * Open the **project** (codebeamer) / **workspace** (codebeamer X) where you want to add custom field.
 * Select "**Trackers**" (codebeamer) / "**Tracker tree**" (codebeamer X) tab.
@@ -544,7 +531,7 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 
 * Provide permissions mentioned in [User privileges](codebeamer.md#user-privileges) section for the role assigned to the user.
 
-### How to find Tracker Id
+## How to find Tracker Id
 
 * Open the **project** (codebeamer) / **workspace** (codebeamer X) where your tracker is present whose ID you want to find.
 * Select "**Trackers**" (codebeamer) / "**Tracker tree**" (codebeamer X) tab.
@@ -559,7 +546,7 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 
 ![CodebeamerX Tracker ID](../assets/CodebeamerX_TrackerID.png)
 
-### Add Custom Field
+## Add Custom Field
 
 For creating custom field in codebeamer / codebeamer X, follow the steps given below:
 
@@ -600,9 +587,7 @@ For creating custom field in codebeamer / codebeamer X, follow the steps given b
 * Fill in the details for new field to be added.
 * Click on **OK** and **Save** buttons to save the changes.
 
-***
-
-### Find Custom Field Property Name
+## Find Custom Field Property Name
 
 * Open tracker item configuration.
 * Select **Fields** tab.
@@ -626,9 +611,7 @@ For creating custom field in codebeamer / codebeamer X, follow the steps given b
 
 ![CodebeamerX Property Name](../assets/CodebeamerX_Image_3c.png)
 
-***
-
-### Determine User ID
+## Determine User ID
 
 * Login to codebeamer / codebeamer X with user having the project administrator role. The project administrator and user must be the members of the project for which user ID has to be found.
 * Open a **project** (codebeamer) / **workspace** (codebeamer X) in which the user is already a member for whom he/she wants to find the user ID.
@@ -654,9 +637,7 @@ For creating custom field in codebeamer / codebeamer X, follow the steps given b
 
 ![CodebeamerX User ID](../assets/CodebeamerX_Image_5_10_a.png)
 
-***
-
-### Configure a new State Transition
+## Configure a new State Transition
 
 Following are the steps to configure any-to-any transition:
 
@@ -715,13 +696,11 @@ Following are the steps to configure any-to-any transition:
 
 * Click on **OK** and **Save** buttons to save the changes.
 
-***
+## How to Generate the HTML to JSPWiki Conversion JAR
 
-### How to Generate the HTML to JSPWiki Conversion JAR
-
-1. Download the zip file from \[here] and extract it.
+1. Download the zip file from [here](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/ES82OMoxmvJKvZ-P72JL-ScBeg6_W_38JGyU-KXm7FqJKQ) and extract it.
 2. Open the extracted folder and locate the `gradle.properties` file. In this file, for the `cbHome` parameter, specify the path to your **codebeamer / codebeamer X** installation directory.
-3.  Open the command prompt (it is recommended to run as Administrator) inside the extracted folder and execute the command:
+3. Open the command prompt (it is recommended to run as Administrator) inside the extracted folder and execute the command:
 
     ```
     gradlew build
@@ -731,10 +710,4 @@ Following are the steps to configure any-to-any transition:
 
 > **Note**: After running the command mentioned above, a `build` folder will be generated inside the extracted folder.
 
-4.  Now, navigate to the `build` folder, and you will find a file named:
-
-    ```
-    OpsHubcodeBeamerHTMLToJSPWiki-1.0
-    ```
-
-    inside the `libs` folder.
+4.  Now, navigate to the `build` folder, and you will find a file named OpsHubcodeBeamerHTMLToJSPWiki-1.0 inside the `libs` folder.
