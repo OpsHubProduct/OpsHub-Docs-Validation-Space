@@ -165,7 +165,7 @@ To understand the need for handling workflow transition in codebeamer/codebeamer
 
 Here is the diagram for this example:
 
-<div align="center"><img src="../assets/Codebeamer_Status_Transition_Flowchart.PNG" alt="" width="800"></div>
+<div align="center"><img src="../assets/Codebeamer_Status_Transition_Flowchart.PNG" alt="" width="500"></div>
 
 In such scenarios, simply mapping State field and their look-up values can cause failure(s). If a codebeamer/codebeamerX Bug is in 'Verified' state and through the integration the status of it is attempted to be updated to 'Closed', codebeamer/codebeamerX will throw an error that the possible transition for codebeamer/codebeamerX Bug is from 'Verified' to 'In progress' and then from 'In progress'' to 'Closed'.
 
@@ -573,14 +573,14 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 **codebeamer:**
 
 <p align="center">
-  <img src="../assets/Codebeamer_TrackerID.png" />
+  <img src="../assets/Codebeamer_TrackerID.png" width="800"/>
 </p>
 
 
 **codebeamer X:**
 
 <p align="center">
-  <img src="../assets/CodebeamerX_TrackerID.png" />
+  <img src="../assets/CodebeamerX_TrackerID.png" width="800" />
 </p>
 
 
@@ -756,17 +756,17 @@ Following are the steps to configure any-to-any transition:
 
 **codebeamer X:**
 
-<div align="center"><img src="../assets/CodebeamerX_Add_Transition_Dropdown.png" alt=""></div>
+<div align="center"><img src="../assets/CodebeamerX_Add_Transition_Dropdown.png" alt="" width="800"></div>
 
 * Provide the details.
 
 **codebeamer:**
 
-<div align="center"><img src="../assets/Codebeamer_Add_Transition_Form.png" alt=""></div>
+<div align="center"><img src="../assets/Codebeamer_Add_Transition_Form.png" alt="" width="800"></div>
 
 **codebeamer X:**
 
-<div align="center"><img src="../assets/CodebeamerX_Add_Transition_Form.png" alt=""></div>
+<div align="center"><img src="../assets/CodebeamerX_Add_Transition_Form.png" alt="" width="800"></div>
 
 * Click on **OK** and **Save** buttons to save the changes.
 
