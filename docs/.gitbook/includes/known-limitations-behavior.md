@@ -93,11 +93,11 @@ Following are the limitations and behaviors specific to the individual entities 
    * Example: Suppose bi-directional integration is being configured between X system and TFS system. Further, criteria with end system storage is configured for the integration between **TFS Bug to X System Bug**, and the bypass rule is enabled for the TFS system used with integration between **X System Bug to TFS Bug**. Those entities which are created by OIM into TFS system via integration **X System Bug to TFS Bug** won't get polled by integration of **TFS Bug to X System Bug**, given those entities are not meeting the criteria configured for the integration **TFS Bug to X System Bug**. Refer the below screenshots for more clarity on the configuration along with the workaround.
    * **Workaround:** Edit the mapping of the **X System Bug to TFS Bug** to map the field used for an end system storage criteria setting on integration **TFS Bug to X System Bug** to -NONE- with value as 'True'.
 
-<div align="center"><img src="../../assets/tfs_Integration_Criteria_Settings3.PNG" alt=""></div>
+<div align="center"><img src="../../assets/tfs_Integration_Criteria_Settings3.PNG" alt="" width="900"></div>
 
-<div align="center"><img src="../../assets/tfs_target_system_with_bypass3.PNG" alt=""></div>
+<div align="center"><img src="../../assets/tfs_target_system_with_bypass3.PNG" alt="" width="900"></div>
 
-<div align="center"><img src="../../assets/tfs_mapping_field_defaultVal3.PNG" alt=""></div>
+<div align="center"><img src="../../assets/tfs_mapping_field_defaultVal3.PNG" alt="" width="900"></div>
 
 8. For Team Foundation Server with version equal to or above 2017, the Remote URL will be different from the remote URLs of the older versions of Team Foundation Server. Also, for Azure DevOps, the Remote URLs will be different.
 
@@ -402,7 +402,7 @@ Following are the limitations and behaviors specific to the individual entities 
 
 To synchronize Pull Request, you need to select the repositories of the respective projects selected for the synchronization as shown in the screenshot:
 
-<div align="center"><img src="../../assets/ADOPullReqRepoSelection.png" alt="" width="600"></div>
+<div align="center"><img src="../../assets/ADOPullReqRepoSelection.png" alt="" width="1000"></div>
 
 #### Configuring Related Workitem Regex
 
@@ -414,7 +414,7 @@ User can provide the target entity Ids in the Pull Request fields like Title/Des
 [A-Za-z]+-\d+
 ```
 
-<div align="center"><img src="../../assets/ADOPullReqRegexInput.png" alt="" width="600"></div>
+<div align="center"><img src="../../assets/ADOPullReqRegexInput.png" alt="" width="1000"></div>
 
 ### Build Entity
 
