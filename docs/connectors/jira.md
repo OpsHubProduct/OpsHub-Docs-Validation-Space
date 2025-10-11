@@ -2084,7 +2084,7 @@ The known limitations for Jira Service Desk are:
 
 * Jira Service Desk doesn't provide history for **Service Desk Request Status** field. So, history state synchronization is not possible for this field. And, as the historic values for **Service Desk Request Status** field is not supported, conflict detection feature for this field should be disabled during mapping configuration.
 
-### Jira Zephyr Scale Plugin
+## Jira Zephyr Scale Plugin
 
 * The documentation for the Jira Zephyr Scale plugin is available at [Jira Zephyr Scale](jirazephyrscale.md) .
 
