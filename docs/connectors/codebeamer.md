@@ -51,7 +51,7 @@ Refer to the following screenshot for reference: **codebeamer**
 | **User Name**                          | Always                                       | Provide the username of a dedicated user who will be used for communicating with codebeamer/codebeamerX API. This user should have the required privileges as mentioned in section, [User privileges](codebeamer.md#user-privileges).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | **User Password**                      | Always                                       | Enter password of the user added above.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | **Instance Time Zone**                 | Always                                       | <p>Provide the codebeamer/codebeamerX instance's timezone.<br><strong>Note</strong>:The instance's timezone and the service user's timezone should be same. To verify the user's timezone, navigate to <code>System Administration / Server Status Dashboard / JVM system properties / user.timezone</code>.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| **Formatting support for Wiki fields** | Always                                       | Select **True** if you want to enable synchronization of formatting for the 'Wiki' fields of codebeamer/codebeamerX instances. * This step involves an additional action of placing a JAR file on the codebeamer/codebeamerXs' server. * To obtain this JAR, there are two approaches outlined below: * **Approach 1**: Use the JAR already built by OpsHub. Click [here](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EVFSOUYC091GttarNbMULEoBVPpTsljgG-sYLbdlLrINJA?e=R3tCBq) to Download.  **Approach 2**: Build your own JAR. Refer to the steps for [How to generate conversion JAR](codebeamer.md#how-to-generate-the-html-to-jspwiki-conversion-jar). * Copy the JAR file to the `<CB_INSTALLATION>/tomcat/webapps/cb/WEB-INF/lib` folder, and then restart the codebeamer/codebeamerX server to apply the changes. * Select **False** if you do not want to enable the synchronization of formatting for Wiki fields. In this case, the Wiki field's value will be displayed as plain text when synchronizing the Wiki fields to codebeamer/codebeamerX. For more details, please refer to [Known Limitations/Behavior](codebeamer.md#known-limitationsbehavior). |
+| **Formatting support for Wiki fields** | Always                                       | Select **True** if you want to enable synchronization of formatting for the 'Wiki' fields of codebeamer/codebeamerX instances. <br> * This step involves an additional action of placing a JAR file on the codebeamer/codebeamerXs' server. <br> * To obtain this JAR, there are two approaches outlined below: <br> * **Approach 1**: Use the JAR already built by OpsHub. Click [here](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EVFSOUYC091GttarNbMULEoBVPpTsljgG-sYLbdlLrINJA?e=R3tCBq) to Download. <br> **Approach 2**: Build your own JAR. Refer to the steps for [How to generate conversion JAR](codebeamer.md#how-to-generate-the-html-to-jspwiki-conversion-jar). <br> * Copy the JAR file to the `<CB_INSTALLATION>/tomcat/webapps/cb/WEB-INF/lib` folder, and then restart the codebeamer/codebeamerX server to apply the changes.  <br> * Select **False** if you do not want to enable the synchronization of formatting for Wiki fields. In this case, the Wiki field's value will be displayed as plain text when synchronizing the Wiki fields to codebeamer/codebeamerX. For more details, please refer to [Known Limitations/Behavior](codebeamer.md#known-limitationsbehavior). |
 
 # Mapping Configuration
 
@@ -449,17 +449,26 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 
 **codebeamer X:**
 
-![CodebeamerX Members & Roles](../assets/CodebeamerX_Image_5g_2.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Image_5g_2.png" />
+</p>
+
 
 * Click "**Add New Member**" (codebeamer) / "**New Member**" (codebeamer X) link as shown in screenshot below:
 
 **codebeamer:**
 
-![Codebeamer Add Member](../assets/Codebeamer_Image_5g.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image_5g.png" />
+</p>
+
 
 **codebeamer X:**
 
-![CodebeamerX Add Member](../assets/CodebeamerX_Image_5g_1.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Image_5g_1.png" />
+</p>
+
 
 * For further steps, refer to the codebeamer / codebeamer X documentation for adding a project member:
   [Add new Member](https://codebeamer.com/cb/wiki/11113#section-Add+or+invite+members)
@@ -472,20 +481,32 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
   * Open a project for which you want to approve join request for Users.
   * Click the three dots provided beside the Admin tab.
   * Click on the Members option.
+    
+<p align="center">
+  <img src="../assets/Codebeamer_Image_5_5_a.png" />
+</p>
 
-![Join Request - Members](../assets/Codebeamer_Image_5_5_a.png)
 
 * Click three blue dots and select "Join Requests" option as shown in the screenshot below:
 
-![Join Requests Option](../assets/Codebeamer_Image_5_5_b.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image_5_5_b.png" />
+</p>
+
 
 * Click the green check mark to approve the request and red mark to decline as shown in the screenshot below:
 
-![Approve/Reject Request](../assets/Codebeamer_Image_5_5_c.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image_5_5_c.png" />
+</p>
+
 
 * Provide Notification Comment and select Accept/Reject button accordingly as shown in the screenshot below:
 
-![Accept/Reject with Comment](../assets/Codebeamer_Image_5_5_d.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image_5_5_d.png" />
+</p>
+
 
 **Joining a public project without further approval (Only for codebeamer)**
 
@@ -513,21 +534,32 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 
 **codebeamer:**
 
-![Codebeamer Configure Tracker](../assets/Codebeamer_Image_5_9_a.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image_5_9_a.png" />
+</p>
+
 
 **codebeamer X:**
 
-![CodebeamerX Configure Tracker](../assets/CodebeamerX_Image_5_9_a.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Image_5_9_a.png" />
+</p>
+
 
 * Select "Permissions" tab as shown in the screenshot below:
 
 **codebeamer:**
 
-![Codebeamer Tracker Permission](../assets/Codebeamer_Image_5_8_a.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image_5_8_a.png" />
+</p>
 
 **codebeamer X:**
 
-![CodebeamerX Tracker Permission](../assets/CodebeamerX_Image_5_8_a.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Image_5_8_a.png" />
+</p>
+
 
 * Provide permissions mentioned in [User privileges](codebeamer.md#user-privileges) section for the role assigned to the user.
 
@@ -540,11 +572,17 @@ To find the codebeamer / codebeamer X version, follow the steps given below:
 
 **codebeamer:**
 
-![Codebeamer Tracker ID](../assets/Codebeamer_TrackerID.png)
+<p align="center">
+  <img src="../assets/Codebeamer_TrackerID.png" />
+</p>
+
 
 **codebeamer X:**
 
-![CodebeamerX Tracker ID](../assets/CodebeamerX_TrackerID.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_TrackerID.png" />
+</p>
+
 
 ## Add Custom Field
 
@@ -557,35 +595,48 @@ For creating custom field in codebeamer / codebeamer X, follow the steps given b
 
 **codebeamer:**
 
-![Codebeamer Configure Tracker](../assets/Codebeamer_Image_5_9_a.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image_5_9_a.png" />
+</p>
 
 **codebeamer X:**
 
-![CodebeamerX Configure Tracker](../assets/CodebeamerX_Image_5_9_a.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Image_5_9_a.png" />
+</p>
 
 * Select **Fields** tab as shown in the screenshot below:
 
 **codebeamer:**
 
-![Codebeamer Fields Tab](../assets/Codebeamer_Image_5_9_b.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image_5_9_b.png" />
+</p>
 
 **codebeamer X:**
 
-![CodebeamerX Fields Tab](../assets/CodebeamerX_Image_5_9_b.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Image_5_9_b.png" />
+</p>
 
-* Scroll down to extreme bottom of the page and click on **More fields...** (codebeamer) / **New Choice Field** (codebeamer X) drop-down list.
+* Scroll down to extreme bottom of the page and click on **More fields...** (codebeamer) / **New Choice Field** (codebeamer X) drop-down list.  
 * Select **New Choice Field** option to add a choice type field or **New Custom Field** option to add other types of custom fields.
 
 **codebeamer:**
 
-![Codebeamer New Field Options](../assets/Codebeamer_Image_5_9_c.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image_5_9_c.png" />
+</p>
 
 **codebeamer X:**
 
-![CodebeamerX New Field Options](../assets/CodebeamerX_Image_5_9_c.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Image_5_9_c.png" />
+</p>
 
-* Fill in the details for new field to be added.
+* Fill in the details for new field to be added.  
 * Click on **OK** and **Save** buttons to save the changes.
+
 
 ## Find Custom Field Property Name
 
@@ -595,21 +646,30 @@ For creating custom field in codebeamer / codebeamer X, follow the steps given b
 
 **codebeamer:**
 
-![Codebeamer Show Property Name](../assets/Codebeamer_Image_3b.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image_3b.png" />
+</p>
 
 **codebeamer X:**
 
-![CodebeamerX Show Property Name](../assets/CodebeamerX_Image_3b.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Image_3b.png" />
+</p>
 
 * Highlighted text in the image below shows property name for custom field "Custom Text".
 
 **codebeamer:**
 
-![Codebeamer Property Name](../assets/Codebeamer_Image_3c.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image_3c.png" />
+</p>
 
 **codebeamer X:**
 
-![CodebeamerX Property Name](../assets/CodebeamerX_Image_3c.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Image_3c.png" />
+</p>
+
 
 ## Determine User ID
 
@@ -621,21 +681,30 @@ For creating custom field in codebeamer / codebeamer X, follow the steps given b
 
 **codebeamer:**
 
-![Codebeamer Member ID](../assets/Codebeamer_Image_5_10_b.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image_5_10_b.png" />
+</p>
 
 **codebeamer X:**
 
-![CodebeamerX Member ID](../assets/CodebeamerX_Image_5_10_b.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Image_5_10_b.png" />
+</p>
 
 * Account ID is the required user ID as shown in the screenshot below:
 
 **codebeamer:**
 
-![Codebeamer User ID](../assets/Codebeamer_Image_5_10_a.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image_5_10_a.png" />
+</p>
 
 **codebeamer X:**
 
-![CodebeamerX User ID](../assets/CodebeamerX_Image_5_10_a.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Image_5_10_a.png" />
+</p>
+
 
 ## Configure a new State Transition
 
@@ -648,11 +717,16 @@ Following are the steps to configure any-to-any transition:
 
 **codebeamer:**
 
-![Codebeamer Configure Tracker](../assets/Codebeamer_Image_5_9_a.png)
+<p align="center">
+  <img src="../assets/Codebeamer_Image_5_9_a.png" />
+</p>
 
 **codebeamer X:**
 
-![CodebeamerX Configure Tracker](../assets/CodebeamerX_Image_5_9_a.png)
+<p align="center">
+  <img src="../assets/CodebeamerX_Image_5_9_a.png" />
+</p>
+
 
 * Select **State Transitions** tab as shown in the screenshot below:
 
