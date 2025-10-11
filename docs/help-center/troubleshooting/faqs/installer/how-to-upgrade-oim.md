@@ -9,7 +9,7 @@ Make sure that the {{#ifeq: <code class="expression">space.vars.SITENAME</code> 
 Once the pre-requisites are met, follow one of the below {{#ifeq: <code class="expression">space.vars.SITENAME</code> | OpsHub Migrator for Microsoft Azure DevOps | section | sections }}
 
 - [Steps to migrate on Windows](../../../manage/upgrade/upgrade-application.md#migration-steps-for-windows)  
-{{#ifeq: <code class="expression">space.vars.SITENAME</code> | OpsHub Migrator for Microsoft Azure DevOps || [Steps to migrate on Linux](../../../manage/upgrade/upgrade-application.md#migration-steps-for-linux) }}
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %} [Steps to migrate on Linux](../../../manage/upgrade/upgrade-application.md#migration-steps-for-linux) {% endif %}
 
 Once migration is completed successfully, follow these [Post Migration Steps](../../../manage/upgrade/upgrade-application.md#post-migration-steps-for-windows-and-linux).
 
