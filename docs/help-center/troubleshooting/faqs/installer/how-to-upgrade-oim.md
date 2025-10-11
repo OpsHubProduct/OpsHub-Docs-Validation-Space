@@ -6,7 +6,7 @@ Migrating <code class="expression">space.vars.SITENAME</code> to new version wil
 
 Make sure that the {{#ifeq: <code class="expression">space.vars.SITENAME</code> | OpsHub Migrator for Microsoft Azure DevOps  | [Migration Pre-requisites](../../../manage/upgrade/upgrade-application.md#migration-pre-requiste-for-windows-and-linux) |[Pre-Upgrade Checklist](../../../manage/upgrade/upgrade-application.md#pre-upgrade-checklist) }} steps are followed before migrating to new version.
 
-Once the pre-requisites are met, follow one of the below {{#ifeq: <code class="expression">space.vars.SITENAME</code> | OpsHub Migrator for Microsoft Azure DevOps | section | sections }}
+Once the pre-requisites are met, follow one of the below {% if "OpsHub Integration Manager" === space.vars.SITENAME %} sections {% endif %} {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} section {% endif %} 
 
 - [Steps to migrate on Windows](../../../manage/upgrade/upgrade-application.md#migration-steps-for-windows)  
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %} [Steps to migrate on Linux](../../../manage/upgrade/upgrade-application.md#migration-steps-for-linux) {% endif %}
