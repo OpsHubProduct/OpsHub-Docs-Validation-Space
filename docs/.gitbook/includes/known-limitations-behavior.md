@@ -327,7 +327,7 @@ Following are the limitations and behaviors specific to the individual entities 
       * Azure DevOps End point Format - [ID] [=, <, >, <=, >=, <>, in] [Source entity id]. **Example:** `[ID] = [12345]`
       * Format being used for processing/synchronization - `[ID] = [12345]`
         \[No change is done here and hence the source work item id will be synchronized/visible in the target end point]
-        In case, you want the Source workitem id to be replaced with its corresponding target id [Which is synchronized by {{SITENAME}}], please use a customized workflow - **Default Integration Workflow - TFS to TFS - Query.xml**
+        In case, you want the Source workitem id to be replaced with its corresponding target id [Which is synchronized by <code class="expression">space.vars.SITENAME</code>], please use a customized workflow - **Default Integration Workflow - TFS to TFS - Query.xml**
         **For example **
         Consider a WIQL:
         `select [System.ID], [System.WorkItemType] from WorkItems where [System.ID] = 1234 and [System.AssignedTo]`
@@ -337,8 +337,8 @@ Following are the limitations and behaviors specific to the individual entities 
 * Azure DevOps is configured as target:
   * **Folder synchronization**
     * In Azure DevOps, **Query** entities can be organized in different folders.
-    * In {{SITENAME}}, the field **Folder** corresponds to the folders present in the end system.
-    * While Query synchronization, if the Query's folder is not available in target, then {{SITENAME}} will first create the folder and then the query will be synchronized to that folder.
+    * In <code class="expression">space.vars.SITENAME</code>, the field **Folder** corresponds to the folders present in the end system.
+    * While Query synchronization, if the Query's folder is not available in target, then <code class="expression">space.vars.SITENAME</code> will first create the folder and then the query will be synchronized to that folder.
 
 #### Widget Entity
 
@@ -347,7 +347,7 @@ Following are the limitations and behaviors specific to the individual entities 
   * In Azure DevOps, a widget can be only created within a dashboard. Hence, configuring a relationship of type **Dashboard** is mandatory so that widget gets created within that dashboard.
     * A failure [OH-Connector-0059] will be generated in case a dashboard is not synchronized and its widget is getting synchronized. In such cases, dashboard must be synchronized first and then widget creation failure should be retried.
 * **Configuration field behavior**
-  * There can be variety of widgets and each widget can have its own configuration. Widget configuration can be synchronized using **Configuration** field in {{SITENAME}}.
+  * There can be variety of widgets and each widget can have its own configuration. Widget configuration can be synchronized using **Configuration** field in <code class="expression">space.vars.SITENAME</code>.
 * **Widgets re-positioning behavior**
   * A Dashboard has pre-defined number of tiles where widgets can be added or re-positioned.
   * As long as the source and target dashboard have same widgets positioning i.e same position and size, the synchronization will work as per expectation. If the widget positioning differs, synchronization will fail with "widget collision" exception.
@@ -364,8 +364,8 @@ Following are the limitations and behaviors specific to the individual entities 
 
     * When widgets are re-positioned in source, the dashboard in target needs to be re-positioned as well using following configuration:
       * The **Widget** link must be configured in Dashboard mapping.
-    * The dashboard must be re-synchronized through {{SITENAME}}.
-    * In case of widget collision failure, the user will have to move the existing widget in target to another position, and then retry the processing failure of Dashboard integration in {{SITENAME}} to synchronize the widget re-positioning.
+    * The dashboard must be re-synchronized through <code class="expression">space.vars.SITENAME</code>.
+    * In case of widget collision failure, the user will have to move the existing widget in target to another position, and then retry the processing failure of Dashboard integration in <code class="expression">space.vars.SITENAME</code> to synchronize the widget re-positioning.
 
     > **Note** Any update on fields - **Position Row, Position Column, Size Row Span and Size Column Span** will be ignored during widget update synchronization.
 * **Query Charts used as Dashboard Widgets:**
@@ -431,7 +431,7 @@ User can provide the target entity Ids in the Pull Request fields like Title/Des
 * To sync the stages' approvals, the following points must be considered:
   * Three text types of the fields need to be created for stage identifier(in YML file of pipeline for particular stage), approval status, approval comments in source system, from which the data will be synced to Build entity.
   * To approve the build stage, user needs to give the above three values in the above fields.
-  * Map the 'None' field of the source system to the OH_StageApproval field of build entity in {{SITENAME}}. The following advance mapping should be utilized for mapping the 'None' field to OH_StageApproval:
+  * Map the 'None' field of the source system to the OH_StageApproval field of build entity in <code class="expression">space.vars.SITENAME</code>. The following advance mapping should be utilized for mapping the 'None' field to OH_StageApproval:
     
 ```xml
 <oh_stageApproval xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
