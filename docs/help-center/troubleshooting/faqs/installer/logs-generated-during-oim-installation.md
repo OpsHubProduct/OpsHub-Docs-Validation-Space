@@ -12,7 +12,7 @@ This file is located under the 'logs' folder in <code class="expression">space.v
 For example:
 
 Operating System: **Windows**  
-Installation Path: `C:\Program Files\{{#ifeq: <code class="expression">space.vars.SITENAME</code> | OpsHub Migrator for Microsoft Azure DevOps |OM4ADO|OpsHub}}`  
+Installation Path: `C:\Program Files\{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}OM4ADO{% endif %}{% if "OpsHub Integration Manager" === space.vars.SITENAME %}OpsHub{% endif %}`  
 Location of log file: `C:\Program Files\{{#ifeq: <code class="expression">space.vars.SITENAME</code> | OpsHub Migrator for Microsoft Azure DevOps |OM4ADO|OpsHub}}\logs\Install.log`
 
 {{#ifeq: <code class="expression">space.vars.SITENAME</code> | OpsHub Migrator for Microsoft Azure DevOps ||

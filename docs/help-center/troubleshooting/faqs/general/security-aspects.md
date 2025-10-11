@@ -18,15 +18,15 @@ Customer data privacy and protection is the top-most priority at OpsHub. To ensu
 
 * Users must authenticate themselves with a user name and password to gain access to <code class="expression">space.vars.SITENAME</code>.
 * All <code class="expression">space.vars.SITENAME</code> users' passwords are stored with one-way hash with a salt so decrypting <code class="expression">space.vars.SITENAME</code> passwords is not possible.
-* <code class="expression">space.vars.SITENAME</code> stores sensitive data such as system's passwords, API token, database password in an encrypted format so that only <code class="expression">space.vars.SITENAME</code> can access it and others can't access it. {{#ifeq: <code class="expression">space.vars.SITENAME</code> | OpsHub Migrator for Microsoft Azure DevOps ||The default encryption algorithm is AES-256. Encryption algorithm selection option is visible in advance configuration of installation. For more information on how to select encryption algorithm and what other encryption algorithm options are available, please refer [Data Encryption Configuration](../../../getting-started/installation.md#data-encryption-configuration)
-.}} 
+* <code class="expression">space.vars.SITENAME</code> stores sensitive data such as system's passwords, API token, database password in an encrypted format so that only <code class="expression">space.vars.SITENAME</code> can access it and others can't access it. {% if "OpsHub Integration Manager" === space.vars.SITENAME %} The default encryption algorithm is AES-256. Encryption algorithm selection option is visible in advance configuration of installation. For more information on how to select encryption algorithm and what other encryption algorithm options are available, please refer [Data Encryption Configuration](../../../getting-started/installation.md#data-encryption-configuration). {% endif %}
 
-{{#ifeq: <code class="expression">space.vars.SITENAME</code> | OpsHub Migrator for Microsoft Azure DevOps ||### HTTPS deployment
-
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}
+### HTTPS deployment
 <code class="expression">space.vars.SITENAME</code> supports https deployment. This option is available during installation. For more information please refer [Advance Installation](../../../getting-started/installation.md#advance-installation).
 
 * HTTPS is a way to encrypt information exchanged between a browser and a web server. This protects 'man-in-the-middle' attacks, where someone steals the information being sent to a web server.
-* <code class="expression">space.vars.SITENAME</code> supports TLS 1.3 protocol.}}
+* <code class="expression">space.vars.SITENAME</code> supports TLS 1.3 protocol.
+{% endif %}
 
 ### Third Party Services/Libraries
 
