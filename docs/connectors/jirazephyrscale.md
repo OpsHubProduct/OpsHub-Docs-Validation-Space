@@ -51,7 +51,8 @@ Refer the screenshot given below for reference.
 
 * <code class="expression">space.vars.SITENAME</code> supports synchronization of test steps through the field '''OH_Test_Steps'''.
 * Custom field of test steps will be synced with additional fields as bellow:
-<pre>
+
+```xml
 <OH_Test_Steps>
 	<xsl:for-each xmlns:xsl="http://www.w3.org/1999/XSL/Transform" select="SourceXML/updatedFields/Property/OH__Test__Steps/com.opshub.eai.TestStep">
 		<xsl:element name="{concat('_',order)}">
