@@ -10,10 +10,10 @@
 | **Permission Types** | **Justification** | **Needed When** | **How To** |
 |----------------------|-------------------|------------------|------------|
 | **Read** | This is the minimal permission required by the user for reading the artifacts from DOORS Next project | DOORS Next is source system, target system or both | To learn how to provide user with the read permissions for a project, refer to section [Access Control in project](#access-control) |
-| **Save artifact**<br> Create an artifact<br> Modify an artifact | This is the minimal permission required by the user's role for creating/updating an artifact in DOORS Next | DOORS Next is target system. Also, when DOORS Next is source system, then **Modify an artifact** permission is required for [Remote Id or Remote Link configuration](integration_configuration#tracking_id_and_link_of_entities_across_systems) in integration. | rowspan="4" | To learn how to provide user with these permissions for a project, refer to section [Permissions in project](#permissions) |
-| **Save Comment**<br>* Modify | This is the minimal permission required by the user's role for adding comments to an artifact in DOORS Next | DOORS Next is target system and comments needs to be synchronized | |
-| **Save Folder**<br> Create a folder | This is the minimal permission required by the user's role for creating folders in DOORS Next stream. | DOORS Next is target system with **In Folder** field mapped in mapping and the folders are not already present in target stream(folders gets auto-created by OpsHub Integration Manager if not found in target stream). Refer to section [In Folder field](#fields-available-in-doors-next) to learn more about this field | |
-| **Save Link**<br> Create a Link<br> Delete a Link<br> Modify a Link | This is the minimal permission required by the user's role for modifying links between artifacts in DOORS Next | DOORS Next is target system and [relationships](mapping_configuration#relationships) is configured in field mapping. | |
+| **Save artifact**<br> **Create an artifact** <br> **Modify an artifact** | This is the minimal permission required by the user's role for creating/updating an artifact in DOORS Next | DOORS Next is target system. Also, when DOORS Next is source system, then **Modify an artifact** permission is required for [Remote Id or Remote Link configuration](integration_configuration#tracking_id_and_link_of_entities_across_systems) in integration. | rowspan="4" | To learn how to provide user with these permissions for a project, refer to section [Permissions in project](#permissions) |
+| **Save Comment**<br> **Modify** | This is the minimal permission required by the user's role for adding comments to an artifact in DOORS Next | DOORS Next is target system and comments needs to be synchronized | |
+| **Save Folder**<br> **Create a folder** | This is the minimal permission required by the user's role for creating folders in DOORS Next stream. | DOORS Next is target system with **In Folder** field mapped in mapping and the folders are not already present in target stream(folders gets auto-created by OpsHub Integration Manager if not found in target stream). Refer to section [In Folder field](#fields-available-in-doors-next) to learn more about this field | |
+| **Save Link**<br> **Create a Link** <br> **Delete a Link** <br> **Modify a Link** | This is the minimal permission required by the user's role for modifying links between artifacts in DOORS Next | DOORS Next is target system and [relationships](mapping_configuration#relationships) is configured in field mapping. | |
 
 > **Note**: The permissions in DOORS Next can be configured per project. Thus, only those projects will be visible in mapping and integration for which sync user has read permission. Refer to section [Read access in project](#access-control) for more information on giving read permissions to sync user.
 
@@ -1053,6 +1053,7 @@ In DOORS Next, the **read access** can be restricted using **Access Control** se
     * When a base/core artifact is added into module, it creates a replica of artifact in the module. The artifact created in the module is called shared artifact. The identifier of shared artifact and the core artifact is identical. But, their resource id (UUID) are different.
     * A shared artifact is always bounded with a core artifact but a core artifact may or may not have a shared artifact.
     * **Module artifact** – It's an alternate terminology to represent shared artifact.
+
 
 
 
