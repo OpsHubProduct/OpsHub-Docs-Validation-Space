@@ -17,7 +17,10 @@ To view the Event Failure Management section, follow the steps below:
 * In the **Integration Health** column, for each integration you'll see a number denoting the number of failed events for that integration. If the number is greater than 0,  click the number to view the failure(s) and diagnose it further.
 * Once you click on the number, you'll be redirected to the *Integration Job Error(s)* page. There you'll see a table listing all the event failures for that integration.
 
-![EventFailure3a](../../assets/EventFailure3a.png)
+<p align="center">
+  <img src="../../assets/EventFailure3a.png" width="800"/>
+</p>
+
 
 ## Filtering failures
 
@@ -40,14 +43,20 @@ To view the Event Failure Management section, follow the steps below:
 
 For example, in the image below, we have filtered the errors with Error Code '0041'.
 
-![AdvanceSearcha](../../assets/AdvanceSearcha.png)
+<p align="center">
+  <img src="../../assets/AdvanceSearcha.png" width="800"/>
+</p>
+
 
 ## Grouping failures
 
 * You can group and filter failures in categories from the **Select to group** drop-down. The categories in which you can group failures are:  **Error Message**, **Error Code**, and **Integration Name.**
 * Select the grouping in which you want to view the failure. The errors relevant for that group will appear.
 
-![Group1](../../assets/Group1.png)
+<p align="center">
+  <img src="../../assets/Group1.png" width="800"/>
+</p>
+
 
 ## Action on failures
 
@@ -92,25 +101,35 @@ Once you click the **View Failed Event** option against a failure, a pop-up scre
 
 >**Note**: Here's an example of the pop-up screen for an integration's failed event. The details may vary from failure to failure:
 
-![ViewFailedEvent_1](../../assets/ViewFailedEvent-1.png)
+<p align="center">
+  <img src="../../assets/ViewFailedEvent-1.png" width="700"/>
+</p>
+
 
 * **Mapping Input**: The Mapping Input option refers to the XML input for the source event as per the configured mapping. Here, all properties of the source entity are retrieved from the source system.
 
-![ViewFailedEvent_2](../../assets/ViewFailedEvent-2.png)
+<p align="center">
+  <img src="../../assets/ViewFailedEvent-2.png" width="700"/>
+</p>
 
 >**Note**: Slide the toggle to switch between old values and new values of the mapping input.  
 >**Note**: The 'old values' in the mapping input refer to the previously fetched values from the source entity. The 'new values' in the mapping input refer to the current values of an entity that has been fetched from the source system.
 
 * **Mapping Output**: The Mapping Output option refers to the XML output for the source event as per the configured mapping.
 
-![ViewFailedEvent_3](../../assets/ViewFailedEvent-3.png)
+<p align="center">
+  <img src="../../assets/ViewFailedEvent-3.png" width="700"/>
+</p>
 
 >**Note**: Slide the toggle to switch between old values and new values for the mapping output.  
 >**Note**: The 'old values' in the mapping output refer to the transformed values(old) for the given mapping input. The 'new values' in the mapping output refer to the values of an entity after they have been transformed as per the configured mapping.
 
 * **Reconciliation Data**: If the configured job is for **reconciliation** and a failure occurs because of it, another option for reconciliation data will appear. This option contains rules input and rules output for the configured reconciliation rules.
 
-![ViewFailedEvent_4](../../assets/ViewFailedEvent-4.png)
+<p align="center">
+  <img src="../../assets/ViewFailedEvent-4.png" width="700"/>
+</p>
+
 
 >**Note**: Slide the toggle to switch between rules input and rules output.  
 >**Note**: The rules input is the 'Mapping Input XML' for the configured mapping along with a special field called 'diffProperties', crucial for reconciliation. The rules output is the 'Mapping Output XML' which are the transformed values of fields configured for reconciliation.
@@ -120,12 +139,20 @@ Once you click the **View Failed Event** option against a failure, a pop-up scre
   * If failure occurred before the execution of the transformation,
 
 * A warning will be given for the above three cases. Following is the example of the warning message:  
-![ViewFailedEvent_5](../../assets/ViewFailedEvent-5.png)
+
+<p align="center">
+  <img src="../../assets/ViewFailedEvent-5.png" width="500"/>
+</p>
+
 
 * If the failures are present in the older versions(before V7.170 upgrade): In that case, to view the mapping input & mapping output, the failures should be retried to have the information.
 
->**Note**: If the failures are not retried after updating the source event, and you view the failed event again, an icon will appear in the top right corner of the Mapping Input, Mapping Output, and Reconciliation Data options. This icon indicates that the XML values are not the latest, and you should retry and refresh the failed event. Refer to the below image for the same:  
-![ViewFailedEvent_7](../../assets/ViewFailedEvent-7.png)
+>**Note**: If the failures are not retried after updating the source event, and you view the failed event again, an icon will appear in the top right corner of the Mapping Input, Mapping Output, and Reconciliation Data options. This icon indicates that the XML values are not the latest, and you should retry and refresh the failed event. Refer to the below image for the same:
+  
+<p align="center">
+  <img src="../../assets/ViewFailedEvent-7.png" width="400"/>
+</p>
+
 
 ## How to read an error message
 
@@ -133,7 +160,10 @@ Once you click the **Show Details** option against an error, **the Failure Detai
 
 >**Note**: The following image shows the Jira-ServiceNow integration specific error. The errors may slightly vary from one integration to another. 
 
-![Failure-Management](../../assets/Failure-Management.png)
+<p align="center">
+  <img src="../../assets/Failure-Management.png" width="600"/>
+</p>
+
 
 * **Integration Name**: Name of the integration for which the failure has been recorded
 * **Workflow**: Name of the workflow, executing which the failure has occurred
@@ -156,7 +186,10 @@ If you are facing a complex failure for which you are seeking help from support 
 * Go to the integration for which you are facing a failure.
 * Hover over More ![Stack_Icon](../../assets/Stack-Icon.png) icon, you will get an option to export Integration Details as shown in the image below.
 
-![Export_Integration_Details](../../assets/Export-Integration-Details.png)  
+<p align="center">
+  <img src="../../assets/Export-Integration-Details.png" width="600"/>
+</p>
+  
 
 * Click on the **Dump Integration Data** button. You will get a zip file with the name: **IntegrationDetails.zip**.
 * Zip contains integration configurations, sync logs, mapping, and failure details; it does not contain any sensitive data related to the integration user. 
