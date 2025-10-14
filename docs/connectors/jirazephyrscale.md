@@ -3,7 +3,7 @@
 # Prerequisites
 
 * Zephyr (formerly known as Zephyr Scale) must be installed on your Jira Cloud domain.  
-* A user access token for integration user is required to synchronize any entities from the Zephyr plugin. Check [User Token Generation].  
+* A user access token for integration user is required to synchronize any entities from the Zephyr plugin. Check [User Token Generation](#user-token-generation).  
 >**Note**: Make sure the Zephyr service account is the same as the Jira system service account.
 
 # System Configuration
@@ -15,12 +15,12 @@ Click [System Configuration](../integrate/system-configuration.md) to learn the 
 Refer the screenshot given below for reference.
 
 <p align="center">
-  <img src="../assets/JiraZephyrScaleSystemCreation.png.png" width="1500" />
+  <img src="../assets/JiraZephyrScaleSystemCreation.png" width="1500" />
 </p>
 
 | **Field Name** | **When field is visible on the System form** | **Description** |
 |----------------|--------------------------------------------|----------------|
-| **JWT Access Token** | Only when Jira's deployment type is Cloud and Zephyr (Zephyr Scale) is selected as the test management plugin | Provide the access token generated in Zephyr for the user given in the "User Email" field. For more details on Access Token, please refer to [User Token Generation](JiraZephyrScale#User_Token_Generation) |
+| **JWT Access Token** | Only when Jira's deployment type is Cloud and Zephyr (Zephyr Scale) is selected as the test management plugin | Provide the access token generated in Zephyr for the user given in the "User Email" field. For more details on Access Token, please refer to [User Token Generation](#user-token-generation) |
 | **Metadata JSON** | Only when Jira's deployment type is Cloud and Zephyr (Zephyr Scale) is selected as the test management plugin | This data is in JSON format according to our knowledge of system metadata (entity type, field names, lookup...), the user can edit it based on his/her Jira Zephyr instance details for system/custom metadata. For the format and guidance related to filling these details in JSON form, please refer to **Understanding JSON Input** section. |
 
 ## Understanding JSON Input
@@ -31,7 +31,7 @@ Refer the screenshot given below for reference.
 * Refer to [JSON Metadata Sample](sample-json-file-for-jira-zephyr.md) for a sample JSON for Jira Zephyr entities.  
 * Users can change the display name of the entities.  
 * The internal name of each system field must match exactly as shown in the template JSON.  
-* The internal name of a custom field must match the one defined in the end system. For how to find custom field name, refer [Find Custom Field Names](#Find Custom Field Names).
+* The internal name of a custom field must match the one defined in the end system. For how to find custom field name, refer [Find Custom Field Names](#find-custom-field-names).
 
 ## Mapping Configuration
 
@@ -191,7 +191,7 @@ Refer the screenshot given below for reference.
 
 # Known Behavior/ Limitations
 
-* Polling for all entity types requires a full scan of all records; therefore, choose the polling frequency judiciously. Refer [Best Practices for Polling Frequency](../integrate/best-practices.md#polling-frequency-scheduling)
+* Polling for all entity types requires a full scan of all records; therefore, choose the polling frequency judiciously. Refer [Best Practices for Polling Frequency](../integrate/best-practises.md#polling-frequency-scheduling)
 * Shared Step is not supported.
 * The following limitations exist in <code class="expression">space.vars.SITENAME</code> due to API restrictions:
 * Delete and Archive functionality is not supported.
@@ -213,7 +213,7 @@ Refer the screenshot given below for reference.
 * Click **Create Access Token**, then copy and save the generated token.
 
 <p align="center">
-  <img src="../assets/JiraZephyrScaleJWTGeneration.png" width="800"/>
+  <img src="../assets/JiraZephyrScaleJWTGeneration.png" width="1200"/>
 </p>
 
 ## Find Custom Field Names
@@ -221,7 +221,7 @@ Refer the screenshot given below for reference.
 * To get the custom field information go to **Zephyr** → **Configuration** → **CUSTOM FIELDS** subsection.
 
 <p align="center">
-  <img src="../assets/JiraZephyrScaleCustomFieldList.png" width="800"/>
+  <img src="../assets/JiraZephyrScaleCustomFieldList.png" width="1200"/>
 </p>
 
 * For example, in the above image, **reviewer (Custom)** is the internal name of a custom field.
