@@ -20,12 +20,11 @@ For example, if the machine has 16GB RAM available and 8GB RAM is allocated to *
 
 #### 2. Check Memory Settings in OIM Configuration File
 
-To confirm that the memory settings align with your requirements, review the following file:\
-&#xNAN;**\OpsHubServer\conf\OIM\_Config.properties**
+To confirm that the memory settings align with your requirements, review the following file: `<installation path>\OpsHubServer\conf\OIM_Config.properties`
 
 This file contains the allocated memory settings for running **<code class="expression">space.vars.SITENAME</code>**.
 
-#### 3. Set JAVA\_OPTS for Optimal Memory Allocation
+#### 3. Set JAVA_OPTS for Optimal Memory Allocation
 
 For better stability and performance during migration, manually set the `JAVA_OPTS` environment variable before starting the upgrade process. This allows you to define the initial and maximum memory allocated to the process, ensuring it can handle larger datasets.
 
@@ -44,7 +43,7 @@ Given below are the migration steps:
 * Stop Server Service from services.ms
 * Take back up of the database (refer to the [Taking Application Backup](taking-application-backup.md#database-backup) page).
 * Take back up of the application folder (refer to the [Taking Application Backup](taking-application-backup.md#application-backup) page).
-* Extract OpsHub&#x56;_&#x4D;igrator_.zip and execute the migration file.
+* Extract `OpsHubV<version>_Migrator_<OS>.zip` and execute the migration file
 * It will ask for existing installation path, give the same installation path where you have installed the application.
 * Click Next.
 * If you are migrating to version 7.12 or above, you need to register by following the steps mentioned [here](../../getting-started/registration.md).
@@ -64,7 +63,7 @@ Given below are the migration steps:
   * Go to "/OpsHubServer/bin" directory and run shutdown.sh file. It will take some time to stop server.
 * Take back up of the database (refer to the [Taking Application Backup](taking-application-backup.md) page).
 * Take back up of the application folder (refer to the [Taking Application Backup](taking-application-backup.md) page).
-* Extract OpsHub&#x56;_&#x4D;igrator_.zip.
+* Extract `OpsHubV<version>_Migrator_<OS>.zip.`
 * For Silent Migration user needs to register using external utility as described [here](../../getting-started/registration.md#silent-registration-for-linux).
 * If you are migrating to version 7.19 or above, Please follow steps described in **Before Installation** section [here](../../getting-started/install/installation-steps.md#launch-the-installer-in-different-operating-systems).
 
@@ -82,7 +81,7 @@ Given below are the migration steps:
 To upgrade <code class="expression">space.vars.SITENAME</code> through terminal connection (i.e. Putty), follow the steps given below:
 
 * Make sure, you have performed the pre-migration steps as described [here](upgrade-application.md#pre-migration-steps).
-* Modify the external configuration file and export OPSHUB\_AUTO\_INSTALL variable as described at **To Run sh File from External File** section [here](../../getting-started/installation.md#launch-the-installer-in-different-operating-systems).
+* Modify the external configuration file and export OPSHUB_AUTO_INSTALL variable as described at **To Run sh File from External File** section [here](../../getting-started/installation.md#launch-the-installer-in-different-operating-systems).
 * Execute the migration file using command **sudo -E sh install.sh**
 * Please refer [Possible Error](../../getting-started/installation.md#possible-error-during-silent-installationupgradation) section for trouble shooting error(s) occurred during Upgradation.
 * Refer [Post Migration Steps](upgrade-application.md#post-migration-steps-for-windows-and-linux) for further steps.
