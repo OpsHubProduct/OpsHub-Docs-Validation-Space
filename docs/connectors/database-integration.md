@@ -127,7 +127,7 @@ An example input for the metadata JSON:
 Here is the screenshot:  
 
 <p align="center">
-  <img src="../assets/Database_Image_4a.png" width="1000" />
+  <img src="../assets/Database_Image_4a.png" width="900" />
 </p>
 
 
