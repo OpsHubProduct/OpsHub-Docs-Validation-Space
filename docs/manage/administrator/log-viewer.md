@@ -15,6 +15,7 @@ There are different logs maintained and stored under **`<code class="expression"
 
 
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
+
 # Log Settings
 
 System log helps to view logs for tracking backend activity in <code class="expression">space.vars.SITENAME</code>. Usually logs are useful when any failure or unusual behavior is detected in integration. System log can store logs in 5 different levels. Logs will capture information based on logging level set in System log.
@@ -25,7 +26,7 @@ To navigate to System log
 * On Left panel click on Global log as shown below
 
 <p align="center">
-  <img src="../../assets/systemlog2-a.png" width="800"/>
+  <img src="../../assets/systemlog2-a.png" width="950"/>
 </p>
 
 
@@ -34,7 +35,7 @@ To navigate to System log
 Click on Setting button on System log window to configure log settings as mentioned below
 
 <p align="center">
-  <img src="../../assets/systemlog7.png" width="800"/>
+  <img src="../../assets/systemlog7.png" width="900"/>
 </p>
 
 
