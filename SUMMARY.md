@@ -157,7 +157,7 @@
             * [Is it mandatory for the database to be installed on the same server on which the application is installed?](docs/help-center/faqs/installer/oim-and-database-on-same-server.md)  
             * [Can the application be hosted on a third-party cloud systems such as Microsoft Azure, Amazon Web Services(AWS)?](docs/help-center/faqs/installer/oim-hosted-on-third-party-cloud-systems.md)
               {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}
-            * [Can the <code class="expression">space.vars.SITENAME</code> Service be run by Active Directory users? If yes, what are the permissions required to run it?](docs/help-center/faqs/installer/oim-service-run-by-active-directory-users.md)
+            * [Can the OpsHub Migrator for Microsoft Azure DevOps Service be run by Active Directory users? If yes, what are the permissions required to run it?](docs/help-center/faqs/installer/oim-service-run-by-active-directory-users.md)
               {% endif %}
               {% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
             * [Can the OpsHub Server Service be run by Active Directory users? If yes, what are the permissions required to run it?](docs/help-center/faqs/installer/oim-service-run-by-active-directory-users.md)
