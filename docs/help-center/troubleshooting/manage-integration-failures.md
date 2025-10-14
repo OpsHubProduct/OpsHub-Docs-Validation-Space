@@ -141,7 +141,7 @@ Once you click the **View Failed Event** option against a failure, a pop-up scre
 * A warning will be given for the above three cases. Following is the example of the warning message:  
 
 <p align="center">
-  <img src="../../assets/ViewFailedEvent-5.png" width="950"/>
+  <img src="../../assets/ViewFailedEvent-5.png" width="650"/>
 </p>
 
 
@@ -150,7 +150,7 @@ Once you click the **View Failed Event** option against a failure, a pop-up scre
 >**Note**: If the failures are not retried after updating the source event, and you view the failed event again, an icon will appear in the top right corner of the Mapping Input, Mapping Output, and Reconciliation Data options. This icon indicates that the XML values are not the latest, and you should retry and refresh the failed event. Refer to the below image for the same:
   
 <p align="center">
-  <img src="../../assets/ViewFailedEvent-7.png" width="400"/>
+  <img src="../../assets/ViewFailedEvent-7.png" width="600"/>
 </p>
 
 
@@ -161,7 +161,7 @@ Once you click the **Show Details** option against an error, **the Failure Detai
 >**Note**: The following image shows the Jira-ServiceNow integration specific error. The errors may slightly vary from one integration to another. 
 
 <p align="center">
-  <img src="../../assets/Failure-Management.png" width="600"/>
+  <img src="../../assets/Failure-Management.png" width="950"/>
 </p>
 
 
@@ -187,7 +187,7 @@ If you are facing a complex failure for which you are seeking help from support 
 * Hover over More ![Stack_Icon](../../assets/Stack-Icon.png) icon, you will get an option to export Integration Details as shown in the image below.
 
 <p align="center">
-  <img src="../../assets/Export-Integration-Details.png" width="950"/>
+  <img src="../../assets/Export-Integration-Details.png" width="1100"/>
 </p>
   
 
