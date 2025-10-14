@@ -18,7 +18,7 @@ To view the Event Failure Management section, follow the steps below:
 * Once you click on the number, you'll be redirected to the *Integration Job Error(s)* page. There you'll see a table listing all the event failures for that integration.
 
 <p align="center">
-  <img src="../../assets/EventFailure3a.png" width="950"/>
+  <img src="../../assets/EventFailure3a.png" width="1200"/>
 </p>
 
 
@@ -44,7 +44,7 @@ To view the Event Failure Management section, follow the steps below:
 For example, in the image below, we have filtered the errors with Error Code '0041'.
 
 <p align="center">
-  <img src="../../assets/AdvanceSearcha.png" width="950"/>
+  <img src="../../assets/AdvanceSearcha.png" width="1200"/>
 </p>
 
 
@@ -102,14 +102,14 @@ Once you click the **View Failed Event** option against a failure, a pop-up scre
 >**Note**: Here's an example of the pop-up screen for an integration's failed event. The details may vary from failure to failure:
 
 <p align="center">
-  <img src="../../assets/ViewFailedEvent-1.png" width="950"/>
+  <img src="../../assets/ViewFailedEvent-1.png" width="1200"/>
 </p>
 
 
 * **Mapping Input**: The Mapping Input option refers to the XML input for the source event as per the configured mapping. Here, all properties of the source entity are retrieved from the source system.
 
 <p align="center">
-  <img src="../../assets/ViewFailedEvent-2.png" width="950"/>
+  <img src="../../assets/ViewFailedEvent-2.png" width="1200"/>
 </p>
 
 >**Note**: Slide the toggle to switch between old values and new values of the mapping input.  
@@ -118,7 +118,7 @@ Once you click the **View Failed Event** option against a failure, a pop-up scre
 * **Mapping Output**: The Mapping Output option refers to the XML output for the source event as per the configured mapping.
 
 <p align="center">
-  <img src="../../assets/ViewFailedEvent-3.png" width="950"/>
+  <img src="../../assets/ViewFailedEvent-3.png" width="1200"/>
 </p>
 
 >**Note**: Slide the toggle to switch between old values and new values for the mapping output.  
@@ -127,7 +127,7 @@ Once you click the **View Failed Event** option against a failure, a pop-up scre
 * **Reconciliation Data**: If the configured job is for **reconciliation** and a failure occurs because of it, another option for reconciliation data will appear. This option contains rules input and rules output for the configured reconciliation rules.
 
 <p align="center">
-  <img src="../../assets/ViewFailedEvent-4.png" width="950"/>
+  <img src="../../assets/ViewFailedEvent-4.png" width="1200"/>
 </p>
 
 
@@ -161,7 +161,7 @@ Once you click the **Show Details** option against an error, **the Failure Detai
 >**Note**: The following image shows the Jira-ServiceNow integration specific error. The errors may slightly vary from one integration to another. 
 
 <p align="center">
-  <img src="../../assets/Failure-Management.png" width="950"/>
+  <img src="../../assets/Failure-Management.png" width="1200"/>
 </p>
 
 
