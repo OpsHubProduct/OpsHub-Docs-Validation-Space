@@ -1,10 +1,10 @@
 # Prerequisites
 
-{% include "../.gitbook/includes/docker-prerequisites.md" %}
+{% include "../../.gitbook/includes/docker-prerequisites.md" %}
 
 # Steps to Run <code class="expression">space.vars.SITENAME</code>
 
-{% include "../.gitbook/includes/oim-docker-configurations.md" %}
+{% include "../../.gitbook/includes/oim-docker-configurations.md" %}
 
 ## Run Docker Container
 
@@ -20,7 +20,7 @@
 - `-d` can also be added as an option to start docker container in detached mode.
 
 # Known Limitations
-{% include "../.gitbook/includes/docker-limitations.md" %}
+{% include "../../.gitbook/includes/docker-limitations.md" %}
 
 # Upgrade Application Version
 
@@ -29,7 +29,7 @@
   docker load --input <Image_tar_filename>
   ```
 
-{% include "../.gitbook/includes/docker-update-oim.md" %}
+{% include "../../.gitbook/includes/docker-update-oim.md" %}
 
 - To upgrade the application version, run the following command:
   ```bash
