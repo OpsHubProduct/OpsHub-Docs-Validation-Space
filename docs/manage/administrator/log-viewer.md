@@ -26,7 +26,7 @@ To navigate to System log
 * On Left panel click on Global log as shown below
 
 <p align="center">
-  <img src="../../assets/systemlog2-a.png" width="950"/>
+  <img src="../../assets/systemlog2-a.png" width="1000"/>
 </p>
 
 
