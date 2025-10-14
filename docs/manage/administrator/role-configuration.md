@@ -18,22 +18,22 @@ Permission refers to specific rights like Read, Write, Delete, Grant on differen
 
 | **Role Name** | **Description** |
 |---------------|------------------|
-| Super Administrator | All administration permissions are available<br><p align="center"><img src="../../assets/Super_Administrator.png"  width="750"/></p> |
-| Sync Administrator | All integration permissions are available<br><p align="center"><img src="../../assets/Sync_Administrator.png"  width="750"/></p> |
-| Sync Monitor | All read and sync action permissions are available<br>![Sync Monitor](../../assets/Syn_Monitor.png) <p align="center"><img src="../../assets/Syn_Monitor.png" width="750"/></p>|
+| Super Administrator | All administration permissions are available<br><p align="center"><img src="../../assets/Super_Administrator.png"  width="950"/></p> |
+| Sync Administrator | All integration permissions are available<br><p align="center"><img src="../../assets/Sync_Administrator.png"  width="950"/></p> |
+| Sync Monitor | All read and sync action permissions are available<br>![Sync Monitor](../../assets/Syn_Monitor.png) <p align="center"><img src="../../assets/Syn_Monitor.png" width="950"/></p>|
 
 # Create Custom Roles
 - Navigate to **Role Management** screen under **Administration** tab and click on Create Role button on the top right corner as shown below:  
   <p align="center">
-    <img src="../../assets/CreateRole.png"  width="1200" />
+    <img src="../../assets/CreateRole.png"  width="1300" />
   </p>
 - Add Role Name, Description, Type and select permissions that a user want to associate with the role. For instance, if a role is to be configured for performing all system operations, select **Integration** under Role type and tick mark **write** permission checkbox as shown below:  
   <p align="center">
-    <img src="../../assets/System_Supervisor_Role.png" width="800" />
+    <img src="../../assets/System_Supervisor_Role.png" width="805" />
   </p>
 - Save the role and it will be accessible from **Role Management** screen as shown below:  
   <p align="center">
-    <img src="../../assets/Role_saved_successfully.png" width="1200" />
+    <img src="../../assets/Role_saved_successfully.png" width="1300" />
   </p>
 
 # Standard Role Behaviors
