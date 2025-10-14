@@ -1,4 +1,3 @@
-## Work Item Entities (Bug, User Story, Task, etc)
 
 1. Inline images that are added using the Microsoft's "Test & Feedback" tool and identity images (user profile images) will not be synchronized.
 2. When TFS\ADO is a source end point, any change performed in link/relationship among entities, will be synchronized to target with next Update on those entities.
