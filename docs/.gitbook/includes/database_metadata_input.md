@@ -35,7 +35,7 @@
   "attachmentAddedTimeColumn": "ATTACHMENT_ADDED_TIME",
   "attachmentFolderPath ": "D:/OpsHub/attachments"
  }
-}
+
 ```
 
 * To store the links, comments and attachments information of data records, a separate table will be used in the same database/schema. Provide the table name and field details for this table.
