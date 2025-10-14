@@ -25,15 +25,15 @@ Permission refers to specific rights like Read, Write, Delete, Grant on differen
 # Create Custom Roles
 - Navigate to **Role Management** screen under **Administration** tab and click on Create Role button on the top right corner as shown below:  
   <p align="center">
-    <img src="../../assets/CreateRole.png" alt="Create Role" />
+    <img src="../../assets/CreateRole.png"  width="800" />
   </p>
 - Add Role Name, Description, Type and select permissions that a user want to associate with the role. For instance, if a role is to be configured for performing all system operations, select **Integration** under Role type and tick mark **write** permission checkbox as shown below:  
   <p align="center">
-    <img src="../../assets/System_Supervisor_Role.png" alt="System Supervisor Role" />
+    <img src="../../assets/System_Supervisor_Role.png" width="800" />
   </p>
 - Save the role and it will be accessible from **Role Management** screen as shown below:  
   <p align="center">
-    <img src="../../assets/Role_saved_successfully.png" alt="Role saved successfully" />
+    <img src="../../assets/Role_saved_successfully.png" width="800" />
   </p>
 
 # Standard Role Behaviors
