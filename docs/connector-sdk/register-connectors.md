@@ -5,14 +5,14 @@ This section will guide the users on how to register and edit the connectors.
 Connectors can be registered from the administration page by clicking the "plug" icon <img src="../assets/RegisterConnectorIconOnly.png" alt="Register Connector Icon" width="25"/> present in the left sidebar as shown in the image below:
 
 <p align="center">
-  <img src="../assets/AddButtonRegisterConnector.png" width="1100px" height="1100px"/>
+  <img src="../assets/AddButtonRegisterConnector.png" width="1000"/>
 </p>
 
 To register a connector, click the "+" icon on the top right corner of the "Registered Connectors" page.  
 The following page appears which requires two inputs as shown in the image below:
 
 <p align="center">
-  <img src="../assets/RegisterConnectorPage.png" width="1100px" height="1100px"/>
+  <img src="../assets/RegisterConnectorPage.png" width="1000"/>
 </p>
 
 
@@ -31,7 +31,7 @@ After entering valid details, click the **Save** button to register the connecto
 The registered connectors are available in the form of a list on the "Registered Connectors" page as shown in the image below:
 
 <p align="center">
-  <img src="../assets/RegisterConnectorList.png" width="1100px" height="1100px"/>
+  <img src="../assets/RegisterConnectorList.png" width="1000"/>
 </p>
 
 There is an audit icon ![Audits Icon](../assets/AuditsIcon.png =25x) present on the top right corner of the list. Clicking this icon will show all the audits related to the registered connectors.
@@ -40,14 +40,14 @@ There is an audit icon ![Audits Icon](../assets/AuditsIcon.png =25x) present on 
 Registered connectors can be edited by clicking the specific connector followed by clicking the pencil icon on the top right corner of the page:
 
 <p align="center">
-  <img src="../assets/EditButton.png" width="1100px" height="1100px"/>
+  <img src="../assets/EditButton.png" width="1000"/>
 </p>
 
 
 You can edit the system name, add or remove URLs. There is also a checkbox in case you want to refresh the metadata of the connector:
 
 <p align="center">
-  <img src="../assets/RefreshConnectorMetadataCheckBox.png" width="1100px" height="1100px"/>
+  <img src="../assets/RefreshConnectorMetadataCheckBox.png" width="1000"/>
 </p>
 
 
@@ -61,7 +61,7 @@ The **Refresh Connector Metadata** checkbox (as shown in the image above) can be
 While editing the connector, if the refresh connector metadata is checked, a warning pops up as shown in the image below:
 
 <p align="center">
-  <img src="../assets/RefreshMetaData.png" width="700px" height="500px"/>
+  <img src="../assets/RefreshMetaData.png" width="700"/>
 </p>
 
 
