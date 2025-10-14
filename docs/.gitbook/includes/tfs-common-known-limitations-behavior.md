@@ -1,4 +1,3 @@
-
 * For the user type of fields synchronization, make sure all the users have signed in the organization at least once or are assigned to any work-item.
    * Reason: ADO\TFS API Limitations.
    * The above behavior has been confirmed with Microsoft. Please refer to the thread for more information:
@@ -53,4 +52,5 @@
 * The User Mention functionality can be used to mention User, but it does not work for Service Principal.
   * Reason: Azure DevOps does not allow to mention **Service Principal** on UI.
   * > **Note**: When Azure DevOps is configured as the target system, it is recommended that the default user is mapped instead of the Service Principal for **User Mention**. If the Service Principal is mapped, it will not result in failure. However, an email will be sent by Azure DevOps, saying "**ServicePrincipalName** cannot be mentioned. The identity is not configured to receive notifications.
+  
     
