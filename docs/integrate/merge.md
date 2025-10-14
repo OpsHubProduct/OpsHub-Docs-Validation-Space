@@ -1,4 +1,3 @@
-
 This page explains the merge feature available from version 7.0 onwards.
 # When To Merge Integrations
 
@@ -48,7 +47,7 @@ Here for example let us assume there are 2 different mappings [TFS User Story to
 * JIRA Requirement to TFS User Story
 
 <p align="center">
-  <img src="../assets/Merge_Image_1a.png">
+  <img src="../assets/Merge_Image_1a.png" width="700">
 </p>
 
 Now, if these two mappings are to be merged, the following steps can be followed:
@@ -62,12 +61,12 @@ Now, if these two mappings are to be merged, the following steps can be followed
 * Select merge option: On the Mappings list page, select 2 mappings. An option for merging those would be available as shown below.
   
 <p align="center">
-  <img src="../assets/Merge_Image_2a.png">
+  <img src="../assets/Merge_Image_2a.png" width="700">
 </p>
 
 * Click the "Merge Mapping" option. Select the Primary Mapping. Take the backup of the primary mapping and refer to the instructions on the screen before clicking the Merge button.\
 <p align="center">
-  <img src="../assets/Merge_Image_3.png">
+  <img src="../assets/Merge_Image_3.png" width="700">
 </p>
 
 * After clicking the Merge button, a mapping screen comes up as a result of merged mapping object that shows a preview of merged mapping which contains the existing primary mapping configurations and the secondary non-conflicting configurations merged.
@@ -76,7 +75,7 @@ Now, if these two mappings are to be merged, the following steps can be followed
 
   * In case any Merge Conflict(s) warning is/are available, please go through it before clicking the Update Mapping and perform the Update Mapping only if the behavior mentioned in Merge Conflict(s) is acceptable.
 
-* Once the primary mapping is updated as per the merge result, merge operation is completed. The steps given below are then to be performed manually for the second mapping:\
+* Once the primary mapping is updated as per the merge result, merge operation is completed. The steps given below are then to be performed manually for the second mapping:
 
   * For all the integrations that use secondary mapping, they should be edited to use primary mapping (Merged Mapping).
   * Take a backup of secondary mapping [Export it].
@@ -91,14 +90,14 @@ This section describes the sample conflict cases to give an overview on mapping 
 Mapping 1: TFS Bug -> Jira Bug
 
 <p align="center">
-  <img src="../assets/Merge_Image_4a.png">
+  <img src="../assets/Merge_Image_4a.png" width="700">
 </p>
 
 
 Mapping 2: TFS Bug -> Jira Bug 2
 
 <p align="center">
-  <img src="../assets/Merge_Image_5a.png">
+  <img src="../assets/Merge_Image_5a.png" width="700">
 </p>
 
 Here, as per the Primary Mapping Environment [Mapping 1: TFS Bug -> Jira Bug], field value for JIRA Bug should be as per the Environment Field value of TFS Bug, but as per the Secondary Mapping Environment [Mapping 2: TFS Bug -> Jira Bug 2] field value for Jira Bug should be as per the Description Field value of TFS Bug. Now, this information contradicts with Primary Mapping. Hence, this Field mapping is available in the Merge Conflict(s) warning and in the Merged mapping preview, Environment -> Environment field mapping is being considered.
@@ -148,13 +147,13 @@ The initial configurations were as below:
 **TFS Bug to Jira Bug**
 
 <p align="center">
-  <img src="../assets/Merge_Image_7a.png">
+  <img src="../assets/Merge_Image_7a.png" width="700">
 </p>
 
 **Jira Bug to TFS Bug**
 
 <p align="center">
-  <img src="../assets/Merge_Image_6.png">
+  <img src="../assets/Merge_Image_6.png" width="700">
 </p>
 
 Now merge these 2 integrations and follow the steps given below:
@@ -170,7 +169,7 @@ In our example, both the mappings are configured between TFS and JIRA.
 * Select merge option: On the view integrations list page, once the 2 integrations are selected, an option for merging the integrations would be available as shown in the image below:
 
 <p align="center">
-  <img src="../assets/Merge_Image_8a.png">
+  <img src="../assets/Merge_Image_8a.png" width="700">
 </p>
 
 * Click the "Merge Integration" option. Select the Primary Integration. Take a backup of the primary integration \[Clone the primary integration and keep it in Inactive mode] Please refer to the instructions on the screen before clicking the Merge button.
@@ -181,7 +180,7 @@ In our example, both the mappings are configured between TFS and JIRA.
 Look at the image below. It shows an example where the Integration for Bug entity as well as the project mapping is bidirectional in merge preview.
 
 <p align="center">
-  <img src="../assets/Merge_Image_9.png">
+  <img src="../assets/Merge_Image_9.png" width="700">
 </p>
 
 * Take a look at each configuration in the preview as well as Merge Conflict(s). If this is wanted as a result of the merged integration, click the Save button [Edit the preview in case there are any changes required here]
@@ -204,7 +203,7 @@ This section describes some of the conflicting cases/examples to give the overvi
 In that case the merge preview will look as follows:
 
 <p align="center">
-  <img src="../assets/Merge_Image_10.png">
+  <img src="../assets/Merge_Image_10.png" width="700">
 </p>
 
 The Merge Integration preview has merge integration preview along with Merge Conflict(s). Merge Conflict(s) has warnings because both integrations have different mapping. In this case, the Primary mapping is being considered and this mapping is not bidirectional. Therefore, it's not compatible with the merged integration. So, the user needs to select a compatible mapping for saving the merged integration.
@@ -215,7 +214,7 @@ The Merge Integration preview has merge integration preview along with Merge Con
 
 The merge preview will look as shown below:
 <p align="center">
-  <img src="../assets/Merge_Image_11.png">
+  <img src="../assets/Merge_Image_11.png" width="700">
 </p>
 
 The Merge Integration preview has merge integration preview along with Merge Conflict(s). Merge Conflict(s) has warnings because as per the Primary Integration, TFS Demo Project Bugs are to be synchronized to Jira OIM Demo Project and as per the Secondary Integration TFS Demo Project Bugs are to be synchronized to Jira BoardDemo Project. In this case, the primary configuration is being considered.
