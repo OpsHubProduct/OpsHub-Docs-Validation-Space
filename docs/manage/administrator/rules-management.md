@@ -28,7 +28,7 @@ To upload a new rule, follow the steps given below:
 * Click on ![](../../assets/Rules_Management_icon.png) given on the left panel. You can see the list of rules that are already uploaded
 * To upload a new rule, click on ![](../../assets/Plus.png) given on the top right corner of the screen
 <p align="center">
-  <img src="../../assets/Rules_Management_Upload.png" alt="Rules Management Upload" />
+  <img src="../../assets/Rules_Management_Upload.png" width="1000" />
 </p>
 
 * The Upload form will open. Fill the following details in the form: 
@@ -39,7 +39,7 @@ To upload a new rule, follow the steps given below:
   * **Status**: It represents whether the rule is active or inactive
     
 <p align="center">
-  <img src="../../assets/Rules_Management_UploadForm.png" />
+  <img src="../../assets/Rules_Management_UploadForm.png" width="1000"/>
 </p>
 
 * Click on **Save**  
@@ -56,17 +56,17 @@ To upload a new rule, follow the steps given below:
   * Click on ![](../../assets/Edit_Image.png)
     
 <p align="center">
-  <img src="../../assets/Rules_Management_Edit.png" width="2000" />
+  <img src="../../assets/Rules_Management_Edit.png" width="2200" />
 </p>
 
 * The Edit form will open. Edit the details in the form. Refer to the image below:
 
 <p align="center">
-  <img src="../../assets/Rules_Management_EditForm1.png" width="800"/>
+  <img src="../../assets/Rules_Management_EditForm1.png" width="900"/>
 </p>
 
 <p align="center">
-  <img src="../../assets/Rules_Management_EditForm2.png" width="800"/>
+  <img src="../../assets/Rules_Management_EditForm2.png" width="900"/>
 </p>
 
 
