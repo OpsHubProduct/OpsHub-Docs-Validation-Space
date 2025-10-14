@@ -1,4 +1,3 @@
-# upgrade-application
 
 Migration is required from current version to higher version as it includes support and feature enhancement from the older version.
 
