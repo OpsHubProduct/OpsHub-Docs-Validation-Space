@@ -18,7 +18,7 @@ To view the Event Failure Management section, follow the steps below:
 * Once you click on the number, you'll be redirected to the *Integration Job Error(s)* page. There you'll see a table listing all the event failures for that integration.
 
 <p align="center">
-  <img src="../../assets/EventFailure3a.png" width="1200"/>
+  <img src="../../assets/EventFailure3a.png" width="900"/>
 </p>
 
 
@@ -44,7 +44,7 @@ To view the Event Failure Management section, follow the steps below:
 For example, in the image below, we have filtered the errors with Error Code '0041'.
 
 <p align="center">
-  <img src="../../assets/AdvanceSearcha.png" width="1200"/>
+  <img src="../../assets/AdvanceSearcha.png" width="900"/>
 </p>
 
 
