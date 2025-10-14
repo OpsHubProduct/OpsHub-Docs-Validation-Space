@@ -728,7 +728,7 @@ A sample snippet of JSON is given below:
 {% include "../.gitbook/includes/tfs-common-known-limitations-behavior.md" %}
 
 ## Work Item Entities (Bug, User Story, Task, etc)
-{% include "../.gitbook/includes/tfs-common-known-limitations-behavior.md" %}
+{% include "../.gitbook/includes/tfs-workitem-known-limitations-behavior.md" %}
 
 ## Test Entities (Test Case, Test Plan, Test Suite, Test Result, Test Run)
 {% include "../.gitbook/includes/tfs-testentities-known-limitations-behavior.md" %}
@@ -740,7 +740,7 @@ A sample snippet of JSON is given below:
 {% include "../.gitbook/includes/tfs-dashboardquerywidget-known-limitations-behavior.md %}
 
 ## Pull Request
-{% include "../.gitbook/includes/ tfs-pullrequest-known-limitations-behavior.md %}
+{% include "../.gitbook/includes/tfs-pullrequest-known-limitations-behavior.md %}
 
 ## Pipeline Entity
 {% include "../.gitbook/includes/tfs-pipeline-known-limitations-behavior.md" %}
