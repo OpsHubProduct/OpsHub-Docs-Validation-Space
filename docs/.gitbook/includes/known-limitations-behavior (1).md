@@ -14,11 +14,13 @@ title: known-limitations-behavior
 3. For the rich text type of field (HTML) or comments:
    * Entity mention synchronization is not supported for entity type(s) Test Suite, and Test Plan.
    * Entity mention synchronization is not supported for the Team Foundation Server ALM with version < 2015.
-   * Default entity mention synchronization option is **Sync source id**. So, migration will migrate source mentioned entity as source id in target. \{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %\} \* Default entity mention synchronization option is **Sync source id**. So, migration will migrate source mentioned entity as source id in target.\{% endif %\} \{% if "OpsHub Integration Manager" === space.vars.SITENAME %\} \* Refer ["**Mention Sync Option**"](../../integrate/mapping-configuration.md#mention-configuration) for more details.\{% endif %\}
+   * Default entity mention synchronization option is **Sync source id**. So, migration will migrate source mentioned entity as source id in target. 
+   {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}* Default entity mention synchronization option is **Sync source id**. So, migration will migrate source mentioned entity as source id in target.{% endif %}
+   {% if "OpsHub Integration Manager" === space.vars.SITENAME %}* Refer ["**Mention Sync Option**"](../../integrate/mapping-configuration.md#mention-configuration) for more details.{% endif %}
 4.
    * Area Id, Attached File Count, Authorized As, Authorized Date, Board Lane, External Link Count, Hyperlink Count, ID, Iteration Id, Node Name, Related Link Count, Rev, Revised Date, Team Project, Work Item Type, Board Column, Board Column Done\*\*
 
-5\. \{{SITENAME\}} does not support entity type change in TFS/Azure DevOps. Hence, below will be the behavior in case work item type is changed when TFS/Azure DevOps is the source system: \*\*For ADO/TFS version 2017 and above\*\*:
+5. <code class="expression">space.vars.SITENAME</code> does not support entity type change in TFS/Azure DevOps. Hence, below will be the behavior in case work item type is changed when TFS/Azure DevOps is the source system: \*\*For ADO/TFS version 2017 and above\*\*:
 
 * If entity type of a work item is changed during active sync, the revisions still pending to be sync will be skipped. The synced of changed entity type will start from the revision wherein work item type was changed. Below example will help in better understanding of the known behavior:
   1. Let's say there is Work item 1 created with type Epic.
