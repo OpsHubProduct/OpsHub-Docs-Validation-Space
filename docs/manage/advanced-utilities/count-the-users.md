@@ -77,7 +77,9 @@ This file contains the following details:
 * **Distribution of users per system**
   * It has the list of systems and the number of users synchronized by <code class="expression">space.vars.SITENAME</code>.
 
-<p align="center"><img src="%3Cdiv%20data-gb-custom-block%20data-tag=" alt=""> User_Count_Utility_3_a_ovsmu.png</p>
+{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}
+<p align="center"><img src="../../assets/User_Count_Utility_3_a_ovsmu.png" alt=""></p>
+{% endif %}
 
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
 <div align="center"><img src="../../assets/User_Count_Utility_3_a.png" alt="" width="800"></div>
@@ -89,7 +91,9 @@ This file contains the following details:
 * It has a detailed report on the users found during synchronization.
 * It has the user details (User Email or User Name as per the details found during synchronization). Additionally, a corresponding list of systems is present in which the users' details are found.
 
+{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}
 <p align="center"><img src="../../assets/User_Count_Utility_4_a_ovsmu.png" alt=""></p>
+{% endif %}
 
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
 <div align="center"><img src="../../assets/User_Count_Utility_4_a.png" alt="" width="600"></div>
