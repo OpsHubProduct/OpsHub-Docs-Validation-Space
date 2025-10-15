@@ -2,23 +2,24 @@
 
 ### Overview
 
-* If user wants to know the count of users being synchronized through \{{SITENAME\}}, the 'UserCountUtility' utility can be used. This utility can count the following details of users whose data was synchronized from the first day of \{{SITENAME\}} setup (or a specific date) till date.
+* If user wants to know the count of users being synchronized through <code class="expression">space.vars.SITENAME</code>, the 'UserCountUtility' utility can be used. This utility can count the following details of users whose data was synchronized from the first day of <code class="expression">space.vars.SITENAME</code> setup (or a specific date) till date.
   * Unique Users across all systems configured
   * Total Users across all systems configured
   * Total Users count per system
   * Detailed list for each of the users as per their availability in the systems configured
-* The utility **UserCountUtility.zip** is by default bundled with \{{SITENAME\}} installation and can be found at `<code class="expression">space.vars.SITENAME</code> Installation Folder>/Other_Resources/Resources/UserCountUtility.zip`.
-* The utility can be executed only from the machine where \{{SITENAME\}} is installed.
+* The utility **UserCountUtility.zip** is by default bundled with <code class="expression">space.vars.SITENAME</code> installation and can be found at <code class="expression">space.vars.SITENAME</code> Installation Folder>/Other_Resources/Resources/UserCountUtility.zip.
+* The utility can be executed only from the machine where <code class="expression">space.vars.SITENAME</code> is installed.
 * The utility folder contains following files:
   * input.properties: To provide the input details required to run the utility.
-  * UserCountUtility.bat: To run the utility if \{{SITENAME\}} is installed on Windows machine. \{% if "<code class="expression">space.vars.SITENAME</code>" === space.vars.SITENAME %\} \*\* UserCountUtility.sh: To run the utility if \{{SITENAME\}} is installed on Linux machine.\{% endif %\}
+  * UserCountUtility.bat: To run the utility if <code class="expression">space.vars.SITENAME</code> is installed on Windows machine.
+  * UserCountUtility.sh: To run the utility if <code class="expression">space.vars.SITENAME</code> is installed on Linux machine.
 
 ### Input
 
 The following inputs are to be provided in input.properties file:
 
 * **Installation\_Path**
-  * Provide the installation path of \{{SITENAME\}}. For example, if \{{SITENAME\}} is installed at `C:/Program Files/{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} OM4ADO{% endif %} {% if "<code class="expression">space.vars.SITENAME</code>" === space.vars.SITENAME %} OpsHub {% endif %}`, then provide path as `C:/Program Files/{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} OM4ADO{% endif %} {% if "<code class="expression">space.vars.SITENAME</code>" === space.vars.SITENAME %} OpsHub {% endif %}`.
+  * Provide the installation path of <code class="expression">space.vars.SITENAME</code>. For example, if <code class="expression">space.vars.SITENAME</code> is installed at `C:/Program Files/OpsHub`, then provide path as `C:/Program Files/OpsHub`.
 * **Count\_Users\_From\_Date**
   * It is useful when the user wants the utility to count the users from a specific date. This is an optional input and the date should be in the format, `YYYY-MM-DD`. If left blank, utility will count all users. For example, if the user wants the utility to count users from 1 Jan. 2021, then the user can specify the date as `2021-01-01`. In that case, this utility will count the users from 1 Jan. 2021 till date.
 
@@ -30,19 +31,18 @@ Below is an example of input.properties file:
 
 Following are the steps to run the utility:
 
-* Go to `<code class="expression">space.vars.SITENAME</code> Installation Folder>/Other_Resources/Resources`.
-* Unzip `UserCountUtility.zip`.
-* Update the `input.properties` file as stated [here](count-the-users.md#input).
-*
-* If your \{{SITENAME\}} is installed on Windows machine, then refer to the steps given below:
+- Go to <code class="expression">space.vars.SITENAME</code>'s `<Installation Folder>/Other_Resources/Resources`. 
+- Unzip `UserCountUtility.zip`.
+- Update the `input.properties` file as stated [here](count-the-users.md#input).
+- If your <code class="expression">space.vars.SITENAME</code> is installed on Windows machine, then refer to the steps given below:
   * Open Command Prompt
-  * Navigate to `<code class="expression">space.vars.SITENAME</code> Installation Folder>/Other_Resources/Resources` path
+  * Navigate to <code class="expression">space.vars.SITENAME</code> `<Installation Folder>/Other_Resources/Resources` path
   * Execute the bat using command `UserCountUtility.bat` as shown below:
 
 <div align="center"><img src="../../assets/User_Count_Utility_5_a.png" alt="" width="800"></div>
 
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
-* If your \{{SITENAME\}} is installed on Linux machine, then refer to the steps given below:
+* If your <code class="expression">space.vars.SITENAME</code> is installed on Linux machine, then refer to the steps given below:
   * Open Shell Script
   * Navigate to `<code class="expression">space.vars.SITENAME</code> Installation Folder>/Other_Resources/Resources` path
   * Execute the bat using command `sh UserCountUtility.sh` as shown below:
@@ -75,7 +75,7 @@ This file contains the following details:
 * **Total**
   * It represents the total number of users in all the systems.
 * **Distribution of users per system**
-  * It has the list of systems and the number of users synchronized by \{{SITENAME\}}.
+  * It has the list of systems and the number of users synchronized by <code class="expression">space.vars.SITENAME</code>.
 
 <p align="center"><img src="%3Cdiv%20data-gb-custom-block%20data-tag=" alt=""> User_Count_Utility_3_a_ovsmu.png</p>
 
