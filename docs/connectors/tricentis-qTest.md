@@ -2,7 +2,7 @@
 
 ## User privileges
 
-- Create one Tricentis qTest user for Project Admin role to the project which needs to be integrated. User should be dedicated to **OpsHub Integration Manager** and should not be used to do any operations from system's User-Interface.
+- Create one Tricentis qTest user for Project Admin role to the project which needs to be integrated. User should be dedicated to **<code class="expression">space.vars.SITENAME</code>** and should not be used to do any operations from system's User-Interface.
 - User should have access to all the entities that need to be synchronized.
 
 ## Fields Pre-requisites
@@ -19,7 +19,7 @@ Before you continue to the integration, you must first configure Tricentis qTest
   <img src="../assets/qTest_Image5.png" width="1200" />
 </p>
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from **OpsHub Integration Manager**. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from **<code class="expression">space.vars.SITENAME</code>**. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 # Mapping Configuration
 
@@ -28,7 +28,7 @@ Map the fields between Tricentis qTest and the other system to be integrated to 
 ## Mapping for Soft Delete Configuration
 
 - When Tricentis qTest is the target system in the integration, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md).
-- After the Soft Delete operation is performed by **OpsHub Integration Manager** in Tricentis qTest, the entity will be deleted in Salesforce. The deleted entity goes to the "Recycle Bin".
+- After the Soft Delete operation is performed by **<code class="expression">space.vars.SITENAME</code>** in Tricentis qTest, the entity will be deleted in Salesforce. The deleted entity goes to the "Recycle Bin".
 - To only enable the logical delete operation in the target, "OH Soft Delete" field shall be mapped with the default value "No" in the [Delete Mode](../integrate/mapping-configuration.md#delete-mode) mapping.
 
 # Integration Configuration
@@ -40,7 +40,7 @@ In this step, set a time to synchronize data between Tricentis qTest and the oth
 If you want to specify conditions for synchronizing an entity between Tricentis qTest and the other system to be integrated, you can use the Criteria Configuration feature. Go to Criteria Configuration section on the [Integration Configuration](../integrate/integration-configuration.md) page to learn in detail about Criteria Configuration.  
 
 To configure an integration based on criteria, follow the steps given below:
-- In **OpsHub Integration Manager**, on your integration form select **Advance Configuration**.
+- In **<code class="expression">space.vars.SITENAME</code>**, on your integration form select **Advance Configuration**.
 - Under **Other Configurations** section in the Source Configuration tab, set Configure Criteria as **Yes**.
 - And in the **Query** text box, write the query which you want to execute while polling entities.  
   - Format: 'FieldName' = 'FieldValue'
@@ -59,7 +59,7 @@ To configure an integration based on criteria, follow the steps given below:
   - **parentId**: If ID of a parent module is specified, it will only search for sub-modules under this parent module. If not, the response will include the modules located directly under root.
   - **expand**: If you set expand=descendants, the response will include the modules that meet the search criterion and their parent and grand parent modules.
 
-* In the case of criteria configuration, **OpsHub Integration Manager** functions like a search. The query should be provided in JSON format. For example, if the query is `{"search":"test"}`, it will retrieve all modules containing the word 'test' in the specified field or name.
+* In the case of criteria configuration, **<code class="expression">space.vars.SITENAME</code>** functions like a search. The query should be provided in JSON format. For example, if the query is `{"search":"test"}`, it will retrieve all modules containing the word 'test' in the specified field or name.
 
 **Criteria configuration query sample:**
 
@@ -76,7 +76,7 @@ To configure an integration based on criteria, follow the steps given below:
 
 * Overall, Target LookUp Query is similar to [Criteria Configuration](#criteria-configuration), except the value part contains a field name with '@' instead of static value.
 
-* Given below is the sample snippet of how the qTest query can be used as a Target Entity LookUp query in **OpsHub Integration Manager**:
+* Given below is the sample snippet of how the qTest query can be used as a Target Entity LookUp query in **<code class="expression">space.vars.SITENAME</code>**:
 
 **Target LookUp query samples:**
 
@@ -88,7 +88,7 @@ To configure an integration based on criteria, follow the steps given below:
 ### Module entity
 
 * For the Module entity, the lookup query can be applied to the 'Name' field using search query parameters. For other query parameters and its usage, refer to the [criteria configuration](#criteria-configuration) section for module entity.
-* In the case of Target Lookup Configuration, **OpsHub Integration Manager** performs an exact search. For example, if the query is `{"search":"test"}`, it will fetch the module that has the name, 'test'.
+* In the case of Target Lookup Configuration, **<code class="expression">space.vars.SITENAME</code>** performs an exact search. For example, if the query is `{"search":"test"}`, it will fetch the module that has the name, 'test'.
 
 **Target LookUp query sample:**
 
@@ -97,7 +97,7 @@ To configure an integration based on criteria, follow the steps given below:
 | **Text**           | The system will search for a module having exact name in root hierarchy.    | `{"search":"@source_name@"}`                                        |
 | **Text and Integer** | The system will only search for sub-modules under specified parent module having exact name match | `{"search":"Module Name", "parentId":54115370, "expand":"descendants"}` |
 
-* It is recommended to use additional query parameters to narrow down the results if there are more than one with the same name, ensuring only one item is returned. If more than one match is found, **OpsHub Integration Manager** will proceed with the first match.
+* It is recommended to use additional query parameters to narrow down the results if there are more than one with the same name, ensuring only one item is returned. If more than one match is found, **<code class="expression">space.vars.SITENAME</code>** will proceed with the first match.
 
 # Known Behaviour
 
@@ -108,7 +108,7 @@ To configure an integration based on criteria, follow the steps given below:
     * **Note**: It is recommended to have the "Fail event if linked entity does not exist" option enabled in the Relationship mapping of the Requirement and Test Case entities.
  As from the Module entity, there is no way to sync the link to Requirement and Test cases, due to qTest APIs. Hence, if the Module is not synced yet and for Requirement or Test Case the linkage gets updated, then this action can cause the wrong Module linkage sync. By enabling the "Fail event if linked entity does not exist" option the wrong linkages sync can be prevented in case of parallel sync of the Module and Requirement/Test Cases.
 
-* For qTest as the target system and the Test Case entity, if the user wants to approve the Test Case based on pre-condition, user needs to map Boolean field `OH_Approve_Test_Case` in OpsHub Integration Manager. Here, the user needs to provide true/false value based on the use case.
+* For qTest as the target system and the Test Case entity, if the user wants to approve the Test Case based on pre-condition, user needs to map Boolean field `OH_Approve_Test_Case` in <code class="expression">space.vars.SITENAME</code>. Here, the user needs to provide true/false value based on the use case.
 
 * If the above-mentioned field is not mapped, Test Case will be approved after every revision [including the create operation].  
   **Note**: `OH_Approve_Test_Case` should not be mapped as the source field for this is a virtual field and not an actual field in Test Case.
@@ -130,11 +130,11 @@ To configure an integration based on criteria, follow the steps given below:
 </OH_Approve_Test_Case>
 ```
 
-* If the Module entity is configured in OpsHub Integration Manager as a separate entity, map the Parent in a link relationship with Requirement and Test Case entities.  
+* If the Module entity is configured in <code class="expression">space.vars.SITENAME</code> as a separate entity, map the Parent in a link relationship with Requirement and Test Case entities.  
   * The module is mandatory in Requirement and Test Case synchronization.
 * If the Module entity is not configured separately, use the check-and-create functionality with the **Module Path** field  
   * To create the module hierarchy, you need to configure the **checkAndCreate** flag. If **checkAndCreate** is not configured and the module hierarchy does not exist, an error will be thrown.  
-  * For example, if the module path is set to "Default/Test/Test1" and the checkAndCreate option is not configured, then OpsHub Integration Manager will attempt to locate the specified path.  
+  * For example, if the module path is set to "Default/Test/Test1" and the checkAndCreate option is not configured, then <code class="expression">space.vars.SITENAME</code> will attempt to locate the specified path.  
     * If the path exists, it will be used for create/update operations.  
     * If the path does not exist, an error will be thrown.
 * <code class="expression">space.vars.SITENAME</code> uses the "/" character to separate modules in a '''Module Path'''. If the source system uses a different path separator, users must create advanced mapping to convert that separator to the "/" string.
@@ -164,8 +164,8 @@ To configure an integration based on criteria, follow the steps given below:
 
 ## Build
 
-* Build can be created under the 'Release' entity in qTest. Hence, when qTest is the target system in the OpsHub Integration Manager, then it is required to configure a mandatory "Parent" link to the Release entity in OpsHub Integration Manager mapping to sync the Build entity.
-* Build can be linked with the Requirements, (which are already linked to the parent Release entity), as part of the "BUILD SCOPE" configuration in qTest. To synchronize this link, the `build_scope_includes` can be configured in the OpsHub Integration Manager mapping.
+* Build can be created under the 'Release' entity in qTest. Hence, when qTest is the target system in the <code class="expression">space.vars.SITENAME</code>, then it is required to configure a mandatory "Parent" link to the Release entity in <code class="expression">space.vars.SITENAME</code> mapping to sync the Build entity.
+* Build can be linked with the Requirements, (which are already linked to the parent Release entity), as part of the "BUILD SCOPE" configuration in qTest. To synchronize this link, the `build_scope_includes` can be configured in the <code class="expression">space.vars.SITENAME</code> mapping.
 * If an error is observed with the error message:  
   `"No links were created. Please review your input, make sure they are valid id and able to link"`  
   while synchronizing the Requirement link with the Build entity. A possible cause could be:
@@ -177,7 +177,7 @@ To configure an integration based on criteria, follow the steps given below:
 * Testlog steps' result update is not supported.
 * Synchronizing empty values to the 'Combo-Box' and 'Date' type of system fields are not supported due to Qtest API limitation.
 * Link to 'Testlog from Defect' is not supported.
-* Parent Release can be set at the creation time of the Build only; it cannot be changed via OpsHub Integration Manager afterwards due to an API limitation.
+* Parent Release can be set at the creation time of the Build only; it cannot be changed via <code class="expression">space.vars.SITENAME</code> afterwards due to an API limitation.
 * Requirements and Defect entities will be synchronized without history. They will be synchronized with the entity state/details available at the time of synchronization.
 * If user is editing the existing comment or removing/deleting the attachment from Defect/Requirement entity, then to sync such changes, the user needs to update one field on Defect/Requirement entity.
 * Attachments with non-ASCII characters in file name are not fully supported by Tricentis qTest API, so the file name may change during synchronization if it contains non-ASCII characters. This also limits the bi-directional sync of those files.
@@ -195,7 +195,7 @@ To configure an integration based on criteria, follow the steps given below:
 </p>
 
 
-* For Tricentis qTest as the target system, the Submitter field will not be updated for the Defect entity by OpsHub Integration Manager.  
+* For Tricentis qTest as the target system, the Submitter field will not be updated for the Defect entity by <code class="expression">space.vars.SITENAME</code>.  
   **Reason:** Tricentis qTest API does not allow to update the Submitter field.
 * Entities like Builds, Release, Requirement, Module, Test Case, Test Suite, Test Cycle, and Test Run support the Soft Delete operation in Tricentis qTest. For other entities, Logical Delete will be performed.
 

@@ -3,7 +3,7 @@
 ## User privileges
 
 * Create one application in Azure Active Directory. Add new Client Secret for this application. Need to add this user to the "Application Users" from the power apps admin portal under the MS Dynamics environment.
-* The above user in MS Dynamics 365 is dedicated for OpsHub Integration Manager. This user shouldn't perform any other action from MS Dynamics 365's user interface. This user is referred as 'Integration User' in the document.
+* The above user in MS Dynamics 365 is dedicated for <code class="expression">space.vars.SITENAME</code>. This user shouldn't perform any other action from MS Dynamics 365's user interface. This user is referred as 'Integration User' in the document.
   * Refer to [Add User](msdynamics.md#add-user) section to create a user in MS Dynamics 365.
     * While creating or updating a user's email in Dynamics 365 system, ensure that the provided email address is unique among all the existing users.
 * To bidirectionally synchronize entities  [as source or target systems] to MS Dynamics 365, the integration user must have the following security roles. Refer to [Grant Permissions to MS Dynamics 365 User](msdynamics.md#grant-permissions-to-ms-dynamics-365-user) section for details on how to grant permissions to an MS Dynamics 365 user.
@@ -26,15 +26,15 @@
 ## Custom Field Configuration for Recovery Handling
 
 * If the audit is disabled from MS Dynamics 365 UI:
-  * OpsHub Integration Manager requires a custom field of **Text** type for entities where audit history is disabled in MS Dynamics 365 system for recovery purpose.
+  * <code class="expression">space.vars.SITENAME</code> requires a custom field of **Text** type for entities where audit history is disabled in MS Dynamics 365 system for recovery purpose.
   * Field with the name **oh _last _update** needs to be created for the following entities:
-    * For the entity type, which is configured in OpsHub Integration Manager for the sync purpose.
+    * For the entity type, which is configured in <code class="expression">space.vars.SITENAME</code> for the sync purpose.
     * For the entity type, which is configured in the default link configuration.
   * Refer to [Add Custom Fields](msdynamics.md#add-custom-fields) section in Appendix for details on how to create custom fields.
 
 ## Synchronization of Secure Fields
 
-* Create one custom proOpsHub Integration Manager in the **Column Security ProOpsHub Integration Manager**. Give the **Read**, **Update** and **Create** permissions to the same secure fields.
+* Create one custom pro<code class="expression">space.vars.SITENAME</code> in the **Column Security Pro<code class="expression">space.vars.SITENAME</code>**. Give the **Read**, **Update** and **Create** permissions to the same secure fields.
 * The integration user must be added in the Users section of the above profile. Refer to [Add New Profile in Column Security Profile](msdynamics.md#add-new-profile-in-column-security-profile) section for details on how to add new profile in column security profile in the MS Dynamics 365 for the integration user.
 
 ## Impersonation
@@ -49,7 +49,7 @@
 * The Field "Record Created On" is utilized to achieve the Date Impersonation in Dynamics 365.
   * For Dynamics 365 as the target, user needs to map the "Record Created On" field with the source system's field.
 * The value of the "Record Created On" cannot be set to future date time value. It can only be set to a past or current date time value.
-  * If it is set to any future date and time, then a sync failure will be observed in OpsHub Integration Manager.
+  * If it is set to any future date and time, then a sync failure will be observed in <code class="expression">space.vars.SITENAME</code>.
     ***Reason**: Dynamics 365 does not allow future date and time for "Record Created On" field.
 
 ### User Impersonation
@@ -58,7 +58,7 @@
 * The **Created By (Delegate)** is used to achieve impersonation at create time of entity.
 * The **Modified By (Delegate)** will be used to achieve impersonation at the update time of the entity.
   * Here, the **Overwrite** configuration needs to be enabled on this field to achieve the update time impersonation.
-* Below is the example of enabling the overwrite configuration for the "Modified By (Delegate)" field in OpsHub Integration Manager mapping.
+* Below is the example of enabling the overwrite configuration for the "Modified By (Delegate)" field in <code class="expression">space.vars.SITENAME</code> mapping.
 
 <div align="center"><img src="../assets/MSD_User_Impersonation_Mapping.png" alt=""></div>
 
@@ -66,7 +66,7 @@
 
 # System Configuration
 
-* As you kickstart the integration, you must first configure MS Dynamics 365 system on OpsHub Integration Manager.
+* As you kickstart the integration, you must first configure MS Dynamics 365 system on <code class="expression">space.vars.SITENAME</code>.
 * Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.
 
 Refer to the following screenshot:
@@ -95,7 +95,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 
 In MS Dynamics 365, selecting the entity type in mapping configuration does not depend on the project selection as there is no concept of project in the system. So, the user needs to select `OH_NO_PROJECT` in the projects' tab.
 
-> **Note**: If your entity is not visible in the entity list, enable "Appear in search results" from the entity settings. Refer to [Enable Search Result](msdynamics.md#enable-search-result) section to know how to enable entity for synchronization with OpsHub Integration Manager.
+> **Note**: If your entity is not visible in the entity list, enable "Appear in search results" from the entity settings. Refer to [Enable Search Result](msdynamics.md#enable-search-result) section to know how to enable entity for synchronization with <code class="expression">space.vars.SITENAME</code>.
 
 ## Comments Configuration
 
@@ -124,14 +124,14 @@ In MS Dynamics 365, selecting the entity type in mapping configuration does not 
 
 ### Lookup Reference Fields
 
-* Lookup Reference fields are the fields that refer to some other MS Dynamics 365 entities which are supported by OpsHub Integration Manager.
+* Lookup Reference fields are the fields that refer to some other MS Dynamics 365 entities which are supported by <code class="expression">space.vars.SITENAME</code>.
 * Lookup Reference fields  [System/Custom fields] will be synchronized through relationships. Here, the **Relationship name** of the reference field will be shown in link type in the mapping of the Relationship Configuration as shown in the screenshot below (the highlighted one is the Relationship Name of Lookup field):
 
 <div align="center"><img src="../assets/MSD_reference_field_relation.png" alt=""></div>
 
 ### Mandatory Links
 
-* For **Case** entity, the user needs to configure the **Account** as the mandatory linkage in the OpsHub Integration Manager.
+* For **Case** entity, the user needs to configure the **Account** as the mandatory linkage in the <code class="expression">space.vars.SITENAME</code>.
   * Reason: Case can be created inside the Account/Contact only.
 
 # Integration Configuration
@@ -146,15 +146,15 @@ In MS Dynamics 365, selecting the entity type in integration configuration does 
 
 * Display ID Field:
   * To configure the Display id field for an MS Dynamics 365 entity, user can select the field from the dropdown menu.
-  * The selected field will be considered the "Display ID" in OpsHub Integration Manager and will be visible in the remote Id and sync report. Example, for the **Case** entity, user can select the **Case Number** in the Display ID Field as it is unique and considered as the Display id in MS Dynamics 365.
-  * If the user does not select a field in the Display ID Field, the internal id of the MS Dynamics 365 entity (part of the entity URL) will be considered as the Display ID in OpsHub Integration Manager and will be displayed in the "remote Id" and "sync report".
+  * The selected field will be considered the "Display ID" in <code class="expression">space.vars.SITENAME</code> and will be visible in the remote Id and sync report. Example, for the **Case** entity, user can select the **Case Number** in the Display ID Field as it is unique and considered as the Display id in MS Dynamics 365.
+  * If the user does not select a field in the Display ID Field, the internal id of the MS Dynamics 365 entity (part of the entity URL) will be considered as the Display ID in <code class="expression">space.vars.SITENAME</code> and will be displayed in the "remote Id" and "sync report".
 
 <div align="center"><img src="../assets/MSDynamics_DisplayIdField.png" alt=""></div>
 
 ## Criteria Configuration
 
 If the user wants to specify conditions for synchronizing an entity from MS Dynamics 365 as source system to the other system, the criteria must be configured. Navigate to Criteria Configuration section on [Integration Configuration](../integrate/integration-configuration.md) page to learn in detail about Criteria Configuration. 
-Set the **Query** as per MS Dynamics 365 encoded query format. Given below are the sample snippets of how the MS Dynamics 365 queries can be used as criteria query in OpsHub Integration Manager:
+Set the **Query** as per MS Dynamics 365 encoded query format. Given below are the sample snippets of how the MS Dynamics 365 queries can be used as criteria query in <code class="expression">space.vars.SITENAME</code>:
 
 **Criteria samples:**
 
@@ -184,8 +184,8 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 ## Common
 
 * From MS Dynamics Customer Service Hub UI, user can change the entity type.
-  * In this case, OpsHub Integration Manager will create a new entity in the target and the previous one gets orphaned.
-* User can add custom entities in the end system. To sync that entity with OpsHub Integration Manager, user needs to enable "Appear in search results" in the entity settings. Refer to [Enable Search Result](msdynamics.md#enable-search-result) section to know how to enable an entity for synchronization with OpsHub Integration Manager.
+  * In this case, <code class="expression">space.vars.SITENAME</code> will create a new entity in the target and the previous one gets orphaned.
+* User can add custom entities in the end system. To sync that entity with <code class="expression">space.vars.SITENAME</code>, user needs to enable "Appear in search results" in the entity settings. Refer to [Enable Search Result](msdynamics.md#enable-search-result) section to know how to enable an entity for synchronization with <code class="expression">space.vars.SITENAME</code>.
 * Those entities will be synced that are within the polling time criteria and is created by a valid user.
 
 ## History-based Sync
@@ -193,7 +193,7 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 * User needs to enable the audit history in the end system for entity and fields to perform the history-based sync. Refer to [Enable Audit History](msdynamics.md#enable-audit-history) section to know how to enable the audit history.
 * If the audit history is disabled, entities will be synced in the current state only.
 * MS Dynamics 365 as source system:
-  * When the user turns on the audit history for any entity from the end system settings after starting the sync, conflicts can be generated if the conflict detection setting is enabled in the OpsHub Integration Manager mapping.
+  * When the user turns on the audit history for any entity from the end system settings after starting the sync, conflicts can be generated if the conflict detection setting is enabled in the <code class="expression">space.vars.SITENAME</code> mapping.
 * MS Dynamics 365 as target system:
   * When the user turns off the audit history for any entity from the end system settings after starting the sync, the recovery will not be handled for the entities  [which are synced before enabling the history].
 
@@ -203,22 +203,22 @@ Set the **Query** as per MS Dynamics 365 encoded query format. Given below are t
 
 ### Knowledge Article
 
-* Whenever a Knowledge Article entity is created from Dynamics 365 UI, the system creates an extra Root Knowledge article. Due to such behavior of Dynamics 365, OpsHub Integration Manager will create two Knowledge Articles for a single source entity when Dynamics 365 is the target system.
-* To avoid such behavior when Dynamics 365 is target system, "Root Article" field can be mapped in OpsHub Integration Manager with value true which would ensure that only single root knowledge article is created.
+* Whenever a Knowledge Article entity is created from Dynamics 365 UI, the system creates an extra Root Knowledge article. Due to such behavior of Dynamics 365, <code class="expression">space.vars.SITENAME</code> will create two Knowledge Articles for a single source entity when Dynamics 365 is the target system.
+* To avoid such behavior when Dynamics 365 is target system, "Root Article" field can be mapped in <code class="expression">space.vars.SITENAME</code> with value true which would ensure that only single root knowledge article is created.
 
-> **Note**: By default, the above field value is false and OpsHub Integration Manager will follow the default behavior of Dynamics 365, if this field is not mapped.
+> **Note**: By default, the above field value is false and <code class="expression">space.vars.SITENAME</code> will follow the default behavior of Dynamics 365, if this field is not mapped.
 
 # Known Limitations
 
 ## Common
 
-* The following type of entities and the reference fields related to these entities are not supported by OpsHub Integration Manager:
+* The following type of entities and the reference fields related to these entities are not supported by <code class="expression">space.vars.SITENAME</code>:
   * Activity
   * Virtual
   * Elastic
-* The following field type is not supported by OpsHub Integration Manager:
+* The following field type is not supported by <code class="expression">space.vars.SITENAME</code>:
   * Formula type field
-* Field type of attachments with size greater than 128 MB are not supported by OpsHub Integration Manager.
+* Field type of attachments with size greater than 128 MB are not supported by <code class="expression">space.vars.SITENAME</code>.
   * If more than 128 MB sized attachment is coming for the sync, then the processing failure will be observed in the attachment sync due to dynamics API limitation.
 * For comment & attachment synchronization, when the user add/modify any comment/attachment, the user needs to update one field  [System/Custom field] to sync the comment & the attachment.
   * Reason: In MS Dynamics 365, entity modified time does not get updated with inline image/attachment addition in Note or when a Note is added.

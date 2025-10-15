@@ -10,7 +10,7 @@ User must create one special field to be configured in all target ALM Octane wor
 For adding a custom field in any entity in ALM Octane, please follow the link: [Custom Fields Creation](#create-custom-fields).
 
 ## User Privileges
-* Create one ALM Octane user for workspace(s) that is a part of synchronization. User should be dedicated to OpsHub Integration Manager and should not be used to do any other operations from the system's user interface.
+* Create one ALM Octane user for workspace(s) that is a part of synchronization. User should be dedicated to <code class="expression">space.vars.SITENAME</code> and should not be used to do any other operations from the system's user interface.
 * Given below are the set of required permissions/roles for synchronizing entities in ALM Octane. Integration user used for system configurations should be assigned, at least, with the following roles for successful and correct synchronization of data:
   * **Leader role**: For reading/writing standard work items such as Defect, Story, Quality Story, Requirement Folders, Requirement Documents, Feature, Epic, Test Manual, Gherkin Test, Test Suite, Run Manual, etc.
   * **Workspace Admin role**: For reading/writing Meta entities that includes Release, Sprint, Team, Milestone
@@ -36,7 +36,7 @@ For adding a custom field in any entity in ALM Octane, please follow the link: [
 | **ALM Octane Client ID**   | Only when 'API Key' authentication is selected.      | Provide the Client ID. |
 | **ALM Octane Client Secret**| Only when 'API Key' authentication is selected.     | Provide the Client Secret. |
 
-* If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+* If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 # Mapping Configuration
 

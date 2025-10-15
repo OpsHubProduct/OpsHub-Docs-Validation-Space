@@ -2,7 +2,7 @@
 
 ## User Privileges
 
-For integration, OpsHub Integration Manager requires user that is authorized to connect to Subversion server URL and can read check-in information.
+For integration, <code class="expression">space.vars.SITENAME</code> requires user that is authorized to connect to Subversion server URL and can read check-in information.
 
 ## Subversion Client
 
@@ -12,7 +12,7 @@ For basic Python installation, refer [Python Configuration](#configuration-pytho
 
 # System Configuration
 
-Before you continue to the integration, you must first configure Subversion onto OpsHub Integration Manager.  
+Before you continue to the integration, you must first configure Subversion onto <code class="expression">space.vars.SITENAME</code>.  
 Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.  
 Refer the screenshot given below.
 
@@ -21,7 +21,7 @@ Refer the screenshot given below.
 </p>
 
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 Clicking the Template will bring up the table shown above in a new pop-up window. It will allow you to configure commit template for the Subversion system. Please note that out of all the attributes shown above, Bug Id represented by issueid_int/ issueid_str attribute and Reviewer represented by reviewer_usr attribute are mandatory. In other words, user will need to specify the value of these two attributes in the commit template otherwise commit/check-in will not be allowed. You may also specify pre/post commit default values for the attributes. Post commit values are needed when no template is configured at the SCM level. The values provided under Attribute Display name are case sensitive and are compulsory to be provided while checking-in any file from the repository. For example, for the above configured template, you need to specify the commit template as follows:
 
@@ -106,7 +106,7 @@ For example:
 
 But it is recommended to reset these one by one:
 
-* `url`:= WSDL url of OpsHubwebservice. Edit localhost by OpsHub Integration Manager server name/server ip.
+* `url`:= WSDL url of OpsHubwebservice. Edit localhost by <code class="expression">space.vars.SITENAME</code> server name/server ip.
 * `url`:= http://<OpsHubHost>:<opshubport>/OpsHubWS/services/CommitVerify?wsdl
 * `logfile`:= Place to write the logfile. Make sure the SVN user has right permission.
 * `loglabel`:= Different values of log, leave the default.
@@ -114,7 +114,7 @@ But it is recommended to reset these one by one:
 * `Debug`:=Debug level, leave the default `remote`.
 * `username`:= Webservice user name, leave the default value `admin`
 * `password`:= Password for above.
-* `commitOnConnectionFailure`:= True, if it makes SCM working even in the absence of OpsHub Integration Manager server, otherwise False.
+* `commitOnConnectionFailure`:= True, if it makes SCM working even in the absence of <code class="expression">space.vars.SITENAME</code> server, otherwise False.
 * `repositoryId`:= Display Name of the system given during System Configuration.
 
 ## Creating the Hook

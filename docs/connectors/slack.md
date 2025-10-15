@@ -2,12 +2,12 @@
 
 ## Slack Token
 
-OpsHub Integration Manager Integration Configuration requires access to Slack API through OAuth token.  
+<code class="expression">space.vars.SITENAME</code> Integration Configuration requires access to Slack API through OAuth token.  
 Refer [Generating Slack OAuth token](#generating-slack-oauth-token) in appendix for the steps to generate OAuth token.
 
 ## Permission Scopes
 
-The permissions scopes required for OpsHub Integration Manager are:
+The permissions scopes required for <code class="expression">space.vars.SITENAME</code> are:
 
 * channels:read  
 * groups:read  
@@ -31,7 +31,7 @@ Refer the screenshot given below for reference.
 </p>
 
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 # Mapping Configuration
 
@@ -85,7 +85,7 @@ Set Target Search Query as `<key of target system> =@TargetEntityID@` (Without q
 ## Generating Slack OAuth token
 
 * For generating Slack token for the OpsHub Application perform the following steps:
-* Login to your team domain by a dedicated integration user. (This integrated user will be a user that is dedicated for OpsHub Integration Manager).
+* Login to your team domain by a dedicated integration user. (This integrated user will be a user that is dedicated for <code class="expression">space.vars.SITENAME</code>).
 * Now go to: https://api.slack.com/apps/newlink from the same browser you have logged in with the admin user. Click 'Create New App' will show the dialog box as described in the image below.
 * Give any application name and then, select the team for which the integration will be made. Now, click 'Create App'.  
 
@@ -126,7 +126,7 @@ Set Target Search Query as `<key of target system> =@TargetEntityID@` (Without q
 
 ## Editing Permission and Scope
 
-Steps to edit permission and scopes: Login to your team domain by a dedicated integration user. This integrated user will be a user that is dedicated for OpsHub Integration Manager.  
+Steps to edit permission and scopes: Login to your team domain by a dedicated integration user. This integrated user will be a user that is dedicated for <code class="expression">space.vars.SITENAME</code>.  
 
 >**Note**:  This user should be part of the Channel for which the integration is to be created.
 

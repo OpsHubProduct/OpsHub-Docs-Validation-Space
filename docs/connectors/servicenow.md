@@ -2,7 +2,7 @@
 
 ## User Privileges
 
-* Create one administrator user of ServiceNow system (please refer [Add User](servicenow.md#add-user) section for creating a new user), dedicated to OpsHub Integration Manager. User should not be used to do any operations from ServiceNow User-Interface.
+* Create one administrator user of ServiceNow system (please refer [Add User](servicenow.md#add-user) section for creating a new user), dedicated to <code class="expression">space.vars.SITENAME</code>. User should not be used to do any operations from ServiceNow User-Interface.
   >**Note**:  In case your ServiceNow is configured with SSO, you will have to create a normal service user account in ServiceNow and use that user in integration.
 *   In case if administrator user is not available, dedicated user should have access to tables mentioned below. Please note that Read, Write, Delete, etc mentioned in brackets beside table names, are the access permissions required on respective table. Refer [Add user access for table](servicenow.md#add-user-access-for-table) for providing required permissions to the user.
 
@@ -47,22 +47,22 @@ This is ServiceNow API requirement in order to use import set tables.
 
 ServiceNow tracks incident, change, and problem history in the sys\_audit table. Enabling auditing tracks the creation and update of audited records. Audit must be enabled on the entity table (for example, not to its import set table but to the actual entity table like incident, problem, etc). To enable audit for a table, please refer [Enabling audit for a table](servicenow.md#turn-on-auditing-history-for-a-table).
 
-## Enable OpsHub Integration Manager for ServiceNow instance
+## Enable <code class="expression">space.vars.SITENAME</code> for ServiceNow instance
 
-*   OpsHub Integration Manager must be enabled for the ServiceNow instance. You can get this app from ServiceNow appStore: [ServiceNow App Store](https://store.servicenow.com/sn_appstore_store.do#!/store/application/8e6f0b610f8ce6001f6fc3ace1050ebb)
+*   <code class="expression">space.vars.SITENAME</code> must be enabled for the ServiceNow instance. You can get this app from ServiceNow appStore: [ServiceNow App Store](https://store.servicenow.com/sn_appstore_store.do#!/store/application/8e6f0b610f8ce6001f6fc3ace1050ebb)
 
     <p align="center">
       <img src="../assets/Snow_Store.png" width="1500" />
     </p>
 
-* On the OpsHub Integration Manager App page, click on **Get** and provide your ServiceNow HI Credentials.
-*   You will see OpsHub Integration Manager for ServiceNow in Downloads tab by navigating **System Applications -> Applications** in your ServiceNow instance [The example below shows OpsHub Integration Manager for ServiceNow Enterprise]. Click on Install for OpsHub Integration Manager for ServiceNow applications.
+* On the <code class="expression">space.vars.SITENAME</code> App page, click on **Get** and provide your ServiceNow HI Credentials.
+*   You will see <code class="expression">space.vars.SITENAME</code> for ServiceNow in Downloads tab by navigating **System Applications -> Applications** in your ServiceNow instance [The example below shows <code class="expression">space.vars.SITENAME</code> for ServiceNow Enterprise]. Click on Install for <code class="expression">space.vars.SITENAME</code> for ServiceNow applications.
 
     <p align="center">
      <img src="../assets/Snow2.png" width="800" />
     </p>
 
-* On successful installation, OpsHub Integration Manager for ServiceNow application will be available.
+* On successful installation, <code class="expression">space.vars.SITENAME</code> for ServiceNow application will be available.
 
 ## Configure import set table and transformation map
 
@@ -71,8 +71,8 @@ If user wants to skip the prerequisite of 'Import Set Table and Transformation m
 ### Create and configure import set table
 
 * Import set table must be created for each entity that needs to be synchronized.
-* For a given actual table, only one import-set table should exist under OpsHub Integration Manager for ServiceNow application.
-* Select OpsHub Integration Manager for ServiceNow application in Settings, as shown below:
+* For a given actual table, only one import-set table should exist under <code class="expression">space.vars.SITENAME</code> for ServiceNow application.
+* Select <code class="expression">space.vars.SITENAME</code> for ServiceNow application in Settings, as shown below:
 
    <p align="center">
       <img src="../assets/SNow_Image_100.png" width="900" />
@@ -96,7 +96,7 @@ If user wants to skip the prerequisite of 'Import Set Table and Transformation m
 
 * Create New Import set table as shown above.
 * Import set table internal name should start with 'x_oph'.
-* Make sure you are creating import set table under OpsHub Integration Manager for ServiceNow application.
+* Make sure you are creating import set table under <code class="expression">space.vars.SITENAME</code> for ServiceNow application.
 * Make sure you are extending Import Set Row (sys_import_set_row) table.
 *   For every field in original table that needs to be written through synchronization, create one field in your import set table as shown below (No field is required for synchronizing attachment and comment. For work notes though, you need to create a field in import set table).
 
@@ -128,7 +128,7 @@ ServiceNow provides the option of creating import set table (along with the requ
 
 * Ensure you are adding 'target_sys_id' to the Excel sheet.
 * Now, please go back to ServiceNow, type 'Data source' in the navigator and click 'Data Sources' under 'System Import Sets'.
-* Click on New. Make sure you are creating the import set table under OpsHub Integration Manager for ServiceNow application.
+* Click on New. Make sure you are creating the import set table under <code class="expression">space.vars.SITENAME</code> for ServiceNow application.
 
    <p align="center">
    <img src="../assets/Create_data_source.png" width="900" />
@@ -248,7 +248,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 
 ## Mapping reference fields
 
-* All the fields of type reference i.e. the fields that are referring to some other ServiceNow entity will be treated as look-ups in OpsHub Integration Manager.
+* All the fields of type reference i.e. the fields that are referring to some other ServiceNow entity will be treated as look-ups in <code class="expression">space.vars.SITENAME</code>.
 * For such reference fields, you can define value mapping using either name or number.
 * A maximum of 1000 lookup values will be loaded for a reference field. If you are not able to find your value in the look-up values loaded, you can map values using advance mapping.
 * Look-up values will be loaded only if the entity being referred by a field has name or number columns.

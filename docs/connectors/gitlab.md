@@ -2,12 +2,12 @@
 
 ## Personal Access Token
 
-OpsHub Integration Manager Integration Configuration requires Personal Access Token to authenticate with GitLab's API.  
+<code class="expression">space.vars.SITENAME</code> Integration Configuration requires Personal Access Token to authenticate with GitLab's API.  
 Refer [Generating Personal Access Token](#generating-personal-access-token) in appendix for the steps to generate Personal Access Token.
 
 # System Configuration
 
-Before you proceed to the integration, you must first configure GitLab onto OpsHub Integration Manager.  
+Before you proceed to the integration, you must first configure GitLab onto <code class="expression">space.vars.SITENAME</code>.  
 
 Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.  
 
@@ -17,7 +17,7 @@ Refer to the screenshot given below for reference:
   <img src="../assets/gitlab_system_config1.png" width="1200">
 </p>
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 # Mapping Configuration
 
@@ -73,11 +73,11 @@ And the related workitem ID on which you want to synchronize commit information 
 
 ### In case of Group
 
-OpsHub Integration Manager supports "Epic" entity of Group.
+<code class="expression">space.vars.SITENAME</code> supports "Epic" entity of Group.
 
 ### In case of Project
 
-OpsHub Integration Manager supports two entities of Project: Commit Information, Issues (Incident, Requirements).
+<code class="expression">space.vars.SITENAME</code> supports two entities of Project: Commit Information, Issues (Incident, Requirements).
 
 ## Criteria Configuration
 
@@ -117,11 +117,11 @@ Set 'Query' as given below. For Example:
 
 ### GitLab On Cloud
 
-* Severity, Health Status fields are supported as read only in OpsHub Integration Manager.
+* Severity, Health Status fields are supported as read only in <code class="expression">space.vars.SITENAME</code>.
   * Reason: Write API unavailability.
 * Milestones and Iterations sync is not supported.
 * Synchronization of User fields:
-  * For the user sync, the advanced mapping needs to be configured in the OpsHub Integration Manager where the excel based look-up can be used for user mapping.
+  * For the user sync, the advanced mapping needs to be configured in the <code class="expression">space.vars.SITENAME</code> where the excel based look-up can be used for user mapping.
     * Reason: GitLab Cloud API does not provide the user email.
   * User mapping can be set in the advanced mapping as follows:
 
@@ -147,7 +147,7 @@ Set 'Query' as given below. For Example:
 ## Commit Information
 
 * GitLab as a source system:
-  * OpsHub Integration Manager cannot synchronize commits older than 1 year for a specific project.
+  * <code class="expression">space.vars.SITENAME</code> cannot synchronize commits older than 1 year for a specific project.
     * Reason: GitLab removes pushed commit events older than 1 year from their records for performance reasons.
   * Criteria configuration is not supported.
   * Synchronization of Commit Discussions are not supported.

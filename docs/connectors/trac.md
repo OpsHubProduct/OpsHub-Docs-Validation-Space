@@ -12,9 +12,9 @@ tracrpc.* = enable
 
 ## User Privileges
 
-* Create one user of Trac, dedicated to OpsHub Integration Manager. User should not be used to do any operations from System's User-Interface. 
+* Create one user of Trac, dedicated to <code class="expression">space.vars.SITENAME</code>. User should not be used to do any operations from System's User-Interface. 
 * User must have all privileges to call its web-service and permissions to read, write, and edit the entity. 
-* Following are the privileges required in Trac for the user of OpsHub Integration Manager. 
+* Following are the privileges required in Trac for the user of <code class="expression">space.vars.SITENAME</code>. 
   * TICKET_ADMIN 
   * XML_RPC 
 
@@ -41,7 +41,7 @@ Refer the screenshot given below for reference.
 </p>
 
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 # Mapping Configuration
 

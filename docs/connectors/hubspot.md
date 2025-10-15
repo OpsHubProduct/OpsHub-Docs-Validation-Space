@@ -1,7 +1,7 @@
 # Prerequisites
 
 ## User privileges
-* Create one user in HubSpot that is dedicated for OpsHub Integration Manager. This user shouldn't perform any other action from HubSpot's user interface. This user is referred as 'Integration User' in the documentation.
+* Create one user in HubSpot that is dedicated for <code class="expression">space.vars.SITENAME</code>. This user shouldn't perform any other action from HubSpot's user interface. This user is referred as 'Integration User' in the documentation.
   * For this user to perform operations in HubSpot, various permission scopes are required, as outlined below. To know more about the permission scopes refer to [Manage Scopes in HubSpot](https://developers.hubspot.com/docs/guides/apps/authentication/scopes).
   * To know more about the User permissions in HubSpot refer to [HubSpot user permission guide](https://knowledge.hubspot.com/user-management/hubspot-user-permissions-guide).
 * Using the user created above, create a **Private App** in HubSpot to generate the **Access Token** and obtain the **Application Id** which is required in the system configuration form. Refer to [Create Private App in HubSpot](create-private-app-in-hubspot) to know how to create private app in HubSpot.
@@ -35,7 +35,7 @@
 
 # System Configuration
 
-* As you kickstart the integration, the user must first configure HubSpot system in OpsHub Integration Manager. Click [System Configuration](../integrate/system-configuration.md) to learn step-by-step process to configure a system. Refer to the following screenshot:
+* As you kickstart the integration, the user must first configure HubSpot system in <code class="expression">space.vars.SITENAME</code>. Click [System Configuration](../integrate/system-configuration.md) to learn step-by-step process to configure a system. Refer to the following screenshot:
 
 <p align="center"><img src="../assets/HubSpotSystemConfig.png" width="1500" /></p>
 
@@ -85,7 +85,7 @@ Set a time to synchronize data between HubSpot and the other system to be integr
 
 If the user wants to specify conditions for synchronizing an entity from HubSpot as source system to the other system, the criteria must be configured. Navigate to Criteria Configuration section on [Integration Configuration](../integrate/integration-configuration.md) page to learn in detail about Criteria Configuration.
 
-Set the **Query** as per OpsHub Integration Manager's Native query format. While adding the criteria, user needs to add the internal names of the fields on which the criteria have to be applied. Given below are the sample snippets of how the HubSpot queries can be used as criteria query in OpsHub Integration Manager:
+Set the **Query** as per <code class="expression">space.vars.SITENAME</code>'s Native query format. While adding the criteria, user needs to add the internal names of the fields on which the criteria have to be applied. Given below are the sample snippets of how the HubSpot queries can be used as criteria query in <code class="expression">space.vars.SITENAME</code>:
 
 **Criteria samples:**
 
@@ -141,7 +141,7 @@ Set the **Query** as per OpsHub Integration Manager's Native query format. While
 * In HubSpot, user mention is only supported in the entities of type Notes, Emails, Calls, Meetings, Tasks.
 * Grouping of criteria like - (condition1 and condition2) or (condition1 and condition3) is not supported in criteria as well as Target LookUp.
 * Hierarchy sync is not supported in HubSpot.
-* While applying criteria configuration, note that HubSpot's Search API accepts only 5 filters. Since OpsHub Integration Manager applies two of these filters internally, users can add a maximum of 3 additional filters to define the criteria.
+* While applying criteria configuration, note that HubSpot's Search API accepts only 5 filters. Since <code class="expression">space.vars.SITENAME</code> applies two of these filters internally, users can add a maximum of 3 additional filters to define the criteria.
 * While using a query for criteria or target lookup, if a text-type field is used, the query will not execute if the field value is null.  
   For example: `[{"condition":"EQUALS","field":"dealname","value":null}]` – this query will not be executed as HubSpot API expects a value in text fields.
 * For Comment synchronization:
@@ -206,7 +206,7 @@ Set the **Query** as per OpsHub Integration Manager's Native query format. While
 <p align="center"><img src="../assets/HubSpotPrivateApp.png" width="1000"/></p>
 
 3. Click **Create a Private App**.
-4. Provide the App's Name (e.g., "OpsHub Integration Manager Integration").
+4. Provide the App's Name (e.g., "<code class="expression">space.vars.SITENAME</code> Integration").
 
 <p align="center"><img src="../assets/HubSpotCreatePrivateApp.png" width="1000"  /></p>
 
@@ -217,7 +217,7 @@ Set the **Query** as per OpsHub Integration Manager's Native query format. While
 6. Click **Create App**.
 7. Copy the Access Token (Auth Token).
    * To know more details about this private app, refer to [HubSpot Private App Documentation](https://developers.hubspot.com/docs/guides/apps/private-apps/overview)
-   * This token will be used in the **API Token** field during system configuration in OpsHub Integration Manager.
+   * This token will be used in the **API Token** field during system configuration in <code class="expression">space.vars.SITENAME</code>.
    * Refer to [Steps to Get the Application ID for HubSpot ](#steps-to-get-the-application-id-for-hubspot) for details.
 
 ---

@@ -7,7 +7,7 @@
 
 ## Fields Requirements
 
-The following columns should exist in the Snowflake's tables and views for OpsHub Integration Manager to ensure seamless data synchronization.
+The following columns should exist in the Snowflake's tables and views for <code class="expression">space.vars.SITENAME</code> to ensure seamless data synchronization.
 
 | **Column Name**      | **Column Type**                 | **Description**                                           |
 | -------------------- | ------------------------------- | --------------------------------------------------------- |
@@ -122,7 +122,7 @@ Here is the screenshot:
 * Provide query in Target Search Query field such that it is possible to search the entity in the Snowflake as the target system. In the target search query field, the user can provide a placeholder for the source system's field value between the '@'.
 * Go to [Search in Target Before Sync](../integrate/integration-configuration.md#search-in-target-before-sync) section on [Integration Configuration](../integrate/integration-configuration.md) page for details on how to configure Target LookUp.
 * Overall, the Target LookUp Query is similar to  [Criteria Configuration] (#Criteria Configuration), except that the value part contains a field name between '@' instead of static value.
-* Following is the sample snippet of how the database queries can be used as target entity lookup query in OpsHub Integration Manager:
+* Following is the sample snippet of how the database queries can be used as target entity lookup query in <code class="expression">space.vars.SITENAME</code>:
 **Target LookUp query sample**
 
 | **Field Name** | **Target lookup use case**                                                     | **Snippet**                        |
@@ -139,7 +139,7 @@ Here is the screenshot:
   * It is greater than or equal to the time specified in the "Start Polling Time" field on the advance integration configuration.
 * If a table's CREATED_BY or UPDATED_BY field value matches the username in the Snowflake system form, the corresponding records will be skipped during polling.
 * For any data record of a table more than one attachment with same file name is not supported. If two attachments with same file name for same record is found, the second attachment will override the first attachment file in local system.
-*   Ensure that you enter valid user credentials in the Snowflake system form in OpsHub Integration Manager. If incorrect credentials are used, Snowflake may temporarily lock the OpsHub dedicated user account. When this happens, OpsHub Integration Manager will be unable to perform any operations using that user. 
+*   Ensure that you enter valid user credentials in the Snowflake system form in <code class="expression">space.vars.SITENAME</code>. If incorrect credentials are used, Snowflake may temporarily lock the OpsHub dedicated user account. When this happens, <code class="expression">space.vars.SITENAME</code> will be unable to perform any operations using that user. 
     If the user gets locked, you can either wait until Snowflake automatically unlocks the account or ask the account admin to remove the lock immediately by running the following command:
 
     ```sql

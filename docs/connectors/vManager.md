@@ -4,26 +4,26 @@
 ## User privileges
 ### General authentication
 
-* Create a user in Verisium Manager dedicated to the OpsHub Integration Manager. This user shouldn't perform any other action from Verisium Manager's Desktop client or Web client. Please refer to [Add User](vManager.md#add-user) to determine how to create a user in the Verisium Manager.
-* This user shall have access to **Verisium Manager instance APIs** for the Verisium Manager project that is going to be used in the Integration Configuration. For that, the user needs to have specific access levels on that Verisium Manager project. To make sure that the user being used for the OpsHub Integration Manager is having required access levels, please refer to [Add User in Project with Permissions](vManager.md#add-user-in-project-with-permissions).
+* Create a user in Verisium Manager dedicated to the <code class="expression">space.vars.SITENAME</code>. This user shouldn't perform any other action from Verisium Manager's Desktop client or Web client. Please refer to [Add User](vManager.md#add-user) to determine how to create a user in the Verisium Manager.
+* This user shall have access to **Verisium Manager instance APIs** for the Verisium Manager project that is going to be used in the Integration Configuration. For that, the user needs to have specific access levels on that Verisium Manager project. To make sure that the user being used for the <code class="expression">space.vars.SITENAME</code> is having required access levels, please refer to [Add User in Project with Permissions](vManager.md#add-user-in-project-with-permissions).
 * If the input for **Override Projects** is not specified, the user shall have access to the project having Project Identifier **"vmgr"**. Refer to [How to determine the Project Identifier](vManager.md#how-to-determine-the-project-identifier) section to determine the project identifier.
 
-> **Note** For **Verisium Manager** version prior to 22.12, more than one user with the same "User Id" (having different letter cases) were allowed. Hence, the sync user which is going to be used in OpsHub Integration Manager must have a unique User Id, ignoring the letter case.
+> **Note** For **Verisium Manager** version prior to 22.12, more than one user with the same "User Id" (having different letter cases) were allowed. Hence, the sync user which is going to be used in <code class="expression">space.vars.SITENAME</code> must have a unique User Id, ignoring the letter case.
 
 **Project-based authentication**
 
 * Even if the project-based authentication is enabled at the project level, the user can still specify the user with general authentication as mentioned in the above section.
 * If user creation is not possible:
-  * Specify the username that does not exist in the Verisium Manager or this user shouldn't perform any other action from Verisium Manager's Desktop client or Web client. This user in Verisium Manager should be dedicated to OpsHub Integration Manager.
+  * Specify the username that does not exist in the Verisium Manager or this user shouldn't perform any other action from Verisium Manager's Desktop client or Web client. This user in Verisium Manager should be dedicated to <code class="expression">space.vars.SITENAME</code>.
   * Specify the password which will be the **Project Password** mentioned in Verisium Manager.
-  * If this authentication mode is enabled, then in OpsHub Integration Manager system configuration, user needs to specify the **Override Projects** input with the accessible project's identifiers in case project-based password is given in system form.
+  * If this authentication mode is enabled, then in <code class="expression">space.vars.SITENAME</code> system configuration, user needs to specify the **Override Projects** input with the accessible project's identifiers in case project-based password is given in system form.
 
 ## License prerequisites
 
 For Verisium Manager Version Prior to 24.03:
 
-* A Verisium Manager API (vAPI) client license is required per sync user for each configured Verisium Manager server in OpsHub Integration Manager.
-  * License is needed when the user begins configuration/synchronization for Verisium Manager endpoint in OpsHub Integration Manager because Verisium Manager API (vAPI) client gets launched automatically by OpsHub Integration Manager for Verisium Manager API communication.
+* A Verisium Manager API (vAPI) client license is required per sync user for each configured Verisium Manager server in <code class="expression">space.vars.SITENAME</code>.
+  * License is needed when the user begins configuration/synchronization for Verisium Manager endpoint in <code class="expression">space.vars.SITENAME</code> because Verisium Manager API (vAPI) client gets launched automatically by <code class="expression">space.vars.SITENAME</code> for Verisium Manager API communication.
 
 > **Note** For the grade attribute synchronization, if the script is configured in the Verisium Manager Desktop client, then the script will also take one Verisium Manager API (vAPI) client license while executing in Verisium Manager.
 
@@ -34,7 +34,7 @@ For Verisium Manager Version Prior to 24.03:
 
 # System Configuration
 
-Before you proceed with the integration, you must first configure Verisium Manager system onto OpsHub Integration Manager. 
+Before you proceed with the integration, you must first configure Verisium Manager system onto <code class="expression">space.vars.SITENAME</code>. 
 Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.
 
 Refer to the screenshot given below:
@@ -53,7 +53,7 @@ Refer to the screenshot given below:
 | **User Name**                                         | Provide Username of dedicated Verisium Manager user for API communication with Verisium Manager server. This user should have the required privileges to use the Verisium Manager API.                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | **User Password**                                     | Provide password for the user given in Verisium Manager User Name field.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | **Override SSL Certificate Hostname's Verification?** | The HTTPS certificate of Verisium Manager server often contains different Common Name (CN) and Hostname that create conflict in the Hostname's verification. In case of conflict, the Hostname's verification needs to be overridden. "Enable" this input in this case.                                                                                                                                                                                                                                                                                                                                                         |
-| **Override Projects**                                 | <p>This input should be specified to limit the projects in the following scenarios:<br>1) User has access to all the projects but wants to integrate limited projects through OpsHub Integration Manager<br>2) In case of project-based authentication is enabled where user has access to the limited projects.<br>If this input is not provided, 'vmgr' will be considered as the default project. The user mentioned in the <strong>User Name/User Password</strong> field should have access to that project. Refer to <a href="vManager.md#understanding-json-input">Understanding JSON input</a> section for details.</p> |
+| **Override Projects**                                 | <p>This input should be specified to limit the projects in the following scenarios:<br>1) User has access to all the projects but wants to integrate limited projects through <code class="expression">space.vars.SITENAME</code><br>2) In case of project-based authentication is enabled where user has access to the limited projects.<br>If this input is not provided, 'vmgr' will be considered as the default project. The user mentioned in the <strong>User Name/User Password</strong> field should have access to that project. Refer to <a href="vManager.md#understanding-json-input">Understanding JSON input</a> section for details.</p> |
 
 ***
 
@@ -61,7 +61,7 @@ Refer to the screenshot given below:
 
 * The project's identifiers can be provided at the time of system configuration in the field `Override Projects`  [in the form of JSON] in the below mentioned use cases:
   * Use Case 1: In Verisium Manager, users may have limited access to specific projects. During the integration process, they will only be able to access those designated projects. Therefore, users need to specify the identifiers of the accessible projects in the format provided below.
-  * Use Case 2: A user has access to all projects but wants to integrate only limited projects through OpsHub Integration Manager. In this case, the user can limit project access by providing the necessary input.
+  * Use Case 2: A user has access to all projects but wants to integrate only limited projects through <code class="expression">space.vars.SITENAME</code>. In this case, the user can limit project access by providing the necessary input.
 
 Below is the example of the JSON input:
 
@@ -97,8 +97,8 @@ Refer to the screenshot given below :
 ## Sub Types in Verisium Manager
 
 * Verisium Manager supports user defined Sub Types for "Section" and "Metrics Port" entity.
-* In OpsHub Integration Manager, these Sub types are supported as separate Entity Types for synchronization, so that user can use it in synchronization for better modelling with other end systems.
-* For example, Let's assume we have defined Sub Type "Functional Verification" for "Section", and "Assertion Verification" for "Metrics Port" in Verisium Manager. Hence, in OpsHub Integration Manager integration/mapping configuration, you will be able to create/update integrations/mapping for any of the below entity types:
+* In <code class="expression">space.vars.SITENAME</code>, these Sub types are supported as separate Entity Types for synchronization, so that user can use it in synchronization for better modelling with other end systems.
+* For example, Let's assume we have defined Sub Type "Functional Verification" for "Section", and "Assertion Verification" for "Metrics Port" in Verisium Manager. Hence, in <code class="expression">space.vars.SITENAME</code> integration/mapping configuration, you will be able to create/update integrations/mapping for any of the below entity types:
 
 <p align="center">
   <img src="../assets/VMGR_subtype_list.png"/>
@@ -140,7 +140,7 @@ It is mandatory to configure Child relationship in Relationship Configuration fo
 
   * All the **Link Types** are supported for entities in the same vPlan. Refer the above table for cross vPlan support of different **Link Types** between entities.
   * **N/A** means that the link is not supported by the Verisium Manager.
-  * **No** means that the link is supported by the Verisium Manager but not by the OpsHub Integration Manager due to API limitation.
+  * **No** means that the link is supported by the Verisium Manager but not by the <code class="expression">space.vars.SITENAME</code> due to API limitation.
 
 ## Rank
 
@@ -150,7 +150,7 @@ It is mandatory to configure Child relationship in Relationship Configuration fo
 ## Mapping for Soft Delete Configuration
 
 * When Verisium Manager is the target system, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md).
-* After the Soft Delete operation is performed by OpsHub Integration Manager in Verisium Manager, the entity will be deleted in the Verisium Manager, and it can be found in the "Deleted Entities" of the corresponding project, where it existed earlier.
+* After the Soft Delete operation is performed by <code class="expression">space.vars.SITENAME</code> in Verisium Manager, the entity will be deleted in the Verisium Manager, and it can be found in the "Deleted Entities" of the corresponding project, where it existed earlier.
 * To only enable the logical delete operation in the target, "OH Soft Delete" field shall be mapped with the default value "No" in the [Delete Mode](../integrate/mapping-configuration.md#delete-mode) mapping.
 
 # Integration Configuration
@@ -168,8 +168,8 @@ Refer to the screenshot given below :
 
 ## Project Specific Entity Information
 
-In Verisium Manager, vPlan can be created under the Verisium Manager Project. Hence, Verisium Manager Project is treated as a Parent-project whereas vPlan is treated as a child-project. The vPlan is listed as a child-project under the corresponding Parent-project (Verisium Manager Project) in the OpsHub Integration Manager configuration. 
- [Section [(Sub Type)]]/#Section.5B.28Sub _Type.29.5D / [Metrics Port [(Sub Type) ]](vManager.md#Metrics_Port.5B.28Sub_Type.29.5D) entity can be created only under the vPlan. As a result, the [Section [(Sub Type) ]](vManager.md#Section.5B.28Sub_Type.29.5D)/[Metrics Port [(Sub Type) ]](vManager.md#Metrics_Port.5B.28Sub_Type.29.5D) can be configured in OpsHub Integration Manager, if child-project(vPlan) is selected in Mapping Configuration or Integration Configuration section.
+In Verisium Manager, vPlan can be created under the Verisium Manager Project. Hence, Verisium Manager Project is treated as a Parent-project whereas vPlan is treated as a child-project. The vPlan is listed as a child-project under the corresponding Parent-project (Verisium Manager Project) in the <code class="expression">space.vars.SITENAME</code> configuration. 
+ [Section [(Sub Type)]]/#Section.5B.28Sub _Type.29.5D / [Metrics Port [(Sub Type) ]](vManager.md#Metrics_Port.5B.28Sub_Type.29.5D) entity can be created only under the vPlan. As a result, the [Section [(Sub Type) ]](vManager.md#Section.5B.28Sub_Type.29.5D)/[Metrics Port [(Sub Type) ]](vManager.md#Metrics_Port.5B.28Sub_Type.29.5D) can be configured in <code class="expression">space.vars.SITENAME</code>, if child-project(vPlan) is selected in Mapping Configuration or Integration Configuration section.
 
 ## Criteria Configuration
 
@@ -304,8 +304,8 @@ Please refer to "Verisium Manager User Guide" for further details on the differe
 Below are the commonly known limitations for the [Section [(Sub Type) ]](vManager.md#section5b28sub_type295d)/[Metrics Port [(Sub Type) ]](vManager.md#metrics_port5b28sub_type295d)/Reference entity. Additionally, there exists few specific limitations for [Section [(Sub Type) ] entity](vManager.md#section5b28sub_type295d-entity), [Metrics Port [(Sub Type) ] entity](vManager.md#metrics_port5b28sub_type295d-entity) and [Reference entity](vManager.md#reference-entity).
 
 * There is a configuration in the Advanced Setting of Integration Configuration where the "Remote Entity Link" can be configured. However, the [Section [(Sub Type) ]](vManager.md#section5b28sub_type295d)/[Metrics Port [(Sub Type) ]](vManager.md#metrics_port5b28sub_type295d)/Reference entity is supported in the Verisium Manager Desktop Client, and so the "Remote Entity Link" is not being supported.
-* Integration is supported only for vPlans in the database of the Verisium Manager. The synchronization of the vPlan available in the file system is not supported by OpsHub Integration Manager. However, the file system vPlans can be imported to the database and used in the integration.
-* For any [Section [(Sub Type) ]](vManager.md#section5b28sub_type295d) entity, if its "vPlan Full Path" field contains `;/ ` (for the Verisium Manager version prior to 23.09) or `"` or ends with `.` (for any supported Verisium Manager version), then that [Section [(Sub Type) ]](vManager.md#section5b28sub_type295d) entity cannot be set as "Parent" entity for any other [Section [(Sub Type) ]](vManager.md#section5b28sub_type295d)/[Metrics Port [(Sub Type) ]](vManager.md#metrics_port5b28sub_type295d)/Reference entity. Also, "Reference to" link cannot be created from that entity to any other entity. Additionally, other linked [Section [(Sub Type) ]](vManager.md#section5b28sub_type295d)/[Metrics Port [(Sub Type) ]](vManager.md#metrics_port5b28sub_type295d)/Reference entity with this entity cannot be fetched due to API limitation. Hence, when Verisium Manager is the source system in the integration configuration in OpsHub Integration Manager, then fetching relationships for such entities will be skipped with the warning in the OpsHub Integration Manager logs.
+* Integration is supported only for vPlans in the database of the Verisium Manager. The synchronization of the vPlan available in the file system is not supported by <code class="expression">space.vars.SITENAME</code>. However, the file system vPlans can be imported to the database and used in the integration.
+* For any [Section [(Sub Type) ]](vManager.md#section5b28sub_type295d) entity, if its "vPlan Full Path" field contains `;/ ` (for the Verisium Manager version prior to 23.09) or `"` or ends with `.` (for any supported Verisium Manager version), then that [Section [(Sub Type) ]](vManager.md#section5b28sub_type295d) entity cannot be set as "Parent" entity for any other [Section [(Sub Type) ]](vManager.md#section5b28sub_type295d)/[Metrics Port [(Sub Type) ]](vManager.md#metrics_port5b28sub_type295d)/Reference entity. Also, "Reference to" link cannot be created from that entity to any other entity. Additionally, other linked [Section [(Sub Type) ]](vManager.md#section5b28sub_type295d)/[Metrics Port [(Sub Type) ]](vManager.md#metrics_port5b28sub_type295d)/Reference entity with this entity cannot be fetched due to API limitation. Hence, when Verisium Manager is the source system in the integration configuration in <code class="expression">space.vars.SITENAME</code>, then fetching relationships for such entities will be skipped with the warning in the <code class="expression">space.vars.SITENAME</code> logs.
 
 > **Note:** "vPlan Full Path" may contain special characters ;"/  because these characters are present in the [Section [(Sub Type) ]](vManager.md#section5b28sub_type295d) entity name and/or Plan entity name. Hence, having such characters in vPlan name or [Section [(Sub Type) ]](vManager.md#section5b28sub_type295d) name should be avoided for the vPlan is being configured for synchronization.
 
@@ -313,7 +313,7 @@ Below are the commonly known limitations for the [Section [(Sub Type) ]](vManage
 * If valid values for the Enum/Multi-Enum attribute/field is updated from the "Verisium Manager Desktop client" for any [Section [(Sub Type) ]](vManager.md#section5b28sub_type295d)/[Metrics Port [(Sub Type) ]](vManager.md#metrics_port5b28sub_type295d)/Reference entity, the update in the values of such attributes/fields doesn't get reflected in API response immediately, and so the updated values of the attributes/fields will not be reflected in the value mapping of such attributes/fields in the Mapping Configuration immediately.
 * Synchronization of the Grade attributes/fields is not supported.
 
-> **Note:** To synchronize Grade attributes/fields in OpsHub Integration Manager, refer to [Verisium Manager Scripts](https://vmanager/VManagerScripts.zip)
+> **Note:** To synchronize Grade attributes/fields in <code class="expression">space.vars.SITENAME</code>, refer to [Verisium Manager Scripts](https://vmanager/VManagerScripts.zip)
 
 * Due to API limitation, the "Reference to" relationship between the entities of the different vPlan is not supported for the Verisium Manager version prior to 21.01.
 * The "Reference by" relationship between the entities of the different vPlan is not supported.
@@ -338,7 +338,7 @@ Below are the specific limitations for the [Section [(Sub Type) ]](vManager.md#S
 * When Verisium Manager is the target system in the integration:_
 
   * "Parameter condition" can be synchronized only if the "Parameters" are mapped and synchronized since in the Verisium Manager, the "Parameter condition" field is dependent upon the "Parameters"
-  * When "Parameters" field is mapped in the Integration Configuration and due to some abnormal situation if OpsHub Integration Manager server fails after adding the "Parameters" to the Verisium Manager but before reflecting back this change to OpsHub Integration Manager, then there is a chance of incorrect conflict detection. Hence, it is recommended to disable the conflict for the "Parameters" field
+  * When "Parameters" field is mapped in the Integration Configuration and due to some abnormal situation if <code class="expression">space.vars.SITENAME</code> server fails after adding the "Parameters" to the Verisium Manager but before reflecting back this change to <code class="expression">space.vars.SITENAME</code>, then there is a chance of incorrect conflict detection. Hence, it is recommended to disable the conflict for the "Parameters" field
   * For the Verisium Manager version prior to 21.02
     * Due to API limitation, at any point of time, the "Parameter condition" can be set for only a single Parameter, during which all other Parameters' condition will be set to default values. At the time of synchronization of the "Parameter condition", only one Parameter's condition will be set in the Verisium Manager based on the current value of mapped field of source system with the "Parameter condition". Meanwhile, all other Parameters' condition, will be set to the default values
       * If in the Verisium Manager there are two Parameters i.e. 
@@ -357,7 +357,7 @@ Below are the specific limitations for [Metrics Port [(Sub Type) ]](vManager.md#
 * Synchronization of "Parameters" and "Logical Instances" are not supported
 
 - When Verisium Manager is the target system in the integration:_
-  * Write operation on "Parameter condition" and "Bin Filter" is not supported. So, these attributes/fields are treated as read-only fields in the Mapping Configuration of OpsHub Integration Manager
+  * Write operation on "Parameter condition" and "Bin Filter" is not supported. So, these attributes/fields are treated as read-only fields in the Mapping Configuration of <code class="expression">space.vars.SITENAME</code>
   * If "Metrics Port Kind" attribute/field is not mapped or no value is given at the time of [Metrics Port [(Sub Type) ]](vManager.md#Metrics_Port.5B.28Sub_Type.29.5D) entity creation, then [Metrics Port [(Sub Type) ]](vManager.md#Metrics_Port.5B.28Sub_Type.29.5D) entity will be created with the value **"Coverage"** for "Metrics Port Kind" attribute/field. Therefore, such a [Metrics Port [(Sub Type) ]](vManager.md#Metrics_Port.5B.28Sub_Type.29.5D) will be "Coverage" port kind in Verisium Manager.
 
 > **Note**If the conflict is enabled for this attribute/field then, due to this behavior, there is a chance of incorrect conflict detection. Hence, it is recommended to provide  [default value mapping] (Mapping Configuration#Default Mapping) for the "Metrics Port Kind" attribute/field.
@@ -367,10 +367,10 @@ Below are the specific limitations for [Metrics Port [(Sub Type) ]](vManager.md#
 Below are the specific limitations for **Reference** entity. Additionally, there exist a few common limitations for [Section [(Sub Type) ]/Metrics Port [(Sub Type) ]/Reference](vManager.md#common-limitations) entity.
 
 * **When Verisium Manager is the target system in the integration:**
-  * Write operation on `Parameter setting` and `Reference to` are not supported. So, these fields are treated as **read-only** in the Mapping Configuration of OpsHub Integration Manager.
+  * Write operation on `Parameter setting` and `Reference to` are not supported. So, these fields are treated as **read-only** in the Mapping Configuration of <code class="expression">space.vars.SITENAME</code>.
   * Write operation on `Creator` is not supported by Verisium Manager version 23.03.
-    * However, the `Creator` field is loaded as a writable field in OpsHub Integration Manager's mapping configuration due to API limitation. **Please avoid mapping this field when Verisium Manager is configured as the target system.**
-* If `Reference To/Reference By` relationship is mapped in Relationship Configuration, then delete operation of Reference entity is supported. The Reference entity must **not** be created by a user dedicated to OpsHub Integration Manager.
+    * However, the `Creator` field is loaded as a writable field in <code class="expression">space.vars.SITENAME</code>'s mapping configuration due to API limitation. **Please avoid mapping this field when Verisium Manager is configured as the target system.**
+* If `Reference To/Reference By` relationship is mapped in Relationship Configuration, then delete operation of Reference entity is supported. The Reference entity must **not** be created by a user dedicated to <code class="expression">space.vars.SITENAME</code>.
 * Due to API limitation, parent relationship from Reference to Referenced Section/Metrics Port/Reference is not supported. Only [Section [(Sub Type) ]](vManager.md#section5b28sub_type29) can be added as parent of a Reference entity.
 * Synchronization of `Parameters` and `Logical Instances` is not supported.
 

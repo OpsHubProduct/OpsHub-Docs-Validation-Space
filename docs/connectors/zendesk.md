@@ -2,7 +2,7 @@
 
 ## User Privileges
 
-* Create one user of Zendesk System, dedicated to OpsHub Integration Manager. User should not do any operations from System's User-Interface.
+* Create one user of Zendesk System, dedicated to <code class="expression">space.vars.SITENAME</code>. User should not do any operations from System's User-Interface.
 * User should have access to all the organizations that needs to be integrated. If user is not associated with organizations to be integrated, the behavior would be as described in [Organization Association to Ticket](#organization-association-to-ticket).
 
 # System Configuration
@@ -35,7 +35,7 @@ Refer to the following screenshot with Authentication Mode as API Token:
 | **OAuth Access Token**    | OAuth Access Token mode selected                          | Provide Zendesk OAuth Access Token. Refer [Generating OAuth Access Token Through UI](https://support.zendesk.com/hc/en-us/articles/4408845965210-Using-OAuth-authentication-with-your-application) or [Generating OAuth Access Token through API](https://developer.zendesk.com/documentation/ticketing/working-with-oauth/creating-and-using-oauth-tokens-with-the-api/) to generate **OAuth Access Token** in Zendesk server. |
 | **Zendesk Link Field Name** | Always                                                  | Provide the link field name that denotes the Parent - Child link. Refer to [Determine the Parent - Child Link field name](#determine-the-parent---child-link-field-name) section                                 |
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 # Mapping Configuration
 
@@ -51,8 +51,8 @@ Click [Integration Configuration](../integrate/integration-configuration.md) to 
 
 * If a ticket is merged into another ticket, then this merged ticket will contain all public and private attachments from the original ticket into separate comments. If the original ticket contains both public and private comments, then either one of them might not synchronize unless the merged ticket is updated. This is due to the update time of the merged ticket being less than the creation time of the merged comments. Once the merged ticket is updated then all comments will synchronize.
 * Zendesk has some validation for naming the tags mentioned in the Zendesk document. Zendesk will remove most of the special characters from the names of the tags. In that case, if the Zendesk system is the target system, it may result in conflict.
-* OpsHub Integration Manager can only sync updates related to parent-child links in one ticket at a time due to API limitations. It is because the API does not reflect such a linkage in the linked ticket. As a result, the link will only be visible in one of the tickets on which the linking operation is performed.
-* Opposite link types, **Linked problem** and **Linked incidents** are introduced in the mapping to denote the link between problem type and incident type tickets in OpsHub Integration Manager. If only, **Linked incidents** is mapped, an update of the problem type ticket must be performed to sync the updates related to these links.
+* <code class="expression">space.vars.SITENAME</code> can only sync updates related to parent-child links in one ticket at a time due to API limitations. It is because the API does not reflect such a linkage in the linked ticket. As a result, the link will only be visible in one of the tickets on which the linking operation is performed.
+* Opposite link types, **Linked problem** and **Linked incidents** are introduced in the mapping to denote the link between problem type and incident type tickets in <code class="expression">space.vars.SITENAME</code>. If only, **Linked incidents** is mapped, an update of the problem type ticket must be performed to sync the updates related to these links.
 
 # Criteria Configuration
 
@@ -62,7 +62,7 @@ If you want to specify conditions for synchronizing an entity between Zendesk an
 
 Go to Criteria Configuration section on [Integration Configuration](../integrate/integration-configuration.md) page to learn in detail about Criteria Configuration.
 
-However, you don't need to write any criteria query in OpsHub Integration Manager. Instead, you need to give the view id for the same.  
+However, you don't need to write any criteria query in <code class="expression">space.vars.SITENAME</code>. Instead, you need to give the view id for the same.  
 The steps given below explain how to make view in Zendesk for enabling criteria:
 
 **Make view in Zendesk for enabling criteria**
@@ -85,7 +85,7 @@ The steps given below explain how to make view in Zendesk for enabling criteria:
 </p>
 
 * Give appropriate access to integration user and create view  
-  - Navigate to 'Available for' section and make sure that view is accessible to integration user. We will recommend to select 'Me only' option, which will ensure that no other user can accidentally modify it. If you are selecting 'Me only' option then ensure that you have currently logged on with integration user which is used for Zendesk in OpsHub Integration Manager.  
+  - Navigate to 'Available for' section and make sure that view is accessible to integration user. We will recommend to select 'Me only' option, which will ensure that no other user can accidentally modify it. If you are selecting 'Me only' option then ensure that you have currently logged on with integration user which is used for Zendesk in <code class="expression">space.vars.SITENAME</code>.  
   - Finally click on 'Create View' to save the view.  
 
 <p align="center">
@@ -110,7 +110,7 @@ The steps given below explain how to make view in Zendesk for enabling criteria:
   <img src="../assets/Zendesk_Criteria_Config_6.png"  width="1200"/>
 </p>
 
-* Use this view id as criteria query for Zendesk system in OpsHub Integration Manager
+* Use this view id as criteria query for Zendesk system in <code class="expression">space.vars.SITENAME</code>
 
 ## Sample Views
 
@@ -157,7 +157,7 @@ The steps given below explain how to make view in Zendesk for enabling criteria:
 | Only Organization field is mapped | If the mapped organization is accessible to integration user, ticket will be associated with that organization, otherwise failure will be generated. |
 | Both Requester and Organization fields are mapped | If the mapped organization is accessible to requester, ticket will be associated with that organization, otherwise failure will be generated. |
 
-The above behavior with OpsHub Integration Manager sync reflects the Zendesk API behavior.
+The above behavior with <code class="expression">space.vars.SITENAME</code> sync reflects the Zendesk API behavior.
 
 ## Determine the Parent - Child Link field name
 

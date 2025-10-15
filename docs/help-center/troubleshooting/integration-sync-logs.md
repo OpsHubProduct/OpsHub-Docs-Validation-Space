@@ -28,11 +28,11 @@ To view the logs for any integration, navigate to integration and click the **Sh
 
 - **Class/Package Name:** The name of the package or class for which logs need to be monitored. To monitor the logs within the 'com.opshub', package 'com.opshub' should be entered here.
 
-- **Log Level:** Represents the logging level which determines the amount of information recorded in the log files. By default, only Error logged [Level 2:Error] in OpsHub Integration Manager are logged in logs. Other available levels are as below. The coverage of information increases in ascending order from logging level 1 to 6.
+- **Log Level:** Represents the logging level which determines the amount of information recorded in the log files. By default, only Error logged [Level 2:Error] in <code class="expression">space.vars.SITENAME</code> are logged in logs. Other available levels are as below. The coverage of information increases in ascending order from logging level 1 to 6.
   - 1-FATAL: Log minimum amount of data, not sufficient for tracking integrations.
-  - 2-ERROR: Log errors of OpsHub Integration Manager only.
-  - 3-WARN: Log errors and warning of OpsHub Integration Manager only.
-  - 4-INFO: Log info, errors, and warning of OpsHub Integration Manager only.
+  - 2-ERROR: Log errors of <code class="expression">space.vars.SITENAME</code> only.
+  - 3-WARN: Log errors and warning of <code class="expression">space.vars.SITENAME</code> only.
+  - 4-INFO: Log info, errors, and warning of <code class="expression">space.vars.SITENAME</code> only.
   - 5-Debug: Log a considerable amount of data for debugging purpose.
   - 6-TRACE: Log a detailed maximum amount of data. It is useful for tracking integration in depth. However, it also increases the log sizes and creates multiple log files due amount of information logged.
 

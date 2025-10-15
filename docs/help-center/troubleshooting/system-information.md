@@ -64,14 +64,14 @@ It will display the following window, with two sections: **Application Informati
 * **Used Memory:** Current memory usage
 
 **Directory Configurations**
-* **OpsHub Integration Manager Folder Size:** Application folder size
-* **Remaining Space on Drive:** Available free space on drive where OpsHub Integration Manager is installed
+* **<code class="expression">space.vars.SITENAME</code> Folder Size:** Application folder size
+* **Remaining Space on Drive:** Available free space on drive where <code class="expression">space.vars.SITENAME</code> is installed
 * **Logs Folder Size:** Indicates log directory size
-* **Total Space on Drive:** Total drive capacity where OpsHub Integration Manager is installed
+* **Total Space on Drive:** Total drive capacity where <code class="expression">space.vars.SITENAME</code> is installed
 
 **Version Details**
-* **Current Version:** Installed OpsHub Integration Manager version
-* **Initial Version:** First installed version of OpsHub Integration Manager
+* **Current Version:** Installed <code class="expression">space.vars.SITENAME</code> version
+* **Initial Version:** First installed version of <code class="expression">space.vars.SITENAME</code>
 
 ## Machine Information
 * **Operating System:** OS and its version

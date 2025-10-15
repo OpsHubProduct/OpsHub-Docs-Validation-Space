@@ -1,12 +1,12 @@
 # Prerequisites
 
 ## User Privileges
-* Create one Redmine user dedicated to OpsHub Integration Manager. User should not do any operations from system's user interface. 
+* Create one Redmine user dedicated to <code class="expression">space.vars.SITENAME</code>. User should not do any operations from system's user interface. 
 * The user created for synchronization should have access to the project that will be configured for synchronization. This user should have both administrator rights as a user and reporter rights at the project level. For detailed information on how to add a user, refer to the [Add User](#add-user) section. For further details on how to assign users to the projects, refer to the [Assigning User to Projects](#assigning-user-to-projects) section.
 * Enable REST API service for Redmine, if it is not already enabled. For further details, refer to the [Redmine Configuration](#redmine-configuration) section.
 
 ## End System Storage Criteria
-* To configure the End System Storage Criteria with the Custom Field in OpsHub Integration Manager, the  "Used as a filter" option needs to be enabled for this selected Custom Field. For more details, refer to [Custom Field Configuration](#custom-field-configuration).
+* To configure the End System Storage Criteria with the Custom Field in <code class="expression">space.vars.SITENAME</code>, the  "Used as a filter" option needs to be enabled for this selected Custom Field. For more details, refer to [Custom Field Configuration](#custom-field-configuration).
 
 ## Redmine Database Information
 Given below are the configuration parameters for the Redmine database to create an integration configuration. 
@@ -30,10 +30,10 @@ Before you continue to the integration, you must first configure Redmine. Click 
 | **Version**                | Always                                       | Provide version like 3.1.2, 3.4.5. To know your version, refer to [How to find Redmine's version](#find-version) section. |
 | **Redmine Database Connection** | Always                                | Select an already created Database connection or if the Database connection is not configured for Redmine, then click the + sign and follow steps given on the [Database Configuration](database-configuration.md) page to create database connection. |
 | **Redmine URL**            | Always                                       | Format: [http/https]://[RedmineServerHost]/[RedmineServerPort] |
-| **Redmine User Name**      | Always                                       | Provide the username of the Redmine user created for OpsHub Integration Manager. Please refer to  [User Privileges](#user-privileges) for more details. |
+| **Redmine User Name**      | Always                                       | Provide the username of the Redmine user created for <code class="expression">space.vars.SITENAME</code>. Please refer to  [User Privileges](#user-privileges) for more details. |
 | **Redmine User Password**  | Always                                       | Provide Redmine Users password |
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code> Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 # Mapping Configuration
 Map the fields between Redmine and the other system to be integrated to ensure that the data between both the systems synchronizes correctly. Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn the step-by-step process to configure mapping between the systems.
@@ -46,8 +46,8 @@ Refer [Custom Field](#custom-field-configuration) section in appendix to learn h
 # Criteria Configuration
 * If you want to specify conditions for synchronizing an entity between Redmine and the other system to be integrated, you can use the Criteria Configuration feature.  
 * Go to Criteria Configuration section on [Integration Configuration](../integrate/integration-configuration.md) page for further details.  
-* To configure criteria in Redmine, integration needs to be created with Redmine as the source system. OpsHub Integration Manager supports criteria on native queries which are supported by Redmine Rest API. The format of criteria query is [Internal Name] = [Value of Id for desired property]
-* Some of the properties on which OpsHub Integration Manager support queries are as follows:
+* To configure criteria in Redmine, integration needs to be created with Redmine as the source system. <code class="expression">space.vars.SITENAME</code> supports criteria on native queries which are supported by Redmine Rest API. The format of criteria query is [Internal Name] = [Value of Id for desired property]
+* Some of the properties on which <code class="expression">space.vars.SITENAME</code> support queries are as follows:
   * Tracker
   * Status
   * Assigned To
@@ -104,7 +104,7 @@ The internal names of the properties are listed in the table below, and can be u
 * Comments Synchronization:
   * On enabling comments synchronization, Notes in the Redmine will be synchronized as comments at the other end point.
 * Issues Synchronization:
-  * Currently OpsHub Integration Manager supports synchronization of the trackers under the issues type.
+  * Currently <code class="expression">space.vars.SITENAME</code> supports synchronization of the trackers under the issues type.
 * SubTask Synchronization:
   * To synchronize subtasks, relationship should be configured in mapping configuration with link type as ParentChild.
 * Version type Field:
@@ -123,8 +123,8 @@ The internal names of the properties are listed in the table below, and can be u
   * The inline image may not synchronize properly in the below mentioned use case:
     * Referencing of the inline images with attachment is case insensitive in Redmine. For example, if the attachment name is Capture.PNG and the attachment refered as inline image is written as !Capture.png!, Redmine will still refer to 'Capture.PNG' attachment. The other end point system may not refer to the attachment if their is any mismatch in case of inline image and attachment.
 * Issues' Synchronization:
-  * OpsHub Integration Manager does not provide support for field type coming from plugin(s) as of now.
-* At least one issue of any type must be created in the Redmine instance before performing mapping configuration in the OpsHub Integration Manager.
+  * <code class="expression">space.vars.SITENAME</code> does not provide support for field type coming from plugin(s) as of now.
+* At least one issue of any type must be created in the Redmine instance before performing mapping configuration in the <code class="expression">space.vars.SITENAME</code>.
 
 # Appendix
 
@@ -151,7 +151,7 @@ The internal names of the properties are listed in the table below, and can be u
 <p align="center"><img src="../assets/Redmine_Image_3.png" width="900"></p>
 
 ## Custom Field Configuration
-OpsHub Integration Manager needs a few special fields to be defined on the entity that is being synchronized. These must be set up so that OpsHub Integration Manager can track the integration status of each item.
+<code class="expression">space.vars.SITENAME</code> needs a few special fields to be defined on the entity that is being synchronized. These must be set up so that <code class="expression">space.vars.SITENAME</code> can track the integration status of each item.
 
 <p align="center"><img src="../assets/Redmine_Image_4.png" width="400"></p>
 
