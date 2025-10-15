@@ -16,15 +16,15 @@ The first screen when you launch the application will be this:
 | Windows                                                                                                                                                                                                                                                                                                                                                                                                                           | Linux                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | <p>- Double click the executable .exe file given in the application folder (It is advisable to run .exe file by right-clicking Run as administrator where * is replaced with the application version).<br>- If one instance of this release is already installed, then the user will be notified.<br>- Click yes to continue with the installation. It will then display the uninstallation key for the current installation.</p> | <p>Before Installation<br>- Extract the zip file. Make sure user who will run installer owns the files and has full access to extracted files.<br>- Create empty directory with full access (it should not be inside installation directory) and export its path to OPSHUB_TEMP_DATA variable as shown below:<br>    export OPSHUB_TEMP_DATA=/home/setup/temp<br>- If you are doing a silent installation, make sure you have provided the same path for OPSHUB_TEMP_DATA as provided during silent registration.<br>- If Linux has NFS (Network File System) based file system, add the following line in OIM user's .bashrc file:<br>    In /home/{OIM user}/.bashrc, add the line:<br>    export JAVA_OPTS="$JAVA_OPTS -XX:+StartAttachListener"<br>- Without the Java option, the server startup will fail. Error details are available here.<br>- See minimal access required to install <code class="expression">space.vars.SITENAME</code> here if you do not have root access.<br><br>To Run sh File<br>- Open terminal and go to the folder containing the install.sh file.<br>- Run: sudo -E sh install.sh<br>- Linux UI access is required as installation needs user input via UI. Installation won't complete via remote terminal (e.g. PuTTY).<br><br>To Run sh File from External File (Silent Installation)<br>To install <code class="expression">space.vars.SITENAME</code> through terminal (e.g. PuTTY):<br>- Complete user registration as described here.<br>- Download and modify OpsHubAutoInstall.xml as needed by clicking Here.<br>- Transfer modified file to the target instance.<br>- Set environment variable OPSHUB_AUTO_INSTALL pointing to the XML file:<br>    Example: export OPSHUB_AUTO_INSTALL=/home/Downloads/OpsHubAutoInstall.xml<br>- Run the installer: sudo -E sh install.sh<br>- See Possible Error section for troubleshooting.</p> |
 
-#### Recommended Installation Path for OpsHub Integration Manager Installer for Linux
+#### Recommended Installation Path for <code class="expression">space.vars.SITENAME</code> Installer for Linux
 
-* It is recommended to install or perform migration of the OpsHub Integration Manager in the /opt folder or /user/local folder.
-  * For OpsHub Integration Manager migration, if the OpsHub Integration Manager is not installed at the above places, then follow the steps mentioned [here](../faqs/general/how-to-move-application-server-from-one-machine-to-other.md).
-  * Reason: SELinux prevents Linux users from running a OpsHub Integration Manager service in the user's home directory. Hence, the user needs to avoid installing OpsHub Integration Manager in the home directory.
+* It is recommended to install or perform migration of the <code class="expression">space.vars.SITENAME</code> in the /opt folder or /user/local folder.
+  * For <code class="expression">space.vars.SITENAME</code> migration, if the <code class="expression">space.vars.SITENAME</code> is not installed at the above places, then follow the steps mentioned [here](../faqs/general/how-to-move-application-server-from-one-machine-to-other.md).
+  * Reason: SELinux prevents Linux users from running a <code class="expression">space.vars.SITENAME</code> service in the user's home directory. Hence, the user needs to avoid installing <code class="expression">space.vars.SITENAME</code> in the home directory.
 
 #### Minimal access required to run linux installer using external file
 
-* OpsHub Integration Manager Installation Directory should be owned by user who run installer/migrator and has following permissions.
+* <code class="expression">space.vars.SITENAME</code> Installation Directory should be owned by user who run installer/migrator and has following permissions.
 
 Here are the required permissions:
 
@@ -38,9 +38,9 @@ Here are the required permissions:
 | r-x            | /usr/lib64/\*                                                                          |
 | --x            | /usr/share (if user edits file using nano)                                             |
 | r-x            | /usr/share/\*                                                                          |
-| rw-            | /etc/systemd/system (if user needs OpsHub Integration Manager as a service for Ubuntu) |
+| rw-            | /etc/systemd/system (if user needs <code class="expression">space.vars.SITENAME</code> as a service for Ubuntu) |
 
-* Note: For HSQLDB, root access is required when user needs to install/migrate OpsHub Integration Manager.
+* Note: For HSQLDB, root access is required when user needs to install/migrate <code class="expression">space.vars.SITENAME</code>.
 
 #### Possible error during Silent Installation/Upgradation
 
@@ -69,7 +69,7 @@ at com.izforge.izpack.installer.Installer.main(Unknown Source)
 Make sure you have performed the following steps correctly:
 
 * You have registered as described [Registration – Silent Registration for Linux](registration.md#silent-registration-for-linux) before Installation/Upgradation.
-* You have registered using the same path for which you install/upgrade OpsHub Integration Manager.
+* You have registered using the same path for which you install/upgrade <code class="expression">space.vars.SITENAME</code>.
 * You have used the correct verification code.
   * Verification Code is unique for each machine and installation path. The code generated on a different machine and for different path won't work.
 * You have export same value for OPSHUB\_TEMP\_DATA during Registration and Installation/Upgradation.
@@ -88,7 +88,7 @@ License Information window has the details of the trial license and the contact 
 
 #### Possible exceptions
 
-While uploading the license from license management tab, OpsHub Integration Manager throws exceptions as below:
+While uploading the license from license management tab, <code class="expression">space.vars.SITENAME</code> throws exceptions as below:
 
 * **Unable to install license** `com.opshub.license.exception.LicenseException`: Failed to get license content because of If you are accessing OpsHub from different machine then change localhost to ip address of the machine where OpsHub installed.
 * **The filename, directory name, or volume label syntax is incorrect**
@@ -101,7 +101,7 @@ at java.io.FileInputStream.open(Native Method) at java.io.FileInputStream.(FileI
 
 ## Installation
 
-Here is a video on how to install OpsHub Integration Manager on the Windows machine:
+Here is a video on how to install <code class="expression">space.vars.SITENAME</code> on the Windows machine:
 
 {% embed url="https://youtu.be/Is5sDKV01P0" %}
 
@@ -169,7 +169,7 @@ The image below shows the overall progress of installation.
 
 <div align="center"><img src="../assets/Installer_Image_8b.png" alt="Installer Image 8b"></div>
 
-* Setup Shortcuts: It will add the application to the Windows program list if the operating system is Windows and will add the application to the Linux program list if the operating system is Linux. It will also create the OpsHub Integration Manager launcher.
+* Setup Shortcuts: It will add the application to the Windows program list if the operating system is Windows and will add the application to the Linux program list if the operating system is Linux. It will also create the <code class="expression">space.vars.SITENAME</code> launcher.
 
 <div align="center"><img src="../assets/Installer_Image_9Seta.png" alt="Installer Image 9Seta"></div>
 
@@ -193,7 +193,7 @@ It is advisable to enter the server-host name in the given field, it might creat
 * Enter the current Country Code. It should be alphabetic code. For e.g., "IN" for India, "US" for America, "AU" for Australia, etc.
 * Select the number of days till when the certificate should be valid.
 
-> **Note** : Please note with the above steps OpsHub Integration Manager will be installed with SSL configuration. But the corresponding SSL certificate imported will be self-signed. In case you want to install certificate signed by your CA authority then follow the steps given in this section [How To Import a Certificate](how-to-import-a-certificate.md) in appendix.
+> **Note** : Please note with the above steps <code class="expression">space.vars.SITENAME</code> will be installed with SSL configuration. But the corresponding SSL certificate imported will be self-signed. In case you want to install certificate signed by your CA authority then follow the steps given in this section [How To Import a Certificate](how-to-import-a-certificate.md) in appendix.
 
 ## Manual creation of databases
 

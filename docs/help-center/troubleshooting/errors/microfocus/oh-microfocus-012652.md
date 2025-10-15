@@ -12,8 +12,8 @@ OH-Micro Focus ALM/QC-012652 : Invalid Field name used in the mapping therefore 
 ## Cause
 
 * User might encounter this error in the following scenarios:
-  * When a custom field that is used in mapping is available on Micro Focus ALM/QC UI as well as in OpsHub Integration Manager mapping configuration, but it is not associated with the Requirement Type entity that is used in integration.\
-    &#xNAN;_**For example**_, the custom field `user-xx` is available on Micro Focus ALM/QC UI as well as in OpsHub Integration Manager mapping configuration, but it is not associated with Requirement type entity that is used in the integration. Also, the user has used the custom field `user-xx` in the mapping between Requirement of Micro Focus ALM/QC and any other system.
+  * When a custom field that is used in mapping is available on Micro Focus ALM/QC UI as well as in <code class="expression">space.vars.SITENAME</code> mapping configuration, but it is not associated with the Requirement Type entity that is used in integration.\
+    &#xNAN;_**For example**_, the custom field `user-xx` is available on Micro Focus ALM/QC UI as well as in <code class="expression">space.vars.SITENAME</code> mapping configuration, but it is not associated with Requirement type entity that is used in the integration. Also, the user has used the custom field `user-xx` in the mapping between Requirement of Micro Focus ALM/QC and any other system.
   * When in an integration configured with criteria, the internal name for the field mentioned in the criteria query is incorrect.
 
 ## Solution

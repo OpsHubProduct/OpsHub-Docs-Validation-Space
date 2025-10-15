@@ -1,10 +1,10 @@
 # Registration Mode
 
-When you have provided installation directory during installing/upgrading OpsHub Integration Manager, you will be redirected to the Registration screen. In the Registration screen, you need to register yourself before installation/upgradation:
+When you have provided installation directory during installing/upgrading <code class="expression">space.vars.SITENAME</code>, you will be redirected to the Registration screen. In the Registration screen, you need to register yourself before installation/upgradation:
 
-OpsHub Integration Manager requires one-time registration.
+<code class="expression">space.vars.SITENAME</code> requires one-time registration.
 
-* Please select **New registration** if you are installing/upgrading OpsHub Integration Manager for the first time.
+* Please select **New registration** if you are installing/upgrading <code class="expression">space.vars.SITENAME</code> for the first time.
 * If you already have a verification code, select **Use an Existing Verification Code** option.
 * If you want to register after installation, select **Registration After Installation** option.
 
@@ -45,7 +45,7 @@ Once you select **OK** in the screen shown above, installer/migrator will prepar
   <img src="../assets/Freemium_Offline_Registration_Warning.PNG" />
 </p>
 
-When you are using Offline Registration option, user can either send the user detials in encrypted format or in decrypted manner. To send the data in encrypted manner, refer to [Get Verification Code using Encrypted User Details](#get-verification-code-using-encrypted-details). If the user wants to know the exact details they are sending to OpsHub Integration Manager, they can use the decrypted registered details. Refer to [Get Verification Code using Decrypted User Details](#get-verification-code-using-decrypted-user-details).
+When you are using Offline Registration option, user can either send the user detials in encrypted format or in decrypted manner. To send the data in encrypted manner, refer to [Get Verification Code using Encrypted User Details](#get-verification-code-using-encrypted-details). If the user wants to know the exact details they are sending to <code class="expression">space.vars.SITENAME</code>, they can use the decrypted registered details. Refer to [Get Verification Code using Decrypted User Details](#get-verification-code-using-decrypted-user-details).
 
 ## Get Verification Code using Encrypted Details
 
@@ -58,7 +58,7 @@ Once you get the verification code, enter the code in the screen shown below and
 
 ## Get Verification Code using Decrypted User Details
 
-* A zip file containing the decryption utility is copied to the OpsHub Integration Manager installation folder. Follow the below steps to get the decrypted user data for the verification code generation:
+* A zip file containing the decryption utility is copied to the <code class="expression">space.vars.SITENAME</code> installation folder. Follow the below steps to get the decrypted user data for the verification code generation:
   * Unzip the zip `DecryptionUtility.zip` and extract DecryptionUtility from it. [In the extracted folder, the `DecryptionUtility.jar` will be available].
   * In the extracted folder, the `details.properties` is available. Mention the below details in that file:
     * Specify the `zipFilePath` where `RegistrationDetails.zip` is present (Do not change the name of the `RegistrationDetials.zip`)
@@ -79,7 +79,7 @@ Once you get the verification code, enter the code in the screen shown below and
       For example:  
       `/home/administrator/Downloads/OIMV7_130_Linux_OpsHub/jre/bin/java -DOPSHUB_TEMP_DATA=$OPSHUB_TEMP_DATA -jar DecryptionUtility.jar`
     * To reach to `<path to jre>`, follow the below steps:
-      * Go to OpsHub Integration Manager installation folder. This folder will contain a jre zip. Unzip the jre and use this as `<path to jre>` in the above mentioned command.
+      * Go to <code class="expression">space.vars.SITENAME</code> installation folder. This folder will contain a jre zip. Unzip the jre and use this as `<path to jre>` in the above mentioned command.
 
 * The decrypted UserDetails will be stored in file named `DecryptedRegistrationDetails.txt`.
 
@@ -107,7 +107,7 @@ Select **Use an Existing Verification Code** option as shown in below screen.
   <img src="../assets/Freemium_Registration_Mode_Existing_Code_1.PNG" />
 </p>
 
-> 📌 When you are using this option for upgrading OpsHub Integration Manager, You should have the latest Application Backup as described [here](../manage/upgrade/taking-application-backup.md).
+> 📌 When you are using this option for upgrading <code class="expression">space.vars.SITENAME</code>, You should have the latest Application Backup as described [here](../manage/upgrade/taking-application-backup.md).
 
 Once you select **Use an Existing Verification Code** option, you will see the screen shown below. Enter the Verification code and continue installation/upgradation.
 
@@ -123,13 +123,13 @@ Once you select **Registration After Installation**, the following screen will a
   <img src="../assets/Post_Install_Registration_Home.PNG" />
 </p>
 
-On selecting **Next**, OpsHub Integration Manager will have you register with the registration server. On successful registration, you will get a verification code on your registered email id. Enter the verification code as shown in the screenshot below:
+On selecting **Next**, <code class="expression">space.vars.SITENAME</code> will have you register with the registration server. On successful registration, you will get a verification code on your registered email id. Enter the verification code as shown in the screenshot below:
 
 <p align="center">
   <img src="../assets/Post_Install_Registration_Verification.PNG" />
 </p>
 
-If the OpsHub Integration Manager is not able to connect to the registration server, you will get an option to register yourself using Offline mode by downloading `RegistrationDetails.zip` as shown below:
+If the <code class="expression">space.vars.SITENAME</code> is not able to connect to the registration server, you will get an option to register yourself using Offline mode by downloading `RegistrationDetails.zip` as shown below:
 
 <p align="center">
   <img src="../assets/Post_Install_Registration_Offline.PNG" />
@@ -137,14 +137,14 @@ If the OpsHub Integration Manager is not able to connect to the registration ser
 
 ## Known Behavior
 
-* In the case of OpsHub Migrator for Microsoft Azure DevOps (OM4ADO) and OpsHub Integration Manager (OIM) with community edition, the **Registration After Installation** feature is not available.
+* In the case of OpsHub Migrator for Microsoft Azure DevOps (OM4ADO) and <code class="expression">space.vars.SITENAME</code> (OIM) with community edition, the **Registration After Installation** feature is not available.
 
 # Silent Registration for Linux
 
 Here is a video on the silent registration of OIM on the Linux machine: 
 {% embed url="https://youtu.be/geegozffGtg" %}
 
-When you want to install/upgrade OpsHub Integration Manager on a Linux machine as described [here](installation.md#launch-the-installer-in-different-operating-systems), you need to register yourself by following the steps listed below before you proceed with the installation/upgradation.
+When you want to install/upgrade <code class="expression">space.vars.SITENAME</code> on a Linux machine as described [here](installation.md#launch-the-installer-in-different-operating-systems), you need to register yourself by following the steps listed below before you proceed with the installation/upgradation.
 
 * Please download offline registration utility from [here](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EQHg8u3f96lCgBG78UOaLMwBXsfN-yl-Z7ou6KxHYXJMcA).
 * You will get the files as shown below:
@@ -163,7 +163,7 @@ When you want to install/upgrade OpsHub Integration Manager on a Linux machine a
     * Yes, if you want the latest updates from OpsHub.  
     * No, if you do not want the latest updates from OpsHub.
   * FileName: Filename of installer/migrator zip without extension such as `OIMV7.10-HF2_Linux_OpsHub` for `OIMV7.10-HF2_Linux_OpsHub.zip`
-  * InstallationDirectory: Directory on which you want to install/upgrade OpsHub Integration Manager
+  * InstallationDirectory: Directory on which you want to install/upgrade <code class="expression">space.vars.SITENAME</code>
 
 * Run registration utility as below:
   * Open the terminal window and go to the folder containing offline registration utility.

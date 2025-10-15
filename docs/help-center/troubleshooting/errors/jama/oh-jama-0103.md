@@ -9,7 +9,7 @@ Probable cause for this issue is:
 
 - For creating a Set in Jama, **Child Item Type** field must be present.  
 - Once a Set gets created in Jama with a specific Child Item Type, the child item type can't be modified through the Jama API.  
-- With respect to the above end system behavior, when any update comes on **Set** entity field **Child Item Type**, OpsHub Integration Manager will raise this error.
+- With respect to the above end system behavior, when any update comes on **Set** entity field **Child Item Type**, <code class="expression">space.vars.SITENAME</code> will raise this error.
 
 ### Solution
 

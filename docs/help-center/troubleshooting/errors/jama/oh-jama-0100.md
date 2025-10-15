@@ -8,7 +8,7 @@ OH-Jama-0100: Error occurred while creating Folder entity in Jama. Either ''Loca
 Probable cause for this issue is:
 
 - Jama allows Folder creation inside a specific Set or a Folder, i.e. a Folder can only be created under a Set or another Folder.  
-- In OpsHub Integration Manager, the parent location can be provided using the field **Location/Location Path** or using link type **Parent**.  
+- In <code class="expression">space.vars.SITENAME</code>, the parent location can be provided using the field **Location/Location Path** or using link type **Parent**.  
 - Thus, when folder entity synchronization is going on and the parent location is neither configured using field nor using link, then the create will fail.
 
 ## Solution

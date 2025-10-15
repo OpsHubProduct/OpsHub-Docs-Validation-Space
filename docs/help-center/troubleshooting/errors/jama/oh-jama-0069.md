@@ -6,7 +6,7 @@ OH-Jama-0069: Error occurred while creating entity in Jama.
 ## Cause
 
 Probable cause for this issue is:  
-When the mandatory fields for Jama are not mapped in the field mappings, OpsHub Integration Manager will raise this error.
+When the mandatory fields for Jama are not mapped in the field mappings, <code class="expression">space.vars.SITENAME</code> will raise this error.
 
 ## Solution
 

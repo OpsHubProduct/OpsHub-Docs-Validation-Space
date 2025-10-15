@@ -26,9 +26,9 @@ The variable values need to be added in `config.json` inside `CubeSupersetResour
 
 | **Variable Name**         | **Description**                                                              | **Sample Value**                                                                 |
 |---------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| `hostName`                | Name or IP of the host where OpsHub Integration Manager is installed         | localhost                                                                       |
+| `hostName`                | Name or IP of the host where <code class="expression">space.vars.SITENAME</code> is installed         | localhost                                                                       |
 | `commitUrlPath`           | Commit URL for SCM system used to redirect user to the SCM system            | https://github.com/docker/compose/commit                                        |
-| `authentication`          | Authentication password salt for OpsHub Integration Manager login            | Basic YWRtaW46cGFzc3dvcmQ=                                                      |
+| `authentication`          | Authentication password salt for <code class="expression">space.vars.SITENAME</code> login            | Basic YWRtaW46cGFzc3dvcmQ=                                                      |
 | `workitemUrlPath`         | Work item URL for ALM system to redirect user to ALM                         | https://org.visualstudio.com/project/_workitem/edit                             |
 | `productionAreas`         | Used to show area-specific filters in dashboard                              | ('OpsHub Production', 'OpsHub Demo(Configuration)', 'PS', 'Support', 'Partners') |
 | `defectTypeName`          | Work item type names for defect                                               | ('Bug')                                                                         |
@@ -43,7 +43,7 @@ The variable values need to be added in `config.json` inside `CubeSupersetResour
 | `migrationFileExtension`  | Regex for migration file extension                                            | %.sql                                                                           |
 | `migrationFilePaths`      | Regex to migration file folder path                                           | ["OpsHubV2/Util/com/opshub/migrations/", "OpsHubV2/sql/migrations/"]            |
 
-## Install and setup OpsHub Integration Manager, Cube and Superset
+## Install and setup <code class="expression">space.vars.SITENAME</code>, Cube and Superset
 
 * **Windows**: Open Command Prompt inside the directory containing `OIM_Insights_Installation.bat` file. Execute:
 ```bat
@@ -56,7 +56,7 @@ sudo su
 bash OIM_Insights_Installation.sh
 ```
 
-* On completion, the script will start showing logs of OpsHub Integration Manager. To halt, press `Ctrl+C`.  
+* On completion, the script will start showing logs of <code class="expression">space.vars.SITENAME</code>. To halt, press `Ctrl+C`.  
 * Installation logs will be stored in `OIM_Cube_Superset_Installation.log` inside the installer directory.  
 * Open Superset and Cube environment in browser:
   - **Cube**: `http://<HOST_NAME or IP>:4000/`
@@ -108,7 +108,7 @@ Refer to [Docker Limitations](../docker/docker-limitations.md)
 
 # Upgrade Application Version
 
-## Upgrade OpsHub Integration Manager Application Version
+## Upgrade <code class="expression">space.vars.SITENAME</code> Application Version
 
 Refer to [Docker Update OIM](../docker/docker-update-oim.md)
 

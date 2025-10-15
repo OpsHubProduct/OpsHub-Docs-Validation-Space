@@ -9,7 +9,7 @@ When you encounter an error **OH-DOORS Next-0045**, then the following error mes
 * This error will come only when DOORS Next is the target end system and both the "In Folder" and "Module" field is mapped.
 * **DOORS Next end-system behavior**  
   * When an artifact is created into a module, there are two artifacts created. One is a [base or core artifact](../../../../connectors/ibm-rational-doors-next-generation.md#glossary) - created inside the module's asset folder and the other one is a [shared artifact](../../../../connectors/ibm-rational-doors-next-generation.md#glossary) - created inside the module.
-* **OpsHub Integration Manager behavior**  
+* **<code class="expression">space.vars.SITENAME</code> behavior**  
   * As the **"In Folder"** corresponds to a field of base artifact (the artifact created in module's asset folder). Hence in OIM, this field gets used to create base artifact when artifact in sync is shared artifact.  
   * Thus, once an artifact is created in a module, the base artifact's folder can't be updated with a further update on module artifact as this field belongs to the base artifact, not to the shared artifact.
 
@@ -57,7 +57,7 @@ The OpsHub query used in the sample mapping is
 </xsl:if>
 ```
 
-> **Note**: For this mapping to work, the source entity id must be present in a single target artifact. If a single or multiple artifacts are found having same source entity id, then the OpsHub Integration Manager will consider the first result and the mapping will not allow update for the folder field. If no artifacts are found, then the mapping will allow update for the folder field.
+> **Note**: For this mapping to work, the source entity id must be present in a single target artifact. If a single or multiple artifacts are found having same source entity id, then the <code class="expression">space.vars.SITENAME</code> will consider the first result and the mapping will not allow update for the folder field. If no artifacts are found, then the mapping will allow update for the folder field.
 
 #### Example 2:
 

@@ -358,7 +358,7 @@ to this:
 ## Mapping for Soft Delete Configuration
 
 * When Team Foundation Server is the target system, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md).
-* After the Soft Delete operation is performed by OpsHub Integration Manager in Team Foundation Server, the entity will be deleted in the Team Foundation Server, and it can be found in the "Recycle bin" of the corresponding project, where it existed earlier.
+* After the Soft Delete operation is performed by <code class="expression">space.vars.SITENAME</code> in Team Foundation Server, the entity will be deleted in the Team Foundation Server, and it can be found in the "Recycle bin" of the corresponding project, where it existed earlier.
 * To only enable the logical delete operation in the target, "OH Soft Delete" field shall be mapped with the default value "No" in the [Delete Mode](../integrate/mapping-configuration.md#delete-mode) mapping.
 
 > **Note**: The above behavior is supported only for Workitems. Additionally it is supported from Team Foundation Server 2017 and above.

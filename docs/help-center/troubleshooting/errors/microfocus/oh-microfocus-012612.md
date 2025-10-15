@@ -6,7 +6,7 @@ When user encounters OH-Micro Focus ALM/QC-012612, then following error message 
 
 # Cause
 
-This error may occur when an integration is configured for any source system to Micro Focus ALM\QC and OpsHub Integration Manager is trying to make a request to the Micro Focus ALM/QC server, but the Micro Focus ALM/QC server can not process due to following reasons.
+This error may occur when an integration is configured for any source system to Micro Focus ALM\QC and <code class="expression">space.vars.SITENAME</code> is trying to make a request to the Micro Focus ALM/QC server, but the Micro Focus ALM/QC server can not process due to following reasons.
 
 * The exception from QC - **qccore.invalid-list-field-value** could occur when invalid value is given for the lookup type of field.
 * The exception from QC - **qccore.required-field-missing** could occur when value is not assigned/set for the mandatory field.

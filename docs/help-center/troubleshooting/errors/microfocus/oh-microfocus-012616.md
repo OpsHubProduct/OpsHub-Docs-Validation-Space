@@ -7,10 +7,10 @@ When user encounters OH-Micro Focus ALM/QC-012656, following error message will 
 # Cause
 
 * User will encounter this error in the following scenario:  
-  * When the user is running integration(s) of release-cycle in OpsHub Integration Manager having version 7.141 or above **and** your legacy Micro Focus application only accepts '%20' as the encoding of the ' ' (space character) in its API.
+  * When the user is running integration(s) of release-cycle in <code class="expression">space.vars.SITENAME</code> having version 7.141 or above **and** your legacy Micro Focus application only accepts '%20' as the encoding of the ' ' (space character) in its API.
 
 # Solution
 
-* Open the directory where OpsHub Integration Manager is installed and navigate to `OpsHub_Resources/config` directory.
+* Open the directory where <code class="expression">space.vars.SITENAME</code> is installed and navigate to `OpsHub_Resources/config` directory.
 * **Duplicate** the `HPQCProperty.properties.sample` file and **rename** it to `HPQCProperty.properties`.
 * Now set the `hpQueryParamEncoding` flag to `true` and restart the OpsHub server service.

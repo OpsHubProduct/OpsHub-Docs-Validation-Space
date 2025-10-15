@@ -14,7 +14,7 @@ OH-Micro Focus ALM/QC-0055: Error encountered while creating new entity of type:
 * User will encounter this error in the following scenario:  
   * Entity with the same name that is already there within same parent.  
     **For example:**
-    * The Root folder has three child Test Set folders named "Folder-1", "Folder-2", and "Folder-3". If you change "Folder-1" name to "Folder-2", then OpsHub Integration Manager gives the above mentioned error.
+    * The Root folder has three child Test Set folders named "Folder-1", "Folder-2", and "Folder-3". If you change "Folder-1" name to "Folder-2", then <code class="expression">space.vars.SITENAME</code> gives the above mentioned error.
     * The Root folder has two child Test Set folders named "Folder-1", "Folder-2". Now if Test Set Folder getting synchronized is having name "Folder-1" then such processing failure can occur.
 
 # Solution
