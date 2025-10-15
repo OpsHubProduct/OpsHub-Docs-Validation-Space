@@ -80,20 +80,17 @@ This file contains the following details:
 <p align="center"><img src="%3Cdiv%20data-gb-custom-block%20data-tag=" alt=""> User_Count_Utility_3_a_ovsmu.png</p>
 
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
-User\_Count\_Utility\_3\_a.png
+<div align="center"><img src="../../assets/User_Count_Utility_3_a.png" alt="" width="800"></div>
 {% endif %}
 
-" width="800px">
 
 #### UserCountDetailedReport.csv
 
 * It has a detailed report on the users found during synchronization.
 * It has the user details (User Email or User Name as per the details found during synchronization). Additionally, a corresponding list of systems is present in which the users' details are found.
 
-<p align="center"><img src="%3Cdiv%20data-gb-custom-block%20data-tag=" alt=""> User_Count_Utility_4_a_ovsmu.png</p>
+<p align="center"><img src="../../assets/User_Count_Utility_4_a_ovsmu.png" alt=""></p>
 
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
-User\_Count\_Utility\_4\_a.png
+<div align="center"><img src="../../assets/User_Count_Utility_4_a.png" alt="" width="600"></div>
 {% endif %}
-
-" width="600px">
