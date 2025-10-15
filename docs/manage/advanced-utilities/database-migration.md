@@ -4,7 +4,7 @@ Please refer to [Database Prerequisites](../../getting-started/prerequisites.md#
 
 ### Introduction
 
-As HSQL is not suitable for production usage, \{{SITENAME\}} needs to be migrated to one of three databases supported by \{{SITENAME\}}. There is a utility provided with \{{SITENAME\}} installation and packaged in `<code class="expression">space.vars.SITENAME</code>_Installation>\OpsHub_Resources\DatabaseMigrator` directory \[Migrator directory].
+As HSQL is not suitable for production usage, <code class="expression">space.vars.SITENAME</code> needs to be migrated to one of three databases supported by <code class="expression">space.vars.SITENAME</code>. There is a utility provided with <code class="expression">space.vars.SITENAME</code> installation and packaged in `<code class="expression">space.vars.SITENAME</code>_Installation>\OpsHub_Resources\DatabaseMigrator` directory \[Migrator directory].
 
 ### Steps to migrate from HSQL to other supported databases
 

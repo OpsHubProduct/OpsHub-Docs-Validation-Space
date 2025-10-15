@@ -9,7 +9,7 @@ Jira is a popular bug tracking, issue tracking, and project management functions
 **Problem Statement**: The support team receives a ticket from a customer, which it identifies as a 'defect', and sends to the development team for resolution. The development team responds that the 'identified defect' is a 'known defect' and is in process of resolution before the next release.\
 
 
-**Solution**: When Jira and ServiceNow are bi-directionally integrated using \{{SITENAME\}}, the status of this defect would have already synchronized to ServiceNow as 'In Progress' along with the expected resolution date. The response to customer could have been faster.
+**Solution**: When Jira and ServiceNow are bi-directionally integrated using <code class="expression">space.vars.SITENAME</code>, the status of this defect would have already synchronized to ServiceNow as 'In Progress' along with the expected resolution date. The response to customer could have been faster.
 
 * Multiple customers report similar issues related to the product.
 * The support team identifies these tickets and reports them as a ‘problem’ to the backend team.
@@ -23,11 +23,11 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 
 ## Integration Configuration
 
-* Log in into \{{SITENAME\}}. The default credentials are: User Name: admin, Password: password.
+* Log in into <code class="expression">space.vars.SITENAME</code>. The default credentials are: User Name: admin, Password: password.
 
 <div align="center"><img src="../../assets/Getting_Started_With_Application_Image_1G_a.png" alt=""></div>
 
-> **Note**: Proxy parameters: Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](../../manage/administrator/proxy-setting.md) in \{{SITENAME\}}.
+> **Note**: Proxy parameters: Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](../../manage/administrator/proxy-setting.md) in <code class="expression">space.vars.SITENAME</code>.
 
 * Click **Integrate** on the top right corner of the screen and then click the plus \[+] icon.
 
@@ -39,7 +39,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 
 <div align="center"><img src="../../assets/J-SN_Image_1.png" alt=""></div>
 
-* In the **Add Project(s) to Sync** section, select the projects you want to synchronize between Jira and ServiceNow by clicking them. ServiceNow doesn’t have projects, so \{{SITENAME\}} will show OH\_NO\_PROJECT. You can map OH\_NO\_PROJECT with multiple projects in Jira. Refer to the image below:
+* In the **Add Project(s) to Sync** section, select the projects you want to synchronize between Jira and ServiceNow by clicking them. ServiceNow doesn’t have projects, so <code class="expression">space.vars.SITENAME</code> will show OH\_NO\_PROJECT. You can map OH\_NO\_PROJECT with multiple projects in Jira. Refer to the image below:
 
 <div align="center"><img src="../../assets/J-SN_Image_2.png" alt=""></div>
 
@@ -48,7 +48,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 > **Note**: If you are mapping multiple projects from Jira and want to synchronize to a given Jira project on basis of a ServiceNow field, then in addition to the above configuration, an additional configuration will be required in field mapping. This will be covered in the [Mapping Configuration](../../integrate/mapping-configuration.md) section below.
 
 * Once the projects are mapped, the next step is to define entities that needs to be integrated and fields that needs to be integrated for every entity mapped.
-* \{{SITENAME\}} fetches entities available in both systems and shows them in entities list for both systems. From the **Select Entities to Sync** section, select the relevant entities.
+* <code class="expression">space.vars.SITENAME</code> fetches entities available in both systems and shows them in entities list for both systems. From the **Select Entities to Sync** section, select the relevant entities.
 
 > **Note**: For ServiceNow, only entities having import set created on them will be shown in the list.
 
@@ -70,8 +70,8 @@ Once you come to the mapping page from the integration page, following details a
 * Give a unique name for the mapping in the **Name** field. For example, refer the image above.
 * Now, click the **Create from Scratch** button to define the mapping from scratch.\
   or,
-* Click **Auto Map** to automatically map all fields with same name. \{{SITENAME\}} will allow you to remove or add more fields before saving mapping.
-* \{{SITENAME\}} will load fields available in the selected entity and project fields. For reference, please look at the image below:
+* Click **Auto Map** to automatically map all fields with same name. <code class="expression">space.vars.SITENAME</code> will allow you to remove or add more fields before saving mapping.
+* <code class="expression">space.vars.SITENAME</code> will load fields available in the selected entity and project fields. For reference, please look at the image below:
 
 <div align="center"><img src="../../assets/J-SN_Image_5a.png" alt=""></div>
 

@@ -49,7 +49,7 @@ title: known-limitations-behavior
   * Case 2:
     * If a work item has already been synchronized to the target system and its type is changed post \{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %\} migration \{% endif %\} \{% if "OpsHub Integration Manager" === space.vars.SITENAME %\} synchronization \{% endif %\}, a new entity is created in the target system with a new work item type. \{% if "OpsHub Integration Manager" === space.vars.SITENAME %\} In above example, if the integration is activated after step #3, then target will have Epic with R1, R2. Post step #5, a new Feature with R1, R2, R3 (except the work item Change), R4 will be created in target. \{% endif %\} \{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %\}
 
-6.  To maintain correct relationships and references \[available among the source data] into target \[through migration], \{{SITENAME\}} migration follows a specific sequence in which the migration is undertaken. The below list will help understand this sequence.
+6.  To maintain correct relationships and references \[available among the source data] into target \[through migration], <code class="expression">space.vars.SITENAME</code> migration follows a specific sequence in which the migration is undertaken. The below list will help understand this sequence.
 
     1. Meta Entities \[User, Group and Team, Area, Iteration]
     2. Work Item Entities \[Bug, User Story, Task, etc., Test Case, Shared Steps]
@@ -88,7 +88,7 @@ Following are the limitations and behaviors specific to the individual entities 
 2. When TFS\ADO is a source end point, any change performed in link/relationship among entities, will be synchronized to target with next Update on those entities.
    * Reason: ADO\TFS API Limitations.
 3. If link/relationship's comment is updated in TFS/ADO, then this comment update will not be synchronized to the target system.
-   * In above mentioned case, the processing failure will be observed in the \{{SITENAME\}}.
+   * In above mentioned case, the processing failure will be observed in the <code class="expression">space.vars.SITENAME</code>.
 4. Links of 'Build', 'Integrated in Release', 'Pull Request', 'Tag' (Repository Tag), 'Versioned Item', 'Wiki page', 'GitHub Commit', 'GitHub pull request' and 'GitHub Issue' are not supported.
 5. Synchronization of Kanban Board field is supported for ADO/TFS version 2019 and above.
 6. Comment Author details in case of 3-way integration with Team Foundation Server as middle system \[System 1 -> Team Foundation Server -> System 2]
@@ -151,9 +151,7 @@ Following are the limitations and behaviors specific to the individual entities 
 * Ordering in Test Cases which are added to Test Suite is supported only for version 2019 onwards for on-premise deployments (i.e. Team Foundation Server) and all cloud deployments (i.e. Azure DevOps). In addition to that, ordering is only possible when the user has selected authentication type as Personal Access Token in the system configuration. Refer section [Create Personal Access Token](../../connectors/team-foundation-server.md-create-personal-access-token).
 * If source endpoint is Team Foundation Server with version lower than 2017 or target endpoint is not an Azure DevOps, all types of Test Suite (Static/Query based/Requirement) will be migrated as Static Suite.
 * If source endpoint is Azure DevOps or on-premise deployment (i.e Team Foundation Server) with version 2017 onwards and target endpoint is Azure DevOps, then the Static suite is \{{-ifeq: \{{SITENAME\}} | OpsHub Migrator for Microsoft Azure DevOps |migrated|synchronized\}} as Static Test Suite. The Requirement-based test suite is \{{-ifeq: \{{SITENAME\}} | OpsHub Migrator for Microsoft Azure DevOps |migrated|synchronized\}} as Requirement-based test suite and Query-based test suite is \{{-ifeq: \{{SITENAME\}} | OpsHub Migrator for Microsoft Azure DevOps |migrated|synchronized\}} as Query-based test suite.
-  *   The
-
-      user of source and target endpoint requires desired access level Basic + Test Plans in end system to synchronize query-based and requirement-based suite. Refer [Access Level](https://docs.microsoft.com/en-us/azure/devops/organizations/security/access-levels?view=azure-devops) to know more about this access level or subscription for the \{{-ifeq: \{{SITENAME\}} | OpsHub Migrator for Microsoft Azure DevOps |migration|integration\}} user. Otherwise, Test Suite synchronization will be resulted in to job error/sync failure as "You are not authorized to access this API. Please contact your project administrator".
+  *   The user of source and target endpoint requires desired access level Basic + Test Plans in end system to synchronize query-based and requirement-based suite. Refer [Access Level](https://docs.microsoft.com/en-us/azure/devops/organizations/security/access-levels?view=azure-devops) to know more about this access level or subscription for the \{{-ifeq: \{{SITENAME\}} | OpsHub Migrator for Microsoft Azure DevOps |migration|integration\}} user. Otherwise, Test Suite synchronization will be resulted in to job error/sync failure as "You are not authorized to access this API. Please contact your project administrator".
 * Synchronization Behavior of **Query Text** field of Query based Test Suite:
   * The Query based test suite has a field **Query Text** that represents the actual criteria that has been given in the Query Suite entity. The **Query Text** follows a specific format for which you can refer to [WIQL syntax](https://docs.microsoft.com/en-us/azure/devops/boards/queries/wiql-syntax?view=azure-devops).
   * Refer to the section [Synchronization Behavior of fields with WIQL format](../..connectors/team-foundation-server.md#synchronization-behavior-of-fields-with-wiql-format) to know general synchronization behavior applicable to this type of field. Following are the behavior specific to Query Text field of Test Suite entity:
@@ -237,7 +235,7 @@ This method requires the following inputs as mentioned in the following sequence
 
 * Synchronization is not supported with REST APIs.
 * Test Run and Test Result will migrate current state. Any changes in the target system after synchronization may show inconsistency in data in both end points.
-* Following Test Result and Test Run will not synchronize (these Run and Result are logged in \{{SITENAME\}} logs):
+* Following Test Result and Test Run will not synchronize (these Run and Result are logged in <code class="expression">space.vars.SITENAME</code> logs):
   * Run and Result created with Test Suite not existing in the source.
   * Run and Result created with Test Case not associated with the Test Suite while synchronization was performed.
   * Any Run and Result created with Test Case/Configuration, associated with Test Suite after synchronization.
@@ -253,17 +251,17 @@ This method requires the following inputs as mentioned in the following sequence
 
 * Impersonation is not supported.
 * of Meta Entities for Team Foundation Server 2010 or lower is not supported.
-* \{{SITENAME\}} will not sync the following two permissions at collection level for Group and Users due to lack of API:
+* <code class="expression">space.vars.SITENAME</code> will not sync the following two permissions at collection level for Group and Users due to lack of API:
   * Delete team project
   * Delete team project collection\
     However, the first permissions for a group or a user will be set at the project level.
-*   of the groups with reserved name is only possible if they are present in the target system. If such groups are not present in the target system, processing failures will be observed in \{{SITENAME\}}. - Reason: Groups cannot be created with reserved names, i.e., Group name 'Endpoint Creators' is reserved by the end system. While trying to create this group, a failure error message will be generated, 'Cannot complete the operation because the group name 'Endpoint Creators' is reserved by the system.' - User needs to manually delete this failure and start the
+*   of the groups with reserved name is only possible if they are present in the target system. If such groups are not present in the target system, processing failures will be observed in <code class="expression">space.vars.SITENAME</code>. - Reason: Groups cannot be created with reserved names, i.e., Group name 'Endpoint Creators' is reserved by the end system. While trying to create this group, a failure error message will be generated, 'Cannot complete the operation because the group name 'Endpoint Creators' is reserved by the system.' - User needs to manually delete this failure and start the
 
     again.
 *   If integration user is not a member of **Project Collection Administrators** group, collection level permissions will not be
 
     .
-* Following are the limitations of \{{SITENAME\}}, if you are syncing Area or Iteration:
+* Following are the limitations of <code class="expression">space.vars.SITENAME</code>, if you are syncing Area or Iteration:
   * Target Lookup Query is supported for only one field i.e. Path and the query must be Path=@Path@ for Team Foundation Server to Team Foundation Server integration.
   * Recovery functionality is effective only when Manual Conflict Detection is put off for field Path. It could be set to 'disable conflict detection' or enabled with either 'Source Wins' or 'Target Wins'.
   * Restart Team Foundation Server and OpsHubTFSService.
@@ -334,7 +332,7 @@ Following are the limitations and behaviors specific to the individual entities 
       * Azure DevOps End point Format - \[ID] \[=, <, >, <=, >=, <>, in] \[Source entity id]. **Example:** `[ID] = [12345]`
       * Format being used for processing/synchronization - `[ID] = [12345]`\
         \[No change is done here and hence the source work item id will be synchronized/visible in the target end point]\
-        In case, you want the Source workitem id to be replaced with its corresponding target id \[Which is synchronized by \{{SITENAME\}}], please use a customized workflow - **Default Integration Workflow - TFS to TFS - Query.xml**\
+        In case, you want the Source workitem id to be replaced with its corresponding target id \[Which is synchronized by <code class="expression">space.vars.SITENAME</code>], please use a customized workflow - **Default Integration Workflow - TFS to TFS - Query.xml**\
         **For example -**\
         Consider a WIQL:\
         `select [System.ID], [System.WorkItemType] from WorkItems where [System.ID] = 1234 and [System.AssignedTo]`\
@@ -344,8 +342,8 @@ Following are the limitations and behaviors specific to the individual entities 
 * Azure DevOps is configured as target:
   * **Folder synchronization**
     * In Azure DevOps, **Query** entities can be organized in different folders.
-    * In \{{SITENAME\}}, the field **Folder** corresponds to the folders present in the end system.
-    * While Query synchronization, if the Query's folder is not available in target, then \{{SITENAME\}} will first create the folder and then the query will be synchronized to that folder.
+    * In <code class="expression">space.vars.SITENAME</code>, the field **Folder** corresponds to the folders present in the end system.
+    * While Query synchronization, if the Query's folder is not available in target, then <code class="expression">space.vars.SITENAME</code> will first create the folder and then the query will be synchronized to that folder.
 
 ### Widget Entity
 
@@ -354,7 +352,7 @@ Following are the limitations and behaviors specific to the individual entities 
   * In Azure DevOps, a widget can be only created within a dashboard. Hence, configuring a relationship of type **Dashboard** is mandatory so that widget gets created within that dashboard.
     * A failure \[OH-Connector-0059] will be generated in case a dashboard is not synchronized and its widget is getting synchronized. In such cases, dashboard must be synchronized first and then widget creation failure should be retried.
 * **Configuration field behavior**
-  * There can be variety of widgets and each widget can have its own configuration. Widget configuration can be synchronized using **Configuration** field in \{{SITENAME\}}.
+  * There can be variety of widgets and each widget can have its own configuration. Widget configuration can be synchronized using **Configuration** field in <code class="expression">space.vars.SITENAME</code>.
 * **Widgets re-positioning behavior**
   * A Dashboard has pre-defined number of tiles where widgets can be added or re-positioned.
   * As long as the source and target dashboard have same widgets positioning i.e same position and size, the synchronization will work as per expectation. If the widget positioning differs, synchronization will fail with "widget collision" exception.
@@ -371,8 +369,8 @@ Following are the limitations and behaviors specific to the individual entities 
 
     * When widgets are re-positioned in source, the dashboard in target needs to be re-positioned as well using following configuration:
       * The **Widget** link must be configured in Dashboard mapping.
-    * The dashboard must be re-synchronized through \{{SITENAME\}}.
-    * In case of widget collision failure, the user will have to move the existing widget in target to another position, and then retry the processing failure of Dashboard integration in \{{SITENAME\}} to synchronize the widget re-positioning.
+    * The dashboard must be re-synchronized through <code class="expression">space.vars.SITENAME</code>.
+    * In case of widget collision failure, the user will have to move the existing widget in target to another position, and then retry the processing failure of Dashboard integration in <code class="expression">space.vars.SITENAME</code> to synchronize the widget re-positioning.
 
     > **Note** Any update on fields - **Position Row, Position Column, Size Row Span and Size Column Span** will be ignored during widget update synchronization.
 * **Query Charts used as Dashboard Widgets:**
@@ -439,7 +437,7 @@ User can provide the target entity Ids in the Pull Request fields like Title/Des
 * To sync the stages' approvals, the following points must be considered:
   * Three text types of the fields need to be created for stage identifier(in YML file of pipeline for particular stage), approval status, approval comments in source system, from which the data will be synced to Build entity.
   * To approve the build stage, user needs to give the above three values in the above fields.
-  * Map the 'None' field of the source system to the OH\_StageApproval field of build entity in \{{SITENAME\}}. The following advance mapping should be utilized for mapping the 'None' field to OH\_StageApproval:
+  * Map the 'None' field of the source system to the OH\_StageApproval field of build entity in <code class="expression">space.vars.SITENAME</code>. The following advance mapping should be utilized for mapping the 'None' field to OH\_StageApproval:
 
 ```xml
 <oh_stageApproval xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
