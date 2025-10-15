@@ -30,24 +30,24 @@ title: known-limitations-behavior
   2. Work item 1 is updated at T1 time \[Revision R1]
   3. Work item 1 is updated at T2 time \[Revision R2]
   4. Work item 1 type is changed to Feature at T3 time. Also, a comment is added to the feature in the same revision. \[Revision R3]
-  5. \{% if "OpsHub Integration Manager" === space.vars.SITENAME %\} The integration is started with the polling time, T0 \{% endif %\}
+  5. {% if "OpsHub Integration Manager" === space.vars.SITENAME %} The integration is started with the polling time, T0 {% endif %}
   * Case 1:
-    * If \{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %\} migration \{% endif %\} \{% if "OpsHub Integration Manager" === space.vars.SITENAME %\} integration \{% endif %\} of both entity types is activated, Work item 1 is synchronized to target as Feature with Revision R3 (except the work item change), R4.
+    * If {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} migration {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} integration {% endif %} of both entity types is activated, Work item 1 is synchronized to target as Feature with Revision R3 (except the work item change), R4.
   * Case 2:
-    * If a work item has already been synchronized to the target system and its type is changed post \{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %\} migration \{% endif %\} \{% if "OpsHub Integration Manager" === space.vars.SITENAME %\} synchronization \{% endif %\}, a new entity will be created in the target system with a new work item type.
-    * Specifically, before changing the type in the source, if the comments were added to that entity, then user impersonation for those comments won't occur. Instead, the integration/migration user will add the comment to the target. \{% if "OpsHub Integration Manager" === space.vars.SITENAME %\}
-    * If the integration of both entity types is activated after step #3 and before Step #4, then Work item 1 will be synchronized to target as Epic with revisions R1, R2. Post step #4 and step #5, a new Feature with R3 (except the work item change), R4 will be created in target. \{% endif %\} **For TFS version below 2017**:
+    * If a work item has already been synchronized to the target system and its type is changed post {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} migration {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} synchronization {% endif %}, a new entity will be created in the target system with a new work item type.
+    * Specifically, before changing the type in the source, if the comments were added to that entity, then user impersonation for those comments won't occur. Instead, the integration/migration user will add the comment to the target. {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
+    * If the integration of both entity types is activated after step #3 and before Step #4, then Work item 1 will be synchronized to target as Epic with revisions R1, R2. Post step #4 and step #5, a new Feature with R3 (except the work item change), R4 will be created in target. {% endif %} **For TFS version below 2017**:
 * For the entities whose types are changed, the entity type at the time of migration will be considered for migration. Below example will help in better understanding of the known behavior:
   1. Let's say there is Work item 1 created with type Epic.
   2. Work item 1 is updated at T1 time \[Revision R1]
   3. Work item 1 is updated at T2 time \[Revision R2]
   4. Work item 1 type is changed to Feature at T3 time. Also, a comment is added to the feature in the same revision. \[Revision R3]
-  5. Work item 1 is updated at T4 time \[Revisions R4] \{% if "OpsHub Integration Manager" === space.vars.SITENAME %\} 6. The integration is started with the polling time, T0.\{% endif %\}
+  5. Work item 1 is updated at T4 time \[Revisions R4] {% if "OpsHub Integration Manager" === space.vars.SITENAME %} 6. The integration is started with the polling time, T0.{% endif %}
   * Case 1:
     * Work item 1 is synchronized to target as Feature with Revision R1, R2, R3 (except the work item change), R4.
     * For R3 revision, a comment is added in target but work item type change is skipped.
   * Case 2:
-    * If a work item has already been synchronized to the target system and its type is changed post \{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %\} migration \{% endif %\} \{% if "OpsHub Integration Manager" === space.vars.SITENAME %\} synchronization \{% endif %\}, a new entity is created in the target system with a new work item type. \{% if "OpsHub Integration Manager" === space.vars.SITENAME %\} In above example, if the integration is activated after step #3, then target will have Epic with R1, R2. Post step #5, a new Feature with R1, R2, R3 (except the work item Change), R4 will be created in target. \{% endif %\} \{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %\}
+    * If a work item has already been synchronized to the target system and its type is changed post {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} migration {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} synchronization {% endif %}, a new entity is created in the target system with a new work item type. {% if "OpsHub Integration Manager" === space.vars.SITENAME %} In above example, if the integration is activated after step #3, then target will have Epic with R1, R2. Post step #5, a new Feature with R1, R2, R3 (except the work item Change), R4 will be created in target. {% endif %} {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}
 
 6.  To maintain correct relationships and references \[available among the source data] into target \[through migration], <code class="expression">space.vars.SITENAME</code> migration follows a specific sequence in which the migration is undertaken. The below list will help understand this sequence.
 
@@ -63,7 +63,7 @@ title: known-limitations-behavior
 
     **Note**: Above sequence will also consider the processing failures. The below example will help you understand it.
 
-    * If there is any processing failure for 4. \[Test Suite migration], then the migration for 5. \[Test Run] and 6. \[Test Result] will not be started until failures of Test Suite migration are resolved. \{% endif %\}
+    * If there is any processing failure for 4. \[Test Suite migration], then the migration for 5. \[Test Run] and 6. \[Test Result] will not be started until failures of Test Suite migration are resolved. {% endif %}
 
 ## Specific Authentication Mode
 
@@ -241,7 +241,7 @@ This method requires the following inputs as mentioned in the following sequence
 * **Mapping Name:** Name of valid test case mapping to transform given field clause. This mapping is expected to have mapping for the field name given as part of the second input parameter.
 * **Enclosed Value With Quote:** Boolean parameter indicating whether to have the transformed value within single quotes or not. If invoked as `true()`, the value will be enclosed in single quotes in the resulting query text. If `false()`, then the transformed value will not be enclosed.
 * **Source System Id:** System id of the source end system.
-* **Target System Id:** System id of the target end system. \{% endif %\}
+* **Target System Id:** System id of the target end system. {% endif %}
 
 **Test Result and Test Run**
 
