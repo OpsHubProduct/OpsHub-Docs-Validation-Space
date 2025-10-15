@@ -14,8 +14,12 @@ title: known-limitations-behavior
 3. For the rich text type of field (HTML) or comments:
    * Entity mention synchronization is not supported for entity type(s) Test Suite, and Test Plan.
    * Entity mention synchronization is not supported for the Team Foundation Server ALM with version < 2015. 
-   {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} * Default entity mention synchronization option is **Sync source id**. So, migration will migrate source mentioned entity as source id in target.{% endif %}
-   {% if "OpsHub Integration Manager" === space.vars.SITENAME %} * Refer ["**Mention Sync Option**"](../../integrate/mapping-configuration.md#mention-configuration) for more details.{% endif %}
+     {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} 
+   * Default entity mention synchronization option is **Sync source id**. So, migration will migrate source mentioned entity as source id in target.
+     {% endif %}
+     {% if "OpsHub Integration Manager" === space.vars.SITENAME %} 
+   * Refer ["**Mention Sync Option**"](../../integrate/mapping-configuration.md#mention-configuration) for more details.
+     {% endif %}
 4.
    * Area Id, Attached File Count, Authorized As, Authorized Date, Board Lane, External Link Count, Hyperlink Count, ID, Iteration Id, Node Name, Related Link Count, Rev, Revised Date, Team Project, Work Item Type, Board Column, Board Column Done\*\*
 
