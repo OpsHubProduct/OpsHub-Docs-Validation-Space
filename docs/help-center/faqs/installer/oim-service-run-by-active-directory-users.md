@@ -8,4 +8,9 @@ Can the OpsHub Server Service be run by Active Directory users? If yes, what are
 {% endif %}
 
 ## Solution
-{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} OpsHub Migrator for Microsoft Azure DevOps {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} OpsHub Server {% endif %} Service can be run by a standard Windows login user as well as an Active Directory user with admin privileges.
+{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} 
+OpsHub Migrator for Microsoft Azure DevOps Service can be run by a standard Windows login user as well as an Active Directory user with admin privileges.
+{% endif %} 
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}
+OpsHub Server Service can be run by a standard Windows login user as well as an Active Directory user with admin privileges. 
+{% endif %} 
