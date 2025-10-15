@@ -13,4 +13,3 @@
 7. [Secret Key Reset Utility](regenerate-secret-key.md)
 
 8. [Certificate Private Key Password Encryptor Utility](certificate-private-key-password-encryptor-utility.md)
-
