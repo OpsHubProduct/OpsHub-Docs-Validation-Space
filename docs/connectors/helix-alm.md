@@ -1,7 +1,7 @@
 # Pre-requisites
 ## User privileges
 
-* Create one user for Helix ALM System, dedicated to OpsHub Integration Manager. User should not be used to do any operations from system's user interface.  
+* Create one user for Helix ALM System, dedicated to <code class="expression">space.vars.SITENAME</code>. User should not be used to do any operations from system's user interface.  
 * User should not be used to create or update any entities from Helix ALM user interface. For help on how to add user, please refer [Add User](#add-user) in appendix. For help on how to assign user to groups, please refer [Assign User Privileges](#giving-user-privileges) in the appendix.
 
 ## Custom field
@@ -41,7 +41,7 @@ Refer the screenshot given below for reference.
 | **SOAP Session Limit** | Always                                      | Provide the number of concurrent logins possible for the Helix ALM Server through the SOAP API. Refer to [Find SOAP Session Limit](#find-soap-session-limit) for more details. |
 | **Metadata Details**   | Always                                      | Provide the details regarding system/custom fields of the Workflow events. Refer to [Understanding JSON Input](#understanding-json-input) for more information. |
 
-If the system is deployed on HTTPS and a self-signed certificate is used, you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificate](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.  
+If the system is deployed on HTTPS and a self-signed certificate is used, you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificate](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.  
 For checking the version of your Helix ALM instance, refer [Find Version](#find-version) in appendix.
 
 ## Understanding JSON Input
