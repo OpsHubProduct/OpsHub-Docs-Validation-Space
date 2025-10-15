@@ -191,7 +191,7 @@ with the Latin1_General_CS_AS collation (default collation), consider [Advance I
  - The database name given in input 'Database Name' will be used to test the connection with the database server. The input needs  
   to be given when your database user doesn't have access to the 'master' database. If the database user has access to the  
   'master' database, then the input can be left blank.
- - If the database is to be created by OpsHub Integration Manager, then the database user must have 'master' database access.  
+ - If the database is to be created by <code class="expression">space.vars.SITENAME</code>, then the database user must have 'master' database access.  
   In that case, the 'Database Name' input is not required and can be set to empty or 'master'.
  - If the installation is to be done with an already created database, then the database user must have access on that database.  
   In that case, the 'Database Name' input needs to be set to the name of the already created database.
@@ -203,7 +203,7 @@ with the Latin1_General_CS_AS collation (default collation), consider [Advance I
 
   - sqljdbc_10.2.0.0_enu.tar.gz databse connector driver.
 
-  - The path to sqljdbc_10.2.0.0_enu.tar.gz is required while installing OpsHub Integration Manager with MSSQL database.
+  - The path to sqljdbc_10.2.0.0_enu.tar.gz is required while installing <code class="expression">space.vars.SITENAME</code> with MSSQL database.
 
 <!-- -->
 
@@ -211,7 +211,7 @@ with the Latin1_General_CS_AS collation (default collation), consider [Advance I
 
   - sqljdbc_12.2.0.0_enu.tar.gz databse connector driver.
 
-  - The path to sqljdbc_12.2.0.0_enu.tar.gz is required while installing OpsHub Integration Manager with MSSQL database.
+  - The path to sqljdbc_12.2.0.0_enu.tar.gz is required while installing <code class="expression">space.vars.SITENAME</code> with MSSQL database.
 
 
 **a) SQL Authentication Mode**  
@@ -267,7 +267,7 @@ If Windows credentials are not added correctly during installation, the OpsHub S
 
 <!-- -->
 
-- Ensure that the user has **Log on as a service** privilege on the machine on which OpsHub Integration Manager will be installed.
+- Ensure that the user has **Log on as a service** privilege on the machine on which <code class="expression">space.vars.SITENAME</code> will be installed.
 
 ## Installation with PostgreSQL
 <p align="center">

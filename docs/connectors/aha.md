@@ -2,19 +2,19 @@
 
 ## Recovery Handling
 
-* OpsHub Integration Manager requires a custom field of text type in Aha! system for recovery purpose.
-* Field with the internal name **oh _last _update** needs to be created for the entity type which is configured in OpsHub Integration Manager for the sync purpose and for the entity type which is configured in the default link configuration.
+* <code class="expression">space.vars.SITENAME</code> requires a custom field of text type in Aha! system for recovery purpose.
+* Field with the internal name **oh _last _update** needs to be created for the entity type which is configured in <code class="expression">space.vars.SITENAME</code> for the sync purpose and for the entity type which is configured in the default link configuration.
 * Refer [Add Custom Fields section](aha.md#add-custom-fields) in appendix for details on how to create custom fields.
 
 ## User privileges
 
-* Create one user in Aha! that is dedicated for OpsHub Integration Manager. This user shouldn't perform any other action from Aha!'s user interface. This user is referred as 'Integration User' in the document.
+* Create one user in Aha! that is dedicated for <code class="expression">space.vars.SITENAME</code>. This user shouldn't perform any other action from Aha!'s user interface. This user is referred as 'Integration User' in the document.
   * Please refer to [Add User](aha.md#add-user) section to create a user in Aha!.
 * To synchronize entities to and from any systems to Aha!, Integration User must have **Contributor** permission at project level and **Customizations** role  [which needs be selected from project's Administrator roles]. Refer to [Grant permissions to Aha! user](aha.md#grant-permissions-to-aha-user) section for step-wise details on how to grant permissions to a Aha! user.
 
 # System Configuration
 
-* As you kickstart with the integration, you must first configure Aha! system in OpsHub Integration Manager.
+* As you kickstart with the integration, you must first configure Aha! system in <code class="expression">space.vars.SITENAME</code>.
 * Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.
 
 Refer to the following screenshot for reference:
@@ -83,7 +83,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 
 In Aha!, entity type selection in mapping configuration depends on the project/product selection. For more details, please refer to [Project Selection](aha.md#project-selection) section.
 
-> **Note**: In OpsHub Integration Manager, for the sync of Parking lots, the Release entity needs to be seleted at mapping level {as Parking lots are considered as Release by OpsHub Integration Manager}.
+> **Note**: In <code class="expression">space.vars.SITENAME</code>, for the sync of Parking lots, the Release entity needs to be seleted at mapping level {as Parking lots are considered as Release by <code class="expression">space.vars.SITENAME</code> }.
 
 ## Comments Configuration
 
@@ -131,7 +131,7 @@ In Aha!, the entity type selection in integration configuration depends on the p
 ## Criteria Configuration
 
 If the user wants to specify conditions for synchronizing an entity from Aha! as source system to the other system, the criteria must be configured. Navigate to Criteria Configuration section on [Integration Configuration](../integrate/integration-configuration.md) page to learn in detail about Criteria Configuration. 
-Set the **Query** as per Aha! encoded query format. Criteria is only applicable to given four fields. Given below are the sample snippets of how the Aha! queries can be used as criteria query in OpsHub Integration Manager:
+Set the **Query** as per Aha! encoded query format. Criteria is only applicable to given four fields. Given below are the sample snippets of how the Aha! queries can be used as criteria query in <code class="expression">space.vars.SITENAME</code>:
 
 **Criteria samples:**
 
@@ -158,8 +158,8 @@ Set the **Query** as per Aha! encoded query format. Criteria is only applicable 
 # Known Behaviour
 
 * From Aha! UI, issue type can be changed for entity. Currently, such conversions will create a new entity in the target and the previous one will be orphaned.
-* From Aha! UI, the entity can be deleted. However, for Aha! as the source system, the deleted entity will not sync by OpsHub Integration Manager. The corresponding target entity will remain orphan in target system on Aha! entity deletion. Also, Aha! entity deletion is not supported by OpsHub Integration Manager, when Aha! is the target system.
-* To update the "Progress" field through synchronization, the progress source must be set to "manual" (from Aha! UI or field mapping of OpsHub Integration Manager) due to Aha! API behavior.
+* From Aha! UI, the entity can be deleted. However, for Aha! as the source system, the deleted entity will not sync by <code class="expression">space.vars.SITENAME</code>. The corresponding target entity will remain orphan in target system on Aha! entity deletion. Also, Aha! entity deletion is not supported by <code class="expression">space.vars.SITENAME</code>, when Aha! is the target system.
+* To update the "Progress" field through synchronization, the progress source must be set to "manual" (from Aha! UI or field mapping of <code class="expression">space.vars.SITENAME</code>) due to Aha! API behavior.
 * Goals and Initiative System fields will be available as lookup fields in the field mapping, even though they are not available in Aha! Develop UI.
   * **The above fields are available in Aha! Develop UI when the Aha! Develop instance is combined with Aha! Roadmap.**
 * Hierarchy sync is not supported. Hence, the synchronization of ranking the requirements and to-dos will not be supported.
@@ -170,13 +170,13 @@ Set the **Query** as per Aha! encoded query format. Criteria is only applicable 
 
 ## API Rate Limitation in Aha!
 
-* Aha! has limitation on API access per minute for a single user. Due to this, OpsHub Integration Manager can access Aha! API within a limit. When the limit exceeds, the Aha! API stops responding for certain amount of time, and no API calls can be done by OpsHub Integration Manager during that time until Aha! resets the limit for that user.
+* Aha! has limitation on API access per minute for a single user. Due to this, <code class="expression">space.vars.SITENAME</code> can access Aha! API within a limit. When the limit exceeds, the Aha! API stops responding for certain amount of time, and no API calls can be done by <code class="expression">space.vars.SITENAME</code> during that time until Aha! resets the limit for that user.
   * **Up to 300 requests per minute and 20 requets per second are allowed in Aha!.**
 * To address this issue, wait time (given by Aha! API) will be considered for entity synchronization. Thus, there might be some delay in synchronization in case of API rate limit issue.
 
 # Known Limitations
 
-* Below Custom fields are not supported by OpsHub Integration Manager:
+* Below Custom fields are not supported by <code class="expression">space.vars.SITENAME</code>:
   * Score card field
   * Table field
   * Worksheet field
@@ -188,9 +188,9 @@ Set the **Query** as per Aha! encoded query format. Criteria is only applicable 
   * Score field is not supported as it is a complex field and it can be calculated according to different equations.
   * State transition is not supported as API doesn't give the infomation about state transitions.
   * Attachment field: If Aha! is the target system and the attachment mapping is configured to use field-type attachments, at least one attachment should be present in the corresponding field.
-* For Aha! as the target system, the fields below will not unset via OpsHub Integration Manager due to Aha!'s API limitation: **Effort, Value, Duration Source, Progress Source, Status, Type, Complete by date (internal), Round date to, Complete by date (external), Presented, and Description.**
+* For Aha! as the target system, the fields below will not unset via <code class="expression">space.vars.SITENAME</code> due to Aha!'s API limitation: **Effort, Value, Duration Source, Progress Source, Status, Type, Complete by date (internal), Round date to, Complete by date (external), Presented, and Description.**
 * For Comment synchronization, when you add inline image/attachment to comment, the user needs to update one field  [System/Custom field] or needs to add normal text comment to sync the comment with inline image/attachment. **Reason: In Aha!, entity modified time does not get updated with inline image/attachment addition in comment.**
-* **To-dos** present at user level will not synced by OpsHub Integration Manager. **To-dos** present in other entities can only be synchronized.
+* **To-dos** present at user level will not synced by <code class="expression">space.vars.SITENAME</code>. **To-dos** present in other entities can only be synchronized.
 
 ## Troubleshooting Guide
 
