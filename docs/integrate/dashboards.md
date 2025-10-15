@@ -1,4 +1,4 @@
-The OIM dashboard gives a quick view of integrations configured in **OpsHub Integration Manager**. Users can check overall health of integrations and know if integrations are working fine or have any failures. Users can navigate directly to integrations, systems, and failures from the dashboard.
+The OIM dashboard gives a quick view of integrations configured in **<code class="expression">space.vars.SITENAME</code>**. Users can check overall health of integrations and know if integrations are working fine or have any failures. Users can navigate directly to integrations, systems, and failures from the dashboard.
 
 Here is a video on how to use the dashboard in OIM:
 
@@ -6,7 +6,7 @@ Here is a video on how to use the dashboard in OIM:
 
 # Graphical View
 
-- Login into **OpsHub Integration Manager**.
+- Login into **<code class="expression">space.vars.SITENAME</code>**.
 - Dashboard will appear on home page.
 - Click on ![](../assets/rotate.png) at top right corner of dashboard to rotate graphical representation of integration.
 
@@ -14,7 +14,7 @@ Here is a video on how to use the dashboard in OIM:
   <img src="../assets/dashboard.png" />
 </p>
 
-- **Node:** Represents system created in **OpsHub Integration Manager**.
+- **Node:** Represents system created in **<code class="expression">space.vars.SITENAME</code>**.
 - **Branch:** Represents that two nodes are connected through integration. Click on branch to view integration in read-only mode. Color of branch depicts status of integration.
   - **Green:** Integration is active.
   - **Gray:** Integration is inactive.

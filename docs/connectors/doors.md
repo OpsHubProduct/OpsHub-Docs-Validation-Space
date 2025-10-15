@@ -1,45 +1,45 @@
 # Pre-requisites
 
 ## User privileges
-* Create one user of DOORS System, dedicated to OpsHub Integration Manager. User should not be used to do any operations from system's user interface.
+* Create one user of DOORS System, dedicated to <code class="expression">space.vars.SITENAME</code>. User should not be used to do any operations from system's user interface.
 * User should have Read (R), Modify (M), Create(C) access rights for each module of the project that required synchronization. For more details on setting access rights, please refer [How to add permissions on module](#how-to-add-permissions-on-module) in appendix.
 
 ## DOORS client
-* Install DOORS client on the machine where OpsHub Integration Manager is deployed (Recommended) OR install DOORS client on machine where OpsHub DOORS services can be configured (This machine should be in the same network of DOORS server).
+* Install DOORS client on the machine where <code class="expression">space.vars.SITENAME</code> is deployed (Recommended) OR install DOORS client on machine where OpsHub DOORS services can be configured (This machine should be in the same network of DOORS server).
 * Tested on Operating Systems (OS): Windows XP, Windows 7, Windows 8.1, Windows Server 2012, Windows 10
 
 ## Set Log On User for OpsHub Server Service
 
-If you had installed OpsHub Integration Manager on a Windows machine and you are running OpsHub Integration Manager through service, then in some cases, it may be possible that service account doesn't have access to DOORS client. In this case, you will not be able to access DOORS on OpsHub Integration Manager and you will get error related to DOORS connection. To resolve this issue, you may need to set log on user for OpsHub Server Service to the Windows user who has access to the DOORS client.
+If you had installed <code class="expression">space.vars.SITENAME</code> on a Windows machine and you are running <code class="expression">space.vars.SITENAME</code> through service, then in some cases, it may be possible that service account doesn't have access to DOORS client. In this case, you will not be able to access DOORS on <code class="expression">space.vars.SITENAME</code> and you will get error related to DOORS connection. To resolve this issue, you may need to set log on user for OpsHub Server Service to the Windows user who has access to the DOORS client.
 
 Please click here to learn -- how to [Set Log On User for OpsHub Server Service](#set-log-on-user-for-opshub-server-service).
 
-## Restart OpsHub Integration Manager on DOORS metadata change
+## Restart <code class="expression">space.vars.SITENAME</code> on DOORS metadata change
 
 If any field/project added/renamed/deleted or access rights of fields/projects are changed:
 
-- If DOORS service configuration is set as 'LOCAL' in OpsHub Integration Manager, DOORS server needs to be restarted.
-- If DOORS service configuration is set as 'REMOTE' in OpsHub Integration Manager, OpsHub DOORS Services need to be restarted.
+- If DOORS service configuration is set as 'LOCAL' in <code class="expression">space.vars.SITENAME</code>, DOORS server needs to be restarted.
+- If DOORS service configuration is set as 'REMOTE' in <code class="expression">space.vars.SITENAME</code>, OpsHub DOORS Services need to be restarted.
 
 ### For OLE Object
 
-- OpsHub Integration Manager supports synchronization of OLE Objects when DOORS is a source system but for Microsoft Office document (.docx, .xlsx, .pptx, .doc, .xls, .ppt etc.) type of OLE Objects, Microsoft Office 2007 or higher must be installed on the machine where OpsHub Integration Manager is installed.
-  - If Microsoft Office is not installed and a Microsoft Office file (such as .docx, .xlsx) are added from a system which has Microsoft Office installed and OpsHub Integration Manager instance does not have it installed, then only Microsoft Office icon will sync as inline image and the actual file will not get synchronized to target.
-- OpsHub Integration Manager supports synchronization of OLE Objects when DOORS is a source system but for Microsoft Visio Drawing (.vsdx, .vsd) type of OLE Objects, Microsoft Visio 2013 or higher must be installed on the machine where OpsHub Integration Manager is installed.
-  - If Microsoft Visio is not installed and a Microsoft Visio drawing file (such as .vsdx, .vsd) are added from a system which has Microsoft Visio installed and OpsHub Integration Manager instance does not have it installed, then such files will not get synchronized to target.
+- <code class="expression">space.vars.SITENAME</code> supports synchronization of OLE Objects when DOORS is a source system but for Microsoft Office document (.docx, .xlsx, .pptx, .doc, .xls, .ppt etc.) type of OLE Objects, Microsoft Office 2007 or higher must be installed on the machine where <code class="expression">space.vars.SITENAME</code> is installed.
+  - If Microsoft Office is not installed and a Microsoft Office file (such as .docx, .xlsx) are added from a system which has Microsoft Office installed and <code class="expression">space.vars.SITENAME</code> instance does not have it installed, then only Microsoft Office icon will sync as inline image and the actual file will not get synchronized to target.
+- <code class="expression">space.vars.SITENAME</code> supports synchronization of OLE Objects when DOORS is a source system but for Microsoft Visio Drawing (.vsdx, .vsd) type of OLE Objects, Microsoft Visio 2013 or higher must be installed on the machine where <code class="expression">space.vars.SITENAME</code> is installed.
+  - If Microsoft Visio is not installed and a Microsoft Visio drawing file (such as .vsdx, .vsd) are added from a system which has Microsoft Visio installed and <code class="expression">space.vars.SITENAME</code> instance does not have it installed, then such files will not get synchronized to target.
 
 ### For Rich Text Formatting
 
-DOORS system allows users to add Rich Text formatting to Text/String type of fields. OpsHub Integration Manager supports synchronization of such formatting to target end system if following prerequisites are met:
+DOORS system allows users to add Rich Text formatting to Text/String type of fields. <code class="expression">space.vars.SITENAME</code> supports synchronization of such formatting to target end system if following prerequisites are met:
 
-- For support of full Rich Text, a conversion server is needed. The user needs to configure the conversion server and set its URL in [DOORS System Configuration](#system-configuration) of OpsHub Integration Manager. The conversion server must be up and running for usage in OpsHub Integration Manager.
+- For support of full Rich Text, a conversion server is needed. The user needs to configure the conversion server and set its URL in [DOORS System Configuration](#system-configuration) of <code class="expression">space.vars.SITENAME</code>. The conversion server must be up and running for usage in <code class="expression">space.vars.SITENAME</code>.
 - The [Documents4J Remote Conversion Server](https://documents4j.com/#/) is being used as the Rich Text Conversion Server. For the configuration of this Remote Converter Server, refer to sub-section **Microsoft Word Converter** in the section **Local converter** [here](https://documents4j.com/#/).
-- This Rich Text Conversion Server can be set up on the machine where OpsHub Integration Manager is installed or on any remote machine where it can be accessed by the OpsHub Integration Manager setup machine. Refer to [Rich Text Conversion Server configuration](#rich-text-conversion-server-configuration) to set up the Rich Text Conversion Server. It is recommended to keep both on same machine to avoid the maintenance and network communication.
+- This Rich Text Conversion Server can be set up on the machine where <code class="expression">space.vars.SITENAME</code> is installed or on any remote machine where it can be accessed by the <code class="expression">space.vars.SITENAME</code> setup machine. Refer to [Rich Text Conversion Server configuration](#rich-text-conversion-server-configuration) to set up the Rich Text Conversion Server. It is recommended to keep both on same machine to avoid the maintenance and network communication.
 
 - Following are the prerequisites to set up the Rich Text Conversion Server:
-  - A licensed Microsoft Word instance with version 2007 or higher is required to be installed. The user must ensure that the proper licensing and compliance terms for Microsoft Word are met completely. Also, Microsoft Word is properly activated and configured for the user who will be starting the OpsHub Integration Manager server.
+  - A licensed Microsoft Word instance with version 2007 or higher is required to be installed. The user must ensure that the proper licensing and compliance terms for Microsoft Word are met completely. Also, Microsoft Word is properly activated and configured for the user who will be starting the <code class="expression">space.vars.SITENAME</code> server.
   - The installed Microsoft Word instance must be set as the default app for opening and editing .rtf as well as .docx documents. Refer to [this guide](https://support.microsoft.com/en-us/windows/change-default-programs-in-windows-10-e5d82cad-17d1-c53b-3505-f10a32e1894d#:~:text=On%20the%20Start%20menu%2C%20select,set%20them%20as%20the%20default) to set defaults for an app.
-  - Ensure that this Microsoft Word instance is dedicated to the Rich Text Conversion Server only when it is up and running (i.e., before starting the server. When the Rich Text Conversion Server is running, make sure that Microsoft Word is not already open before starting the Rich Text Conversion Server and OpsHub Integration Manager server)
+  - Ensure that this Microsoft Word instance is dedicated to the Rich Text Conversion Server only when it is up and running (i.e., before starting the server. When the Rich Text Conversion Server is running, make sure that Microsoft Word is not already open before starting the Rich Text Conversion Server and <code class="expression">space.vars.SITENAME</code> server)
 
 > **Note** Synchronization of such full Rich Text formatting (i.e., tables, text highlights, font size, and colors, etc.) is only supported when DOORS is the source endpoint. In case the prerequisites are not met, or DOORS is the target endpoint, then only the formatting which is possible to perform from the DOORS UI will be synchronized.
 
@@ -82,7 +82,7 @@ Before you continue to the integration, you must first configure the DOORS syste
 
 To know the version of DOORS, refer to [Find version](#find-version)
 
-If the system is deployed over HTTPS with a self-signed certificate, you must import the SSL certificate to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn more.
+If the system is deployed over HTTPS with a self-signed certificate, you must import the SSL certificate to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn more.
 
 # Mapping Configuration
 
@@ -93,7 +93,7 @@ Map the fields between DOORS and the other system to be integrated to ensure tha
 When DOORS is the target system:
 - DOORS is not able to render the formatting present in the style attribute of an HTML element.
   - This can happen when formatted content is copied from external applications like MS Word, MS Excel, etc., to the source system.
-- To preserve the formatting, OpsHub Integration Manager provides a utility method, convertStyleAttributeToHTMLTags.This method can convert the rich text formatting present in the style attribute of an HTML element to HTML tags.
+- To preserve the formatting, <code class="expression">space.vars.SITENAME</code> provides a utility method, convertStyleAttributeToHTMLTags.This method can convert the rich text formatting present in the style attribute of an HTML element to HTML tags.
   - For example, consider the following advance mapping to synchronize Repro Steps field of TFS to Object Text field in DOORS:
 
 ```xml
@@ -102,7 +102,7 @@ When DOORS is the target system:
     select="utils:convertStyleAttributeToHTMLTags(SourceXML/updatedFields/Property/Repro-space-Steps)" />
 </Object-space-Text>
 ```
-From DOORS UI, only the following formatting is supported. Hence, OpsHub Integration Manager will convert the following formatting present in style attribute to HTML tags:
+From DOORS UI, only the following formatting is supported. Hence, <code class="expression">space.vars.SITENAME</code> will convert the following formatting present in style attribute to HTML tags:
 - **Bold**
 - **Italic**
 - **Underline**
@@ -112,7 +112,7 @@ From DOORS UI, only the following formatting is supported. Hence, OpsHub Integra
 
 ## Rank
 
-* Doors allows to organize the Requirements in tree structure. To synchronize the Requirement maintaining the tree structure, below configurations need to be performed in OpsHub Integration Manager.
+* Doors allows to organize the Requirements in tree structure. To synchronize the Requirement maintaining the tree structure, below configurations need to be performed in <code class="expression">space.vars.SITENAME</code>.
 - Map `OH_ChildIds` and `OH_ParentId` relationship as per standard [Relationship Configuration](../integrate/mapping-configuration.md#relationships).
 - Enable rank sync as described in [Rank configuration](../integrate/mapping-configuration.md#rank).
 
@@ -126,7 +126,7 @@ In this step, set a time to synchronize data between DOORS and the other system 
 - In DOORS, Object Number is a system and a calculated attribute. This attribute value is changed by add/move/remove operation on other object within the same module. However, Object's Last Modified Time does not get updated for such scenarios.
 - When DOORS is the source system and is running on history based sychronization, then the additional user credentials should be provided. The additional user credentials will be used to update the object in the source system. For current state synchronization, the additional user credentials are not required.
 
-> **Note**: Additional user credentials should not be same as the integration user [provided in the system configuration form] credentials. Also, additional user credentials should be dedicated for the OpsHub Integration Manager only. It should not perform any operation in DOORS system.
+> **Note**: Additional user credentials should not be same as the integration user [provided in the system configuration form] credentials. Also, additional user credentials should be dedicated for the <code class="expression">space.vars.SITENAME</code> only. It should not perform any operation in DOORS system.
 
 **Limitations:**  
 - In the below mentioned cases, the Doors object movement history will get deleted, and the event detection will not occur:
@@ -191,7 +191,7 @@ When user wants to install OpsHub's DOORS Remote Services on any machine (which 
 ## Picture Object as Inline Image
 
 * Picture Object as Inline Image is only supported for DOORS as Source system.
-* To sync Picture Object as Inline image in Target System, user needs to map the Picture field in OpsHub Integration Manager.
+* To sync Picture Object as Inline image in Target System, user needs to map the Picture field in <code class="expression">space.vars.SITENAME</code>.
 * As no revision is created for updating/deletion of image in Picture Object, to sync any update in image in Picture Object, an update in any of the other fields for which revision created is required.
 * As per DOORS documentation, some pictures when exported/read using API, may have a black border.
 * The only supported export format is format PNG, so on the target side, the PNG image is always synced
@@ -199,8 +199,8 @@ When user wants to install OpsHub's DOORS Remote Services on any machine (which 
 
 ## Object Number and Object Level
 
-* 'The Object Number' and 'Object Level' are calculated fields. OpsHub Integration Manager will synchronize with the value present at the time of entity synchronization. These fields don't have history so, if there is any change after synchronization, it will get reflected in other end systems only when it becomes eligible.
-* The field value of these fields also depends on the settings configured on the system page of DOORS under the field name, 'DOORS Sync Deleted Entities' option. If selected 'yes', OpsHub Integration Manager will take into consideration the deleted entities also, and if selected 'no', the field values will be synchronized accordingly.
+* 'The Object Number' and 'Object Level' are calculated fields. <code class="expression">space.vars.SITENAME</code> will synchronize with the value present at the time of entity synchronization. These fields don't have history so, if there is any change after synchronization, it will get reflected in other end systems only when it becomes eligible.
+* The field value of these fields also depends on the settings configured on the system page of DOORS under the field name, 'DOORS Sync Deleted Entities' option. If selected 'yes', <code class="expression">space.vars.SITENAME</code> will take into consideration the deleted entities also, and if selected 'no', the field values will be synchronized accordingly.
  
 
 ## Fields Limitation
@@ -245,7 +245,7 @@ When user wants to install OpsHub's DOORS Remote Services on any machine (which 
 * Full Rich Text formatting such as tables, font size and color, etc. is only supported when DOORS is the source system and its pre-requisites are met.
 * Full Rich Text data will be available to target only in the last revision getting synchronized for a given entity in an execution cycle. In all events except the last event, only the formatting which is possible from the DOORS UI will be synchronized.
 * The Rich Text formatting of a table copied through a third party tool (i.e., Microsoft Excel or Microsoft Word): If the table has border 0, then the borders for such tables will not be visible in the target system even if they are visible in the DOORS UI.
-* If the URL for the Rich Text Conversion Server is changed, then it needs to be changed in the DOORS System configuration page in OpsHub Integration Manager as well. After the change, the OpsHub Integration Manager Server needs to be restarted for the changes to take effect.
+* If the URL for the Rich Text Conversion Server is changed, then it needs to be changed in the DOORS System configuration page in <code class="expression">space.vars.SITENAME</code> as well. After the change, the <code class="expression">space.vars.SITENAME</code> Server needs to be restarted for the changes to take effect.
 * For links inside RTF fields, only the links' urls will be synchronized, and the text inside which the url is embedded won't be synchronized.
 * Conflict detection will result into false positives, where HTML fields containing advanced tags like links, table etc., are synchronized to DOORS.
 
@@ -254,7 +254,7 @@ When user wants to install OpsHub's DOORS Remote Services on any machine (which 
 
 ## Synchronizing Entities with Deleted History
 * When DOORS system is the source:
-  * If the history of a particular entity is deleted, and if it is last modified/updated by the integration user, then for such use case, the entity will not be synchronized by OpsHub Integration Manager.
+  * If the history of a particular entity is deleted, and if it is last modified/updated by the integration user, then for such use case, the entity will not be synchronized by <code class="expression">space.vars.SITENAME</code>.
     * Baseline deletion is an example of entity history deletion.
   * If the history needs to be deleted during the synchronization process, it is recommended to let the synchronization complete first and then delete the history.
 
@@ -263,7 +263,7 @@ When user wants to install OpsHub's DOORS Remote Services on any machine (which 
 
 ## DOORS Reserved Keywords (Do Not Use as Field Names)
 
-Following names are reserved with OpsHub Integration Manager-DOORS integration, please do not use any name from following list for creating custom filed in DOORS.
+Following names are reserved with <code class="expression">space.vars.SITENAME</code>-DOORS integration, please do not use any name from following list for creating custom filed in DOORS.
 
 ```
 OH_ModuleName
@@ -342,7 +342,7 @@ OH_InLink
 ## Notes on Custom Field sync
 * Custom Field that requires to be synced must have 'Attribute scope' as Objects or Objects & Module (Only 'Module Scope attribute' can't be synced)
 * DXL Attribute can only be used for reading; such attributes can't be written.
-* DXL Attribute doesn't have any history, so when other fields are changed and OpsHub Integration Manager syncing those events, the value of the DXL attribute as of sync time will be sync to target.
+* DXL Attribute doesn't have any history, so when other fields are changed and <code class="expression">space.vars.SITENAME</code> syncing those events, the value of the DXL attribute as of sync time will be sync to target.
 
 Learn how to create [Custom Field Configuration](#custom-field-configuration).
 
@@ -387,7 +387,7 @@ The Rich Text Conversion Server communicates with the Microsoft Word instance, w
 * Open the Command Prompt and run the below command to configure and start the Rich Text Conversion Server (make sure that the user has sufficient privileges to access below folders, else open Command Prompt as Administrator):
 
 ```
-<OpsHub Integration Manager installation path>\OpsHub_Resources\jre\bin\java -jar <path_to_jar>\documents4j-server-standalone-shaded.jar http://<host_address>:<port_no>
+<<code class="expression">space.vars.SITENAME</code> installation path>\OpsHub_Resources\jre\bin\java -jar <path_to_jar>\documents4j-server-standalone-shaded.jar http://<host_address>:<port_no>
 ```
 
 * For example, if the port number is selected as 9998 to be configured locally, then the command will be:

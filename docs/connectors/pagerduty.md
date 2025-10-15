@@ -2,7 +2,7 @@
 
 ## User Privileges
 
-1. Create a user in PagerDuty that is dedicated for OpsHub Integration Manager. This user shouldn't perform any other action from PagerDuty's user interface. We will refer to this user as IntegrationUser further in the document. For the steps to add user, please see [Steps to Add User](#steps-to-add-a-user).
+1. Create a user in PagerDuty that is dedicated for <code class="expression">space.vars.SITENAME</code>. This user shouldn't perform any other action from PagerDuty's user interface. We will refer to this user as IntegrationUser further in the document. For the steps to add user, please see [Steps to Add User](#steps-to-add-a-user).
 
 2. For authenticating the above user, we would need an API token. For the steps to generate an API token, please see [How to Generate API token](#how-to-generate-api-token) section.
 
@@ -26,7 +26,7 @@ In PagerDuty, permissions can be assigned in either of the three ways:
 
 # System Configuration
 
-Before you continue with the integration, you must first configure PagerDuty system onto OpsHub Integration Manager.
+Before you continue with the integration, you must first configure PagerDuty system onto <code class="expression">space.vars.SITENAME</code>.
 
 Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.
 
@@ -40,7 +40,7 @@ Refer to the screenshot given below:
 |----------------------|----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **System Name**      | Always                                       | Provide PagerDuty System Name                                                                                                                              |
 | **Server URL**       | Always                                       | Set the URL of PagerDuty instance.                                                                                                                         |
-| **API User Token**   | Always                                       | Add the User API token generated for the dedicated user for OpsHub Integration Manager. Please refer to [How to Generate API token](#generateapitoken).   |
+| **API User Token**   | Always                                       | Add the User API token generated for the dedicated user for <code class="expression">space.vars.SITENAME</code>. Please refer to [How to Generate API token](#generateapitoken).   |
 
 # Mapping Configuration
 

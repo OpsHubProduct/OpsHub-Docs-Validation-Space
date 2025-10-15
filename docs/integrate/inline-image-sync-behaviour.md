@@ -1,6 +1,6 @@
 # Overview
 
-OpsHub Integration Manager supports the synchronization of images and files across end systems in fields, comments, and as attachments on the entity.
+<code class="expression">space.vars.SITENAME</code> supports the synchronization of images and files across end systems in fields, comments, and as attachments on the entity.
 
 * There are certain types of end systems based on how they add images/ files on their entity fields and comments.
 
@@ -28,7 +28,7 @@ OpsHub Integration Manager supports the synchronization of images and files acro
 </p>
 
 
-* Between server/ base64 and server/ base64 storage combination systems, if an inline image/ file is added to the entity upon synchronization by OpsHub Integration Manager as shown in the above image, it will be similar to the way image/ file is added to the source end system entity, i.e., it will only be added on inline field/ comment.
+* Between server/ base64 and server/ base64 storage combination systems, if an inline image/ file is added to the entity upon synchronization by <code class="expression">space.vars.SITENAME</code> as shown in the above image, it will be similar to the way image/ file is added to the source end system entity, i.e., it will only be added on inline field/ comment.
 
 ## Entity Storage System Combinations
 
@@ -37,16 +37,16 @@ OpsHub Integration Manager supports the synchronization of images and files acro
 </p>
 
 
-* Between entity and entity storage combination systems, if an inline image/ file is added to the entity, upon synchronization by OpsHub Integration Manager as shown in the above image, it will be similar to the way image/ file is added to the source end system entity, i.e., it will be added on inline field/ comment and also as an attachment on the entity.
-  * Due to the entity storage system's behavior of auto-adding the image/ file as an attachment to the entity regardless of whether attachment synchronization is enabled/ disabled in mapping. OpsHub Integration Manager will also add the attachment on the entity to synchronize the image/ file.
+* Between entity and entity storage combination systems, if an inline image/ file is added to the entity, upon synchronization by <code class="expression">space.vars.SITENAME</code> as shown in the above image, it will be similar to the way image/ file is added to the source end system entity, i.e., it will be added on inline field/ comment and also as an attachment on the entity.
+  * Due to the entity storage system's behavior of auto-adding the image/ file as an attachment to the entity regardless of whether attachment synchronization is enabled/ disabled in mapping. <code class="expression">space.vars.SITENAME</code> will also add the attachment on the entity to synchronize the image/ file.
 
 ## Server/ Base64 Storage and Entity System Combinations
 
 ![](../assets/Server_to_entity_inline.png)
 
-* Between server/ base64 and entity storage combination systems, if an inline image/ file is added to the entity, upon synchronization by OpsHub Integration Manager above shown image will be the way image/ file will be added to the entity.
-  * When the entity storage system is the target, OpsHub Integration Manager will auto-add the image/ file as an attachment to the entity.
-  * When server/ base64 storage system is the target, OpsHub Integration Manager will not auto-add the image/ file as an attachment to an entity. It will only be added in the rich text field/ comment.
+* Between server/ base64 and entity storage combination systems, if an inline image/ file is added to the entity, upon synchronization by <code class="expression">space.vars.SITENAME</code> above shown image will be the way image/ file will be added to the entity.
+  * When the entity storage system is the target, <code class="expression">space.vars.SITENAME</code> will auto-add the image/ file as an attachment to the entity.
+  * When server/ base64 storage system is the target, <code class="expression">space.vars.SITENAME</code> will not auto-add the image/ file as an attachment to an entity. It will only be added in the rich text field/ comment.
   * View parity between these storage combinations will be due to end-system behavior differences.
 
 # Image/ File Synchronization Behavior with Text Fields/ Comments
@@ -66,14 +66,14 @@ OpsHub Integration Manager supports the synchronization of images and files acro
 
 # Image/ File Synchronization Behavior with Target end system not supporting Inline Synchronization
 
-* In case the target end system does not support inline synchronization, and an inline image/ file is added to the source entity rich text field/ comment, then upon synchronization by OpsHub Integration Manager, below mentioned will be the behavior:
+* In case the target end system does not support inline synchronization, and an inline image/ file is added to the source entity rich text field/ comment, then upon synchronization by <code class="expression">space.vars.SITENAME</code>, below mentioned will be the behavior:
   * Data synchronized to the target entity will not have any renderable images/ files or opshub custom tags for image/ file when it is not a renderable field/ comment.
   * Images/ files will be uploaded to the entity as attachments.
   * In backward synchronization, from such end systems, the originally added images/ files will be removed from the fields.
 
 # Image/ File Synchronization Behavior with Comment
 
-* If a comment has been synchronized by OpsHub Integration Manager with an inline image/ file, the target comment will also have the image/ file.
+* If a comment has been synchronized by <code class="expression">space.vars.SITENAME</code> with an inline image/ file, the target comment will also have the image/ file.
   * Now, even if the comment is deleted in the source end system, the image/ file will persist in the target comment and also as an attachment on the entity in case it is an entity storage end system.
 
 # Synchronization Behavior

@@ -2,7 +2,7 @@
 
 ## User privileges
 
-* Create one user of Engineering Workflow Management (EWM), dedicated to OpsHub Integration Manager. User should not be used to do any operations from system's user interface.
+* Create one user of Engineering Workflow Management (EWM), dedicated to <code class="expression">space.vars.SITENAME</code>. User should not be used to do any operations from system's user interface.
 * User should be member of a Project Area with permission to create/modify work-items. For help on how to assign membership and role, please refer [Assign Membership and Role](ibm-ewm.md#assign-membership-and-role).
 * Integration User must have at least one out of 'Contributor Client Access License', 'Developer Client Access License' and 'Stakeholder Client Access License' assigned, and 'Repository' permissions should have at least one of the 'JazzUsers', 'JazzProjectAdmins' and 'JazzAdmins' marked. For step-by-step guide, please refer to [User Privileges](ibm-ewm.md#user-privileges).
 * Permissions are required for Delete and Modify attachments features. For help on how to set permission for attachments, please refer [User Privileges for Attachment Operations](ibm-ewm.md#user-privileges-for-attachment-operations).
@@ -15,7 +15,7 @@ Refer the screenshot given below for reference.
 
 <div align="center"><img src="../assets/RTC_System.png" alt="" width="1800"></div>
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 If user wants to configure EWM as source endpoint of the integration and wants to migrate entity mention details, Click [Entity mention detection configuration](ibm-ewm.md#entity-mention-detection-configuration) to learn how to configure entity mention for EWM system.
 
@@ -46,7 +46,7 @@ Map the fields between EWM and the other system to be integrated to ensure that 
 
 ## Approvals Field Configuration
 
-* **Approvals** field is supported as Read-only in OpsHub Integration Manager.
+* **Approvals** field is supported as Read-only in <code class="expression">space.vars.SITENAME</code>.
 * Here is the sample advanced mapping that can be used to access the Approvals field. The mapping should be changed based on the target field:
 
 ```xml
@@ -162,7 +162,7 @@ _**Sample queries for Criteria Configuration**_
 * Entity Mention is detected using`(?<![\w@~$^_+=\\|])(?i)\b(?:[{User_Provided_Keywords}])(?:#| #| )(\d+)\b(?![a-zA-Z~$^_+=\\|])` Regex. If there is an Entity Mention that doesn't follow this Regex rule, those Mentions won't be processed.
 * If a work item had multiple revisions simultaneously with exact modified time with millisecond precision, only one of those revisions would be processed and data loss might occur.
 * Wiki type of field is supported as Read-only text field.
-  * The list of vulnerabilities depends on OpsHub Integration Manager version, your EWM version, and its system configuration.
+  * The list of vulnerabilities depends on <code class="expression">space.vars.SITENAME</code> version, your EWM version, and its system configuration.
 Here are the known limitations of EWM REST API based connector:
 
 * For criteria configuration in string type field, 'System Criteria' Query will work only if the datatype of string field is selected as 'medium string'.
@@ -392,7 +392,7 @@ Following are the steps to generate OAuth token for IBM Engineering Workflow Man
 
 > **Note**: The behavior of "OAuth" token:
 > * The OAuth token will be expired, if it is not used for the given time duration configured in the "OAuth access token timeout" of IBM Engineering Workflow Management.
-> * Suppose the token mentioned in the System Configuration form in the OpsHub Integration Manager gets expired, then it must be updated by re-performing the above steps.
+> * Suppose the token mentioned in the System Configuration form in the <code class="expression">space.vars.SITENAME</code> gets expired, then it must be updated by re-performing the above steps.
 > * To avoid the above case, it is recommended to set the value of the "OAuth access token timeout" configuration to the maximum time duration allowed in the system.
 
 ## Criteria query in connector format

@@ -2,7 +2,7 @@
 
 ## User privileges
 
-- Create a user in Jira Align that is dedicated for OpsHub Integration Manager. This user shouldn't perform any other action from Jira Align's user interface. This user is now referred as 'Integration User' in the document further.
+- Create a user in Jira Align that is dedicated for <code class="expression">space.vars.SITENAME</code>. This user shouldn't perform any other action from Jira Align's user interface. This user is now referred as 'Integration User' in the document further.
 - The Integration User should be assigned a role that has sufficient permissions to interact with the Jira Align APIs. Below are the details for permissions required for the role assigned to integration user.
   - When Jira Align is the source endpoint:  
     > **Note**: In Jira Align, all the entity types are distributed among different levels called: administration, portfolio, solution, team, program, product. Hence, for different entities, permissions have to be given at different levels, and these levels are called 'Sections'.
@@ -127,7 +127,7 @@ If the user wants to specify conditions for synchronizing an entity from Jira Al
 
 For more details on how to configure criteria in Jira Align native query format, refer: [Jira Align Query Documentation](https://help.jiraalign.com/hc/en-us/articles/360048085774-10X-API-2-0-GET-Usage-and-Filters). The queries used in filter section in plain text can be used as criteria query.
 
-Given below are the sample snippets of how the Jira Align queries can be used as criteria query in OpsHub Integration Manager:
+Given below are the sample snippets of how the Jira Align queries can be used as criteria query in <code class="expression">space.vars.SITENAME</code>:
 
 **Criteria Samples**
 
@@ -144,7 +144,7 @@ Given below are the sample snippets of how the Jira Align queries can be used as
 Provide Query in Target Search Query field such that it is possible to search the entity in the Jira Align as the destination system. In the target search query field, the user can provide a placeholder for the source system's field value in the '@' .
 Go to **Search in Target Before Sync** on the [Integration Configuration](../integrate/integration-configuration.md) page.
 Overall, Target Lookup Query is similar to [Criteria Query](#criteria-query), except that the value part contains a field name with '@' instead of static value.
-Given below is the sample snippet of how the Jira Align queries can be used as target entity lookup query in OpsHub Integration Manager:
+Given below is the sample snippet of how the Jira Align queries can be used as target entity lookup query in <code class="expression">space.vars.SITENAME</code>:
 
 **Target Lookup Query Samples**
 

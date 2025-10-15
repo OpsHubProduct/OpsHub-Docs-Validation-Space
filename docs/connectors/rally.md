@@ -2,12 +2,12 @@
 
 ## User privileges
 
-* Create one user in Rally that is dedicated to **OpsHub Integration Manager**. This user should not do any operations from the Rally's interface.
+* Create one user in Rally that is dedicated to **<code class="expression">space.vars.SITENAME</code>**. This user should not do any operations from the Rally's interface.
 * This dedicated user must be at least **Project Admin** for each project for which the data needs to be synchronized. But if Rally is the target endpoint and the user wants to synchronize Attachments, then this dedicated user must be **Workspace Admin** for the workspace where these projects belong.
 
 > **Note**: For details on how to assign privileges to a user, refer to the section [Adding permission to user](rally.md#adding-permission-to-user).
 
-* If the user wants to use the 'API Key' Authentication mode to authenticate this user in OpsHub Integration Manager, then the API Key should have the following permissions on the particular workspace or project:
+* If the user wants to use the 'API Key' Authentication mode to authenticate this user in <code class="expression">space.vars.SITENAME</code>, then the API Key should have the following permissions on the particular workspace or project:
   * If Rally is the source system, then 'Read only' grant is required for the API key. If the user wants to write back the Remote Link/ID to Rally, then 'Full Access' grant is required.
   * If Rally is the target system, then 'Full Access' grant is required for the API key.
 
@@ -31,7 +31,7 @@ For more details on adding custom fields, refer to the section [Custom Fields](r
 
 # System Configuration
 
-Before you continue to the integration, you must first configure Rally onto OpsHub Integration Manager.
+Before you continue to the integration, you must first configure Rally onto <code class="expression">space.vars.SITENAME</code>.
 
 Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.
 
@@ -42,7 +42,7 @@ Refer to the following screenshot for reference:
 </p>
 
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 # Mapping Configuration
 
@@ -128,22 +128,22 @@ Example of XSLT for GitHub commit information to Change Set Changes:
 ## Mapping for Soft Delete Configuration
 
 * When Rally is the target system in the integration, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md)
-* After the soft delete operation is performed by OpsHub Integration Manager in Rally, the entity will be deleted in the Rally, and it can be found in the "Recycle bin" of the corresponding project, where it existed earlier.
+* After the soft delete operation is performed by <code class="expression">space.vars.SITENAME</code> in Rally, the entity will be deleted in the Rally, and it can be found in the "Recycle bin" of the corresponding project, where it existed earlier.
 * To only enable the logical delete operation in the target, "Recycled" field shall be mapped with the default value "No" in the [Delete Mode](../integrate/mapping-configuration.md#delete-mode)
 
 ## Mapping for Entity mention field
 
 * When Rally is configured as source system in the integration and its field/comment type is rich text (HTML), then the embedded entity link references will be translated as per mention sync option.
   * Rally do not have different tag format for the entity mention tag, rather rally support the insertion of entity link in rich text field.
-  * OpsHub Integration Manager will translate and synchronize those entity link references which are matching text `/#/?detail=/{entityType}/{entityId}&fdp=true` as per mention sync option configured in mapping.
+  * <code class="expression">space.vars.SITENAME</code> will translate and synchronize those entity link references which are matching text `/#/?detail=/{entityType}/{entityId}&fdp=true` as per mention sync option configured in mapping.
     * Description: "Sample text https://{rally-server-url}/#/?detail=/defect/722340630099 &fdp=true
 * Click on [**Mention Sync Setting**](../integrate/mapping-configuration.md#mention-setting) to know more about entity mention mapping and synchronization behavior in general.
 
 ## Relationship Configuration
 
 * For **User Story** entity, either User Story or Feature can be linked as a Parent in Rally:
-  * For synchronizing **User Story** entity to/from Parent field, **Parent** link type needs to be mapped in OpsHub Integration Manager.
-  * For synchronizing **Feature** entity to/from Parent field, **PortfolioItem** link type needs to be mapped in OpsHub Integration Manager.
+  * For synchronizing **User Story** entity to/from Parent field, **Parent** link type needs to be mapped in <code class="expression">space.vars.SITENAME</code>.
+  * For synchronizing **Feature** entity to/from Parent field, **PortfolioItem** link type needs to be mapped in <code class="expression">space.vars.SITENAME</code>.
 
 # Integration Configuration
 
@@ -194,11 +194,11 @@ Target LookUp configuration is similar to the Criteria Configuration where in th
 
 ## Synchronize SCM commit information to Change Set Workitem
 
-OpsHub Integration Manager supports synchronization of commit information from Source Control Management (SCM system) to Rally Change Set. These Change Set can also be linked to artifacts (for example, User Story, Defect, etc.) by integration.
+<code class="expression">space.vars.SITENAME</code> supports synchronization of commit information from Source Control Management (SCM system) to Rally Change Set. These Change Set can also be linked to artifacts (for example, User Story, Defect, etc.) by integration.
 
 For viewing Change Sets from Rally UI, build and change set configuration should be enabled. For enabling this, you can refer to [Enable Build and ChangeSet](https://techdocs.broadcom.com/content/broadcom/techdocs/us/en/ca-enterprise-software/agile-development-and-management/rally-platform-ca-agile-central/rally/using-top/check-status/view-build-status.html/#concept.dita_80d8f1075ec66fb17a4878cb3c466c4b77bb9b62_BuildandSCMTraceability-enable).
 
-Creating Change Set is not possible from the Rally UI; therefore OpsHub Integration Manager does not support polling of Change Set, only creating Change Set is supported with Rally as the target system.
+Creating Change Set is not possible from the Rally UI; therefore <code class="expression">space.vars.SITENAME</code> does not support polling of Change Set, only creating Change Set is supported with Rally as the target system.
 
 <div align="center"><img src="../assets/rallyscm.png" alt="" width="900"></div>
 
@@ -223,13 +223,13 @@ If the parent project is mapped, then the child project should not be mapped in 
 
 ## Tasks link sync for User story and Defect Entities
 
-* For Rally as the target system, OpsHub Integration Manager will not remove the task link from the User Story and Defect entities. In this case, OpsHub Integration Manager will log a warning in the sync logs to indicate that the Remove Link operation is not supported. 
+* For Rally as the target system, <code class="expression">space.vars.SITENAME</code> will not remove the task link from the User Story and Defect entities. In this case, <code class="expression">space.vars.SITENAME</code> will log a warning in the sync logs to indicate that the Remove Link operation is not supported. 
   **Reason:** Rally does not allow removing the task links from the User Story and Defect entities.
 
-## Accommodate Subscription, Workspace, or User (configured in Rally system/ Integration override user of OpsHub Integration Manager) updates in Rally
+## Accommodate Subscription, Workspace, or User (configured in Rally system/ Integration override user of <code class="expression">space.vars.SITENAME</code>) updates in Rally
 
-* In case the Rally subscription, or workspace, or user (configured in the Rally system/integration override user in OpsHub Integration Manager) is updated. To reflect these changes in OpsHub Integration Manager, the configured Rally system  [in which changes have been made] in OpsHub Integration Manager needs to be edited.
-  * **Reason:** OIM cached the above type of data for optimized performance. To accommodate the above Rally updates  [for example, any new Workspace addition/Subscription name changed/user attributes' change], this data needs to be refreshed via editing the Rally system in OpsHub Integration Manager.
+* In case the Rally subscription, or workspace, or user (configured in the Rally system/integration override user in <code class="expression">space.vars.SITENAME</code>) is updated. To reflect these changes in <code class="expression">space.vars.SITENAME</code>, the configured Rally system  [in which changes have been made] in <code class="expression">space.vars.SITENAME</code> needs to be edited.
+  * **Reason:** OIM cached the above type of data for optimized performance. To accommodate the above Rally updates  [for example, any new Workspace addition/Subscription name changed/user attributes' change], this data needs to be refreshed via editing the Rally system in <code class="expression">space.vars.SITENAME</code>.
   * **Note:** If multiple systems are configured against the same Rally instance, any one of the systems can be updated in this scenario.
 
 # Limitations
@@ -252,12 +252,12 @@ If the parent project is mapped, then the child project should not be mapped in 
 * Conflict detection is not supported for decimal field, when we set value such as "2345" to decimal field from UI, its API will return "2.345E" and conflict will be detected everytime.
 * Conflict detection is not supported for date field, because for any date you pass, API will return the date in the current workspace timezone and conflict will be detected everytime. 
   **Example:** If the date value passed to Rally (Current Workspace timezone is GMT +9) is `2020-10-14T23:00:00.000Z` then API will return `2020-10-14T15:00:00.000Z`. As we can see the time returned from the API is in GMT+9.
-* OpsHub Integration Manager doesn't support synchronization of **Closed** projects and hence only **Open** projects will be visible in the list of available projects for configuration. This implies that any entity which is a part of or is linked to a project that is in the 'closed' state will not be picked for synchronization. To overcome this limitation, reopen the project and it will be available for configuration.
+* <code class="expression">space.vars.SITENAME</code> doesn't support synchronization of **Closed** projects and hence only **Open** projects will be visible in the list of available projects for configuration. This implies that any entity which is a part of or is linked to a project that is in the 'closed' state will not be picked for synchronization. To overcome this limitation, reopen the project and it will be available for configuration.
 * **Milestone** entity of Rally is an exception for the above-mentioned case. Since the scope for the Milestone is Workspace rather than the project, it will be synchronized even if it is associated with only a closed project. 
   **However**, the associated projects field will only have a list of open projects, as Rally API doesn't provide any information regarding closed projects.
 * For Rally as the target system, if the source system has the rich text type of Wiki, then font color, background color, font family & font size will not be synced to the rich text (HTML type) fields (such as Description).
   * **Reason:** Rally API limitation for the rich text field.
-* To sync the above type of formatting, the below advanced mapping needs to be configured in the OpsHub Integration Manager:
+* To sync the above type of formatting, the below advanced mapping needs to be configured in the <code class="expression">space.vars.SITENAME</code>:
 
 ```xml
 <Description  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -268,7 +268,7 @@ If the parent project is mapped, then the child project should not be mapped in 
 </Description>
 ```
 
-* If the mapping configuration includes portfolio items as linked entity types in the relationship configuration in OpsHub Integration Manager, the workspace of the projects to be integrated in the integration configuration must be same as the workspace of the project used in the mapping configuration.
+* If the mapping configuration includes portfolio items as linked entity types in the relationship configuration in <code class="expression">space.vars.SITENAME</code>, the workspace of the projects to be integrated in the integration configuration must be same as the workspace of the project used in the mapping configuration.
   * **Reason:** Portfolio Items are defined at the workspace level in Rally.
 
 ## Milestone synchronization
@@ -385,7 +385,7 @@ Following are the steps to generate the Rally API key from any user account. If 
 When Rally is the source system of the integration: 
 In situations when synchronization is failing due to unparseable date error, it is because the date value mentioned in the **description** of revisions is in a format that is not handled in integration. Therefore, from preventing the whole synchronization to fail and synchronization to stop completely, there is a workaround that enables the user to enter the date format for which integration is failing and continue the synchronize. The steps for this workaround are given below:
 
-* Inactivate the integration that is failing and stop **OpsHub Integration Manager** server.
+* Inactivate the integration that is failing and stop **<code class="expression">space.vars.SITENAME</code>** server.
 * Create a new **environment variable** under **system variables** with:
   * **Variable name:** `OH_Rally_PortfolioItem_DateFormat`
   * **Variable value:** the date format of the date value for which polling is failing. 
@@ -395,5 +395,5 @@ In situations when synchronization is failing due to unparseable date error, it 
 > If there are multiple date formats that are not handled by integration, then provide them inside the same environment variable separated by `;` (semi-colon), for example: 
 > `EEE MMM dd HH:mm:ss z yyyy;yyyy-MM-dd HH:mm:ss.SSS`
 
-* Save the environment variable and start the **OpsHub Integration Manager** server.
+* Save the environment variable and start the **<code class="expression">space.vars.SITENAME</code>** server.
 * Now, start the integration that was stuck due to date parsing failure.

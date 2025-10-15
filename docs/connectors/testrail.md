@@ -2,7 +2,7 @@
 
 ## User privileges
 
-* Create a user in TestRail that is dedicated for OpsHub Integration Manager. Please click [here](#testrailadduser) to see how you can add a user in TestRail.
+* Create a user in TestRail that is dedicated for <code class="expression">space.vars.SITENAME</code>. Please click [here](#testrailadduser) to see how you can add a user in TestRail.
 * User must have all privileges to access web services. Please click [here](#testrailgrantpermission) to see how you can provide administrator rights to the TestRail user.
 * Set User Time Zone to GMT +0.0. Please click [here](#testrailtimezone) to see how you can set timezone for TestRail user.
 
@@ -32,7 +32,7 @@ Refer to the screenshot given below.
 | **User Password**   | Only when Authentication Type is Basic           | Provide TestRail User's password.                                                                |
 | **User API Token**  | Only when Authentication Type is API Key         | Provide TestRail User's API Key.                                                                 |
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 To generate new API key for the user, refer [Generate API key for the user](#testrailuserapikey) in appendix.
 
@@ -103,7 +103,7 @@ Query field is similar to the filters available for that entity. Please click [f
 
 # Known Behaviour
 
-* From the Test Rail version **8.0.3 (Default)** release, there are changes in its Attachment API. Because of the misbehavior in the Attachment API, attachment might not synchronize properly through OpsHub Integration Manager.
+* From the Test Rail version **8.0.3 (Default)** release, there are changes in its Attachment API. Because of the misbehavior in the Attachment API, attachment might not synchronize properly through <code class="expression">space.vars.SITENAME</code>.
 
 # Known Limitations
 
@@ -124,7 +124,7 @@ Query field is similar to the filters available for that entity. Please click [f
   * Test Plan
   * Test
 * For TestRail as a source/target system:
-  * Currently, the below mentioned formatting is supported for **Markdown fields**, and the rest formatting will not synchronize via OpsHub Integration Manager:
+  * Currently, the below mentioned formatting is supported for **Markdown fields**, and the rest formatting will not synchronize via <code class="expression">space.vars.SITENAME</code>:
     * Bold
     * Italics
     * Ordered list
