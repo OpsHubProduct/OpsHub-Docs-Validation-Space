@@ -189,12 +189,12 @@ DELETE FROM reportsdb.ReportsDBVersion WHERE version='6.11.02.00.00';
 ## Updating MSSQL 2014 or above database connector JAR
 
 **Applicable When:**
-- This update is necessary if OpsHub Integration Manager is running on MSSQL 2014 or above and currently using the connector JAR package `sqljdbc_6.0.8112.100_enu.tar.gz`.
+- This update is necessary if <code class="expression">space.vars.SITENAME</code> is running on MSSQL 2014 or above and currently using the connector JAR package `sqljdbc_6.0.8112.100_enu.tar.gz`.
 
 **Actions:**
 **Prerequisites**
-1. If the current OIM version is lower than OpsHub Integration Manager 7.143 and an upgrade to 7.172 is required, follow these steps:
-   - First, upgrade to OpsHub Integration Manager 7.143 using the old JAR file, `sqljdbc_6.0.8112.100_enu.tar.gz`.
+1. If the current OIM version is lower than <code class="expression">space.vars.SITENAME</code> 7.143 and an upgrade to 7.172 is required, follow these steps:
+   - First, upgrade to <code class="expression">space.vars.SITENAME</code> 7.143 using the old JAR file, `sqljdbc_6.0.8112.100_enu.tar.gz`.
    - After completing the migration to version 7.143, proceed with the steps mentioned below and then upgrade to version 7.172.
 
 - Locate the old JAR file `sqljdbc42.jar` in the following directories:
@@ -212,11 +212,11 @@ DELETE FROM reportsdb.ReportsDBVersion WHERE version='6.11.02.00.00';
   - Delete the existing `sqljdbc_auth.dll` located in `<INSTALLATION_PATH>/OpsHub_Resources/jre/bin`.
 
 **Reason:**
-- Flyway has been updated from version 4.2 to 10.15, and the newer version does not support the connector JAR `sqljdbc42.jar`. Therefore, it is necessary to upgrade to `mssql-jdbc-12.2.0.jre11.jar` to maintain compatibility and avoid OpsHub Integration Manager upgrade failure.
+- Flyway has been updated from version 4.2 to 10.15, and the newer version does not support the connector JAR `sqljdbc42.jar`. Therefore, it is necessary to upgrade to `mssql-jdbc-12.2.0.jre11.jar` to maintain compatibility and avoid <code class="expression">space.vars.SITENAME</code> upgrade failure.
 
 ---
 
-# Migrating OpsHub Integration Manager version to 7.181 or above
+# Migrating <code class="expression">space.vars.SITENAME</code> version to 7.181 or above
 
 ## Link rename for OpenText ALM Octane
 
@@ -224,8 +224,8 @@ DELETE FROM reportsdb.ReportsDBVersion WHERE version='6.11.02.00.00';
 - Integration configuration has failures and configuration involves OpenText ALM Octane Endpoint and any of the following relationship is configured: Originated defect, Originated feature, Originated epic, Originated user story, Originated quality story, Original defect, Original feature, Original epic, Original user story, Original quality story.
 
 **Actions:**
-- Resolve all the failures before upgrading OpsHub Integration Manager.
+- Resolve all the failures before upgrading <code class="expression">space.vars.SITENAME</code>.
 
 **Reason:**
-- Relationship link names are renamed after upgrade on OpsHub Integration Manager. So failed-entity are required to be resolved first.
+- Relationship link names are renamed after upgrade on <code class="expression">space.vars.SITENAME</code>. So failed-entity are required to be resolved first.
 

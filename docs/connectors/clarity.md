@@ -1,14 +1,14 @@
 # Prerequisites
 
 ## User Privileges
-* Create a user in Clarity that is dedicated for OpsHub Integration Manager. The user mustn't perform any other action from Clarity user interface. This user is referred as 'Integration User' in this documentation.
+* Create a user in Clarity that is dedicated for <code class="expression">space.vars.SITENAME</code>. The user mustn't perform any other action from Clarity user interface. This user is referred as 'Integration User' in this documentation.
 * To synchronize entities to and from any systems to Clarity, Integration User must have the following global access rights:
   * Create
   * View All
   * Edit All
 
 ## Custom Field Configuration
-* One field must be defined on the entity that is being synchronized. This must be set up so that OpsHub Integration Manager can track the synchronization status of each item.
+* One field must be defined on the entity that is being synchronized. This must be set up so that <code class="expression">space.vars.SITENAME</code> can track the synchronization status of each item.
 * This field's "API Attribute ID" needs to be set to "**o_ohlastUpdate**". Here is the custom field details:
 
 | **Property Name**                  | **Type** | **Size** |
@@ -19,9 +19,9 @@
 
 # System Configuration
 
-> **Note** : OpsHub Integration Manager supports basic authentication.
+> **Note** : <code class="expression">space.vars.SITENAME</code> supports basic authentication.
 
-Before the user starts with the integration configuration, he/she must first configure Clarity system in OpsHub Integration Manager.  
+Before the user starts with the integration configuration, he/she must first configure Clarity system in <code class="expression">space.vars.SITENAME</code>.  
 Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.  
 Refer to the screenshot given below:
 
@@ -47,7 +47,7 @@ Refer to the screenshot given below:
 
 * **Use case 1**: For synchronization of comments, by default the value of "enableCommentSync" is set to true for Project and Task entities as Comment synchronization is supported for those entities only. In case the user doesn't want to synchronize comments, the following configuration can be changed by setting the value of "enableCommentSync" to false using JSON input.
 * **Use case 2**: For synchronization of attachments, by default the value of "enableAttachmentSync" is set to true for all the entities. In case the user doesn't want to synchronize attachments, the following configuration can be changed by setting the value of "enableAttachmentSync" to false using JSON input.
-* **Use case 3**: Due to API limitation, OpsHub Integration Manager is not able to identify the derived object type of the custom investment object. Hence, to synchronize the Remote Entity Link for custom investment object, value for derived object type is required for parameter "customObjectType". Refer to [How to find Custom object's type](#how-to-find-custom-objects-type)  type section for more details.
+* **Use case 3**: Due to API limitation, <code class="expression">space.vars.SITENAME</code> is not able to identify the derived object type of the custom investment object. Hence, to synchronize the Remote Entity Link for custom investment object, value for derived object type is required for parameter "customObjectType". Refer to [How to find Custom object's type](#how-to-find-custom-objects-type)  type section for more details.
 
 Sample JSON input:
 
@@ -181,7 +181,7 @@ Click [Integration Configuration](../integrate/integration-configuration.md) to 
 
 **Query Samples:**
 
-* Clarity provides filters in its REST API. The same filter format needs to be specified in the criteria and filter queries in OpsHub Integration Manager.
+* Clarity provides filters in its REST API. The same filter format needs to be specified in the criteria and filter queries in <code class="expression">space.vars.SITENAME</code>.
   * **Syntax of a single filter**: ` (<attribute> <operator> <value>)`  
     > **Note**: Parenthesis is required as part of filter.
   * **Syntax to have multiple filters**: `<filter1> and/or <filter2> and/or <filter2>`
@@ -204,7 +204,7 @@ Provide Query in Target Search Query field such that it is possible to search th
 
 For example there is an use case to search an entity in Clarity(Destination system), which has the entity id of the source system in a field named 'TargetCustomField'. The source system's entity id is stored in 'source_system_id'. If the Target Search Query is given as: (TargetCustomField = '@source_system_id@'), then while processing this query @source_system_id@ will be substituted with the value of source_system_id from the source system's entity and then the query will be made to Clarity.
 
-Given below are the sample snippets of how the queries can be used as target entity lookup query in OpsHub Integration Manager:
+Given below are the sample snippets of how the queries can be used as target entity lookup query in <code class="expression">space.vars.SITENAME</code>:
 
 **Target lookup query samples:**
 
@@ -219,16 +219,16 @@ Given below are the sample snippets of how the queries can be used as target ent
 
 # Known Behaviors
 
-* Conversations are supported as comments by OpsHub Integration Manager.
+* Conversations are supported as comments by <code class="expression">space.vars.SITENAME</code>.
 * Comment synchronization is only supported for Project and Task entities.
-* Field-level attachments and documents are supported as attachments by OpsHub Integration Manager.  
+* Field-level attachments and documents are supported as attachments by <code class="expression">space.vars.SITENAME</code>.  
   **In case of Project entity**, by default, the attachments will be synced to the **Documents** section.
 * To synchronize the Remote Entity Link for the custom investment object or Tasks under the custom investment object, user needs to provide the JSON metadata.  
   For more details, refer to [Understanding JSON Input](#understanding-json-input) section.
-* Fields having lookups as user or resource in Clarity attribute configuration are considered as user-type fields in OpsHub Integration Manager.  
-  **OpsHub Integration Manager** considers only those users that are visible on the **Users** page of Clarity UI.  
+* Fields having lookups as user or resource in Clarity attribute configuration are considered as user-type fields in <code class="expression">space.vars.SITENAME</code>.  
+  **<code class="expression">space.vars.SITENAME</code>** considers only those users that are visible on the **Users** page of Clarity UI.  
   Refer to [How to find Users list](#how-to-find-users-list) section for more details.
-* Entity Mention is not supported by Clarity itself. Therefore, OpsHub Integration Manager does not support it as well.
+* Entity Mention is not supported by Clarity itself. Therefore, <code class="expression">space.vars.SITENAME</code> does not support it as well.
 
 # Known Limitations
 
@@ -247,7 +247,7 @@ Given below are the sample snippets of how the queries can be used as target ent
   > **Reason**: In Clarity, entity modified time does not get updated with addition of document.
 
 * Fields with data type `Time-varying (TSV)` are not supported.
-* Weblink synchronization is not supported by OpsHub Integration Manager.
+* Weblink synchronization is not supported by <code class="expression">space.vars.SITENAME</code>.
 
 **Inline file synchronization:**
 * **When Clarity is the source system**:

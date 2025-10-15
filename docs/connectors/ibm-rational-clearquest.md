@@ -2,12 +2,12 @@
 
 ## User privileges
 
-* Create one user of IBM Rational ClearQuest dedicated to OpsHub Integration Manager. This user shouldn't be able to do any operation from system's user interface.
+* Create one user of IBM Rational ClearQuest dedicated to <code class="expression">space.vars.SITENAME</code>. This user shouldn't be able to do any operation from system's user interface.
 * Integration user should have privileges of an 'Active User', through which they must be able to create/update records and create/execute queries.
 
 ## Enable Team Web 
 
-For OpsHub Integration Manager to integrate with IBM Rational ClearQuest, IBM Rational ClearQuest team server must be installed and running.
+For <code class="expression">space.vars.SITENAME</code> to integrate with IBM Rational ClearQuest, IBM Rational ClearQuest team server must be installed and running.
 
 ## CM API jar(s) configuration
 
@@ -26,19 +26,19 @@ Given below is the list of libraries required to put in `<OpsHub_Installation>/A
   * `C:\Program Files (x86)\IBM\RationalSDLC\ClearQuest\common`
   * `C:\Program Files (x86)\IBM\RationalSDLC\ClearQuest\cqweb\cqwebprofile\installedApps\dfltCell\TeamEAR.ear\cqweb.war\WEB-INF\lib`
 * Copy above required libraries to `<OpsHub_Installation>\AppData\bundle_config\CQ_LIB` directory.
-* Restart OpsHub Integration Manager server after copy.
+* Restart <code class="expression">space.vars.SITENAME</code> server after copy.
 
 ## API response length setting for Multiline text field(s)
 
 * IBM OSLC API truncates text for the multiline text field when the length is more than configured allowed character length (Default max length allowed is 2000) and hence require(s) to adjust the length setting so that complete text for multiline text field resulted in API response. This setting depends on the possibility of field maximum value length as per the IBM Rational ClearQuest's end user usage.
 * This settings is applicable for following case(s):
   * When any multiline text field of IBM Rational ClearQuest required to read or write. i.e. for any multiline field mapped either as source or target field.
-  * When IBM Rational ClearQuest is a source end point and the **Audit Trail Package** is enabled for the repository for which integration is configured. As audit trail text is multiline text field and it is supported as read only field in OpsHub Integration Manager when Audit Trail Package enabled in end system.
+  * When IBM Rational ClearQuest is a source end point and the **Audit Trail Package** is enabled for the repository for which integration is configured. As audit trail text is multiline text field and it is supported as read only field in <code class="expression">space.vars.SITENAME</code> when Audit Trail Package enabled in end system.
 * To override the default API setting, refer to [OSLC API Truncates Issue Of Multiline Field](https://www.ibm.com/support/pages/oslc-cm-rest-api-truncates-multiline-fields)
 
 ## Queries Configuration
 
-To integrate, OpsHub Integration Manager requires few queries to be created in IBM Rational ClearQuest that can be accessed by the integration user only.
+To integrate, <code class="expression">space.vars.SITENAME</code> requires few queries to be created in IBM Rational ClearQuest that can be accessed by the integration user only.
 
 * All the required queries need to be created under **Personal Queries** using integration user ID.
 * Queries should be named as: **\<OpsHub\_QUERYNAME> +** .
@@ -85,7 +85,7 @@ Before the user resumes the integration, he/she must first configure IBM Rationa
 
 <div align="center"><img src="../assets/CQ_Image_6a1.png" alt=""></div>
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 # Mapping Configuration
 
@@ -103,12 +103,12 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 
 When IBM Rational ClearQuest is the target system, the Default link can be configured in relationship mapping for different link types and entity types. Please refer to [Default Link Settings](../integrate/default-link-settings.md) to learn about default link usage and configuration.
 
-* Configure the personal query with dynamic filter for the user which is used in IBM Rational ClearQuest system configuration for OpsHub Integration Manager. Refer [How to Create Look Up Personal Query](clearquest.md#look-up-personal-query) section for how to configure the personal query for the default link.
+* Configure the personal query with dynamic filter for the user which is used in IBM Rational ClearQuest system configuration for <code class="expression">space.vars.SITENAME</code>. Refer [How to Create Look Up Personal Query](clearquest.md#look-up-personal-query) section for how to configure the personal query for the default link.
 * Provide the query in JSON format that corresponds to an above configured personal query as the default link query in mapping. Refer [How to Create Look Up Json Query](clearquest.md#look-up-json-query) section for more information about JSON query format.
 
 > **Note** : **The curly braces in the JSON query need to be escaped by double curly braces for the default link query**. The curly braces of dynamic expression value, i.e. field XPath like this `{SourceXML/updatedFields/Property/<field name>}` doesn't need to be escaped.
 
-Below are the sample snippets of how the JSON query can be used as the default link query in OpsHub Integration Manager.
+Below are the sample snippets of how the JSON query can be used as the default link query in <code class="expression">space.vars.SITENAME</code>.
 
 **Default Link query samples along with corresponding personal query in IBM Rational ClearQuest**
 
@@ -131,12 +131,12 @@ Below are the sample snippets of how the JSON query can be used as the default l
 
 It can be resolved by any of the following approaches:
 
-* **Add/Edit Workflow transition XML in Mapping Configuration of OpsHub Integration Manager**
-  * With this option, OpsHub Integration Manager makes the required intermediate status transition automatically as per the transition(s) configuration on the end system.
+* **Add/Edit Workflow transition XML in Mapping Configuration of <code class="expression">space.vars.SITENAME</code>**
+  * With this option, <code class="expression">space.vars.SITENAME</code> makes the required intermediate status transition automatically as per the transition(s) configuration on the end system.
   * Click [Workflow Transition](../integrate/mapping-configuration.md#workflow-transition) to learn when and how to configure workflow transition XML mapping.
 * **Change State Transition Configuration in IBM Rational ClearQuest**
-  * IBM Rational ClearQuest allows to change **State Transition** configuration. Use this configuration to configure any-to-any transition(s). Workflow transition mapping is not required to be configured in OpsHub Integration Manager if any-to-any state transition is configured.
-  * OpsHub Integration Manager will be able to perform direct transition of the state field to the desired state as this option works when any-to-any transition is configured for an integration user.
+  * IBM Rational ClearQuest allows to change **State Transition** configuration. Use this configuration to configure any-to-any transition(s). Workflow transition mapping is not required to be configured in <code class="expression">space.vars.SITENAME</code> if any-to-any state transition is configured.
+  * <code class="expression">space.vars.SITENAME</code> will be able to perform direct transition of the state field to the desired state as this option works when any-to-any transition is configured for an integration user.
   * For step-by-step instructions for configuring any-to-any transition, refer to [Configuration to allow all state transitions](clearquest.md#configuration-to-allow-all-state-transitions) section.
 
 # Integration Configuration
@@ -184,7 +184,7 @@ In addition to the above steps, follow the additional steps given below:
 
 * Provide the query in **Target Search Query** field such that it is possible to search the entity in IBM Rational ClearQuest as a target system. You can provide a placeholder for the source system's field value in the target search query field between `@`.
 * Go to the **Search in Target Before Sync** section on the [Integration Configuration](../integrate/integration-configuration.md) page to learn how to configure target lookup.
-* The target lookup query for IBM Rational ClearQuest must be in a specific JSON format defined by OpsHub Integration Manager due to a particular IBM Rational ClearQuest API behaviour. Refer to section [How to Create Look Up Json Query](clearquest.md#look-up-json-query) for details on particular JSON format.
+* The target lookup query for IBM Rational ClearQuest must be in a specific JSON format defined by <code class="expression">space.vars.SITENAME</code> due to a particular IBM Rational ClearQuest API behaviour. Refer to section [How to Create Look Up Json Query](clearquest.md#look-up-json-query) for details on particular JSON format.
 * It is required to create a personal query with dynamic filter(s) in your IBM Rational ClearQuest end system that corresponds to the JSON query given in **Target Search Query** and make sure filters in query matching with parameters and operations specified in JSON query. Refer [How to Create Look Up Personal Query](clearquest.md#look-up-personal-query) for details on personal query configuration for target lookup.
 
 Example use case:
@@ -259,8 +259,8 @@ Below is the JSON syntax for the criteria query: {"query":"Personal Queries/", "
 
 # Known Behavior
 
-* For fields that are showing read only in mapping of OpsHub Integration Manager, it is possible that such fields' Default Behavior is configured as read-only in Field Behavior section of ClearQuest Designer.
-  * Such fields are writeable if they are marked mandatory for any state in ClearQuest Designer, then they can be provided as dependent fields in Transition XML in OpsHub Integration Manager.
+* For fields that are showing read only in mapping of <code class="expression">space.vars.SITENAME</code>, it is possible that such fields' Default Behavior is configured as read-only in Field Behavior section of ClearQuest Designer.
+  * Such fields are writeable if they are marked mandatory for any state in ClearQuest Designer, then they can be provided as dependent fields in Transition XML in <code class="expression">space.vars.SITENAME</code>.
 * OIM will need 2 active connections HTTP sessions per direction for ClearQuest integration.
   * So, if ClearQuest is involved in bi-directional integration, it will require 4 active connections per integration.
   * 2 connections will be required for OIM UI regardless of number of integrations.
@@ -275,10 +275,10 @@ Below is the JSON syntax for the criteria query: {"query":"Personal Queries/", "
 # Known Limitations
 
 * When IBM Rational ClearQuest is used as source system, only mapped fields will be polled.
-* Only basic authentication is supported in OpsHub Integration Manager.
+* Only basic authentication is supported in <code class="expression">space.vars.SITENAME</code>.
 * Comments will be synchronized only for the default **Notes** fields in IBM Rational ClearQuest end system.
   * The comments will be read from the Notes field having the name, **Notes\_Log** and written to the Notes field having the name, **Note\_Entry**.
-  * If any other comment field enabled with different name, those will not be part of comments synchronization of OpsHub Integration Manager.
+  * If any other comment field enabled with different name, those will not be part of comments synchronization of <code class="expression">space.vars.SITENAME</code>.
 
 ***
 

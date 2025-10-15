@@ -31,7 +31,7 @@ Refer the screenshot given below for reference.
 5. Set **Blueprint User Name** to the admin user name of Blueprint.
 6. Set **Blueprint User Password** to the corresponding password of the user account that is used in the synchronization.
 
-> **Note**: If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+> **Note**: If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 # Integration Configuration
 In this step, set a time to synchronize data between Blueprint and the other system to be integrated. Also, define parameters and conditions, if any, for integration.
