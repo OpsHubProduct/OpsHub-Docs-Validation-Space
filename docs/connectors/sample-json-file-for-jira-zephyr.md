@@ -625,9 +625,9 @@
 # Test Plan Specific JSON Input
 * Additional fields need to be included in the JSON for Test Plans:
   * At the field level: Add the system-specific field requestFieldKey in the system-specific map for all custom fields.
-      * This is used by OpsHub Integration Manager to update Test Plan custom fields via a private API.
+      * This is used by <code class="expression">space.vars.SITENAME</code> to update Test Plan custom fields via a private API.
       * The value of requestFieldKey can be obtained by inspecting the private update API of the Test Plan from the browser for each field.
-* At the entity level: Add the system-specific field readCustomFieldsMeta in the metadata to define whether OpsHub Integration Manager can use the private API to load custom field information.
+* At the entity level: Add the system-specific field readCustomFieldsMeta in the metadata to define whether <code class="expression">space.vars.SITENAME</code> can use the private API to load custom field information.
   * Default value: true (can be explicitly set to false).
   * If set to false, the custom field ID must be provided manually.
   * Since updates for Test Plans use a private API (which requires the custom field ID), the value of readCustomFieldsMeta determines whether this ID is auto-fetched or must be provided manually.

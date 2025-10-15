@@ -99,7 +99,7 @@ Same example applies.
 
 Given below are a few sample use cases on how to model integrations and divide them into folders.
 
-Create a model for arranging integrations to be configured in OpsHub Integration Manager based on use case. Given below are some example of use case and using folders to manage integrations:
+Create a model for arranging integrations to be configured in <code class="expression">space.vars.SITENAME</code> based on use case. Given below are some example of use case and using folders to manage integrations:
 
 **1. Divide based on system combination**
 

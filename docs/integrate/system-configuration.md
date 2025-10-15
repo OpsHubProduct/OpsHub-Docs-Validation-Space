@@ -1,6 +1,6 @@
 Systems here refer to the applications such as Team Foundation Server (TFS) and JIRA that you are using in your Application Lifecycle Management (ALM) ecosystem. 
 
-In this section, you will learn how to configure a system onto OpsHub Integration Manager and how to update the system details after configuration, if required. 
+In this section, you will learn how to configure a system onto <code class="expression">space.vars.SITENAME</code> and how to update the system details after configuration, if required. 
 
 # Add a System
 
@@ -45,7 +45,7 @@ You can also directly go to the System Configuration screen by clicking the Syst
 
 # Edit System Details
 
-* If the system you want to configure to OpsHub Integration Manager is already configured, but you want to update some configuration details, you can click the pencil icon shown adjacent to the system name after you enable the edit mode in integration by clicking the icon show below. 
+* If the system you want to configure to <code class="expression">space.vars.SITENAME</code> is already configured, but you want to update some configuration details, you can click the pencil icon shown adjacent to the system name after you enable the edit mode in integration by clicking the icon show below. 
 
 <div align="center">
   <img src="../assets/System_Configuration_Image_12F.png" width="1200"/>

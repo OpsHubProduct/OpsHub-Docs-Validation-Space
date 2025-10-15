@@ -1,6 +1,6 @@
 Systems here refer to the applications such as Team Foundation Server (TFS) and JIRA that you are using in your Application Lifecycle Management (ALM) ecosystem.
 
-In this section, you will learn how to configure a system onto OpsHub Integration Manager and how to update the system details after configuration, if required.
+In this section, you will learn how to configure a system onto <code class="expression">space.vars.SITENAME</code> and how to update the system details after configuration, if required.
 
 # Basic Integration
 
@@ -68,11 +68,11 @@ Click [Mapping Configuration](mapping-configuration.md) to learn the steps to cr
 
 There are few connectors who support child project synchronization. Enabling this feature will synchronize entities from selected projects and their child projects to other system.
 
-If you have created integration with parent project mapping and later if a child project is added to that parent project in the end system, then such child projects will be automatically polled and no manual configuration changes will be required in the OpsHub Integration Manager integration.
+If you have created integration with parent project mapping and later if a child project is added to that parent project in the end system, then such child projects will be automatically polled and no manual configuration changes will be required in the <code class="expression">space.vars.SITENAME</code> integration.
 
 ## Setting up child project sync
 
-If the systems that you have mapped support child project polling, then you'll see a checkbox called **'Sync child projects'** below the name of that system in 'Synced projects' section. By default, this checkbox will be unchecked, which means it won’t poll child project's data. If you check the checkbox then OpsHub Integration Manager will read events from the parent project including all child projects, and will sync them to the target project as per the project mapping.
+If the systems that you have mapped support child project polling, then you'll see a checkbox called **'Sync child projects'** below the name of that system in 'Synced projects' section. By default, this checkbox will be unchecked, which means it won’t poll child project's data. If you check the checkbox then <code class="expression">space.vars.SITENAME</code> will read events from the parent project including all child projects, and will sync them to the target project as per the project mapping.
 
 If the checkbox is checked, this feature will be enabled for every project mapping in that integration and will be applicable to all the configured issue types.
 
@@ -118,7 +118,7 @@ Criteria Configuration helps in integration of subset of entities based on some 
 
 3. First, select **Yes** in the Configure Criteria drop-down list. Once you select **Yes** in the Configure Criteria drop-down list, two more fields, **Query** and **Select criteria storage type field**, appear. Note that it is mandatory to select values for these three fields.
 
-* In the **Query** field, enter the condition that you want OpsHub Integration Manager to consider when it synchronizes the selected entity between the source system and the destination system. For example, if you enter `PRIORITY='High'` in the Query field for this integration, it means you are instructing to synchronize only those entities that are high priority.
+* In the **Query** field, enter the condition that you want <code class="expression">space.vars.SITENAME</code> to consider when it synchronizes the selected entity between the source system and the destination system. For example, if you enter `PRIORITY='High'` in the Query field for this integration, it means you are instructing to synchronize only those entities that are high priority.
 
 > **Note** : The format in which you enter condition in the Query field will vary from one system to another. Refer the [Connectors](../connectors/connectors.md) section to learn more.
 
@@ -294,7 +294,7 @@ To update the target entity for the corresponding sync-abandoned source entity, 
      * The default value for this input will be **No**.
      * To update the target entity when the source entity is not applicable for the synchronization, this input can be configured with the **Yes** value:
        * When the entity type and/or project of an entity is modified in the source system, the entity might no longer be included in synchronization due to the following reasons:
-         * The integration configuration associated with the updated entity type and/or project is not available in OpsHub Integration Manager.
+         * The integration configuration associated with the updated entity type and/or project is not available in <code class="expression">space.vars.SITENAME</code>.
          * The integration configuration linked to the updated entity type and/or project exists with the criteria that the entity no longer satisfies.
 
 > 💡 There are certain known behaviors associated with this configuration, please refer to [Known Behaviors in Source Delete Synchronization](source-delete-synchronization.md#known-behavior) for further details.
@@ -314,7 +314,7 @@ Click the **Configure Advance** icon > Go to Advance Configuration pop-up > Sele
 
 ## Tracking Id and Link of Entities Across Systems
 
-OpsHub Integration Manager provides Remote Entity Id and Link settings that help in tracing synchronized entities across systems using their unique Ids and navigation URLs. You need to provide the names of fields in which you want to save this information.
+<code class="expression">space.vars.SITENAME</code> provides Remote Entity Id and Link settings that help in tracing synchronized entities across systems using their unique Ids and navigation URLs. You need to provide the names of fields in which you want to save this information.
 
 **Remote Entity Id Field Name** will store the unique id and **Remote Entity Link Field Name** will store the navigation URL of the corresponding entity in the other system.
 
@@ -362,15 +362,15 @@ Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > 
 </p>
 
 
-**The Search In Target Before Sync** feature allows OpsHub Integration Manager to search whether the selected entities from the source system already exist in the target system, and if yes, then what is the course of action that should be followed.
+**The Search In Target Before Sync** feature allows <code class="expression">space.vars.SITENAME</code> to search whether the selected entities from the source system already exist in the target system, and if yes, then what is the course of action that should be followed.
 
-This feature is generally recommended when synchronization between systems being integrated was tried earlier either manually or by any other tool and user still wants to keep those synchronized entities in the integration with OpsHub Integration Manager without creating their duplicate entries. 
+This feature is generally recommended when synchronization between systems being integrated was tried earlier either manually or by any other tool and user still wants to keep those synchronized entities in the integration with <code class="expression">space.vars.SITENAME</code> without creating their duplicate entries. 
 Search can be configured to be done on any target system field which holds values similar to any one source system field or transformed fields from mapping. For example, entity id of source system is stored in **Original Entity ID** field in the target system, search can be configured on **Original Entity ID** field.
 
 > **Note** : The priority will be given to the source system field value. If the field is not found in the source system, then the transformed fields from mapping will be used.
 
-If you select **No** from the **Search In Target Before Sync** drop-down field, then OpsHub Integration Manager will synchronize entities normally and create them on target if it was not already synchronized. 
-If you select **Yes**, you will have to define the course of action that OpsHub Integration Manager should take when matching entities are found in the source and the target systems.
+If you select **No** from the **Search In Target Before Sync** drop-down field, then <code class="expression">space.vars.SITENAME</code> will synchronize entities normally and create them on target if it was not already synchronized. 
+If you select **Yes**, you will have to define the course of action that <code class="expression">space.vars.SITENAME</code> should take when matching entities are found in the source and the target systems.
 
 Once you select **Yes**, the following fields will appear. You need to enter appropriate data in these fields as described below.
 
@@ -388,15 +388,15 @@ Once you select **Yes**, the following fields will appear. You need to enter app
 4. **What if multiple entities found in Target System matching above Query?** 
    Here you can define the action to be taken when there are multiple entities found in the target system matching query provided above in **Target Search Query**. Select appropriate options from the drop-down list.
    * **Continue with the first entity found**: Select **Continue with the first entity found** if you want to update the first entity from the multiple matching entities found in the target system.
-   * **Fail the sync**: Select **Fail the sync** if you want OpsHub Integration Manager to notify that multiple entities exist in target system and fail the sync in this case.
+   * **Fail the sync**: Select **Fail the sync** if you want <code class="expression">space.vars.SITENAME</code> to notify that multiple entities exist in target system and fail the sync in this case.
 5. **Continue sync to the entity matching above query**: 
    Here you can define the behavior you want for the matching entity found in the target system. Select appropriate options from the drop-down list.
-   * **Yes**: Select **Yes** if you want OpsHub Integration Manager to update the existing entity in the target system.
-   * **No**: Select **No** if you want OpsHub Integration Manager to skip the source event to be synchronized to the target system.
+   * **Yes**: Select **Yes** if you want <code class="expression">space.vars.SITENAME</code> to update the existing entity in the target system.
+   * **No**: Select **No** if you want <code class="expression">space.vars.SITENAME</code> to skip the source event to be synchronized to the target system.
 6. **If no entity found matching above query**: 
    Here you can define the behavior that you want when there is no matching entity found in target system. Select appropriate options from the drop-down list.
    * **Create new entity in the target**: Select this option if you want to create a new entity in the target field if the search query doesn't yield any matching results.
-   * **Skip the event**: Select this option if you want OpsHub Integration Manager to ignore the search information and not take any action.
+   * **Skip the event**: Select this option if you want <code class="expression">space.vars.SITENAME</code> to ignore the search information and not take any action.
 
 ## Workflow Association
 
@@ -406,7 +406,7 @@ Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > 
   <img src="../assets/Integration_Configuration_Image_11a.png" width="600" />
 </p>
 
-OpsHub Integration Manager provides default workflow, which comes with default installation. If you want a customized workflow, please contact your sales/support point of contact.
+<code class="expression">space.vars.SITENAME</code> provides default workflow, which comes with default installation. If you want a customized workflow, please contact your sales/support point of contact.
 
 * Select **Create** option if you don't want to synchronize new entities created in the source system.
 * Select **Update** option if you don't want to synchronize those entities that are updated in the source system.
@@ -417,7 +417,7 @@ Click the **Integrate** button to complete the integration process.
 
 * The **Event Detection & Generation** feature is used to generate the events for the attributes/fields, which do not generate any history on entity updates.
 * Many systems have the calculated attributes/fields, which are calculated at runtime.
-  * For example, few systems have entity/artifact's placement data, which can be calculated at the runtime. Such field data can be changed due to reordering of entity/artifact (However, such reordering does not change the Last Modified Time in the system). Hence, by enabling this feature, OpsHub Integration Manager can keep track of such attributes/fields and update entity in source system to generate the events for synchronization purpose.
+  * For example, few systems have entity/artifact's placement data, which can be calculated at the runtime. Such field data can be changed due to reordering of entity/artifact (However, such reordering does not change the Last Modified Time in the system). Hence, by enabling this feature, <code class="expression">space.vars.SITENAME</code> can keep track of such attributes/fields and update entity in source system to generate the events for synchronization purpose.
 
 **Supported Connectors**
 
@@ -430,8 +430,8 @@ Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > 
 | Input Name                  | Visible when                                          | Description                                                                                                                                          |
 | --------------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Configure Event Detection   | Source system supports the feature.                   | Select Yes if you want to enable the event detection of the events, which do not generate history on update; otherwise, select No.                   |
-| Event Detection Field Name  | Yes is selected for 'Configure Event Detection' input | Select a field for event detection. If this field is modified, OpsHub Integration Manager will generate additional update on the entity.             |
-| Event Generation Field Name | Yes is selected for 'Configure Event Detection' input | Select a field to perform an update. OpsHub Integration Manager will update this field to generate the history for data sync. OIM will overwrite it. |
+| Event Detection Field Name  | Yes is selected for 'Configure Event Detection' input | Select a field for event detection. If this field is modified, <code class="expression">space.vars.SITENAME</code> will generate additional update on the entity.             |
+| Event Generation Field Name | Yes is selected for 'Configure Event Detection' input | Select a field to perform an update. <code class="expression">space.vars.SITENAME</code> will update this field to generate the history for data sync. OIM will overwrite it. |
 
 > **Note** : Additional user credentials are required if the integration runs on the **history based synchronization**. Please check the respective connectors' documentation to check the user inputs.
 
@@ -475,7 +475,7 @@ Select a single integration, then click the **Options** button to perform the fo
 * **Delete Integration**: Delete the selected integration
 * **Configure** [**Reconciliation**](reconcile.md): Set reconciliation rules
 * **Clone Integration**: Create a copy of the selected integration
-* **Failure Notification**: Allow OpsHub Integration Manager to send failure notifications after the integration is active
+* **Failure Notification**: Allow <code class="expression">space.vars.SITENAME</code> to send failure notifications after the integration is active
 * **Activate/Inactivate Integration**: Activate or Inactivate the selected integration
 * **Execute Integration**: Click this to trigger the sync job for the selected integration manually
 *   **Execute Delete Integration**: Click this to trigger the delete job for selected integration manually

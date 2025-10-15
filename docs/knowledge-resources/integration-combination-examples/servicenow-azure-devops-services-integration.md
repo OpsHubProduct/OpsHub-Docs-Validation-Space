@@ -51,7 +51,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 
 ## Select Projects and Entities
 
->**Note**: If you receive the following error: **PKIX certification path not found** and the projects and entities don’t load properly, then [import SSL certificate](../../getting-started/ssl-certificate-configuration.md) onto OpsHub Integration Manager’s Java KeyStore before you proceed.
+>**Note**: If you receive the following error: **PKIX certification path not found** and the projects and entities don’t load properly, then [import SSL certificate](../../getting-started/ssl-certificate-configuration.md) onto <code class="expression">space.vars.SITENAME</code>’s Java KeyStore before you proceed.
 
 * In the **Add Project(s) to Sync** section, select the projects you want to synchronize between Azure DevOps Server (TFS) and Micro Focus ALM by clicking them. For example, here we select **Demo Project** from Azure DevOps Server (TFS) and **Demo Project** from Micro Focus ALM.
 * Once the projects are selected, define the source project and target project:

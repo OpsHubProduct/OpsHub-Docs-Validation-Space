@@ -3,7 +3,7 @@
 Reconciliation feature helps reconcile data for fields added in integration. Primary use of this feature is to reconcile existing data in the end system after changing mapping, for example after adding new field, link type, enabling attachment, etc.  
 Some of the use cases where this feature can be used are:
 1. The user wants to add field(s) that was previously not integrated, but now the user would like it to be integrated. But the user also does not want to perform any mass update on all other entities existing in the source system so that the value of only the newly added field is integrated.  
-2. The user may already be using OpsHub Integration Manager for sync and the data got into an inconsistent state, either due to bad failure management or inappropriate conflict resolution. And now, the user wants to reconcile both the systems to achieve a consistent state.  
+2. The user may already be using <code class="expression">space.vars.SITENAME</code> for sync and the data got into an inconsistent state, either due to bad failure management or inappropriate conflict resolution. And now, the user wants to reconcile both the systems to achieve a consistent state.  
 
 An important point to remember is that Reconciliation is not Integration or Migration, and hence should not be confused with them.
 

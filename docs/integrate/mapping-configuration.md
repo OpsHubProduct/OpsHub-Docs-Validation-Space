@@ -4,7 +4,7 @@ Mapping is the process of defining the fields that are to be integrated between 
 
 In this section, you will learn how to configure a mapping between two systems and how to update or edit the mapping after configuration, if required.
 
-If the systems you want to map are not configured onto OpsHub Integration Manager, click the plus buttons [+] adjacent to System 1 and System 2 fields to configure the systems. Follow the steps given on [System Configuration](system-configuration.md) page to learn the steps to configure a system.
+If the systems you want to map are not configured onto <code class="expression">space.vars.SITENAME</code>, click the plus buttons [+] adjacent to System 1 and System 2 fields to configure the systems. Follow the steps given on [System Configuration](system-configuration.md) page to learn the steps to configure a system.
 
 In the image below, we show TFS and JIRA selected as the two systems.
 
@@ -34,7 +34,7 @@ Once you select the systems involved in integration, other relevant fields such 
 
 * From the **Project** drop-down lists, select the project that you want to integrate. For example, we select DemoProject in JIRA.
 * From the **Issue/Entity Type** drop-down lists, select the relevant entity within the project that you want to integrate. For example, we select Bug in both the systems.
-* Click the **Auto Map** button if you want OpsHub Integration Manager to automatically map the system fields with similar names. You can also additionally map more fields once Auto Mapping is completed.
+* Click the **Auto Map** button if you want <code class="expression">space.vars.SITENAME</code> to automatically map the system fields with similar names. You can also additionally map more fields once Auto Mapping is completed.
 
 <p align="center">
   <img src="../assets/Mapping_Configuration_Image_3.png" width="1500">
@@ -59,14 +59,14 @@ Fields can be mapped for two different modes using the toggle button.
 ## **Delete Mode**
 
 * The fields configured in this mode will be used for the synchronization of Delete type of events
-* OpsHub Integration Manager cannot fetch any data from the end system for the entity which is deleted in the source system. Hence, [Default Target Field Mapping](mapping-configuration.md#default-target-field-mapping) shall be done for each of the target fields to be mapped.
+* <code class="expression">space.vars.SITENAME</code> cannot fetch any data from the end system for the entity which is deleted in the source system. Hence, [Default Target Field Mapping](mapping-configuration.md#default-target-field-mapping) shall be done for each of the target fields to be mapped.
   * For more insights on the state of the source entity regarding Delete configuration, a read-only field named "OH Deletion Type" will be available:
     * This field will be of Lookup type.
     * Possible values for this field are as follows:
       * **NOT_ACCESSIBLE:**
-        * An entity will be tagged as "NOT_ACCESSIBLE" if it is deleted or OpsHub Integration Manager is unable to access it due to insufficient permissions.
+        * An entity will be tagged as "NOT_ACCESSIBLE" if it is deleted or <code class="expression">space.vars.SITENAME</code> is unable to access it due to insufficient permissions.
       * **NOT_APPLICABLE:**
-        * An entity will be tagged as "NOT_APPLICABLE" if it has been moved to a project or entity type, whose configuration does not exist either in OpsHub Integration Manager or has certain criteria enabled. Moreover, that entity no longer meets the criteria.
+        * An entity will be tagged as "NOT_APPLICABLE" if it has been moved to a project or entity type, whose configuration does not exist either in <code class="expression">space.vars.SITENAME</code> or has certain criteria enabled. Moreover, that entity no longer meets the criteria.
 * Three types of fields can be mapped to perform **Logical**, **Soft Delete**, and/or **Archive Operations** in this mode:
   1. The fields of the target entity to be updated to represent the **Logical Delete**
   2. The field to perform **Soft Delete** of the target entity
@@ -145,7 +145,7 @@ Here is how the mapping will look like:
 ## Value mapping using the Same As Integration option
 
 * This option is available only for the "Projects" field.
-* The project mapping is defined at the integration level in OpsHub Integration Manager. If there are no intended modifications in the project field's value mapping, the "Same as Integration" option within the value mapping can be used. This will avoid redundant project value mappings for the "Projects" field.
+* The project mapping is defined at the integration level in <code class="expression">space.vars.SITENAME</code>. If there are no intended modifications in the project field's value mapping, the "Same as Integration" option within the value mapping can be used. This will avoid redundant project value mappings for the "Projects" field.
 
 <p align="center">
   <img src="../assets/Same_As_Integration.png" width="600">
@@ -203,7 +203,7 @@ Here is how the mapping will look like:
 
 * Any field mapping created is saved in the XSLT language.
 * View/Edit XSLT Configurations can be used to change the default mapping XSLT. Click ![XSLT Icon](../assets/XSLT_icon_blue.png) to change the default behaviour of a particular field mapping.
-* User can customize default mapping XSLT using Advance mapping. For Advance mapping, OpsHub Integration Manager has some Utilities available. Refer to [Advance Mapping Utility](advance-mapping-utility.md) for Utilities.
+* User can customize default mapping XSLT using Advance mapping. For Advance mapping, <code class="expression">space.vars.SITENAME</code> has some Utilities available. Refer to [Advance Mapping Utility](advance-mapping-utility.md) for Utilities.
 
 ## Defining Unicode for Element names
 
@@ -256,12 +256,12 @@ You can map attachments, comments and relationships between System 1 and System 
 
 ## Synchronization behavior of reference field(s)
 
-* The first synchronization will be performed based on the ID of the target entity synced by OpsHub Integration Manager.
+* The first synchronization will be performed based on the ID of the target entity synced by <code class="expression">space.vars.SITENAME</code>.
 * If no matching entity is found in the above step, then the synchronization will be performed based on the name of the entity.
 
 ## Synchronize default target value for reference field
 
-* To synchronize "default target value" (irrespective of source field value) for the reference field, the advance mapping can be configured in OpsHub Integration Manager mapping.
+* To synchronize "default target value" (irrespective of source field value) for the reference field, the advance mapping can be configured in <code class="expression">space.vars.SITENAME</code> mapping.
 * To perform this, `defaultTargetId` element needs to be mentioned in the advanced mapping of reference field.
 * If the user has mentioned target internal id in the advance mapping and no entity match is found based on id and name based lookup, then this default value will be synchronized to the target end-system.
 
@@ -368,7 +368,7 @@ The following video shows how to configure comments synchronization during integ
 
 * Slide the button adjacent to **Comments** to the right to map comments.
 * The comments mapping will automatically enable comment author impersonation for supported systems. For more details, refer to Read the [Comment Author Impersonation](comment-author-impersonation.md) section.
-* Comment time impersonation is not supported by OpsHub Integration Manager via comment mapping.
+* Comment time impersonation is not supported by <code class="expression">space.vars.SITENAME</code> via comment mapping.
 
 <p align="center">
   <img src="../assets/Mapping_Configuration_Image_21F2.PNG"  width="700"/>
@@ -467,11 +467,11 @@ Read in detail about [Default Link Settings](default-link-settings.md) here.
 
 # Workflow Transition
 
-**Workflow transition** is a feature supported by OpsHub Integration Manager wherein the user can configure OpsHub Integration Manager to automatically handle workflow transition of an entity as per requirement.
+**Workflow transition** is a feature supported by <code class="expression">space.vars.SITENAME</code> wherein the user can configure <code class="expression">space.vars.SITENAME</code> to automatically handle workflow transition of an entity as per requirement.
 
 For example, consider a system in which Transition Workflow exists, a certain state is only accessible from a certain specific state or a new item can only exist in a new default state. Another example can be a requirement in which a state a field has to be assigned a value. If the value for that field is not assigned in that specific state, then it will result into error. In such circumstances, synchronizing entities from a system that does not enforce Transition Workflow to the target system is cumbersome.
 
-To solve this problem, OpsHub Integration Manager allows the user to configure Workflow Transition Handling. Some systems provide workflow transition information through API. For these systems, the workflow transition information is picked from the API by default. Irrespective of the availability of the workflow transition through API, user can configure Workflow Transition by providing the information through XSL.
+To solve this problem, <code class="expression">space.vars.SITENAME</code> allows the user to configure Workflow Transition Handling. Some systems provide workflow transition information through API. For these systems, the workflow transition information is picked from the API by default. Irrespective of the availability of the workflow transition through API, user can configure Workflow Transition by providing the information through XSL.
 
 * Slide the button adjacent to **Workflow Transition** to the right.
 * Click the (</>) icon to edit the workflow transition XSL. A default sample XSL is loaded using which a user can build his own XSL as per his requirement.
@@ -488,11 +488,11 @@ To solve this problem, OpsHub Integration Manager allows the user to configure W
 
 * Given below is the template for Advance Transition XSL.
 
-**Workflow transition** is a feature supported by OpsHub Integration Manager wherein the user can configure OpsHub Integration Manager to automatically handle workflow transition of an entity as per requirement.
+**Workflow transition** is a feature supported by <code class="expression">space.vars.SITENAME</code> wherein the user can configure <code class="expression">space.vars.SITENAME</code> to automatically handle workflow transition of an entity as per requirement.
 
 For example, consider a system in which Transition Workflow exists, a certain state is only accessible from a certain specific state or a new item can only exist in a new default state. Another example can be a requirement in which a state a field has to be assigned a value. If the value for that field is not assigned in that specific state, then it will result into error. In such circumstances, synchronizing entities from a system that does not enforce Transition Workflow to the target system is cumbersome.
 
-To solve this problem, OpsHub Integration Manager allows the user to configure Workflow Transition Handling. Some systems provide workflow transition information through API. For these systems, the workflow transition information is picked from the API by default. Irrespective of the availability of the workflow transition through API, user can configure Workflow Transition by providing the information through XSL.
+To solve this problem, <code class="expression">space.vars.SITENAME</code> allows the user to configure Workflow Transition Handling. Some systems provide workflow transition information through API. For these systems, the workflow transition information is picked from the API by default. Irrespective of the availability of the workflow transition through API, user can configure Workflow Transition by providing the information through XSL.
 
 * Slide the button adjacent to **Workflow Transition** to the right.
 * Click the (</>) icon to edit the workflow transition XSL. A default sample XSL is loaded using which a user can build his own XSL as per his requirement.
@@ -562,7 +562,7 @@ To solve this problem, OpsHub Integration Manager allows the user to configure W
       * `<fieldName>` : field internal name that is a dependent field.
         &#xNAN;_&#x49;f Comment is mandatory for the transition, user can mention `OH_Dependent_Comments` as a dependent field in XML._
       * `<possibleTargetValues>` : These values are the values that are available after the field is transformed to `<targetValue>`.
-        * `<possibleValue>` : Used for pre-validation of the possible values available in the target end system. Optional. If specified, OpsHub Integration Manager will validate and fail if incoming value is not in this list.
+        * `<possibleValue>` : Used for pre-validation of the possible values available in the target end system. Optional. If specified, <code class="expression">space.vars.SITENAME</code> will validate and fail if incoming value is not in this list.
       * `<defaultValue>` : Default value that is to be selected from the list of possible values. If this is not defined then the first `<possibleValue>` is selected.
       * `<defaultValues>` : Default values that are to be selected when the field type is multi-valued.
         * `<string>` : When your field type is multi-valued, provide multiple values as: `<string>value</string>`
@@ -603,7 +603,7 @@ To solve this problem, OpsHub Integration Manager allows the user to configure W
 > **Note** : All the values provided for Advance Transition XSL are related to the target system.
 > **Note** : `<fromField>` and `<toField>` refer to the same field, provided end system's transition flow is configured on a single transition field. Otherwise, they refer to different fields as per the end system's transition flow.
 
-* If the Workflow Transition is configured, then during the integration, the transition of entities based on incoming values is done automatically by OpsHub Integration Manager. This makes it easier to synchronize such systems.
+* If the Workflow Transition is configured, then during the integration, the transition of entities based on incoming values is done automatically by <code class="expression">space.vars.SITENAME</code>. This makes it easier to synchronize such systems.
 * Now, click **Create Mapping** button to create the mapping.
 
 ## Workflow Transition Example
@@ -615,7 +615,7 @@ Suppose the possible status transition(s) of Jira system is:
 * Active → Resolved
 * Resolved → Closed
 
-Below is workflow transition XML configuration sample for OpsHub Integration Manager for above possible end system transitions.
+Below is workflow transition XML configuration sample for <code class="expression">space.vars.SITENAME</code> for above possible end system transitions.
 
 ```xml
 <FieldTransitions>
@@ -661,7 +661,7 @@ Below is workflow transition XML configuration sample for OpsHub Integration Man
 * Source comments:
   * Comment 1: "Comment added for testing1"
   * Comment 2: "Comment added for testing2"
-* Target system: New => Close is not allowed. Transition needs to be performed as New => Active => Close. For New => Active and Active => Close transitions the comments are mandatory, hence, the `OH_Dependent_Comments` is configured in OpsHub Integration Manager.
+* Target system: New => Close is not allowed. Transition needs to be performed as New => Active => Close. For New => Active and Active => Close transitions the comments are mandatory, hence, the `OH_Dependent_Comments` is configured in <code class="expression">space.vars.SITENAME</code>.
 
 **--- After the sync ---**
 
@@ -675,9 +675,9 @@ Below is workflow transition XML configuration sample for OpsHub Integration Man
 
 ## Overview
 
-**Mention Synchronization** is a feature supported by **OpsHub Integration Manager** which allows users to synchronize the entity mentioned and user mentioned data from source end system to target end system.
+**Mention Synchronization** is a feature supported by **<code class="expression">space.vars.SITENAME</code>** which allows users to synchronize the entity mentioned and user mentioned data from source end system to target end system.
 
-End user can edit this **Mention Setting** in **OpsHub Integration Manager** to configure the mention sync option. This configuration is applicable to synchronization of entity mentioned. **OpsHub Integration Manager** supports three ways to synchronize the entity mentioned data to target end system.
+End user can edit this **Mention Setting** in **<code class="expression">space.vars.SITENAME</code>** to configure the mention sync option. This configuration is applicable to synchronization of entity mentioned. **<code class="expression">space.vars.SITENAME</code>** supports three ways to synchronize the entity mentioned data to target end system.
 
 ## Mention Configuration
 
@@ -690,7 +690,7 @@ End user can edit this **Mention Setting** in **OpsHub Integration Manager** to 
 * **Option3: Mentioned target entity (if found) else redirection via opshub**
   This option will synchronize the entity mentioned in the target system if the target system supports the entity mention. Otherwise, this option will synchronize the target entity link. If the mentioned entity is not synchronized to the target system, then this option will synchronize the OpsHub redirection URL to redirect to the desired (source or target) entity whenever the user clicks on this URL. For this option, it is mandatory to provide the **OpsHub Base URI** against OpsHub system, otherwise sync error will be encountered.
 
-> **Note** : In case the redirection via OpsHub option is set in the Mention Setting of the **OpsHub Integration Manager** mapping, then if the requests by a particular client (host) exceed the threshold request count within threshold time, then further requests from same client will result in HTTP error "429 Too many requests". This error indicates that further requests from this client will be blocked for a predefined interval. Refer to the response header(s) for more details or contact OpsHub support in case any configuration changes are required for this setting.
+> **Note** : In case the redirection via OpsHub option is set in the Mention Setting of the **<code class="expression">space.vars.SITENAME</code>** mapping, then if the requests by a particular client (host) exceed the threshold request count within threshold time, then further requests from same client will result in HTTP error "429 Too many requests". This error indicates that further requests from this client will be blocked for a predefined interval. Refer to the response header(s) for more details or contact OpsHub support in case any configuration changes are required for this setting.
 
 **Mention Prefix Text**
 
@@ -699,10 +699,10 @@ End user can edit this **Mention Setting** in **OpsHub Integration Manager** to 
 ### How to Enable Entity Mention Sync for Existing Mapping
 
 * Applicable when source system is any of the [**supported connector(s)**](mapping-configuration.md#supported-connectors):
-  * Edit **OpsHub Integration Manager** mapping and remap the field(s) where the source field type is Rich Text (HTML or Wiki) and remap comments.
-  * Edit **OpsHub Integration Manager** mapping and remap comments.
+  * Edit **<code class="expression">space.vars.SITENAME</code>** mapping and remap the field(s) where the source field type is Rich Text (HTML or Wiki) and remap comments.
+  * Edit **<code class="expression">space.vars.SITENAME</code>** mapping and remap comments.
 
-> **Note** : To enable entity mention synchronization for supported systems, it is required to remap applicable field(s) and comments after upgrading **OpsHub Integration Manager** to version 7.146 or above. Otherwise, mentioned entity ID of source will sync to the target system. Additionally, further updates from corresponding target field will overwrite the source mentioned entity with source mentioned ID.
+> **Note** : To enable entity mention synchronization for supported systems, it is required to remap applicable field(s) and comments after upgrading **<code class="expression">space.vars.SITENAME</code>** to version 7.146 or above. Otherwise, mentioned entity ID of source will sync to the target system. Additionally, further updates from corresponding target field will overwrite the source mentioned entity with source mentioned ID.
 
 ## Mention Sync Setting View
 
@@ -745,7 +745,7 @@ Say, for example, if the rich text field **description** of the source end syste
 ## Entity Mention Sync Behaviour
 
 * If source system supports entity mention, but the target system does not support it:
-  * Mentioned entity from the source system will sync to the target system, as per the mention sync option configured in **OpsHub Integration Manager**.
+  * Mentioned entity from the source system will sync to the target system, as per the mention sync option configured in **<code class="expression">space.vars.SITENAME</code>**.
   * It is recommended to configure either Option 1 or Option 2. Otherwise, the following sync failure will occur:
     `"entity mention synchronization with opshub redirection url is not supported for the target end system, so to retry this failure edit the mapping to change the mention sync setting to other than opshub redirection url."`
 * If source mapped field supports entity mention, but target mapped field does not:
@@ -759,15 +759,15 @@ Say, for example, if the rich text field **description** of the source end syste
 ## Entity Mention Sync Limitation
 
 * Bidirectional sync of the Entity Mention is **not supported** in the below-mentioned cases:
-  * If "sync Source Id" option is configured in the mention setting in **OpsHub Integration Manager**.
+  * If "sync Source Id" option is configured in the mention setting in **<code class="expression">space.vars.SITENAME</code>**.
     * In this case, any updates from the target field will overwrite the source mentioned entity tag with source mentioned entity ID.
-  * If source system rich-text field is mapped with text type field of the target system in **OpsHub Integration Manager**.
+  * If source system rich-text field is mapped with text type field of the target system in **<code class="expression">space.vars.SITENAME</code>**.
     * In this case, updates from target field will overwrite the source mentioned entity tag with value from target irrespective of mention sync option configured.
   * When integration is running in reconciliation mode then entity mention synchronization is supported only for the [**supported connector(s)**](mapping-configuration.md#supported-connectors).
 
 ### Supported Connector(s)
 
-Entity mention sync is supported only when the following systems are configured as the source in **OpsHub Integration Manager**:
+Entity mention sync is supported only when the following systems are configured as the source in **<code class="expression">space.vars.SITENAME</code>**:
 
 1. [**Team Foundation Server ALM and Azure DevOps Services**](../connectors/team-foundation-server.md#mapping-for-entity-mention-field)
 2. [**Codebeamer**](../connectors/codebeamer.md#mapping-for-entity-mention-field)
@@ -1035,10 +1035,10 @@ Refer to the [Relationship configuration](mapping-configuration.md#relationships
 
 1. Rank Synchronization will be considered for the entities within same project.
 2. Reconciliation is not supported for Rank Synchronization.
-3. Conflict is not supported for **OH Enable Rank** field. OpsHub Integration Manager will always consider "Source win" policy for this field.
+3. Conflict is not supported for **OH Enable Rank** field. <code class="expression">space.vars.SITENAME</code> will always consider "Source win" policy for this field.
 4. If **OH Enable Rank** field is added to an already running integration: Rank Synchronization will keep maintaining the Rank for the entities being processed after the mapping change.
 5. If **OH Enable Rank** field is removed from a running integration: Rank Synchronization will not maintain the Rank for new entities being processed after the mapping change. For already processed entities, the Rank will be maintained if any of the adjacent entity's mapping configuration has the Rank synchronization enabled.
-   * For example, two integrations are running with Rank Synchronization enabled for issue type "A" and "B". If user disables the Rank synchronization for only entity type "B", the processing of entities of type "A" will maintain the Rank for already synchronized (and all adjacent) entities of Type "B". If user disables the **OH Enable Rank** field for both entity types "A" and "B" mapping configurations, then OpsHub Integration Manager will not process Rank Synchronization for both entity types.
+   * For example, two integrations are running with Rank Synchronization enabled for issue type "A" and "B". If user disables the Rank synchronization for only entity type "B", the processing of entities of type "A" will maintain the Rank for already synchronized (and all adjacent) entities of Type "B". If user disables the **OH Enable Rank** field for both entity types "A" and "B" mapping configurations, then <code class="expression">space.vars.SITENAME</code> will not process Rank Synchronization for both entity types.
    * This behaviour will be revised in future OIM release.
 
 > **Note** : Please refer to the respective connector document to check on connector limitations for Rank Synchronization.
@@ -1078,7 +1078,7 @@ State changed from [Proposed] to [Active]
     </p>
 
 4. Here, the comment type and comment body format can be configured for each field mapped with **OH Comment** field.
-5. To configure the comment body format, OpsHub Integration Manager provides special tokens as mentioned below to access various values of the source field:
+5. To configure the comment body format, <code class="expression">space.vars.SITENAME</code> provides special tokens as mentioned below to access various values of the source field:
    * `@field_name@`: This token is used to access the display name of the source field.
    * `@old_value@`: This token is used to access the old value of the source field.
    * `@new_value@`: This token is used to access the new value of the source field.
@@ -1096,7 +1096,7 @@ State changed from [Proposed] to [Active]
 
 ## Overview
 
-* In certain scenarios, the target entity cannot undergo further updates, when it is in a closed/done state or resides within an archived folder. Consequently, attempts by OpsHub Integration Manager to update such entities will result in processing failures.
+* In certain scenarios, the target entity cannot undergo further updates, when it is in a closed/done state or resides within an archived folder. Consequently, attempts by <code class="expression">space.vars.SITENAME</code> to update such entities will result in processing failures.
 * To address such cases, updates on the target entity can be restricted. "OH Update Target" field can be utilized for the same.
 
 ## Configuration
@@ -1122,7 +1122,7 @@ Expand the pop-up by clicking the arrow icon.
 
 From the **Detect Conflict** drop-down list:
 
-* Select **Do not detect conflict** when you don't want OpsHub Integration Manager to detect and notify a conflict between the select entities in System 1 and System 2.
+* Select **Do not detect conflict** when you don't want <code class="expression">space.vars.SITENAME</code> to detect and notify a conflict between the select entities in System 1 and System 2.
 * Select **Endpoint 1 wins** when you want System 1 to be allowed to overwrite the information in System 2.
 * Select **Endpoint 2 wins** when you want System 2 to be allowed to overwrite the information in System 1.
 * Select **Manual** when you want the user to manually take an action to resolve the conflict.

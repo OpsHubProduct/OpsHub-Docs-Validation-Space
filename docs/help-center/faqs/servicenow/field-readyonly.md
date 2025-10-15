@@ -1,6 +1,6 @@
 ## Description
 
-This behavior is applicable when a field is editable in ServiceNow UI but it is shown as 'Read Only' in OpsHub Integration Manager in mapping configuration.
+This behavior is applicable when a field is editable in ServiceNow UI but it is shown as 'Read Only' in <code class="expression">space.vars.SITENAME</code> in mapping configuration.
 
 ## Cause
 

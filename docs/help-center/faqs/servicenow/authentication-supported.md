@@ -1,6 +1,6 @@
 ## Description
 
-This describes how OpsHub Integration Manager makes connection to ServiceNow.
+This describes how <code class="expression">space.vars.SITENAME</code> makes connection to ServiceNow.
 
 ## Solution
 

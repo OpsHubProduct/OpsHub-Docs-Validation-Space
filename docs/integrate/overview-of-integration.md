@@ -41,7 +41,7 @@ Each system has its own set of synchronization limitations. Please refer to the 
 
 Additionally, there are a few limitations that are common across all connectors. Those limitations are listed below:
 
-- Inline image from an entity of the source system synchronizes as broken image to the target system, given that the embedded inline image URL in the source system is not accessible/reachable from the machine on which **OpsHub Integration Manager** is installed while the entity is being synchronized. In this case, the inline image synchronized to the target system without transformation to URL corresponds to the target system and as a result, the synchronized image is broken.
+- Inline image from an entity of the source system synchronizes as broken image to the target system, given that the embedded inline image URL in the source system is not accessible/reachable from the machine on which **<code class="expression">space.vars.SITENAME</code>** is installed while the entity is being synchronized. In this case, the inline image synchronized to the target system without transformation to URL corresponds to the target system and as a result, the synchronized image is broken.
 
 ### User mention synchronization limitations
 

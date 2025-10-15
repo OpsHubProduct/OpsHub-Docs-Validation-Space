@@ -1,5 +1,5 @@
 # Overview
-OpsHub Integration Manager has defined a specific query format which can be used in place of native query of end system. The query can be used for doing criteria-based synchronization and target lookup synchronization if the connector supports this format of querying. Kindly visit the connector page to know whether it supports this format of querying in end system for criteria-based polling and target lookup instead of native query format.
+<code class="expression">space.vars.SITENAME</code> has defined a specific query format which can be used in place of native query of end system. The query can be used for doing criteria-based synchronization and target lookup synchronization if the connector supports this format of querying. Kindly visit the connector page to know whether it supports this format of querying in end system for criteria-based polling and target lookup instead of native query format.
 
 The query format is a JSON format. The JSON has pre-defined keys and input formats which needs to be followed for steady synchronization of data.
 

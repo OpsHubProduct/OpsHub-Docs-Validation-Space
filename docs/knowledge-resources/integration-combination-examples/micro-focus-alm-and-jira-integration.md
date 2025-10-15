@@ -1,6 +1,6 @@
 # Overview
 Best-of-breed systems such as Micro Focus ALM/QC and Jira bring rich functionalities to the ecosystem. The integration of Micro Focus ALM and Jira makes it easier for the development, and quality assurance (QA) teams to collaborate with each other.This, in turn, helps in delivering a high quality product to customers at a faster pace. With this integration, there is no manual effort required to keep the teams updated on the latest work status.  
-OpsHub Integration Manager integrates Micro Focus ALM and Jira bi-directionally. On this page, we will discuss the bi-directional integration of:
+<code class="expression">space.vars.SITENAME</code> integrates Micro Focus ALM and Jira bi-directionally. On this page, we will discuss the bi-directional integration of:
 
 <p align="center">
   <img src="../../assets/Micro_Focus_ALM-Jira_entities.png" width="900px"/>
@@ -10,12 +10,12 @@ OpsHub Integration Manager integrates Micro Focus ALM and Jira bi-directionally.
 Configuring [system pre-requisites](../../integrate/integration-prerequisites.md) is mandatory for successful system configuration. Check out the prerequisites for [Micro Focus ALM](../../connectors/microfocus-alm-qc.md#prerequisites) and [Jira](../../connectors/jira.md#prerequisites) systems before you proceed with the integration.
 
 # Integration Configuration
-* Log in into OpsHub Integration Manager. The default credentials are: User Name: admin, Password: password.  
+* Log in into <code class="expression">space.vars.SITENAME</code>. The default credentials are: User Name: admin, Password: password.  
 <p align="center">
   <img src="../../assets/Getting_Started_With_Application_Image_1G_a.png"/>
 </p>  
 
->**Note**: Proxy parameters: Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](../../manage/administrator/proxy-setting.md) in OpsHub Integration Manager.  
+>**Note**: Proxy parameters: Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](../../manage/administrator/proxy-setting.md) in <code class="expression">space.vars.SITENAME</code>.  
 
 * Click **Integrate** on the top right corner of the screen and then click the plus [+] icon .  
 <p align="center">
@@ -42,9 +42,9 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 </p>  
 
 ## Select Projects and Entities
->**Note**: If you receive the following error: **PKIX certification path not found** and the projects and entities don’t load properly, then [import SSL certificate](../../getting-started/ssl-certificate-configuration.md) onto OpsHub Integration Manager’s Java KeyStore before you proceed.  
+>**Note**: If you receive the following error: **PKIX certification path not found** and the projects and entities don’t load properly, then [import SSL certificate](../../getting-started/ssl-certificate-configuration.md) onto <code class="expression">space.vars.SITENAME</code>’s Java KeyStore before you proceed.  
 
-* In the Add Project(s) to Sync section, select the projects you want to synchronize between Jira and Micro Focus ALM by clicking them. For example, here we select OpsHub Integration Manager Demo Project from Jira and TestProject from Micro Focus ALM.  
+* In the Add Project(s) to Sync section, select the projects you want to synchronize between Jira and Micro Focus ALM by clicking them. For example, here we select <code class="expression">space.vars.SITENAME</code> Demo Project from Jira and TestProject from Micro Focus ALM.  
 * Once the projects are selected, define the source project and target project:  
   * If you select forward arrow (>) icon, the data would flow from Jira to Micro Focus ALM.  
   * If you select backward arrow (<), the data flow would from Micro Focus ALM to Jira.  
@@ -55,7 +55,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
   <img src="../../assets/ALM_5.png" width="950px"/>
 </p>  
 
-* OpsHub Integration Manager fetches entities available in both systems and shows them in entities list for both systems. From the **Select Entities to Sync** section, select the relevant entities for both systems. In this case, we will select **Requirement** from Micro Focus ALM and **Story** from Jira.  
+* <code class="expression">space.vars.SITENAME</code> fetches entities available in both systems and shows them in entities list for both systems. From the **Select Entities to Sync** section, select the relevant entities for both systems. In this case, we will select **Requirement** from Micro Focus ALM and **Story** from Jira.  
 * The next step is to define the fields that need to be integrated for every entity mapped. So, once the entities are selected, click the plus icon [+] adjacent to **Select fields to be Synced** to create the mapping between these two entities. You will be navigated to Mapping Configuration screen.  
 
 <p align="center">
@@ -65,7 +65,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 ## Mapping Fields
 ### Entity: Requirement and Story
 * Following details are automatically populated in the Mapping section: **Systems, Projects, and Entities, and Mapping Name**. If you wish, change the name for the mapping in the Name field.  
-* Now, either click **Create from Scratch** to define the mapping from scratch or click **Auto Map** to automatically map all fields with same name. Even if you select the **Auto Map**, OpsHub Integration Manager will allow you to remove or add more fields before saving mapping. We select **Create from Scratch**.  
+* Now, either click **Create from Scratch** to define the mapping from scratch or click **Auto Map** to automatically map all fields with same name. Even if you select the **Auto Map**, <code class="expression">space.vars.SITENAME</code> will allow you to remove or add more fields before saving mapping. We select **Create from Scratch**.  
 
 <p align="center">
   <img src="../../assets/ALM_7.png" width="950px"/>

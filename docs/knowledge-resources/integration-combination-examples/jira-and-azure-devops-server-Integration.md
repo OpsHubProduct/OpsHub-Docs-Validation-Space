@@ -1,6 +1,6 @@
 # Overview
 Best-of-breed systems such as Jira and Azure DevOps Server (TFS) bring rich functionalities to the ecosystem. The integration of Jira with Azure DevOps Server (TFS) enhances collaboration between the project and development teams. As both the teams have visibility into each other’s task and complete context of customer expectations, the quality of product is better and the delivery cycle is shorter. There is no manual effort required to keep the teams updated on the latest work status.  
-OpsHub Integration Manager integrates Jira and Azure DevOps Server (TFS) bi-directionally. On this page, we will discuss the bi-directional integration of:
+<code class="expression">space.vars.SITENAME</code> integrates Jira and Azure DevOps Server (TFS) bi-directionally. On this page, we will discuss the bi-directional integration of:
 
 <p align="center">
   <img src="../../assets/Jira-TFS.png">
@@ -52,7 +52,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 
 
 ## Select Projects and Entities
->**Note**: If you receive the following error: **PKIX certification path not found** and the projects and entities don’t load properly, then [import SSL certificate](../../getting-started/ssl-certificate-configuration.md) onto OpsHub Integration Manager’s Java KeyStore before you proceed.
+>**Note**: If you receive the following error: **PKIX certification path not found** and the projects and entities don’t load properly, then [import SSL certificate](../../getting-started/ssl-certificate-configuration.md) onto <code class="expression">space.vars.SITENAME</code>’s Java KeyStore before you proceed.
 
 * In the **Add Project(s) to Sync** section, select the projects you want to synchronize between Jira and Azure DevOps Server (TFS) by clicking them. For example, here we select <code class="expression">space.vars.SITENAME</code> Demo Project from Jira and TestProject from Azure DevOps Server (TFS).  
 * Once the projects are selected, define the source project and target project:  

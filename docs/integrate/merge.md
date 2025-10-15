@@ -3,7 +3,7 @@ This page explains the merge feature available from version 7.0 onwards.
 
 As the name says, this feature allows users to merge existing configurations such as mappings and integration groups for usability purpose. It also helps reduce the maintenance cost. Given below are some cases in which merge feature can be useful.
 
-* User was using the old User Interface (UI) for integration and has now shifted to the new UI. Before OpsHub Integration Manager Version 7.0, it was not possible to create bidirectional mapping and integrations in one go. If a user wanted to create a bidirectional integration between TFS and JIRA, the required configurations were as follows:
+* User was using the old User Interface (UI) for integration and has now shifted to the new UI. Before <code class="expression">space.vars.SITENAME</code> Version 7.0, it was not possible to create bidirectional mapping and integrations in one go. If a user wanted to create a bidirectional integration between TFS and JIRA, the required configurations were as follows:
 
 * **Configuration 1**
   * Mapping 1 [TFS User Story to JIRA Requirement]
@@ -18,7 +18,7 @@ But from version 7.0 onwards, it's possible to have 1 mapping and 1 Integration 
   * Mapping 1 [TFS Story to and from JIRA Requirement]
   * Integration 1 [TFS User Story to and from JIRA Requirement] with Mapping 1 associated with the integration
 
-So, if a user migrates OpsHub Integration Manager instance to 7.0 version or onwards, the user can merge Mapping 1 and Mapping 2 into Mapping 1 as well as Integration 1 and Integration 2 into Integration 1. So, the user doesn't have to manage multiple integrations. Users can simply delete Mapping 2 and Integration 2 after they are successfully merged to another configuration and if they are not being used in any other integration.
+So, if a user migrates <code class="expression">space.vars.SITENAME</code> instance to 7.0 version or onwards, the user can merge Mapping 1 and Mapping 2 into Mapping 1 as well as Integration 1 and Integration 2 into Integration 1. So, the user doesn't have to manage multiple integrations. Users can simply delete Mapping 2 and Integration 2 after they are successfully merged to another configuration and if they are not being used in any other integration.
 
 The above case is also applicable when Configuration 1 is created in the new UI and user wants to have configuration like Configuration 2.
 If the user has created different integrations created for different projects:

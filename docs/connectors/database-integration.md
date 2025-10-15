@@ -5,11 +5,11 @@
 - This user should not be used to perform any other operations on the database.
 
 ## When database integration is required to communicate to a new database server
-If a database system is needed to be integrated with a database type other than the type of database on which OpsHub Integration Manager is deployed, follow the steps given below:
+If a database system is needed to be integrated with a database type other than the type of database on which <code class="expression">space.vars.SITENAME</code> is deployed, follow the steps given below:
 - Download the required database driver on which new database connection is to be created. Refer [this](Installation_Prerequisites#Download-Database-Connector-jar) to get the link of database connector jar.
-- Stop the OpsHub Integration Manager server.
+- Stop the <code class="expression">space.vars.SITENAME</code>.
 - Copy the downloaded driver into `Opshub installation directory]\OpsHubServer\lib` folder.
-- Start OpsHub Integration Manager server.
+- Start <code class="expression">space.vars.SITENAME</code>.
 
 ## Fields requirement
 - **Primary-key**: There must be a primary key field or a field which doesn't allow duplicate or null values.
@@ -18,7 +18,7 @@ If a database system is needed to be integrated with a database type other than 
 - **Created/Updated By (Optional)**: A column to store the username of the person who created or last updated the record.
 - **OH_Last_Update (Optional)**: A text column to store required information for the recovery.
 
-> **Note**: The columns storing "created/updated by" and "OH_Last_Update" are required by OpsHub Integration Manager to ensure smooth data synchronization, especially if something goes wrong during the sync process.  
+> **Note**: The columns storing "created/updated by" and "OH_Last_Update" are required by <code class="expression">space.vars.SITENAME</code> to ensure smooth data synchronization, especially if something goes wrong during the sync process.  
 > Without these columns, during the synchronization, all record field values are compared with the existing values, which is inefficient.
 
 # System Configuration
@@ -178,7 +178,7 @@ Here is the screenshot:
 
 * If a table's username column mapped to `created_updated_by` is the same as the username in the database system form, records will be skipped during polling time.
 
-* For Attachment sync, attachment file names must not contain characters that are unsupported by the operating system on which the `OpsHub Integration Manager` is installed.  
+* For Attachment sync, attachment file names must not contain characters that are unsupported by the operating system on which the <code class="expression">space.vars.SITENAME</code> is installed.  
   For example, on Windows, characters such as `\ / : * ? " < > |` are not allowed in file names.
 
 

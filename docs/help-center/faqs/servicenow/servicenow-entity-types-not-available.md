@@ -1,10 +1,10 @@
 ## Description
 
-This behavior is applicable when the desired entity type of ServiceNow is not visible in the mapping/integration configuration screen of OpsHub Integration Manager.
+This behavior is applicable when the desired entity type of ServiceNow is not visible in the mapping/integration configuration screen of <code class="expression">space.vars.SITENAME</code>.
 
 ## Cause
 
-The possible reason could be "Import set table" and/or "Transformation map" not being created for the desired entity (which is to be synchronized) for ServiceNow in OpsHub Integration Manager.
+The possible reason could be "Import set table" and/or "Transformation map" not being created for the desired entity (which is to be synchronized) for ServiceNow in <code class="expression">space.vars.SITENAME</code>.
 
 ## Solution
 

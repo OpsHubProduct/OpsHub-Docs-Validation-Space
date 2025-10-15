@@ -84,9 +84,9 @@ For the first integration that you are configuring, we recommend you take only m
 - If you wish, change the name for the mapping in the **Name** field.  
 - Now, click **Create from Scratch** to define the mapping from scratch.  
   OR  
-- Click **Auto Map** to automatically map all fields with same name. OpsHub Integration Manager will allow you to remove or add more fields before saving mapping.  
+- Click **Auto Map** to automatically map all fields with same name. <code class="expression">space.vars.SITENAME</code> will allow you to remove or add more fields before saving mapping.  
 
-OpsHub Integration Manager will load fields available in the selected entity and project fields. Refer to the image below:  
+<code class="expression">space.vars.SITENAME</code> will load fields available in the selected entity and project fields. Refer to the image below:  
 
 <p align="center">
   <img src="../../assets/IBM_DOORS_11.png" width="950px"/>

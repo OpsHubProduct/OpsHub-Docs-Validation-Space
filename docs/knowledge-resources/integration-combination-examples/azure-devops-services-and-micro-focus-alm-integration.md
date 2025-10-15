@@ -45,7 +45,7 @@ Check out the pre-requisites for [Azure DevOps Services (VSTS)](../../connectors
 </p>  
 
 ## Select Projects and Entities
->**Note**: If you receive the following error: **PKIX certification path not found** and the projects and entities don’t load properly, then [import SSL certificate](../../getting-started/ssl-certificate-configuration.md) onto OpsHub Integration Manager’s Java KeyStore before you proceed.  
+>**Note**: If you receive the following error: **PKIX certification path not found** and the projects and entities don’t load properly, then [import SSL certificate](../../getting-started/ssl-certificate-configuration.md) onto <code class="expression">space.vars.SITENAME</code>’s Java KeyStore before you proceed.  
 
 * In the **Add Project(s) to Sync** section, select the projects you want to synchronize between Azure DevOps Services (VSTS) and Micro Focus ALM by clicking them.  
   Example: **Demo Project3** from Azure DevOps Services (VSTS) and **Demo_SourceProject** from Micro Focus ALM.  
