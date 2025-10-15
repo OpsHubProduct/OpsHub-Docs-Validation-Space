@@ -4,7 +4,7 @@ PHP Apache server is required to run Selenium Rest Service.
 
 # System Configuration
 
-Before you continue to the integration, you must first configure Selenium onto OpsHub Integration Manager. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.
+Before you continue to the integration, you must first configure Selenium onto <code class="expression">space.vars.SITENAME</code>. Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.
 
 Refer to the screenshot given below for reference.  
 
@@ -12,7 +12,7 @@ Refer to the screenshot given below for reference.
   <img src="../assets/Selenium_Image_1a.png" width="900" />
 </p>
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 # Mapping Configuration
 

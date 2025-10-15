@@ -1,7 +1,7 @@
 # Pre-requisites
 ## User privileges
 
-*Create one user in Jama that is dedicated to OpsHub Integration Manager. This user should not do any operations from the system's interface.*  
+*Create one user in Jama that is dedicated to <code class="expression">space.vars.SITENAME</code>. This user should not do any operations from the system's interface.*  
 **Please refer to [Add Users](#add-users) section to determine how to create a user in Jama**
 
 * Below are the permissions required for this dedicated user:  
@@ -15,7 +15,7 @@
 > **Note**: The behavior of the Rest API(s) was changed from Jama Cloud version 8.61 and self-hosted version 8.62. Hence, there are specific additional permissions required for older versions as mentioned above to access User's meta information.
 
 * Refer to [Grant Project Permissions](https://help.jamasoftware.com/ah/en/administration/project-administrator/view-project-users/grant-project-permissions.html) for details on how to grant project permissions.  
-* To validate the permission of the user being used in the OpsHub Integration Manager, please refer to [Access Permission of Jama users](#access-permission-of-jama-users) section.  
+* To validate the permission of the user being used in the <code class="expression">space.vars.SITENAME</code>, please refer to [Access Permission of Jama users](#access-permission-of-jama-users) section.  
 * Jama allows granting permissions to user on specific projects and within this projects also, user can limit the access at Component and Set level (user can revoke permissions for specific Component and Set).  
   * In such cases, only the Entities/Component/Set/Folder will be synchronized for which the sync user has access to.
 
@@ -43,7 +43,7 @@ Refer the screenshot given below for reference.
 | **Jama Client Secret**  | Authentication type is OAuth Authentication  | Enter Client secret of the user added above. |
 | **Jama System Date Format** | Always                                  | Add the date format from 'Java Date Time Format' field in the System Properties > General Properties area tab in Root admin panel of Jama. Default value is MM/dd/yyyy hh:mm:ss a z". For more details, refer section [Setting up Date format field for System configuration](#setting-up-date-format-field-for-system-configuration) |
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 > **Note**: If you select OAuth for Jama Authentication Type, then you need to provide values for Jama Client Id and Jama Client Secret. Refer the steps in OAuth section of document **Setting up OAuth Credentials in Jama** [here](https://dev.jamasoftware.com/rest#auth) for generating Client Id and Client Secret for OAuth authentication.
 
@@ -128,7 +128,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
   * The disadvantage for using **Location Path field** in field mapping is that mapping will be impacted by the change in the name of any Set/Component/Folder that is part of the location path.
 
 * **Lock State Field**  
-  * To denote the status of lock on the item, **OH Lock Status** field is introduced in **OpsHub Integration Manager**.  
+  * To denote the status of lock on the item, **OH Lock Status** field is introduced in **<code class="expression">space.vars.SITENAME</code>**.  
   * This field can be used when a user wants to acquire or release the lock on item based on certain conditions, when Jama is configured at the target side in integration.  
     * Set the value to **Locked** to acquire the lock on the synced target item.  
     * Set the value to **Unlocked** to release the lock on the synced target item.  
@@ -148,8 +148,8 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 
 - For **Set** entity, we can define set key which uniquely identifies same type of sets.  
 - This is a system field and can be set mandatory/non-mandatory in end system.  
-- This field must be mapped in OpsHub Integration Manager for integration to synchronize the sets.  
-- Jama doesn't provide any revision when Set Key is updated. Due to this, the field in OpsHub Integration Manager also works on current state.  
+- This field must be mapped in <code class="expression">space.vars.SITENAME</code> for integration to synchronize the sets.  
+- Jama doesn't provide any revision when Set Key is updated. Due to this, the field in <code class="expression">space.vars.SITENAME</code> also works on current state.  
 - Refer to section [Set Key field update](#when-set-integration-is-configured-and-field-set-key-is-updated) for behavior on synchronization when set key field is updated.
 
 ## Relationship configuration
@@ -180,18 +180,18 @@ Due to Jama Api limitation, for Attachments to sync properly Read-Only check sho
 ## Mapping for Soft Delete Configuration
 
 - When Jama is the target system, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md).  
-- After the Soft Delete operation is performed by OpsHub Integration Manager in Jama, the entity will be deleted in Jama. The deleted entity can be found in the "dashboard" of the corresponding project.  
+- After the Soft Delete operation is performed by <code class="expression">space.vars.SITENAME</code> in Jama, the entity will be deleted in Jama. The deleted entity can be found in the "dashboard" of the corresponding project.  
 - To only enable the logical delete operation in the target, "OH Soft Delete" field shall be mapped with the default value "No" in the [Delete Mode](../integrate/mapping-configuration.md#delete-mode) mapping.
 
 ## Rank
 
-- Jama allows to organize the items in tree structure. To synchronize the items maintaining the tree structure, below configurations need to be performed in OpsHub Integration Manager.  
+- Jama allows to organize the items in tree structure. To synchronize the items maintaining the tree structure, below configurations need to be performed in <code class="expression">space.vars.SITENAME</code>.  
   - Configure the **Children** and **Parent** relationship as per the standard [relationship configuration](../integrate/mapping-configuration.md#relationships).  
   - Enable the rank synchronization, as described in [Rank configuration](../integrate/mapping-configuration.md#configuration) section.  
     - Here make sure, the overwrite option is enabled for the Jama system for OH ENABLE RANK field.
 
 **Known Limitations:**  
-- When Jama is configured as the source system in OpsHub Integration Manager:
+- When Jama is configured as the source system in <code class="expression">space.vars.SITENAME</code>:
   - When rank change is performed on item within same parent item, any field needs to be updated after changing the rank of the item.
     - Reason: When rank is changed for any item within the same parent, neither its **Updated** time is changed nor revision gets generated in jama.
 
@@ -224,7 +224,7 @@ If you want to specify conditions for synchronizing an entity between Jama and t
 
 Go to Criteria Configuration section on [Integration Configuration](../integrate/integration-configuration.md) page to learn in detail about Criteria Configuration.
 
-However, you don't need to write any criteria query in OpsHub Integration Manager. Instead, you need to give the filter id for the same.  
+However, you don't need to write any criteria query in <code class="expression">space.vars.SITENAME</code>. Instead, you need to give the filter id for the same.  
 The steps given below explain how to make filter in Jama for enabling criteria.
 
 ## Create Filter in Jama for enabling criteria
@@ -354,7 +354,7 @@ Jama query is based on **OR** condition when there are more than one field.
 - When Jama is the target system:
   - If the attachment file name contains **Windows invalid file name characters** (`<`, `>`, `:`, `"`, `/`, `\\`, `|`, `?`, `*`), then the file will not be added in Jama. Consequently, the user will encounter a processing failure. To avoid this processing failure, it is recommended to follow file naming conventions as mentioned in [Microsoft File Naming Conventions](https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file#naming-conventions).  
   Additionally, if the user still wants to synchronize attachments having Windows invalid file name characters, then the user needs to refer to [OH-Jama-0038](../help-center/troubleshooting/errors/jama/oh-jama-0038.md).
-  - If conflict detection is enabled on the TAGS field with manual conflict resolution strategy, then in the event of recovery, OpsHub Integration Manager will give a failure. To resolve this failure, conflict resolution strategy should be either of "Endpoint 1 Wins", "Endpoint 2 Wins" or "Custom Strategy".
+  - If conflict detection is enabled on the TAGS field with manual conflict resolution strategy, then in the event of recovery, <code class="expression">space.vars.SITENAME</code> will give a failure. To resolve this failure, conflict resolution strategy should be either of "Endpoint 1 Wins", "Endpoint 2 Wins" or "Custom Strategy".
   - Recovery is not guaranteed for Status field. 
   
  ## Entity Specific
@@ -368,7 +368,7 @@ Jama query is based on **OR** condition when there are more than one field.
 
 - Fields cannot be updated [except Run Result and Status].  
   **Reason:** Unavailability of the Update API.
-- When Test Steps are not present in the Test Run, then the Status field can be updated by OpsHub Integration Manager. Otherwise Status field is set according to the status of the steps present.  
+- When Test Steps are not present in the Test Run, then the Status field can be updated by <code class="expression">space.vars.SITENAME</code>. Otherwise Status field is set according to the status of the steps present.  
   **Reason:** Jama API allows updating of Status field only, when Steps are not present.
 
 ---
@@ -398,7 +398,7 @@ Jama query is based on **OR** condition when there are more than one field.
   - For Cross Project relationship, if the integration user doesn't have the read permission on the project of the linked entity, the synchronization of that particular link will be skipped.
 
 - When Jama is Source system and integration is configured with Default settings [Sync Only Current State = Select/No](../integrate/integration-configuration.md#sync-only-current-state):
-  - From Jama, the revisions information comes as a string which generally follows a predefined format. OpsHub Integration Manager is internally parsing the revisions string to extract the relevant old and new values for each field from this revision string.
+  - From Jama, the revisions information comes as a string which generally follows a predefined format. <code class="expression">space.vars.SITENAME</code> is internally parsing the revisions string to extract the relevant old and new values for each field from this revision string.
   - Hence the revision string is expected to have none of the below tokens in the value of any Text Type of fields, they should just come as separators:
     - [", "], ["\n"], [" changed from "], [" to "]
   - If the following tokens appear as value in any text type fields, then:
@@ -474,7 +474,7 @@ Jama query is based on **OR** condition when there are more than one field.
 
 ## Entity Scope Movement Behaviour
 
-- Jama will automatically move the child entities associated with that **Component** or **Set**, which is moved to the new project by OpsHub Integration Manager, regardless of whether those child entities are configured within OpsHub Integration Manager.
+- Jama will automatically move the child entities associated with that **Component** or **Set**, which is moved to the new project by <code class="expression">space.vars.SITENAME</code>, regardless of whether those child entities are configured within <code class="expression">space.vars.SITENAME</code>.
 
 ---
 
@@ -517,7 +517,7 @@ To provide the permissions at the project level:
   <img src="../assets/Jama_permissions3.png" />
 </p>
 
-- Select the user to be mentioned in OpsHub Integration Manager from "Users";
+- Select the user to be mentioned in <code class="expression">space.vars.SITENAME</code> from "Users";
 - Select **Project Administration** from the "Permission" and save it as shown below:
 
 <p align="center">
@@ -533,7 +533,7 @@ To provide the permissions at the organization level:
   <img src="../assets/Jama_permissions1.png" />
 </p>
 
-- Select the user to be mentioned in OpsHub Integration Manager from "Users";
+- Select the user to be mentioned in <code class="expression">space.vars.SITENAME</code> from "Users";
 
 - To provide the **User Administration** permission at the organization level:
   - Select **User Administration** from the "Permission" and save it as shown below:

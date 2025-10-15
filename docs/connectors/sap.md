@@ -4,7 +4,7 @@
 
 * Sap connector depends on 'Sapjco3.dll' (for Windows) and 'libSapjco.so' (for Linux).
 * These files can be downloaded from [Sap Connector](https://support.Sap.com/en/product/connectors/jco.html) by the user with a valid Sap license/subscription.
-* Place the dependency in a path available in the machine's environment variables. Restart the OpsHub Integration Manager service after placing the dependency.
+* Place the dependency in a path available in the machine's environment variables. Restart the <code class="expression">space.vars.SITENAME</code> service after placing the dependency.
 * The following table shows one of the paths available in the environment variables:
 
 | OS Type | Dependency   | Path                   |
@@ -14,15 +14,15 @@
 
 ## User Privileges
 
-* Create a technical ABAP user in the Sap ECC or Sap S/4HANA technical instance dedicated to OpsHub Integration Manager. This user shouldn't perform any other action from Sap GUI. This user is referred to as the 'Integration User' in this document.
+* Create a technical ABAP user in the Sap ECC or Sap S/4HANA technical instance dedicated to <code class="expression">space.vars.SITENAME</code>. This user shouldn't perform any other action from Sap GUI. This user is referred to as the 'Integration User' in this document.
 * A Sap user can only be created by the Sap BASIS administrator.
-* To integrate Sap entities using OpsHub Integration Manager, the user must be a technical ABAP user with:
+* To integrate Sap entities using <code class="expression">space.vars.SITENAME</code>, the user must be a technical ABAP user with:
   * RFC read and execute permissions.
   * SE80 read, write, and execute permissions.
 
 ## Enable API for 'Linkages'
 
-* OpsHub Integration Manager uses the RFC 'CRMOST_WHERE_USED_LIST' to fetch the linkages for each entity type except the 'Transport Request' entity.
+* <code class="expression">space.vars.SITENAME</code> uses the RFC 'CRMOST_WHERE_USED_LIST' to fetch the linkages for each entity type except the 'Transport Request' entity.
 * After Sap ECC 6.0 and in Sap S/4HANA, this API is set to **normal-enabled** in the Sap end system.
 * To sync any entity type other than 'Transport Request', it is mandatory to:
   * Ask the Sap BASIS administrator to make the API **RFC-enabled** in the end system.
@@ -35,7 +35,7 @@
 
 # System Configuration
 
-* To start the integration, configure the Sap system in OpsHub Integration Manager.
+* To start the integration, configure the Sap system in <code class="expression">space.vars.SITENAME</code>.
 * Refer to [System Configuration](../integrate/system-configuration.md) page to learn the stepwise process. Refer to the following screenshot:
 
 <p align="center">
@@ -61,8 +61,8 @@
 **Additional Entity Type JSON**
 
 > **Note** :For the additional entity types, certain advanced features may not operate as intended. The purpose of this field is to offer users the flexibility to sync entity types beyond the default options.
-* In Sap, all the objects' entries are available in the TADIR table, along with their Object Type. This document will use the word 'Entity Type' for Object Types in Sap. Out of the available entity types in TADIR, OpsHub Integration Manager supports limited entity types by default.
-* If there are entity types present in the TADIR table but not included in the supported list of OpsHub Integration Manager, the user can integrate them by registering their details in the Additional Entity Type field in the Sap system form. This can be done using the following JSON template:
+* In Sap, all the objects' entries are available in the TADIR table, along with their Object Type. This document will use the word 'Entity Type' for Object Types in Sap. Out of the available entity types in TADIR, <code class="expression">space.vars.SITENAME</code> supports limited entity types by default.
+* If there are entity types present in the TADIR table but not included in the supported list of <code class="expression">space.vars.SITENAME</code>, the user can integrate them by registering their details in the Additional Entity Type field in the Sap system form. This can be done using the following JSON template:
 
 ```json
 [
@@ -116,7 +116,7 @@
 
 # Mapping Configuration
 
-> **Note** :In OpsHub Integration Manager, the Sap system supports only read-only functionality.
+> **Note** :In <code class="expression">space.vars.SITENAME</code>, the Sap system supports only read-only functionality.
 
 - Map the fields between Sap and the other system to be integrated to ensure data synchronization between both systems.
 - Here is an example of Sap's Enhancement and Azure DevOps' User Story integration:
@@ -177,7 +177,7 @@ In Sap environments running versions below ECC 6.0 with NetWeaver 7.5, certain S
 ### API rate-limit in Sap
 
 - The Sap system uses `Sapjco3.dll` to communicate with the end system. Hence, there is no specific limitation in terms of calling APIs.
-- However, if there is an idle wait time-out configured in the Sap GUI, the same is applicable for the system in OpsHub Integration Manager.
+- However, if there is an idle wait time-out configured in the Sap GUI, the same is applicable for the system in <code class="expression">space.vars.SITENAME</code>.
 - The wait time-out can be changed/disabled only by the Sap BASIS administrator.
 
 ## Limitations

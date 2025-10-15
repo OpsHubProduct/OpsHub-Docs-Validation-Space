@@ -2,7 +2,7 @@
 
 ## User privileges
 
-Create one GitHub user for the repository(s) that is a part of synchronization. User should be dedicated to **OpsHub Integration Manager** and should not be used for any other operations from system's user interface.  
+Create one GitHub user for the repository(s) that is a part of synchronization. User should be dedicated to **<code class="expression">space.vars.SITENAME</code>** and should not be used for any other operations from system's user interface.  
 GitHub supports only Personal Access Token Authentication:  
 * Personal Access Token Authentication - The integration user should be added as a collaborator in the repository which is to be synced. Additionally, the following set of scopes are required while creating Personal Access Token for synchronization.
 
@@ -98,14 +98,14 @@ Following is the description of fields that are available in GitHub for mapping 
 
 ## Inline attachments synchronization
 
-For HTML fields in **OpsHub Integration Manager**, GitHub allows to synchronization of inline images. Such content can be synchronized for GitHub with the following behavior:  
+For HTML fields in **<code class="expression">space.vars.SITENAME</code>**, GitHub allows to synchronization of inline images. Such content can be synchronized for GitHub with the following behavior:  
 * Images and other type of files are synced to the target system depending on whether the target system supports inline images or not.  
 
 For **limitations** of Inline image synchronization, refer to [Limitations](#known-limitations) section.
 
 ## User Mapping Configuration
 **Pull Request entity:**  
-* By default, user field synchronization in **OpsHub Integration Manager** works on user email added in both source and target end systems.  
+* By default, user field synchronization in **<code class="expression">space.vars.SITENAME</code>** works on user email added in both source and target end systems.  
 * To make user mapping to work on username instead of email address, the username in both source and target end systems must be same. Otherwise, excel mapping will be required for one-to-one user mapping. Refer below mentioned sample examples.
 
 **Issue entity:**  

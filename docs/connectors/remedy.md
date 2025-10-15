@@ -5,7 +5,7 @@ No user is required for Remedy connector.
 
 ## Custom Field Configuration
 
-The OpsHub Integration Manager requires one special field to be defined on the entity that is being synchronized. This must be set up so that it can track the integration status of each item:
+The <code class="expression">space.vars.SITENAME</code> requires one special field to be defined on the entity that is being synchronized. This must be set up so that it can track the integration status of each item:
 
 | **Property Name**   | **Type** |
 |---------------------|----------|
@@ -43,7 +43,7 @@ Attachment name, data, and size field should be configured in the following form
 
 # System Configuration
 
-Before you continue to the integration, you must first configure Remedy onto OpsHub Integration Manager.  
+Before you continue to the integration, you must first configure Remedy onto <code class="expression">space.vars.SITENAME</code>.  
 Click [System Configuration](../integrate/system-configuration.md) to learn the step-by-step process to configure a system.
 
 Refer the screenshot given below for reference:
@@ -57,7 +57,7 @@ Refer the screenshot given below for reference:
 </p>
 
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager.  
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>.  
 Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 # Mapping Configuration

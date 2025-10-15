@@ -2,8 +2,8 @@
 
 ## User privileges
 
-* Create a dedicated OpsHub Integration Manager user in Salesforce. This user shouldn't perform any other action from Salesforce's UI. For more details on creating a new user, refer to the [New User](#new-user) section.
-* The following permissions should be enabled in OpsHub Integration Manager's dedicated user's profile (For details on creating a new profile, refer to the [New Profile](#new-profile) section) to synchronize object in OpsHub Integration Manager:
+* Create a dedicated <code class="expression">space.vars.SITENAME</code> user in Salesforce. This user shouldn't perform any other action from Salesforce's UI. For more details on creating a new user, refer to the [New User](#new-user) section.
+* The following permissions should be enabled in <code class="expression">space.vars.SITENAME</code>'s dedicated user's profile (For details on creating a new profile, refer to the [New Profile](#new-profile) section) to synchronize object in <code class="expression">space.vars.SITENAME</code>:
 
 | **Profile Section** | **Permission**        | **Description**                                    |
 |---------------------|------------------------|----------------------------------------------------|
@@ -17,11 +17,11 @@
 |                     | Edit Access            | To read and update a field                         |
 
 * No Sharing Rules should be configured for the objects (need to be synchronized) through which the user permissions can be revoked.
-* User must have the 'write permission' of the entities that are mapped in the **Relationship Configuration** setting of OpsHub Integration Manager.
+* User must have the 'write permission' of the entities that are mapped in the **Relationship Configuration** setting of <code class="expression">space.vars.SITENAME</code>.
 
 ## Custom field configuration
 
-OpsHub Integration Manager requires one special field to be defined on the entity that is being synchronized. These must be set up so that OpsHub Integration Manager can track the integration status of each item:
+<code class="expression">space.vars.SITENAME</code> requires one special field to be defined on the entity that is being synchronized. These must be set up so that <code class="expression">space.vars.SITENAME</code> can track the integration status of each item:
 
 | **Property Name**   | **Type** | **Size** |
 |---------------------|---------|----------|
@@ -128,7 +128,7 @@ Map the fields between Salesforce and the other system to be integrated to ensur
 ## Mapping for Soft Delete Configuration
 
 * When Salesforce is the target system, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md).
-* After the Soft Delete operation is performed by OpsHub Integration Manager in Salesforce, the entity will be deleted in Salesforce. The deleted entity goes to the "Recycle Bin".
+* After the Soft Delete operation is performed by <code class="expression">space.vars.SITENAME</code> in Salesforce, the entity will be deleted in Salesforce. The deleted entity goes to the "Recycle Bin".
 * To only enable the logical delete operation in the target, "OH Soft Delete" field shall be mapped with the default value "No" in the [Delete Mode](..integrate//mapping-configuration.md#delete-mode) mapping.
 
 # Integration Configuration
@@ -140,8 +140,8 @@ Set a time to synchronize data between Salesforce and the other system to be int
 **Display ID Field:**
 
 * For the Salesforce entity, user can select the field (considered as display id in Salesforce UI) from the dropdown menu.
-* The above selected field value is considered as a display id in OpsHub Integration Manager's sync report. For example, for **Case** entity, user can select **Case Number** in Display ID Field as it is unique and is considered as display id in Salesforce UI.
-* If the field is not selected in the Display ID Field, the Salesforce entity's internal id (which is a part of the entity URL) will be visible in OpsHub Integration Manager's sync report.
+* The above selected field value is considered as a display id in <code class="expression">space.vars.SITENAME</code>'s sync report. For example, for **Case** entity, user can select **Case Number** in Display ID Field as it is unique and is considered as display id in Salesforce UI.
+* If the field is not selected in the Display ID Field, the Salesforce entity's internal id (which is a part of the entity URL) will be visible in <code class="expression">space.vars.SITENAME</code>'s sync report.
 
 <p align="center">
   <img src="../assets/Salesforce_DisplayIdField.png" width="500"/>
@@ -200,7 +200,7 @@ It represents the query, which will select only those entities whose "Status" fi
 * The Post is supported as normal text. Hence, the formatting, user mention and inline images is not supported.
 * Salesforce as the source system:
   * Supported posts: **Text** post (TextPost), Post replies (TextComment), and Post with attachment (ContentPost).
-  * To sync the post attachment, it is required to enable attachment mapping OpsHub Integration Manager.
+  * To sync the post attachment, it is required to enable attachment mapping <code class="expression">space.vars.SITENAME</code>.
   * If a Post reply is edited after being synced, an additional field update is necessary to sync the edited reply as a new comment.
 * Salesforce as the target system:
   * Supported posts: **Text** post.
@@ -212,13 +212,13 @@ It represents the query, which will select only those entities whose "Status" fi
 
 ## Field with Reference datatype
 * If the **Reference field** is referring to multiple entities of Salesforce, then only the first referred entity will be supported as **Link**.
-  * For example, if the **Related field** refers to the Enhancement and User Story entities, then only Enhancement will be supported as the **Link** in OpsHub Integration Manager.
+  * For example, if the **Related field** refers to the Enhancement and User Story entities, then only Enhancement will be supported as the **Link** in <code class="expression">space.vars.SITENAME</code>.
 
 ## Chatter Feed types
-* OpsHub Integration Manager supports only **Post** type from all Chatter feed types.
+* <code class="expression">space.vars.SITENAME</code> supports only **Post** type from all Chatter feed types.
 
 ## Inline Image Sync
-* To enable Inline Image Sync in OpsHub Integration Manager, you need to enable the **Content Deliveries and Public Links** Settings in your Salesforce Instance. The steps to enable **Content Deliveries and Public Links** is mentioned in [Steps to enable Content Deliveries and Public Links in Salesforce](#steps-to-enable-content-deliveries-and-public-links-in-salesforce)  
+* To enable Inline Image Sync in <code class="expression">space.vars.SITENAME</code>, you need to enable the **Content Deliveries and Public Links** Settings in your Salesforce Instance. The steps to enable **Content Deliveries and Public Links** is mentioned in [Steps to enable Content Deliveries and Public Links in Salesforce](#steps-to-enable-content-deliveries-and-public-links-in-salesforce)  
    * Click here to learn how to enable Content deliveries and Public links in the Salesforce system** [Steps to enable Content Deliveries and Public Links in Salesforce](#steps-to-enable-content-deliveries-and-public-links-in-salesforce)
 
 # Appendix
@@ -419,7 +419,7 @@ Once the profile is created, click **Edit** to set the permissions
 
 * Enter the verification code sent to the email id associated with the Salesforce account to verify the identity.
 * Upon entering the verification code, it will redirect to the Consumer details page.
-* Use the **Consumer Key** and **Consumer Secret** to configure the Salesforce system in OpsHub Integration Manager with Oauth authentication type.
+* Use the **Consumer Key** and **Consumer Secret** to configure the Salesforce system in <code class="expression">space.vars.SITENAME</code> with Oauth authentication type.
 
 ## Steps to enable Content Deliveries and Public Links in Salesforce
 

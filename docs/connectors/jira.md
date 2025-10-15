@@ -429,7 +429,7 @@ In the image below, inline image added previously in the description field repla
 
 #### Overview
 
-OpsHub Integration Manager supports synchronization for R4J links  [R4J Child Link and R4J Parent Link] so that user can synchronize the relationship similar to how they are in R4J and can achieve the structure for Jira issues similar to what is visible in R4J view.
+<code class="expression">space.vars.SITENAME</code> supports synchronization for R4J links  [R4J Child Link and R4J Parent Link] so that user can synchronize the relationship similar to how they are in R4J and can achieve the structure for Jira issues similar to what is visible in R4J view.
 
 #### Known behavior
 
@@ -927,7 +927,7 @@ Go to **Search in Target Before Sync** section on [Integration Configuration](..
 
 For example there is an use case to search an entity in Jira (Destination system), which has the entity id of the source system in a field named 'TargetCustomField'. The source system's entity id is stored in 'source_system_id'. If the Target Search Query is given as: TargetCustomField = "@source_system_id@", then while processing this query @source_system_id@ will be substituted with the value of source_system_id from the source system's entity and then the query will be made to Jira.  
 
-Given below are the sample snippets of how the JQL queries can be used as target entity lookup query in OpsHub Integration Manager.
+Given below are the sample snippets of how the JQL queries can be used as target entity lookup query in <code class="expression">space.vars.SITENAME</code>.
 For this example the id information of the source system entity id is stored in source_system_id
 
 **Target lookup query samples**
@@ -941,7 +941,7 @@ For this example the id information of the source system entity id is stored in 
 
 ### Target Lookup Query for R4J Folder Entity
 
-* OpsHub Integration Manager supports target lookup query on folder internal id.
+* <code class="expression">space.vars.SITENAME</code> supports target lookup query on folder internal id.
 * Target lookup query format is id=@other_system_field@. Where the "other_system_field" is a field in the source system and should contain the internal id of the folder which needs to be looked up. In case of root folder the id should be set to -1_ROOT.
 
 ### Target Lookup for Zephyr Entities

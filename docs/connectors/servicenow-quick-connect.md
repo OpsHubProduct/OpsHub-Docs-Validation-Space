@@ -2,7 +2,7 @@
 
 ## User Privileges
 
-* Create one administrator user of ServiceNow Quick Connect system (please refer to [Add User](servicenow-quick-connect.md#add-user) section for creating a new user), dedicated to OpsHub Integration Manager. User should not be used to do any operations from ServiceNow Quick Connect User-Interface. 
+* Create one administrator user of ServiceNow Quick Connect system (please refer to [Add User](servicenow-quick-connect.md#add-user) section for creating a new user), dedicated to <code class="expression">space.vars.SITENAME</code>. User should not be used to do any operations from ServiceNow Quick Connect User-Interface. 
   >**Note**:  In case your ServiceNow Quick Connect is configured with SSO, you will have to create a normal service user account in ServiceNow Quick Connect and use that user in integration.
 * In case if administrator user is not available, dedicated user should have access to tables mentioned below. Please note that Read, Write, Delete, etc mentioned in brackets beside table names, are the access permissions required on respective table. Refer to [Add user access for table](servicenow-quick-connect.md#add-user-access-for-table) for providing required permissions to the user.
   * sys _attachment (Read, Write, Delete)
@@ -39,22 +39,22 @@
 
 ServiceNow Quick Connect tracks incident, change, and problem history in the sys _audit table. Enabling auditing tracks the creation and update of audited records. Audit must be enabled on the entity table (for example, not to its import set table but to the actual entity table like incident, problem, etc). To enable audit for a table, please refer to [Turn on auditing (history) for a table](servicenow-quick-connect.md#turn-on-auditing-history-for-a-table).
 
-## Enable OpsHub Integration Manager for ServiceNow Quick Connect Instance
+## Enable <code class="expression">space.vars.SITENAME</code> for ServiceNow Quick Connect Instance
 
-* OpsHub Integration Manager must be enabled for the ServiceNow Express instance. You can get this app from ServiceNow appStore: [https://store.servicenow.com/sn _appstore _store.do#!/store/application/8e6f0b610f8ce6001f6fc3ace1050ebb](https://store.servicenow.com/sn_appstore_store.do#!/store/application/8e6f0b610f8ce6001f6fc3ace1050ebb)
+* <code class="expression">space.vars.SITENAME</code> must be enabled for the ServiceNow Express instance. You can get this app from ServiceNow appStore: [https://store.servicenow.com/sn _appstore _store.do#!/store/application/8e6f0b610f8ce6001f6fc3ace1050ebb](https://store.servicenow.com/sn_appstore_store.do#!/store/application/8e6f0b610f8ce6001f6fc3ace1050ebb)
 
 <p align="center">
   <img src="../assets/Snow_Store.png" />
 </p>
 
-* On the OpsHub Integration Manager App page, click on **Get** and provide your ServiceNow Quick Connect HI Credentials.
-* You will see OpsHub Integration Manager for ServiceNow Quick Connect in Downloads tab by navigating **System Applications -> Applications** in your ServiceNow Quick Connect instance  [The example below shows OpsHub Integration Manager for ServiceNow Quick Connect Enterprise]. Click on Install for OpsHub Integration Manager for ServiceNow Quick Connect applications.
+* On the <code class="expression">space.vars.SITENAME</code> App page, click on **Get** and provide your ServiceNow Quick Connect HI Credentials.
+* You will see <code class="expression">space.vars.SITENAME</code> for ServiceNow Quick Connect in Downloads tab by navigating **System Applications -> Applications** in your ServiceNow Quick Connect instance  [The example below shows <code class="expression">space.vars.SITENAME</code> for ServiceNow Quick Connect Enterprise]. Click on Install for <code class="expression">space.vars.SITENAME</code> for ServiceNow Quick Connect applications.
 
 <p align="center">
   <img src="../assets/Snow2.png" />
 </p>
 
-* On successful installation, OpsHub Integration Manager for ServiceNow Quick Connect application will be available.
+* On successful installation, <code class="expression">space.vars.SITENAME</code> for ServiceNow Quick Connect application will be available.
 
 ## Configure Attachment or HTML//Rich type field
 
@@ -91,7 +91,7 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 
 ## Mapping Reference fields
 
-* All the fields of type reference i.e. the fields that refer to some other ServiceNow Quick Connect entity will be treated as look-ups in OpsHub Integration Manager.
+* All the fields of type reference i.e. the fields that refer to some other ServiceNow Quick Connect entity will be treated as look-ups in <code class="expression">space.vars.SITENAME</code>.
 * For such reference fields, you can define value mapping using either name or number.
 * A maximum of 1000 lookup values will be loaded for a reference field. If you are not able to find your value in the look-up values loaded, you can map values using advanced mapping.
 * Look-up values will be loaded only if the entity being referred by a field has a name or number columns.

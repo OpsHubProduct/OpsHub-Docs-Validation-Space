@@ -2,8 +2,8 @@
 
 ## User Privileges
 
-- Create a user in ReadyOne that is dedicated for OpsHub Integration Manager. The user shouldn't perform any other action from ReadyOne user interface. Refer to [Add User in ReadyOne](#add-users) section to learn how to add a new user in ReadyOne.
-- The user identity of the user dedicated for OpsHub Integration Manager must have the following permissions for the 'item type' to be integrated:
+- Create a user in ReadyOne that is dedicated for <code class="expression">space.vars.SITENAME</code>. The user shouldn't perform any other action from ReadyOne user interface. Refer to [Add User in ReadyOne](#add-users) section to learn how to add a new user in ReadyOne.
+- The user identity of the user dedicated for <code class="expression">space.vars.SITENAME</code> must have the following permissions for the 'item type' to be integrated:
 
 | **Permission Types**         | **Justification**                                                                                                                                                                                        | **Needed When**                                                                                                                                                | **How To**                                                                                                                           |
 |-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
@@ -11,21 +11,21 @@
 | Can Discover                | To get the list of items present for a given itemtype.                                                                                                                                                     | ReadyOne is source system,target system or both.                                                                                                               | To learn how to provide user with the Can Discover permission, refer to [Give Necessary Permissions to User for Itemtype](#give-necessary-permissions-to-user-for-itemtype) |
 | Update                      | To update an item.                                                                                                                                                                                         | ReadyOne is target system. Also, when ReadyOne is source system and Update Permission is required for Remote Id or Remote Link configuration in Integration. | To learn how to provide user with the Update permission, refer to [Give Necessary Permissions to User for Itemtype](#give-necessary-permissions-to-user-for-itemtype)       |
 | Can Add                     | To create an item: The user is allowed to create record from the ReadyOne System (through the UI and API both) only when the user's identity is allowed in the "Can Add" tab                             | ReadyOne is target system.                                                                                                                                      | To learn how to assign "Can Add" permission to user's identity on particular itemtype, refer to [Allow Can Add permission to User](#assign-identity-in-can-add-tab-of-item-type) |
-| Life Cycle State Transition | To update the state during transition, the role in Life Cycle transition needs to be set as **Administrators** for the Integration User [configured in the OpsHub Integration Manager].                                | When ReadyOne is the target system.                                                                                                                             | To learn how to provide user with the Lifecycle State Transition permission, refer to [Assign Life Cycle Transition Permission for Item Type](#assign-life-cycle-state-transition-permissions-for-item-type)      |
+| Life Cycle State Transition | To update the state during transition, the role in Life Cycle transition needs to be set as **Administrators** for the Integration User [configured in the <code class="expression">space.vars.SITENAME</code>].                                | When ReadyOne is the target system.                                                                                                                             | To learn how to provide user with the Lifecycle State Transition permission, refer to [Assign Life Cycle Transition Permission for Item Type](#assign-life-cycle-state-transition-permissions-for-item-type)      |
 
 ## Versionable Item Type
 
-- For any Item Type in ReadyOne, the versions/history for the item gets generated only when the item is versionable. Hence for OpsHub Integration Manager to synchronize the items with their revisions, they need to be versionable.
-- In case they are not versionable, OpsHub Integration Manager will synchronize the item as per the current state of that item, available at the time of synchronization.
+- For any Item Type in ReadyOne, the versions/history for the item gets generated only when the item is versionable. Hence for <code class="expression">space.vars.SITENAME</code> to synchronize the items with their revisions, they need to be versionable.
+- In case they are not versionable, <code class="expression">space.vars.SITENAME</code> will synchronize the item as per the current state of that item, available at the time of synchronization.
 Follow [Make Item Type Versionable](#make-item-type-versionable) in the Appendix section to learn how to make item types versionable.
 
 ## Hosting Opshub ReadyOne Service
 
-- OpsHub Integration Manager requires this service to communicate with ReadyOne server. It acts as a communication layer between ReadyOne and OpsHub Integration Manager.
+- <code class="expression">space.vars.SITENAME</code> requires this service to communicate with ReadyOne server. It acts as a communication layer between ReadyOne and <code class="expression">space.vars.SITENAME</code>.
 
 ### System Prerequisites
 
-- Configure OpsHub Integration Manager Aras Service on a machine that has .NET Framework version 4.7.2 or a higher version installed.
+- Configure <code class="expression">space.vars.SITENAME</code> Aras Service on a machine that has .NET Framework version 4.7.2 or a higher version installed.
 - Please refer to the following link for information on software and hardware requirements for installing .NET Framework 4.7.2:  
   https://docs.microsoft.com/en-us/dotnet/framework/get-started/system-requirements
 
@@ -47,13 +47,13 @@ Before the user continues with the integration, he/she must first configure Read
 | **System Name**                | Provide a unique name to the ReadyOne System                                                                                                                           |
 | **Version**                    | Provide version for ReadyOne Instance. Check [Get ReadyOne Version](#get-readyone-version) in the Appendix section to learn how to get ReadyOne version              |
 | **ReadyOne Instance URL**     | Provide URL for ReadyOne Instance. Example:- <hostname>/InnovatorServer/Server/InnovatorServer.aspx                                                                  |
-| **ReadyOne User Name**        | Provide username of the user dedicated for OpsHub Integration Manager. Please ensure that user has the necessary permissions. Refer to [User privileges](#user-privileges)          |
-| **ReadyOne User Password**    | Provide password of user dedicated for OpsHub Integration Manager.                                                                                                                    |
+| **ReadyOne User Name**        | Provide username of the user dedicated for <code class="expression">space.vars.SITENAME</code>. Please ensure that user has the necessary permissions. Refer to [User privileges](#user-privileges)          |
+| **ReadyOne User Password**    | Provide password of user dedicated for <code class="expression">space.vars.SITENAME</code>.                                                                                                                    |
 | **ReadyOne Database name**    | Provide ReadyOne Database name to which the connection needs to be done. Refer to [Get Database Name](#get-database-name) to learn how to get Database name          |
 | **ReadyOne Web Service URL**  | Provide URL for the hosted OpsHubArasService. Refer to [Hosting opshub Aras service](#hosting-opshub-readyone-service)                                                 |
 | **Base URL for Remote Link**  | Provide different Instance URL of the ReadyOne Instance. This URL is used for generating the Remote Link. <br>If empty, the Server URL will be used.                |
 
-- If the system is deployed on HTTPS and a self-signed certificate is used, then the user should import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Check [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+- If the system is deployed on HTTPS and a self-signed certificate is used, then the user should import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Check [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 
 # Mapping Configuration
@@ -113,7 +113,7 @@ Set polling time as the time after which the user wants to synchronize data betw
 
 **Remote ID Synchronization**  
 * In ReadyOne, custom entity types don't have an *Item Number* (which stores Display Id) field by default.  
-  → In such cases, `OpsHub Integration Manager` will use the entity's **Internal Id** as **Remote Id**.  
+  → In such cases, `<code class="expression">space.vars.SITENAME</code>` will use the entity's **Internal Id** as **Remote Id**.  
   → To show the Display Id as Remote Id, add the **Item Number** field in ReadyOne. Refer to [Add Item Number Field](#set-item-number-for-custom-entity) for more details.  
 * In ReadyOne, the *project concept* is only supported for the `Requirement` Item Type (`req_Requirement`).
 
@@ -127,7 +127,7 @@ Set polling time as the time after which the user wants to synchronize data betw
   → See [[OH-Aras-1502|Synchronise file with Windows special characters]] for how to handle such attachments.
 
 
-## Limitations to be Resolved in Upcoming Releases of `OpsHub Integration Manager`
+## Limitations to be Resolved in Upcoming Releases of `<code class="expression">space.vars.SITENAME</code>`
 
 * To synchronize **File as Attachment** to an ItemType, there must be a **unique relationship type** between ItemType and File.
 * **Comments with attachments** are not supported.
