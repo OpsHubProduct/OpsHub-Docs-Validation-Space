@@ -1,6 +1,6 @@
 ## Solution: Identifying Workflow Categories
 
-In OpsHub Integration Manager, you can view workflow categories in the UI to easily identify default workflows from custom ones.
+In <code class="expression">space.vars.SITENAME</code>, you can view workflow categories in the UI to easily identify default workflows from custom ones.
 
 ### Steps to View Workflow Categories
 

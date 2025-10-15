@@ -1,10 +1,10 @@
-* Excel Upload is a functionality provided in OpsHub Integration Manager when the user wants to map more than 100 field values for a field.  
-* Using this excel upload functionality, the user can upload the excel file in the OpsHub Integration Manager itself.  
-* This functionality provides OpsHub Integration Manager user to upload the excel file directly into the OpsHub Integration Manager.  
+* Excel Upload is a functionality provided in <code class="expression">space.vars.SITENAME</code> when the user wants to map more than 100 field values for a field.  
+* Using this excel upload functionality, the user can upload the excel file in the <code class="expression">space.vars.SITENAME</code> itself.  
+* This functionality provides <code class="expression">space.vars.SITENAME</code> user to upload the excel file directly into the <code class="expression">space.vars.SITENAME</code>.  
 User can synchronize data between two systems by providing the sheet name, source column and target column in the mapping page.
 
 # Upload Excel
-* To upload the excel file, user must click on the below mentioned "Excel" icon in the sidebar on the integrate page of OpsHub Integration Manager.  
+* To upload the excel file, user must click on the below mentioned "Excel" icon in the sidebar on the integrate page of <code class="expression">space.vars.SITENAME</code>.  
 <div align="center">
   <img src="../assets/Excel_Upload.png" />
 </div>

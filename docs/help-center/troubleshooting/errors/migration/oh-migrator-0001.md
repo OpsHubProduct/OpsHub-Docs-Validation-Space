@@ -11,7 +11,7 @@ To restore the application to the previous state [i.e. the state before upgradat
 
 # Cause
 
-This error primarily occurs when OpsHub Integration Manager is not able to establish connection to the database that was used to configure  
+This error primarily occurs when <code class="expression">space.vars.SITENAME</code> is not able to establish connection to the database that was used to configure  
 database connection details. Following are some of the cases in which this error can occur:
 
 1. If the database user password has expired.  
@@ -19,7 +19,7 @@ database connection details. Following are some of the cases in which this error
 
 # Solution
 
-Please check the Migration.log file located under the logs folder in the OpsHub Integration Manager installation path. This file contains all the step wise details of migration process. The exact cause of the failure should be found at the end of the file.
+Please check the Migration.log file located under the logs folder in the <code class="expression">space.vars.SITENAME</code> installation path. This file contains all the step wise details of migration process. The exact cause of the failure should be found at the end of the file.
 
 In case the password has expired, reset the same password which was used during installation.
 

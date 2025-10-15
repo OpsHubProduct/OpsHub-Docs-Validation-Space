@@ -11,14 +11,14 @@ Please refer to [Integration Prerequisites](integration-prerequisites.md) page t
 {% embed url="https://youtu.be/Po6K9_UXrfM" %}
 
 > **Note**: During configuration or synchronization, connection-related errors might occur. There are couple of reasons for connection-related errors. Checkout the details [Common Error Solutions](../help-center/troubleshooting/errors/common-error-solutions.md).  
-> **Note**: If the system is behind a proxy server, then set up [Proxy Setting](../manage/administrator/proxy-setting.md) in OpsHub Integration Manager.  
+> **Note**: If the system is behind a proxy server, then set up [Proxy Setting](../manage/administrator/proxy-setting.md) in <code class="expression">space.vars.SITENAME</code>.  
 > **Note**: For details on how to configure systems, refer [System Configuration](system-configuration.md)
 
 ## Select Projects and Entities
 
 The next step is to define entities and fields to be integrated and fields that need to be integrated for every entity mapped. But before that, check whether the system is behind proxy or not.  
-If the system is on HTTPS, then [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) onto OpsHub Integration Manager's Java KeyStore.  
-OpsHub Integration Manager fetches entities available in both systems and shows them in the entities list for both systems.  
+If the system is on HTTPS, then [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) onto <code class="expression">space.vars.SITENAME</code>'s Java KeyStore.  
+<code class="expression">space.vars.SITENAME</code> fetches entities available in both systems and shows them in the entities list for both systems.  
 From the Select Entities to Sync section, select the relevant entities for both systems.  
 In this video, we learn to integrate Bug entities between Jira and Azure DevOps Services (VSTS):
 

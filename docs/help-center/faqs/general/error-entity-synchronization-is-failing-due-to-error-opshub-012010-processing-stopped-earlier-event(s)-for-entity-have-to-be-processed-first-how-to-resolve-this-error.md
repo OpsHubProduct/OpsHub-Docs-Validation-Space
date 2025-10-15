@@ -4,10 +4,10 @@ Received the error: Entity synchronization is failing due to error: OpsHub-01201
 
 # Solution
 
-A failed event on a given entity is blocking further synchronization. For example, if OpsHub Integration Manager notices that for entity E1, there is already a failed event in the queue, then all further updates will fail with the above error.  
+A failed event on a given entity is blocking further synchronization. For example, if <code class="expression">space.vars.SITENAME</code> notices that for entity E1, there is already a failed event in the queue, then all further updates will fail with the above error.  
 To fix this error, first find the entity on which the error is coming and fix the error. To get the Entity Id of the entity on which error is coming, follow the steps given below:
 
-* Go to OpsHub Integration Manager Dashboard and click on the Integration Name:  
+* Go to <code class="expression">space.vars.SITENAME</code> Dashboard and click on the Integration Name:  
 
 <p align="center">
   <img src="../../../assets/trouble.png"  width="800px">

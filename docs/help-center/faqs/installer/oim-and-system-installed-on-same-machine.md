@@ -4,6 +4,6 @@ Can <code class="expression">space.vars.SITENAME</code> and an end system that i
 
 ## Solution
 
-<code class="expression">space.vars.SITENAME</code> can be installed on the same machine where one of the end system is installed. However, the machine on which OpsHub Integration Manager is being installed must fulfill the [Installation Prerequisites](../../../getting-started/prerequisites.md#installation-prerequisites). It is preferable to have separate VM's for both, as the system may take up more resources if the number of users accessing it increases. In such scenario, it would be necessary to ensure that <code class="expression">space.vars.SITENAME</code> gets its required share of resources or it will affect the performance of <code class="expression">space.vars.SITENAME</code>
+<code class="expression">space.vars.SITENAME</code> can be installed on the same machine where one of the end system is installed. However, the machine on which <code class="expression">space.vars.SITENAME</code> is being installed must fulfill the [Installation Prerequisites](../../../getting-started/prerequisites.md#installation-prerequisites). It is preferable to have separate VM's for both, as the system may take up more resources if the number of users accessing it increases. In such scenario, it would be necessary to ensure that <code class="expression">space.vars.SITENAME</code> gets its required share of resources or it will affect the performance of <code class="expression">space.vars.SITENAME</code>
 
 

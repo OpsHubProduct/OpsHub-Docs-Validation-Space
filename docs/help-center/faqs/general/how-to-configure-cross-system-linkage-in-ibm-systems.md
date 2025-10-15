@@ -333,7 +333,7 @@ For example, there are two main integrations:
 
 # Appendix
 ## How to know System ID
-* Log in to OpsHub Integration Manager (`<OIM URL>//OIM`).
+* Log in to <code class="expression">space.vars.SITENAME</code> (`<OIM URL>//OIM`).
 * Navigate to Configure Systems Page.
     
  <p align="center">

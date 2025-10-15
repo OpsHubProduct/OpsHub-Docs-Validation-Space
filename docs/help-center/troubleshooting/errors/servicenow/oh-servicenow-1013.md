@@ -1,5 +1,5 @@
 ## Description
-OH-ServiceNow-1013: Not able to get "Import set table" for entity type: &lt;entity_type&gt;. Please Create "Import set table" and Transformation map under OpsHub Integration Manager.
+OH-ServiceNow-1013: Not able to get "Import set table" for entity type: &lt;entity_type&gt;. Please Create "Import set table" and Transformation map under <code class="expression">space.vars.SITENAME</code>.
 
 ## Cause
 

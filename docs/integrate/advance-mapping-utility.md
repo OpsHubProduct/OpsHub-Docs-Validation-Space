@@ -1,7 +1,7 @@
 # Advance Mapping Utility
 
 ## Overview
-* This Advance Utility is useful when user want some customization in default xslt or user have some specific requirement. For acheiving those requirement OpsHub Integration Manager provides some Utilities which handle some custom requirement.
+* This Advance Utility is useful when user want some customization in default xslt or user have some specific requirement. For acheiving those requirement <code class="expression">space.vars.SITENAME</code> provides some Utilities which handle some custom requirement.
 
 ## Common placeholder and its value
 

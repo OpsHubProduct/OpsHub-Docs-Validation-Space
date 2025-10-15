@@ -1,7 +1,7 @@
 ## Description
 
 * If the data size is too large for any table in the database, then the compression technique can be used to reduce the table size. This process increases the CPU's load. Hence the compression technique must be used wisely.  
-* In OpsHub Integration Manager, the OHMT_EAI_ENTITY_HISTORY_STATE table contains more storage than its utilization. Hence, compression can be applied here if the table size is too large at your end.
+* In <code class="expression">space.vars.SITENAME</code>, the OHMT_EAI_ENTITY_HISTORY_STATE table contains more storage than its utilization. Hence, compression can be applied here if the table size is too large at your end.
 
 ## Solution
 

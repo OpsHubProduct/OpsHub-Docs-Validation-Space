@@ -597,8 +597,8 @@ The query must be in the format:
 
 * Azure DevOps Services (Cloud) now supports using Markdown in rich text fields like Description and Acceptance Criteria.
 * By default, these fields use HTML, but user can now choose to use Markdown when syncing data.
-* This setting in OpsHub Integration Manager lets you decide whether content should be written in HTML or Markdown when syncing to Azure DevOps.
-This configuration option in OpsHub Integration Manager allows you to decide whether a rich text field should be written in HTML or Markdown syncing when Azure DevOps Service as a Target system.
+* This setting in <code class="expression">space.vars.SITENAME</code> lets you decide whether content should be written in HTML or Markdown when syncing to Azure DevOps.
+This configuration option in <code class="expression">space.vars.SITENAME</code> allows you to decide whether a rich text field should be written in HTML or Markdown syncing when Azure DevOps Service as a Target system.
 
 * Steps to Configure
     * To configure this rich text field format, please navigate to 'Override parameters for write operations(Destination)' in Entity level advance configurations.
@@ -615,10 +615,10 @@ This configuration option in OpsHub Integration Manager allows you to decide whe
   * Keep the format consistent: Once you choose HTML or Markdown, avoid changing it later. Switching formats after writing data can cause display/rendering or sync issues.
   * Use HTML for complex formatting: As per the [Microsoft Guidelines](https://devblogs.microsoft.com/devops/markdown-support-arrives-for-work-items/#existing-work-items), If your content has more complex HTML formatting, its recommended to keeping it in HTML only.
 **Important**
-  * Remote Link and Id field Configuration: When using Azure DevOps Services as the source system, it's recommended not to change the format of the field used for remote links. By default, OpsHub Integration Manager uses HTML format to write the remote link.
+  * Remote Link and Id field Configuration: When using Azure DevOps Services as the source system, it's recommended not to change the format of the field used for remote links. By default, <code class="expression">space.vars.SITENAME</code> uses HTML format to write the remote link.
 ## Meta Entities
 
-OpsHub Integration Manager supports migration of meta-entities including **Users, Groups, Teams, Areas, Iterations & Security Permissions** for Team Foundation Server and Azure DevOps.
+<code class="expression">space.vars.SITENAME</code> supports migration of meta-entities including **Users, Groups, Teams, Areas, Iterations & Security Permissions** for Team Foundation Server and Azure DevOps.
 
 Supported versions of Team Foundation Server are listed in the [Systems Supported List](../supported-connectors/systems-supported.md).
 

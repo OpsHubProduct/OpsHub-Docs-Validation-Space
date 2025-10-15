@@ -1,17 +1,17 @@
 # Event Failure Management Overview
 
-Event Failure Management is a way to keep track of all failures that occur during integrations. Failures are stored in the OpsHub Integration Manager database, and during further execution of an integration, the failures specific to the integration are retried up to the maximum permissible count set up during the configuration. OpsHub Integration Manager also allows a user to manually retry the failures after the automatic retries are over.
+Event Failure Management is a way to keep track of all failures that occur during integrations. Failures are stored in the <code class="expression">space.vars.SITENAME</code> database, and during further execution of an integration, the failures specific to the integration are retried up to the maximum permissible count set up during the configuration. <code class="expression">space.vars.SITENAME</code> also allows a user to manually retry the failures after the automatic retries are over.
 
 Here is a video on different types of failures and how to manage them:
 
 {% embed url="https://www.youtube.com/watch?v=6FrZXa3xrMY" %}
 
->**Note**: Instead of event failure(s) for a single entity, if you want to see the failures for all integrations configured on your OpsHub Integration Manager instance, delete the currently selected integration and hit the search button. You can also add multiple integrations by clicking on the text box below the currently selected integration(s) and add other integration name(s).
+>**Note**: Instead of event failure(s) for a single entity, if you want to see the failures for all integrations configured on your <code class="expression">space.vars.SITENAME</code> instance, delete the currently selected integration and hit the search button. You can also add multiple integrations by clicking on the text box below the currently selected integration(s) and add other integration name(s).
 
 ## How to navigate to the Event Failure Management section
 
 To view the Event Failure Management section, follow the steps below:
-* Log into OpsHub Integration Manager using the assigned credentials.
+* Log into <code class="expression">space.vars.SITENAME</code> using the assigned credentials.
 * Navigate to the Integration Page. 
 * On the integration page, you'll see a table listing all the configured integrations. You can find out whether or not certain integration(s) failed and needs diagnostics by looking at the **Integration Health** column of the table. 
 * In the **Integration Health** column, for each integration you'll see a number denoting the number of failed events for that integration. If the number is greater than 0,  click the number to view the failure(s) and diagnose it further.
@@ -26,7 +26,7 @@ To view the Event Failure Management section, follow the steps below:
 
 * You can apply advanced filters by using the **Advanced Search** option. Slide the button adjacent to **Advanced Search** option to the right to enable this option. Following options will appear:
   * **Entity Id**: Enter the Id of the source system which failed to synchronize.
-  * **Error Code**: Enter the OpsHub Integration Manager code mentioned in the Error Message
+  * **Error Code**: Enter the <code class="expression">space.vars.SITENAME</code> code mentioned in the Error Message
   * **Error Message**: The message that specifies the cause of the failure
   * **From date** - **To date**: The time period during which the failure had occurred
   * **Failure Category**:  Failures have typically two categories, i.e. "Integration Sync" and "Delete Sync". Select the category of failure.
@@ -97,7 +97,7 @@ Click ![failuredetails](../../assets/Failuredetails.png) to see detailed informa
 
 Once you click the **View Failed Event** option against a failure, a pop-up screen appears. This pop-up screen has the following details related to the failed event:
 
-* **Source Event**: Source Event refers to the event retrieved from the source system. It contains a list of key-value pairs for properties of the issue type (e.g., Bug, User Story) or entity, such as AssignedTo, Created Date, eventType. Also, some fields that help OpsHub Integration Manager maintain records for the entity, such as InternalId and EventUUId.
+* **Source Event**: Source Event refers to the event retrieved from the source system. It contains a list of key-value pairs for properties of the issue type (e.g., Bug, User Story) or entity, such as AssignedTo, Created Date, eventType. Also, some fields that help <code class="expression">space.vars.SITENAME</code> maintain records for the entity, such as InternalId and EventUUId.
 
 >**Note**: Here's an example of the pop-up screen for an integration's failed event. The details may vary from failure to failure:
 
