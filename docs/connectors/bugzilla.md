@@ -4,7 +4,7 @@
 
 ### For Basic authentication
 
-* Create one user of Bugzilla system, dedicated to OpsHub Integration Manager. User should not be used to do any operations from System's User-Interface.
+* Create one user of Bugzilla system, dedicated to <code class="expression">space.vars.SITENAME</code>. User should not be used to do any operations from System's User-Interface.
 * User must have all privileges to call web-service and read, write permissions on the entity.
 * User must be a member of the 'editbug' and the 'canconfirm' groups. At the time of create user or edit user action in Bugzilla, one can select these groups.
   For details on how to create user with privileges or edit user privileges, please refer to Appendix section [How to add or edit user with privileges](bugzilla.md#how-to-add-or-edit-user-with-privileges).
@@ -16,7 +16,7 @@
 
 ## Bugzilla Database Requirement
 
-* If version of Bugzilla you are using is 5.0.2 or above, then OpsHub Integration Manager does not need Database Connection. Version 5.0.2 and above versions are supported using the Native Rest API.
+* If version of Bugzilla you are using is 5.0.2 or above, then <code class="expression">space.vars.SITENAME</code> does not need Database Connection. Version 5.0.2 and above versions are supported using the Native Rest API.
 * To check which Bugzilla version you are using, click [Find Version](bugzilla.md#find-version).
 * If Bugzilla version is lower than 5.0.2, then Database connection is mandatory.
 
@@ -56,7 +56,7 @@ Refer the screenshot given below for reference.
 | **Bugzilla User Password**       | Only when **Authentication Type** is **Basic**        | Set Bugzilla User Password to the corresponding password of the user account that is used in the synchronization.                                                                                                                                                                                                                    |
 | **Bugzilla Email Suffix**        | Only when Bugzilla version is less than 5             | Provide the email suffix that is configured on Bugzilla instance.                                                                                                                                                                                                                                                                    |
 
-> **Note** :If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+> **Note** :If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 # Mapping Configuration
 
@@ -106,12 +106,12 @@ Example: `status=RESOLVED&priority=High`
 *   Only the comment added by user while adding attachment will be synchronized and not the system generated comment.
 
     <div align="center"><img src="../assets/Comment_attachment.png" alt="" width="1000"></div>
-* OpsHub Integration Manager supports synchronization of Comments, within which if you have provided the Comment mentions, Bug mentions or Hyperlink, then those details will be synchronized as 'plain text' to the target.
+* <code class="expression">space.vars.SITENAME</code> supports synchronization of Comments, within which if you have provided the Comment mentions, Bug mentions or Hyperlink, then those details will be synchronized as 'plain text' to the target.
 * When BugZilla is the **source** system:
   * For Bugzilla version **greater than 5.0**: Synchronization will always be 'History' based [except for Attachments].
   * For Bugzilla version **less than 5.0**: 'History' based synchronization and [Sync_Only_Current_State](../integrate/integration-configuration.md#sync-only-current-state) option are supported.
   * For 'Attachment' synchronization:
-    * OpsHub Integration Manager supports synchronization of Attachment. Bugzilla allows adding the Attachment details like File, Description, Obsoletes, Comments... out of which only File will be synchronized with the Attachment synchronization. Comments added within the Attachment details will be synchronized, if you have enabled the Comment synchronization.
+    * <code class="expression">space.vars.SITENAME</code> supports synchronization of Attachment. Bugzilla allows adding the Attachment details like File, Description, Obsoletes, Comments... out of which only File will be synchronized with the Attachment synchronization. Comments added within the Attachment details will be synchronized, if you have enabled the Comment synchronization.
     * If the Attachment filename contains '', the characters after '' will only be considered as filename.
       &#xNAN;_&#x45;xample: If you have uploaded an attachment with the name, `Testing Validation.txt` on a Bugzilla Bug, then it will sync to the target as `Validation.txt`._
   * For the 'Large Text Boxes' type of field, if the field content contains more than 255 characters, the user might see extra space in the content after approximately 255 characters post synchronization. 
@@ -129,7 +129,7 @@ Example: `status=RESOLVED&priority=High`
 
       In this case, you can write an Advanced mapping to truncate the characters to 255 only.
   * Bugzilla allows you to set the value for 'Description' field only with Bug creation. Hence, we recommend to set 'create' for [Sync When configuration](../integrate/mapping-configuration.md#sync-when) of mapping for Description Field.
-* The below mentioned functionalities are not supported by Bugzilla itself. Hence, OpsHub Integration Manager does not synchronize them:
+* The below mentioned functionalities are not supported by Bugzilla itself. Hence, <code class="expression">space.vars.SITENAME</code> does not synchronize them:
   * User Mentions, Inline Images, HTML formatting for Fields/Comments
 
 # Appendix

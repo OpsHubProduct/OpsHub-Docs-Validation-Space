@@ -142,7 +142,7 @@ Query to search entities belonging to specific teams:
 # Limitations
 
 * History support is not available
-* Inline images in base64 format are not supported by OpsHub Integration Manager currently
+* Inline images in base64 format are not supported by <code class="expression">space.vars.SITENAME</code> currently
 * Linkages are not supported
 * Only Incident Note type of Journals will be synchronized as comments
 * Only file type of attatchments are supported

@@ -27,7 +27,7 @@ Before you continue with the integration, you must first configure Digital.ai Ag
 </p>
 
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/how-to-import-a-certificate.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/how-to-import-a-certificate.md) to learn how to import SSL certificate.
 
 <span style="color:blue">**Digital.ai Agility System form details**</span>
 
@@ -100,7 +100,7 @@ For example, **Description** field is mapped in the mapping, and the **Complexit
 ## Mapping for Soft Delete Configuration
 
 * When Digital.ai Agility is the target system in the integration, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization.md).
-* After the soft delete operation is performed by OpsHub Integration Manager in Digital.ai Agility, the entity will be deleted in the Digital.ai Agility.
+* After the soft delete operation is performed by <code class="expression">space.vars.SITENAME</code> in Digital.ai Agility, the entity will be deleted in the Digital.ai Agility.
 * To only enable the logical delete operation in the target, "IsDeleted" field shall be mapped with the default value "No" in the [Delete Mode](../integrate/mapping-configuration.md#delete-mode) mapping.
 
 >**Note**: For the "Actual" entity, the Soft delete operation is not available due to API limitation.
@@ -115,7 +115,7 @@ Click [Integration Configuration](../integrate/integration-configuration.md) to 
 </p>
 
 
-**Note:** As per OpsHub Integration Manager's default behavior, when you integrate projects that have child projects, child projects' entities also sync when integration starts. Look at the sample below. The 'Demo Project' shown here has two child projects as well. That means when you integrate 'Demo Project', child projects within it - CAB Approval and eCAB Approval - will also sync by default.
+**Note:** As per <code class="expression">space.vars.SITENAME</code>'s default behavior, when you integrate projects that have child projects, child projects' entities also sync when integration starts. Look at the sample below. The 'Demo Project' shown here has two child projects as well. That means when you integrate 'Demo Project', child projects within it - CAB Approval and eCAB Approval - will also sync by default.
 
 <p align="center">
   <img src="../assets/VersionOne_Project_Selection.png" />

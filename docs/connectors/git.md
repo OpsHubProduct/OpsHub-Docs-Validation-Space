@@ -1,13 +1,13 @@
 # Prerequisites
 
 ## User privileges
-For integration, OpsHub Integration Manager requires user which is authorized to connect to Git Repository Server and can pull check-in information.
+For integration, <code class="expression">space.vars.SITENAME</code> requires user which is authorized to connect to Git Repository Server and can pull check-in information.
 
 ## Other Prerequisites
-If the OpsHub Integration Manager is installed as a service in Linux distributed system, this service will get started with the **opshub** user. This user should have permission to Git repository path.
+If the <code class="expression">space.vars.SITENAME</code> is installed as a service in Linux distributed system, this service will get started with the **opshub** user. This user should have permission to Git repository path.
 
 ## Clone Git repository
-Git must be installed on the machine where OpsHub Integration Manager server is running. Clone the Git repository which you want to synchronize on the same machine where the server is installed. This repository will be used by OpsHub Integration Manager only.
+Git must be installed on the machine where <code class="expression">space.vars.SITENAME</code> server is running. Clone the Git repository which you want to synchronize on the same machine where the server is installed. This repository will be used by <code class="expression">space.vars.SITENAME</code> only.
 
 ## Install python and required modules
 * For hook configuration python and required modules are required, refer [Python Configuration](#configuration-python-2-6-0) under Appendix for installation.  
@@ -36,7 +36,7 @@ Before you continue to the integration, you must first configure Git. Click [Sys
   <img src="../assets/Git_Image_1b.png" width="1000">
 </p>
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 ## Configure commit template
 
@@ -57,7 +57,7 @@ If the system is deployed on HTTPS and a self-signed certificate is used, then y
 * **Reviewer** attribute accepts the name of the reviewer who reviewed the files going to be checked-in.
 * **Status** symbolizes the status of the **Requirement** to be changed once the code is checked-in.
 > **Note** :To know the version of Git you are using, refer [Find Version](#find-version) in Appendix.
-* Set SCM Repository Path Separator to `/` if OpsHub Integration Manager is installed on Linux and set `\\` if OpsHub Integration Manager is installed on Windows.
+* Set SCM Repository Path Separator to `/` if <code class="expression">space.vars.SITENAME</code> is installed on Linux and set `\\` if <code class="expression">space.vars.SITENAME</code> is installed on Windows.
 * Leave ALM System set to 'Select' by default. In case, you need to configure any pre-commit rules before checking-in the files in the SCM system, you need to specify the ALM system from the drop-down list.
 > **Note**: For specifying the ALM system, create an ALM system. All the rules such as Bug id verification, etc. will be validated by the data existing in the specified ALM system.
 * Leave **Entity Type** blank by default. In case, the above ALM system option specifies any ALM system, provide the name of the entity against which the rules are configured. For example, Defect, Requirement, etc.
@@ -65,9 +65,9 @@ If the system is deployed on HTTPS and a self-signed certificate is used, then y
 * Set Pre-Commit Parse to `Template` or `Regex`. Default selection is `Template`.
   * Pre-Commit Parse value should be set to `Template` when commit message follows the SCM Commit Template configured on the Git.
   * Pre-Commit Parse value should be set to `Regex` when commit message needs to be customized, once you set this option then you can set regex in SCM Commit Template configured on the Git.
-* Set Git Executable Path to absolute Git Client Path where OpsHub Integration Manager is installed, for example `C:\Program Files\Git\bin`.
+* Set Git Executable Path to absolute Git Client Path where <code class="expression">space.vars.SITENAME</code> is installed, for example `C:\Program Files\Git\bin`.
 * Set Git Repository Path to the absolute path where Git repository is cloned.
-> **Note** :It should be on the same machine where OpsHub Integration Manager is installed.
+> **Note** :It should be on the same machine where <code class="expression">space.vars.SITENAME</code> is installed.
 
 ## PasswordAuthentication
 
@@ -80,7 +80,7 @@ If the system is deployed on HTTPS and a self-signed certificate is used, then y
 * Set PassPhrase for the user with which you have logged on the machine. This user should have atleast R (Read) access for this Repository.
 * To setup SSH Key for RSA authentication, refer to [SetUp SSH Key for RSA authentication](#setup-ssh-key-for-rsa-authentication) section under Appendix.
 > **Note** :Clone the Repository using SSH clone.  
-> **Note** :If you have selected RSAAuthentication and OpsHub Integration Manager is running with the service, set the Windows user/password in service LogOn. For that refer [Set Windows User/Password in Service](#set-windows-userpassword-in-service) under Appendix.
+> **Note** :If you have selected RSAAuthentication and <code class="expression">space.vars.SITENAME</code> is running with the service, set the Windows user/password in service LogOn. For that refer [Set Windows User/Password in Service](#set-windows-userpassword-in-service) under Appendix.
 * Click on **Save** button to save the System Configuration form.
 * To enable SCM check-in policy, refer [Git Hook Configuration](#git-hook-configuration) section under Appendix.
 
@@ -116,7 +116,7 @@ Following are the steps to know the version of a Git instance.
     * `username:=admin` Webservice user name, leave the default value
     * `password:=` password for above
     * `repositoryName:=` Display Name of system given at System Configuration
-    * `commitOnConnectionFailure:=True` — makes SCM working even in absence of OpsHub Integration Manager server
+    * `commitOnConnectionFailure:=True` — makes SCM working even in absence of <code class="expression">space.vars.SITENAME</code> server
   * Edit `template.txt` file in hooks folder to define default commit template message
 
 ## Configuring client hook
@@ -140,7 +140,7 @@ If you commit using Git repository through eclipse, then you need to follow the 
 
 ## Set Windows user/password in service
 * To set Windows user/password in service:  
-  Go to **Services**, in the services, select **OpsHub Integration Manager Server Service → Properties → Log On tab → Log on as: This account → add Windows user and its Password → Apply → Ok**.
+  Go to **Services**, in the services, select **<code class="expression">space.vars.SITENAME</code> Server Service → Properties → Log On tab → Log on as: This account → add Windows user and its Password → Apply → Ok**.
 * After this, restart the server service.
 
 <p align="center">

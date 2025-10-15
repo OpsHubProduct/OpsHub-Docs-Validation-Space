@@ -40,7 +40,7 @@ Required **Permissions** for user:
 
 ## Custom field configuration
 
-OpsHub Integration Manager requires one custom field to be defined on the entity that is being synchronized to ETM. This must be set up under **Custom Attribute** tab on **Manage Project Properties** page to track the integration status of each item. Name & data type of the field to be configured:
+<code class="expression">space.vars.SITENAME</code> requires one custom field to be defined on the entity that is being synchronized to ETM. This must be set up under **Custom Attribute** tab on **Manage Project Properties** page to track the integration status of each item. Name & data type of the field to be configured:
 
 | Custom Field Name | Type        |
 |-------------------|-------------|
@@ -98,7 +98,7 @@ Map the fields between ETM and the other system to be integrated to ensure that 
 
 ## 'Manual Steps' & 'Step Result Details' fields configuration
 
-- While synchronizing the **Manual Steps** field for **Test Script** and **Step Result Details** field for **Test Case Result**, advanced mapping is required in OpsHub Integration Manager to synchronize **Comment** & **Assisted Data Entry** (added to 'Manual Steps' & 'Step Result Details' fields).
+- While synchronizing the **Manual Steps** field for **Test Script** and **Step Result Details** field for **Test Case Result**, advanced mapping is required in <code class="expression">space.vars.SITENAME</code> to synchronize **Comment** & **Assisted Data Entry** (added to 'Manual Steps' & 'Step Result Details' fields).
 - Here is the sample advanced mapping required to append to the existing XSLT after `</OHAttachments>` tag between ETM (source) to ETM (target) systems.
 
 To synchronize **Comment**:
@@ -148,7 +148,7 @@ This allows:
 ## Mapping for Soft Delete Configuration
 
 - When ETM is the target system, the Soft delete operation is performed by default in the synchronization of the [Source Delete event](../integrate/source-delete-synchronization,md)
-- After the Soft Delete operation is performed by OpsHub Integration Manager in ETM, the entity will be deleted in ETM. The deleted entity goes to the "Trash".
+- After the Soft Delete operation is performed by <code class="expression">space.vars.SITENAME</code> in ETM, the entity will be deleted in ETM. The deleted entity goes to the "Trash".
 - To only enable the logical delete operation in the target, "OH Soft Delete" field shall be mapped with the default value "No" in the [Delete Mode](../integrate/mapping-configuration.md#delete-mode) mapping.
 
 
@@ -215,7 +215,7 @@ Provide query in Target Search Query field to be able to search the entity in ET
 | Multiple fields| title='@title@' and description='@description@' | This query will select only those entities whose "title" field value is same as the source system's "title" field value & "description" field value is same as the source system's "description" field value |
 
 # Known Behaviors
-- **Comments**, **Entity Mention** & **User Mention** are not supported by ETM itself. Therefore, OpsHub Integration Manager does not support them as well.
+- **Comments**, **Entity Mention** & **User Mention** are not supported by ETM itself. Therefore, <code class="expression">space.vars.SITENAME</code> does not support them as well.
 - If **Parent Test Plans** link is added to **Test Case** artifact, it will be synchronized to target system with next update.  
   **Reason:** After adding this link, instead of **Test Case**, **Test Plan** is being updated on ETM interface.
 - If **Parent Test Cases** link is added to **Test Script** artifact, it will be synchronized to target system with next update.  
@@ -246,7 +246,7 @@ Provide query in Target Search Query field to be able to search the entity in ET
 - To identify the associated custom priority lookup value, set the custom priority value in the test plan. Read the test plan using the RQM Reportable REST API, (https://jazz.net/wiki/bin/view/Main/RqmApi#ReadResource).
 
 # Known Limitations
-- **History-based synchronization** is not supported for ETM by OpsHub Integration Manager.
+- **History-based synchronization** is not supported for ETM by <code class="expression">space.vars.SITENAME</code>.
 - **Locked** field is supported as Read-only.
 - Following fields are not supported:
 
@@ -262,7 +262,7 @@ Provide query in Target Search Query field to be able to search the entity in ET
 ## Permission Configuration
 ### Repository Permissions Configuration
 - Log in to Admin panel (`<ETM URL>`/qm/admin).
-- Navigate to Users > Active Users > select OpsHub Integration Manager's dedicated user.
+- Navigate to Users > Active Users > select <code class="expression">space.vars.SITENAME</code>'s dedicated user.
 - Provide required **Repository Permissions**. Click **Save**.
 
 <p align="center">
@@ -272,7 +272,7 @@ Provide query in Target Search Query field to be able to search the entity in ET
 
 ### Client Access Licenses Configuration
 - Log in to Admin panel (`<ETM URL>`/qm/admin).
-- Navigate to Users > Active Users > select OpsHub Integration Manager's dedicated user.
+- Navigate to Users > Active Users > select <code class="expression">space.vars.SITENAME</code>'s dedicated user.
 - Provide required **Client Access Licenses**. Click **Save**.
   
 <p align="center">
@@ -283,7 +283,7 @@ Provide query in Target Search Query field to be able to search the entity in ET
 ### User Permission Configuration
 - Log in to Admin panel (`<ETM URL>`/qm/admin).
 - Navigate to Project Areas > Active Project Areas > select project > Permissions.
-- Provide required **Permissions** to a role which is added to OpsHub Integration Manager's dedicated user. Click **Save**.
+- Provide required **Permissions** to a role which is added to <code class="expression">space.vars.SITENAME</code>'s dedicated user. Click **Save**.
 
 <p align="center">
   <img src="../assets/ETMpermission.png" width="1000">
@@ -346,7 +346,7 @@ Generate an OAuth token using a third-party REST client such as Postman. Once co
 </p>
 
 
-While creating/updating ETM system configuration in OpsHub Integration Manager, select **OAuth 1.0** as Authentication Type. Also, provide these 4 inputs:  
+While creating/updating ETM system configuration in <code class="expression">space.vars.SITENAME</code>, select **OAuth 1.0** as Authentication Type. Also, provide these 4 inputs:  
 - Consumer Key & Consumer Secret (generated in [Generate Customer Key & Consumer Secret](#consumer-key-secret))  
 - OAuth Token & OAuth Token Secret (generated in [Get the OAuth Access Token](#oauth-token-secret))  
 
@@ -361,7 +361,7 @@ While creating/updating ETM system configuration in OpsHub Integration Manager, 
 </p>
 
 ## Metadata Configuration
-- If any custom field is added in ETM that requires synchronization via OpsHub Integration Manager, provide that in the custom field details of **Metadata Details** at system configuration level.
+- If any custom field is added in ETM that requires synchronization via <code class="expression">space.vars.SITENAME</code>, provide that in the custom field details of **Metadata Details** at system configuration level.
 - System fields are provided by default. If they need to be overwritten, provide the details in **Metadata Details** at the system configuration level. Refer to [Metadata JSON to provide system & custom fields](#system-custom-configuration) section for a sample JSON.
 - This details are required in specific JSON format. Below is the format of metadata:
 

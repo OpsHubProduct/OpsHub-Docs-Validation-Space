@@ -2,8 +2,8 @@
 
 ## User privileges
 
-* Create one user of DOORS Next system, dedicated to OpsHub Integration Manager. Refer to section [Create User](#how-to-create-a-user) for steps on creating a user. This user should not be used to do any operations from end system's user interface.  
-  Following are the privileges required by the dedicated integration user for synchronization of the artifacts by OpsHub Integration Manager.
+* Create one user of DOORS Next system, dedicated to <code class="expression">space.vars.SITENAME</code>. Refer to section [Create User](#how-to-create-a-user) for steps on creating a user. This user should not be used to do any operations from end system's user interface.  
+  Following are the privileges required by the dedicated integration user for synchronization of the artifacts by <code class="expression">space.vars.SITENAME</code>.
 
 ## DOORS Next Permissions for synchronization
 
@@ -12,7 +12,7 @@
 | **Read** | This is the minimal permission required by the user for reading the artifacts from DOORS Next project | DOORS Next is source system, target system or both | To learn how to provide user with the read permissions for a project, refer to section [Access Control in project](#access-control) |
 | **Save artifact**<br> **Create an artifact** <br> **Modify an artifact** | This is the minimal permission required by the user's role for creating/updating an artifact in DOORS Next | DOORS Next is target system. Also, when DOORS Next is source system, then **Modify an artifact** permission is required for [Remote Id or Remote Link configuration](integration_configuration#tracking_id_and_link_of_entities_across_systems) in integration. | rowspan="4" | To learn how to provide user with these permissions for a project, refer to section [Permissions in project](#permissions) |
 | **Save Comment**<br> **Modify** | This is the minimal permission required by the user's role for adding comments to an artifact in DOORS Next | DOORS Next is target system and comments needs to be synchronized | |
-| **Save Folder**<br> **Create a folder** | This is the minimal permission required by the user's role for creating folders in DOORS Next stream. | DOORS Next is target system with **In Folder** field mapped in mapping and the folders are not already present in target stream(folders gets auto-created by OpsHub Integration Manager if not found in target stream). Refer to section [In Folder field](#fields-available-in-doors-next) to learn more about this field | |
+| **Save Folder**<br> **Create a folder** | This is the minimal permission required by the user's role for creating folders in DOORS Next stream. | DOORS Next is target system with **In Folder** field mapped in mapping and the folders are not already present in target stream(folders gets auto-created by <code class="expression">space.vars.SITENAME</code> if not found in target stream). Refer to section [In Folder field](#fields-available-in-doors-next) to learn more about this field | |
 | **Save Link**<br> **Create a Link** <br> **Delete a Link** <br> **Modify a Link** | This is the minimal permission required by the user's role for modifying links between artifacts in DOORS Next | DOORS Next is target system and [relationships](mapping_configuration#relationships) is configured in field mapping. | |
 
 > **Note**: The permissions in DOORS Next can be configured per project. Thus, only those projects will be visible in mapping and integration for which sync user has read permission. Refer to section [Read access in project](#access-control) for more information on giving read permissions to sync user.
@@ -29,27 +29,27 @@ Refer to section [Enable Configuration Management](#enable-configuration-managem
 
 > **Note**: Once Configuration Management is enabled for a project, you can't disable it.
 
-## OpsHub Integration Manager behaviour
+## <code class="expression">space.vars.SITENAME</code> behaviour
 
-* **Projects in OpsHub Integration Manager**
-  * For OpsHub Integration Manager, **Streams** are considered as Projects. Hence user can configure bidirectional integration with any other end system with context of DOORS Next streams and the other system's projects.
-  * The Projects in OpsHub Integration Manager are shown as a combination of **Project, Component and Stream**. All the streams are displayed in a hierarchy of its parent stream.
+* **Projects in <code class="expression">space.vars.SITENAME</code>**
+  * For <code class="expression">space.vars.SITENAME</code>, **Streams** are considered as Projects. Hence user can configure bidirectional integration with any other end system with context of DOORS Next streams and the other system's projects.
+  * The Projects in <code class="expression">space.vars.SITENAME</code> are shown as a combination of **Project, Component and Stream**. All the streams are displayed in a hierarchy of its parent stream.
     * **For example -**  
-      If there exists a project "ProjectA" with component "ComponentA" and stream "StreamA", then in OpsHub Integration Manager, the project is shown as a hierarchy of "ProjectA/ComponentA/StreamA".  
+      If there exists a project "ProjectA" with component "ComponentA" and stream "StreamA", then in <code class="expression">space.vars.SITENAME</code>, the project is shown as a hierarchy of "ProjectA/ComponentA/StreamA".  
       If there are other streams "StreamA.1" and "StreamA.2" created from "Stream A", then these streams are displayed as "ProjectA/ComponentA/StreamA/StreamA.1" and "ProjectA/ComponentA/StreamA/StreamA.2".
 
-    > **Note**: The streams in DOORS Next are considered as projects. Thus, considering the above example, there will be 3 projects in OpsHub Integration Manager - **ProjectA/ComponentA/StreamA**, **ProjectA/ComponentA/StreamA/StreamA.1** and **ProjectA/ComponentA/StreamA/StreamA.2**.
+    > **Note**: The streams in DOORS Next are considered as projects. Thus, considering the above example, there will be 3 projects in <code class="expression">space.vars.SITENAME</code> - **ProjectA/ComponentA/StreamA**, **ProjectA/ComponentA/StreamA/StreamA.1** and **ProjectA/ComponentA/StreamA/StreamA.2**.
 
-* **Synchronization in OpsHub Integration Manager**
+* **Synchronization in <code class="expression">space.vars.SITENAME</code>**
   * In DOORS Next, there are two types of artifacts. One is the [core artifact](#glossary) and the other one is the [shared artifact](#glossary).
-  * By default, OpsHub Integration Manager synchronizes both core artifacts and shared artifacts present in stream.
+  * By default, <code class="expression">space.vars.SITENAME</code> synchronizes both core artifacts and shared artifacts present in stream.
     * **For example:** There exists a core artifact E1 in a stream. The artifact E1 is added in two modules "Module 1" and "Module 2". Then there will be two shared artifacts created. One in "Module 1" and the other in "Module 2".
 
-      > **Note**: In this case, OpsHub Integration Manager will treat and synchronize all the 3 artifacts as individual entities.
+      > **Note**: In this case, <code class="expression">space.vars.SITENAME</code> will treat and synchronize all the 3 artifacts as individual entities.
 
-  * OpsHub Integration Manager provides a provision to restrict the synchronization to only shared artifacts i.e. synchronize only the shared artifacts present in the stream.
+  * <code class="expression">space.vars.SITENAME</code> provides a provision to restrict the synchronization to only shared artifacts i.e. synchronize only the shared artifacts present in the stream.
     * **Restrict reading of artifacts from the DOORS Next module(s)** - An additional input is required to be added in integration configuration. Refer to section [Synchronize artifacts from specific module](#synchronize-artifacts-from-specific-module) for knowing the input usage and how to configure it.
-    * **Restrict writing of artifacts to DOORS Next module(s)** - OpsHub Integration Manager supports writing of any artifact in a specific module. This is done through field mapping in DOORS Next system. The field purpose is to decide which module is used to create the shared artifacts. Refer to **Field - Module** section of [Fields available in DOORS Next](#fields-available-in-doors-next).
+    * **Restrict writing of artifacts to DOORS Next module(s)** - <code class="expression">space.vars.SITENAME</code> supports writing of any artifact in a specific module. This is done through field mapping in DOORS Next system. The field purpose is to decide which module is used to create the shared artifacts. Refer to **Field - Module** section of [Fields available in DOORS Next](#fields-available-in-doors-next).
 
     > **Note**: Refer to section [Known Limitation](#known-limitation) for knowing the synchronization limitation.
 
@@ -77,8 +77,8 @@ Before you continue to the integration, you must first configure DOORS Next syst
 | **OAuth Consumer Secret** | Only when OAuth Authentication is selected | Set **OAuth Consumer Secret** for the corresponding Consumer Key. |
 | **OAuth Token** | Only when OAuth Authentication is selected | Set **OAuth Token** that has been generated using the [OAuth setting](#oauth-configuration) with corresponding Consumer Key. |
 | **OAuth Token Secret Key** | Only when OAuth Authentication is selected | Set **OAuth Token Secret Key** for the corresponding Token and Consumer Key. |
-| **API Date Format For Artifacts** | Always | Set **API Date Format For Artifacts** for the date format given by DOORS Next API response for the modified time of the artifacts. It is only required when the default date formats do not match API response of the instance, and there are errors related to date parsing. If not set, OpsHub Integration Manager will try to parse the API date with these formats yyyy-MM-dd'T'HH:mm:ss.SSS'Z', yyyy-MM-dd'T'HH:mm:ss'Z', yyyy-MM-dd'T'HH:mm:ssXXX. |
-| **API Date Format For Comments** | Always | Set **API Date Format For Comments** for the date format given by DOORS Next API response for the modified time of comments. It is only required when the default date formats do not match API response of the instance, and there are errors related to date parsing. If not set, OpsHub Integration Manager will try to parse the API date with these formats MMMM d, yyyy 'at' hh:mm:ss aaa z, yyyy-MM-dd'T'HH:mm:ss.SSSZ. |
+| **API Date Format For Artifacts** | Always | Set **API Date Format For Artifacts** for the date format given by DOORS Next API response for the modified time of the artifacts. It is only required when the default date formats do not match API response of the instance, and there are errors related to date parsing. If not set, <code class="expression">space.vars.SITENAME</code> will try to parse the API date with these formats yyyy-MM-dd'T'HH:mm:ss.SSS'Z', yyyy-MM-dd'T'HH:mm:ss'Z', yyyy-MM-dd'T'HH:mm:ssXXX. |
+| **API Date Format For Comments** | Always | Set **API Date Format For Comments** for the date format given by DOORS Next API response for the modified time of comments. It is only required when the default date formats do not match API response of the instance, and there are errors related to date parsing. If not set, <code class="expression">space.vars.SITENAME</code> will try to parse the API date with these formats MMMM d, yyyy 'at' hh:mm:ss aaa z, yyyy-MM-dd'T'HH:mm:ss.SSSZ. |
 
 > **Note**: Refer to section [OAuth setting](#oauth-configuration) for configuring OAuth authentication for DOORS Next system.
 
@@ -99,15 +99,15 @@ Map the fields between DOORS Next and the other system to be integrated to ensur
 
 All the system and custom attributes will be loaded in field mapping for a particular artifact type selected in **"Entity Type"** input and stream selected in **"Project"** input.
 
-Along with above fields, there are few fields which are added by OpsHub Integration Manager in fields mapping for synchronization purpose. Following are the list of fields and the synchronization behavior when these fields are mapped.
+Along with above fields, there are few fields which are added by <code class="expression">space.vars.SITENAME</code> in fields mapping for synchronization purpose. Following are the list of fields and the synchronization behavior when these fields are mapped.
 
 * **Field Name : In Folder**  
   * In DOORS Next, the artifacts are organized in folders.  
-  * In OpsHub Integration Manager, when DOORS Next is a source system, **"In Folder"** is used to represent the folder path of artifacts being synchronized.  
-  * In OpsHub Integration Manager, when DOORS Next is a target system, **"In Folder"** is used to represent the folder path where the artifacts needs to be created.  
-  * The datatype of this field in OpsHub Integration Manager is **Hierarchy**. The value mappings for this is displayed in a tree structure. For more information on value mapping, refer to document [Value mapping](mapping-configuration#value-mapping)  
+  * In <code class="expression">space.vars.SITENAME</code>, when DOORS Next is a source system, **"In Folder"** is used to represent the folder path of artifacts being synchronized.  
+  * In <code class="expression">space.vars.SITENAME</code>, when DOORS Next is a target system, **"In Folder"** is used to represent the folder path where the artifacts needs to be created.  
+  * The datatype of this field in <code class="expression">space.vars.SITENAME</code> is **Hierarchy**. The value mappings for this is displayed in a tree structure. For more information on value mapping, refer to document [Value mapping](mapping-configuration#value-mapping)  
   * The top level represents the stream path. The hierarchy of folders gets loaded when the stream path is expanded. All folders in stream are shown along with their path.  
-  * **For example -** If there is a root folder "Component 1" and child folder "Folder A" with another child folder "Child Folder A", then in value mapping, there will be three folders displayed - "Component 1", "Component 1/Folder A" and "Component 1/Folder A/Child Folder A". Refer to below image for the value mapping on OpsHub Integration Manager UI.
+  * **For example -** If there is a root folder "Component 1" and child folder "Folder A" with another child folder "Child Folder A", then in value mapping, there will be three folders displayed - "Component 1", "Component 1/Folder A" and "Component 1/Folder A/Child Folder A". Refer to below image for the value mapping on <code class="expression">space.vars.SITENAME</code> UI.
 
 		<p align="center">
 		  <img src="../assets/DoorsNG_21c.png" width="1000" />
@@ -119,42 +119,42 @@ Along with above fields, there are few fields which are added by OpsHub Integrat
 * **Field Name : Module**  
   * **"Module"** field represents the modules that are visible on DOORS Next UI in any stream.  
   * The field purpose to decide the module where artifacts needs to be synchronized.  
-  * In OpsHub Integration Manager, when DOORS Next is a source system, **"Module"** is used to represent the module name of artifacts being synchronized.  
+  * In <code class="expression">space.vars.SITENAME</code>, when DOORS Next is a source system, **"Module"** is used to represent the module name of artifacts being synchronized.  
     * If artifact is a [core artifact](#glossary), then module name will be empty as core artifacts doesn't belong to any module in end system.  
     * If artifact is a [shared artifact](#glossary), then module field represents the name of the module in which the shared artifact is present.  
-  * In OpsHub Integration Manager, when DOORS Next is a target system, **"Module"** is used to represent the module name where the artifacts needs to be created.  
-  * The datatype of this field in OpsHub Integration Manager is **Hierarchy**. The value mappings for this field is displayed in a tree structure. For more information on value mapping, refer to document [Value mapping](mapping-configuration#value-mapping)  
+  * In <code class="expression">space.vars.SITENAME</code>, when DOORS Next is a target system, **"Module"** is used to represent the module name where the artifacts needs to be created.  
+  * The datatype of this field in <code class="expression">space.vars.SITENAME</code> is **Hierarchy**. The value mappings for this field is displayed in a tree structure. For more information on value mapping, refer to document [Value mapping](mapping-configuration#value-mapping)  
   * The top level represents the stream path. The modules of the stream gets loaded when the stream path is expanded.  
-  * **For example -** If there are two modules "Module 1" and "Module 2" in stream, then in value mapping, there will be two modules displayed under that stream - "Module 1", "Module 2". Refer to below image for the value mapping on OpsHub Integration Manager UI.
+  * **For example -** If there are two modules "Module 1" and "Module 2" in stream, then in value mapping, there will be two modules displayed under that stream - "Module 1", "Module 2". Refer to below image for the value mapping on <code class="expression">space.vars.SITENAME</code> UI.
 
 	  <p align="center">
 	  <img src="../assets/DoorsNG_22c.png" width="900" />
 	  </p>
 
 
-  > **Note**: If multiple modules with same name are found, then OpsHub Integration Manager will create the entity in the first found module.
+  > **Note**: If multiple modules with same name are found, then <code class="expression">space.vars.SITENAME</code> will create the entity in the first found module.
 
-  > **Note**: For **"Module"** field, it's recommended to have **"Sync When?"** settings set to **"Create"** in field mapping. Otherwise, OpsHub Integration Manager will throw an error for which artifacts are getting updated in a module. For more information on the error thrown, refer to error document [OH-DOORS Next-0043].
+  > **Note**: For **"Module"** field, it's recommended to have **"Sync When?"** settings set to **"Create"** in field mapping. Otherwise, <code class="expression">space.vars.SITENAME</code> will throw an error for which artifacts are getting updated in a module. For more information on the error thrown, refer to error document [OH-DOORS Next-0043].
 
   > **Note**: Refer to section [In Folder and Module field Behavior](#in-folder-and-module-field-behavior) for more information on how "Module" field impacts synchronization along with "In Folder" field.
 
 * **Field Name : DOORS Next Project**  
   * This field represents the Project name of DOORS Next where the stream that is configured in integration belongs to.  
-  * This is a read-only field in OpsHub Integration Manager.
+  * This is a read-only field in <code class="expression">space.vars.SITENAME</code>.
 
 * **Field Name : Component**  
   * This field represents the Component name of DOORS Next where the stream that is in synchronization belongs to.  
-  * This is a read-only field in OpsHub Integration Manager.
+  * This is a read-only field in <code class="expression">space.vars.SITENAME</code>.
 
 * **Field Name : Artifact Type**  
   * This field is a lookup field that represents the types of artifacts that are present in any stream.  
   * The field purpose is to tell the type of the artifact that needs to be synchronized.  
-  * This is a read-only field in OpsHub Integration Manager.
+  * This is a read-only field in <code class="expression">space.vars.SITENAME</code>.
 
 * **Field Name : Artifact Format**  
   * This field is a lookup field that represents the formats of artifacts that can be created in the stream.  
   * The field purpose is to tell the format of the artifact that needs to be synchronized.  
-  * This is a read-only field in OpsHub Integration Manager.
+  * This is a read-only field in <code class="expression">space.vars.SITENAME</code>.
 
 > **Note**: The **Entity Type** in mapping and integration configuration for DOORS Next is a combination of **Artifact Type** and **Artifact Format**. For Example - If Artifact Type is **Requirement**, and Artifact Format is **Text**, then, Entity Type will display **Requirement(Text)**.
 
@@ -189,7 +189,7 @@ The default link query for DOORS Next has to be in a [OpsHub Query format](../in
 
 **The curly braces in OpsHub query needs to be escaped by double curly braces i.e. `{{` or `}}` for default link query**. For default link query with dynamic values, the placeholder `{SourceXML/updatedFields/Property/<field name>}` doesn't need to be escaped, i.e. the value part in query is not required to be escaped by double braces.
 
-Given below are the sample snippets of how the OpsHub query can be used as default link query in OpsHub Integration Manager. For the examples below, the id information of the source system entity id is stored in source_system_id.
+Given below are the sample snippets of how the OpsHub query can be used as default link query in <code class="expression">space.vars.SITENAME</code>. For the examples below, the id information of the source system entity id is stored in source_system_id.
 
 **Default Link query samples**
 
@@ -263,10 +263,10 @@ In such scenarios, simply mapping State (Default) field and their look-up values
 
 ### Solution for handling workflow transition
 
-This issue can be resolved by adding **Workflow Transition** XML in mapping configuration of OpsHub Integration Manager.
+This issue can be resolved by adding **Workflow Transition** XML in mapping configuration of <code class="expression">space.vars.SITENAME</code>.
 
 Refer to [Workflow Transition](../integrate/mapping-configuration.md#workflow-transition) to learn when and how to configure workflow transition xml mapping.  
-With this option, OpsHub Integration Manager makes the required intermediate status transition automatically as per the transition(s) configuration in the end system.
+With this option, <code class="expression">space.vars.SITENAME</code> makes the required intermediate status transition automatically as per the transition(s) configuration in the end system.
 
 
 # Integration Configuration
@@ -283,7 +283,7 @@ In the above image, for the source system **DOORS Next**, **Demo Project** at th
 
 ## Synchronize artifacts from specific module(s)
 
-When DOORS Next is a source system, OpsHub Integration Manager supports synchronization of data from specific module(s).  
+When DOORS Next is a source system, <code class="expression">space.vars.SITENAME</code> supports synchronization of data from specific module(s).  
 **For example:** If there are multiple module(s) in your stream and you want to synchronize artifacts from some specific module(s) only, then you can do so by configuring input **Module Filter Query**.
 
 For synchronizing the artifacts from specific module(s), a JSON query needs to be specified in the input **Module Filter Query**. The query will be used to select the module(s) from which the artifacts are to be synchronized. The artifacts which belong to these module(s) would only be considered for the synchronization. Refer to page [OpsHub Query format](../integrate/opshub-query-format.md) for details on specific JSON format. Given below is the screenshot for the input.
@@ -303,11 +303,11 @@ For example, the integration configured for the "User Requirement (Text)" and al
 
 ## Synchronize order changes of artifacts from module(s)
 
-- The artifacts are organized in hierarchical order within the module, and OpsHub Integration Manager supports the synchronization of artifacts, maintaining the Hierarchical ordering to target with the help of [Hierarchy configuration](Mapping Configuration#Hierarchy).
+- The artifacts are organized in hierarchical order within the module, and <code class="expression">space.vars.SITENAME</code> supports the synchronization of artifacts, maintaining the Hierarchical ordering to target with the help of [Hierarchy configuration](Mapping Configuration#Hierarchy).
 - When the Hierarchical ordering is updated (Artifacts rearranged) within a module, this change neither updates the Artifact "Modified On" nor generates a "Revision" for this change. Hence by default, this order change operation gets processed with the synchronization of the next update operation (operation which updates either "Modified On" or generates the "Revision") of the artifact.
-- To avoid this wait time and manual additional updates on the artifact, OpsHub Integration Manager can process the hierarchical order change by reading the module history in which this reordering is performed.  
+- To avoid this wait time and manual additional updates on the artifact, <code class="expression">space.vars.SITENAME</code> can process the hierarchical order change by reading the module history in which this reordering is performed.  
 To benefit from this functionality, the user can set the value **Yes** for the option, **Read module history to detect an artifact order change** available in the integration configuration when DOORS Next acts as a source endpoint.  
-By default, this option is considered **No**, which means OpsHub Integration Manager will not read the module history, and the user can expect the ordering change to be synchronized with the next update operation on the artifact.
+By default, this option is considered **No**, which means <code class="expression">space.vars.SITENAME</code> will not read the module history, and the user can expect the ordering change to be synchronized with the next update operation on the artifact.
 
 <p align="center">
   <img src="../assets/DoorsNg_modulehistory.png" width="1100"/>
@@ -413,7 +413,7 @@ The target lookup query for DOORS Next has to be in a specific JSON format. Refe
 
 Consider a use case to search an entity in DOORS Next (Destination system), which has the entity id of the source system in a field named `TargetCustomField`. The source system's entity id is stored in `source_system_id`. If the Target Search Query is configured on field `TargetCustomField`, then while processing this query `@source_system_id@` will be substituted with the value of `source_system_id` from the source system's entity and then the query will be made to DOORS Next.
 
-Given below are the sample snippets of how the JSON query can be used as target entity lookup query in OpsHub Integration Manager.  
+Given below are the sample snippets of how the JSON query can be used as target entity lookup query in <code class="expression">space.vars.SITENAME</code>.  
 For the examples below, the id information of the source system entity id is stored in `source_system_id`.
 
 **Target lookup query samples**
@@ -443,21 +443,21 @@ User can synchronize all the streams of the project by selecting the initial str
 ### Input: Comment Date Format
 
 - DOORS Next API returns the comment's updated time in a different format as per the end system version or setting of the end system's advance property `RDMPublishUseLocaleForCommentsTimeStamp`.  
-  OpsHub Integration Manager uses this default format(s): `[MMMM d, yyyy at hh:mm:ss aaa z, yyyy-MM-dd'T'HH:mm:ss.SSSZ]` for date parsing.  
+  <code class="expression">space.vars.SITENAME</code> uses this default format(s): `[MMMM d, yyyy at hh:mm:ss aaa z, yyyy-MM-dd'T'HH:mm:ss.SSSZ]` for date parsing.  
   In case the comment's updated time is not coming in specified default format(s), the error encountered is:
 
   `Unparseable date: "<Updated Time Date>"`  
-  due to OpsHub Integration Manager being unable to parse unknown format.
+  due to <code class="expression">space.vars.SITENAME</code> being unable to parse unknown format.
 
-- Configure the **Comment Date Format** input on the integration level to override the default date format used by OpsHub Integration Manager with the date format corresponding to the date format of updated time to resolve the parsing error.
+- Configure the **Comment Date Format** input on the integration level to override the default date format used by <code class="expression">space.vars.SITENAME</code> with the date format corresponding to the date format of updated time to resolve the parsing error.
 
 ### Input: Avoid time filter usage
 
 - DOORS Next API throws the "time out" error intermittently, which gets auto resolved at its own. However, in some cases, where the data volume on the IBM Doors Next server it too large, such errors occurred frequently and it persists for long time.
 - It was observed that, if the time filters are avoided in the Doors Next API queries of IBM Doors Next, frequency of such failures get reduced.
 - Hence, to avoid such failures, this setting can be used. Select `Yes` value in below section of advanced settings:
-  - The `Override parameters for read operations` of the `Entity level advance` setting of integration in OpsHub Integration Manager, when IBM Doors Next is source system in OpsHub Integration Manager  
-  - The `Override parameters for write operations` of the `Entity level advance` setting of integration in OpsHub Integration Manager, when IBM Doors Next is target system in OpsHub Integration Manager
+  - The `Override parameters for read operations` of the `Entity level advance` setting of integration in <code class="expression">space.vars.SITENAME</code>, when IBM Doors Next is source system in <code class="expression">space.vars.SITENAME</code>  
+  - The `Override parameters for write operations` of the `Entity level advance` setting of integration in <code class="expression">space.vars.SITENAME</code>, when IBM Doors Next is target system in <code class="expression">space.vars.SITENAME</code>
 
 - Please note that this setting shall be enabled with the [current state sync mode](../integrate/integration-configuration.md#sync-only-current-state).
 - Additionally, this setting shall not be enabled in the migration use case.
@@ -481,11 +481,11 @@ With respect to the above end system behavior, following will be the synchroniza
 Let's say there are 3 streams, `Stream A`, `Stream A.1` and `Stream A.2` (`Stream A.1` and `Stream A.2` have been created from `Stream A`). `Stream A` and `Stream A.1` are configured in integration for synchronization and `Stream A.2` is not configured for synchronization.
 
 - **Scenario 1** - There are few revisions in artifacts of `Stream A.1`. Those revisions will get synchronized in the entities of target system (entities in the target project corresponding to `Stream A.1`).  
-  When `Stream A.1` gets merged to `Stream A`, then a single revision gets added in artifacts of `Stream A`. OpsHub Integration Manager will synchronize that revision and subsequent revisions of artifacts in `Stream A` to the entities in target project corresponding to `Stream A`.
+  When `Stream A.1` gets merged to `Stream A`, then a single revision gets added in artifacts of `Stream A`. <code class="expression">space.vars.SITENAME</code> will synchronize that revision and subsequent revisions of artifacts in `Stream A` to the entities in target project corresponding to `Stream A`.
 
 - **Scenario 2** - Now consider, there are few revisions in artifacts of `Stream A.2`. As `Stream A.2` is not configured for synchronization, the artifacts of `Stream A.2` will not get synchronized.  
   When `Stream A.2` gets merged to `Stream A`, then a single revision gets added in artifacts of `Stream A` (as per DOORS Next behavior).  
-  OpsHub Integration Manager will synchronize that revision and any other subsequent revisions of artifacts in `Stream A` to the entities in target project corresponding to `Stream A`.
+  <code class="expression">space.vars.SITENAME</code> will synchronize that revision and any other subsequent revisions of artifacts in `Stream A` to the entities in target project corresponding to `Stream A`.
 
 ### Changeset Merge
 
@@ -523,7 +523,7 @@ Let's say there is one stream `Stream A` and one changeset `Changeset A`. `Strea
 **Synchronization behaviour**
 - With respect to the above end system behavior, following will be the synchronization behavior.
   - The historical data artifacts which are copied/cloned from another artifacts will not be populated. There will be only one revision synchronized due to DOORS Next system behavior.
-  - Any new comment and link added in the artifact will be synchronized by OpsHub Integration Manager.
+  - Any new comment and link added in the artifact will be synchronized by <code class="expression">space.vars.SITENAME</code>.
 
 ---
 
@@ -553,7 +553,7 @@ If the Primary Text field is mapped during field mapping, then do not map attach
 - In DOORS Next, whenever an inline image is added in **Primary Text** field, the inline image gets added as a file (attachment) as well.
 
 **Synchronization behavior**
-- With respect to the above behavior, OpsHub Integration Manager creates two revisions for **Primary Text** field, one for update and other one for the file (attachment) added as inline-image.
+- With respect to the above behavior, <code class="expression">space.vars.SITENAME</code> creates two revisions for **Primary Text** field, one for update and other one for the file (attachment) added as inline-image.
 
 - If the Source field, which is mapped with the **Primary Text** gets updated/modified, then it will overwrite the attachment reference which is created due to attachment synchronization from the Source system.
 
@@ -571,9 +571,9 @@ When the **In Folder** or **Module** field is mapped in field mapping for DOORS 
   - One is the core artifact
   - The other is the shared artifact
 - The core artifact is created in the folder corresponding to the module, whereas the shared artifact is created in the module.
-- Based on the module field value mapping and DOORS Next system behavior, OpsHub Integration Manager will also create the core artifact in the folder associated with the module (each module has their separate asset folder associated) and then the created artifact will be added in the corresponding module as a shared artifact.
+- Based on the module field value mapping and DOORS Next system behavior, <code class="expression">space.vars.SITENAME</code> will also create the core artifact in the folder associated with the module (each module has their separate asset folder associated) and then the created artifact will be added in the corresponding module as a shared artifact.
 
-> **Note**: For above case, when the **Module** field is mapped and once the artifact is created by OpsHub Integration Manager in target DOORS Next system, then any further updates for the corresponding entity from source system will be written in the artifact belonging to module (shared artifact).
+> **Note**: For above case, when the **Module** field is mapped and once the artifact is created by <code class="expression">space.vars.SITENAME</code> in target DOORS Next system, then any further updates for the corresponding entity from source system will be written in the artifact belonging to module (shared artifact).
 
 **In Folder and Module Field combination behavior**
 
@@ -590,23 +590,23 @@ When the **In Folder** or **Module** field is mapped in field mapping for DOORS 
 
 * **Configuration Management**  
   There are two types of configuration in DOORS Next - Local configuration and Global configuration. Local configuration is the individual configuration of any stream whereas Global configuration allows multiple streams of different systems to collaborate with each other. For information on Global Configuration, refer to link [Global Configuration in DOORS Next](https://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.6/com.ibm.rational.gcapp.doc/topics/c_gcm_node_product.html)
-  * OpsHub Integration Manager supports synchronization in local configuration scope. Synchronization of Global configuration streams are not supported by OpsHub Integration Manager. Thus, cross component links are not supported for DOORS Next by OpsHub Integration Manager.
+  * <code class="expression">space.vars.SITENAME</code> supports synchronization in local configuration scope. Synchronization of Global configuration streams are not supported by <code class="expression">space.vars.SITENAME</code>. Thus, cross component links are not supported for DOORS Next by <code class="expression">space.vars.SITENAME</code>.
 
 ## When DOORS Next is configured as source system
 
 In addition to above limitations, following are some limitations in synchronization when DOORS Next system is configured as source end system in integration.
 
-* Comments added in artifacts during merge from another stream will not be synchronized by OpsHub Integration Manager.
+* Comments added in artifacts during merge from another stream will not be synchronized by <code class="expression">space.vars.SITENAME</code>.
 
   **End System behaviour**
   * When a stream or changeset gets merged to another stream in DOORS Next, the comments added in artifacts retains their update time i.e. If there is a comment **Comment 1** added in artifact at T1 in stream or changeset and later the stream or changeset gets merged into another stream **Stream A** at T2. Then, the comment revision time will be T1 and not T2(comments time in Stream A will be same as that in changeset/merged stream).
 
   **Limitation in synchronization**
-  * Comments added in artifacts during merge from another stream will not be synchronized by OpsHub Integration Manager.
+  * Comments added in artifacts during merge from another stream will not be synchronized by <code class="expression">space.vars.SITENAME</code>.
 
     **For example -**
     * Let's say there are 2 streams, **Stream A**, **Stream A.1** (Stream A.1 have been created from Stream A at time T1). Stream A is configured in integration for synchronization.
-    * There are few comments added in artifacts in Stream A.1 at time T2 and T3. Let's say the synchronization is on-going for Stream A and has reached till T4. When Stream A.1 gets merged to Stream A at T5, then all the comments gets added in artifacts of Stream A. OpsHub Integration Manager will skip the comments added in Stream A.1 in such cases as the integration has already synchronized till T4 and the comments that are now added in Stream A at time T2 and T3 after merge will be skipped.
+    * There are few comments added in artifacts in Stream A.1 at time T2 and T3. Let's say the synchronization is on-going for Stream A and has reached till T4. When Stream A.1 gets merged to Stream A at T5, then all the comments gets added in artifacts of Stream A. <code class="expression">space.vars.SITENAME</code> will skip the comments added in Stream A.1 in such cases as the integration has already synchronized till T4 and the comments that are now added in Stream A at time T2 and T3 after merge will be skipped.
 
 * When the **In Modules** field is mapped, modules with empty names(no name) will not be synchronized to the target end system.
 * If **Reviews** link is added, an update to the parent entity is required to synchronize the updated review data.
@@ -625,7 +625,7 @@ In addition to the [Common Limitations](#common-limitations), the following are 
   * If the Source field, which is mapped with the HTML field of Doors Next contains the inline document, then synchronization will fail with processing failure.
   * If the Source field, which is mapped with the HTML field of Doors Next contains the hyperlink to the inline file, then below will be the synchronization behavior:
     * If the above-mentioned data is added into the Source system, then synchronization will fail with processing failure.
-    * If the above-mentioned data is synchronized from Doors Next to another end system via OpsHub Integration Manager, then synchronization will generate data corruption.
+    * If the above-mentioned data is synchronized from Doors Next to another end system via <code class="expression">space.vars.SITENAME</code>, then synchronization will generate data corruption.
 
 # Troubleshoot
 
@@ -677,7 +677,7 @@ Refer to document [IBM Engineering Requirements Management DOORS Next Error Solu
 ```
 
 * Here, this field `<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"> 2024-05-22T06:25:33.416Z</dcterms:modified>` represents the modified time of the artifact given in the API response above. Hence, for the date 2024-05-22T06:25:33.416Z, the format will be yyyy-MM-dd'T'HH:mm:ss.SSS'Z'.
-* To get the date format, user should hit the API: `GET <baseURL>/rm/publish/comments?resourceURI=<resourceURL>`. The response of the API call will be:- If the configured timeout is not large enough, and the token is not used by OpsHub Integration Manager in the configured timespan for some reason (Inactive integration/Inactive OpsHub Integration Manager server), then token will get expired.
+* To get the date format, user should hit the API: `GET <baseURL>/rm/publish/comments?resourceURI=<resourceURL>`. The response of the API call will be:- If the configured timeout is not large enough, and the token is not used by <code class="expression">space.vars.SITENAME</code> in the configured timespan for some reason (Inactive integration/Inactive <code class="expression">space.vars.SITENAME</code> server), then token will get expired.
 
 ```xml
 <ds:dataSource xmlns:attribute="http://jazz.net/xmlns/alm/rm/attribute/v0.1" xmlns:comments="http://jazz.net/xmlns/alm/rm/comments/v0.1" xmlns:ds="http://jazz.net/xmlns/alm/rm/datasource/v0.1" xmlns:field="http://jazz.net/xmlns/alm/rm/field/v0.1" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:history="http://jazz.net/xmlns/alm/rm/history/v0.1" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rm="http://www.ibm.com/xmlns/rdm/rdf/" xmlns:rrm="http://www.ibm.com/xmlns/rrm/1.0/" xmlns:term="http://jazz.net/xmlns/alm/rm/term/v0.1" xmlns:text="http://jazz.net/xmlns/alm/rm/text/v0.1" xmlns:view="http://jazz.net/xmlns/alm/rm/view/v0.1" xmlns:xhtml="http://www.w3.org/1999/xhtml" appId="RRC" vMajor="70" vMinor="10">
@@ -731,15 +731,15 @@ Following are the steps that needs to be done for generating OAuth token for DOO
 
 - **Generate OAuth Token and OAuth Secret for given consumer key**  
   The following two ways can be used to generate the OAuth token for IBM Engineering Requirements Management DOORS Next system:
-  - [Option 1 (Utility)](ibm-rational-doors-next-oauth-generation.md#generate-token-using_doorsng-token-generator-utility): Generate the OAuth token using a stand-alone utility bundled with OpsHub Integration Manager to generate the OAuth token.
+  - [Option 1 (Utility)](ibm-rational-doors-next-oauth-generation.md#generate-token-using_doorsng-token-generator-utility): Generate the OAuth token using a stand-alone utility bundled with <code class="expression">space.vars.SITENAME</code> to generate the OAuth token.
   - [Option 2 (Postman)](ibm-rational-doors-next-oauth-generation.md#generate-token-using-rest-client-postman)): Generate an OAuth token using a third-party rest client such as postman.
 
 > **Note**:  
 **The behavior of "OAuth" token:**
 - The OAuth token will be expired, if it is not used for the time span, which is configured in the "OAuth access token timeout" configuration of IBM Engineering Requirements Management DOORS Next server.
-- Suppose the token mentioned in the System Configuration form in the OpsHub Integration Manager gets expired, then it must be updated by reperforming the above steps.
+- Suppose the token mentioned in the System Configuration form in the <code class="expression">space.vars.SITENAME</code> gets expired, then it must be updated by reperforming the above steps.
 - To avoid the above case, the value of the "OAuth access token timeout" configuration would be larger than the synchronization interval (Integration schedule) of the integration, which is configured with DOORS Next using OAuth authentication.
-	- If the configured timeout is not large enough, and the token is not used by OpsHub Integration Manager in the configured timespan for some reason (Inactive integration/Inactive OpsHub Integration Manager server), then token will get expired.
+	- If the configured timeout is not large enough, and the token is not used by <code class="expression">space.vars.SITENAME</code> in the configured timespan for some reason (Inactive integration/Inactive <code class="expression">space.vars.SITENAME</code> server), then token will get expired.
 
 ## How to find DOORS Next version
 
@@ -1045,7 +1045,7 @@ In DOORS Next, the **read access** can be restricted using **Access Control** se
 
 # Glossary
 
-* **Stream** – The word **Stream** refers to Projects in terms of OpsHub Integration Manager. For more understanding on streams, refer to document [DOORS Next Streams](https://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.6/com.ibm.jazz.vvc.doc/topics/t_wkspc_crt.html).
+* **Stream** – The word **Stream** refers to Projects in terms of <code class="expression">space.vars.SITENAME</code>. For more understanding on streams, refer to document [DOORS Next Streams](https://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.6/com.ibm.jazz.vvc.doc/topics/t_wkspc_crt.html).
 * **Changeset** – A change set is a collection of related modifications to artifacts. A change set can be created to group multiple changes. For more understanding, refer to [DOORS Next Change sets](https://www.ibm.com/support/knowledgecenter/SSYMRC_6.0.6/com.ibm.jazz.vvc.doc/topics/t_cset_crt.html).
 * **Artifacts** – The word **artifact** is representation of entity in DOORS Next.
   * **Base/Core artifact** – All the artifact(s) in DOORS Next stream which are created in a folder are called base or core artifacts. Those are the artifacts which can be added in a module to create a shared artifact.
