@@ -11,11 +11,9 @@ There are different logs maintained and stored under **<code class="expression">
 | ConnectionModeConf.log | Log related to the Connection Mode Configuration.                                                                                                                                                                                                                               |
 | OpsHub.log             | <code class="expression">space.vars.SITENAME</code> Application log file for all the {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME"%} migrations{% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME" %}integrations {% endif %} |
 | OpsHubTFSService.log   | Common log file for TFS API interaction                                                                                                                                                                                                                                         |
-| Integrations           | Folder contains the files for the logs of each{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME"%} migrations{% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME" %}integrations {% endif %}                                        |
+| Integrations           | Folder contains the files for the logs of each{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME"%} migrations {% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME" %}integrations {% endif %}                                       |
 
-
-{% if "OpsHub Integration Manager" === space.vars.SITENAME %}
-
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
 # Log Settings
 
 System log helps to view logs for tracking backend activity in <code class="expression">space.vars.SITENAME</code>. Usually logs are useful when any failure or unusual behavior is detected in integration. System log can store logs in 5 different levels. Logs will capture information based on logging level set in System log.
