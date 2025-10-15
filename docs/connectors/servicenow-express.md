@@ -79,7 +79,7 @@ Before you continue to the integration, you must first configure ServiceNow syst
 * Set **ServiceNow User Name** to the admin user name of ServiceNow.
 * Set **ServiceNow User Password** to the corresponding password of the user account that is used in the synchronization.
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 ## Integration Configuration
 

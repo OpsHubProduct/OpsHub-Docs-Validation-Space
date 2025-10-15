@@ -24,7 +24,7 @@ Before you continue to the integration, you must first configure TeamForge. Clic
 </p>
 
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 # Mapping Configuration
 
@@ -87,9 +87,9 @@ TeamForge Query format is:
 * **Status** and **Display Effort In** fields of **Planning Folders** will come as Text field and in case of different values in the other end system. You need advance mapping for synchronization. (Mapping will be on display name based for Status. Display Effort needs trackerunitid to write data).
 * When TeamForge is target system, Special characters (such as 아티팩트) in attachment file name will appear as question marks.
 * Since TeamForge version 18.1, **Description** and **Comments** are supported as **Markdown**, but these will be synchronized as plain text.
-* Synchronization of Actions or State Transition configuration is not supported by OpsHub Integration Manager.
-* Impersonation is not supported by OpsHub Integration Manager.
-* Read Only fields in OpsHub Integration Manager will not be writable due to end system API limitations/behaviours.  
+* Synchronization of Actions or State Transition configuration is not supported by <code class="expression">space.vars.SITENAME</code>.
+* Impersonation is not supported by <code class="expression">space.vars.SITENAME</code>.
+* Read Only fields in <code class="expression">space.vars.SITENAME</code> will not be writable due to end system API limitations/behaviours.  
   * E.g., Created, Creator, Date Updated, etc.
 
 # Appendix

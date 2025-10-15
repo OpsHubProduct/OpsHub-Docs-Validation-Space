@@ -13,7 +13,7 @@
 
 ## Custom Field
 
-OpsHub Integration Manager requires one special field to be defined on the entity that is being synchronized to Tosca. It must be set up so that OpsHub Integration Manager can track the integration status of each item:
+<code class="expression">space.vars.SITENAME</code> requires one special field to be defined on the entity that is being synchronized to Tosca. It must be set up so that <code class="expression">space.vars.SITENAME</code> can track the integration status of each item:
 
 | **Property Name** | **Type** |
 |-------------------|----------|
@@ -23,7 +23,7 @@ For more details on adding custom fields, refer to [Create Custom Property](#cre
 
 ## Dedicated Workspace
 
-* To synchronize data from a specific Tosca workspace, the user needs to create a cloned workspace of the original one for integration through OpsHub Integration Manager.
+* To synchronize data from a specific Tosca workspace, the user needs to create a cloned workspace of the original one for integration through <code class="expression">space.vars.SITENAME</code>.
 * Ensure that both the original and cloned workspaces point to the same repository.
 * For more details on creating/cloning a workspace, refer to [Create or Clone Workspace](#create-or-clone-workspace) section in Appendix.
 
@@ -69,13 +69,13 @@ Refer to the screenshot below:
 |----------------|-----------------|
 | **System Name** | Provide a unique name to Tosca system |
 | **Instance URL** | Provide URL for Tosca instance. Example: <hostname>/rest/toscacommander |
-| **Username** | Provide username of the dedicated user for OpsHub Integration Manager. Ensure that the dedicated user has the necessary permissions |
-| **Password** | Provide password of the dedicated user for OpsHub Integration Manager |
+| **Username** | Provide username of the dedicated user for <code class="expression">space.vars.SITENAME</code>. Ensure that the dedicated user has the necessary permissions |
+| **Password** | Provide password of the dedicated user for <code class="expression">space.vars.SITENAME</code> |
 | **Date Format For API** | Provide the date format of Tosca instance in which date appears in API response for CreatedAt And ModifiedAt Fields (Refer to [Select Date Format For API](#select-date-format-for-api) section in Appendix for more information) |
 | **Date Format For UI** | Provide date format of Tosca instance in which the date appears in CreatedAt And ModifiedAt Fields (Refer to [Select Date Format For UI](#select-date-format-for-ui) section in Appendix for more information) |
 | **Instance Time Zone** | Provide time zone of Tosca instance |
 | **Metadata Details** | This data is pre-populated in JSON format based on system metadata (entity type, field names, etc.). You can edit entity types based on your Tosca instance's details for system metadata. Refer to [Understanding JSON Input](#understanding-json-input) section for format and JSON form details |
-| **Workspace Refresh Time** | Enter the time in seconds for the workspace refresh interval. OpsHub Integration Manager will update the cloned workspace according to this interval. |
+| **Workspace Refresh Time** | Enter the time in seconds for the workspace refresh interval. <code class="expression">space.vars.SITENAME</code> will update the cloned workspace according to this interval. |
 
 ## Understanding JSON Input
 
