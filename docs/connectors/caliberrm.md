@@ -2,7 +2,7 @@
 
 ## User Privileges
 
-* Create one user for Caliber RM System, dedicated to OpsHub Integration Manager. User should not be used to do any other operations from System's User-Interface.
+* Create one user for Caliber RM System, dedicated to <code class="expression">space.vars.SITENAME</code>. User should not be used to do any other operations from System's User-Interface.
 * User should have access to the projects that are required to be integrated. For this, if user belongs to some group, then that group should have rights to access projects. This can be done with Administrator tool, by selecting a project and checking its Group Assignment.
 
 ## Additional Caliber RM Library Configuration
@@ -28,7 +28,7 @@ Before you continue to the integration, you must first configure Caliber RM. Cli
   <img src="../assets/Caliber_RM_Image_1a.png" width="2500" />
 </p>
 
-If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+If the system is deployed on HTTPS and a self-signed certificate is used, then you will have to import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Click [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 
 # Mapping Configuration

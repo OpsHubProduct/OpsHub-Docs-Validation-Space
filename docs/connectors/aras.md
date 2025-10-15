@@ -2,8 +2,8 @@
 
 ## User Privileges
 
-* Create a user in Aras Innovator that is dedicated for OpsHub Integration Manager. The user shouldn't perform any other action from Aras Innovator user interface. Refer to [Add User in Aras Innovator](aras.md#add-users) section to learn how to add a new user in Aras Innovator.
-* The user identity of the user dedicated for OpsHub Integration Manager must have the following permissions for the 'item type' to be integrated:
+* Create a user in Aras Innovator that is dedicated for <code class="expression">space.vars.SITENAME</code>. The user shouldn't perform any other action from Aras Innovator user interface. Refer to [Add User in Aras Innovator](aras.md#add-users) section to learn how to add a new user in Aras Innovator.
+* The user identity of the user dedicated for <code class="expression">space.vars.SITENAME</code> must have the following permissions for the 'item type' to be integrated:
 
 | **Permission Types**        | **Justification**                                                                                                                                                                          | **Needed When**                                                                                                                                                                                                                                                                                                                                                             | **How To**                                                                                                                                                                                                                   |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -11,20 +11,20 @@
 | Can Discover                | To get the list of items present for a given itemtype.                                                                                                                                     | Aras Innovator is source system,target system or both.                                                                                                                                                                                                                                                                                                                      | To learn how to provide user with the Can Discover permission, refer to [Give Necessary Permissions to User for Itemtype](aras.md#give-necessary-permissions-to-user-for-itemtype) section.                                  |
 | Update                      | To update an item.                                                                                                                                                                         | Aras Innovator is target system. Also,when Aras Innovator is source system and Update Permission is required for Remote Id or Remote Link configuration in Integration .Please check '''Tracking Id and Link of Entities Across Systems''' section on [Integration Configuration](../integrate/integration-configuration.md) page to learn about Remote Id and Remote Link. | To learn how to provide user with the Update permission, refer to [Give Necessary Permissions to User for Itemtype](aras.md#give-necessary-permissions-to-user-for-itemtype) section.                                        |
 | Can Add                     | To create an item: The user is allowed to create record from the Aras Innovator System (through the UI and API both) only when the user's identity is allowed in the "Can Add" tab         | Aras Innovator is target system.                                                                                                                                                                                                                                                                                                                                            | To learn how to assign "Can Add" permission to user's identity on particular itemtype, refer to [Allow Can Add permission to User](aras.md#assign-identity-on-item-type) section.                                            |
-| Life Cycle State Transition | To update the state during transition, the role in Life Cycle transition needs to be set as '''Administrators''' for the Integration User \[configured in the OpsHub Integration Manager]. | When Aras is the target system.                                                                                                                                                                                                                                                                                                                                             | To learn how to provide user with the Lifecycle State Transition permission, refer to [Assign Life Cycle Transition Permission for Item Type](aras.md#assign-life-cycle-state-transition-permissions-for-item-type) section. |
+| Life Cycle State Transition | To update the state during transition, the role in Life Cycle transition needs to be set as '''Administrators''' for the Integration User \[configured in the <code class="expression">space.vars.SITENAME</code>]. | When Aras is the target system.                                                                                                                                                                                                                                                                                                                                             | To learn how to provide user with the Lifecycle State Transition permission, refer to [Assign Life Cycle Transition Permission for Item Type](aras.md#assign-life-cycle-state-transition-permissions-for-item-type) section. |
 
 ## Versionable Item Type 
 
-* For any Item Type in Aras Innovator, the versions/history for the item gets generated only when the item is versionable. Hence for OpsHub Integration Manager to synchronize the items with their revisions, they need to be versionable.
-* In case they are not versionable, OpsHub Integration Manager will synchronize the item as per the current state of that item, available at the time of synchronization. Follow [Make Item Type Versionable](aras.md#make-item-type-versionable) in the Appendix section to learn how to make item types versionable.
+* For any Item Type in Aras Innovator, the versions/history for the item gets generated only when the item is versionable. Hence for <code class="expression">space.vars.SITENAME</code> to synchronize the items with their revisions, they need to be versionable.
+* In case they are not versionable, <code class="expression">space.vars.SITENAME</code> will synchronize the item as per the current state of that item, available at the time of synchronization. Follow [Make Item Type Versionable](aras.md#make-item-type-versionable) in the Appendix section to learn how to make item types versionable.
 
 ## Hosting Opshub Aras Service 
 
-OpsHub Integration Manager requires this service to communicate with Aras Innovator server. It acts as a communication layer between Aras Innovator and OpsHub Integration Manager.
+<code class="expression">space.vars.SITENAME</code> requires this service to communicate with Aras Innovator server. It acts as a communication layer between Aras Innovator and <code class="expression">space.vars.SITENAME</code>.
 
 ### System Prerequisites
 
-* Configure OpsHub Integration Manager Aras Service on a machine that has .NET Framework version 4.7.2 or a higher version installed.
+* Configure <code class="expression">space.vars.SITENAME</code> Aras Service on a machine that has .NET Framework version 4.7.2 or a higher version installed.
 * Please refer to the following link for information on software and hardware requirements for installing .NET Framework 4.7.2 :
   https://docs.microsoft.com/en-us/dotnet/framework/get-started/system-requirements
 
@@ -43,12 +43,12 @@ Before the user continues with the integration, he/she must first configure Aras
 | **System Name**                    | Provide a unique name to the Aras Innovator System.                                                                                                                                                                          |
 | **Version**                        | Provide version for Aras Innovator Instance. Check [Get Aras Innovator Version](aras.md#get-aras-innovator-version) in the Appendix section to learn how to get Aras Innovator version.                                      |
 | **Aras Innovator Instance URL**    | Provide URL for Aras Innovator Instance. Example: `<hostname>/InnovatorServer/Server/InnovatorServer.aspx`                                                                                                                   |
-| **Aras Innovator User Name**       | Provide username of the user dedicated for OpsHub Integration Manager. Please ensure that user has the necessary permissions. Refer to [User privileges](aras.md#user-privileges) for permissions required by user identity. |
-| **Aras Innovator User Password**   | Provide password of user dedicated for OpsHub Integration Manager.                                                                                                                                                           |
+| **Aras Innovator User Name**       | Provide username of the user dedicated for <code class="expression">space.vars.SITENAME</code>. Please ensure that user has the necessary permissions. Refer to [User privileges](aras.md#user-privileges) for permissions required by user identity. |
+| **Aras Innovator User Password**   | Provide password of user dedicated for <code class="expression">space.vars.SITENAME</code>.                                                                                                                                                           |
 | **Aras Innovator Database name**   | Provide Aras Innovator Database name to which the connection needs to be done. Refer to [Get Database Name](aras.md#get-database-name) in the Appendix section to learn how to get Database name.                            |
-| **Aras Innovator Web Service URL** | Provide URL for the hosted OpsHubArasService. Refer to [Hosting opshub Aras service](aras.md#hosting-opshub-aras-service) to learn how to host OpsHub Integration Manager Aras Webservice.                                   |
+| **Aras Innovator Web Service URL** | Provide URL for the hosted OpsHubArasService. Refer to [Hosting opshub Aras service](aras.md#hosting-opshub-aras-service) to learn how to host <code class="expression">space.vars.SITENAME</code> Aras Webservice.                                   |
 
-* If the system is deployed on HTTPS and a self-signed certificate is used, then the user should import the SSL Certificate to be able to access the system from OpsHub Integration Manager. Check [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
+* If the system is deployed on HTTPS and a self-signed certificate is used, then the user should import the SSL Certificate to be able to access the system from <code class="expression">space.vars.SITENAME</code>. Check [Import SSL Certificates](../getting-started/ssl-certificate-configuration.md) to learn how to import SSL certificate.
 
 # Mapping Configuration
 
@@ -92,7 +92,7 @@ Set polling time as the time after which the user wants to synchronize data betw
 
 **Remote ID Synchronization**
 
-* In Aras, custom entity types don't have Item Number (which stores Display Id) field by default. Hence, in such cases, OpsHub Integration Manager will use entity's Internal Id as Remote Id to be synchronized to the other end system.
+* In Aras, custom entity types don't have Item Number (which stores Display Id) field by default. Hence, in such cases, <code class="expression">space.vars.SITENAME</code> will use entity's Internal Id as Remote Id to be synchronized to the other end system.
 * To show the 'Display Id' as Remote Id, it is required to add the Item Number field in Aras.
   Refer to [Add Item Number Field](aras.md#set-item-number-for-custom-entity) for more details.
 
@@ -104,7 +104,7 @@ Set polling time as the time after which the user wants to synchronize data betw
 * For Aras Innovator as Target System, if the attachment filename contains Windows special characters (/,,",:,\*,?,<,>), then file will not be added in Aras Innovator. As a result, the user will encounter a processing failure. This is because Aras Innovator does not support Windows special characters in filename.
   Please check [Synchronise file with Windows special characters](../help-center/troubleshooting/errors/aras/oh-aras-1502.md) to find how to synchronise attachment with Windows special characters in filename.
 
-## Limitations to be Resolved in Upcoming Releases of OpsHub Integration Manager
+## Limitations to be Resolved in Upcoming Releases of <code class="expression">space.vars.SITENAME</code>
 
 * To synchronise File as Attachment to Itemtype being synchronised, there should be unique relationship type between Itemtype and File.
 * Comments with attachments are not supported.
