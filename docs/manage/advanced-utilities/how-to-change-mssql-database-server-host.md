@@ -13,8 +13,8 @@
 * Open Command Prompt with administrator privileges and go to <code class="expression">space.vars.SITENAME</code>'s directory `<Installation Folder or OpsHub>/Other_Resources/Resources/HostChange` using command  **`cd <Installation Folder or OpsHub>/Other_Resources/Resources/HostChange`**
 {% endif %}  
 * Run `HostChange.bat` for Windows system. 
-{% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
-* * In case of linux system, run `HostChange.sh` 
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}
+  * In case of linux system, run `HostChange.sh` 
 {% endif %}
 * Enter the path for <code class="expression">space.vars.SITENAME</code>'s Installation Directory
 
