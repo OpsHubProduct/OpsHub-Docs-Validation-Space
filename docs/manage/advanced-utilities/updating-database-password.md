@@ -13,8 +13,8 @@ Follow the steps given below for updating database password in OpsHub:
 - Unzip `OpsHub Database Management utility.zip`.
 - Run `OpsHubDatabaseManagementUtility.bat` for Windows system. 
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
-- In case of Linux system, run `OpsHubDatabaseManagementUtility.sh`.  
-{% endif %}   
+- In case of Linux system, run `OpsHubDatabaseManagementUtility.sh`.    
+{% endif %}  
 - Enter path for OpsHub Installation Directory.
 
 <p align="center">
