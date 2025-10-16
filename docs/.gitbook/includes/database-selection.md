@@ -3,18 +3,16 @@ The user should select the Database type for installation from the dropdown list
 <p align="center">
   <img src="../../assets/Installation_DatabaseSelection.png" width="900">
 </p>
-Click the checkbox adjacent to **Advance configuration** option if you have one of the following requirements:
 
+Click the checkbox adjacent to **Advance configuration** option if you have one of the following requirements:  
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
-* Install <code class="expression">space.vars.SITENAME</code> in https
+- Install <code class="expression">space.vars.SITENAME</code> in https
 {% endif %}
-
 - Install multiple instances of <code class="expression">space.vars.SITENAME</code> on a single instance  
 - Need to create database manually  
-
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
-* Need to change encryption algorithm (by default, it is AES 256)
-  {% endif %}
+- Need to change encryption algorithm (by default, it is AES 256)
+{% endif %}
 
 Now, select **one of the five types of database selection for installation** as mentioned below.  
 
@@ -81,16 +79,15 @@ Given below are further details associated with each installation selection.
   <img src="../../assets/Installer_Image_2b_C1.png" width="900">
 </p>
 
-Notes : For this application, the default database name will be 'opshub' and 'reportsdb'.
+Notes : For this application, the default database name will be `opshub` and `reportsdb`.
 
 
 ## Installation with Oracle
 
 Select Oracle Database Type
 
-- CDB or Container Database refers to the multitenant architecture in Oracle. CDB type was introduced with Oracle 12c version. User can use the instructions given in the following screenshot to find out whether your Oracle database type is CDB or not.**  
-
-- The user must select the connection type based on the oracle configuration used to connect the above selected database type. It can be either SID or Service name.**  
+- CDB or Container Database refers to the multitenant architecture in Oracle. CDB type was introduced with Oracle 12c version. User can use the instructions given in the following screenshot to find out whether your Oracle database type is CDB or not.
+- The user must select the connection type based on the oracle configuration used to connect the above selected database type. It can be either **SID** or **Service name**.  
 <p align="center">
   <img src="../../assets/Installer_Image_4Ob.png" width="900">
 </p>
