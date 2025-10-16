@@ -14,10 +14,9 @@
 {% endif %}  
 * Run `HostChange.bat` for Windows system. 
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
-  * In case of linux system, run `HostChange.sh` 
+* * In case of linux system, run `HostChange.sh` 
 {% endif %}
-
-* Enter the path for {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} OM4ADO{% endif %} {% if "OpsHub Integration Manager" === space.vars.SITENAME %} OpsHub {% endif %} Installation Directory
+* Enter the path for <code class="expression">space.vars.SITENAME</code>'s Installation Directory
 
 <p align="center">
   <img src="../../assets/initial.png">
