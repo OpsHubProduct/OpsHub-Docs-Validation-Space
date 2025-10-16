@@ -24,7 +24,7 @@
 * [How to enable OpsHub Integration Manager with HTTPS when it has already been installed with HTTP?](./general/enable-oim-with-https.md)  
 * [How to remove unnecessary audits to improve audit loading time?](./general/how-to-remove-audits.md)  
 * [How to enable compression in database?](./general/how-to-enable-compression.md)  
-* [How to move <code class="expression">space.vars.SITENAME</code> from CentOS to Ubuntu?](./general/move-application-server.md)  
+* [How to move OpsHub Integration Manager from CentOS to Ubuntu?](./general/move-application-server.md)  
 * [How to identify between Custom and Default Workflows and their associated integrations?](./general/how-to-identify-between-custom-and-default-workflows-and-their-associated-integrations.md)  
 * [How to configure cross system linkages between IBM systems?](./general/how-to-configure-cross-system-linkage-in-ibm-systems.md)  
 
