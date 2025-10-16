@@ -12,13 +12,13 @@ As HSQL is not suitable for production usage, <code class="expression">space.var
   * For MySQL connector driver jar 5.1.8 is not supported, hence the latest connector driver jar should be used from http://dev.mysql.com/downloads/connector/j/5.1.html
 * Change `destinationconnection.properties` and `sourceconnection.properties` in Migrator directory:
   * **sourceconnection.properties**: Change `CONNECTION_HSQL_FILE_PATH` property and replace `<installation path>` with installation path
-  * **destinationconnection.properties**: Provide all properties value as guided in file.    
-    {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}    
-  * Close OM4ADO application.  
-    {% endif %}  
-    {% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
-  * Shut down server (ensure service is not running if registered).  
-    {% endif %}  
+  * **destinationconnection.properties**: Provide all properties value as guided in file.  
+{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}    
+* Close OM4ADO application.  
+{% endif %}   
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}    
+* Shut down server (ensure service is not running if registered).  
+{% endif %}  
 * Take back up of database
 
 Refer to Database Backup section on [Taking Application Backup](../upgrade/taking-application-backup.md) page for details.
