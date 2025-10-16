@@ -6,7 +6,7 @@
 * [Are there any vulnerabilities in <code class="expression">space.vars.SITENAME</code> ?](./general/vulnerabilities.md)  
   {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
 * [Integrations are configured but synchronization is not happening, What can be potentials reasons?](./general/integration-sync-not-working.md)
-  {% endif %}
+  {% endif %}  
 * [Not able to see the newly added projects or lookup values, What can be potentials reasons?](./general/not-able-to-see-newly-added-projects-or-lookup-values.md)  
 * [How to put default value for any mandatory field of destination system?](./general/default-value-mandatory-field-target-system.md)  
 * [How to do value mapping for lookup type fields ?](./general/value-mapping-lookuptype-fields.md)  
