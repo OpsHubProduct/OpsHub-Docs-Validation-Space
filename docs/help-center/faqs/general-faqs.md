@@ -2,9 +2,9 @@
 * [What are the security aspects of on-premise deployment?](./general/security-aspects.md)  
 * [How to know which system/entity/version are supported ?](./general/supported-system-entity-version.md)  
 * [How to migrate from HSQL to other enterprise database?](./general/hsql-other-database.md)  
-* [How to move application server from one machine to other?](./general/move-application-server.md)  
-* [Are there any vulnerabilities in <code class="expression">space.vars.SITENAME</code> ?](./general/vulnerabilities.md)  
-  {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
+* [How to move application server from one machine to other?](./general/move-application-server.md)    
+* [Are there any vulnerabilities in OpsHub Integration Manager?](./general/vulnerabilities.md)  
+  {% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
 * [Integrations are configured but synchronization is not happening, What can be potentials reasons?](./general/integration-sync-not-working.md)
   {% endif %}  
 * [Not able to see the newly added projects or lookup values, What can be potentials reasons?](./general/not-able-to-see-newly-added-projects-or-lookup-values.md)  
