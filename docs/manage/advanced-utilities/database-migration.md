@@ -41,10 +41,10 @@ If file execution fails with ^M bad interpreter error, use following steps:
 
 Following are the steps to be performed after successful database migration:
 
-* Go to `<code class="expression">space.vars.SITENAME</code>_Installation>\OpsHubServer\webapps\OpsHubWS\META-INF` directory
+* Go to <code class="expression">space.vars.SITENAME</code>'s `<Installation Directory>\OpsHubServer\webapps\OpsHubWS\META-INF` directory
 * Delete `war-tracker` file
-* Go to `<code class="expression">space.vars.SITENAME</code>_Installation>\OpsHubServer\webapps\OpsHubWS` directory
+* Go to <code class="expression">space.vars.SITENAME</code>'s `<Installation Directory>\OpsHubServer\webapps\OpsHubWS` directory
 * Select all the files and add to archive with name `OpsHubWS.zip`
 * Rename `OpsHubWS.zip` to `OpsHubWS.war`
-* Go to `<code class="expression">space.vars.SITENAME</code>_Installation>\OpsHubServer\webapps` and replace newly created `OpsHubWS.war` with the existing one
-* Delete `<code class="expression">space.vars.SITENAME</code>_Installation>\OpsHubServer\webapps\OpsHubWS` directory and
+* Go to <code class="expression">space.vars.SITENAME</code>'s `<Installation Directory>\OpsHubServer\webapps` and replace newly created `OpsHubWS.war` with the existing one
+* Delete <code class="expression">space.vars.SITENAME</code>'s `<Installation Directory>\OpsHubServer\webapps\OpsHubWS` directory and start the service.
