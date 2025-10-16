@@ -4,21 +4,21 @@ Please refer to [Database Prerequisites](../../getting-started/prerequisites.md#
 
 ### Introduction
 
-As HSQL is not suitable for production usage, <code class="expression">space.vars.SITENAME</code> needs to be migrated to one of three databases supported by <code class="expression">space.vars.SITENAME</code>. There is a utility provided with <code class="expression">space.vars.SITENAME</code> installation and packaged in `<code class="expression">space.vars.SITENAME</code>_Installation>\OpsHub_Resources\DatabaseMigrator` directory \[Migrator directory].
+As HSQL is not suitable for production usage, <code class="expression">space.vars.SITENAME</code> needs to be migrated to one of three databases supported by <code class="expression">space.vars.SITENAME</code>. There is a utility provided with <code class="expression">space.vars.SITENAME</code> installation and packaged in <code class="expression">space.vars.SITENAME</code>'s `<Installation Directory>\OpsHub_Resources\DatabaseMigrator`  directory \[Migrator directory].
 
 ### Steps to migrate from HSQL to other supported databases
 
-* Keep driver for database for which migration needs to be done in: `<code class="expression">space.vars.SITENAME</code>_Installation>\OpsHubServer\lib` directory\
-  For MySQL connector driver jar 5.1.8 is not supported, hence the latest connector driver jar should be used from http://dev.mysql.com/downloads/connector/j/5.1.html
+* Keep driver for database for which migration needs to be done in: <code class="expression">space.vars.SITENAME</code>'s `<Installation Directory>\OpsHubServer\lib` directory.
+  * For MySQL connector driver jar 5.1.8 is not supported, hence the latest connector driver jar should be used from http://dev.mysql.com/downloads/connector/j/5.1.html
 * Change `destinationconnection.properties` and `sourceconnection.properties` in Migrator directory:
   * **sourceconnection.properties**: Change `CONNECTION_HSQL_FILE_PATH` property and replace `<installation path>` with installation path
-  * **destinationconnection.properties**: Provide all properties value as guided in file.  
-    {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}  
-  * Close OM4ADO application. 
+  * **destinationconnection.properties**: Provide all properties value as guided in file.    
+    {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}    
+  * Close OM4ADO application.  
     {% endif %}  
-    {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
-  * Shut down server (ensure service is not running if registered).
-    {% endif %}
+    {% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
+  * Shut down server (ensure service is not running if registered).  
+    {% endif %}  
 * Take back up of database
 
 Refer to Database Backup section on [Taking Application Backup](../upgrade/taking-application-backup.md) page for details.
