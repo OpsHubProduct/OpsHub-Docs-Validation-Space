@@ -14,7 +14,7 @@
 {% endif %}  
 * Run `HostChange.bat` for Windows system. 
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
-  * In case of linux system, run `HostChange.sh` 
+    * In case of linux system, run `HostChange.sh` 
 {% endif %}  
 
 * Enter the path for <code class="expression">space.vars.SITENAME</code>'s Installation Directory
