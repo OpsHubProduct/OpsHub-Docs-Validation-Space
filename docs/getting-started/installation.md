@@ -118,7 +118,7 @@ Here is a video on how to install <code class="expression">space.vars.SITENAME</
 
 ## Database Selection
 
-{% include "../.gitbook/includes/database-selection (4).md" %}
+{% include "../.gitbook/includes/database-selection.md" %}
 
 ## Advance Installation
 
