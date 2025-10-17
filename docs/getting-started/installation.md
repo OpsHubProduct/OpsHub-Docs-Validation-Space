@@ -1,8 +1,10 @@
+
+
 # Launching Installer
 
 The first screen when you launch the application will be this:
 
-<div align="center"><img src="../assets/Launching_Installer_Image_1bbn.png" width="900"></div>
+<div align="center"><img src="../assets/Launching_Installer_Image_1bbn.png" width="750"></div>
 
 ## Launch the installer in different Operating Systems
 
@@ -78,11 +80,11 @@ On launching the installer, you will see the license agreement window that conta
 
 If you agree with the license details, then only you can move to the next step i.e. Installation.
 
-<div align="center"><img src="../assets/Default_Installation_Image_1La.png" width="900"></div>
+<div align="center"><img src="../assets/Default_Installation_Image_1La.png" width="750"></div>
 
 License Information window has the details of the trial license and the contact information to purchase the license.
 
-<div align="center"><img src="../assets/Default_Installation_Image_2LH.png" width="900" ></div>
+<div align="center"><img src="../assets/Default_Installation_Image_2LH.png" width="750" ></div>
 
 ### Possible exceptions
 
@@ -107,7 +109,7 @@ Here is a video on how to install <code class="expression">space.vars.SITENAME</
 
 * You now have to select the installation directory. Before you select a directory, make sure the directory is empty. All the log files, configuration files, and servers are placed in this directory. If the directory is not available, you can create a directory as per your own specifications.
 
-<div align="center"><img src="../assets/Default_Installation_Image_P3.png" width="900"></div>
+<div align="center"><img src="../assets/Default_Installation_Image_P3.png" width="750"></div>
 
 ### Registration
 
@@ -122,7 +124,7 @@ Here is a video on how to install <code class="expression">space.vars.SITENAME</
 
 * Go through this section if you want to configure Advance Installation. Else, proceed to the [Installation Progress](installation.md#installation-progress) section.
 
-<div align="center"><img src="../assets/Advance_Step_Installtion_Panel.png" width="900"></div>
+<div align="center"><img src="../assets/Advance_Step_Installtion_Panel.png" width="750"></div>
 
 Let's now learn about the steps for advance installation.
 
@@ -150,26 +152,26 @@ User can select either of two options:
 
 * Generate a secret key: With this option, a secret key would be automatically generated, and user needs to select location, where he/she desires to store this key.
 
-<div align="center"><img src="../assets/Advance_Configuration_Image_4c.png" width="900"></div>
+<div align="center"><img src="../assets/Advance_Configuration_Image_4c.png" width="750"></div>
 
 * Use the existing secret key: If user already has secret key available,then user should select this option. User needs to select path where "opshub.key" file is available to use that key.
 
-<div align="center"><img src="../assets/Advance_Configuration_Image_5c.png" width="900"></div>
+<div align="center"><img src="../assets/Advance_Configuration_Image_5c.png" width="750"></div>
 
 **b) Configuration for algorithm to encrypt data**
 User can select his desired algorithm from the available list to ensure security of data in application.
 
-<div align="center"><img src="../assets/Advance_Configuration_Image_6c.png" width="900"></div>
+<div align="center"><img src="../assets/Advance_Configuration_Image_6c.png" width="750"></div>
 
 ## Installation Progress
 
 The image below shows the overall progress of installation.
 
-<div align="center"><img src="../assets/Installer_Image_8b.png" width="900"></div>
+<div align="center"><img src="../assets/Installer_Image_8b.png" width="750"></div>
 
 * Setup Shortcuts: It will add the application to the Windows program list if the operating system is Windows and will add the application to the Linux program list if the operating system is Linux. It will also create the <code class="expression">space.vars.SITENAME</code> launcher.
 
-<div align="center"><img src="../assets/Installer_Image_9Seta.png" width="900"></div>
+<div align="center"><img src="../assets/Installer_Image_9Seta.png" width="750"></div>
 
 # Installation Success
 
@@ -181,7 +183,7 @@ Once you have installed the application, click [Logging In](logging-in.md) to se
 
 ## SSL Certificate Configuration
 
-<div align="center"><img src="../assets/Advance_Configuration_Image_3SSLCa.png" width="900"></div>
+<div align="center"><img src="../assets/Advance_Configuration_Image_3SSLCa.png" width="750"></div>
 
 It is advisable to enter the server-host name in the given field, it might create problem with IP address in some cases. Alias of the certificate should be unique.
 
