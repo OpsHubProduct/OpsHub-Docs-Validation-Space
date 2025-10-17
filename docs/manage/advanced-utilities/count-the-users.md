@@ -25,7 +25,7 @@ The following inputs are to be provided in input.properties file:
 
 Below is an example of input.properties file:
 
-<div align="center"><img src="../../assets/User_Count_Utility_1_a.png" alt="" width="800"></div>
+<div align="center"><img src="../../assets/User_Count_Utility_1_a.png" alt="" width="1000"></div>
 
 ### Steps to run Utility
 
