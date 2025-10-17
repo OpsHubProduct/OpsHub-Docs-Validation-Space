@@ -9,7 +9,7 @@ Please ensure the Windows user (who is used in MS SQL Windows Authentication) ha
 - Click OK after checking the Read and Write checkbox.
 
 <p align="center">
-  <img src="../../assets/Switching_Image_1.png" width="900">
+  <img src="../../assets/Switching_Image_1.png" width="600">
 </p>
 
 If the database is on MSSQL SQL Authentication mode and you need to switch to Windows Authentication mode, then follow the steps given below:
