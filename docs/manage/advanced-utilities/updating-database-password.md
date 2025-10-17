@@ -17,17 +17,17 @@ Follow the steps given below for updating database password in OpsHub:
 
 - Enter path for OpsHub Installation Directory.
 <p align="center">
-  <img src="../../assets/Updating_Database_Password_Image_1.png" width="1300">
+  <img src="../../assets/Updating_Database_Password_Image_1.png" width="1100">
 </p>
 
 - Enter the new database password.
 <p align="center">
-  <img src="../../assets/Updating_Database_Password_Image_2.png" width="1300">
+  <img src="../../assets/Updating_Database_Password_Image_2.png" width="1100">
 </p>
 
 - This would update database password in OpsHub application.
 <p align="center">
-  <img src="../../assets/Updating_Database_Password_Image_3.png" width="1300">
+  <img src="../../assets/Updating_Database_Password_Image_3.png" width="1100">
 </p>
 
 
