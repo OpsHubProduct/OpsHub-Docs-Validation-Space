@@ -25,7 +25,7 @@ The following inputs are to be provided in input.properties file:
 
 Below is an example of input.properties file:
 
-<div align="center"><img src="../../assets/User_Count_Utility_1_a.png" alt="" width="1000"></div>
+<div align="center"><img src="../../assets/User_Count_Utility_1_a.png" alt="" width="800"></div>
 
 ### Steps to run Utility
 
@@ -39,7 +39,7 @@ Following are the steps to run the utility:
   * Navigate to <code class="expression">space.vars.SITENAME</code> `<Installation Folder>/Other_Resources/Resources` path
   * Execute the bat using command `UserCountUtility.bat` as shown below:
 
-<div align="center"><img src="../../assets/User_Count_Utility_5_a.png" alt="" width="1300"></div>
+<div align="center"><img src="../../assets/User_Count_Utility_5_a.png" alt="" width="1100"></div>
 
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
 * If your <code class="expression">space.vars.SITENAME</code> is installed on Linux machine, then refer to the steps given below:
@@ -47,12 +47,12 @@ Following are the steps to run the utility:
   * Navigate to <code class="expression">space.vars.SITENAME</code>'s `<Installation Folder>/Other_Resources/Resources` path
   * Execute the bat using command `sh UserCountUtility.sh` as shown below:
 
-<div align="center"><img src="../../assets/User_Count_Utility_6_a.png" alt="" width="1300"></div>
+<div align="center"><img src="../../assets/User_Count_Utility_6_a.png" alt="" width="1000"></div>
 {% endif %}
 
 Once the execution is completed, the user will see the output similar to the details given in the screenshot (an example of execution on Windows machine) below:
 
-<div align="center"><img src="../../assets/User_Count_Utility_2_a.png" alt="" width="1300"></div>
+<div align="center"><img src="../../assets/User_Count_Utility_2_a.png" alt="" width="1000"></div>
 
 ### Output
 
@@ -82,7 +82,7 @@ This file contains the following details:
 {% endif %}
 
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
-<div align="center"><img src="../../assets/User_Count_Utility_3_a.png" alt="" width="1300"></div>
+<div align="center"><img src="../../assets/User_Count_Utility_3_a.png" alt="" width="1000"></div>
 {% endif %}
 
 
