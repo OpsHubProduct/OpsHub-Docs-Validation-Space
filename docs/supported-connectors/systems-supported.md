@@ -2,7 +2,7 @@
 
 Given below are the systems supported currently by <code class="expression">space.vars.SITENAME</code>:
 
-| No. | <span style="color: darkblue;">System</span> | Versions Supported | Entities Supported | Formerly Known as |
+| No. | <span style="color: cyan;">System</span> | Versions Supported | Entities Supported | Formerly Known as |
 |-----|--------|--------------------|--------------------|-------------------|
 | 1 | Aha! | All | Epic, Feature, Release, Requirement, To-do, Note | |
 | 2 | Aras Innovator | 11.0 SP9, 11.0 SP11, 11.0 SP12. From 12.0 to 12.0 SP9, 14.0.x (2023 Release, Release 26, Release 27, Release 28) | All System Item Types (excluding Item Types of Relationship and Core Type) and All Custom Item Types (excluding Item Types of Relationship Type) | |
