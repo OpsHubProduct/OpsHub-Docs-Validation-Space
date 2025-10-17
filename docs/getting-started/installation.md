@@ -1,12 +1,10 @@
-# installation
-
-## Launching Installer
+# Launching Installer
 
 The first screen when you launch the application will be this:
 
-<div align="center"><img src="../assets/Launching_Installer_Image_1bbn.png" alt="Launching Installer Image 1bbn"></div>
+<div align="center"><img src="../assets/Launching_Installer_Image_1bbn.png" width="900"></div>
 
-### Launch the installer in different Operating Systems
+## Launch the installer in different Operating Systems
 
 * Unzip the OIM installer folder to find the executable(.exe) file.
 * The steps to launch the installer in different Operating Systems (OS) are given below. Follow the steps given for the OS that you are using.
@@ -16,13 +14,13 @@ The first screen when you launch the application will be this:
 | Windows                                                                                                                                                                                                                                                                                                                                                                                                                           | Linux                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | <p>- Double click the executable .exe file given in the application folder (It is advisable to run .exe file by right-clicking Run as administrator where * is replaced with the application version).<br>- If one instance of this release is already installed, then the user will be notified.<br>- Click yes to continue with the installation. It will then display the uninstallation key for the current installation.</p> | <p>Before Installation<br>- Extract the zip file. Make sure user who will run installer owns the files and has full access to extracted files.<br>- Create empty directory with full access (it should not be inside installation directory) and export its path to OPSHUB_TEMP_DATA variable as shown below:<br>    export OPSHUB_TEMP_DATA=/home/setup/temp<br>- If you are doing a silent installation, make sure you have provided the same path for OPSHUB_TEMP_DATA as provided during silent registration.<br>- If Linux has NFS (Network File System) based file system, add the following line in OIM user's .bashrc file:<br>    In /home/{OIM user}/.bashrc, add the line:<br>    export JAVA_OPTS="$JAVA_OPTS -XX:+StartAttachListener"<br>- Without the Java option, the server startup will fail. Error details are available here.<br>- See minimal access required to install <code class="expression">space.vars.SITENAME</code> here if you do not have root access.<br><br>To Run sh File<br>- Open terminal and go to the folder containing the install.sh file.<br>- Run: sudo -E sh install.sh<br>- Linux UI access is required as installation needs user input via UI. Installation won't complete via remote terminal (e.g. PuTTY).<br><br>To Run sh File from External File (Silent Installation)<br>To install <code class="expression">space.vars.SITENAME</code> through terminal (e.g. PuTTY):<br>- Complete user registration as described here.<br>- Download and modify OpsHubAutoInstall.xml as needed by clicking Here.<br>- Transfer modified file to the target instance.<br>- Set environment variable OPSHUB_AUTO_INSTALL pointing to the XML file:<br>    Example: export OPSHUB_AUTO_INSTALL=/home/Downloads/OpsHubAutoInstall.xml<br>- Run the installer: sudo -E sh install.sh<br>- See Possible Error section for troubleshooting.</p> |
 
-#### Recommended Installation Path for <code class="expression">space.vars.SITENAME</code> Installer for Linux
+### Recommended Installation Path for <code class="expression">space.vars.SITENAME</code> Installer for Linux
 
 * It is recommended to install or perform migration of the <code class="expression">space.vars.SITENAME</code> in the /opt folder or /user/local folder.
   * For <code class="expression">space.vars.SITENAME</code> migration, if the <code class="expression">space.vars.SITENAME</code> is not installed at the above places, then follow the steps mentioned [here](../faqs/general/how-to-move-application-server-from-one-machine-to-other.md).
   * Reason: SELinux prevents Linux users from running a <code class="expression">space.vars.SITENAME</code> service in the user's home directory. Hence, the user needs to avoid installing <code class="expression">space.vars.SITENAME</code> in the home directory.
 
-#### Minimal access required to run linux installer using external file
+### Minimal access required to run linux installer using external file
 
 * <code class="expression">space.vars.SITENAME</code> Installation Directory should be owned by user who run installer/migrator and has following permissions.
 
@@ -33,20 +31,20 @@ Here are the required permissions:
 | --x            | /usr                                                                                   |
 | --x            | /proc                                                                                  |
 | r-x            | /usr/bin                                                                               |
-| r-x            | /usr/bin/\*                                                                            |
+| r-x            | /usr/bin/*                                                                            |
 | --x            | /usr/lib64                                                                             |
-| r-x            | /usr/lib64/\*                                                                          |
+| r-x            | /usr/lib64/*                                                                          |
 | --x            | /usr/share (if user edits file using nano)                                             |
-| r-x            | /usr/share/\*                                                                          |
+| r-x            | /usr/share/*                                                                          |
 | rw-            | /etc/systemd/system (if user needs <code class="expression">space.vars.SITENAME</code> as a service for Ubuntu) |
 
 * Note: For HSQLDB, root access is required when user needs to install/migrate <code class="expression">space.vars.SITENAME</code>.
 
-#### Possible error during Silent Installation/Upgradation
+### Possible error during Silent Installation/Upgradation
 
-\[ Starting automated installation ]
+[ Starting automated installation ]
 
-\[Timestamp] java.util.prefs.FileSystemPreferences$2 run
+[Timestamp] java.util.prefs.FileSystemPreferences$2 run
 
 INFO: Created system preferences directory in java.home.
 
@@ -62,31 +60,31 @@ at com.izforge.izpack.installer.AutomatedInstaller.doInstall(Unknown Source)
 
 at com.izforge.izpack.installer.Installer.main(Unknown Source)
 
-\[ Automated installation FAILED! ]
+[ Automated installation FAILED! ]
 
 **Solution**
 
 Make sure you have performed the following steps correctly:
 
-* You have registered as described [Registration – Silent Registration for Linux](registration.md#silent-registration-for-linux) before Installation/Upgradation.
+* You have registered as described [Registration - Silent Registration for Linux](registration.md#silent-registration-for-linux) before Installation/Upgradation.
 * You have registered using the same path for which you install/upgrade <code class="expression">space.vars.SITENAME</code>.
 * You have used the correct verification code.
   * Verification Code is unique for each machine and installation path. The code generated on a different machine and for different path won't work.
-* You have export same value for OPSHUB\_TEMP\_DATA during Registration and Installation/Upgradation.
+* You have export same value for OPSHUB_TEMP_DATA during Registration and Installation/Upgradation.
 
-### License Information
+## License Information
 
 On launching the installer, you will see the license agreement window that contains all license-related terms and conditions.
 
 If you agree with the license details, then only you can move to the next step i.e. Installation.
 
-<div align="center"><img src="../assets/Default_Installation_Image_1La.png" alt="Default Installation Image 1La"></div>
+<div align="center"><img src="../assets/Default_Installation_Image_1La.png" width="900"></div>
 
 License Information window has the details of the trial license and the contact information to purchase the license.
 
-<div align="center"><img src="../assets/Default_Installation_Image_2LH.png" alt="Default Installation Image 2LH"></div>
+<div align="center"><img src="../assets/Default_Installation_Image_2LH.png" width="900" ></div>
 
-#### Possible exceptions
+### Possible exceptions
 
 While uploading the license from license management tab, <code class="expression">space.vars.SITENAME</code> throws exceptions as below:
 
@@ -99,81 +97,81 @@ com.opshub.license.install.OpsHubLicenseManager.getLicenseContent(OpsHubLicenseM
 
 at java.io.FileInputStream.open(Native Method) at java.io.FileInputStream.(FileInputStream.java:138) at de.schlichtherle.license.LicenseManager.loadLicenseKey(LicenseManager.java:741) at com.opshub.license.install.OpsHubLicenseManager.getLicenseContent(OpsHubLicenseManager.java:55)
 
-## Installation
+# Installation
 
 Here is a video on how to install <code class="expression">space.vars.SITENAME</code> on the Windows machine:
 
 {% embed url="https://youtu.be/Is5sDKV01P0" %}
 
-### Select Installation Path
+## Select Installation Path
 
 * You now have to select the installation directory. Before you select a directory, make sure the directory is empty. All the log files, configuration files, and servers are placed in this directory. If the directory is not available, you can create a directory as per your own specifications.
 
-<div align="center"><img src="../assets/Default_Installation_Image_P3.png" alt="Default Installation Image P3"></div>
+<div align="center"><img src="../assets/Default_Installation_Image_P3.png" width="900"></div>
 
 ### Registration
 
-* Each installation must be registered with OpsHub. Registration can be done either in Online or Offline mode.\
+* Each installation must be registered with OpsHub. Registration can be done either in Online or Offline mode.
   Please refer [Registration](registration.md) section for more details.
 
 ## Database Selection
 
 {% include "../.gitbook/includes/database-selection.md" %}
 
-## Advance Installation
+# Advance Installation
 
 * Go through this section if you want to configure Advance Installation. Else, proceed to the [Installation Progress](installation.md#installation-progress) section.
 
-<div align="center"><img src="../assets/Advance_Step_Installtion_Panel.png" alt="Advance Step Installtion Panel"></div>
+<div align="center"><img src="../assets/Advance_Step_Installtion_Panel.png" width="900"></div>
 
 Let's now learn about the steps for advance installation.
 
-### Connection Mode Configuration
+## Connection Mode Configuration
 
 * Select the type of connection protocol you want to use for running the server. If HTTPS is selected, you need to follow one more step [SSL Certificate Configuration](installation.md#ssl-certificate-configuration) for advance installation.
 
-### OpsHub Database Custom Configuration
+## OpsHub Database Custom Configuration
 
 * If you want to create databases manually, mark the checkbox "Check this if you will be creating databases manually". The instructions to create databases have been mentioned in the section [Manual creation of databases](installation.md#manual-creation-of-databases).
 * If the checkbox "check this if you are creating databases manually" is unchecked then enter the names of the databases that you want to configure and according to the database selection in the previous stage (MySql, MS SQL/Azure SQL, PostgreSQL or Oracle) databases/schemas will get created.
-* Database name can contain $, \_, #, alphabets, and numbers without any space.
+* Database name can contain $, _, #, alphabets, and numbers without any space.
 * If there are more than one database, give different names for each one.
 
-### Install OpsHub server as a service
+## Install OpsHub server as a service
 
 * If the application is installed as a service, the server will automatically start on system boot. You need not to start and stop the server explicitly. In case, you want to stop the services, you can go to Services, find the service and stop it manually from there.
 
-### Data Encryption Configuration
+## Data Encryption Configuration
 
 * Advanced Data Encryption: Enables user to generate a secret key and store it in a secured location, or select an existing secret key if available. This configuration also allows the user to select the desired encryption algorithm for ensuring security of the application.
 
-**a) Configuration for secret key location**\
+**a) Configuration for secret key location**
 User can select either of two options:
 
 * Generate a secret key: With this option, a secret key would be automatically generated, and user needs to select location, where he/she desires to store this key.
 
-<div align="center"><img src="../assets/Advance_Configuration_Image_4c.png" alt="Advance Configuration Image 4c"></div>
+<div align="center"><img src="../assets/Advance_Configuration_Image_4c.png" width="900"></div>
 
 * Use the existing secret key: If user already has secret key available,then user should select this option. User needs to select path where "opshub.key" file is available to use that key.
 
-<div align="center"><img src="../assets/Advance_Configuration_Image_5c.png" alt="Advance Configuration Image 5c"></div>
+<div align="center"><img src="../assets/Advance_Configuration_Image_5c.png" width="900"></div>
 
-**b) Configuration for algorithm to encrypt data**\
+**b) Configuration for algorithm to encrypt data**
 User can select his desired algorithm from the available list to ensure security of data in application.
 
-<div align="center"><img src="../assets/Advance_Configuration_Image_6c.png" alt="Advance Configuration Image 6c"></div>
+<div align="center"><img src="../assets/Advance_Configuration_Image_6c.png" width="900"></div>
 
-### Installation Progress
+## Installation Progress
 
 The image below shows the overall progress of installation.
 
-<div align="center"><img src="../assets/Installer_Image_8b.png" alt="Installer Image 8b"></div>
+<div align="center"><img src="../assets/Installer_Image_8b.png" width="900"></div>
 
 * Setup Shortcuts: It will add the application to the Windows program list if the operating system is Windows and will add the application to the Linux program list if the operating system is Linux. It will also create the <code class="expression">space.vars.SITENAME</code> launcher.
 
-<div align="center"><img src="../assets/Installer_Image_9Seta.png" alt="Installer Image 9Seta"></div>
+<div align="center"><img src="../assets/Installer_Image_9Seta.png" width="900"></div>
 
-### Installation Success
+# Installation Success
 
 The image below shows a successful installation.
 
@@ -183,7 +181,7 @@ Once you have installed the application, click [Logging In](logging-in.md) to se
 
 ## SSL Certificate Configuration
 
-<div align="center"><img src="../assets/Advance_Configuration_Image_3SSLCa.png" alt="Advance Configuration Image 3SSLCa"></div>
+<div align="center"><img src="../assets/Advance_Configuration_Image_3SSLCa.png" width="900"></div>
 
 It is advisable to enter the server-host name in the given field, it might create problem with IP address in some cases. Alias of the certificate should be unique.
 
@@ -197,8 +195,8 @@ It is advisable to enter the server-host name in the given field, it might creat
 
 ## Manual creation of databases
 
-{% include "../.gitbook/includes/manual-database-creation (2).md" %}
+{% include "../.gitbook/includes/manual-database-creation.md" %}
 
 ## Collation change of MS SQL/Azure SQL Databases
 
-{% include "../.gitbook/includes/collation-change (2).md" %}
+{% include "../.gitbook/includes/collation-change.md" %}
