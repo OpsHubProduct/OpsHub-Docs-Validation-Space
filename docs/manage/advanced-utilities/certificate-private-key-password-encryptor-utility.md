@@ -9,7 +9,7 @@ Follow the steps given below for creating/updating the `cacerts_config.propertie
 * Enter the path for OpsHub Installation Directory.
 
 <p align="center">
-  <img src="../../assets/CertUtil1.png" width="800">
+  <img src="../../assets/CertUtil1.png" width="1300">
 </p>
 
 
