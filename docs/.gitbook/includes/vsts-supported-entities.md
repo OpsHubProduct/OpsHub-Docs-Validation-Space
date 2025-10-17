@@ -1,0 +1,1 @@
+Work items such as Bug, Requirement, Task, Test Case, User Story, Shared Steps and All custom workitem types<br>Test entities such as Test Plan, Test Result, Test Run, Test Suite<br>Iteration, Area Path, Group, Team, User, Dashboard, Query, Widget and Pipeline**<br>Git Commit Information(only read), Pull Request(only read), Build* (only read)
