@@ -9,33 +9,33 @@ Follow the steps given below for updating the encrypted keystore and private key
 * Enter the path for OpsHub Installation Directory.
 
 <p align="center">
-  <img src="../../assets/Update_Keystore_Password_Image1.png" width="1300">
+  <img src="../../assets/Update_Keystore_Password_Image1.png" width="1400">
 </p>
 
 * Enter the keystore password.
 
 <p align="center">
-  <img src="../../assets/Update_Keystore_Password_Image2.png" width="1300">
+  <img src="../../assets/Update_Keystore_Password_Image2.png" width="1400">
 </p>
 
 
 * Enter the private key password.
 
 <p align="center">
-  <img src="../../assets/Update_Keystore_Password_Image3.png" width="1300">
+  <img src="../../assets/Update_Keystore_Password_Image3.png" width="1400">
 </p>
 
 
 *If the private key input is not entered in the above step, then user will get the notification mentioned in the screenshot below. In this case, the private key password will be considered same as keystore password.*
 
 <p align="center">
-  <img src="../../assets/Update_Keystore_Password_Image4.png" width="1300">
+  <img src="../../assets/Update_Keystore_Password_Image4.png" width="1400">
 </p>
 
 
 * It will update keystore and private key passwords in OpsHub application in the encrypted format.
 
 <p align="center">
-  <img src="../../assets/Update_Keystore_Password_Image5.png" width="1300">
+  <img src="../../assets/Update_Keystore_Password_Image5.png" width="1400">
 </p>
 
