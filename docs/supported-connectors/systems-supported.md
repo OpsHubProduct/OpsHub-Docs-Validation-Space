@@ -6,9 +6,9 @@ Given below are the systems supported currently by <code class="expression">spac
 |-----|--------|--------------------|--------------------|-------------------|
 | 1 | Aha! | All | Epic, Feature, Release, Requirement, To-do, Note | |
 | 2 | Aras Innovator | 11.0 SP9, 11.0 SP11, 11.0 SP12. From 12.0 to 12.0 SP9, 14.0.x (2023 Release, Release 26, Release 27, Release 28) | All System Item Types (excluding Item Types of Relationship and Core Type) and All Custom Item Types (excluding Item Types of Relationship Type) | |
-| 3 | Azure DevOps Server | tfs-tfvc-supported-versions.md | {% include "../.gitbook/includes/tfs-supported-entities.md" %} | Team Foundation Server (TFS) |
-| 4 | Azure DevOps Server Version Control | tfs-tfvc-supported-versions.md | {% include "../.gitbook/includes/tfvc-supported-entities.md" %} | Team Foundation Server Version Control |
-| 5 | Azure DevOps Services | All | {% include "../.gitbook/includes/vsts-supported-versions.md" %} | Visual Studio Team Services (VSTS) |
+| 3 | Azure DevOps Server | {% include "../.gitbook/includes/tfs-tfvc-supported-versions.md" %} | {% include "../.gitbook/includes/tfs-supported-entities.md" %} | Team Foundation Server (TFS) |
+| 4 | Azure DevOps Server Version Control | {% include "../.gitbook/includes/tfs-tfvc-supported-versions.md" %} | {% include "../.gitbook/includes/tfvc-supported-entities.md" %} | Team Foundation Server Version Control |
+| 5 | Azure DevOps Services | All | {% include "../.gitbook/includes/vsts-supported-entities.md" %} | Visual Studio Team Services (VSTS) |
 | 6 | Blueprint* | From 5.4 to 13.0 | All System/Custom Entities | |
 | 7 | BMC Remedy* | 6.3, 8.0, 8.1 | Request | Remedy |
 | 8 | Broadcom Clarity | SaaS : 16.2.2 and above | Project, Task, To Do, Custom Investment Object (Parent only) | CA PPM |
