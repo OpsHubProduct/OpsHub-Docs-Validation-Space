@@ -1,6 +1,4 @@
-# count-the-users
-
-### Overview
+# Overview
 
 * If user wants to know the count of users being synchronized through <code class="expression">space.vars.SITENAME</code>, the 'UserCountUtility' utility can be used. This utility can count the following details of users whose data was synchronized from the first day of <code class="expression">space.vars.SITENAME</code> setup (or a specific date) till date.
   * Unique Users across all systems configured
@@ -14,7 +12,7 @@
   * UserCountUtility.bat: To run the utility if <code class="expression">space.vars.SITENAME</code> is installed on Windows machine.
   * UserCountUtility.sh: To run the utility if <code class="expression">space.vars.SITENAME</code> is installed on Linux machine.
 
-### Input
+# Input
 
 The following inputs are to be provided in input.properties file:
 
@@ -27,7 +25,7 @@ Below is an example of input.properties file:
 
 <div align="center"><img src="../../assets/User_Count_Utility_1_a.png" alt="" width="1000"></div>
 
-### Steps to run Utility
+# Steps to run Utility
 
 Following are the steps to run the utility:
 
@@ -54,7 +52,7 @@ Once the execution is completed, the user will see the output similar to the det
 
 <div align="center"><img src="../../assets/User_Count_Utility_2_a.png" alt="" width="1000"></div>
 
-### Output
+# Output
 
 Once the utility execution starts, it creates a folder `output` which contains below files for the user count reports and utility execution logs:
 
@@ -62,7 +60,7 @@ Once the utility execution starts, it creates a folder `output` which contains b
 2. **UserCountDetailedReport.csv**: It contains detailed list for each users as per their availability in the systems configured. For more information, refer to [UserCountDetailedReport](count-the-users.md#usercountdetailedreportcsv) section.
 3. **logs.log**: It contains the details of the utility execution.
 
-#### UserCountSummary.csv
+## UserCountSummary.csv
 
 This file contains the following details:
 
@@ -86,7 +84,7 @@ This file contains the following details:
 {% endif %}
 
 
-#### UserCountDetailedReport.csv
+## UserCountDetailedReport.csv
 
 * It has a detailed report on the users found during synchronization.
 * It has the user details (User Email or User Name as per the details found during synchronization). Additionally, a corresponding list of systems is present in which the users' details are found.
