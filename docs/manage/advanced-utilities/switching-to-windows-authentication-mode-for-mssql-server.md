@@ -9,7 +9,7 @@ Please ensure the Windows user (who is used in MS SQL Windows Authentication) ha
 - Click OK after checking the Read and Write checkbox.
 
 <p align="center">
-  <img src="../../assets/Switching_Image_1.png">
+  <img src="../../assets/Switching_Image_1.png" width="900">
 </p>
 
 If the database is on MSSQL SQL Authentication mode and you need to switch to Windows Authentication mode, then follow the steps given below:
@@ -24,26 +24,26 @@ If the database is on MSSQL SQL Authentication mode and you need to switch to Wi
 - Enter path for the installation directory.
 
 <p align="center">
-  <img src="../../assets/Switching_Image_2.png">
+  <img src="../../assets/Switching_Image_2.png" width="1000">
 </p>
 
 
 - Press `2` to switch to Windows authentication mode.
 
 <p align="center">
-  <img src="../../assets/Switching_Image_3.png">
+  <img src="../../assets/Switching_Image_3.png" width="1000">
 </p>
 
 - Provide Microsoft JDBC Driver 4.0 (`tar.gz`) File Path.
 
 <p align="center">
-  <img src="../../assets/Switching_Image_4.png">
+  <img src="../../assets/Switching_Image_4.png" width="1000">
 </p>
 
 
 - Provide Windows Service Credentials.
 <p align="center">
-  <img src="../../assets/Switching_Image_5.png">
+  <img src="../../assets/Switching_Image_5.png" width="1000">
 </p>
 
 > **Note:**  
@@ -59,7 +59,7 @@ If the database is on MSSQL SQL Authentication mode and you need to switch to Wi
 > If the user is registered with a domain, the username format will be "{username}@{domain}" or "{domain}\{username}". Otherwise, the username format will be ".\username".
 
 <p align="center">
-  <img src="../../assets/OpshubServerServiceCredentials.png">
+  <img src="../../assets/OpshubServerServiceCredentials.png" width="1000">
 </p>
 
 
