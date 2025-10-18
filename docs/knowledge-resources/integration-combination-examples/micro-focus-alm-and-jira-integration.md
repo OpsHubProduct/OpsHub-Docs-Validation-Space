@@ -114,7 +114,7 @@ The Mandatory field(s) for Micro Focus ALM are: **Name** and **Requirement Type*
 * For user mapping, default value will not be written to target even if matching user not found in target. This will be done only if nothing coming from mapped source field.  
 
 <p align="center">
-  <img src="../../assets/Df_mapping.png" width="1100"/>
+  <img src="../../assets/Df_mapping.png" width="900"/>
 </p>  
 
 #### Mapping Rich Text Fields
