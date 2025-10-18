@@ -6,11 +6,11 @@ Below are the sample templates for OpsHubAutoInstall/OpsHubAutoMigrator XML. You
 
 
 * If you are installing <code class="expression">space.vars.SITENAME</code> then download file [here](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EdwkmbjVf5RNpjHmsqi8dE4BaSfch1pFlGQhPsixpGnHEw?e=VJclvQ)
-    * To customize the file as per your configuration, follow steps from section [step 3 - Configure Installation path](#configure-installation-path).
+    * To customize the file as per your configuration, follow steps from section [step 3 - Configure Installation path](#id-3-configure-installation-path).
 * If you are upgrading the existing <code class="expression">space.vars.SITENAME</code> then download file [OpsHubAutoMigrator.xml](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EW_r0v_m5RtPoQp-jGLitoMBfWzZDdB0zdpJxflswG4a2Q).  
     * To customize the file as per your configuration, follow steps **step 3 and step 4**.  
 
->**Note**: Refer to [step 2](#customized-example-of-xml-file-with-mysql-database) for example of an already customized file for **installation with MySQL database**.
+>**Note**: Refer to [step 2](#id-2-customized-example-of-xml-file-with-mysql-database) for example of an already customized file for **installation with MySQL database**.
   
 
 >**Note**: It is always recommended to have a secured environment for OIM installation. The purpose of Silent installation is to have no manual intervention, and so the user needs to have a secured VM installation as the autoinstall.xml file contains the password in plain text.  
@@ -25,7 +25,7 @@ Below are the sample templates for OpsHubAutoInstall/OpsHubAutoMigrator XML. You
 # <div id="configure-installation-path"> 3 - Configure Installation Path </div>
 
 * Find `com.izforge.izpack.panels.TargetPanel` and replace the input mentioned below:  
-    * Replace **@INSTALLATION_PATH@** with actual installation directory which you mentioned in **Registration_Input.properties** during [Silent Registration](registration#silent-registration-for-linux).  
+    * Replace **@INSTALLATION_PATH@** with actual installation directory which you mentioned in **Registration_Input.properties** during [Silent Registration](registration.md#silent-registration-for-linux).  
 
 
 # <div id="configure-registration-type-and-verification-code"> 4 - Configure Registration Type & Verification Code </div>
@@ -91,7 +91,7 @@ Find all parameters below under panel `id="UserInputPanel.installationflow"`.
 4. Find and replace **@DB_PASSWORD@** with the password of your database.  
 5. Find and replace **@DB_CONNECTOR_JAR_PATH@** with the jar file path of your database connector. Find the jar file name according to the database you are using.  
    * For MySQL, refer section [Installation with MySQL Server](installation.md#installation-with-mysql-server) 
-   * For MS SQL, refer section [Installation with MSSQL Server](installation.md#installation-with-mssql-server)  
+   * For MS SQL, refer section [Installation with MSSQL Server](installation.md#installation-with-ms-sql-azure-sql-server)  
    * For ORACLE, refer section [Installation with Oracle](installation.md#installation-with-oracle)  
    * For HSQL, no external connector jar file is required.  
    * For PostgreSQL, refer section [Installation with PostgreSQL](installation.md#installation-with-postgresql)  
@@ -111,7 +111,7 @@ Find all parameters below under panel `id="UserInputPanel.installationflow"`.
 6. Remove comment from parameters.  
 7. Go to [Common Database configuration parameters](#common-database-configuration-parameters) and follow the steps to replace **@DB_HOST@, @DB_PORT@, @DB_CONNECTOR_JAR_PATH@** with your input.  
 8. Find and replace **@DB_NAME_TO_TEST_CONNECT@** with the database name to which database user has access to.  
-   >**Note**: Go to [MS SQL/Azure SQL Server Database Name Input](installation.md#installation-with-ms-sql2fazure-sql-server) to find the usage.  
+   >**Note**: Go to [MS SQL/Azure SQL Server Database Name Input](installation.md#installation-with-ms-sql-azure-sql-server) to find the usage.  
 
 #### With SQL authentication  
 
@@ -122,7 +122,7 @@ Find all parameters below under panel `id="UserInputPanel.installationflow"`.
 5. Find panel with id **"UserInputPanel.mssqldbOnSQLAuth"**.  
 6. Go to [Common Database configuration parameters](#common-database-configuration-parameters) and follow the steps.  
 7. Find and replace **@DB_NAME_TO_TEST_CONNECT@** with the database name to which database user has access to.  
-   >**Note**: Go to [MS SQL/Azure SQL Server Database Name Input](installation.md#installation-with-ms-sql2fazure-sql-server)** to find the usage.  
+   >**Note**: Go to [MS SQL/Azure SQL Server Database Name Input](installation.md#installation-with-ms-sql-azure-sql-server) to find the usage.  
 
 #### Installation on Linux  
 
@@ -133,7 +133,7 @@ Find all parameters below under panel `id="UserInputPanel.installationflow"`.
 5. Find panel with id **"UserInputPanel.mssqldbOnSQLAuth"**.  
 6. Go to [Common Database configuration parameters](#common-database-configuration-parameters) and follow the steps.  
 7. Find and replace **@DB_NAME_TO_TEST_CONNECT@** with the database name to which database user has access to.  
-   >**Note**: Go to [MS SQL/Azure SQL Server Database Name Input](installation.md#installation-with-ms-sql2fazure-sql-server) to find the usage.  
+   >**Note**: Go to [MS SQL/Azure SQL Server Database Name Input](installation.md#installation-with-ms-sql-azure-sql-server) to find the usage.  
 
 ## Oracle Database configuration  
 
@@ -157,7 +157,7 @@ For HSQL you can move to next step for further configuration.
 # <div id="enable-advance-configuration"> 7 - Enable Advance Configuration  </div>
 
 If you are doing advance configuration then only follow the below step.  
-- Make sure you have **@ADVANCE_CONFIG_FLAG@** flag is 1 as specified [here](#configure-base-parameter).  
+- Make sure you have **@ADVANCE_CONFIG_FLAG@** flag is 1 as specified [here](#id-5-configure-base-parameter).  
 
 ## Enabling advance configuration with HSQL, then follow below steps  
 
