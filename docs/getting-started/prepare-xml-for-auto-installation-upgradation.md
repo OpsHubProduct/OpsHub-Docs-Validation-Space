@@ -18,8 +18,8 @@ Below are the sample templates for OpsHubAutoInstall/OpsHubAutoMigrator XML. You
 # 2 - Customized example of xml file with MySQL database
 
 * Here are the examples of XML file after all modifications.  
-   * Installation with MySQL Database : [Installer Example file](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/ETH4fCuE0VBBvBucTLI8DtIBl9MlETKWMF3Y1eup2XjuGQ?e=c9TvS4 Installer Example file) 
-   * Upgrade : [Migrator example file](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EY22j0v_TdFGsCLzrxWEy1IBb8mZXapO2a8po-mPix1R8A?e=N8oyFe Migrator example file)
+   * Installation with MySQL Database : [Installer Example file](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/ETH4fCuE0VBBvBucTLI8DtIBl9MlETKWMF3Y1eup2XjuGQ?e=c9TvS4) 
+   * Upgrade : [Migrator example file](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EY22j0v_TdFGsCLzrxWEy1IBb8mZXapO2a8po-mPix1R8A?e=N8oyFe)
 
 
 # 3 - Configure Installation Path  
