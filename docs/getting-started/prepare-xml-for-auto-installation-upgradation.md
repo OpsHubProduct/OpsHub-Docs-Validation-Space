@@ -5,10 +5,10 @@ Here is the process of getting and customizing OpsHubAutoInstall/OpsHubAutoMigra
 Below are the sample templates for OpsHubAutoInstall/OpsHubAutoMigrator XML. You need to customize the template downloaded as described below for configuring your own file for installing or migrating OpsHub Integration Manager.
 
 
-If you are installing OpsHub Integration Manager then download file [here](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EdwkmbjVf5RNpjHmsqi8dE4BaSfch1pFlGQhPsixpGnHEw?e=VJclvQ)  
+If you are installing OpsHub Integration Manager then download file (here)[https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EdwkmbjVf5RNpjHmsqi8dE4BaSfch1pFlGQhPsixpGnHEw?e=VJclvQ]
     - To customize the file as per your configuration, follow steps from section [step 3 - Configure Installation path](#3---configure-installation-path).
 
-If you are upgrading the existing OpsHub Integration Manager then download file [OpsHubAutoMigrator.xml](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EW_r0v_m5RtPoQp-jGLitoMBfWzZDdB0zdpJxflswG4a2Q OpsHubAutoMigrator.xml).  
+If you are upgrading the existing OpsHub Integration Manager then download file (OpsHubAutoMigrator.xml)[https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EW_r0v_m5RtPoQp-jGLitoMBfWzZDdB0zdpJxflswG4a2Q].  
     - To customize the file as per your configuration, follow steps **step 3 and step 4**.  
 
 >**Note**: Refer to [step 2](#2-customized-example-of-xml-file-with-MySQL-database) for example of an already customized file for **installation with MySQL database**.
