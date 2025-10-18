@@ -138,31 +138,31 @@
 * Enter the new Host Name for PostgreSQL:
 
 <p align="center">
-  <img src="../../assets/postgresql1.png">
+  <img src="../../assets/postgresql1.png"> 
 </p>
 
 * If the Host Name input is not entered in the above step, then user will get the notification mentioned in the screenshot below. The Host Name is a mandatory input that defines the new Host Name user wants <code class="expression">space.vars.SITENAME</code> database to refer to:
 
 <p align="center">
-  <img src="../../assets/postgresql2.png">
+  <img src="../../assets/postgresql2.png"> 
 </p>
 
 * Enter the Port for PostgreSQL:
 
 <p align="center">
-  <img src="../../assets/postgresql3.png">
+  <img src="../../assets/postgresql3.png"> 
 </p>
 
 * If the Port's input is not entered in the above step, then the utility will use the existing Port [entered at the time of <code class="expression">space.vars.SITENAME</code> installation]. If that is not the case, enter the Port as shown in the screenshot below:
 
 <p align="center">
-  <img src="../../assets/postgresql4.png">
+  <img src="../../assets/postgresql4.png"> 
 </p>
 
 * Utility will check the connection with the new Host Name:
 
 <p align="center">
-  <img src="../../assets/postgresql5.png">
+  <img src="../../assets/postgresql5.png"> 
 </p>
 
 
