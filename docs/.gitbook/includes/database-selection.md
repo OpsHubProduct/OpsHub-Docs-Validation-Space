@@ -160,9 +160,8 @@ For Oracle 19c version, ojdbc8.jar or ojdbc10.jar is required.  The path of the 
 
     **ALTER USER <opshub_dbname> QUOTA <size_of_tablespace> ON users;**
 
-  - For example, to increase the quota size from to 10GB for opshub database "opshub", then execute command as 'ALTER USER opshub QUOTA
-
-    10000M ON users;'
+  - For example, to increase the quota size from to 10GB for opshub database "opshub", then execute command as 
+    **ALTER USER opshub QUOTA 10000M ON users;**
 
 ## Installation with MS SQL/Azure SQL Server
 > **Note** :Azure SQL is an alias for MS SQL on cloud.
