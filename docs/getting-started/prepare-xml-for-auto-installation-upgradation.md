@@ -30,8 +30,37 @@ Below are the sample templates for OpsHubAutoInstall/OpsHubAutoMigrator XML. You
 
 # 4 - Configure Registration Type & Verification Code 
 
-* Find `UserInputPanel.EmailIdVerificationForExistingCode` panel and replace the input mentioned below:  
-   * Replace **@VERIFICATION_CODE@** with verification code that you got on your registered business email address.  
+For the next panel:
+```xml
+<com.izforge.izpack.panels.UserInputPanel id="UserInputPanel.RegistrationTypeSelection">
+```
+There are two possible Registration Types, and the required input for the verification code will differ based on your choice. We have listed both scenarios below, along with the inputs you need to provide:
+
+1. Existing Registration (during installation)
+By default, OpsHub uses Existing Registration as the registration type. If you want to continue with this option, you need to provide the following inputs:
+
+```xml
+<com.izforge.izpack.panels.UserInputPanel id="UserInputPanel.RegistrationTypeSelection">
+<userInput> <entry key="RegistrationType" value="ExistingRegistration"/>
+</userInput> </com.izforge.izpack.panels.UserInputPanel>
+
+
+<com.izforge.izpack.panels.UserInputPanel id="UserInputPanel.EmailIdVerificationForExistingCode">
+<userInput> <entry key="VerificationCode" value="@VERIFICATION_CODE@"/>
+</userInput> </com.izforge.izpack.panels.UserInputPanel>
+```
+>**Note**: Replace @VERIFICATION_CODE@ with the verification code that you received on your registered business email address
+
+2. Post Registration (after installation)
+For Post-Installation Registration, set the input value of "RegistrationType" to PostInstallRegistration.
+
+```xml
+ <com.izforge.izpack.panels.UserInputPanel id="UserInputPanel.RegistrationTypeSelection">
+<userInput> <entry key="RegistrationType" value="PostInstallRegistration"/> </userInput>
+</com.izforge.izpack.panels.UserInputPanel>
+```
+
+>**Note**: Complete the installation first, and after the server starts, you will be prompted to fill out the registration form. You will receive the verification code only after completing the registration form.
 
 # 5 - Configure Base Parameter  
 
