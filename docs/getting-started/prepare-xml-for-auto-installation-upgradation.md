@@ -1,13 +1,13 @@
 Here is the process of getting and customizing OpsHubAutoInstall/OpsHubAutoMigrator XML file.  
 
-# 1 - Download XML file  
+# <div id="download-xml-file"> 1 - Download XML file </div>  
 
-Below are the sample templates for OpsHubAutoInstall/OpsHubAutoMigrator XML. You need to customize the template downloaded as described below for configuring your own file for installing or migrating OpsHub Integration Manager.
+Below are the sample templates for OpsHubAutoInstall/OpsHubAutoMigrator XML. You need to customize the template downloaded as described below for configuring your own file for installing or migrating <code class="expression">space.vars.SITENAME</code>.
 
 
-* If you are installing OpsHub Integration Manager then download file [here](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EdwkmbjVf5RNpjHmsqi8dE4BaSfch1pFlGQhPsixpGnHEw?e=VJclvQ)
+* If you are installing <code class="expression">space.vars.SITENAME</code> then download file [here](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EdwkmbjVf5RNpjHmsqi8dE4BaSfch1pFlGQhPsixpGnHEw?e=VJclvQ)
     * To customize the file as per your configuration, follow steps from section [step 3 - Configure Installation path](#id-3-configure-installation-path).
-* If you are upgrading the existing OpsHub Integration Manager then download file [OpsHubAutoMigrator.xml](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EW_r0v_m5RtPoQp-jGLitoMBfWzZDdB0zdpJxflswG4a2Q).  
+* If you are upgrading the existing <code class="expression">space.vars.SITENAME</code> then download file [OpsHubAutoMigrator.xml](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EW_r0v_m5RtPoQp-jGLitoMBfWzZDdB0zdpJxflswG4a2Q).  
     * To customize the file as per your configuration, follow steps **step 3 and step 4**.  
 
 >**Note**: Refer to [step 2](#customized-example-of-xml-file-with-mysql-database) for example of an already customized file for **installation with MySQL database**.
@@ -22,13 +22,13 @@ Below are the sample templates for OpsHubAutoInstall/OpsHubAutoMigrator XML. You
    * Upgrade : [Migrator example file](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EY22j0v_TdFGsCLzrxWEy1IBb8mZXapO2a8po-mPix1R8A?e=N8oyFe)
 
 
-# 3 - Configure Installation Path  
+# <div id="configure-installation-path"> 3 - Configure Installation Path </div>
 
 * Find `com.izforge.izpack.panels.TargetPanel` and replace the input mentioned below:  
     * Replace **@INSTALLATION_PATH@** with actual installation directory which you mentioned in **Registration_Input.properties** during [Silent Registration](registration#silent-registration-for-linux).  
 
 
-# 4 - Configure Registration Type & Verification Code 
+# <div id="configure-registration-type-and-verification-code"> 4 - Configure Registration Type & Verification Code </div>
 
 For the next panel:
 ```xml
@@ -43,7 +43,6 @@ By default, OpsHub uses Existing Registration as the registration type. If you w
 <com.izforge.izpack.panels.UserInputPanel id="UserInputPanel.RegistrationTypeSelection">
 <userInput> <entry key="RegistrationType" value="ExistingRegistration"/>
 </userInput> </com.izforge.izpack.panels.UserInputPanel>
-
 
 <com.izforge.izpack.panels.UserInputPanel id="UserInputPanel.EmailIdVerificationForExistingCode">
 <userInput> <entry key="VerificationCode" value="@VERIFICATION_CODE@"/>
@@ -62,7 +61,7 @@ For Post-Installation Registration, set the input value of "RegistrationType" to
 
 >**Note**: Complete the installation first, and after the server starts, you will be prompted to fill out the registration form. You will receive the verification code only after completing the registration form.
 
-# 5 - Configure Base Parameter  
+# <div id="configure-base-parameter"> 5 - Configure Base Parameter </div> 
 
 Find all parameters below under panel `id="UserInputPanel.installationflow"`.  
 1. Find **@COMPANY_NAME@** parameter in the OpsHubAutoInstall.xml file and replace with your company name.  
@@ -76,7 +75,7 @@ Find all parameters below under panel `id="UserInputPanel.installationflow"`.
    >**Note**: Advance configuration allows to change default database name, Http/Https configuration, Advanced Security Options.  
    - If you are setting above flag as "0" then advance configuration parameters will be set with default values.  
 
-# 6 - Database configuration  
+# <div id="database-configuration"> 6 - Database configuration </div>  
 
 ## MySQL Database configuration  
 
@@ -155,35 +154,35 @@ For HSQL you can move to next step for further configuration.
 2. Remove comment from parameters.  
 3. Go to [Common Database configuration parameters](#common-database-configuration-parameters) and follow the steps.  
 
-# 7 - Enable Advance Configuration  
+# <div id="enable-advance-configuration"> 7 - Enable Advance Configuration  </div>
 
 If you are doing advance configuration then only follow the below step.  
-- Make sure you have **@ADVANCE_CONFIG_FLAG@** flag is 1 as specified [here](#id-5-configure-base-parameter).  
+- Make sure you have **@ADVANCE_CONFIG_FLAG@** flag is 1 as specified [here](#configure-base-parameter).  
 
 ## Enabling advance configuration with HSQL, then follow below steps  
 
 1. Remove comment from panel id "UserInputPanel.advancedOptionsHSQL" and add comment in panel id **"UserInputPanel.advancedOptions"**.  
-2. Find **@ADV_HTTP_CONFIG@** and replace it with "HTTP" if you want to configure OpsHub Integration Manager with HTTP or replace it with "HTTPS" if you want to configure OpsHub Integration Manager with https.  
-   * Make sure you are following step no 8 if you configure OpsHub Integration Manager with https.  
-3. Find **@ADV_ISSERVICE@** and replace with 1 if you want to configure OpsHub Integration Manager as a service else replace it with 0.  
+2. Find **@ADV_HTTP_CONFIG@** and replace it with "HTTP" if you want to configure <code class="expression">space.vars.SITENAME</code> with HTTP or replace it with "HTTPS" if you want to configure <code class="expression">space.vars.SITENAME</code> with https.  
+   * Make sure you are following step no 8 if you configure <code class="expression">space.vars.SITENAME</code> with https.  
+3. Find **@ADV_ISSERVICE@** and replace with 1 if you want to configure <code class="expression">space.vars.SITENAME</code> as a service else replace it with 0.  
 4. Find **@ADV_SEC_CONFIG@** and replace with 1 if you want to configure advance Security configuration else replace it with 0.  
 
 ## Enabling advance configuration other than HSQL, then follow below steps  
 
 1. Remove comment from id "UserInputPanel.advancedOptions".  
-2. Find **@ADV_HTTP_CONFIG@** and replace it with "HTTP" if you want to configure OpsHub Integration Manager with HTTP or replace it with "HTTPS" if you want to configure OpsHub Integration Manager with https.  
-   * Make sure you are following step no 8 if you configure OpsHub Integration Manager with https.  
-3. Find **@ADV_ISDBFLAG@** and replace with 1 if you will create OpsHub Integration Manager database manually else set it as 0.  
-4. Find **@ADV_OPSHUBDBMAME@** and replace it with your OpsHub Integration Manager database name else remove that entry from the panel.  
-5. Find **@ADV_REPORT_DBNAME@** and replace it with your OpsHub Integration Manager report database name else remove that entry from the panel.  
-6. Find **@ADV_ISSERVICE@** and replace with 1 if you want to configure OpsHub Integration Manager as a service else replace it with 0.  
+2. Find **@ADV_HTTP_CONFIG@** and replace it with "HTTP" if you want to configure <code class="expression">space.vars.SITENAME</code> with HTTP or replace it with "HTTPS" if you want to configure <code class="expression">space.vars.SITENAME</code> with https.  
+   * Make sure you are following step no 8 if you configure <code class="expression">space.vars.SITENAME</code> with https.  
+3. Find **@ADV_ISDBFLAG@** and replace with 1 if you will create <code class="expression">space.vars.SITENAME</code> database manually else set it as 0.  
+4. Find **@ADV_OPSHUBDBMAME@** and replace it with your <code class="expression">space.vars.SITENAME</code> database name else remove that entry from the panel.  
+5. Find **@ADV_REPORT_DBNAME@** and replace it with your <code class="expression">space.vars.SITENAME</code> report database name else remove that entry from the panel.  
+6. Find **@ADV_ISSERVICE@** and replace with 1 if you want to configure <code class="expression">space.vars.SITENAME</code> as a service else replace it with 0.  
 7. Find **@ADV_SEC_CONFIG@** and replace with 1 if you want to configure advance Security configuration else replace it with 0.  
 
-# 8 - HTTPS configuration  
+# <div id="https-configuration"> 8 - HTTPS configuration </div>  
 
 1. Make sure you have configure **@ADV_HTTP_CONFIG@** with "HTTPS" value.  
 2. Find panel with id "UserInputPanel.certInfo" remove comment from parameters.  
-3. Find **@CERT_SERVER_HOST@** and replace it with IP Address/hostname of Machine on which you install OpsHub Integration Manager.  
+3. Find **@CERT_SERVER_HOST@** and replace it with IP Address/hostname of Machine on which you install <code class="expression">space.vars.SITENAME</code>.  
 4. Find **@CERT_COMP_UNIT@** and replace it with your Organization's Unit like Manufacturing, Sales etc.  
 5. Find **@CERT_COMP_NAME@** and replace it with your Organization Name.  
 6. Find **@CERT_COMP_CITY@** and replace it with your Organization's City.  
@@ -191,11 +190,11 @@ If you are doing advance configuration then only follow the below step.
 8. Find **@CERT_COMP_COUNTRY@** and replace it with your Organization's Country.  
 9. Find **@CERT_VALIDITY@** and replace it with number of days for which the certificate should be considered valid.  
 
-# 9 - Advance Security Configuration  
+# <div id="advance-security-configuration"> 9 - Advance Security Configuration </div>  
 
 1. Make sure you have configure ADV_SEC_CONFIG with "1" value in step 5.  
 2. Find panel with id "UserInputPanel.securityConfig" remove comment from parameters.  
 3. Find **@SEC_KEYMODE@** replace with "newSecretKey".  
 4. Find **@SEC_KEY_PATH@** and replace with your secret key installation path.  
 5. Find **@SEC_ALGO@** and replace with either "AES-256" or "DES-56 or "DESede-168" as per your need.  
-6. Note do not copy your secret file once its generated after OpsHub Integration Manager installation process.  
+6. Note do not copy your secret file once its generated after <code class="expression">space.vars.SITENAME</code> installation process.  
