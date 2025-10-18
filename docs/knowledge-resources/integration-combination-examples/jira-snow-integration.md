@@ -22,7 +22,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 
 * Log in into <code class="expression">space.vars.SITENAME</code>. The default credentials are: User Name: admin, Password: password.
 
-<div align="center"><img src="../../assets/Getting_Started_With_Application_Image_1G_a.png" alt="" width="950"></div>
+<div align="center"><img src="../../assets/Getting_Started_With_Application_Image_1G_a.png" alt="" width="700"></div>
 
 > **Note**: Proxy parameters: Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](../../manage/administrator/proxy-setting.md) in <code class="expression">space.vars.SITENAME</code>.
 
@@ -122,11 +122,11 @@ Refer to the video on this page to learn in detail about [Attachments](../../int
 
 ### Sync link between Incident and Problem
 
-<div align="center"><img src="../../assets/J-SN_Image_6a.png" alt="" width="950"></div>
+<div align="center"><img src="../../assets/J-SN_Image_6a.png" alt="" width="500"></div>
 
 * For syncing link between incident and problem in both systems, switch on the **Relationship** toggle.
 
-<div align="center"><img src="../../assets/J-SN_Image_12.png" alt="" width="950"></div>
+<div align="center"><img src="../../assets/J-SN_Image_12.png" alt="" width="500"></div>
 
 * Now, click on the settings icon.
   * Map the entities you want to link with Incident. In this case, we will map Jira Problem with ServiceNow Problem. This means that if Incident in Jira is linked to Problem then it should be linked to entity of type Problem in ServiceNow.
