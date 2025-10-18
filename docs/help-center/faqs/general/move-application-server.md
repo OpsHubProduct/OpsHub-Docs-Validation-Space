@@ -51,13 +51,14 @@ I have <code class="expression">space.vars.SITENAME</code> installed on one mach
    * Stop the <code class="expression">space.vars.SITENAME</code>.
 {% endif %}
    * Restore the database(s) from the backup taken from old <code class="expression">space.vars.SITENAME</code> instance/server into the new <code class="expression">space.vars.SITENAME</code> database instance/server. For more information, refer [Database Restore](../../../manage/upgrade/taking-application-backup.md#database-restore).
-   * Start new <code class="expression">space.vars.SITENAME</code> server. 
-   * Re-enter the password for sync user configured in systems
-{% if "OpsHub Integration Manager" === space.vars.SITENAME %}
-and integration {% endif %}
-   {% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
+   * Start new <code class="expression">space.vars.SITENAME</code> server.
+{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}  
+   * Re-enter the password for sync user configured in systems.
+{% endif %}  
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
+   * Re-enter the password for sync user configured in systems and integration
    * Load field mapping and integration to validate connectivity.
-   {% endif %}
+{% endif %}  
 {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}  
 8. Now you can start migrations  as per your requirement.
 {% endif %}  
