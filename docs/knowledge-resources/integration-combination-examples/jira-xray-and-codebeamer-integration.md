@@ -1,4 +1,3 @@
-
 Jira Xray is a modern requirements and test management solution for complex systems development. Integrating Jira Xray with Codebeamer, a comprehensive web-based test case management solution, ensures that the product management team using Jira Xray has complete traceability for all the test entities in Codebeamer from Jira Xray itself.
 
 # Use case: Jira Xray - Codebeamer integration
@@ -10,7 +9,10 @@ Jira Xray is a modern requirements and test management solution for complex syst
 * The team creates Test Run using multiple Tests. The Test Run Child(Result of Test Run) will be automatically created when running the Test Run.
 * The team wants to synchronize the Test Run and Test Run Child(Result of Test Run) to respective entities, Test Run and Test Result in Jira Xray.
 
-![Xray-CB Entity Mapping](../../assets/Xray-CB-Entity-Mapping.png)
+<p align="center">
+  <img src="../../assets/Xray-CB-Entity-Mapping.png" width="800">
+</p>
+
 
 # How to create an integration between Jira Xray and Codebeamer
 
@@ -19,7 +21,10 @@ To create an integration between Jira Xray and Codebeamer, you need to:
 * You need to install <code class="expression">space.vars.SITENAME</code>.
 * Configure Jira Xray and Codebeamer onto <code class="expression">space.vars.SITENAME</code>.  
 
-![Xray-CB systems](../../assets/Xray-CB-systems.png)
+<p align="center">
+  <img src="../../assets/Xray-CB-systems.png" width="800">
+</p>
+
 
 To learn how to configure Jira Xray and Codebeamer, navigate to [Jira Cloud Instance](../../connectors/jira.md#jira-cloud-instance) and [Codebeamer](../../connectors/codebeamer.md).
 
@@ -29,14 +34,35 @@ Integration configuration is the process of defining the flow, conditions, time,
 Here are the steps to integrate Jira Xray and Codebeamer.
 
 * Click the **Integrate** button on the screen.  
-  ![TR-Jama Image 22](../../assets/TR-Jama-Image-22.png)
+
+<p align="center">
+  <img src="../../assets/TR-Jama-Image-22.png" width="800">
+</p>
+
+
 * Click the plus icon [+] on the top right corner of the screen. You will be prompted to enter the **Integration Name** and name of systems you want to integrate.  
-  ![TR-Jama Image 23](../../assets/TR-Jama-Image-23.png)
+ 
+<p align="center">
+  <img src="../../assets/TR-Jama-Image-23.png" width="800">
+</p>
+
 * Enter a unique name for the integration. For example, this integration is named **Jira Xray - Codebeamer Integration**.
 * Click the plus sign [+] adjacent to the System 1 and System 2 fields. From the **Select 1st endpoint** and **Select 2nd endpoint** drop-down lists, select Jira Xray and Codebeamer respectively.  
-  ![Xray-CB system Selection](../../assets/Xray-CB-system-Selection.png)
-* In the **Add Project(s) to Sync** section, select the projects you want to synchronize between Jira Xray and Codebeamer by clicking them. For example, we have selected **XrayCloudTestProject** project in Jira Xray and **TestProject2** project in Codebeamer.  
-  ![Xray-CB Project Selection](../../assets/Xray-CB-Project-Selection.png)
+
+
+<p align="center">
+  <img src="../../assets/Xray-CB-system-Selection.png" width="800">
+</p>
+
+* In the **Add Project(s) to Sync** section, select the projects you want to synchronize between Jira Xray and Codebeamer by clicking them. For example, we have selected **XrayCloudTestProject** project in Jira Xray and **TestProject2** project in Codebeamer. 
+
+<p align="center">
+  <img src="../../assets/Xray-CB-Project-Selection.png" width="800">
+</p>
+
+<p align="center">
+  <img src="../../assets/Xray-CB-Test-Execution-Mapping-1.png" width="800">
+</p>
 
 * Click the bi-directional arrow (<-->) between the projects to create a bi-directional synchronization between the selected projects.
 * In the **Select Entities to Sync** section, select the entities you want to synchronize between Jira Xray and Codebeamer. You can synchronize multiple entities in one integration. For example, we are synchronizing the following entities between Jira Xray and Codebeamer:
@@ -66,7 +92,10 @@ Now, click the **Create from Scratch** button to define the mapping from scratch
 * Now, search and select the **Summary** field from **All fields** box for Jira Xray and **Name** field from the **All fields** box for Codebeamer.
 * Now, search and select the **Steps** field from **All fields** box for Jira Xray and **Test Steps** field from the **All fields** box for Codebeamer.
 
-![Xray-CB Test Case Mapping1](../../assets/Xray-CB-Test-Case-Mapping1.png)
+<p align="center">
+  <img src="../../assets/Xray-CB-Test-Case-Mapping1.png" width="800">
+</p>
+
 
 * Click **Save Mapping** to save the mapping. You will be re-directed to the integration page.
 
@@ -90,7 +119,9 @@ Give a unique name for the mapping in the **Name** field. For example, the name 
 * Search and select the **Status** field from **All fields** box for Jira Xray and **Status** field from the **All fields** box for Codebeamer.
 * Map the Test Run Type lookup field with its corresponding value. For more details, refer to this.
 
-![Xray-CB Test Execution Mapping 1](../../assets/Xray-CB-Test-Execution-Mapping-1.png)
+<p align="center">
+  <img src="../../assets/Xray-CB-Test-Execution-Mapping-1.png" width="800">
+</p>
 
 >**Note**:  You may map more fields as per your requirement.
 
@@ -98,14 +129,19 @@ Give a unique name for the mapping in the **Name** field. For example, the name 
 
 Relationships feature synchronizes the relationship between the selected entities.  
 * For the Codebeamer Test Run creation, **Test Cases** Linkage is mandatory. Configure the **Test Cases** links to create the Test Run in Codebeamer.  
-  ![Xray-CB Test Execution Relationship](../../assets/Xray-CB-Test-Execution-Relationship.png)
+
+<p align="center">
+  <img src="../../assets/Xray-CB-Test-Execution-Relationship.png" width="800">
+</p>
 
 ### Criteria Configuration
 
 * In Codebeamer, there is only one entity as **Test Run** which automatically creates **Test Run Child(Result)** when we run the Test Run.
 * If you need to synchronize Test Run only, the criteria needs to be configured as:  
 
-![Xray-CB Test Execution Critria](../../assets/Xray-CB-Test-Execution-Critria.png)
+<p align="center">
+  <img src="../../assets/Xray-CB-Test-Execution-Critria.png" width="800">
+</p>
 
 ## Mapping Test Result in Jira Xray to Test Run in Codebeamer
 
@@ -124,7 +160,9 @@ Give a unique name for the mapping in the **Name** field. For example, the name 
 * Search and select the **State** field from **All fields** box for Jira Xray and **Status** field from the **All fields** box for Codebeamer.
 * Map the Test Run Type lookup field with its corresponding value. For more details, refer to this.
 
-![Xray-CB Test Run Mapping1](../../assets/Xray-CB-Test-Run-Mapping1.png)
+<p align="center">
+  <img src="../../assets/Xray-CB-Test-Run-Mapping1.png" width="800">
+</p>
 
 >**Note**:  You may map more fields as per your requirement.
 
@@ -133,13 +171,17 @@ Give a unique name for the mapping in the **Name** field. For example, the name 
 Relationships feature synchronizes the relationship between the selected entities.  
 * For the Codebeamer Test Run Result creation, **Test Case** and **Parent Test Run** links are required. Configure the **Parent Test Run** link along with the **Test Cases** links to sync the Test Run (Result) in Codebeamer.  
 
-![Xray-CB TestRun Child Relationship](../../assets/Xray-CB-TestRun-Child-Relationship.png)
+<p align="center">
+  <img src="../../assets/Xray-CB-TestRun-Child-Relationship.png" width="800">
+</p>
 
 ### Criteria Configuration
 
 * In Codebeamer, there is only one entity **Test Run** which automatically creates **Test Run Child(Result)** when we run the Test Run.
 * If you need to synchronize Test Run only, the criteria needs to be configured as:  
 
-![Xray-CB Test Run Critria](../../assets/Xray-CB-Test-Run-Critria.png)
+<p align="center">
+  <img src="../../assets/Xray-CB-Test-Run-Critria.png" width="800">
+</p>
 
 Refer to [Save and Activate Integration](../../integrate/configure-integrations.md#save-and-activate-integration) to **Save** and **Activate** the integration.
