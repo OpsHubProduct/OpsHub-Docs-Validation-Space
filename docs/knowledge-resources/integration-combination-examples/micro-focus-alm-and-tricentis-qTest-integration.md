@@ -4,7 +4,7 @@ Best-of-breed systems such as Micro Focus ALM/QC and Tricentis qTest bring rich 
 <code class="expression">space.vars.SITENAME</code> integrates Micro Focus ALM and Tricentis qTest bi-directionally. On this page, we will discuss the bi-directional integration of:  
 
 <p align="center">
-  <img src="../../assets/Micro_Focus_ALM_Tricentis_qTest_entities.png" width="750" />
+  <img src="../../assets/Micro_Focus_ALM_Tricentis_qTest_entities.png" width="850" />
 </p>
 
 # System Prerequisites
@@ -14,7 +14,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Log in into <code class="expression">space.vars.SITENAME</code>. The default credentials are: User Name: `admin`, Password: `password`.  
 
 <p align="center">
-  <img src="../../assets/Getting_Started_With_Application_Image_1G_a.png" width="900"/>
+  <img src="../../assets/Getting_Started_With_Application_Image_1G_a.png" width="700"/>
 </p>
 
 >**Note** **Proxy parameters**: Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](../../manage/administrator/proxy-setting.md) in <code class="expression">space.vars.SITENAME</code>.  
@@ -22,7 +22,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Click **Integrate** on the top right corner of the screen and then click the plus [+] icon.  
 
 <p align="center">
-  <img src="../../assets/Overview_of_Integration_Image_1D.png" width="900"/>
+  <img src="../../assets/Overview_of_Integration_Image_1D.png" width="1100"/>
 </p>
 
 * The integration configuration page opens:  
@@ -30,7 +30,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Click the plus [+] icon adjacent to the System 1 and System 2 fields one by one to configure Tricentis qTest and Micro Focus ALM.  
 
 <p align="center">
-  <img src="../../assets/ALM-QTEST_1.png"  width="900"/>
+  <img src="../../assets/ALM-QTEST_1.png"  width="1100"/>
 </p>
 
 ## Configure System(s)
@@ -38,13 +38,13 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Once you have fulfilled all the prerequisites and are done with the above-mentioned check, configure Tricentis qTest and Micro Focus ALM by following the steps given on Tricentis qTest and Micro Focus ALM pages respectively.  
 
 <p align="center">
-  <img src="../../assets/ALM-QTEST_2.png" width="900" />
+  <img src="../../assets/ALM-QTEST_2.png" width="1100" />
 </p>
 
 * When you save the respective system configuration pages after configuring the systems, the systems will automatically be added to the integration. Proceed to adding projects and entities in the integration.  
 
 <p align="center">
-  <img src="../../assets/ALM-QTEST_3.png" width="900" />
+  <img src="../../assets/ALM-QTEST_3.png" width="1100" />
 </p>
 
 ## Select Projects and Entities
@@ -61,7 +61,7 @@ For example, here we select <code class="expression">space.vars.SITENAME</code> 
 * Once the direction is selected, the arrows will turn grey. We have selected the bi-directional flow.  
 
 <p align="center">
-  <img src="../../assets/ALM-QTEST_4.png" width="900" />
+  <img src="../../assets/ALM-QTEST_4.png" width="1100" />
 </p>
 
 * <code class="expression">space.vars.SITENAME</code> fetches entities available in both systems and shows them in the entities list for both systems.  
@@ -73,7 +73,7 @@ So, once the entities are selected, click the plus icon [+] adjacent to **Select
 You will be navigated to Mapping Configuration screen.  
 
 <p align="center">
-  <img src="../../assets/ALM-QTEST_5.png" width="900" />
+  <img src="../../assets/ALM-QTEST_5.png" width="1100" />
 </p>
 
 ## Mapping Fields
@@ -86,7 +86,7 @@ Even if you select **Auto Map**, <code class="expression">space.vars.SITENAME</c
 We select **Create from Scratch**.  
 
 <p align="center">
-  <img src="../../assets/ALM-QTEST_6.png" width="900" />
+  <img src="../../assets/ALM-QTEST_6.png" width="1100" />
 </p>
 
 
