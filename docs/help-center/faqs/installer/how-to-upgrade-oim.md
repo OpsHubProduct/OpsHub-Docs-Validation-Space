@@ -3,14 +3,7 @@
 Migrating <code class="expression">space.vars.SITENAME</code> to new version will ensure that the application includes new features and improved functionality.
 
 ## Solution  
-{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}
-{% set upgradeLink = [Migration Pre-requisites](../../../manage/upgrade/upgrade-application.md#migration-pre-requiste-for-windows-and-linux) %}
-{% endif %}  
-{% if "OpsHub Integration Manager" === space.vars.SITENAME %} 
-{% set upgradeLink = [Pre-Upgrade Checklist](../../../manage/upgrade/upgrade-application.md#pre-upgrade-checklist) %}
-{% endif %}
-
-Make sure that the <code class="expression">upgradeLink</code> steps are followed before migrating to new version.
+Make sure that the  {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}[Migration Pre-requisites](../../../manage/upgrade/upgrade-application.md#migration-pre-requiste-for-windows-and-linux){% endif %}{% if "OpsHub Integration Manager" === space.vars.SITENAME %}[Pre-Upgrade Checklist](../../../manage/upgrade/upgrade-application.md#pre-upgrade-checklist) %}{% endif %}steps are followed before migrating to new version.
 
 Once the pre-requisites are met, follow one of the below {% if "OpsHub Integration Manager" === space.vars.SITENAME %} sections {% endif %} {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} section {% endif %} 
 
