@@ -4,9 +4,9 @@
 * [How to migrate from HSQL to other enterprise database?](./general/hsql-other-database.md)  
 * [How to move application server from one machine to other?](./general/move-application-server.md)    
 * [Are there any vulnerabilities in OpsHub Integration Manager?](./general/vulnerabilities.md)  
-  {% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
 * [Integrations are configured but synchronization is not happening, What can be potentials reasons?](./general/integration-sync-not-working.md)
-  {% endif %}  
+{% endif %}  
 * [Not able to see the newly added projects or lookup values, What can be potentials reasons?](./general/not-able-to-see-newly-added-projects-or-lookup-values.md)  
 * [How to put default value for any mandatory field of destination system?](./general/default-value-mandatory-field-target-system.md)  
 * [How to do value mapping for lookup type fields ?](./general/value-mapping-lookuptype-fields.md)  
