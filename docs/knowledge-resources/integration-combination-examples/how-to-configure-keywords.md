@@ -7,7 +7,7 @@ OpsHub **preserves a reference** to the original keyword by appending a special 
 Integration required:  
 
 <p align="center">
-  <img src="../../assets/ZephyrToETM.png"  width="800"/>
+  <img src="../../assets/ZephyrToETM.png"  width="950"/>
 </p>
 
 This allows:  
@@ -51,7 +51,7 @@ When syncing from a non-keyword supported connector like **Zephyr back to ETM**,
   - Ensures consistency with ETM but may **reintroduce deleted steps** in Zephyr.  
 
 <p align="center">
-<img src="../../assets/ETMBackwardSyncFromZephyr.png"  width="700px"/>
+<img src="../../assets/ETMBackwardSyncFromZephyr.png"  width="1000"/>
 </p>
 
 ## Preventing Keyword Step Resync  
@@ -77,11 +77,11 @@ To properly sync ETM Keywords and Test Cases to ADO, users must set up **two sep
  - Requires an **advanced workflow**: `Default Integration Workflow -keyword.xml`  
 
 <p align="center">
-<img src="../../assets/ADOtoETM1.png"  width="900"/>
+<img src="../../assets/ADOtoETM1.png"  width="1100"/>
 </p>  
 
 <p align="center">
-<img src="../../assets/ADOtoETM2.png"  width="900"/>
+<img src="../../assets/ADOtoETM2.png"  width="1100"/>
 </p>  
 
 
@@ -130,7 +130,7 @@ Below is the advanced XSL used to transform ADO Shared Steps into ETM-compatible
 </xsl:for-each>
 </steps>
 ```
-<p align="center"> <img src="../../assets/ETMToADO.png"  width="900"/> </p>
+<p align="center"> <img src="../../assets/ETMToADO.png"  width="1100"/> </p>
 
 ### Additional Notes
 
