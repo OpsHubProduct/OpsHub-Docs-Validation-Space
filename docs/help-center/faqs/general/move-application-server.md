@@ -43,7 +43,7 @@ I have <code class="expression">space.vars.SITENAME</code> installed on one mach
    * If you are not able to resolve this error, then send the `<Install_Folder>/logs` folder to <code class="expression">space.vars.SITENAME</code> support team. Restore application to earlier state until this issue is fixed:
    * Restore applicable folder by following [Application Restore](../../../manage/upgrade/taking-application-backup.md#application-restore) documentation.
    * Restore database by following [Database Restore](../../../manage/upgrade/taking-application-backup.md#database-restore) documentation.  
-7. If installation finished successfully, follow the steps below:
+7. If installation finished successfully, follow the steps below:  
 {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}  
    * Close <code class="expression">space.vars.SITENAME</code>.
 {% endif %}  
@@ -54,8 +54,7 @@ I have <code class="expression">space.vars.SITENAME</code> installed on one mach
    * Start new <code class="expression">space.vars.SITENAME</code> server. 
    * Re-enter the password for sync user configured in systems
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
-and integration 
-{% endif %}.
+and integration {% endif %}
    {% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
    * Load field mapping and integration to validate connectivity.
    {% endif %}
