@@ -4,7 +4,7 @@ Best of breed tools such as Azure DevOps Server (TFS) and Micro Focus ALM bring 
 **<code class="expression">space.vars.SITENAME</code>** integrates Azure DevOps Server (TFS) and Micro Focus ALM bidirectionally. On this page, we will discuss the bi-directional integration of:  
 
 <p align="center">
-  <img src="../../assets/TFS_Micro_Focus_ALM_entities.png" width="850"/>
+  <img src="../../assets/TFS_Micro_Focus_ALM_entities.png" width="1100"/>
 </p>  
 
 # System Prerequisites
@@ -16,32 +16,32 @@ Check out the pre-requisites for [Azure DevOps Server (TFS)](../../connectors/te
 * Log in into **<code class="expression">space.vars.SITENAME</code>**. The default credentials are:  
   **User Name:** admin, **Password:** password  
 <p align="center">
-  <img src="../../assets/Getting_Started_With_Application_Image_1G_a.png" width="950"/>
+  <img src="../../assets/Getting_Started_With_Application_Image_1G_a.png" width="700"/>
 </p>  
 
 >**Note**: **Proxy parameters:** Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](../../manage/administrator/proxy-setting.md) in **<code class="expression">space.vars.SITENAME</code>**.  
 
 * Click **Integrate** on the top right corner of the screen and then click the plus [+] icon.  
 <p align="center">
-  <img src="../../assets/Overview_of_Integration_Image_1D.png" width="950"/>
+  <img src="../../assets/Overview_of_Integration_Image_1D.png" width="1100"/>
 </p>  
 
 * The integration configuration page opens:  
   * Enter a unique name for the integration. For example, this integration is named **Azure DevOps Server (TFS) – Micro Focus ALM Integration**.  
   * Click plus [+] icon adjacent to the System 1 and System 2 fields one by one to configure Azure DevOps Server (TFS) and Micro Focus ALM.  
 <p align="center">
-  <img src="../../assets/TFS_4.png" width="950"/>
+  <img src="../../assets/TFS_4.png" width="1100"/>
 </p>  
 
 ## Configure System(s)
 * Once you have fulfilled all the prerequisites and are done with the above-mentioned check, configure Azure DevOps Server (TFS) – Micro Focus ALM by following the steps given on [Azure DevOps Server (TFS)](../../connectors/team-foundation-server.md#system-configuration) and [Micro Focus ALM](../../connectors/microfocus-alm-qc.md#system-configuration) pages respectively.  
 <p align="center">
-  <img src="../../assets/TFS_5.png" width="950"/>
+  <img src="../../assets/TFS_5.png" width="1100"/>
 </p>  
 
 * When you save the respective system configuration pages after configuring the systems, the systems will automatically be added to the integration. Proceed to adding projects and entities in the integration.  
 <p align="center">
-  <img src="../../assets/TFS_6.png" width="950"/>
+  <img src="../../assets/TFS_6.png" width="1100"/>
 </p>  
 
 ## Select Projects and Entities
@@ -56,7 +56,7 @@ Check out the pre-requisites for [Azure DevOps Server (TFS)](../../connectors/te
 * Once the direction is selected, the arrows will turn grey. We have selected the bi-directional flow.  
 
 <p align="center">
-  <img src="../../assets/TFS_7.png" width="950"/>
+  <img src="../../assets/TFS_7.png" width="1100"/>
 </p>  
 
 * **<code class="expression">space.vars.SITENAME</code>** fetches entities available in both systems and shows them in entities list for both systems. From the **Select Entities to Sync** section, select the relevant entities for both systems.  
@@ -64,7 +64,7 @@ Check out the pre-requisites for [Azure DevOps Server (TFS)](../../connectors/te
 
 * The next step is to define the fields that need to be integrated for every entity mapped. Once the entities are selected, click the plus icon [+] adjacent to **Select fields to be Synced** to create the mapping between these two entities. You will now be navigated to Mapping Configuration screen.  
 <p align="center">
-  <img src="../../assets/TFS_8.png" width="950"/>
+  <img src="../../assets/TFS_8.png" width="1100"/>
 </p>  
 
 ## Mapping Fields
@@ -75,7 +75,7 @@ Even if you select the **Auto Map**, **<code class="expression">space.vars.SITEN
 We select **Create from Scratch**.  
 
 <p align="center">
-  <img src="../../assets/TFS_9.png" width="950"/>
+  <img src="../../assets/TFS_9.png" width="1100"/>
 </p>  
 
 #### Mapping Mandatory Fields
@@ -87,7 +87,7 @@ We select **Create from Scratch**.
 * There is no Mandatory field for Azure DevOps Server (TFS) visible in this instance, but the Mandatory fields for the Micro Focus ALM are: **Name** and **Requirement Type**. Map them to **Title** and **None** (select from the drop-down list) fields in Azure DevOps Server (TFS) respectively.  
 
 <p align="center">
-  <img src="../../assets/TFS_10.png" width="950"/>
+  <img src="../../assets/TFS_10.png" width="1100"/>
 </p>  
 
 #### Mapping Look-up Type Fields
@@ -100,7 +100,7 @@ In this case, we choose **Priority** and **Status** as the Look-up type fields t
 * The Status and Priority are Look-up type fields. They are marked with ![lookup](../../assets/I_9.png). Once you have mapped these fields in Azure DevOps Server (TFS) and Micro Focus ALM, click the icon to map their values one by one.  
 
 <p align="center">
-  <img src="../../assets/TFS_11.png" width="950"/>
+  <img src="../../assets/TFS_11.png" width="1100"/>
 </p>  
 
 * Values for Look-up type fields may vary from one instance to another. Kindly map the values that you think are equivalent by clicking them. You have to map the values for all Look-up types fields before you proceed.  
@@ -113,7 +113,7 @@ Example mapping for Priority:
 
 * Now, save the value mapping.  
 <p align="center">
-  <img src="../../assets/TFS_12.png" width="950"/>
+  <img src="../../assets/TFS_12.png" width="1100"/>
 </p>  
 
 * **Default Mapping** is used to write default value to target field in case if there is no value coming from mapped source fields.  
@@ -137,7 +137,7 @@ Example: **Description** from Azure DevOps Server (TFS) → **Description** from
 * If you do not wish to add more entities, save the integration and activate it.  
 
 <p align="center">
-  <img src="../../assets/TFS_14.png" width="950"/>
+  <img src="../../assets/TFS_14.png" width="1100"/>
 </p>  
 
 ### Entity: Bug and Defect
@@ -147,7 +147,7 @@ In this case: **Bug** from Azure DevOps Server (TFS) and **Defect** from Micro F
 * Click the adjacent mapping to **Select fields to be Synced** to create the mapping between these two entities. You will be navigated to Mapping Configuration screen.  
 
 <p align="center">
-  <img src="../../assets/TFS_15.png" width="950"/>
+  <img src="../../assets/TFS_15.png" width="1100"/>
 </p>  
 
 * You can refer to the [previous mapping](#mapping-mandatory-fields) and follow the same steps further.  
@@ -155,7 +155,7 @@ In this case: **Bug** from Azure DevOps Server (TFS) and **Defect** from Micro F
 * Once you save the mapping successfully, you will be re-directed to the Integration page.  
 
 <p align="center">
-  <img src="../../assets/TFS_16.png" width="950"/>
+  <img src="../../assets/TFS_16.png" width="1100"/>
 </p>  
 
 ## Comments and Attachments Mapping
@@ -181,7 +181,7 @@ For example, a user can specify that only bugs with high priority are to be sync
 * Select **In Database** from the **Select criteria storage type** drop-down list.  
 
 <p align="center">
-  <img src="../../assets/TFS_17.png" width="950"/>
+  <img src="../../assets/TFS_17.png" width="1100"/>
 </p>  
 
 ## Save and Activate Integration
@@ -189,13 +189,13 @@ For example, a user can specify that only bugs with high priority are to be sync
 * As the final step, click **Save** to save the integration.  
 
 <p align="center">
-  <img src="../../assets/TFS_18.png" width="950"/>
+  <img src="../../assets/TFS_18.png" width="1100"/>
 </p>  
 
 * The integration will be created. You will also get a confirmation pop-up at the bottom of the screen, and the integration will be listed in the integrations list.  
 
 <p align="center">
-  <img src="../../assets/TFS_19.png" width="950"/>
+  <img src="../../assets/TFS_19.png" width="1100"/>
 </p>  
 
 ## Test the Integration
@@ -218,7 +218,7 @@ You are free to choose other fields.
 >**Note**: User fields are mapped by **email id**. If emails are same in both systems, mapping is automatic. If not, update the [one-to-one XSL](../../integrate/mapping-configuration.md++#value-mapping-using-excel-sheet) for user fields mapping.  
 
 <p align="center">
-  <img src="../../assets/TFS_20.png" width="950"/>
+  <img src="../../assets/TFS_20.png" width="1100"/>
 </p>  
 
 * Once the additional configurations are completed successfully, update the mapping, activate the integration, and save it again.  
