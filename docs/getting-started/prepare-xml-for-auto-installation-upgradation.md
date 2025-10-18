@@ -4,7 +4,7 @@ Here is the process of getting and customizing OpsHubAutoInstall/OpsHubAutoMigra
 
 Below are the sample templates for OpsHubAutoInstall/OpsHubAutoMigrator XML. You need to customize the template downloaded as described below for configuring your own file for installing or migrating OpsHub Integration Manager.
 
-```
+
 If you are installing OpsHub Integration Manager then download file **[https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EdwkmbjVf5RNpjHmsqi8dE4BaSfch1pFlGQhPsixpGnHEw?e=VJclvQ]**.  
     - To customize the file as per your configuration, follow steps from section **[step 3 - Configure Installation path](#3---configure-installation-path)**.
 
@@ -12,24 +12,24 @@ If you are upgrading the existing OpsHub Integration Manager then download file 
     - To customize the file as per your configuration, follow steps **step 3 and step 4**.  
 
 >**Note**: Refer to **[step 2](#customizedfileexample)** for example of an already customized file for **installation with MySQL database**.
-```  
+  
 
 >**Note**: It is always recommended to have a secured environment for OIM installation. The purpose of Silent installation is to have no manual intervention, and so the user needs to have a secured VM installation as the autoinstall.xml file contains the password in plain text.  
 
 # 2 - Customized example of xml file with MySQL database
 
-```
+
 Here are the examples of XML file after all modifications.  
    - Installation with MySQL Database : [https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/ETH4fCuE0VBBvBucTLI8DtIBl9MlETKWMF3Y1eup2XjuGQ?e=c9TvS4 Installer Example file]  
     - Upgrade : [https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EY22j0v_TdFGsCLzrxWEy1IBb8mZXapO2a8po-mPix1R8A?e=N8oyFe Migrator example file]  
-```
+
 
 # 3 - Configure Installation Path  
 
-```
+
 Find `com.izforge.izpack.panels.TargetPanel` and replace the input mentioned below:  
     - Replace **@INSTALLATION_PATH@** with actual installation directory which you mentioned in **Registration_Input.properties** during **[Silent Registration](registration#silent-registration-for-linux)**.  
-```
+
 
 # 4 - Configure Registration Type & Verification Code 
 
