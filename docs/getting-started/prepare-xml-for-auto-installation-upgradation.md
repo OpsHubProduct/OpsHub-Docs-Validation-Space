@@ -10,12 +10,12 @@ Below are the sample templates for OpsHubAutoInstall/OpsHubAutoMigrator XML. You
 * If you are upgrading the existing OpsHub Integration Manager then download file [OpsHubAutoMigrator.xml](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EW_r0v_m5RtPoQp-jGLitoMBfWzZDdB0zdpJxflswG4a2Q).  
     * To customize the file as per your configuration, follow steps **step 3 and step 4**.  
 
->**Note**: Refer to [step 2](#id-2-customized-example-of-xml-file-with-MySQL-database) for example of an already customized file for **installation with MySQL database**.
+>**Note**: Refer to [step 2](#customized-example-of-xml-file-with-mysql-database) for example of an already customized file for **installation with MySQL database**.
   
 
 >**Note**: It is always recommended to have a secured environment for OIM installation. The purpose of Silent installation is to have no manual intervention, and so the user needs to have a secured VM installation as the autoinstall.xml file contains the password in plain text.  
 
-# 2 - Customized example of xml file with MySQL database
+# <div id="customized-example-of-xml-file-with-mysql-database"> 2 - Customized example of xml file with MySQL database </div>
 
 * Here are the examples of XML file after all modifications.  
    * Installation with MySQL Database : [Installer Example file](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/ETH4fCuE0VBBvBucTLI8DtIBl9MlETKWMF3Y1eup2XjuGQ?e=c9TvS4) 
