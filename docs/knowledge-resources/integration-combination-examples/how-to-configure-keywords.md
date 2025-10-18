@@ -7,7 +7,7 @@ OpsHub **preserves a reference** to the original keyword by appending a special 
 Integration required:  
 
 <p align="center">
-  <img src="../../assets/ZephyrToETM.png"  width="700px"/>
+  <img src="../../assets/ZephyrToETM.png"  width="800"/>
 </p>
 
 This allows:  
@@ -77,11 +77,11 @@ To properly sync ETM Keywords and Test Cases to ADO, users must set up **two sep
  - Requires an **advanced workflow**: `Default Integration Workflow -keyword.xml`  
 
 <p align="center">
-<img src="../../assets/ADOtoETM1.png" alt="ADO to ETM 1" width="700px"/>
+<img src="../../assets/ADOtoETM1.png"  width="900"/>
 </p>  
 
 <p align="center">
-<img src="../../assets/ADOtoETM2.png" alt="ADO to ETM 2" width="700px"/>
+<img src="../../assets/ADOtoETM2.png"  width="900"/>
 </p>  
 
 
@@ -130,7 +130,7 @@ Below is the advanced XSL used to transform ADO Shared Steps into ETM-compatible
 </xsl:for-each>
 </steps>
 ```
-<p align="center"> <img src="../../assets/ETMToADO.png" " width="700px"/> </p>
+<p align="center"> <img src="../../assets/ETMToADO.png"  width="900"/> </p>
 
 ### Additional Notes
 
