@@ -4,10 +4,12 @@ There can be multiple queries as below:
 
 1. How do I know whether a system will be supported or not?
 
-{% if "OpsHub Migrator for Microsoft Azure DevOps" == space.vars.SITENAME %}     
+{% if "OpsHub Migrator for Microsoft Azure DevOps" == space.vars.SITENAME %}
+
 2. If I have one system configured already and I want to upgrade that system to a newer version; how would I know whether the newer version of that system is still supported or not?
 
-{% elif "OpsHub Integration Manager" == space.vars.SITENAME %}  
+{% elif "OpsHub Integration Manager" == space.vars.SITENAME %}
+
 2. If I have one system integrated already and I want to upgrade that system to a newer version; how would I know whether the newer version of that system is still supported or not?  
 
 {% endif %}
