@@ -18,29 +18,19 @@ CREATE DATABASE reportsdb CHARACTER SET latin1 COLLATE latin1_general_cs;
 
 ## Queries for MS SQL/Azure SQL Database
 
-### Collation Considerations
+**Collation Considerations**
 
-#### For Multiple Language Systems
-
-If your end systems support multiple language characters, it's essential to choose a collation that supports **UTF** characters.
-
-To enable UTF character support in **<code class="expression">space.vars.SITENAME</code>**, install it on **Microsoft SQL Server 2019 or above**.
-
-Select a collation with a `UTF` postfix, for example:
-
-- `Latin1_General_100_CS_AS_SC_UTF8`
-
-#### For Single Language Systems
-
-If your end systems use a single language and your selected collation includes all necessary characters and is supported in **SQL Server versions below 2019**, you can install on SQL Server below 2019.
-
-Select an appropriate collation that suits your end systems (which will be configured in **<code class="expression">space.vars.SITENAME</code>**).
-
-This guide may help you decide the right collation.
+* For Multiple Language Systems:
+  * If your end systems support multiple language characters, it's essential to choose a collation that supports **UTF** characters.
+  * To enable UTF character support in **<code class="expression">space.vars.SITENAME</code>**, install it on **Microsoft SQL Server 2019 or above**.
+  * Select a collation with a `UTF` postfix, for example: `Latin1_General_100_CS_AS_SC_UTF8`
+* For Single Language Systems:
+  * If your end systems utilize a single language and your selected collation includes all the necessary characters and is supported in SQL Server versions below 2019, you can proceed with the installation on SQL Server version below 2019. Select an appropriate collation that suits your end systems [which are going to be configured in <code class="expression">space.vars.SITENAME</code>].
+  * Select an appropriate collation that suits your end systems (which will be configured in **<code class="expression">space.vars.SITENAME</code>**).
+  * Here is [guide](https://learn.microsoft.com/en-us/sql/relational-databases/collations/collation-and-unicode-support?view=sql-server-ver16) that may help you decide the right collation for your database.
 
 > **Note:**  
-> We need **1 database** and **2 schemas** to be created manually.  
-> The **database and schema name must be the same** for the OpsHub database, and another schema should be created for **reportsdb**.
+> We need **1 database** and **2 schemas** to be created manually, out of which The **database and schema name must be the same** for the OpsHub database, and another schema should be created for **reportsdb**.
 
 ```sql
 drop database IF EXISTS db1
@@ -67,27 +57,21 @@ drop user reportsdb CASCADE;
 CREATE USER reportsdb IDENTIFIED BY <<SERVER_PASSWORD>> DEFAULT TABLESPACE users QUOTA 2048M ON users TEMPORARY TABLESPACE temp PROFILE DEFAULT ACCOUNT UNLOCK
 ```
 
-### Notes
+>**Note**:  Ensure both `db1` and `reportsdb` users have the required privileges. For system and object privileges, refer to [Database Prerequisites](prerequisites.md#database-prerequisites).
 
-- Ensure both `db1` and `reportsdb` users have the required privileges.
-- For system and object privileges, refer to [Database Prerequisites](prerequisites.md#database-prerequisites).
-- `db1` and `reportsdb` must be created on the same server.
-- Passwords for `db1` and `reportsdb` must match the Oracle server password.
-
-### To change the tablespace quota for `db1`:
+* Note, in case of manual database creation with Oracle database, OpsHub database user ("db1") and OpsHub reports database user ("reportsdb") shall be created on the same server. At the time of installation, you need to provide the username and password for the database server.
+* In case of Oracle database, passwords for the database users ("db1" and "reportsdb") shall be the same as the password of the server on which they are created.
+* If you want to change the tablespace quota for OpsHub database "db1", following query can be used: 
 
 ```sql
 ALTER USER db1 QUOTA <size_of_tablespace> ON users;
 ```
-> **Note:** `"db1"` and `"reportsdb"` are the database/schema/database user names used in the above queries.  
-> You can name them differently as per your requirements.
+> **Note:** `"db1"` and `"reportsdb"` are the database/schema/database user names used in the above queries. You can name them differently as per your requirements.
 
 ## Queries for PostgreSQL Database
 
-- In case of manual database creation for a PostgreSQL Server database, **database and schema names must be in lowercase** only.
-- You need to manually create **1 database and 2 schemas**:
-  - The **database and one schema** must have the **same name** (used for OpsHub database).
-  - The second schema is used for `reportsdb`.
+* In case of manual database creation for PostgreSQL Server database, database and schema should be in lowercase only.
+  * We need 1 database and 2 schemas to be created manually, out of which database and schema's names must be same for opshub database. The other schema will be created for reportsdb.
 
 Let's say the name of the database is `db1`:
 ```sql
@@ -100,8 +84,7 @@ LC_CTYPE = 'en_US.UTF-8'
 TEMPLATE = template0;
 ```
 
-> The above query will create a database with **Collate: United States, UTF-8**.  
-> To create the database with a different collation, update the `LC_COLLATE` and `LC_CTYPE` values as per your requirement.
+>**Note**: The above query will create database with Collate United States, UTF-8. For creating database with desired collate, update `LC_COLLATE` and `LC_CTYPE` as per the requirement.
 
 ```sql
 db1 schema: create schema db1;
