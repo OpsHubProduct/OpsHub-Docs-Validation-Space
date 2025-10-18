@@ -16,12 +16,9 @@ If the certificate is not imported, follow the steps below.
 To access systems deployed on HTTPS from **<code class="expression">space.vars.SITENAME</code>**, download the HTTPS certificate on the machine where OIM is deployed.
 
 ## Mozilla Firefox
-
-<div align="center">
-
-![firefox](../assets/firefox.png)
-
-</div>
+<p align="center">
+  <img src="../assets/firefox.png" width="550">
+</p>
 
 1. Open the system URL in Firefox using HTTPS protocol.  
 2. Click the lock icon on the upper-left side of the address bar.  
@@ -37,11 +34,9 @@ To access systems deployed on HTTPS from **<code class="expression">space.vars.S
 
 ## Internet Explorer
 
-<div align="center">
-
-![IE](../assets/IE.png)
-
-</div>
+<p align="center">
+  <img src="../assets/IE.png" width="550">
+</p>
 
 1. Open the system URL in Internet Explorer using HTTPS.  
 2. Click the lock icon on the right side of the address bar.  
@@ -57,12 +52,10 @@ To access systems deployed on HTTPS from **<code class="expression">space.vars.S
 ---
 
 ## Google Chrome
+<p align="center">
+  <img src="../assets/chrome.png" width="550">
+</p>
 
-<div align="center">
-
-![chrome](../assets/chrome.png)
-
-</div>
 
 1. Open the system URL in Chrome using HTTPS protocol.  
 2. Click the lock icon on the upper-left of the address bar.  
@@ -88,7 +81,7 @@ Follow the steps below to import the downloaded certificate into **<code class="
 3. Run the following command:
 
    ```sh
-   keytool –importcert -alias <<certificate alias>> -keystore <<path>> -file "Certificate_Location\Certificate filename.extension"
+   keytool -importcert -alias <<certificate alias>> -keystore <<path>> -file "Certificate_Location\Certificate filename.extension"
    ```
 
    **Example**:
