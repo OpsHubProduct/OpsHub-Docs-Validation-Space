@@ -10,7 +10,7 @@ Migrating <code class="expression">space.vars.SITENAME</code> to new version wil
 {% set upgradeLink = [Pre-Upgrade Checklist](../../../manage/upgrade/upgrade-application.md#pre-upgrade-checklist) %}
 {% endif %}
 
-Make sure that the <code class="expression">{{upgradeLink}}</code> steps are followed before migrating to new version.
+Make sure that the <code class="expression">upgradeLink</code> steps are followed before migrating to new version.
 
 Once the pre-requisites are met, follow one of the below {% if "OpsHub Integration Manager" === space.vars.SITENAME %} sections {% endif %} {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %} section {% endif %} 
 
