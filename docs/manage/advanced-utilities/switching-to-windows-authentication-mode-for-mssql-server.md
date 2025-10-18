@@ -59,7 +59,7 @@ If the database is on MSSQL SQL Authentication mode and you need to switch to Wi
 > If the user is registered with a domain, the username format will be "{username}@{domain}" or "{domain}\{username}". Otherwise, the username format will be ".\username".
 
 <p align="center">
-  <img src="../../assets/OpshubServerServiceCredentials.png" width="1000">
+  <img src="../../assets/OpsHubServerService.png" width="1000"> 
 </p>
 
 
