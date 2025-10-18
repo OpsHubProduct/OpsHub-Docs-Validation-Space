@@ -1,4 +1,3 @@
-
 - **Supported versions:** 11g (Release 2), 12c and 19c
 
 <span style="color:blue">**User permission pre-requisites list:**</span>
@@ -57,7 +56,7 @@
 
 - Find the below screenshot which shows correct permission for CREATE USER privilege:
   <p align="center">
-  <img src="/docs/assets/OracleCreateUserPermission.png" width="800"/>
+  <img src="/docs/assets/OracleCreateUserPermission.png" width="900"/>
   </p>
 
 ---
