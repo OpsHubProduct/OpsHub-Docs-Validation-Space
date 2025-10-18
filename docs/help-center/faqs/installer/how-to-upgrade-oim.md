@@ -8,7 +8,7 @@ Make sure that the [Migration Pre-requisites](../../../manage/upgrade/upgrade-ap
 Once the pre-requisites are met, follow one of the below section
 {% endif %}
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
-Make sure that the [Pre-Upgrade Checklist](../../../manage/upgrade/upgrade-application.md#pre-upgrade-checklist) %} steps are followed before migrating to new version.
+Make sure that the [Pre-Upgrade Checklist](../../../manage/upgrade/upgrade-application.md#pre-upgrade-checklist) steps are followed before migrating to new version.
 Once the pre-requisites are met, follow one of the below sections.
 {% endif %}
 
