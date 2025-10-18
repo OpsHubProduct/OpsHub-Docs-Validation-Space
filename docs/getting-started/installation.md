@@ -170,7 +170,7 @@ The image below shows the overall progress of installation.
 
 <div align="center"><img src="../assets/Installer_Image_9Seta.png" width="800"></div>
 
-# Installation Success
+## Installation Success
 
 The image below shows a successful installation.
 
