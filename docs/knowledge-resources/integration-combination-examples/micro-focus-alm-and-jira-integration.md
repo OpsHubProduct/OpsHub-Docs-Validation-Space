@@ -3,7 +3,7 @@ Best-of-breed systems such as Micro Focus ALM/QC and Jira bring rich functionali
 <code class="expression">space.vars.SITENAME</code> integrates Micro Focus ALM and Jira bi-directionally. On this page, we will discuss the bi-directional integration of:
 
 <p align="center">
-  <img src="../../assets/Micro_Focus_ALM-Jira_entities.png" width="900px"/>
+  <img src="../../assets/Micro_Focus_ALM-Jira_entities.png" width="900"/>
 </p>
 
 # System Prerequisites
@@ -19,26 +19,26 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 
 * Click **Integrate** on the top right corner of the screen and then click the plus [+] icon .  
 <p align="center">
-  <img src="../../assets/Overview_of_Integration_Image_1D.png"/>
+  <img src="../../assets/Overview_of_Integration_Image_1D.png" width="700"/>
 </p>  
 
 * The integration configuration page opens:  
 * Enter a unique name for the integration. For example, this integration is named **Micro Focus ALM - Jira** Integration.  
 * Click the plus [+] icon adjacent to the System 1 and System 2 fields one by one to configure Jira and Micro Focus ALM.  
 <p align="center">
-  <img src="../../assets/ALM_3.png" width="950px"/>
+  <img src="../../assets/ALM_3.png" width="950"/>
 </p>  
 
 ## Configure System(s)
 * Once you have fulfilled all the prerequisites and are done with the above-mentioned check, configure Jira and Micro Focus ALM by following the steps given on Jira and Micro Focus ALM pages respectively.  
 
 <p align="center">
-  <img src="../../assets/ALM_18.png" width="950px"/>
+  <img src="../../assets/ALM_18.png" width="950"/>
 </p>  
 
 * When you save the respective system configuration pages after configuring the systems the systems will automatically be added to the integration. Proceed to adding projects and entities in the integration.  
 <p align="center">
-  <img src="../../assets/ALM_4.png" width="950px"/>
+  <img src="../../assets/ALM_4.png" width="950"/>
 </p>  
 
 ## Select Projects and Entities
@@ -52,14 +52,14 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Once the direction is selected, the arrows would turn grey. We have selected the bi-directional flow.  
 
 <p align="center">
-  <img src="../../assets/ALM_5.png" width="950px"/>
+  <img src="../../assets/ALM_5.png" width="950"/>
 </p>  
 
 * <code class="expression">space.vars.SITENAME</code> fetches entities available in both systems and shows them in entities list for both systems. From the **Select Entities to Sync** section, select the relevant entities for both systems. In this case, we will select **Requirement** from Micro Focus ALM and **Story** from Jira.  
 * The next step is to define the fields that need to be integrated for every entity mapped. So, once the entities are selected, click the plus icon [+] adjacent to **Select fields to be Synced** to create the mapping between these two entities. You will be navigated to Mapping Configuration screen.  
 
 <p align="center">
-  <img src="../../assets/ALM_6.png" width="950px"/>
+  <img src="../../assets/ALM_6.png" width="950"/>
 </p>  
 
 ## Mapping Fields
@@ -68,7 +68,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Now, either click **Create from Scratch** to define the mapping from scratch or click **Auto Map** to automatically map all fields with same name. Even if you select the **Auto Map**, <code class="expression">space.vars.SITENAME</code> will allow you to remove or add more fields before saving mapping. We select **Create from Scratch**.  
 
 <p align="center">
-  <img src="../../assets/ALM_7.png" width="950px"/>
+  <img src="../../assets/ALM_7.png" width="950"/>
 </p>  
 
 #### Mapping Mandatory Fields
@@ -81,7 +81,7 @@ The Mandatory field(s) for Micro Focus ALM are: **Name** and **Requirement Type*
 >**Note**: Jira does not allow accessing the Mandatory fields from the API, so check the Mandatory fields for Jira from Jira UI.  
 
 <p align="center">
-  <img src="../../assets/ALM_8.png" width="950px"/>
+  <img src="../../assets/ALM_8.png" width="950"/>
 </p>  
 
 #### Mapping Look-up Type Fields
@@ -89,10 +89,10 @@ The Mandatory field(s) for Micro Focus ALM are: **Name** and **Requirement Type*
   * Status to Status  
   * Priority to Priority  
 
-* The Status and Priority are Look-up type fields. The Look-up type fields are marked with <img src="../../assets/I_9.png" width="20px"/> icon. Once you have mapped these fields in Micro Focus ALM and Jira, click <img src="../../assets/I_9.png" width="20px"/> icon to map their values one by one.  
+* The Status and Priority are Look-up type fields. The Look-up type fields are marked with <img src="../../assets/I_9.png" width="20px"/> icon. Once you have mapped these fields in Micro Focus ALM and Jira, click <img src="../../assets/I_9.png" width="20"/> icon to map their values one by one.  
 
 <p align="center">
-  <img src="../../assets/ALM_9.png" width="950px"/>
+  <img src="../../assets/ALM_9.png" width="950"/>
 </p>  
 
 * Values for Look-up type fields may vary from one instance to another. Kindly map the values that you think are equivalent by clicking them. You have to map the values for all Look-up types fields before you proceed. For example, map the following values for Priority:  
@@ -106,7 +106,7 @@ The Mandatory field(s) for Micro Focus ALM are: **Name** and **Requirement Type*
 * Now, save the value mapping.  
 
 <p align="center">
-  <img src="../../assets/ALM_10.png" width="950px"/>
+  <img src="../../assets/ALM_10.png" width="950"/>
 </p>  
 
 * Default Mapping is used to write default value to target field in case if there is no value coming from mapped source fields. Click Default Mapping to define the default mapping. The Default Mapping pop-up opens.  
@@ -114,7 +114,7 @@ The Mandatory field(s) for Micro Focus ALM are: **Name** and **Requirement Type*
 * For user mapping, default value will not be written to target even if matching user not found in target. This will be done only if nothing coming from mapped source field.  
 
 <p align="center">
-  <img src="../../assets/Df_mapping.png" width="900px"/>
+  <img src="../../assets/Df_mapping.png" width="900"/>
 </p>  
 
 #### Mapping Rich Text Fields
@@ -124,7 +124,7 @@ The Mandatory field(s) for Micro Focus ALM are: **Name** and **Requirement Type*
 * If you do not wish to add more entities, save the integration and activate it.  
 
 <p align="center">
-  <img src="../../assets/ALM_11.png" width="950px"/>
+  <img src="../../assets/ALM_11.png" width="950p/>
 </p>  
 
 ### Entity: Defect and Bug
@@ -133,7 +133,7 @@ The Mandatory field(s) for Micro Focus ALM are: **Name** and **Requirement Type*
 * Click the adjacent mapping to **Select fields to be Synced** to create the mapping between these two entities. You will be navigated to Mapping Configuration screen.  
 
 <p align="center">
-  <img src="../../assets/ALM_12.png" width="950px"/>
+  <img src="../../assets/ALM_12.png" width="950"/>
 </p>  
 
 * You can refer to the previous mapping and follow the same steps further.  
@@ -141,7 +141,7 @@ The Mandatory field(s) for Micro Focus ALM are: **Name** and **Requirement Type*
 * The following screenshot shows a reference mapping for these entities. Once you save the mapping successfully, you will be further re-directed to the Integration page.  
 
 <p align="center">
-  <img src="../../assets/ALM_13.png" width="950px"/>
+  <img src="../../assets/ALM_13.png" width="950"/>
 </p>  
 
 ## Comments and Attachments Mapping
@@ -162,7 +162,7 @@ At this stage, you can also map entities such as comments and attachments. Refer
 * Select **In Database** from the **Select criteria storage type** drop-down list.  
 
 <p align="center">
-  <img src="../../assets/ALM_14.png" width="950px"/>
+  <img src="../../assets/ALM_14.png" width="950"/>
 </p>  
 
 ## Save and Activate Integration
@@ -170,13 +170,13 @@ At this stage, you can also map entities such as comments and attachments. Refer
 As the final step, click **Save** to save the integration.  
 
 <p align="center">
-  <img src="../../assets/ALM_15.png" width="950px"/>
+  <img src="../../assets/ALM_15.png" width="950"/>
 </p>  
 
 * The integration will be created. You will also get a pop-up at the bottom of the screen confirming the integration has been successfully configured and the integration will be listed in the integrations list.  
 
 <p align="center">
-  <img src="../../assets/ALM_16.png" width="950px"/>
+  <img src="../../assets/ALM_16.png" width="950"/>
 </p>  
 
 ## Test the Integration
@@ -193,7 +193,7 @@ As the final step, click **Save** to save the integration.
 >**Note**: User fields are mapped by email id. If e-mail ids of the users are same in both the systems, it will be mapped automatically, but if the email ids are not same, you will have to update the [one-to-one XSL](../../integrate/mapping-configuration.md#value-mapping-using-excel-sheet) for user fields mapping.  
 
 <p align="center">
-  <img src="../../assets/ALM_17.png" width="950px"/>
+  <img src="../../assets/ALM_17.png" width="950"/>
 </p>  
 
 * Once the additional configurations are completed successfully, update the mapping, and activate the integration, and save it again.  
