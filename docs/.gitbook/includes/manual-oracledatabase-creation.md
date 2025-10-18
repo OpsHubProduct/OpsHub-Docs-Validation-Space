@@ -14,7 +14,7 @@ drop user reportsdb CASCADE;
 CREATE USER reportsdb IDENTIFIED BY <<SERVER_PASSWORD>> DEFAULT TABLESPACE users QUOTA 2048M ON users TEMPORARY TABLESPACE temp PROFILE DEFAULT ACCOUNT UNLOCK
 ```
 
->**Note**:  Ensure both `db1` and `reportsdb` users have the required privileges. For system and object privileges, refer to [Database Prerequisites](../../prerequisites.md#database-prerequisites).
+>**Note**:  Ensure both `db1` and `reportsdb` users have the required privileges. For system and object privileges, refer to [Database Prerequisites](../../getting-started/prerequisites.md#database-prerequisites).
 
 * Note, in case of manual database creation with Oracle database, OpsHub database user ("db1") and OpsHub reports database user ("reportsdb") shall be created on the same server. At the time of installation, you need to provide the username and password for the database server.
 * In case of Oracle database, passwords for the database users ("db1" and "reportsdb") shall be the same as the password of the server on which they are created.
