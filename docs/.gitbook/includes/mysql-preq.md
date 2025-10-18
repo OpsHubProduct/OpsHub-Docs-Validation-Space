@@ -1,4 +1,3 @@
-# mysql-preq
 
 * **Supported versions:** From 5.7.18 or above
 * **Wait time for connection pool** should be set to 8 hours.
