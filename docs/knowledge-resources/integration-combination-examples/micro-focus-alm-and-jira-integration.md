@@ -7,7 +7,7 @@ Best-of-breed systems such as Micro Focus ALM/QC and Jira bring rich functionali
 </p>
 
 # System Prerequisites
-Configuring [system pre-requisites](../../integrate/integration-prerequisites.md) is mandatory for successful system configuration. Check out the prerequisites for [Micro Focus ALM](../../connectors/microfocus-alm-qc.md#prerequisites) and [Jira](../../connectors/jira.md#prerequisites) systems before you proceed with the integration.
+Configuring [system pre-requisites](../../integrate/integration-prerequisites.md) is mandatory for successful system configuration. Check out the prerequisites for [Micro Focus ALM](../../connectors/micro-focus-alm-qc.md#prerequisites) and [Jira](../../connectors/jira.md#prerequisites) systems before you proceed with the integration.
 
 # Integration Configuration
 * Log in into <code class="expression">space.vars.SITENAME</code>. The default credentials are: User Name: admin, Password: password.  
@@ -158,7 +158,7 @@ At this stage, you can also map entities such as comments and attachments. Refer
   * Click the configuration-criteria icon against the mapping on which you are going to apply the criteria.  
   * The Criteria Configuration pop-up opens. In the pop-up, select **Yes** from **Configure Criteria** list.  
   * Enter the criteria query.  
-  >**Note**: the query is different for different systems. You can refer to more details about Criteria Configuration in [Micro Focus ALM](../../connectors/microfocus-alm-qc.md#criteria-configuration) and [Jira](../../connectors/jira.md#criteria-configuration) from their respective configuration pages.  
+  >**Note**: the query is different for different systems. You can refer to more details about Criteria Configuration in [Micro Focus ALM](../../connectors/micro-focus-alm-qc.md#criteria-configuration) and [Jira](../../connectors/jira.md#criteria-configuration) from their respective configuration pages.  
 * Select **In Database** from the **Select criteria storage type** drop-down list.  
 
 <p align="center">
