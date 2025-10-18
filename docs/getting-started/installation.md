@@ -113,10 +113,9 @@ Here is a video on how to install <code class="expression">space.vars.SITENAME</
 
 * Each installation must be registered with OpsHub. Registration can be done either in Online or Offline mode. Please refer [Registration](registration.md) section for more details.
 
-## Database Selection
+## Database Selection  
 
-{% include "../.gitbook/includes/database-selection.md" %}
-
+{% include "../.gitbook/includes/database-selection.md" %}  
 
 # Advance Installation
 
