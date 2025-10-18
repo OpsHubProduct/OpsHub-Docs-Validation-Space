@@ -1,9 +1,7 @@
-
 > **Note**: Azure SQL is an alias for MS SQL on cloud.
 
 - **Supported versions:** 2012 or above  
-- MS SQL version should support **TLS v1.2 protocol or above**  
-  Refer [this link](https://support.microsoft.com/en-us/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe) to upgrade MS SQL server to enable support for TLSv1.2 or above.
+- MS SQL version should support TLS v1.2 protocol or above, as it is recommended to use MS SQL with TLSv1.2 enabled. Refer [this link](https://support.microsoft.com/en-us/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe) to upgrade MS SQL server to enable support for TLSv1.2 or above.
 - Enable Client protocols **TCP/IP** and **Named pipes** on MSSQLSERVER instance
 
 <span style="color:blue">**User permission pre-requisites list:**</span>
