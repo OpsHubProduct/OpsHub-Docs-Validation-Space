@@ -52,7 +52,7 @@ To provide the rights to a particular user, admin just needs to follow the steps
 * Step 5: Allow required permission to User or Group
 
 <p align="center">
-  <img src="../assets/Start_Stop_Service_Image_5.png" width="800"/>
+  <img src="../assets/Start_Stop_Service_Image_5.png" width="670"/>
 </p>
 
 # Linux
@@ -77,13 +77,13 @@ To give permission to users follow the steps given below:
 Step 1: Access properties of OpsHub service
 
 <p align="center">
-  <img src="../assets/Start_Stop_Service_Image_6.png" width="800"/>
+  <img src="../assets/Start_Stop_Service_Image_6.png" width="900"/>
 </p>
 
 Step 2: Assign appropriate access to group
 
 <p align="center">
-  <img src="../assets/Start_Stop_Service_Image_7.png" width="800"/>
+  <img src="../assets/Start_Stop_Service_Image_7.png" width="670"/>
 </p>
 
 Required commands:
