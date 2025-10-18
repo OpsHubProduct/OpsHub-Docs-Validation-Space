@@ -28,31 +28,31 @@ To provide the rights to a particular user, admin just needs to follow the steps
 * Step 1: Edit default policy used by organization
 
 <p align="center">
-  <img src="../assets/Start_Stop_Service_Image_1.png" />
+  <img src="../assets/Start_Stop_Service_Image_1.png" width="800"/>
 </p>
 
 * Step 2: Open OpsHub Server Service properties window
 
 <p align="center">
-  <img src="../assets/Start_Stop_Service_Image_2.png" />
+  <img src="../assets/Start_Stop_Service_Image_2.png" width="800"/>
 </p>
 
 * Step 3: Define the policy setting for OpsHub Server Service
 
 <p align="center">
-  <img src="../assets/Start_Stop_Service_Image_3.png" />
+  <img src="../assets/Start_Stop_Service_Image_3.png" width="800"/>
 </p>
 
 * Step 4: Add User or Group so that they can access OpsHub Server Service
 
 <p align="center">
-  <img src="../assets/Start_Stop_Service_Image_4.png" />
+  <img src="../assets/Start_Stop_Service_Image_4.png" width="800"/>
 </p>
 
 * Step 5: Allow required permission to User or Group
 
 <p align="center">
-  <img src="../assets/Start_Stop_Service_Image_5.png" />
+  <img src="../assets/Start_Stop_Service_Image_5.png" width="800"/>
 </p>
 
 # Linux
@@ -77,13 +77,13 @@ To give permission to users follow the steps given below:
 Step 1: Access properties of OpsHub service
 
 <p align="center">
-  <img src="../assets/Start_Stop_Service_Image_6.png" />
+  <img src="../assets/Start_Stop_Service_Image_6.png" width="800"/>
 </p>
 
 Step 2: Assign appropriate access to group
 
 <p align="center">
-  <img src="../assets/Start_Stop_Service_Image_7.png" />
+  <img src="../assets/Start_Stop_Service_Image_7.png" width="800"/>
 </p>
 
 Required commands:
