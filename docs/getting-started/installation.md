@@ -178,9 +178,9 @@ The image below shows a successful installation.
 
 Once you have installed the application, click [Get Started With the Application](logging-in.md) to see how to get started.
 
-# Appendix
+**Appendix**
 
-## SSL Certificate Configuration
+# SSL Certificate Configuration
 
 <div align="center"><img src="../assets/Advance_Configuration_Image_3SSLCa.png" width="820"></div>
 
@@ -194,10 +194,20 @@ It is advisable to enter the server-host name in the given field, it might creat
 
 > **Note** : Please note with the above steps <code class="expression">space.vars.SITENAME</code> will be installed with SSL configuration. But the corresponding SSL certificate imported will be self-signed. In case you want to install certificate signed by your CA authority then follow the steps given in this section [How To Import a Certificate](how-to-import-a-certificate.md) in appendix.
 
-## Manual creation of databases
+# Manual creation of databases
+For manual creation of databases, you can use the following queries:
 
-{% include "../.gitbook/includes/manual-database-creation.md" %}
+## Queries for MySQL database
+{% include "../.gitbook/includes/manual-mysqldatabase-creation.md" %}
 
-## Collation change of MS SQL/Azure SQL Databases
+## Queries for MS SQL/Azure SQL Database
+{% include "../.gitbook/includes/manual-mssqldatabase-creation.md" %}
 
+## Queries for Oracle Database
+{% include "../.gitbook/includes/manual-oracledatabase-creation.md" %}
+
+## Queries for PostgreSQL Database
+{% include "../.gitbook/includes/manual-postgresdatabase-creation.md" %}
+
+# Collation change of MS SQL/Azure SQL Databases
 {% include "../.gitbook/includes/collation-change.md" %}
