@@ -187,7 +187,7 @@ Refer to the videos on this page to learn in detail about [Comments](../../integ
 * Once the integration configuration is open, click the edit icon as shown in the image below:  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_23.png" width="1200">
+  <img src="../../assets/IBM_DOORS_23.png" width="800">
 </p>
 
 >**Note**: You will have to de-activate an integration before you edit the integration.  
