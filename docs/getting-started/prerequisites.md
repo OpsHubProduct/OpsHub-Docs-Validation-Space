@@ -48,20 +48,14 @@ Following are the Operating System (OS) and hardware pre-requisites for server o
 
 {% include "../.gitbook/includes/posgres-preq.md" %}
 
-> **Note**: If default connection timeout parameter is changed for any database server, then it must be confirmed that sufficient connection timeout has been set.\
-> For example, for MySQL the default server-side connection timeout is 8 hours.\
-> If it is changed and set to, say, 5 minutes, then the default server-side connection timeout must be updated accordingly.
-
-**<code class="expression">space.vars.SITENAME</code>** maintains connection pools that keep connections alive for 8 hours.\
-Based on the need, this parameter can be tuned at both the application and database-server levels.\
-**Generally, the recommended timeout is between 6–8 hours.**
+> **Note**: If default connection timeout parameter is changed for any database server, then it must be confirmed that sufficient connection timeout has been set. For example, for MySQL the default server-side connection timeout is 8 hours. If it is changed and set to, say, 5 minutes, then the default server-side connection timeout must be updated accordingly. **<code class="expression">space.vars.SITENAME</code>** maintains connection pools that keep connections alive for 8 hours. Based on the need, this parameter can be tuned at both the application and database-server levels.**Generally, the recommended timeout is between 6-8 hours.**
 
 # Download Database Connector jar
 
 | Database Type  | Database Version | Download Link                                                                                                               |
 | -------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | **MySQL**      | All              | [MySQL Connector/J](https://dev.mysql.com/downloads/connector/j)                                                            |
-| **MS SQL**     | 2012 and lower   | [Download Link](https://www.microsoft.com/en-in/download/details.aspx?id=11774)                                             |
+|   | 2012 and lower   | [Download Link](https://www.microsoft.com/en-in/download/details.aspx?id=11774)                                             |
 |                | 2014 onward      | [Release Notes](https://learn.microsoft.com/en-us/sql/connect/jdbc/release-notes-for-the-jdbc-driver?view=sql-server-ver16) |
 | **Oracle**     | 11g              | [Oracle JDBC 11g](https://www.oracle.com/jp/technical-resources/articles/features/jdbc/jdbc.html)                           |
 |                | 12c              | [Oracle JDBC 12c](https://www.oracle.com/technetwork/database/features/jdbc/jdbc-drivers-12c-download-1958347.html)         |
@@ -70,8 +64,7 @@ Based on the need, this parameter can be tuned at both the application and datab
 
 # HostName for <code class="expression">space.vars.SITENAME</code>
 
-* If machine/instance where <code class="expression">space.vars.SITENAME</code> deployed is binded with any hostname (Net, Host, Gateway, or Domain name) then please make sure the hostname (Net, Host, Gateway, or Domain name) is a text string up to 24 characters drawn from the alphabet (A-Z), digits (0-9), minus sign (-), and period (.).\
-  Note that periods are only allowed when they serve to delimit components of "domain style names". For more details, read the memo [RFC-921](https://tools.ietf.org/html/rfc921) and [RFC-952](https://tools.ietf.org/html/rfc952).
+* If machine/instance where <code class="expression">space.vars.SITENAME</code> deployed is binded with any hostname (Net, Host, Gateway, or Domain name) then please make sure the hostname (Net, Host, Gateway, or Domain name) is a text string up to 24 characters drawn from the alphabet (A-Z), digits (0-9), minus sign (-), and period (.). Note that periods are only allowed when they serve to delimit components of "domain style names". For more details, read the memo [RFC-921](https://tools.ietf.org/html/rfc921) and [RFC-952](https://tools.ietf.org/html/rfc952).
 
 Once you have downloaded the application and configured the pre-requisite, click [Installation Steps](installation.md) to see how to get started.
 
@@ -91,7 +84,6 @@ For successful installation/upgradation of <code class="expression">space.vars.S
 > **Note**: Apart from the above ports, some connectors require certain ports to be available. Please refer the [Connectors](../connectors/connectors.md) section to check ports used by specific connectors.
 
 # Appendix
-
 ## Windows specific configuration
 
 {% include "../.gitbook/includes/windows-specific-configuration.md" %}
