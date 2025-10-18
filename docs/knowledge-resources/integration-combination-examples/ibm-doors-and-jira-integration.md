@@ -5,7 +5,7 @@ On this page, we will look at the bi-directional integration of Requirement from
 
 # How to Create an Integration Between IBM DOORS - Jira
 
-Configuring [system pre-requisites](../../integrate/integration-prerequisites.md) is mandatory for successful system configuration.  Check out the pre-requisites for [IBM DOORS](../../connectors/ibm-rational-doors.md#prerequisites) and [Jira](../../connectors/jira.md#prerequisites) systems before you proceed with the integration.  
+Configuring [system pre-requisites](../../integrate/integration-prerequisites.md) is mandatory for successful system configuration.  Check out the pre-requisites for [IBM DOORS](../../connectors/doors.md#prerequisites) and [Jira](../../connectors/jira.md#prerequisites) systems before you proceed with the integration.  
 
 To create an integration between IBM DOORS and Jira, you need to:
 
