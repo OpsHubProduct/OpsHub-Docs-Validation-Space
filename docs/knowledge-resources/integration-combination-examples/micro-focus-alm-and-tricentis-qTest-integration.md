@@ -4,7 +4,7 @@ Best-of-breed systems such as Micro Focus ALM/QC and Tricentis qTest bring rich 
 <code class="expression">space.vars.SITENAME</code> integrates Micro Focus ALM and Tricentis qTest bi-directionally. On this page, we will discuss the bi-directional integration of:  
 
 <p align="center">
-  <img src="../../assets/Micro_Focus_ALM_tricentis-qTest_entities.png" width="800" />
+  <img src="../../assets/Micro_Focus_ALM_tricentis_qTest_entities.png" width="800" />
 </p>
 
 # System Prerequisites
