@@ -3,7 +3,7 @@ Best-of-breed systems such as Jira and Azure DevOps Server (TFS) bring rich func
 <code class="expression">space.vars.SITENAME</code> integrates Jira and Azure DevOps Services (VSTS) bi-directionally. On this page, we will discuss the bi-directional integration of:
 
 <p align="center">
-  <img src="../../assets/Jira-VSTS_entity.png">
+  <img src="../../assets/Jira-VSTS_entity.png" width="700">
 </p>
 
 # System Prerequisites
@@ -15,14 +15,14 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
   **Password:** password
   
 <p align="center">
-  <img src="../../assets/Getting_Started_With_Application_Image_1G_a.png">
+  <img src="../../assets/Getting_Started_With_Application_Image_1G_a.png" width="700">
 </p>
 
 >**Note**: **Proxy parameters**: Before you proceed with the configuration, check whether the system is behind a proxy server. If yes, then set up [proxy parameters](../../manage/administrator/proxy-setting.md) in <code class="expression">space.vars.SITENAME</code>.
 
 * Click **Integrate** on the top right corner of the screen and then click the plus [+] icon.  
 <p align="center">
-  <img src="../../assets/Overview_of_Integration_Image_1D.png">
+  <img src="../../assets/Overview_of_Integration_Image_1D.png" width="900">
 </p>
 
 
@@ -31,7 +31,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
   - Click the plus [+] icon adjacent to the System 1 and System 2 fields one by one to configure Jira and Azure DevOps Services (VSTS).  
 
 <p align="center">
-  <img src="../../assets/JST_4.png">
+  <img src="../../assets/JST_4.png" width="900">
 </p>
 
 
@@ -40,14 +40,14 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Once you have fulfilled all the prerequisites and are done with the above-mentioned check, configure Jira and Azure DevOps Server (TFS) by following the steps given on [Jira](../../connectors/jira.md#system-configuration) and [Azure DevOps Services (VSTS)](../../connectors/team-foundation-server.md#system-configuration) pages respectively.  
 
 <p align="center">
-  <img src="../../assets/JST_5.png">
+  <img src="../../assets/JST_5.png" width="900">
 </p>
 
 
 * When you save the respective system configuration pages after configuring the systems the systems will automatically be added to the integration. Proceed to adding projects and entities in the integration.  
 
 <p align="center">
-  <img src="../../assets/JST_6.png">
+  <img src="../../assets/JST_6.png" width="900">
 </p>
 
 
@@ -62,14 +62,14 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Once the direction is selected, the arrows would turn grey. We have selected the bi-directional flow.  
 
 <p align="center">
-  <img src="../../assets/JST_7.png">
+  <img src="../../assets/JST_7.png" width="900">
 </p>
 
 
 * <code class="expression">space.vars.SITENAME</code> fetches entities available in both systems and shows them in entities list for both systems. From the **Select Entities to Sync** section, select the relevant entities for both systems. In this case, we will select **Improvement** from Jira and **Feature** from Azure DevOps Services (VSTS).  
 * The next step is to define the fields that need to be integrated for every entity mapped. So, once the entities are selected, click the plus [+] icon adjacent to **Select fields to be Synced** to create the mapping between these two entities. You will be navigated to Mapping Configuration screen.  
 <p align="center">
-  <img src="../../assets/JST_8.png">
+  <img src="../../assets/JST_8.png" width="900">
 </p>
 
 
@@ -80,7 +80,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Now, either click **Create from Scratch** to define the mapping from scratch or click **Auto Map** to automatically map all fields with same name. Even if you select the **Auto Map**, <code class="expression">space.vars.SITENAME</code> will allow you to remove or add more fields before saving mapping. We select **Create from Scratch**.  
 
 <p align="center">
-  <img src="../../assets/JST_9.png">
+  <img src="../../assets/JST_9.png" width="900">
 </p>
 
 
@@ -92,7 +92,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 >**Note**: Check the Mandatory fields for Jira from Jira UI as well and map them accordingly to suitable field(s) in Azure DevOps Services (VSTS).  
 
 <p align="center">
-  <img src="../../assets/JST_10.png" />
+  <img src="../../assets/JST_10.png" width="900"/>
 </p>
 
 #### Mapping Look-up Type Fields
@@ -103,7 +103,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * The Look-up type fields are marked with ![Lookup](../../assets/I_9.png). Once you have mapped these fields in Jira and Azure DevOps Services (VSTS), click the icon to map their values one by one.  
 
 <p align="center">
-  <img src="../../assets/JST_11.png">
+  <img src="../../assets/JST_11.png" width="900">
 </p>
 
 * Values for Look-up type fields may vary from one instance to another. Kindly map the values that you think are equivalent by clicking them. You have to map the values for all Look-up types fields before you proceed. For example, map the following values for Priority:  
@@ -118,7 +118,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Once you save the mapping successfully, you will be further re-directed to the Integration page.  
 
 <p align="center">
-  <img src="../../assets/JST_12.png">
+  <img src="../../assets/JST_12.png" width="900">
 </p>
 
 * Default Mapping is used to write default value to target field in case if there is no value coming from mapped source fields. Click **Default Mapping** to define the default mapping. The Default Mapping pop-up opens.  
@@ -127,7 +127,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * For user mapping, default value will not be written to target even if matching user not found in target. This will be done only if nothing coming from mapped source field.  
 
 <p align="center">
-  <img src="../../assets/Df_mapping.png">
+  <img src="../../assets/Df_mapping.png" width="750">
 </p>
 
 
@@ -138,7 +138,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * If you do not wish to add more entities, save the integration and activate it.  
 
 <p align="center">
-  <img src="../../assets/JST_13.png">
+  <img src="../../assets/JST_13.png" width="900">
 </p>
 
 
@@ -147,7 +147,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * Click the adjacent mapping to **Select fields to be Synced** to create the mapping between these two entities. You will be navigated to Mapping Configuration screen.  
 
 <p align="center">
-  <img src="../../assets/JST_14.png">
+  <img src="../../assets/JST_14.png" width="900">
 </p>
 
 * You can refer to the [previous mapping](#mapping-mandatory-fields) and follow the same steps further.  
@@ -155,7 +155,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * The following screenshot shows a reference mapping for these entities. Once you save the mapping successfully, you will be further re-directed to the Integration page.  
 
 <p align="center">
-  <img src="../../assets/JST_15.png">
+  <img src="../../assets/JST_15.png" width="900">
 </p>
 
 ## Comments and Attachments Mapping
@@ -180,7 +180,7 @@ At this stage, you can also map entities such as comments and attachments. Refer
 - Select **In Database** from the **Select criteria storage type** drop-down list.  
 
 <p align="center">
-  <img src="../../assets/JST_16.png" width="950px">
+  <img src="../../assets/JST_16.png" width="950">
 </p>
 
 ## Save and Activate Integration
@@ -189,13 +189,13 @@ At this stage, you can also map entities such as comments and attachments. Refer
 - As the final step, click **Save** to save the integration.  
 
 <p align="center">
-  <img src="../../assets/JST_17.png" width="950px">
+  <img src="../../assets/JST_17.png" width="950">
 </p>
 
 - The integration will be created. You will also get a pop-up at the bottom of the screen confirming the integration has been successfully configured and the integration will be listed in the integrations list.  
 
 <p align="center">
-  <img src="../../assets/JST_18.png" width="950px">
+  <img src="../../assets/JST_18.png" width="950">
 </p>
 
 
@@ -205,7 +205,7 @@ At this stage, you can also map entities such as comments and attachments. Refer
 
 >**Note**: You should not be using the integration user credentials to create entities in the systems as in this case the integration will not work.
 
-- Create/Update event in the source system and check whether the event synchronizes to the target system. Wait for one minute for the data to synchronize. If you face any issue, please refer this page for [possible reasons and their fix](../../help-center/faqs/general.md).  
+- Create/Update event in the source system and check whether the event synchronizes to the target system. Wait for one minute for the data to synchronize. If you face any issue, please refer this page for [possible reasons and their fix](../../help-center/faqs/general-faqs.md).  
 
 
 ## Additional Configurations
@@ -220,7 +220,7 @@ We will map the user fields: **Assignee** in Jira to **Assigned To** in Azure De
 >**Note**: User fields are mapped by email id. If e-mail ids of the users are same in both the systems, it will be mapped automatically, but if the email ids are not same, you will have to update the [one-to-one XSL](../../integrate/mapping-configuration.md#value-mapping-using-excel-sheet) mapping.
 
 <p align="center">
-  <img src="../../assets/JST_19.png" width="950px">
+  <img src="../../assets/JST_19.png" width="950">
 </p>
 
 - Once the additional configurations are completed successfully, update the mapping, activate the integration, and save it again.
