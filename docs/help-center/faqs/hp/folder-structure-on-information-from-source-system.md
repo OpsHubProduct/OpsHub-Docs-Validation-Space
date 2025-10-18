@@ -5,13 +5,13 @@ When integrations are configured for any entity of the source system to **Requir
 For example, a user has the hierarchy of entities in the source system such as VersionOne with the parent-child relationship as shown below:
 
 <p align="center">
-  <img src="../../../assets/MICRO-FOCUS-FAQ-src.png"width="600"/>
+  <img src="../../../assets/MICRO-FOCUS-FAQ-src.png"width="300"/>
 </p>
 
 
 Now, the user wants to synchronize this hierarchy of relationship as folder structure/Hierarchy of Requirement in Micro Focus QC/ALM as shown below:
 <p align="center">
-  <img src="../../../assets/MICRO-FOCUS-FAQ-dst" width="600"/>
+  <img src="../../../assets/MICRO-FOCUS-FAQ-dst.png" width="500"/>
 </p>
 
 
@@ -23,7 +23,7 @@ Now, the user wants to synchronize this hierarchy of relationship as folder stru
   * To configure default mapping, please refer [default value mappings](../../../integrate/mapping-configuration.md#default-mapping). For example, please refer the screenshot of <code class="expression">space.vars.SITENAME</code> mapping page given below for 'Epic' to 'Requirement' mapping with default value 'Folder' for 'Requirement-Type'.
 
 <p align="center">
-  <img src="../../../assets/MICRO-FOCUS-FAQ-mapping-1.png"  width="900"/>
+  <img src="../../../assets/MICRO-FOCUS-FAQ-mapping-1.png"  width="1100"/>
 </p>
 
 
@@ -32,11 +32,11 @@ Now, the user wants to synchronize this hierarchy of relationship as folder stru
 * Now in this window, in Entity type, map 'Backlog Item' to 'Requirements' and 'Epic' to 'Requirements' and in Link Type, map **Parent to Parent** and **Parent Epic to Parent**. Please refer [Relationship Configuration](../../../integrate/mapping-configuration.md#relationships) for detailed understanding of Relationship Configuration. Please confirm the configuration for entity-types and link-types as highlighted in the screenshots below:
 
 <p align="center">
-  <img src="../../../assets/MICRO-FOCUS-FAQ-2-1.png"  width="900"/>
+  <img src="../../../assets/MICRO-FOCUS-FAQ-2-1.png"  width="1100"/>
 </p>
 
 <p align="center">
-  <img src="../../../assets/MICRO-FOCUS-FAQ-2-2.png"  width="900"/>
+  <img src="../../../assets/MICRO-FOCUS-FAQ-2-2.png"  width="1100"/>
 </p>
 
 
@@ -44,7 +44,7 @@ Now, the user wants to synchronize this hierarchy of relationship as folder stru
   * For example, please refer the screenshot of <code class="expression">space.vars.SITENAME</code> mapping page below for mapping of 'Backlog Item' (Story) of Version One to 'Requirement' of Micro Focus QC/ALM with default value 'Functional' for 'Requirement-Type'.
 
 <p align="center">
-  <img src="../../../assets/MICRO-FOCUS-FAQ-mapping-3.png"  width="900"/>
+  <img src="../../../assets/MICRO-FOCUS-FAQ-mapping-3.png"  width="1100"/>
 </p>
 
 
