@@ -9,7 +9,7 @@ When you have provided installation directory during installing/upgrading <code 
 * If you want to register after installation, select **Registration After Installation** option.
 
 <p align="center">
-  <img src="../assets/Freemium_Registration_Mode_Selection_1.PNG" />
+  <img src="../assets/Freemium_Registration_Mode_Selection_1.PNG" width="600" />
 </p>
 
 ## New Registration
@@ -17,20 +17,20 @@ When you have provided installation directory during installing/upgrading <code 
 Once you select **New registration**, you will see the screen shown below. Fill all required data and click Next.
 
 <p align="center">
-  <img src="../assets/Freemium_User_Registration_Page_1.PNG" />
+  <img src="../assets/Freemium_User_Registration_Page_1.PNG" width="800"/>
 </p>
 
 When you select **Next**, installer/migrator will register yourself with the registration server.  
 On successful registration, you will get a verification code on your registered business email address. Please enter the verification code in the screen shown below and continue installation/upgradation.
 
 <p align="center">
-  <img src="../assets/Freemium_Verify_Email_Online_Registration_1.PNG" />
+  <img src="../assets/Freemium_Verify_Email_Online_Registration_1.PNG" width="900"/>
 </p>
 
 If the installer/migrator is not able to connect to the registration server, you will get an option to register yourself using **Offline Registration** option as shown below. Click **OK** to continue the Offline Registration.
 
 <p align="center">
-  <img src="../assets/Freemium_Offline_Registration_Warning.PNG" />
+  <img src="../assets/Freemium_Offline_Registration_Warning.PNG" width="900"/>
 </p>
 
 > 📌 Installer/Migrator may not connect to registration server when you do not have Internet connectivity, or you are working behind a Proxy or when the Registration Server is down. Please proceed with **Offline Registration** in any of these cases.  
@@ -42,7 +42,7 @@ See [Offline Registration](#offline-registration) for offline registration proce
 Once you select **OK** in the screen shown above, installer/migrator will prepare `RegistrationDetails.zip` file at the installation directory.
 
 <p align="center">
-  <img src="../assets/Freemium_Offline_Registration_Warning.PNG" />
+  <img src="../assets/Freemium_Offline_Registration_Warning.PNG" width="900" />
 </p>
 
 When you are using Offline Registration option, user can either send the user detials in encrypted format or in decrypted manner. To send the data in encrypted manner, refer to [Get Verification Code using Encrypted User Details](#get-verification-code-using-encrypted-details). If the user wants to know the exact details they are sending to <code class="expression">space.vars.SITENAME</code>, they can use the decrypted registered details. Refer to [Get Verification Code using Decrypted User Details](#get-verification-code-using-decrypted-user-details).
@@ -53,7 +53,7 @@ Send `RegistrationDetails.zip` on CommunityManagers@opshub.com. Verification Cod
 Once you get the verification code, enter the code in the screen shown below and continue with the installation/upgrade.
 
 <p align="center">
-  <img src="../assets/Freemium_Verify_Email_Offline_Registration_1.PNG" />
+  <img src="../assets/Freemium_Verify_Email_Offline_Registration_1.PNG" width="900"/>
 </p>
 
 ## Get Verification Code using Decrypted User Details
@@ -88,13 +88,13 @@ Once you get the verification code, enter the code in the screen shown below and
 Once you get the verification code, enter the code in the screen shown below and continue with the installation/upgrade.
 
 <p align="center">
-  <img src="../assets/Freemium_Verify_Email_Offline_Registration_1.PNG" />
+  <img src="../assets/Freemium_Verify_Email_Offline_Registration_1.PNG" width="900"/>
 </p>
 
 You can close the installer/migrator and can register using the same existing code as described in [Registration using Existing Verification Code](#use-an-existing-verification-code).
 
 <p align="center">
-  <img src="../assets/Freemium_Verify_Email_Offline_Registration_1.PNG" />
+  <img src="../assets/Freemium_Verify_Email_Offline_Registration_1.PNG" width="900"/>
 </p>
 
 ## Use an Existing Verification Code
@@ -104,7 +104,7 @@ When you have valid verification code with you, You can proceed registration usi
 Select **Use an Existing Verification Code** option as shown in below screen.
 
 <p align="center">
-  <img src="../assets/Freemium_Registration_Mode_Existing_Code_1.PNG" />
+  <img src="../assets/Freemium_Registration_Mode_Existing_Code_1.PNG" width="900"/>
 </p>
 
 > 📌 When you are using this option for upgrading <code class="expression">space.vars.SITENAME</code>, You should have the latest Application Backup as described [here](../manage/upgrade/taking-application-backup.md).
@@ -112,7 +112,7 @@ Select **Use an Existing Verification Code** option as shown in below screen.
 Once you select **Use an Existing Verification Code** option, you will see the screen shown below. Enter the Verification code and continue installation/upgradation.
 
 <p align="center">
-  <img src="../assets/Freemium_Verify_Email_Existing_Code_1.PNG" />
+  <img src="../assets/Freemium_Verify_Email_Existing_Code_1.PNG" width="900"/>
 </p>
 
 ## Registration After Installation
@@ -120,19 +120,19 @@ Once you select **Use an Existing Verification Code** option, you will see the s
 Once you select **Registration After Installation**, the following screen will appear after installation:
 
 <p align="center">
-  <img src="../assets/Post_Install_Registration_Home.PNG" />
+  <img src="../assets/Post_Install_Registration_Home.PNG" width="900"/>
 </p>
 
 On selecting **Next**, <code class="expression">space.vars.SITENAME</code> will have you register with the registration server. On successful registration, you will get a verification code on your registered email id. Enter the verification code as shown in the screenshot below:
 
 <p align="center">
-  <img src="../assets/Post_Install_Registration_Verification.PNG" />
+  <img src="../assets/Post_Install_Registration_Verification.PNG" width="900"/>
 </p>
 
 If the <code class="expression">space.vars.SITENAME</code> is not able to connect to the registration server, you will get an option to register yourself using Offline mode by downloading `RegistrationDetails.zip` as shown below:
 
 <p align="center">
-  <img src="../assets/Post_Install_Registration_Offline.PNG" />
+  <img src="../assets/Post_Install_Registration_Offline.PNG" width="900"/>
 </p>
 
 ## Known Behavior
@@ -150,7 +150,7 @@ When you want to install/upgrade <code class="expression">space.vars.SITENAME</c
 * You will get the files as shown below:
 
 <p align="center">
-  <img src="../assets/Freemium_Offline_Utility_File_Structure.PNG" />
+  <img src="../assets/Freemium_Offline_Utility_File_Structure.PNG" width="900"/>
 </p>
 
 * Fill the registration data in `Registration_Input.properties`: 
