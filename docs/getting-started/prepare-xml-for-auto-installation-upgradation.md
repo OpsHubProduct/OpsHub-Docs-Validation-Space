@@ -5,11 +5,10 @@ Here is the process of getting and customizing OpsHubAutoInstall/OpsHubAutoMigra
 Below are the sample templates for OpsHubAutoInstall/OpsHubAutoMigrator XML. You need to customize the template downloaded as described below for configuring your own file for installing or migrating OpsHub Integration Manager.
 
 
-If you are installing OpsHub Integration Manager then download file [here](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EdwkmbjVf5RNpjHmsqi8dE4BaSfch1pFlGQhPsixpGnHEw?e=VJclvQ)
-    - To customize the file as per your configuration, follow steps from section [step 3 - Configure Installation path](#3---configure-installation-path).
-
-If you are upgrading the existing OpsHub Integration Manager then download file [OpsHubAutoMigrator.xml](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EW_r0v_m5RtPoQp-jGLitoMBfWzZDdB0zdpJxflswG4a2Q).  
-    - To customize the file as per your configuration, follow steps **step 3 and step 4**.  
+* If you are installing OpsHub Integration Manager then download file [here](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EdwkmbjVf5RNpjHmsqi8dE4BaSfch1pFlGQhPsixpGnHEw?e=VJclvQ)
+    * To customize the file as per your configuration, follow steps from section [step 3 - Configure Installation path](#3---configure-installation-path).
+* If you are upgrading the existing OpsHub Integration Manager then download file [OpsHubAutoMigrator.xml](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EW_r0v_m5RtPoQp-jGLitoMBfWzZDdB0zdpJxflswG4a2Q).  
+    * To customize the file as per your configuration, follow steps **step 3 and step 4**.  
 
 >**Note**: Refer to [step 2](#2-customized-example-of-xml-file-with-MySQL-database) for example of an already customized file for **installation with MySQL database**.
   
@@ -18,34 +17,32 @@ If you are upgrading the existing OpsHub Integration Manager then download file 
 
 # 2 - Customized example of xml file with MySQL database
 
-
-Here are the examples of XML file after all modifications.  
-   - Installation with MySQL Database : [Installer Example file](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/ETH4fCuE0VBBvBucTLI8DtIBl9MlETKWMF3Y1eup2XjuGQ?e=c9TvS4 Installer Example file) 
-    - Upgrade : [Migrator example file](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EY22j0v_TdFGsCLzrxWEy1IBb8mZXapO2a8po-mPix1R8A?e=N8oyFe Migrator example file)
+* Here are the examples of XML file after all modifications.  
+   * Installation with MySQL Database : [Installer Example file](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/ETH4fCuE0VBBvBucTLI8DtIBl9MlETKWMF3Y1eup2XjuGQ?e=c9TvS4 Installer Example file) 
+   * Upgrade : [Migrator example file](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EY22j0v_TdFGsCLzrxWEy1IBb8mZXapO2a8po-mPix1R8A?e=N8oyFe Migrator example file)
 
 
 # 3 - Configure Installation Path  
 
-
-Find `com.izforge.izpack.panels.TargetPanel` and replace the input mentioned below:  
-    - Replace **@INSTALLATION_PATH@** with actual installation directory which you mentioned in **Registration_Input.properties** during [Silent Registration](registration#silent-registration-for-linux).  
+* Find `com.izforge.izpack.panels.TargetPanel` and replace the input mentioned below:  
+    * Replace **@INSTALLATION_PATH@** with actual installation directory which you mentioned in **Registration_Input.properties** during [Silent Registration](registration#silent-registration-for-linux).  
 
 
 # 4 - Configure Registration Type & Verification Code 
 
-Find `UserInputPanel.EmailIdVerificationForExistingCode` panel and replace the input mentioned below:  
-- Replace **@VERIFICATION_CODE@** with verification code that you got on your registered business email address.  
+* Find `UserInputPanel.EmailIdVerificationForExistingCode` panel and replace the input mentioned below:  
+   * Replace **@VERIFICATION_CODE@** with verification code that you got on your registered business email address.  
 
 # 5 - Configure Base Parameter  
 
 Find all parameters below under panel `id="UserInputPanel.installationflow"`.  
 1. Find **@COMPANY_NAME@** parameter in the OpsHubAutoInstall.xml file and replace with your company name.  
 2. Find **@DB_TYPE@** and replace database type as below:  
-   - Replace with "MySQL" for configuring MySQL database. Refer to [MySQL Database configuration](#mysql-database-configuration) for detailed steps.  
-   - Replace with "MS SQL Server" for configuring MS SQL database. Refer to [MSSQL Database configuration](#mssql-database-configuration) for detailed steps.  
-   - Replace with "ORACLE" for configuring Oracle database. Refer to [Oracle Database configuration](#oracle-database-configuration) for detailed steps.  
-   - Replace with "HSQLDB" for configuring HSQL database. Refer to [HSQL Database configuration](#hsql-database-configuration) for detailed steps.  
-   - Replace with "PostgreSQL" for configuring PostgreSQL database. Refer to [PostgreSQL Database configuration](#postgresql-database-configuration) for detailed steps.  
+   * Replace with "MySQL" for configuring MySQL database. Refer to [MySQL Database configuration](#mysql-database-configuration) for detailed steps.  
+   * Replace with "MS SQL Server" for configuring MS SQL database. Refer to [MSSQL Database configuration](#mssql-database-configuration) for detailed steps.  
+   * Replace with "ORACLE" for configuring Oracle database. Refer to [Oracle Database configuration](#oracle-database-configuration) for detailed steps.  
+   * Replace with "HSQLDB" for configuring HSQL database. Refer to [HSQL Database configuration](#hsql-database-configuration) for detailed steps.  
+   * Replace with "PostgreSQL" for configuring PostgreSQL database. Refer to [PostgreSQL Database configuration](#postgresql-database-configuration) for detailed steps.  
 3. Find **@ADVANCE_CONFIG_FLAG@** and replace with either "1" if you want to configure advance parameter or "0" if you don't want to configure advance parameters.  
    >**Note**: Advance configuration allows to change default database name, Http/Https configuration, Advanced Security Options.  
    - If you are setting above flag as "0" then advance configuration parameters will be set with default values.  
@@ -65,11 +62,11 @@ Find all parameters below under panel `id="UserInputPanel.installationflow"`.
 3. Find and replace **@DB_USER@** with the username of your database.  
 4. Find and replace **@DB_PASSWORD@** with the password of your database.  
 5. Find and replace **@DB_CONNECTOR_JAR_PATH@** with the jar file path of your database connector. Find the jar file name according to the database you are using.  
-   - For MySQL, refer section [Installation with MySQL Server](installation.md#installation-with-mysql-server) 
-   - For MS SQL, refer section [Installation with MSSQL Server](installation.md#installation-with-mssql-server)  
-   - For ORACLE, refer section [Installation with Oracle](installation.md#installation-with-oracle)  
-   - For HSQL, no external connector jar file is required.  
-   - For PostgreSQL, refer section [Installation with PostgreSQL](installation.md#installation-with-postgresql)  
+   * For MySQL, refer section [Installation with MySQL Server](installation.md#installation-with-mysql-server) 
+   * For MS SQL, refer section [Installation with MSSQL Server](installation.md#installation-with-mssql-server)  
+   * For ORACLE, refer section [Installation with Oracle](installation.md#installation-with-oracle)  
+   * For HSQL, no external connector jar file is required.  
+   * For PostgreSQL, refer section [Installation with PostgreSQL](installation.md#installation-with-postgresql)  
    >**Note**: The user who is running the installer should have 'Read' access to the jar file of your database connector.  
 
 ## MSSQL Database configuration  
@@ -138,7 +135,7 @@ If you are doing advance configuration then only follow the below step.
 
 1. Remove comment from panel id "UserInputPanel.advancedOptionsHSQL" and add comment in panel id **"UserInputPanel.advancedOptions"**.  
 2. Find **@ADV_HTTP_CONFIG@** and replace it with "HTTP" if you want to configure OpsHub Integration Manager with HTTP or replace it with "HTTPS" if you want to configure OpsHub Integration Manager with https.  
-   - Make sure you are following step no 8 if you configure OpsHub Integration Manager with https.  
+   * Make sure you are following step no 8 if you configure OpsHub Integration Manager with https.  
 3. Find **@ADV_ISSERVICE@** and replace with 1 if you want to configure OpsHub Integration Manager as a service else replace it with 0.  
 4. Find **@ADV_SEC_CONFIG@** and replace with 1 if you want to configure advance Security configuration else replace it with 0.  
 
@@ -146,7 +143,7 @@ If you are doing advance configuration then only follow the below step.
 
 1. Remove comment from id "UserInputPanel.advancedOptions".  
 2. Find **@ADV_HTTP_CONFIG@** and replace it with "HTTP" if you want to configure OpsHub Integration Manager with HTTP or replace it with "HTTPS" if you want to configure OpsHub Integration Manager with https.  
-   - Make sure you are following step no 8 if you configure OpsHub Integration Manager with https.  
+   * Make sure you are following step no 8 if you configure OpsHub Integration Manager with https.  
 3. Find **@ADV_ISDBFLAG@** and replace with 1 if you will create OpsHub Integration Manager database manually else set it as 0.  
 4. Find **@ADV_OPSHUBDBMAME@** and replace it with your OpsHub Integration Manager database name else remove that entry from the panel.  
 5. Find **@ADV_REPORT_DBNAME@** and replace it with your OpsHub Integration Manager report database name else remove that entry from the panel.  
