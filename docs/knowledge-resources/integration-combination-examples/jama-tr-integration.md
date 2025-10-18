@@ -18,7 +18,7 @@ Integrating Jama and TestRail helps product team get real-time insights into the
 - When the test team completes the execution of the Test Run or finishes a particular Test, they update the Test Result(s) and that result value is updated in **Status** field (Steps) of Test Run in Jama.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_33a.png" alt="Jama TestRail Integration"/>
+  <img src="../../assets/TR-Jama_Image_33a.png" width="900"/>
 </p>
 
 ## How to create an integration between Jama and TestRail
@@ -30,7 +30,7 @@ To create an integration between Jama and TestRail, you need to:
 - Then, configure Jama and TestRail onto **<code class="expression">space.vars.SITENAME</code>**.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_21a.png" alt="Pre-requisites"/>
+  <img src="../../assets/TR-Jama_Image_21a.png" width="900"/>
 </p>
 
 To learn how to configure Jama and TestRail, navigate to [Jama](../../connectors/jama.md) and [TestRail](../../connectors/testrail.md) pages.  
@@ -63,26 +63,26 @@ Follow the steps given below to integrate Jama and TestRail:
 1. Click the **Integrate** button on the screen.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_22.png" alt="Integrate Button"/>
+  <img src="../../assets/TR-Jama_Image_22.png" width="900"/>
 </p>
 
 2. Click the plus icon [+] on the top right corner of the screen. You will be prompted to enter the **Integration Name** and name of systems you want to integrate.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_23.png" alt="Integration Name"/>
+  <img src="../../assets/TR-Jama_Image_23.png" width="900"/>
 </p>
 
 3. Enter a unique name for the integration. Example: **TestRail–Jama Integration**.  
 4. Click the plus sign [+] adjacent to **System 1** and **System 2** fields. From the drop-down lists, select **Jama** and **TestRail** respectively.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_24.png" alt="Select Systems"/>
+  <img src="../../assets/TR-Jama_Image_24.png" width="900"/>
 </p>
 
 5. In the **Add Project(s) to Sync** section, select the projects you want to synchronize between Jama and TestRail. Example: **CTP Target** project in TestRail and **New testing** project in Jama.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_25b.png" alt="Select Projects"/>
+  <img src="../../assets/TR-Jama_Image_25b.png" width="900"/>
 </p>
 
 6. Click the bi-directional arrow (↔) between the projects to create bi-directional synchronization.  
@@ -101,7 +101,7 @@ Follow the steps given below to integrate Jama and TestRail:
 8. From **Select Entities to Sync**, choose **Test Suite** in TestRail and **Test Plan** in Jama.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_26.png" alt="Select Entities"/>
+  <img src="../../assets/TR-Jama_Image_26.png" width="900"/>
 </p>
 
 9. Click the plus button [+] adjacent to **Select fields to be synced** to create the mapping. You will now be navigated to **Mapping Configuration** screen.  
@@ -117,7 +117,7 @@ Give a unique name for the mapping in the **Name** field. Example:
 **1. TestRail [Test Suite] – Jama [Test Plan]**  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_27b.png" alt="Mapping Name"/>
+  <img src="../../assets/TR-Jama_Image_27b.png" width="900"/>
 </p>
 
 1. Click **Create from Scratch** button to define the mapping from scratch.  
@@ -125,7 +125,7 @@ Give a unique name for the mapping in the **Name** field. Example:
 3. Search and select **Name** field from TestRail and map it to **Name** field in Jama.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_5b.png" alt="Field Mapping"/>
+  <img src="../../assets/TR-Jama_Image_5b.png" width="900"/>
 </p>
 
 4. Click **Save Mapping** to save. You will be directed back to the integration page.  
@@ -150,7 +150,7 @@ Now, click **Create from Scratch** button to define the mapping from scratch.
 * Search and select the **Name** field from **All fields** box for TestRail and **Name** from the **All fields** box for Jama.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_6b.png" alt="Mapping Section to Test Group"/>
+  <img src="../../assets/TR-Jama_Image_6b.png" width="900"/>
 </p>
 
 >**Note**:The fields mapped here are examples; you can map more fields as per your requirement.  
@@ -164,7 +164,7 @@ From the **Entity type** boxes for the systems:
 * Select **Case** from TestRail and **Test Case** from Jama and map them bi-directionally.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_7b.png" alt="Relationship Mapping 1"/>
+  <img src="../../assets/TR-Jama_Image_7b.png" width="900"/>
 </p>
 
 Now, map **Link types** between Jama and TestRail entities:  
@@ -172,7 +172,7 @@ Now, map **Link types** between Jama and TestRail entities:
 * Then select **Case** from TestRail and **Test Case** from Jama and map them bi-directionally.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_8b.png" alt="Relationship Mapping 2"/>
+  <img src="../../assets/TR-Jama_Image_8b.png" width="900"/>
 </p>
 
 Click **Save Mapping** button to save the mapping. You will be directed back to the integration page.  
@@ -200,7 +200,7 @@ Click **Create from Scratch** button to define the mapping from scratch.
 * Search and select **Priority** field from **All fields** box for TestRail and **Priority** from **All fields** box for Jama.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_9b.png" alt="Mapping Case to Test Case"/>
+  <img src="../../assets/TR-Jama_Image_9b.png" width="900"/>
 </p>
 
 ## <span style="color:#005999">Relationship Mapping</span>
@@ -208,13 +208,13 @@ Click **Create from Scratch** button to define the mapping from scratch.
 From the **Entity type** boxes for the systems: select **Section** from TestRail and **Test Group** from Jama and map them bi-directionally.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_10b.png" alt="Relationship Mapping Section"/>
+  <img src="../../assets/TR-Jama_Image_10b.png" width="900"/>
 </p>
 
 Now, map **Link types** between Jama and TestRail entities: select **Section** from TestRail and **Test Group** from Jama and map them bi-directionally.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_11c.png" alt="Link Mapping"/>
+  <img src="../../assets/TR-Jama_Image_11c.png" width="900"/>
 </p>
 
 Click **Save Mapping** button to save the mapping. You will be directed back to the integration page.  
@@ -247,7 +247,7 @@ Click **Create from Scratch** button to define the mapping from scratch.
 * Search and select **Description** field from **All fields** box for TestRail and **Description** field from **All fields** box for Jama.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_12b.png" alt="Mapping Test Run to Test Cycle"/>
+  <img src="../../assets/TR-Jama_Image_12b.png" width="900"/>
 </p>
 
 ## <span style="color:#005999">Relationship Mapping</span>
@@ -255,13 +255,13 @@ Click **Create from Scratch** button to define the mapping from scratch.
 From the **Entity type** boxes for the systems: select **Test Suite** from TestRail and **Test Plan** in Jama and map them in forward direction (TestRail to Jama).  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_13b.png" alt="Relationship Mapping Test Run"/>
+  <img src="../../assets/TR-Jama_Image_13b.png" width="900"/>
 </p>
 
 From the **Link type** boxes for the systems: select **Suite** from TestRail and **Test Plan** from Jama and map them in forward direction (TestRail to Jama).  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_14b.png" alt="Link Mapping Test Run"/>
+  <img src="../../assets/TR-Jama_Image_14b.png" width="900"/>
 </p>
 
 Click **Save Mapping** button to save the mapping. You will be directed back to the navigation page.  
@@ -286,7 +286,7 @@ Click **Create from Scratch** button to define the mapping from scratch.
 * Search and select **Steps** field from **All fields** box for TestRail and **Steps** field from **All fields** box for Jama.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_15b.png" alt="Mapping Test to Test Run"/>
+  <img src="../../assets/TR-Jama_Image_15b.png" width="900"/>
 </p>
 
 >**Note**: **For Steps field**: The Steps in TestRail can be mapped to Steps in Jama for a particular case/test run. But in Jama, there is an additional field within Steps named **status**, whereas in TestRail, **status** is a generic field. To sync the status from TestRail's test entity to Jama's test run entity, advanced XSL is created.  
@@ -533,13 +533,13 @@ To avoid this failure, below are the two possible approaches:
 From the **Entity type** boxes for the systems: select **Case** from TestRail and **Test Case** in Jama and map them in forward direction (TestRail to Jama), select **Test Run** from TestRail and **Test Cycle** in Jama and map them in forward direction, and select **Test Suite** from TestRail and **Test Plan** in Jama and map them in forward direction.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_16b.png" alt="Relationship Mapping 1"/>
+  <img src="../../assets/TR-Jama_Image_16b.png" width="900"/>
 </p>
 
 From the **Link type** boxes for the systems: select **Case** from TestRail and **Test Case** in Jama and map them in forward direction (TestRail to Jama), select **Test Run** from TestRail and **Test Cycle** in Jama and map them in forward direction, and select **Test Suite** from TestRail and **Test Plan** in Jama and map them in forward direction.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_17b.png" alt="Relationship Mapping 2"/>
+  <img src="../../assets/TR-Jama_Image_17b.png" width="900"/>
 </p>
 
 Now, click **Save Mapping** button to save the mapping. You will be directed to the integration page.  
@@ -549,7 +549,7 @@ Now, click **Save Mapping** button to save the mapping. You will be directed to 
 This is how your integration page will look after all mapping is complete.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_34a.png" alt="Integration Page"/>
+  <img src="../../assets/TR-Jama_Image_34a.png" width="900"/>
 </p>
 
 ## Set Polling Time & Activate Integration
@@ -557,13 +557,13 @@ This is how your integration page will look after all mapping is complete.
 Once all the mappings are completed, in the **Start Polling Time** field, set the time to start synchronizing data in both the systems. For this integration in process, set **[Current time - 12 hours]**.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_30.png" alt="Set Polling Time"/>
+  <img src="../../assets/TR-Jama_Image_30.png" width="900"/>
 </p>
 
 To save the integration in active mode, slide the **Activate Integration** button to the right. Select **Yes** in the **Are you sure?** pop-up.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_31.png" alt="Activate Integration"/>
+  <img src="../../assets/TR-Jama_Image_31.png" width="900"/>
 </p>
 
 As the final step, click **Save** button to save the integration.  
@@ -571,11 +571,11 @@ As the final step, click **Save** button to save the integration.
 The integration will be created.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_2a.png" alt="Integration Created"/>
+  <img src="../../assets/TR-Jama_Image_2a.png" width="900"/>
 </p>
 
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_1a.png" alt="Integration Overview"/>
+  <img src="../../assets/TR-Jama_Image_1a.png" width="900"/>
 </p>
 
 
