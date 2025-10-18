@@ -44,15 +44,22 @@ I have <code class="expression">space.vars.SITENAME</code> installed on one mach
    * Restore applicable folder by following [Application Restore](../../../manage/upgrade/taking-application-backup.md#application-restore) documentation.
    * Restore database by following [Database Restore](../../../manage/upgrade/taking-application-backup.md#database-restore) documentation.  
 7. If installation finished successfully, follow the steps below:
-   * {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}Close <code class="expression">space.vars.SITENAME</code>.{% endif %}
-   * {% if "OpsHub Integration Manager" === space.vars.SITENAME %}Stop the <code class="expression">space.vars.SITENAME</code>.{% endif %}
-   * Restore the database(s) from the backup taken from old <code class="expression">space.vars.SITENAME</code> instance/server into the new <code class="expression">space.vars.SITENAME</code> database instance/server. For more information, refer [Database Restore](../../../manage/upgrade/taking-application-backup.md#database-restore).
-   * Start new <code class="expression">space.vars.SITENAME</code> server.
-   * Re-enter the password for sync user configured in systems{% if "OpsHub Integration Manager" === space.vars.SITENAME %} and integration {% endif %}.
+{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}  
+   * Close <code class="expression">space.vars.SITENAME</code>.
+{% endif %}  
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
-   #* Load field mapping and integration to validate connectivity.
+   * Stop the <code class="expression">space.vars.SITENAME</code>.
 {% endif %}
-{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}
+   * Restore the database(s) from the backup taken from old <code class="expression">space.vars.SITENAME</code> instance/server into the new <code class="expression">space.vars.SITENAME</code> database instance/server. For more information, refer [Database Restore](../../../manage/upgrade/taking-application-backup.md#database-restore).
+   * Start new <code class="expression">space.vars.SITENAME</code> server. 
+   * Re-enter the password for sync user configured in systems
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}
+and integration 
+{% endif %}.
+   {% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
+   * Load field mapping and integration to validate connectivity.
+   {% endif %}
+{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}  
 8. Now you can start migrations  as per your requirement.
 {% endif %}  
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
