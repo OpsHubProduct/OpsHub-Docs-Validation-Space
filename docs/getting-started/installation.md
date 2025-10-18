@@ -2,7 +2,7 @@
 
 The first screen when you launch the application will be this:
 
-<div align="center"><img src="../assets/Launching_Installer_Image_1bbn.png" width="750"></div>
+<div align="center"><img src="../assets/Launching_Installer_Image_1bbn.png" width="820"></div>
 
 ## Launch the installer in different Operating Systems
 
@@ -11,7 +11,7 @@ The first screen when you launch the application will be this:
 
 | **Windows** | **Linux** |
 | ------------ | ---------- |
-| * Double click the executable *.exe file given in the application folder (It is advisable to run .exe file by right-clicking **Run as administrator** where * is replaced with the application version).<br>* If one instance of this release is already installed, then the user will be notified.<br>* Click **yes** to continue with the installation. It will then display the uninstallation key for the current installation. | **Before Installation** <br>* Extract the zip file. Make sure user who will run installer owns the files and has full access to extracted files.<br>* Create empty directory with full access(it should not be inside installation directory) and export it's path to OPSHUB_TEMP_DATA variable as shown in below example:<br>  **export OPSHUB_TEMP_DATA=/home/setup/temp**<br>* If you are doing a silent installation, make sure you have provided the same path for OPSHUB_TEMP_DATA as provided during [Silent Registration for Linux](registration.md#silent-registration-for-linux).<br>* If Linux has NFS (Network File System) based file system, please add the following line in OIM user's '.bashrc' file:<br>  **In /home/{OIM user}/.bashrc file, add the following line at the end:**<br>  ***<code> export JAVA_OPTS="$JAVA_OPTS -XX:+StartAttachListener" </code>***<br>  **Without the Java option, the server start up will fail. The error details are available [here](Could%20not%20self-attach%20to%20current%20VM%20using%20external%20process).**<br>* See minimal access required to install OpsHub Integration Manager [here](#minimal-access-required-to-run-linux-installer-using-external-file), when you do not have root access.<br><br>**To Run sh file** <br>* Open terminal window and go to the folder containing the install.sh file.<br>* Execute the following command: **sudo -E sh install.sh**.<br>* To run the sh File, you need to have access to Linux UI. This is because the installation process requires user inputs through UI. Installation won't get completed through remote terminal connection (i.e. Putty).<br><br>**To Run sh File from External File (Silent Installation)** <br>To install OpsHub Integration Manager through terminal connection (i.e. Putty), follow the steps given below:<br>* Complete user registration as described [here](registration.md#silent-registration-for-linux).<br>* Download and modify OpsHubAutoInstall.xml file as per your requirement by click [Here](Prepare_XML_For_Auto_Installation/Upgradation).<br>* Make sure, you will transfer the modified file on the instance where you want to install OpsHub Integration Manager.<br>* Set an environment variable OPSHUB_AUTO_INSTALL on the installation instance, the value of variable is the path to the OpsHubAutoInstall.xml file. File name can be different.<br>  **For example, export OPSHUB_AUTO_INSTALL=/home/Downloads/OpsHubAutoInstall.xml.**<br>* After setting environment variable, run the installer with command **sudo -E sh install.sh**.<br>* Please refer [Possible Error](#possible-error-during-silent-installation-upgradation) section for trouble shooting error(s) occurred during Installation. |
+| * Double click the executable *.exe file given in the application folder (It is advisable to run .exe file by right-clicking **Run as administrator** where * is replaced with the application version).<br>* If one instance of this release is already installed, then the user will be notified.<br>* Click **yes** to continue with the installation. It will then display the uninstallation key for the current installation. | **Before Installation** <br>* Extract the zip file. Make sure user who will run installer owns the files and has full access to extracted files.<br>* Create empty directory with full access(it should not be inside installation directory) and export it's path to OPSHUB_TEMP_DATA variable as shown in below example:<br>  **export OPSHUB_TEMP_DATA=/home/setup/temp**<br>* If you are doing a silent installation, make sure you have provided the same path for OPSHUB_TEMP_DATA as provided during [Silent Registration for Linux](registration.md#silent-registration-for-linux).<br>* If Linux has NFS (Network File System) based file system, please add the following line in OIM user's '.bashrc' file:<br>  **In /home/{OIM user}/.bashrc file, add the following line at the end:**<br>  ***<code> export JAVA_OPTS="$JAVA_OPTS -XX:+StartAttachListener" </code>***<br>  **Without the Java option, the server start up will fail. The error details are available [here](help-center/troubleshooting/errors/install/could-not-self-attach-to-current-vm-using-external-process.md).**<br>* See minimal access required to install OpsHub Integration Manager [here](#minimal-access-required-to-run-linux-installer-using-external-file), when you do not have root access.<br><br>**To Run sh file** <br>* Open terminal window and go to the folder containing the install.sh file.<br>* Execute the following command: **sudo -E sh install.sh**.<br>* To run the sh File, you need to have access to Linux UI. This is because the installation process requires user inputs through UI. Installation won't get completed through remote terminal connection (i.e. Putty).<br><br>**To Run sh File from External File (Silent Installation)** <br>To install OpsHub Integration Manager through terminal connection (i.e. Putty), follow the steps given below:<br>* Complete user registration as described [here](registration.md#silent-registration-for-linux).<br>* Download and modify OpsHubAutoInstall.xml file as per your requirement by click [Here](Prepare_XML_For_Auto_Installation/Upgradation).<br>* Make sure, you will transfer the modified file on the instance where you want to install OpsHub Integration Manager.<br>* Set an environment variable OPSHUB_AUTO_INSTALL on the installation instance, the value of variable is the path to the OpsHubAutoInstall.xml file. File name can be different.<br>  **For example, export OPSHUB_AUTO_INSTALL=/home/Downloads/OpsHubAutoInstall.xml.**<br>* After setting environment variable, run the installer with command **sudo -E sh install.sh**.<br>* Please refer [Possible Error](#possible-error-during-silent-installation-upgradation-) section for trouble shooting error(s) occurred during Installation. |
 
 
 ### Recommended Installation Path for <code class="expression">space.vars.SITENAME</code> Installer for Linux
@@ -78,11 +78,11 @@ On launching the installer, you will see the license agreement window that conta
 
 If you agree with the license details, then only you can move to the next step i.e. Installation.
 
-<div align="center"><img src="../assets/Default_Installation_Image_1La.png" width="750"></div>
+<div align="center"><img src="../assets/Default_Installation_Image_1La.png" width="820"></div>
 
 License Information window has the details of the trial license and the contact information to purchase the license.
 
-<div align="center"><img src="../assets/Default_Installation_Image_2LH.png" width="750" ></div>
+<div align="center"><img src="../assets/Default_Installation_Image_2LH.png" width="820" ></div>
 
 ### Possible exceptions
 
@@ -107,22 +107,22 @@ Here is a video on how to install <code class="expression">space.vars.SITENAME</
 
 * You now have to select the installation directory. Before you select a directory, make sure the directory is empty. All the log files, configuration files, and servers are placed in this directory. If the directory is not available, you can create a directory as per your own specifications.
 
-<div align="center"><img src="../assets/Default_Installation_Image_P3.png" width="750"></div>
+<div align="center"><img src="../assets/Default_Installation_Image_P3.png" width="820"></div>
 
-### Registration
+## Registration
 
-* Each installation must be registered with OpsHub. Registration can be done either in Online or Offline mode.
-  Please refer [Registration](registration.md) section for more details.
+* Each installation must be registered with OpsHub. Registration can be done either in Online or Offline mode. Please refer [Registration](registration.md) section for more details.
 
 ## Database Selection
 
 {% include "../.gitbook/includes/database-selection.md" %}
 
+
 # Advance Installation
 
 * Go through this section if you want to configure Advance Installation. Else, proceed to the [Installation Progress](installation.md#installation-progress) section.
 
-<div align="center"><img src="../assets/Advance_Step_Installtion_Panel.png" width="750"></div>
+<div align="center"><img src="../assets/Advance_Step_Installtion_Panel.png" width="820"></div>
 
 Let's now learn about the steps for advance installation.
 
@@ -150,39 +150,40 @@ User can select either of two options:
 
 * Generate a secret key: With this option, a secret key would be automatically generated, and user needs to select location, where he/she desires to store this key.
 
-<div align="center"><img src="../assets/Advance_Configuration_Image_4c.png" width="750"></div>
+<div align="center"><img src="../assets/Advance_Configuration_Image_4c.png" width="820"></div>
 
 * Use the existing secret key: If user already has secret key available,then user should select this option. User needs to select path where "opshub.key" file is available to use that key.
 
-<div align="center"><img src="../assets/Advance_Configuration_Image_5c.png" width="750"></div>
+<div align="center"><img src="../assets/Advance_Configuration_Image_5c.png" width="820"></div>
 
 **b) Configuration for algorithm to encrypt data**
 User can select his desired algorithm from the available list to ensure security of data in application.
 
-<div align="center"><img src="../assets/Advance_Configuration_Image_6c.png" width="750"></div>
+<div align="center"><img src="../assets/Advance_Configuration_Image_6c.png" width="820"></div>
 
 ## Installation Progress
 
 The image below shows the overall progress of installation.
 
-<div align="center"><img src="../assets/Installer_Image_8b.png" width="750"></div>
+<div align="center"><img src="../assets/Installer_Image_8b.png" width="820"></div>
 
 * Setup Shortcuts: It will add the application to the Windows program list if the operating system is Windows and will add the application to the Linux program list if the operating system is Linux. It will also create the <code class="expression">space.vars.SITENAME</code> launcher.
 
-<div align="center"><img src="../assets/Installer_Image_9Seta.png" width="750"></div>
+<div align="center"><img src="../assets/Installer_Image_9Seta.png" width="800"></div>
 
 # Installation Success
 
 The image below shows a successful installation.
 
-<div align="center"><img src="../assets/Installer_Image_10aa.PNG" alt="Installer Image 10aa"></div>
+<div align="center"><img src="../assets/Installer_Image_10aa.PNG" width="800"></div>
 
-Once you have installed the application, click [Logging In](logging-in.md) to see how to get started.
+Once you have installed the application, click [Get Started With the Application](logging-in.md) to see how to get started.
 
 # Appendix
+
 ## SSL Certificate Configuration
 
-<div align="center"><img src="../assets/Advance_Configuration_Image_3SSLCa.png" width="750"></div>
+<div align="center"><img src="../assets/Advance_Configuration_Image_3SSLCa.png" width="820"></div>
 
 It is advisable to enter the server-host name in the given field, it might create problem with IP address in some cases. Alias of the certificate should be unique.
 
