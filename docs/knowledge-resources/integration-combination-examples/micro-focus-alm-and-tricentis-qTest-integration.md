@@ -4,11 +4,11 @@ Best-of-breed systems such as Micro Focus ALM/QC and Tricentis qTest bring rich 
 <code class="expression">space.vars.SITENAME</code> integrates Micro Focus ALM and Tricentis qTest bi-directionally. On this page, we will discuss the bi-directional integration of:  
 
 <p align="center">
-  <img src="../../assets/Micro_Focus_ALM_Tricentis_qTest_entities.png" width="850" />
+  <img src="../../assets/Micro_Focus_ALM_tricentis-qTest_entities.png" width="950" />
 </p>
 
 # System Prerequisites
-Configuring [system pre-requisites](../../integrate/integration-prerequisites.md) is mandatory for successful system configuration.  Check out the prerequisites for [Micro Focus ALM](../../connectors/micro-focus-alm-qc.md#prerequisites) and [Tricentis qTest](../../connectors/tricentis_qTest.md#prerequisites) systems before you proceed with the integration.  
+Configuring [system pre-requisites](../../integrate/integration-prerequisites.md) is mandatory for successful system configuration.  Check out the prerequisites for [Micro Focus ALM](../../connectors/micro-focus-alm-qc.md#prerequisites) and [Tricentis qTest](../../connectors/tricentis-qTest.md#prerequisites) systems before you proceed with the integration.  
 
 # Integration Configuration
 * Log in into <code class="expression">space.vars.SITENAME</code>. The default credentials are: User Name: `admin`, Password: `password`.  
