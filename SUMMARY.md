@@ -5,6 +5,7 @@
    * [Prerequisites](docs/getting-started/prerequisites.md)
    * [Installation](docs/getting-started/installation.md)
       * [Registration](docs/getting-started/registration.md)
+      * [Prepare XML for Auto Installation & Upgradation for Linux-Based Deployment](docs/getting-started/prepare-xml-for-auto-installation-upgradation.md)
       * [SSL Certificate Configuration](docs/getting-started/ssl-certificate-configuration.md)
       * [How to Import a Certificate](docs/getting-started/how-to-import-a-certificate.md) 
       * [Docker Deployment](docs/getting-started/docker/docker.md)
