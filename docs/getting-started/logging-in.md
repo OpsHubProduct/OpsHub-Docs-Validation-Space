@@ -10,7 +10,7 @@ Let's see how you can get started with <code class="expression">space.vars.SITEN
 These are default credentials. You can change them after you log in.
 
 <p align="center">
-  <img src="../assets/Getting_Started_With_Application_Image_1G_a.png"  width="750"/>
+  <img src="../assets/Getting_Started_With_Application_Image_1G_a.png"  width="680"/>
 </p>
 
 # Linux
