@@ -12,7 +12,7 @@ To create an integration between IBM DOORS and Jira, you need to:
 - Log in into <code class="expression">space.vars.SITENAME</code>. The default credentials are: **User Name**: admin, **Password**: password.  
 
 <p align="center">
-  <img src="../../assets/Getting_Started_With_Application_Image_1G_a.png"  width="1000"/>
+  <img src="../../assets/Getting_Started_With_Application_Image_1G_a.png"  width="800"/>
 </p>
 
  
@@ -21,7 +21,7 @@ To create an integration between IBM DOORS and Jira, you need to:
 - Click **Integrate** on the top right corner of the screen and then click the plus [+] icon.  
 
 <p align="center">
-  <img src="../../assets/Overview_of_Integration_Image_1D.png" width="1000"/>
+  <img src="../../assets/Overview_of_Integration_Image_1D.png" width="1200"/>
 </p>
 
 - The integration configuration page opens:  
@@ -29,20 +29,20 @@ To create an integration between IBM DOORS and Jira, you need to:
 - Click plus [+] icon adjacent to the System 1 and System 2 fields one by one to configure IBM DOORS and Jira.  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_4.png" width="1000"/>
+  <img src="../../assets/IBM_DOORS_4.png" width="1200"/>
 </p>
 
 - After you save the respective configuration, the system automatically will be added to the integration form. You can now proceed with adding projects in the integration.  
 Proceeding further, in the **Add Project(s) to Sync** section, select the projects you want to synchronize between IBM DOORS and Jira by clicking them.  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_5.png" width="1000"/>
+  <img src="../../assets/IBM_DOORS_5.png" width="1200"/>
 </p>
 
 - For example, we select Demo Module 1 from IBM DOORS and DemoProject from Jira.  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_6.png" width="1000"/>
+  <img src="../../assets/IBM_DOORS_6.png" width="1200"/>
 </p>
 
 - If you select forward arrow (>) icon, the data would flow from IBM DOORS to Jira.  
@@ -52,20 +52,20 @@ Proceeding further, in the **Add Project(s) to Sync** section, select the projec
 Once the direction is selected, the arrows would turn grey. We have selected the bi-directional flow.  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_7.png" width="1000"/>
+  <img src="../../assets/IBM_DOORS_7.png" width="1200"/>
 </p>
 
 - The next step is to define entities that need to be integrated and fields that need to be integrated for every entity mapped.  
 - <code class="expression">space.vars.SITENAME</code> fetches entities available in both systems and shows them in entities list for both systems. From the **Select Entities to Sync** section, select the relevant entities for both systems. In this case, we select **Requirement** from IBM DOORS and **Story** from Jira.  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_8.png" width="1000"/>
+  <img src="../../assets/IBM_DOORS_8.png" width="1200"/>
 </p>
 
 - Now, click the plus [+] icon adjacent to Select fields to be Synced to create the mapping between these two entities. You will now be navigated to the Mapping Configuration screen.  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_9.png" width="1000"/>
+  <img src="../../assets/IBM_DOORS_9.png" width="1200"/>
 </p>
 
 Once you come to the mapping page from the integration page, following details are automatically populated in the **Mapping section**:
@@ -75,7 +75,7 @@ Once you come to the mapping page from the integration page, following details a
 - Entities  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_10.png" width="1000"/>
+  <img src="../../assets/IBM_DOORS_10.png" width="1200"/>
 </p>
 
 >**Note**:
@@ -89,13 +89,13 @@ For the first integration that you are configuring, we recommend you take only m
 <code class="expression">space.vars.SITENAME</code> will load fields available in the selected entity and project fields. Refer to the image below:  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_11.png" width="1000"/>
+  <img src="../../assets/IBM_DOORS_11.png" width="1200"/>
 </p>
 
 - Now, from the drop-down shown in the image below, select the **Mandatory fields** option for IBM DOORS, first.  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_12.png" width="1000"/>
+  <img src="../../assets/IBM_DOORS_12.png" width="1200"/>
 </p>
 
 >**Note**:
@@ -105,7 +105,7 @@ However, for the purpose of this integration, we will not have any mandatory fie
 Now go to Jira. Jira has a mandatory field: **Summary**.  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_13.png" width="1000"/>
+  <img src="../../assets/IBM_DOORS_13.png" width="1200"/>
 </p>
 
 - Map the Summary field in Jira to the OH_Default field in IBM DOORS.  
@@ -117,7 +117,7 @@ If Mandatory fields in one system don’t have a corresponding value in the othe
 - On the right panel, the mapped fields are displayed in the following manner:  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_14.png" width="1000"/>
+  <img src="../../assets/IBM_DOORS_14.png" width="1200"/>
 </p>
 
 * If you want to synchronize a field only in one direction, then you can disable sync of a field by clicking [>] or [<].  
@@ -140,7 +140,7 @@ If Mandatory fields in one system don’t have a corresponding value in the othe
 * Once you save the mapping successfully, you will get the following pop-up at the bottom of the page.  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_17.png" width="1000">
+  <img src="../../assets/IBM_DOORS_17.png" width="700">
 </p>
 
 You will be further re-directed to the Integration page:  
@@ -153,20 +153,20 @@ You will be further re-directed to the Integration page:
 * Now on the integration page, in the **Start Polling Time** field, set the time to start synchronizing data in both the systems. The polling time for both systems needs to be set one by one.  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_19.png" width="1000">
+  <img src="../../assets/IBM_DOORS_19.png" width="1200">
 </p>
 
 To save the integration in active mode, slide the **Activate Integration** button to the right.  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_20.png" width="1000">
+  <img src="../../assets/IBM_DOORS_20.png" width="500">
 </p>
 
 * As the final step, click **Save** to save the integration.  
 * The integration will be created. You will also get a pop-up at the bottom of the screen confirming the integration has been successfully configured and activated.  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_21.png" width="1000">
+  <img src="../../assets/IBM_DOORS_21.png" width="500">
 </p> 
 
 >**Note**: At this stage, test the integration by trying to synchronize data between the specified IBM DOORS and Jira projects.  
@@ -181,32 +181,34 @@ Refer to the videos on this page to learn in detail about [Comments](../../integ
 * Go to the Integration Page and click the Integration you want to edit. In this case, we click the IBM DOORS-Jira integration.  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_22.png" width="1000">
+  <img src="../../assets/IBM_DOORS_22.png" width="1200">
 </p>
 
 * Once the integration configuration is open, click the edit icon as shown in the image below:  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_23.png" width="1000">
+  <img src="../../assets/IBM_DOORS_23.png" width="1200">
 </p>
 
 >**Note**: You will have to de-activate an integration before you edit the integration.  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_24.png" width="1000">
+  <img src="../../assets/IBM_DOORS_24.png" width="700">
 </p>
 
 * From the **Select Entities to Sync** section, click the mapping for which you want to enable comment and relationship synchronization.  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_25.png" width="1000">
+  <img src="../../assets/IBM_DOORS_25.png" width="1200">
 </p>
 
 >**Note**: Mapping of attachments is not supported for this integration.  
 
 * Once the mapping configuration page is open, click the edit icon to edit the mapping.  
 
-![](../../assets/IBM_DOORS_26.png)  
+<p align="center">
+  <img src="../../assets/IBM_DOORS_26.png" width="1000">
+</p>
 
 # Map Comments and Relationships  
 
@@ -214,7 +216,7 @@ Refer to the videos on this page to learn in detail about [Comments](../../integ
 Refer to the video on this page to learn in detail about [Comments](../../integrate/mapping-configuration.md#comments) mapping.  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_27.png" width="1000">
+  <img src="../../assets/IBM_DOORS_27.png" width="400">
 </p>
   
 
@@ -223,14 +225,14 @@ Refer to the video on this page to learn in detail about [Comments](../../integr
 * If required, disable the direction in which comments need not be synchronized by clicking the [>][<] buttons.  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_28.png" width="1000">
+  <img src="../../assets/IBM_DOORS_28.png" width="400">
 </p>
  
 
 ## Map Relationships  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_29.png" width="1000">
+  <img src="../../assets/IBM_DOORS_29.png" width="500">
 </p>
  
 
@@ -239,7 +241,7 @@ Refer to the video on this page to learn in detail about [Comments](../../integr
 * Toggle the **Entity Type- Link Type** button to left to map entity types.  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_30.png" width="1000">
+  <img src="../../assets/IBM_DOORS_30.png" width="500">
 </p>
   
 
@@ -268,7 +270,7 @@ Refer to the video on this page to learn in detail about [Comments](../../integr
 * Activate the integration and save it.  
 
 <p align="center">
-  <img src="../../assets/IBM_DOORS_34.png" width="600">
+  <img src="../../assets/IBM_DOORS_34.png" width="1200">
 </p>
 
 
