@@ -3,7 +3,7 @@ Best-of-breed systems such as Micro Focus ALM/QC and Jira bring rich functionali
 <code class="expression">space.vars.SITENAME</code> integrates Micro Focus ALM and Jira bi-directionally. On this page, we will discuss the bi-directional integration of:
 
 <p align="center">
-  <img src="../../assets/Micro_Focus_ALM-Jira_entities.png" width="900"/>
+  <img src="../../assets/Micro_Focus_ALM-Jira_entities.png" width="1000"/>
 </p>
 
 # System Prerequisites
@@ -114,7 +114,7 @@ The Mandatory field(s) for Micro Focus ALM are: **Name** and **Requirement Type*
 * For user mapping, default value will not be written to target even if matching user not found in target. This will be done only if nothing coming from mapped source field.  
 
 <p align="center">
-  <img src="../../assets/Df_mapping.png" width="900"/>
+  <img src="../../assets/Df_mapping.png" width="1100"/>
 </p>  
 
 #### Mapping Rich Text Fields
