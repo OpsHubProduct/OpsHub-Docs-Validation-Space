@@ -25,14 +25,14 @@ For Example: OpsHub is installed at path `C:\Program Files\OpsHub` then copy Ops
 * **Select the database >> Right-click >> Tasks >> Back Up**:  
 
 <p align="center">
-  <img src="../../assets/Backup_Image_1.png" width="600"/>
+  <img src="../../assets/Backup_Image_1.png" width="800"/>
 </p>
 
 
 * Once you click on the **Backup** the following Backup Database window will appear:
     
 <p align="center">
-  <img src="../../assets/Backup_Image_2.png" width="600"/>
+  <img src="../../assets/Backup_Image_2.png" width="800"/>
 </p>
 
 
@@ -113,21 +113,21 @@ Steps to restore the application:
 * **Select the database >> Right-click >> Tasks >> Restore >> Database.**  
 
 <p align="center">
-  <img src="../../assets/Backup_Image_3.png" width="600"/>
+  <img src="../../assets/Backup_Image_3.png" width="800"/>
 </p>
 
 
 * The following "**Restore Database**" window will appear. Select "From device" mentioned under the "Source for restore" and click the button in front of that to specify the file location.  
 
 <p align="center">
-  <img src="../../assets/Backup_Image_4.png" width="600"/>
+  <img src="../../assets/Backup_Image_4.png" width="800"/>
 </p>
 
 
 * Select the option "Backup media as File" and click the **Add** button to add the backup file location.
   
 <p align="center">
-  <img src="../../assets/Backup_Image_5.png" width="600"/>
+  <img src="../../assets/Backup_Image_5.png" width="800"/>
 </p>
 
 
