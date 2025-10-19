@@ -1,5 +1,4 @@
 # Connector SDK APIs
-
 The following table describes:  
 - The list of SDK APIs and the mandatory APIs.  
 - The "Order of Implementation" column to check the order of the APIs to be implemented. Empty columns represent optional APIs.  
