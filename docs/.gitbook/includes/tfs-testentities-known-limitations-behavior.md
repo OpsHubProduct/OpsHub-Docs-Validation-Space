@@ -24,21 +24,21 @@ Test Run settings, Outcome settings, MTM settings and MTM environments are not s
 - Test Suite will migrate current state for on-premise instance with version equal and below version 2013 (Update 3) . 
 - Synchronization of Test Case chart and Test Result chart created within test suite is not supported. 
 - Query-Based Suite or Requirement-Based Suite. 
-  - Once a Query-Based Suite or Requirement-Based Suite synced to target system, then after any new linkage of Test-Case with test suite added due to modification in test case. Hence newly added Test-Case linkage of Test Suite will not sync to the target system and any Test Run with corresponding test point will resulted into processing failure. In such case do following click [here](../../connectors/team-foundation-server.md#troubleshoot) for troubleshoot.
+  - Once a Query-Based Suite or Requirement-Based Suite synced to target system, then after any new linkage of Test-Case with test suite added due to modification in test case. Hence newly added Test-Case linkage of Test Suite will not sync to the target system and any Test Run with corresponding test point will resulted into processing failure. In such case do following click [here](../../connectors/team-foundation-server.md#troubleshoot) for troubleshoot.    
 {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}   
-- Any update in Test Suite Configuration will only migrate when test suite is updated.
-{% endif %}
-{% if "OpsHub Integration Manager" === space.vars.SITENAME %}    
+- Any update in Test Suite Configuration will only migrate when test suite is updated.  
+{% endif %}  
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}      
 - Any update in Test Suite Configuration will only synchronize when test suite is updated.  
 {% endif %}  
 - Ordering in Test Cases which are added to Test Suite is supported only for version 2019 onwards for on-premise deployments (i.e. Team Foundation Server) and all cloud deployments (i.e. Azure DevOps). In addition to that, ordering is only possible when the user has selected authentication type as Personal Access Token in the system configuration. Refer section [Create Personal Access Token](../../connectors/team-foundation-server.md#create-personal-access-token).
 - If source endpoint is Team Foundation Server with version lower than 2017 or target endpoint is not an Azure DevOps, all types of Test Suite (Static/Query based/Requirement) will be migrated as Static Suite.
-{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}
+{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}  
 - If source endpoint is Azure DevOps or on-premise deployment (i.e Team Foundation Server) with version 2017 onwards and target endpoint is Azure DevOps, then the Static suite is migrated as Static Test Suite. The Requirement-based test suite is migrated as Requirement-based test suite and Query-based test suite is migrated as Query-based test suite. 
-{% endif %}
+{% endif %}  
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
 - If source endpoint is Azure DevOps or on-premise deployment (i.e Team Foundation Server) with version 2017 onwards and target endpoint is Azure DevOps, then the Static suite is synchronized as Static Test Suite. The Requirement-based test suite is synchronized as Requirement-based test suite and Query-based test suite is synchronized as Query-based test suite.
-{% endif %}
+{% endif %}  
 - The user of source and target endpoint requires desired access level Basic + Test Plans in end system to synchronize query-based and requirement-based suite. Refer [Access Level](https://docs.microsoft.com/en-us/azure/devops/organizations/security/access-levels?view=azure-devops) to know more about this access level or subscription for the sync user. Otherwise, Test Suite synchronization will be resulted in to job error/sync failure as "You are not authorized to access this API. Please contact your project administrator".
 - Synchronization Behavior of **Query Text** field of Query based Test Suite:
   - The Query based test suite has a field **Query Text** that represents the actual criteria that has been given in the Query Suite entity. The **Query Text** follows a specific format for which you can refer to [WIQL syntax](https://docs.microsoft.com/en-us/azure/devops/boards/queries/wiql-syntax?view=azure-devops). 
