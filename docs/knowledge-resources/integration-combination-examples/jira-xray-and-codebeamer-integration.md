@@ -60,10 +60,6 @@ Here are the steps to integrate Jira Xray and Codebeamer.
   <img src="../../assets/Xray-CB-Project-Selection.png" width="1100">
 </p>
 
-<p align="center">
-  <img src="../../assets/Xray-CB-Test-Execution-Mapping-1.png" width="1100">
-</p>
-
 * Click the bi-directional arrow (<-->) between the projects to create a bi-directional synchronization between the selected projects.
 * In the **Select Entities to Sync** section, select the entities you want to synchronize between Jira Xray and Codebeamer. You can synchronize multiple entities in one integration. For example, we are synchronizing the following entities between Jira Xray and Codebeamer:
 
@@ -77,7 +73,7 @@ Here are the steps to integrate Jira Xray and Codebeamer.
 
 
 <p align="center">
-  <img src="../../assets/Xray-CB-TestCase-Selection.png" width="1100">
+  <img src="../../assets/Xray_CB_TestCase_Selection.png" width="1100">
 </p>
 
 * Click the plus button [+] adjacent to **Select fields to be synced** to create the mapping between these two entities. You will be navigated to **Mapping Configuration** screen.
@@ -92,7 +88,7 @@ Give a unique name for the mapping in the **Name** field. For example, the name 
 **1. Jira Xray [Tests] - Codebeamer [Test Cases]**.  
 
 <p align="center">
-  <img src="../../assets/Xray-CB-Test-Case-Mapping.png" width="1000">
+  <img src="../../assets/Xray-CB-Test-Case-Mapping.png" width="1100">
 </p>
 
 
@@ -102,7 +98,7 @@ Now, click the **Create from Scratch** button to define the mapping from scratch
 * Now, search and select the **Steps** field from **All fields** box for Jira Xray and **Test Steps** field from the **All fields** box for Codebeamer.
 
 <p align="center">
-  <img src="../../assets/Xray-CB-Test-Case-Mapping1.png" width="800">
+  <img src="../../assets/Xray-CB-Test-Case-Mapping1.png" width="1100">
 </p>
 
 
@@ -129,7 +125,7 @@ Give a unique name for the mapping in the **Name** field. For example, the name 
 * Map the Test Run Type lookup field with its corresponding value. For more details, refer to this.
 
 <p align="center">
-  <img src="../../assets/Xray-CB-Test-Execution-Mapping-1.png" width="1100">
+  <img src="../../assets/Xray-CB_Test_Execution_Mapping_1.png" width="1100">
 </p>
 
 >**Note**:  You may map more fields as per your requirement.
