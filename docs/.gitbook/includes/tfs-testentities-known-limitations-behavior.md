@@ -39,30 +39,30 @@ Test Run settings, Outcome settings, MTM settings and MTM environments are not s
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
 - If source endpoint is Azure DevOps or on-premise deployment (i.e Team Foundation Server) with version 2017 onwards and target endpoint is Azure DevOps, then the Static suite is synchronized as Static Test Suite. The Requirement-based test suite is synchronized as Requirement-based test suite and Query-based test suite is synchronized as Query-based test suite.  
 {% endif %}  
-- The user of source and target endpoint requires desired access level Basic + Test Plans in end system to synchronize query-based and requirement-based suite. Refer [Access Level](https://docs.microsoft.com/en-us/azure/devops/organizations/security/access-levels?view=azure-devops) to know more about this access level or subscription for the sync user. Otherwise, Test Suite synchronization will be resulted in to job error/sync failure as "You are not authorized to access this API. Please contact your project administrator". 
-- Synchronization Behavior of **Query Text** field of Query based Test Suite:
-  - The Query based test suite has a field **Query Text** that represents the actual criteria that has been given in the Query Suite entity. The **Query Text** follows a specific format for which you can refer to [WIQL syntax](https://docs.microsoft.com/en-us/azure/devops/boards/queries/wiql-syntax?view=azure-devops). 
+- The user of source and target endpoint requires desired access level Basic + Test Plans in end system to synchronize query-based and requirement-based suite. Refer [Access Level](https://docs.microsoft.com/en-us/azure/devops/organizations/security/access-levels?view=azure-devops) to know more about this access level or subscription for the sync user. Otherwise, Test Suite synchronization will be resulted in to job error/sync failure as "You are not authorized to access this API. Please contact your project administrator".   
+- Synchronization Behavior of **Query Text** field of Query based Test Suite:  
+  - The Query based test suite has a field **Query Text** that represents the actual criteria that has been given in the Query Suite entity. The **Query Text** follows a specific format for which you can refer to [WIQL syntax](https://docs.microsoft.com/en-us/azure/devops/boards/queries/wiql-syntax?view=azure-devops).  
     - Refer to the section [Synchronization Behavior of fields with WIQL format](../..connectors/team-foundation-server.md#synchronization-behavior-of-fields-with-wiql-format) to know general synchronization behavior applicable to this type of field. Following are the behavior specific to Query Text field of Test Suite entity:
-      - It is recommended to have both source and target endpoints having identical templates (fields, lookups, iteration, areas, etc.) to synchronize the Query Text field of the Query-based suite. Any differences in the template could lead to a mismatch in Test Case association and cause the Test Suite sync failure. It may require the end-user to manually correct the Query Text field of Test Suite in the source or target end system to retry the failure.
-        - **User values mentioned in Query Text**
+      - It is recommended to have both source and target endpoints having identical templates (fields, lookups, iteration, areas, etc.) to synchronize the Query Text field of the Query-based suite. Any differences in the template could lead to a mismatch in Test Case association and cause the Test Suite sync failure. It may require the end-user to manually correct the Query Text field of Test Suite in the source or target end system to retry the failure.  
+        - **User values mentioned in Query Text**  
           - Query Text Field with a user type of field clause will be restricted to transform the user(s) not the Group or Team present as part of clause value.  
           {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}  
-          - The user will be transformed to corresponding target end system user as per user mapping of migration.
+          - The user will be transformed to corresponding target end system user as per user mapping of migration.  
           {% endif %}  
-          {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
-          - The user will be transformed to corresponding target end system user as per user mentions mapping of field **Query Text** . 
-          {% endif %}
-        - **Id values mentioned in Query Text**
+          {% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
+          - The user will be transformed to corresponding target end system user as per user mentions mapping of field **Query Text** .  
+          {% endif %}  
+        - **Id values mentioned in Query Text**  
           - In the **Query Text** field, an id clause can refer to a particular or set of a work item of type Test Case. 
           - The synchronized test case will have a different id in target system than the source entity. Henceforth it is required to transform the id clause as per the target end system to avoid mismatch in the association of Test Case(s) with Test Suite between the source system and target system. By default, the Query Text field with ID field clause will not be changed as per target entity id. Perform following configuration(s) in order to transform ID as per the target end system.  
-          {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}   
+          {% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}     
             - Create a custom field with the name as **Source Workitem ID** and type as Integer for the Test Case entity in the target system prior to migration to transform the ID as per the target entity. So, target query-based test suite gets populated with the desired test cases.
             - In the absence of this custom field Source Workitem ID in the target end system the Query based test suite will be migrated as static suite. 
             - If a Custom field named?"Source Workitem ID"?exists before migration for Test Case entity in target endpoint, then Query Text field with ID field Clause will be migrated as "Source Workitem ID" clause instead ID clause in Query Text. For Example, [ID] = 1234 is the id clause in the source end system, then this id clause migrated in target as [Source Workitem ID] = 1234. 
             - It is recommended to have?the "Source Workitem ID"?field in Test Case for the target entity with Type?"Integer"?to avoid mismatch in the association of Test Case(s) with Test Suite between the source endpoint and target endpoint after migration 
             - If the Type of the field?"Source Workitem ID" is?"String", then migration of Query Text field with ID clause is restricted to synchronize certain operators which are compatible with String type of field. For example, >, <, =, <=, >=, <>, In, Not In etc. The operator(s) which are only compatible with the Integer type of field and not compatible with the String type of field will cause the sync failure for Test Suite. Such incompatible operators are `[=Field]`, `[>Filed]`, `[>=Field]`, `[<=Field]`, `[<>Field]`, etc. The custom field used to replace ID field is of?String?type requires compatible operator and value. 
           {% endif %}  
-          {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
+          {% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
             - Create a custom field with any name but type as Integer for the Test Case entity in the target system. 
             - Configure the Remote Id field for Test Case integration using above created custom field prior to synchronize Test Case(s). 
             - Configure the following advance mapping for field Query Text to replace ID field with created custom field. Later in this documentation the sample advance mapping to replace ID field with custom field named "Source Workitem ID" is given. 
