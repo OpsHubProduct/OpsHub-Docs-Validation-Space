@@ -215,7 +215,7 @@ Example: Azure DevOps Server (TFS) [Bug] - Micro Focus ALM [Defect] mapping. Edi
 We map the user fields: **Assigned To** in Azure DevOps Server (TFS) → **Assigned To** in Micro Focus ALM.  
 You are free to choose other fields.  
 
->**Note**: User fields are mapped by **email id**. If emails are same in both systems, mapping is automatic. If not, update the [one-to-one XSL](../../integrate/mapping-configuration.md++#value-mapping-using-excel-sheet) for user fields mapping.  
+>**Note**: User fields are mapped by **email id**. If emails are same in both systems, mapping is automatic. If not, update the [one-to-one XSL](../../integrate/mapping-configuration.md#value-mapping-using-excel-sheet) for user fields mapping.  
 
 <p align="center">
   <img src="../../assets/TFS_20.png" width="1100"/>
