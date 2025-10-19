@@ -148,66 +148,66 @@
 
 ---
 
-## SDK Release 1.10.0
-### Optimized Entity-List API
+# SDK Release 1.10.0
+## Optimized Entity-List API
 
 **Backward Compatible Changes**  
-- [Entity-List API](../entity-list#overview)  
-  - In [Response Payload](../entity-list#response_payload):  
-    - Fields provided in [fieldNameInfo in response payload for Entity Type-Get API](../entity-type-get#response_payload) and any field which can be configured for end system storage should be part of response payload.
+- [Entity-List API](entity-list.md#overview)  
+  - In [Response Payload](entity-list.md#response-payload):  
+    - Fields provided in [fieldNameInfo in response payload for Entity Type-Get API](entity-type-get.md#response-payload) and any field which can be configured for end system storage should be part of response payload.
 
 ---
 
-## SDK Release 1.9.0
-### Added support for UserMention and EntityMention for MarkDown datatype and introduced support for subStepNumber in updateEntity
+# SDK Release 1.9.0
+## Added support for UserMention and EntityMention for MarkDown datatype and introduced support for subStepNumber in updateEntity
 
 **Breaking Changes**  
-- [Entity-Update API](../entity-update#api_uri)  
-  - In [URI Parameters](../entity-update#uri_parameters):  
+- [Entity-Update API](entity-update.md#api-uri)  
+  - In [URI Parameters](entity-update.md#uri-parameters):  
     - New parameter is introduced for `subStepNumber`.  
-    - Only consider the `subStepNumber` change in the updateEntity if the `multiStepUpdate` field provided in the [multiStepUpdate](../entity-type-get#response_parameters) is either `STATIC_SUB_STEPS` or `DYNAMIC_SUB_STEPS`.  
+    - Only consider the `subStepNumber` change in the updateEntity if the `multiStepUpdate` field provided in the [multiStepUpdate](entity-type-get.md#response_parameters) is either `STATIC_SUB_STEPS` or `DYNAMIC_SUB_STEPS`.  
     - This parameter allows users to detect which API call to make based on Step number in which the field/fields came. Useful when there is separate API to transition Status from one state to another and all other fields can be updated in single update request to end system.
 
 **Backward Compatible Changes**  
-- [Connector_Metadata–Get](../connector-metadata-get#api_uri)  
-  - In [Response Payload](../connector-metadata-get#response_payload):  
+- [Connector_Metadata–Get](connector-metadata-get.md#api-uri)  
+  - In [Response Payload](connector-metadata-get.md#response-payload):  
     - New metadata for `additionalMetadata` is introduced.  
     - This will be used to know if the connector supports user search based on `userName` and user search on `email`.
 
 ---
 
-## SDK Release 1.8.0
-### Added support for Dynamic Retrieval of lookup fields in integration advance setting screens.
+# SDK Release 1.8.0
+## Added support for Dynamic Retrieval of lookup fields in integration advance setting screens.
 
 **Breaking Changes**  
-- [History-List API](../history-list#api_uri), [Attachment_History-List](../attachment-history-list#uri_parameters), [Comment_History-List](../comment-history-list#uri_parameters), [Link_History-List](../link-history-list#uri_parameters)  
+- [History-List API](history-list.md#api-uri), [Attachment_History-List](attachment-history-list.md#uri-parameters), [Comment_History-List](../comment-history-list.md#uri-parameters), [Link_History-List](link-history-list.md#uri-parameters)  
   - In corresponding URI Parameters:  
     - New parameter `orderByDirection` is introduced.  
     - This parameter gives direction for sorting to all the fields listed in history metadata `sortableFields` set.  
-- [Lookup_Field_Values-Get](../lookup-field-values-get#api_uri)  
-  - In [URI Parameters](../lookup-field-values-get#uri_parameters):  
+- [Lookup_Field_Values-Get](lookup-field-values-get.md#api-uri)  
+  - In [URI Parameters](lookup-field-values-get.md#uri-parameters):  
     - New parameter `fieldScope` is introduced.  
     - This parameter gives the Scope where Lookup values for a field are to be displayed.
 
 ---
 
-## SDK Release 1.7.0
-### Added support for searching mention in HTML data type using regex
+# SDK Release 1.7.0
+## Added support for searching mention in HTML data type using regex
 
 **Backward Compatible Changes**  
-- [Entity Type-Get API](../entity-type-get#api_uri)  
-  - In [Response Parameters](../entity-type-get#response_parameters):  
+- [Entity Type-Get API](entity-type-get.md#api-uri)  
+  - In [Response Parameters](entity-type-get.md#response-parameters):  
     - New parameter introduced for `fieldDataType` field of `userMention` and `entityMention`.  
-    - This parameter allows detection of mention from HTML data type using regex.
+    - This parameter will allow user to detect mention from html data type using regex. This is useful when it's not possible to detect all the mention using html selector.
 
 ---
 
-## SDK Release 1.6.0
-### Added Support for Reference Fields
+# SDK Release 1.6.0
+## Added Support for Reference Fields
 
 **Backward Compatible Changes**  
-- [Entity Type-Get API](../entity-type-get#api_uri)  
-  - In [Response Structure](../entity-type-get#response_payload):  
+- [Entity Type-Get API](entity-type-get.md#api-uri)  
+  - In [Response Structure](entity-type-get.md#response-payload):  
     - In `fields`, `referenceFieldMetadata` field is added.  
     - In `fieldNameInfo`, `entityNameFieldName` field is added.  
 
