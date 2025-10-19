@@ -604,8 +604,8 @@ This configuration option in <code class="expression">space.vars.SITENAME</code>
     * To configure this rich text field format, please navigate to 'Override parameters for write operations(Destination)' in Entity level advance configurations.
     * As shown in below image, please select either HTML or Markdown as the target format in field Rich Text Field Format.
 
-    <p style="text-align: center;">
-      <img src="../assets/RichTextFieldFormatConfig.png" width="800"/>
+    <p align="center">
+     <img src="../assets/RichTextFieldFormatConfig.png" width="800" />
     </p>
 
 
