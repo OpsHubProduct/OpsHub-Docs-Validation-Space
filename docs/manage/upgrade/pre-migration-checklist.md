@@ -1,4 +1,3 @@
-
 > For migration steps for older versions of <code class="expression">space.vars.SITENAME</code>, please refer to the [Pre-Migration Checklist](https://docs.myopshub.com/oim/index.php/Pre-Migration_Checklist).
 
 # Migrating <code class="expression">space.vars.SITENAME</code> version to 7.121 or above
@@ -126,7 +125,10 @@ DELETE FROM reportsdb.ReportsDBVersion WHERE version='6.11.02.00.00';
 
 ## Provide additional permission for the Personal Access Token of Azure DevOps Services (Cloud Deployment)
 
-![TFS_GRAPH.png](../../assets/TFS_GRAPH.png)
+<p align="center">
+  <img src="../../assets/TFS_GRAPH.png" width="800">
+</p>
+
 
 **Applicable When:**
 - If Azure DevOps Services is configured as a target system and any user field is mapped for synchronization.
