@@ -81,17 +81,18 @@ Test Run settings, Outcome settings, MTM settings and MTM environments are not s
     - Example, Suppose valid lookups of priority field of source system are 1,2,3,4. whereas priority lookups of target system are 1,2,3. As per the test case mapping the missing look up 4 in target system is mapped to 3.
     - **Sample Query Text of test suite entity of source system** Following is the sample mapping which will transform the Priority field clause of query text field of Test Suite entity as per the given Test Case mapping. After transformation using the below sample mapping, the field clause of **\[Priority] = 4** will be transformed as **\[Priority] = 3**.
 
-```sql
-select [System.Id], [System.Title], [System.AssignedTo], [System.AreaPath] 
-from WorkItems 
-where [System.TeamProject] = @project 
-  and [System.WorkItemType] in group 'Test Case Category' 
-  and [Microsoft.VSTS.Common.Priority] = 4 
-  and [System.Id] >= 1 
-  and [System.State] = 'Closed' 
-  and [System.Reason] = 'Duplicate' 
-order by [System.Id]
-```
+    ```sql
+    select [System.Id], [System.Title], [System.AssignedTo], [System.AreaPath] 
+    from WorkItems 
+    where [System.TeamProject] = @project 
+      and [System.WorkItemType] in group 'Test Case Category' 
+      and [Microsoft.VSTS.Common.Priority] = 4 
+      and [System.Id] >= 1 
+      and [System.State] = 'Closed' 
+      and [System.Reason] = 'Duplicate' 
+    order by [System.Id]
+    ```   
+
     - **Expected Query Text to be synchronized in target system**
 
 ```sql
