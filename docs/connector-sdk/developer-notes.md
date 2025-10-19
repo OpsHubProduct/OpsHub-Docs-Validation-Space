@@ -83,12 +83,12 @@
 
 ---
 
-## SDK Release 1.13.0
-### Added support for forming Remote Link using different base URL
+# SDK Release 1.13.0
+## Added support for forming Remote Link using different base URL
 
 **Breaking Changes**  
-- [Entity Type-Get API](../entity-type-get#api_uri)  
-  - In [Response Structure](../entity-type-get#response_payload):  
+- [Entity Type-Get API](entity-type-get.md#api-uri)  
+  - In [Response Structure](entity-type-get.md#response-payload):  
     - In **entityWebUrl** field, a new field `baseUrl` is added and `urlTemplate` attribute is renamed to `trailingTemplate`.  
     - These changes will be used to form a link.  
       - Example: if the original `urlTemplate` is `https://example.com/{0}/{1}/{2}`, it will now be split into:  
@@ -97,12 +97,12 @@
 
 ---
 
-## SDK Release 1.12.0
-### Added support for fetch mapped data only feature
+# SDK Release 1.12.0
+## Added support for fetch mapped data only feature
 
 **Backward Compatible Changes**  
-- [Entity–Get](../entity-get#api_uri)  
-  - In [URI Parameters](../entity-get#uri_parameters):  
+- [Entity–Get](entity-get.md#api-uri)  
+  - In [URI Parameters](entity-get.md#uri-parameters):  
     - A new query parameter, `fieldList`, has been added.  
     - This parameter will have list of fields, and only the fields present in the `fieldList` need to be fetched.  
     - If an empty list is provided, all field values need to be returned.  
@@ -110,41 +110,41 @@
 
 ---
 
-## SDK Release 1.11.0
-### Added support for entity type and project movement
+# SDK Release 1.11.0
+## Added support for entity type and project movement
 
 **Breaking Changes**  
-- [Entity–Get](../entity-get#api_uri)  
-  - In [URI Parameters](../entity-get#uri_parameters):  
+- [Entity–Get](entity-get.md#api-uri)  
+  - In [URI Parameters](entity-get.md#uri-parameters):  
     - The `entityTypeId` is changed from path parameter to query parameter.  
     - This will be used in return field values for a given entity id without filter on entityTypeId or projectId in case it is sent as null.
 
 **Backward Compatible Changes**  
-- [Entity Types-List API](../entity-types-list#api_uri)  
-  - In [Response Payload](../entity-types-list#response_payload):  
+- [Entity Types-List API](entity-types-list.md#api-uri)  
+  - In [Response Payload](entity-types-list.md#response-payload):  
     - New metadata for `belongsToCategories` and `projectMovementSupported` is introduced.  
     - These metadata will be used in entity type and project movement.  
       - `belongsToCategories` will help to determine in which category given entity Type belongs.  
       - `crossProjectMovementSupport` will help to determine if project movement is supported through API for the given entity Type or not.
 
-### Added support for filtering comments after specified time
+## Added support for filtering comments after specified time
 
 **Backward Compatible Changes**  
-- [Get_Comments](../get-comments#api_uri)  
-  - In [URI Parameters](../get-comments#uri_parameters):  
+- [Get_Comments](get-comments.md#api-uri)  
+  - In [URI Parameters](get-comments.md#uri-parameters):  
     - New parameter `afterTime` is introduced, which can be used when end system supports time based filtering on comments.
 
-### Added archive support for entity
+## Added archive support for entity
 
 **Breaking Changes**  
-- [Entity – Delete API](../entity-delete#api_uri)  
-  - In [URI Parameters](../entity-delete#uri_parameters), added param `deletionType`.
+- [Entity – Delete API](entity-delete.md#api-uri)  
+  - In [URI Parameters](entity-delete.md#uri-parameters), added param `deletionType`.
 
 **Backward Compatible Changes**  
-- [Entity Types – List API](../entity-types-list#api_uri)  
-  - In [Response Payload](../entity-types-list#response_payload), added field `isArchiveSupported`.  
-- [Entity Type – Get API](../entity-type-get#api_uri)  
-  - In [Response Payload](../entity-type-get#response_payload), added field `archiveMetadata`.
+- [Entity Types – List API](entity-types-list.md#api-uri)  
+  - In [Response Payload](entity-types-list.md#response-payload), added field `isArchiveSupported`.  
+- [Entity Type – Get API](entity-type-get.md#api-uri)  
+  - In [Response Payload](entity-type-get.md#response-payload), added field `archiveMetadata`.
 
 ---
 
@@ -180,12 +180,12 @@
 ## Added support for Dynamic Retrieval of lookup fields in integration advance setting screens.
 
 **Breaking Changes**  
-- [History-List API](history-list.md#api-uri), [Attachment_History-List](attachment-history-list.md#uri-parameters), [Comment_History-List](../comment-history-list.md#uri-parameters), [Link_History-List](link-history-list.md#uri-parameters)  
+- [History-List API](history-list.md#api-uri), [Attachment_History-List](attachment-history-list.md#uri-parameters), [Comment_History-List](comment-history-list.md#uri-parameters), [Link_History-List](link-history-list.md#uri-parameters)  
   - In corresponding URI Parameters:  
     - New parameter `orderByDirection` is introduced.  
     - This parameter gives direction for sorting to all the fields listed in history metadata `sortableFields` set.  
-- [Lookup_Field_Values-Get](lookup-field-values-get.md#api-uri)  
-  - In [URI Parameters](lookup-field-values-get.md#uri-parameters):  
+- [Lookup_Field_Values-Get](lookup-field-value-get.md#api-uri)  
+  - In [URI Parameters](lookup-field-value-get.md#uri-parameters):  
     - New parameter `fieldScope` is introduced.  
     - This parameter gives the Scope where Lookup values for a field are to be displayed.
 
