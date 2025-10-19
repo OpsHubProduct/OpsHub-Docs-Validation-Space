@@ -3,7 +3,7 @@ Best-of-breed systems such as Jira and Azure DevOps Server (TFS) bring rich func
 <code class="expression">space.vars.SITENAME</code> integrates Jira and Azure DevOps Server (TFS) bi-directionally. On this page, we will discuss the bi-directional integration of:
 
 <p align="center">
-  <img src="../../assets/Jira-TFS.png">
+  <img src="../../assets/Jira-TFS.PNG">
 </p>
 
 # System Prerequisites
