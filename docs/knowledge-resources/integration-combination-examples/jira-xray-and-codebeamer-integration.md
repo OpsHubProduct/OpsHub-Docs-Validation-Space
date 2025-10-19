@@ -73,7 +73,7 @@ Here are the steps to integrate Jira Xray and Codebeamer.
 
 
 <p align="center">
-  <img src="../../assets/Xray_CB_TestCase_Selection.png" width="1100">
+  <img src="../../assets/Xray-CB_TestCase_Selection.png" width="1100">
 </p>
 
 * Click the plus button [+] adjacent to **Select fields to be synced** to create the mapping between these two entities. You will be navigated to **Mapping Configuration** screen.
