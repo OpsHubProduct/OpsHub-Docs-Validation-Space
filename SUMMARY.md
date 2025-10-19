@@ -364,7 +364,7 @@
         * [Users List](docs/connector-sdk/users-list.md)
     * [Register Connectors](docs/connector-sdk/register-connectors.md)
     * [Developer Notes](docs/connector-sdk/developer-notes.md)
-* <span style="font-size:16px;">📝</span>  **[Release Notes](docs/release-notes/release-notes.md)**
+* <span>📝</span> [Release Notes](docs/release-notes/release-notes.md)
 * 📚**Knowledge Resources**
     *  Integration Combination Examples
         * [Azure DevOps Server (TFS) – Micro Focus ALM Integration](docs/knowledge-resources/integration-combination-examples/azure-devops-server-and-micro-focus-alm-integration.md)
