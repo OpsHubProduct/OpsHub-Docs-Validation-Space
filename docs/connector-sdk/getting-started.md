@@ -33,7 +33,7 @@ The bootstrap package can be downloaded from the table below.
 
 | SDK Server  | OIM Version Range          | Remarks |
 |-------------|----------------------------|---------|
-| [1.17.0]    | >= 7.198                   | Added support for bulk linking and link ordering |
+| [1.17.0](https://opshubtrial-my.sharepoint.com/:f:/g/personal/support_opshub_com/EkEI6J-uYJFKv7_ePKrgqlEB9J9-oPTIo7D6r73Y2WG2oA?e=lROoA9)    | >= 7.198                   | Added support for bulk linking and link ordering |
 | [1.16.0]    | >= 7.197 and < 7.198       | Added support for systemId to store system-specific cache and `cleanupGlobalCache` flag to control cache cleanup. <br> Added support for adding multiple inline URL prefixes. |
 | [1.15.0]    | >= 7.189 and < 7.197       | Added support for Rank synchronization |
 | [1.14.0]    | >= 7.188 and < 7.189       | Added support for attachment file comment |
