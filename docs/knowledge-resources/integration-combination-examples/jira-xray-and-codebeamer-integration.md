@@ -36,14 +36,14 @@ Here are the steps to integrate Jira Xray and Codebeamer.
 * Click the **Integrate** button on the screen.  
 
 <p align="center">
-  <img src="../../assets/TR-Jama-Image-22.png" width="1100">
+  <img src="../../assets/TR-Jama_Image_22.png" width="1100">
 </p>
 
 
 * Click the plus icon [+] on the top right corner of the screen. You will be prompted to enter the **Integration Name** and name of systems you want to integrate.  
  
 <p align="center">
-  <img src="../../assets/TR-Jama-Image-23.png" width="1100">
+  <img src="../../assets/TR-Jama_Image_23.png" width="1100">
 </p>
 
 * Enter a unique name for the integration. For example, this integration is named **Jira Xray - Codebeamer Integration**.
