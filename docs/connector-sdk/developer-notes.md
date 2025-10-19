@@ -23,61 +23,65 @@
 
 ---
 
-# Developer Notes
+**Developer Notes**
 
-## SDK Release 1.17.0
-### Added support for bulk linking and link ordering
+> 💡 **Looking for older developer notes?**  
+> Check out the [Developer Notes](https://docs.myopshub.com/oim/index.php/Developer_Notes) for versions prior to **1.6.0**.
+
+
+# SDK Release 1.17.0
+## Added support for bulk linking and link ordering
 
 **Breaking Changes**  
-- [Link Create or Update API](../link-create-or-update#api_uri)  
-  - [Request payload](../link-create-or-update#request_payload) has been enhanced to support adding multiple links for a given link type, and ordering in a single API call.  
-- [Link Delete API](../link-delete#api_uri)  
-  - [Request payload](../link-delete#request_payload) has been enhanced to support deleting multiple links for a given link type in a single API call.
+- [Link Create or Update API](link-create-or-update.md#api-uri)  
+  - [Request payload](link-create-or-update.md#request-payload) has been enhanced to support adding multiple links for a given link type, and ordering in a single API call.  
+- [Link Delete API](link-delete.md#api-uri)  
+  - [Request payload](link-delete.md#request-payload) has been enhanced to support deleting multiple links for a given link type in a single API call.
 
 **Backward Compatible Changes**  
-- [Entity Type-Get API](../entity-type-get#api_uri)  
-  - In [Response Structure](../entity-type-get#response_payload):  
+- [Entity Type-Get API](entity-type-get.md#api-uri)  
+  - In [Response Structure](entity-type-get.md#response-payload):  
     - In **links.linkTypes**, attribute `isBulkLinkingSupported` is added.  
     - In **links.rank.supportedRankOperations**, `MOVE_BULK_AFTER` is added.
 
 ---
 
-## SDK Release 1.16.0
-### Added support for systemId to store system-specific cache and cleanupGlobalCache flag to control cache cleanup.
+# SDK Release 1.16.0
+## Added support for systemId to store system-specific cache and cleanupGlobalCache flag to control cache cleanup.
 
 **Backward Compatible Changes**  
-- [Session Initialize API](../session-initialize#api_uri)  
-  - In [URI Parameters](../session-initialize#uri_parameterss):  
+- [Session Initialize API](session-initialize.md#api-uri)  
+  - In [URI Parameters](session-initialize.md#uri-parameterss):  
     - Added query parameter of the `systemId`.  
-- [Session Logout API](../session-logout#api_uri)  
-  - In [URI Parameters](../session-logout#uri_parameterss):  
+- [Session Logout API](session-logout.md#api-uri)  
+  - In [URI Parameters](session-logout.md#uri-parameterss):  
     - Added query parameter of the `systemId`.  
     - Added query parameter of the `cleanupGlobalCache`.
 
-### Added support for adding multiple inline url prefix.
+## Added support for adding multiple inline url prefix.
 
 **Breaking Changes**  
-- [Entity Type-Get API](../entity-type-get#api_uri)  
-  - In [Response Parameters](../entity-type-get#response_parameters):  
+- [Entity Type-Get API](entity-type-get.md#api-uri)  
+  - In [Response Parameters](entity-type-get.md#response-parameters):  
     - Changed the datatype of `inlineFile.inlineFileUrlPrefix` from `String` to `List<String>`.
 
 ---
 
-## SDK Release 1.15.0
-### Added support for Rank synchronization
+# SDK Release 1.15.0
+## Added support for Rank synchronization
 
 **Backward Compatible Changes**  
-- [Entity Type-Get API](../entity-type-get#api_uri)  
-  - In [Response Structure](../entity-type-get#response_payload):  
+- [Entity Type-Get API](entity-type-get.md#api-uri)  
+  - In [Response Structure](entity-type-get.md#response-payload):  
     - Field `rank` is added.
 
 ---
 
-## SDK Release 1.14.0
-### Added support for attachment file comment
+# SDK Release 1.14.0
+## Added support for attachment file comment
 
 **Backward Compatible Changes**  
-- [Attachment Create API](../attachment-create#request_body) and [Attachment Update API](../attachment-update#request_body)  
+- [Attachment Create API](attachment-create.md#request-body) and [Attachment Update API](attachment-update.md#request-body)  
   - In request body `fileComment` field, an optional attachment file comment is added.  
   - For example, if the attachment "Image.jpg" needs to add with the file comment "Sample trace image," we can use this file comment.
 
