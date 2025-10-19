@@ -259,7 +259,7 @@
               * [OH-ClearQuest-0065](docs/help-center/troubleshooting/errors/clearquest/oh-clearquest-0065.md)  
               * [OH-ClearQuest-0005](docs/help-center/troubleshooting/errors/clearquest/oh-clearquest-0005.md)
   * [Contact Us](docs/help-center/contact-us.md)     
-* ✅[**Supported Connector Versions**](docs/supported-connectors/systems-supported.md)
+* ✅[Supported Connector Versions](docs/supported-connectors/systems-supported.md)
 * 🟨**Connector Guide**
     * [Aha](docs/connectors/aha.md)
     * [Aras Innovator](docs/connectors/aras.md)
@@ -321,7 +321,7 @@
     * [Verisium Manager](docs/connectors/vManager.md)
     * [Windchill](docs/connectors/windchill-rv-s.md)
     * [Zendesk](docs/connectors/zendesk.md)
-* 🔌 **Connector SDK**
+* 🔌**Connector SDK**
     * [Getting Started](docs/connector-sdk/getting-started.md)
       * [SDK Best Practices](docs/connector-sdk/sdk-best-practices.md)
       * [APIs Required for Each Feature](docs/connector-sdk/apis-required-for-each-feature.md)
@@ -364,7 +364,7 @@
         * [Users List](docs/connector-sdk/users-list.md)
     * [Register Connectors](docs/connector-sdk/register-connectors.md)
     * [Developer Notes](docs/connector-sdk/developer-notes.md)
-* 📝[**Release Notes**](docs/release-notes/release-notes.md)
+* 📝[Release Notes](docs/release-notes/release-notes.md)
 * 📚**Knowledge Resources**
     *  Integration Combination Examples
         * [Azure DevOps Server (TFS) – Micro Focus ALM Integration](docs/knowledge-resources/integration-combination-examples/azure-devops-server-and-micro-focus-alm-integration.md)
