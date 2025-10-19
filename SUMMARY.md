@@ -1,6 +1,6 @@
 # Table of contents
 
-* 🧭**Getting Started**
+* **Getting Started**
    * [Getting OpsHub Integration Manager](docs/getting-started/download.md)
    * [Prerequisites](docs/getting-started/prerequisites.md)
    * [Installation](docs/getting-started/installation.md)
@@ -11,7 +11,7 @@
       * [Docker Deployment](docs/getting-started/docker/docker.md)
   * [Logging In](docs/getting-started/logging-in.md)
   * [Start/Stop OpsHub Integration Manager](docs/getting-started/start-or-stop-service.md)
-* ⬌ **Integrate**
+* **Integrate**
     * [Prerequisites](docs/integrate/integration-prerequisites.md)
     * [Overview](docs/integrate/overview-of-integration.md)
     * [Integration Setup](docs/integrate/configure-integrations.md)
@@ -36,7 +36,7 @@
       * [Using the Dashboard](docs/integrate/dashboards.md)
     * [Best Practices](docs/integrate/best-practises.md)
     * [Limitations](docs/integrate/limitations.md)
-* ⚙️**Manage**
+* **Manage**
      * Administrator
         * [User Management](docs/manage/administrator/user-management.md)
         * [Login Server Management](docs/manage/administrator/login-server-management.md)
@@ -76,7 +76,7 @@
           * [Pre Migration Checklists](docs/manage/upgrade/pre-migration-checklist.md)
           * [Post Migration Checklists](docs/manage/upgrade/post-migration-checklist.md)
         *  [Taking Application Backup](docs/manage/upgrade/taking-application-backup.md)
-* 💡**Help Center**
+* **Help Center**
     * FAQs
         * [General](docs/help-center/faqs/general-faqs.md)
           * [What are the security aspects of on-premise deployment?](docs/help-center/faqs/general/security-aspects.md)  
@@ -259,8 +259,8 @@
               * [OH-ClearQuest-0065](docs/help-center/troubleshooting/errors/clearquest/oh-clearquest-0065.md)  
               * [OH-ClearQuest-0005](docs/help-center/troubleshooting/errors/clearquest/oh-clearquest-0005.md)
   * [Contact Us](docs/help-center/contact-us.md)     
-* <span style="font-size:16px;">✅</span>[Supported Connector Versions](docs/supported-connectors/systems-supported.md)
-* 🟨**Connector Guide**
+* [Supported Connector Versions](docs/supported-connectors/systems-supported.md)
+* **Connector Guide**
     * [Aha](docs/connectors/aha.md)
     * [Aras Innovator](docs/connectors/aras.md)
     * [Azure DevOps Server/ Services/Version Control](docs/connectors/team-foundation-server.md)
@@ -321,7 +321,7 @@
     * [Verisium Manager](docs/connectors/vManager.md)
     * [Windchill](docs/connectors/windchill-rv-s.md)
     * [Zendesk](docs/connectors/zendesk.md)
-* 🔌**Connector SDK**
+* **Connector SDK**
     * [Getting Started](docs/connector-sdk/getting-started.md)
       * [SDK Best Practices](docs/connector-sdk/sdk-best-practices.md)
       * [APIs Required for Each Feature](docs/connector-sdk/apis-required-for-each-feature.md)
@@ -364,8 +364,8 @@
         * [Users List](docs/connector-sdk/users-list.md)
     * [Register Connectors](docs/connector-sdk/register-connectors.md)
     * [Developer Notes](docs/connector-sdk/developer-notes.md)   
-*  [Release Notes](docs/release-notes/release-notes.md)
-* 📚**Knowledge Resources**
+* [Release Notes](docs/release-notes/release-notes.md)
+* **Knowledge Resources**
     *  Integration Combination Examples
         * [Azure DevOps Server (TFS) – Micro Focus ALM Integration](docs/knowledge-resources/integration-combination-examples/azure-devops-server-and-micro-focus-alm-integration.md)
         * [Azure DevOps Services (VSTS) – Micro Focus ALM Integration](docs/knowledge-resources/integration-combination-examples/azure-devops-services-and-micro-focus-alm-integration.md)
