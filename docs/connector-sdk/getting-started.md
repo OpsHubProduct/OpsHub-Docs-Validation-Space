@@ -54,6 +54,6 @@ The bootstrap package can be downloaded from the table below.
 
 
 # Some Useful SDK Pages
-- **[APIs Required for Each Feature](apis-required-for-each-feature.md)**
-- **[SDK Best Practices](sdk-best-practices.md)**
+ * [APIs Required for Each Feature](apis-required-for-each-feature.md)
+ * [SDK Best Practices](sdk-best-practices.md)
 
