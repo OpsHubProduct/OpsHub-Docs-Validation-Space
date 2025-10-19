@@ -1,6 +1,5 @@
-
-> 👉 **Looking for older version steps?**\
-> Refer to the [Post-Migration Checklist (MediaWiki)](https://docs.myopshub.com/oim/index.php/Post-Migration_Checklist) for <code class="expression">space.vars.SITENAME</code> versions prior to 7.195.
+> 👉 **Looking for older version steps?**
+> Refer to the [Post-Migration Checklist (MediaWiki)](https://docs.myopshub.com/oim/index.php/Post-Migration_Checklist) for <code class="expression">space.vars.SITENAME</code> versions prior to 7.175.
 
 # Migrating <code class="expression">space.vars.SITENAME</code> version to 7.175 or above
 
