@@ -76,7 +76,7 @@
           * [Pre Migration Checklists](docs/manage/upgrade/pre-migration-checklist.md)
           * [Post Migration Checklists](docs/manage/upgrade/post-migration-checklist.md)
         *  [Taking Application Backup](docs/manage/upgrade/taking-application-backup.md)
-  * ℹ️ **Help Center**
+* 💡 **Help Center**
       * FAQs
           * [General](docs/help-center/faqs/general-faqs.md)
             * [What are the security aspects of on-premise deployment?](docs/help-center/faqs/general/security-aspects.md)  
@@ -259,8 +259,8 @@
                 * [OH-ClearQuest-0065](docs/help-center/troubleshooting/errors/clearquest/oh-clearquest-0065.md)  
                 * [OH-ClearQuest-0005](docs/help-center/troubleshooting/errors/clearquest/oh-clearquest-0005.md)
     * [Contact Us](docs/help-center/contact-us.md)     
-  * ✅ [**Supported Connector Versions**](docs/supported-connectors/systems-supported.md)
-  * 🟨 **Connector Guide**
+* ✅ [**Supported Connector Versions**](docs/supported-connectors/systems-supported.md)
+* 🟨 **Connector Guide**
       * [Aha](docs/connectors/aha.md)
       * [Aras Innovator](docs/connectors/aras.md)
       * [Azure DevOps Server/ Services/Version Control](docs/connectors/team-foundation-server.md)
@@ -285,6 +285,7 @@
       * [Helix ALM](docs/connectors/helix-alm.md)
       * [HubSpot](docs/connectors/hubspot.md)
       * [IBM Engineering Requirements Management DOORS Next](docs/connectors/ibm-rational-doors-next-generation.md)
+          * [OAuth Token Generation](docs/connectors/ibm-rational-doors-next-oauth-generation.md)
       * [IBM Engineering Test Management](docs/connectors/etm.md)
       * [IBM Engineering Workflow Management](docs/connectors/ibm-ewm.md)
       * [IBM Rational ClearQuest](docs/connectors/ibm-rational-clearquest.md)
@@ -295,6 +296,7 @@
           * [Sample JSON File for Jira Align](docs/connectors/sample-json-file-for-jira-align.md) 
       * [Jira Cloud/Data Center](docs/connectors/jira.md)
       * [Jira Zephyr](docs/connectors/jira-zephyr.md)
+          * [Jira Zephyr Sample JSON File](docs/connectors/sample-json-file-for-jira-zephyr.md) 
       * [Microsoft Dynamics 365](docs/connectors/msdynamics.md)
       * [OpenText ALM Octane](docs/connectors/almoctane.md)
       * [OpenText ALM Quality Center](docs/connectors/micro-focus-alm-qc.md)
@@ -303,6 +305,7 @@
       * [Planview AdaptiveWork](docs/connectors/planviewadaptivework.md)
       * [ReadyOne](docs/connectors/readyone.md)
       * [Redmine](docs/connectors/redmine.md)
+          * [Database Configuration](docs/connectors/database-configuration.md)
       * [Salesforce](docs/connectors/salesforce.md)
       * [SAP](docs/connectors/sap.md)
       * [Selenium](docs/connectors/selenium.md)
@@ -318,15 +321,15 @@
       * [Verisium Manager](docs/connectors/vManager.md)
       * [Windchill](docs/connectors/windchill-rv-s.md)
       * [Zendesk](docs/connectors/zendesk.md)
-  *  🔌 **Connector SDK**
+* 🔌 **Connector SDK**
       * [Getting Started](docs/connector-sdk/getting-started.md)
         * [SDK Best Practices](docs/connector-sdk/sdk-best-practices.md)
         * [APIs Required for Each Feature](docs/connector-sdk/apis-required-for-each-feature.md)
       * [Build Your Own Connector](docs/connector-sdk/sdk-connector-apis.md)
       * [Register Connectors](docs/connector-sdk/register-connectors.md)
-      * [Developer Notes]()
-  * 📝  **Release Notes**(docs/release-notes/release-notes.md)
-  * 📚 **Knowledge Resources**
+      * [Developer Notes](docs/connector-sdk/developer-notes.md)
+* 📝 **Release Notes**(docs/release-notes/release-notes.md)
+* 📚 **Knowledge Resources**
       *  Integration Combination Examples
           * [Azure DevOps Server (TFS) – Micro Focus ALM Integration](docs/knowledge-resources/integration-combination-examples/azure-devops-server-and-micro-focus-alm-integration.md)
           * [Azure DevOps Services (VSTS) – Micro Focus ALM Integration](docs/knowledge-resources/integration-combination-examples/azure-devops-services-and-micro-focus-alm-integration.md)
