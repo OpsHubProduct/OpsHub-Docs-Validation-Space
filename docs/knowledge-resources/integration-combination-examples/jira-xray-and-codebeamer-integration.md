@@ -43,7 +43,7 @@ Here are the steps to integrate Jira Xray and Codebeamer.
 * Click the plus icon [+] on the top right corner of the screen. You will be prompted to enter the **Integration Name** and name of systems you want to integrate.  
  
 <p align="center">
-  <img src="../../assets/TR-Jama_Image_23.png" width="1100">
+  <img src="../../assets/TR-Jama_Image_23.png" width="500">
 </p>
 
 * Enter a unique name for the integration. For example, this integration is named **Jira Xray - Codebeamer Integration**.
@@ -57,11 +57,11 @@ Here are the steps to integrate Jira Xray and Codebeamer.
 * In the **Add Project(s) to Sync** section, select the projects you want to synchronize between Jira Xray and Codebeamer by clicking them. For example, we have selected **XrayCloudTestProject** project in Jira Xray and **TestProject2** project in Codebeamer. 
 
 <p align="center">
-  <img src="../../assets/Xray-CB-Project-Selection.png" width="1100">
+  <img src="../../assets/Xray-CB_Project_Selection.png" width="1100">
 </p>
 
 <p align="center">
-  <img src="../../assets/Xray-CB-Test-Execution-Mapping-1.png" width="1100">
+  <img src="../../assets/Xray-CB_Test_Execution_Mapping_1.png" width="1100">
 </p>
 
 * Click the bi-directional arrow (<-->) between the projects to create a bi-directional synchronization between the selected projects.
