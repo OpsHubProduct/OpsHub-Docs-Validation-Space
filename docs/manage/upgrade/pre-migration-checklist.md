@@ -1,4 +1,6 @@
-> For migration steps for older versions of <code class="expression">space.vars.SITENAME</code>, please refer to the [Pre-Migration Checklist](https://docs.myopshub.com/oim/index.php/Pre-Migration_Checklist).
+
+> 👉 **Looking for older version steps?**  
+> Refer to the [Pre-Migration Checklist](https://docs.myopshub.com/oim/index.php/Pre-Migration_Checklist). for `<code class="expression">space.vars.SITENAME</code>` versions prior to **7.121**.
 
 # Migrating <code class="expression">space.vars.SITENAME</code> version to 7.121 or above
 
