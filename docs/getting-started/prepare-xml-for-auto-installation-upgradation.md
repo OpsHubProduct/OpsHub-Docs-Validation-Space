@@ -5,11 +5,7 @@ Here is the process of getting and customizing OpsHubAutoInstall/OpsHubAutoMigra
 Below are the sample templates for OpsHubAutoInstall/OpsHubAutoMigrator XML. You need to customize the template downloaded as described below for configuring your own file for installing or migrating <code class="expression">space.vars.SITENAME</code>.
 
 
-* If you are installing <code class="expression">space.vars.SITENAME</code> then download file   
-{% file src="https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EdwkmbjVf5RNpjHmsqi8dE4BaSfch1pFlGQhPsixpGnHEw?e=VJclvQ %}
-  OpsHubAutoInstall.xml
-{% endfile %}
-
+* If you are installing <code class="expression">space.vars.SITENAME</code> then download file [here](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EdwkmbjVf5RNpjHmsqi8dE4BaSfch1pFlGQhPsixpGnHEw?e=VJclvQ)
     * To customize the file as per your configuration, follow steps from section [step 3 - Configure Installation path](#id-3-configure-installation-path).
 * If you are upgrading the existing <code class="expression">space.vars.SITENAME</code> then download file [OpsHubAutoMigrator.xml](https://opshubtrial-my.sharepoint.com/:u:/g/personal/support_opshub_com/EW_r0v_m5RtPoQp-jGLitoMBfWzZDdB0zdpJxflswG4a2Q).  
     * To customize the file as per your configuration, follow steps **step 3 and step 4**.  
