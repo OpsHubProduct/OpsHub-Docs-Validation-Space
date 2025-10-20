@@ -11,3 +11,4 @@ This error could come up when there is an issue with your Jira instance or <code
 
 ## Solution
 Refer [Solution for handling workflow transition in Jira](../../../../connectors/jira.md#solution-for-handling-workflow-transition) for the resolution of this issue.
+
