@@ -1,3 +1,123 @@
+<style>
+.tile-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.tile {
+  width: 110px;
+  height: 110px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  border-color: #E12727;
+}
+
+.tile img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-top: 15px;
+}
+
+.tile a {
+  margin-bottom: 08px;
+  color: #005999;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 10px;
+  transition: color 0.2s ease;
+}
+
+.tile a:hover {
+  color: #E12727;
+}
+</style>
+
+<div class="tile-grid">
+
+  <div class="tile">
+    <img src="./../assets/connector/Aha.png" alt="Aha!">
+    <a href="aha.md">Aha!</a>
+  </div>
+
+  <div class="tile">
+    <img src="./../assets/connector/Azure.png" alt="Azure DevOps">
+    <a href="azure-devops.md">Azure DevOps</a>
+  </div>
+
+  <div class="tile">
+    <img src="./../assets/connector/Jira.png" alt="Jira">
+    <a href="jira.md">Jira</a>
+  </div>
+
+  <div class="tile">
+    <img src="./../assets/connector/Aha.png" alt="Aha!">
+    <a href="aha.md">Aha!</a>
+  </div>
+
+  <div class="tile">
+    <img src="./../assets/connector/Azure.png" alt="Azure DevOps">
+    <a href="azure-devops.md">Azure DevOps</a>
+  </div>
+
+  <div class="tile">
+    <img src="./../assets/connector/Jira.png" alt="Jira">
+    <a href="jira.md">Jira</a>
+  </div>
+
+  <div class="tile">
+    <img src="./../assets/connector/Aha.png" alt="Aha!">
+    <a href="aha.md">Aha!</a>
+  </div>
+
+  <div class="tile">
+    <img src="./../assets/connector/Azure.png" alt="Azure DevOps">
+    <a href="azure-devops.md">Azure DevOps</a>
+  </div>
+
+  <div class="tile">
+    <img src="./../assets/connector/Jira.png" alt="Jira">
+    <a href="jira.md">Jira</a>
+  </div>
+
+  <div class="tile">
+    <img src="./../assets/connector/Aha.png" alt="Aha!">
+    <a href="aha.md">Aha!</a>
+  </div>
+
+  <div class="tile">
+    <img src="./../assets/connector/Azure.png" alt="Azure DevOps">
+    <a href="azure-devops.md">Azure DevOps</a>
+  </div>
+
+  <div class="tile">
+    <img src="./../assets/connector/Jira.png" alt="Jira">
+    <a href="jira.md">Jira</a>
+  </div>
+</div>
+
+
+
+
+
+
 | [Aha!](aha.md) | [Aras](aras.md) | [Azure DevOps](azure-devops.md)                                     |
 |----------------|----------------|---------------------------------------------------------------------|
 | [Blueprint](blueprint.md) | [BMC Remedy](remedy.md) | [Clarity](ca_ppm.md)                                                |
