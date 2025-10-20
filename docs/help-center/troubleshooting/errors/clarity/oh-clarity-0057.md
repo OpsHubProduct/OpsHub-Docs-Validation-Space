@@ -8,3 +8,4 @@ When Clarity system is as target end point, the cause of this issue is that <cod
 ## Solution
 <code class="expression">space.vars.SITENAME</code>'s prerequisite is to configure a custom field with API attribute Id with 'o_ohLastUpdate' for an entity which needs to synchronize.  
 The user can refer to [Prerequisites  > Custom Field Configuration](../../../../connectors/clarity.md#custom-field-configuration).
+
