@@ -9,7 +9,7 @@
 ## Supported systems
 
 - Azure DevOps Services and Team Foundation Server  
-  - Please refer to [Team Foundation Server](../connectors/azure-devops) to learn about the required permissions for impersonating comment author.
+  - Please refer to [Team Foundation Server](../connectors/azure-devops.md) to learn about the required permissions for impersonating comment author.
 
 ## Configuration
 
