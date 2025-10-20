@@ -16,14 +16,14 @@
 - Type 'taskmgr' and click OK to open Task Manager.  
 
  <p align="center">
-  <img src="../../../assets/TaskManager.png" width="700" />
+  <img src="../../../assets/TaskManager.png" width="800" />
 </p>
 
 - In the 'Background processes' section locate 'Enterprise Architect - UML Development Tool' processes.
 - Right click on each process and select 'End task' to terminate it and release the resource.  
 
 <p align="center">
-  <img src="../../../assets/End-Process.png" width="700"/>
+  <img src="../../../assets/End-Process.png" width="900"/>
 </p>
 
 
