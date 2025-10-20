@@ -33,7 +33,7 @@ If you are not able to see recently created project/field/field values in mappin
 * Click on reload icon for appropriate system as shown below:
   
 <p align="center">
-  <img src="../../../assets/Reload_End_System_FieldMapping.png" width="500"/>
+  <img src="../../../assets/Reload_End_System_FieldMapping.png" width="900"/>
 </p>
 
 #### Reload data in integration
@@ -43,6 +43,6 @@ If you are not able to see the recently created project/field/field/field values
 * Click on reload icon for appropriate system as shown below:
   
 <p align="center">
-  <img src="../assets/Reload_End_System_Integration.jpg" width="500" />
+  <img src="../assets/Reload_End_System_Integration.jpg" width="900" />
 </p>
 
