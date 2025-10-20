@@ -54,7 +54,7 @@ margin-bottom: 0.5em;
 
 <div class="tile-grid">
 
-  <div class="tile" data-view="cards">
+  <div class="tile">
     <img src="./../assets/connector/Aha.png" alt="Aha!">
     <a href="aha.md">Aha!</a>
   </div>
@@ -225,18 +225,18 @@ margin-bottom: 0.5em;
 </div>
 
 <div class="tile">
-    <img src="./../assets/connector/Microfocus.png" alt="OpenText ALM Octane">
-    <a href="almoctane.md">OpenText ALM Octane</a>
+    <img src="./../assets/connector/OpenText_ALM.png" alt="OpenText ALM Octane">
+    <a href="almoctane.md">OpenText<br>ALM Octane</a>
 </div>
 
 <div class="tile">
-    <img src="./../assets/connector/Microfocus.png" alt="OpenText ALM Quality Center">
-    <a href="micro-focus-alm-qc.md">OpenText ALM Quality Center</a>
+    <img src="./../assets/connector/OpenText_ALM.png" alt="OpenText ALM Quality Center">
+    <a href="micro-focus-alm-qc.md">OpenText<br>ALM Quality Center</a>
 </div>
 
 <div class="tile">
-    <img src="./../assets/connector/Caliber_RM.png" alt="OpenText Project & Portfolio Management">
-    <a href="caliberrm.md">OpenText Project & Portfolio Management</a>
+    <img src="./../assets/connector/OpenText_ALM.png" alt="OpenText Project & Portfolio Management">
+    <a href="caliberrm.md">OpenText<br>Project & Portfolio Management</a>
 </div>
 
 <div class="tile">
