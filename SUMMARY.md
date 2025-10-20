@@ -206,6 +206,7 @@
               * [OH-JIRA-0174](docs/help-center/troubleshooting/errors/jira/oh-jira-0174.md)  
               * [OH-JIRA-0181](docs/help-center/troubleshooting/errors/jira/oh-jira-0181.md)  
               * [OH-JIRA-0221](docs/help-center/troubleshooting/errors/jira/oh-jira-0221.md)  
+              * [OH-JIRA-0220](docs/help-center/troubleshooting/errors/jira/oh-jira-0220.md)
               * [OH-JIRA-0227](docs/help-center/troubleshooting/errors/jira/oh-jira-0227.md)  
               * [OH-JIRA-0232](docs/help-center/troubleshooting/errors/jira/oh-jira-0232.md)  
               * [OH-JIRA-0323](docs/help-center/troubleshooting/errors/jira/oh-jira-0323.md)  
