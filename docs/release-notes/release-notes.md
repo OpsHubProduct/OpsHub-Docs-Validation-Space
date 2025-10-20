@@ -1,35 +1,45 @@
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
-# New Version(s)
-- **Java Development Kit (JDK):** 17.0.16
-- **Tomcat:** 10.1.44
-- **Aras Innovator:** Release 35
 
-# Enhancements
-## Common
-- Failure notification has been enhanced to support waiting until a global error occurs N times before sending a notification.  
-  - For details on how to configure the error count before a notification is sent, refer to the [Register for Failure Notification](../help-center/troubleshooting/configure-post-failure-notification.md#register-for-failure-notification) section in the product guide.  
-  - This configuration helps reduce unnecessary notifications caused by temporary issues, such as connection resets or timeouts.
-- Added support for Activate, Inactivate, and Execute operations based on direction for integration groups.
-- Improved link operations to reduce redundant logging during link relationship processing.
 
-## Azure DevOps Services
-- Added support for Markdown for rich text fields.  
-  - For detailed configuration instructions, refer to the connector guide under [Configuring Rich Text Field Format](../connectors/azure-devops#configuring-rich-text-field-format-for-write-operations).
+# Critical Updates & Actions Required
+## Jira Cloud
+* Starting 24 November 2025, Jira Cloud will enforce the "Link Issues" permission requirement for both inward and outward issues during all link operations. Previously, this permission was only required on the outward issue.
+  * If the user or service account lacks the necessary permission, an error will be returned during issue creation or updates via the UI, REST APIs, or automation rules.
+  * To prevent disruptions, ensure that the "Link Issues" permission is granted to all relevant service accounts across all linked projects.
+  * For more details, refer to the [minimal permissions](../connectors/jira.md#user-privileges) required for service accounts.
 
-## Tricentis qTest
-- Added support for Check and Create operations for Modules in qTest.  
-  - For detailed configuration instructions, refer to the connector guide under [Synchronizing Requirements and Test Cases within a Module](../connectors/tricentis-qTest.md#requirement-and-test-case).
+# Enhancement
+
+## Azure DevOps Server/Services
+* Eliminated the dependency on TFS Services for synchronizing test entities such as Test Plan, Test Suite, Test Run, and Test Result—for Azure DevOps Services and Azure DevOps Server (version 2020 and above).
+* Added support for retrieving a work item/test entity's history using the utility method `getEntityRevisions`.
+>**Note**:  This method enables syncing an item's history into a comment or rich text field in the target system.
+
+## Rally Software
+* Optimized the retrieval of Test Case results when Rally Software is the source system.
 
 # Major Bugs
 
-## IBM Rational DOORS
-- Resolved an issue where a connection reset error occurred due to the DXL script exceeding the character limit.  
-  - **Use case:** When IBM Rational DOORS is configured as the source system, <code class="expression">space.vars.SITENAME</code> retrieves data for mapped fields along with the field used for target lookup. Due to improper handling of duplication, the target lookup field was being added repeatedly, even if it was already in the list, causing the DXL script to exceed the character limit.
+## Common
+* Resolved an issue where relationship links were not synchronized to the target system during reconciliation.
+  * Use case: This issue occurred when using the "Recreate" option if entity not found or deleted in the target.
+* Resolved an issue where outdated data was being used or retrieved even after updating the Excel sheet.
+  * Use case: When a user clicked the "Save" button before the Excel upload completed, the updated data was not saved to the database, leading to the retrieval of stale data.
+* Implemented file type validation for the Excel upload feature to ensure only supported file formats are accepted.
+* Resolved an issue where entity mentions caused processing failures if the mentioned entity belonged to a different project and its entity type was not available in the current project.
+  * Use case: In the source Jira, a bug (E1) from project P1 contains a mention of an already synced entity (E2) of type X (e.g., custom type "Request") from another project P2. Since type X does not exist in project P1, attempting to sync the entity led to a processing failure.
+* Resolved an issue where global failure notifications were triggered due to multiple jobs executing within a single minute, causing the failure occurrence count to hit the threshold even when the integration scheduler was set to one minute.
+
+## Aha!
+* Resolved an issue where valid rich text (HTML) content was not rendered correctly in Aha, despite being well-formed HTML.
+  * Use case: In Aha, when a full HTML structure—including `<html>`, `<head>`, and `<body>` tags—was sent, Aha internally stripped these outer tags before processing. However, if the source data included self-closing tags such as `<head/>`, Aha failed to strip them correctly, leading to rendering issues.
 
 ## Jira Data Center/Cloud
-- Resolved an issue where linking operations for archived items were not being skipped if the linked item belonged to a different project in the end system.
-- Resolved an issue where relationship mapping in <code class="expression">space.vars.SITENAME</code> displayed reversible link types that are not allowed in the end system.  
-  - **Example:** For the Test Plan entity in Xray, the allowed links in the end system are `tests` and `testExecutions`. However, <code class="expression">space.vars.SITENAME</code> also displayed the reverse link `testPlans`, which should only be configured from Tests or Test Executions. If a user mapped the `testPlans` link under the Test Plan entity, it would result in an error, as this link type was not permitted for that issue type in the end system.  
-  - **Action:** If such invalid link types are mapped in <code class="expression">space.vars.SITENAME</code>, they must be removed according to the steps in the [post-migration checklist](../manage/upgrade/post-migration-checklist.md#update-relationship-mapping-for-jira).
+* Resolved an issue where a comment mention was incorrectly detected as an entity mention, leading to a processing failure.
+
+## Microsoft Dynamics 365
+* Resolved an issue where the Case's Internal ID was displayed instead of the Display ID during synchronization to the target system.
+  * The internal Id of the case appeared in the configured "Remote ID" field as well as in the sync report within <code class="expression">space.vars.SITENAME</code>.
+
 
 {% endif %}
