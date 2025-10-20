@@ -43,6 +43,6 @@ If you are not able to see the recently created project/field/field/field values
 * Click on reload icon for appropriate system as shown below:
   
 <p align="center">
-  <img src="../assets/Reload_End_System_Integration.jpg" width="1100" />
+  <img src="../../../assets/Reload_End_System_Integration.jpg" width="1100" />
 </p>
 
