@@ -5,7 +5,7 @@ Given below are the systems supported currently by <code class="expression">spac
 | No.| System|    Versions Supported    |    Entities Supported       |Formerly Known as|
 |----|-------|--------------------------|-----------------------------|-----------------|
 | 1 | Aha! | All | Epic, Feature, Release, Requirement, To-do, Note | |
-| 2 | Aras Innovator | 11.0 SP9, 11.0 SP11, 11.0 SP12. From 12.0 to 12.0 SP9, 14.0.x (2023 Release, Release 26, Release 27, Release 28) | All System Item Types (excluding Item Types of Relationship and Core Type) and All Custom Item Types (excluding Item Types of Relationship Type) | |
+| 2 | Aras Innovator | All | All System Item Types (excluding Item Types of Relationship and Core Type) and All Custom Item Types (excluding Item Types of Relationship Type) | |
 | 3 | Azure DevOps Server | {% include "../.gitbook/includes/tfs-tfvc-supported-versions.md" %} | {% include "../.gitbook/includes/tfs-supported-entities.md" %} | Team Foundation Server (TFS) |
 | 4 | Azure DevOps Server Version Control | {% include "../.gitbook/includes/tfs-tfvc-supported-versions.md" %} | {% include "../.gitbook/includes/tfvc-supported-entities.md" %} | Team Foundation Server Version Control |
 | 5 | Azure DevOps Services | All | {% include "../.gitbook/includes/vsts-supported-entities.md" %} | Visual Studio Team Services (VSTS) |
