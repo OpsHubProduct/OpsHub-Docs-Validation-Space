@@ -22,7 +22,7 @@ Follow the steps given below for installation:
 
 * Navigate to the path `<OPSHUB_INSTALLATION_PATH>\Other_Resources\Resources`.
 * Extract the `OpsHubTFSService.zip` package.
-* Service will be installed on port **<9090>** by default. Please check the port available for service which you configure for the service (Default port is <9090>). Refer section [How to change the port of service](../../connectors/team-foundation-server.md#how-to-change-the-port-of-service) to learn how to change the default port of service.
+* Service will be installed on port **<9090>** by default. Please check the port available for service which you configure for the service (Default port is <9090>). Refer section [How to change the port of service](../../connectors/azure-devops#how-to-change-the-port-of-service) to learn how to change the default port of service.
 * Open the command prompt as _Run As Administrator_ and navigate to the extracted folder in which the `registerTFSWCFService.bat` is placed and execute `registerTFSWCFService.bat`.
 * Once the command is executed, go to Windows Services, and look for a service with the name **OpsHubTFSService**. Check if the service has started or not. If it has not started, then start the service.
 * Test the web service by opening this URL in browser: `http://<hostname>:<port>/TFSService`.\
@@ -30,5 +30,5 @@ Follow the steps given below for installation:
 
 In case the machine on which <code class="expression">space.vars.SITENAME</code> installed is behind the proxy (network proxy), then perform the steps mentioned in the [Proxy settings](../../manage/administrator/proxy-setting.md) section.
 
-It is also required to configure the proxy settings for <code class="expression">space.vars.SITENAME</code> Service, refer to [Proxy settings](../../connectors/team-foundation-server.md#proxy-settings-for-the-service) in appendix section for the <code class="expression">space.vars.SITENAME</code> Service to learn the configuration steps.
+It is also required to configure the proxy settings for <code class="expression">space.vars.SITENAME</code> Service, refer to [Proxy settings](../../connectors/azure-devops#proxy-settings-for-the-service) in appendix section for the <code class="expression">space.vars.SITENAME</code> Service to learn the configuration steps.
 {% endif %}

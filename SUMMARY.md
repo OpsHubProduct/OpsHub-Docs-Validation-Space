@@ -263,7 +263,7 @@
 * [Connector Guide](docs/connectors/connectors.md)
   * [Aha](docs/connectors/aha.md)
   * [Aras Innovator](docs/connectors/aras.md)
-  * [Azure DevOps Server/Services/Version Control](docs/connectors/team-foundation-server.md)
+  * [Azure DevOps Server/Services/Version Control](docs/connectors/azure-devops)
       * [Service Troubleshooting](docs/connectors/service-troubleshooting.md) 
   * [Blueprint](docs/connectors/blueprint.md)
   * [BMC Remedy](docs/connectors/remedy.md)

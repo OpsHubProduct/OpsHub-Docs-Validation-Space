@@ -10,7 +10,7 @@ Best of breed tools such as Azure DevOps Server (TFS) and Micro Focus ALM bring 
 # System Prerequisites
 Configuring [system pre-requisites](../../integrate/integration-prerequisites.md) is mandatory for successful system configuration.  
 
-Check out the pre-requisites for [Azure DevOps Server (TFS)](../../connectors/team-foundation-server.md#prerequisites) and [Micro Focus ALM](../../connectors/micro-focus-alm-qc.md#prerequisites) systems before you proceed with the integration.  
+Check out the pre-requisites for [Azure DevOps Server (TFS)](../../connectors/azure-devops#prerequisites) and [Micro Focus ALM](../../connectors/micro-focus-alm-qc.md#prerequisites) systems before you proceed with the integration.  
 
 # Integration Configuration
 * Log in into **<code class="expression">space.vars.SITENAME</code>**. The default credentials are:  
@@ -34,7 +34,7 @@ Check out the pre-requisites for [Azure DevOps Server (TFS)](../../connectors/te
 </p>  
 
 ## Configure System(s)
-* Once you have fulfilled all the prerequisites and are done with the above-mentioned check, configure Azure DevOps Server (TFS) – Micro Focus ALM by following the steps given on [Azure DevOps Server (TFS)](../../connectors/team-foundation-server.md#system-configuration) and [Micro Focus ALM](../../connectors/micro-focus-alm-qc.md#system-configuration) pages respectively.  
+* Once you have fulfilled all the prerequisites and are done with the above-mentioned check, configure Azure DevOps Server (TFS) – Micro Focus ALM by following the steps given on [Azure DevOps Server (TFS)](../../connectors/azure-devops#system-configuration) and [Micro Focus ALM](../../connectors/micro-focus-alm-qc.md#system-configuration) pages respectively.  
 <p align="center">
   <img src="../../assets/TFS_5.png" width="1100"/>
 </p>  
@@ -176,7 +176,7 @@ For example, a user can specify that only bugs with high priority are to be sync
   * In the pop-up, select **Yes** from **Configure Criteria** list.  
   * Enter the criteria query.  
 
->**Note**: Queries differ for different systems. For details, refer to [Azure DevOps Server (TFS)](../../connectors/team-foundation-server.md#criteria-configuration) and [Micro Focus ALM](../../connectors/micro-focus-alm-qc.md#criteria-configuration).  
+>**Note**: Queries differ for different systems. For details, refer to [Azure DevOps Server (TFS)](../../connectors/azure-devops#criteria-configuration) and [Micro Focus ALM](../../connectors/micro-focus-alm-qc.md#criteria-configuration).  
 
 * Select **In Database** from the **Select criteria storage type** drop-down list.  
 

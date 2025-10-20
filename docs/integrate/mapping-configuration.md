@@ -769,7 +769,7 @@ Say, for example, if the rich text field **description** of the source end syste
 
 Entity mention sync is supported only when the following systems are configured as the source in **<code class="expression">space.vars.SITENAME</code>**:
 
-1. [**Team Foundation Server ALM and Azure DevOps Services**](../connectors/team-foundation-server.md#mapping-for-entity-mention-field)
+1. [**Team Foundation Server ALM and Azure DevOps Services**](../connectors/azure-devops#mapping-for-entity-mention-field)
 2. [**Codebeamer**](../connectors/codebeamer.md#mapping-for-entity-mention-field)
 3. [**CodebeamerX**](../connectors/codebeamer.md#mapping-for-entity-mention-field)
 4. [**Rally**](../connectors/rally.md#mapping-for-entity-mention-field)

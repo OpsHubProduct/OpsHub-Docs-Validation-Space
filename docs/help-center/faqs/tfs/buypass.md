@@ -19,6 +19,6 @@ Following are the use cases when ByPass option is used:
   This means a user can create/update a work item with a past date using the ByPass option.  
   In short, a user can change **Changed Date** or other date fields in audit/history by enabling ByPass.
 
-Refer table under [Team Foundation Server - Common](../../../connectors/team-foundation-server.md#known-behaviors-and-limitations) section to check which all fields are supported with and without ByPass with different API options.
+Refer table under [Team Foundation Server - Common](../../../connectors/azure-devops#known-behaviors-and-limitations) section to check which all fields are supported with and without ByPass with different API options.
 
 

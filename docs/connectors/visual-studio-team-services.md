@@ -1,1 +1,1 @@
-Please refer to the page [Team Foundation Server](team-foundation-server.md) for details related to Azure DevOps.
+Please refer to the page [Team Foundation Server](azure-devops) for details related to Azure DevOps.

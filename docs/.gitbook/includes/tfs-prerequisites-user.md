@@ -1,7 +1,7 @@
 These are the common privileges for **user**. To know specific privileges required for user, refer to [User Privileges](tfs-prerequisites.md#user-privileges).
 
 * Add a user in Azure DevOps that is dedicated for <code class="expression">space.vars.SITENAME</code>. This user shouldn't perform any other action from Azure DevOps user interface. Please make sure this user or Service Principal has a unique display name across the instance.
-* User must be a member of **Project Administrators** group for work item entities and Build entity migration. For Meta entities like Group, User entities, integration user must be a member of **Project Collection Administrators** group or **Project Administrators** group. Refer section [How to Add User or Service Principal in group](../../connectors/team-foundation-server.md#how-to-add-user-or-service-principal-in-group).
+* User must be a member of **Project Administrators** group for work item entities and Build entity migration. For Meta entities like Group, User entities, integration user must be a member of **Project Collection Administrators** group or **Project Administrators** group. Refer section [How to Add User or Service Principal in group](../../connectors/azure-devops#how-to-add-user-or-service-principal-in-group).
 
 > **Note**: If integration user is not a member of **Project Collection Administrators** group, collection level permissions will not be synchronized.
 
@@ -28,7 +28,7 @@ user. Otherwise, Test Suite synchronization will be resulted in to job error/syn
 
 ### Personal Access Token Minimum Required Permission
 
-Refer [Create Personal Access Token](../../connectors/team-foundation-server.md#create-personal-access-token) section to learn about how to create Personal Access Token.
+Refer [Create Personal Access Token](../../connectors/azure-devops#create-personal-access-token) section to learn about how to create Personal Access Token.
 
 #### For On-Cloud Deployment
 
@@ -86,6 +86,6 @@ Refer [Create Personal Access Token](../../connectors/team-foundation-server.md#
 * It is applicable when the authentication mode is set to **Service Principal - Client Secret** or **Service Principal - Client Certificate**.
 * These authentication types are only supported for **on-cloud deployment** for which the available entity types are **Work Items** & **Build**.
 * Azure DevOps collection must be connected to Microsoft Entra (Azure Active Directory) for which Service Principal is being used.
-* Refer to [Secret key & Certificate](../../connectors/team-foundation-server.md#secret-key-and-certificate-in-microsoft-entra-azure-active-directory) section to generate **Secret key** or to upload **Certificate** in Microsoft Entra (Azure Active Directory).
+* Refer to [Secret key & Certificate](../../connectors/azure-devops#secret-key-and-certificate-in-microsoft-entra-azure-active-directory) section to generate **Secret key** or to upload **Certificate** in Microsoft Entra (Azure Active Directory).
 
 .

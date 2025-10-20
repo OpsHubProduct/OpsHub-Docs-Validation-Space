@@ -7,7 +7,7 @@ Best-of-breed systems such as Jira and Azure DevOps Server (TFS) bring rich func
 </p>
 
 # System Prerequisites
-Configuring [system pre-requisites](../../integrate/integration-prerequisites.md) is mandatory for successful system configuration. Check out the pre-requisites for [Jira](../../connectors/jira.md#prerequisites) and [Azure DevOps Server (VSTS)](../../connectors/team-foundation-server.md#prerequisites) systems before you proceed with the integration.
+Configuring [system pre-requisites](../../integrate/integration-prerequisites.md) is mandatory for successful system configuration. Check out the pre-requisites for [Jira](../../connectors/jira.md#prerequisites) and [Azure DevOps Server (VSTS)](../../connectors/azure-devops#prerequisites) systems before you proceed with the integration.
 
 # Integration Configuration
 * Log in into <code class="expression">space.vars.SITENAME</code>. The default credentials are:  
@@ -37,7 +37,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 
 ## Configure System(s)
 
-* Once you have fulfilled all the prerequisites and are done with the above-mentioned check, configure Jira and Azure DevOps Server (TFS) by following the steps given on [Jira](../../connectors/jira.md#system-configuration) and [Azure DevOps Server (TFS)](../../connectors/team-foundation-server.md#system-configuration) pages respectively.  
+* Once you have fulfilled all the prerequisites and are done with the above-mentioned check, configure Jira and Azure DevOps Server (TFS) by following the steps given on [Jira](../../connectors/jira.md#system-configuration) and [Azure DevOps Server (TFS)](../../connectors/azure-devops#system-configuration) pages respectively.  
 
 <p align="center">
   <img src="../../assets/JST_5.png">
@@ -175,7 +175,7 @@ At this stage, you can also map entities such as comments and attachments. Refer
   - Enter the criteria query.  
 
 >**Note**: The query is different for different systems. You can refer to more details about Criteria Configuration in [Jira](../../connectors/jira.md#criteria-configuration)
- and [Azure DevOps Server (TFS)](../../connectors/team-foundation-server.md#criteria-configuration) from their respective configuration pages.
+ and [Azure DevOps Server (TFS)](../../connectors/azure-devops#criteria-configuration) from their respective configuration pages.
 
 - Select **In Database** from the **Select criteria storage type** drop-down list.  
 
