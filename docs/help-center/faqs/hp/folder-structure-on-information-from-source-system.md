@@ -48,6 +48,7 @@ Now, the user wants to synchronize this hierarchy of relationship as folder stru
 </p>
 
 
+
 * In this mapping, configure the Relationships (Parent-Child) as configured in the 'Epic' to 'Requirement' mapping.
 
 
