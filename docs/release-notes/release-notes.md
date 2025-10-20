@@ -5,7 +5,6 @@
 - **Aras Innovator:** Release 35
 
 # Enhancements
-
 ## Common
 - Failure notification has been enhanced to support waiting until a global error occurs N times before sending a notification.  
   - For details on how to configure the error count before a notification is sent, refer to the [Register for Failure Notification](../help-center/troubleshooting/configure-post-failure-notification.md#register-for-failure-notification) section in the product guide.  
