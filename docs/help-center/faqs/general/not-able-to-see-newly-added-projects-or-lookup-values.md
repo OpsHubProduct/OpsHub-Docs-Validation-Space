@@ -21,7 +21,7 @@ Sometimes when user creates new project/entity type/field/field value in the end
 As the problem could occur due to multiple reasons, choose a solution that is suited to the reason that affects you.
 
 ### Permission Issue
-Due to lack of permissions, <code class="expression">space.vars.SITENAME</code> may not be able to see newly created project/entity types/fields. For this reason, check that pre-requisites are being properly followed for that system. To validate this, refer [Connectors](connectors) documentation for that system.
+Due to lack of permissions, <code class="expression">space.vars.SITENAME</code> may not be able to see newly created project/entity types/fields. For this reason, check that pre-requisites are being properly followed for that system. To validate this, refer [Connectors](../../../connectors/connectors.md) documentation for that system.
 
 ### Caching Issue
 Sometimes when user creates new project/entity type/field/field value in end system and then try to check it in <code class="expression">space.vars.SITENAME</code>, then due to caching it may not appear immediately in <code class="expression">space.vars.SITENAME</code>. 
@@ -33,7 +33,7 @@ If you are not able to see recently created project/field/field values in mappin
 * Click on reload icon for appropriate system as shown below:
   
 <p align="center">
-  <img src="../assets/Reload_End_System_FieldMapping.png" alt="Reload End System Field Mapping"/>
+  <img src="../../../assets/Reload_End_System_FieldMapping.png" width="500"/>
 </p>
 
 #### Reload data in integration
@@ -43,6 +43,6 @@ If you are not able to see the recently created project/field/field/field values
 * Click on reload icon for appropriate system as shown below:
   
 <p align="center">
-  <img src="../assets/Reload_End_System_Integration.jpg" alt="Reload End System Integration"/>
+  <img src="../assets/Reload_End_System_Integration.jpg" width="500" />
 </p>
 
