@@ -9,14 +9,14 @@ You need to register for **Failure Notification for the integration** for which 
 Failure Notification requires SMTP mail client systems to be created which can send emails notifications. User can also create systems from Integration → System Configuration → Create System.
 
 <p align="center">
-  <img src="../../assets/Configure-Failure-Notification-Image-2F1.png" alt="Configure-Failure-Notification-Image-2F1"/>
+  <img src="../../assets/Configure-Failure-Notification-Image-2F1.png" width="600"/>
 </p>
 
 
 This section shows SMTP Mail Client System Configuration steps in detail.
 
 <p align="center">
-  <img src="../../assets/Configure-Failure-Notification-Image-3.png" alt="Configure-Failure-Notification-Image-3"/>
+  <img src="../../assets/Configure-Failure-Notification-Image-3.png" width="800"/>
 </p>
 
 1. Set **System Name** to **SMTP Mail client**.  
@@ -29,19 +29,19 @@ This section shows SMTP Mail Client System Configuration steps in detail.
 8. Give email id of recipient of notifications in **To Email-Id**.  
 9. Click **Save** to save the configuration.
 
-## Register For Failure Notification
+# Register For Failure Notification
 
 To register for **Failure Notification**, follow the steps given below:
 
 <p align="center">
-  <img src="../../assets/Configure-Failure-Notification-Image-2F2.png" alt="Configure-Failure-Notification-Image-2F2"/>
+  <img src="../../assets/Configure-Failure-Notification-Image-2F2.png"  width="800"/>
 </p>
 
 
 - Select **Configure Failure Notification** from the as shown in the image above by clicking the **Configure Failure Notification** icon against an integration name. This will open "Configure Failure Notification" dialog.
 
 <p align="center">
-  <img src="../../assets/NotificationForm.png" alt="NotificationForm"/>
+  <img src="../../assets/NotificationForm.png"  width="800"/>
 </p>
 
 - Select Email server system from the dropdown list in Email server field.
@@ -63,20 +63,20 @@ To register for **Failure Notification**, follow the steps given below:
 >**Note**: You can register for Failure Notifications on multiple integrations globally. Select all the integrations on which the Failure Notifications are to enabled and select the global **Configure Failure Notification** icon. Notification can be configured for only those integrations which donot have post-failure notification configured. Configuring the failure notification through bulk edit will set up failure notifications for **Global and Processing** failures for both directions.
 
 <p align="center">
-  <img src="../../assets/Configure-Failure-Notification-Image-2F3.png" alt="Configure-Failure-Notification-Image-2F3"/>
+  <img src="../../assets/Configure-Failure-Notification-Image-2F3.png" width="800"/>
 </p>
 
-## Unregister/Update Configure Failure Notification
+# Unregister/Update Configure Failure Notification
 
 - After registering for **Failure Notification** if it is required to update or unregister it, then select **Configure Failure Notification** from the menu for the integration on which failure notification is required to update or unregister.
 - Click **Unregister** button to disable the failure notifications coming for the integration.
 
-## Not getting failure alert emails?
+# Not getting failure alert emails?
 
 If you are not getting failure alert emails, you should go to Global Failures and check whether there is an error logged or not. You can filter the error by error types: Integration errors and other errors.
 
 <p align="center">
-  <img src="../../assets/Configure-Failure-Notification-Image-4F12.png" alt="Configure-Failure-Notification-Image-4F12"/>
+  <img src="../../assets/Configure-Failure-Notification-Image-4F12.png"  width="800"/>
 </p>
 
 
@@ -87,9 +87,13 @@ If you are not getting failure alert emails, you should go to Global Failures an
 - To change the trigger time for the Post Failure Notification job, go to the OpsHub system under the System tab.
 - By default, the value for **Post-Notification Scheduler** will be set to **30 Minute Schedule**. Select an option from drop down to schedule the Post Failure Notification job.
 
-![OpsHub_System1.png](../../assets/OpsHub-System1.png)
+<p align="center">
+  <img src="../../assets/OpsHub-System1.png" width="800"/>
+</p>
 
-![OpsHub_System_Scheduler.png](../../assets/OpsHub-System-Scheduler.png)
+<p align="center">
+  <img src="../../assets/OpsHub-System-Scheduler.png" width="800"/>
+</p>
 
 
 
