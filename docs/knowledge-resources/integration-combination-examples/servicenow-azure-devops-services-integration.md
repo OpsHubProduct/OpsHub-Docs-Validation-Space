@@ -9,7 +9,7 @@ Best of breed tools such as ServiceNow and Azure DevOps Services (VSTS) bring ri
 
 # System Prerequisites
 
-Configuring [system pre-requisites](../../integrate/integration-prerequisites.md) is mandatory for successful system configuration. Check out the pre-requisites for [ServiceNow](../../connectors/servicenow.md#prerequisites) and [Azure DevOps Services (VSTS)](../../connectors/azure-devops#prerequisites) systems before you proceed with the integration.
+Configuring [system pre-requisites](../../integrate/integration-prerequisites.md) is mandatory for successful system configuration. Check out the pre-requisites for [ServiceNow](../../connectors/servicenow.md#prerequisites) and [Azure DevOps Services (VSTS)](../../connectors/azure-devops.md#prerequisites) systems before you proceed with the integration.
 
 # Integration Configuration
 
@@ -37,7 +37,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 
 ## Configure System(s)
 
-* Once you have fulfilled all the prerequisites and are done with the above-mentioned check, configure ServiceNow and Azure DevOps Services (VSTS) by following the steps given on [ServiceNow system configuration](../../connectors/servicenow.md#system-configuration) and [Azure DevOps Services (VSTS) system configuration](../../connectors/azure-devops#system-configuration) pages respectively.
+* Once you have fulfilled all the prerequisites and are done with the above-mentioned check, configure ServiceNow and Azure DevOps Services (VSTS) by following the steps given on [ServiceNow system configuration](../../connectors/servicenow.md#system-configuration) and [Azure DevOps Services (VSTS) system configuration](../../connectors/azure-devops.md#system-configuration) pages respectively.
 
 <p align="center">
   <img src="../../assets/SNT_2.png"  width="1100"/>
@@ -160,7 +160,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * To specify conditions, use Criteria Configuration. Example: synchronize only Low Priority Bugs.  
 * Click configuration-criteria icon, select **Yes** in **Configure Criteria**, enter criteria query.  
 
->**Note**: Queries vary by system. See [ServiceNow Criteria Configuration](../../connectors/servicenow.md#criteria-configuration) and [Azure DevOps Criteria Configuration](../../connectors/azure-devops#criteria-configuration).  
+>**Note**: Queries vary by system. See [ServiceNow Criteria Configuration](../../connectors/servicenow.md#criteria-configuration) and [Azure DevOps Criteria Configuration](../../connectors/azure-devops.md#criteria-configuration).  
 
 * Select **In Database** from **Select criteria storage type** drop-down.
 

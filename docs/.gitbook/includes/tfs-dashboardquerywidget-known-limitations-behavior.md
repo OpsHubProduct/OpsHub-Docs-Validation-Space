@@ -6,7 +6,7 @@
 
 {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
 * Criteria based synchronization and target lookup is not supported for Dashboard and Query entity. Refer to [Criteria Configuration in integration](../../integrate/integration-configuration.md#criteria-configuration) and [Search in Target Before Sync](../../integrate/integration-configuration.md#search-in-target-before-sync) to know more on these features.
-* Criteria based synchronization is not supported for Query entity. Target lookup is only supported for 'Folder' field, please refer to [Target lookup query format](../../connectors/azure-devops#supported-target-lookup-query-for-query-entity) for its target lookup query format.
+* Criteria based synchronization is not supported for Query entity. Target lookup is only supported for 'Folder' field, please refer to [Target lookup query format](../../connectors/azure-devops.md#supported-target-lookup-query-for-query-entity) for its target lookup query format.
 
 {% endif %}
 
@@ -43,7 +43,7 @@ Following are the limitations and behaviors specific to the individual entities 
   **Reason:** ADO/TFS API unavailability.
 * Synchronization Behavior of **WIQL** field:
   * The Query entity has a field WIQL that represents the actual criteria that are given in the Query. The WIQL follows a specific format for which you can refer to [WIQL syntax](https://docs.microsoft.com/en-us/azure/devops/boards/queries/wiql-syntax?view=azure-devops).
-  *   Refer to section [Synchronization Behavior of fields with WIQL format](../../connectors/azure-devops#synchronization-behavior-of-fields-with-wiql-format) to know general sync behavior applicable to this type of field. Following are the behavior specific to the WIQL field of the Query entity.
+  *   Refer to section [Synchronization Behavior of fields with WIQL format](../../connectors/azure-devops.md#synchronization-behavior-of-fields-with-wiql-format) to know general sync behavior applicable to this type of field. Following are the behavior specific to the WIQL field of the Query entity.
       **User values mentioned in WIQL**
 
       * Azure DevOps End point Format - User Display Name . **Example:** demouser1 [demouser1@opshub.com](mailto:demouser1@opshub.com)
@@ -109,7 +109,7 @@ Following are the limitations and behaviors specific to the individual entities 
   * When a chart created using a query is directly added to dashboard without any additional configuration, then the widget will be synchronized without any query link.
     * **Reason:** The API for widget does not provide the required query link information in the above use case.
     * **Solution:** The issue can be resolved by saving these type of widgets on source side without any changes. This will unlink the widget from the chart and link to the original query, providing the correct query link information.
-* For accurate ID transformation using [Transformation JSON](../../connectors/azure-devops#json-structure-overview), these items must have corresponding target items with the same name - Release, Project, Team, Repository. If not present, those configurations will be synchronized with empty values.
+* For accurate ID transformation using [Transformation JSON](../../connectors/azure-devops.md#json-structure-overview), these items must have corresponding target items with the same name - Release, Project, Team, Repository. If not present, those configurations will be synchronized with empty values.
 * For widgets with team configurations where the selected teams belong to projects different from the one being synchronized, values for these cross-project teams will be synchronized only in version 2018 and above.
   **Reason:** API to fetch teams across-project teams is available from version 2018.
 * From the widgets provided by Azure DevOps out-of-the-box, following widgets synchronization have some limitations:
@@ -120,4 +120,4 @@ Following are the limitations and behaviors specific to the individual entities 
     * Test Results Trend (Advanced)
     * Deployment Status
 
-        > **Note** Since the JSON path for some referenced IDs is not fixed in the above widgets, it is recommended to use regex-based search as given in [Transformation JSON](../../connectors/azure-devops#json-structure-overview) section for more accurate results.
+        > **Note** Since the JSON path for some referenced IDs is not fixed in the above widgets, it is recommended to use regex-based search as given in [Transformation JSON](../../connectors/azure-devops.md#json-structure-overview) section for more accurate results.
