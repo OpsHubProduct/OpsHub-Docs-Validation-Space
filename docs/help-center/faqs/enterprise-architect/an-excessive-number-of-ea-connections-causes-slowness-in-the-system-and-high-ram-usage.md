@@ -14,9 +14,17 @@
 - Stop the OpsHubEAWindowsService (Recommend to close by pressing enter key).
 - Press Windows + R to open the Run Dialog.
 - Type 'taskmgr' and click OK to open Task Manager.  
-  ![TaskManager](../../../../assets/TaskManager.png)
+
+ <p align="center">
+  <img src="../../../assets/TaskManager.png" width="800" />
+</p>
+
 - In the 'Background processes' section locate 'Enterprise Architect - UML Development Tool' processes.
 - Right click on each process and select 'End task' to terminate it and release the resource.  
-  ![End_Process](../../../../assets/End-Process.png)
+
+<p align="center">
+  <img src="../../../assets/End-Process.png" width="900"/>
+</p>
+
 
 > **Note**: To release all the connections properly when closing OpsHubEAWindowsService, we recommend to close OpsHubEAWindowsService using Enter key. Refer to [Setting up OpsHubEAWindowsService](../../../connectors/enterprise-architect.md#setting-up-opshubeawindowsservice)
