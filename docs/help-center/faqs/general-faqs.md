@@ -1,4 +1,3 @@
-
 * [What are the security aspects of on-premise deployment?](./general/security-aspects.md)  
 * [How to know which system/entity/version are supported ?](./general/supported-system-entity-version.md)  
 * [How to migrate from HSQL to other enterprise database?](./general/hsql-other-database.md)  
@@ -28,6 +27,4 @@
 * [How to move OpsHub Integration Manager from CentOS to Ubuntu?](./general/move-application-server.md)  
 * [How to identify between Custom and Default Workflows and their associated integrations?](./general/how-to-identify-between-custom-and-default-workflows-and-their-associated-integrations.md)  
 * [How to configure cross system linkages between IBM systems?](./general/how-to-configure-cross-system-linkage-in-ibm-systems.md)  
-
-
 
