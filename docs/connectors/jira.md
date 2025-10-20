@@ -15,7 +15,6 @@ These are the privileges required for the dedicated integration user to synchron
 Refer to [Grant permissions to Jira user](jira.md#grant-permissions-to-jira-user) for step-wise details.
 
 These permissions apply to both Jira On-Premise (self-hosted) and On-Demand (cloud) versions.
-
 **Basic issue-types** can be synchronized by granting:
 
 * Administer Projects (for synchronizing Sprint as field or entity)
