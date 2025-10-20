@@ -54,7 +54,7 @@ margin-bottom: 0.5em;
 
 <div class="tile-grid">
 
-  <div class="tile">
+  <div class="tile" data-view="cards">
     <img src="./../assets/connector/Aha.png" alt="Aha!">
     <a href="aha.md">Aha!</a>
   </div>
