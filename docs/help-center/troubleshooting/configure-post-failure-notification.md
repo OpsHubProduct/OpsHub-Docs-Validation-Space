@@ -9,7 +9,7 @@ You need to register for **Failure Notification for the integration** for which 
 Failure Notification requires SMTP mail client systems to be created which can send emails notifications. User can also create systems from Integration → System Configuration → Create System.
 
 <p align="center">
-  <img src="../../assets/Configure-Failure-Notification-Image-2F1.png" width="600"/>
+  <img src="../../assets/Configure-Failure-Notification-Image-2F1.png" width="900"/>
 </p>
 
 
@@ -88,11 +88,11 @@ If you are not getting failure alert emails, you should go to Global Failures an
 - By default, the value for **Post-Notification Scheduler** will be set to **30 Minute Schedule**. Select an option from drop down to schedule the Post Failure Notification job.
 
 <p align="center">
-  <img src="../../assets/OpsHub-System1.png" width="800"/>
+  <img src="../../assets/OpsHub-System1.png" width="900"/>
 </p>
 
 <p align="center">
-  <img src="../../assets/OpsHub-System-Scheduler.png" width="800"/>
+  <img src="../../assets/OpsHub-System-Scheduler.png" width="900"/>
 </p>
 
 
