@@ -10,7 +10,7 @@ Best of breed tools such as Azure DevOps Server (TFS) and Micro Focus ALM bring 
 # System Prerequisites
 Configuring [system pre-requisites](../../integrate/integration-prerequisites.md) is mandatory for successful system configuration.  
 
-Check out the pre-requisites for [Azure DevOps Server (TFS)](../../connectors/azure-devops.md#prerequisites) and [Micro Focus ALM](../../connectors/micro-focus-alm-qc.md#prerequisites) systems before you proceed with the integration.  
+Check out the pre-requisites for [Azure DevOps Server](../../connectors/azure-devops.md#prerequisites) and [Micro Focus ALM](../../connectors/micro-focus-alm-qc.md#prerequisites) systems before you proceed with the integration.  
 
 # Integration Configuration
 * Log in into **<code class="expression">space.vars.SITENAME</code>**. The default credentials are:  
