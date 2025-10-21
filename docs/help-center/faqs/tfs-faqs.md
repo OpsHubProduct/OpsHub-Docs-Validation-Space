@@ -7,12 +7,12 @@
 * [What should be scope/permissions assigned to the Personal Access Token?](./tfs/pat-permission.md)
 * [How do images in comment/disscussion functionality works after synchronization by <code class="expression">space.vars.SITENAME</code>?](./tfs/comment-inline-image.md)
 * [How to resolve processing failure for Pipeline integration when there is a Service Connection deleted in the end system?](./tfs/pipelineserviceconnectionfailure.md)
-  {% if "OpsHub Integration Manager" === space.vars.SITENAME %}
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
 * [Why <code class="expression">space.vars.SITENAME</code> needs OpsHubTFSService?](./tfs/purpose-of-opshubtfsservice.md)
 * [How to register OpsHubTFSService?](./tfs/register-opshubtfsservice.md)
 * [How to change default OpsHubTFSService port number?](./tfs/register-opsHubtfsservice-other-port.md)
-* [How to upgrade OpsHubTFSService after upgrading <code class="expression">space.vars.SITENAME</code>?](./tfs/upgrade-tfsservice.md)
+* [How to upgrade OpsHubTFSService after upgrading OpsHub Integration Manager?](./tfs/upgrade-tfsservice.md)
 * [What is Service URL during System Configuration?](./tfs/service-url.md)
 * [What is the usage of ByPass Rules?](./tfs/buypass.md)
 * [How to synchronize entities which meet specific conditions in TFS/Azure DevOps?](./tfs/criteria.md)
-  {% endif %}
+{% endif %}  
