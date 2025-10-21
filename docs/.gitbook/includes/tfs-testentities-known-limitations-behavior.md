@@ -127,7 +127,7 @@ Test Run settings, Outcome settings, MTM settings and MTM environments are not s
     - **Enclosed Value With Quote:** Boolean parameter indicating whether to have the transformed value within single quotes or not. If invoked as `true()`, the value will be enclosed in single quotes in the resulting query text. If `false()`, then the transformed value will not be enclosed.
     - **Source System Id:** System id of the source end system.
     - **Target System Id:** System id of the target end system. 
-    {% endif %}
+    {% endif %}  
 
 ## **Test Result and Test Run**
 
@@ -142,4 +142,4 @@ Test Run settings, Outcome settings, MTM settings and MTM environments are not s
  * Synchronization of video format attachment of Result Steps and Result is not supported.
  * Synchronization of Parameter Values for Step Results is not happening.
    * Reason: ADO/TFS API limitations.
- *'Duration' field will get synchronized only when the value of 'Status' field is 'completed'.
+ *'Duration' field will get synchronized only when the value of 'Status' field is 'completed'. 

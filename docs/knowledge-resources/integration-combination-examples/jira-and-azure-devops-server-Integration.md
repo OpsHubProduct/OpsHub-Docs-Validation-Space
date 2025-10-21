@@ -7,7 +7,7 @@ Best-of-breed systems such as Jira and Azure DevOps Server (TFS) bring rich func
 </p>
 
 # System Prerequisites
-Configuring [system pre-requisites](../../integrate/integration-prerequisites.md) is mandatory for successful system configuration. Check out the pre-requisites for [Jira](../../connectors/jira.md#prerequisites) and [Azure DevOps Server](../../connectors/azure-devops.md#prerequisites)  systems before you proceed with the integration.
+Configuring [system pre-requisites](../../integrate/integration-prerequisites.md) is mandatory for successful system configuration. Check out the pre-requisites for [Jira](../../connectors/jira.md#prerequisites) and [Azure DevOps Server](../../connectors/azure-devops.md#prerequisites)  systems before you proceed with the integration. 
 
 # Integration Configuration
 * Log in into <code class="expression">space.vars.SITENAME</code>. The default credentials are:  

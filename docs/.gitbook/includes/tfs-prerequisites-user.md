@@ -86,6 +86,6 @@ Refer [Create Personal Access Token](../../connectors/azure-devops.md#create-per
 * It is applicable when the authentication mode is set to **Service Principal - Client Secret** or **Service Principal - Client Certificate**.
 * These authentication types are only supported for **on-cloud deployment** for which the available entity types are **Work Items** & **Build**.
 * Azure DevOps collection must be connected to Microsoft Entra (Azure Active Directory) for which Service Principal is being used.
-* Refer to [Secret key & Certificate](../../connectors/azure-devops.md#secret-key-and-certificate-in-microsoft-entra-azure-active-directory) section to generate **Secret key** or to upload **Certificate** in Microsoft Entra (Azure Active Directory).
+* Refer to [Secret key & Certificate](../../connectors/azure-devops.md#secret-key--certificate-in-microsoft-entra-azure-active-directory) section to generate **Secret key** or to upload **Certificate** in Microsoft Entra (Azure Active Directory). 
 
 .
