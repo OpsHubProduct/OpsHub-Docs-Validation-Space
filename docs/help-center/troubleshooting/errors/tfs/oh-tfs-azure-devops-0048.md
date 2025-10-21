@@ -24,3 +24,4 @@ Following are the probable reasons for this:
 **Option#2** - If you are using "Cloud" deployment with "Basic" Authentication Mode, then make sure you have enabled Alternative Credentials for Integration User and same has provided during system configuration. Click [here](../../../../connectors/azure-devops.md#enable-alternate-authentication-credentials) to read how to enable alternative credentials.
 
 **Option#3** - If you are using "Cloud" deployment with "Personal Access Token" Authentication Mode and your Personal Access Token is not Active or not valid, then you can create new Personal Access Token and provide that Personal Access Token during system configuration. Refer [**Personal Access Token**](../../../../connectors/azure-devops.md#create-personal-access-token) section to learn how to create a new personal access token.&#x20;
+

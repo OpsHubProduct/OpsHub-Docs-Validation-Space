@@ -18,4 +18,3 @@ If OpsHubTFSService is registered successfully, the following output will be ope
 
 ![TFS Service Validation](../../../assets/TFSService_Validation.png)
 
-
