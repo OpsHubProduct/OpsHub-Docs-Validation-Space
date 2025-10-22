@@ -372,7 +372,7 @@ margin-bottom: 0.5em;
          <td><a href="azure-devops.md">Azure DevOps</a></td>
       </tr>
       <tr>
-         <td><img width="50" src="./../assets/connector/OpenText_ALM.png" alt="Aha!">Aha!</td>
+         <td><img width="50px" height="50px" src="./../assets/connector/OpenText_ALM.png" alt="Aha!">Aha!</td>
          <td><a href="aha.md">Aha!</a></td>
          <td><a href="aha.md">Aha!</a></td>
       </tr>
