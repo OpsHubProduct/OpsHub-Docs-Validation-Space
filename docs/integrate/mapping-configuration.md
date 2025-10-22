@@ -776,6 +776,7 @@ Entity mention sync is supported only when the following systems are configured 
 5. [**Jira**](../connectors/jira.md#mapping-for-entity-mention-field)
 6. [**GitHub**](../connectors/github.md#entity-mention)
 
+
 ### User Mention Configuration When User Search On Email Not Supported
 
 _If source system or target system doesn't support user search on Email API then the default XSLT needs to be changed._

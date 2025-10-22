@@ -175,7 +175,7 @@ At this stage, you can also map entities such as comments and attachments. Refer
   - Enter the criteria query.  
 
 >**Note**: The query is different for different systems. You can refer to more details about Criteria Configuration in [Jira](../../connectors/jira.md#criteria-configuration)
- and [Azure DevOps Server (TFS)](../../connectors/azure-devops.md#criteria-configuration) from their respective configuration pages.
+ and [Azure DevOps Server (TFS)](../../connectors/azure-devops.md#criteria-configuration) from their respective configuration pages. 
 
 - Select **In Database** from the **Select criteria storage type** drop-down list.  
 

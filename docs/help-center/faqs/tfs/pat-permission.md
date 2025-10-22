@@ -4,7 +4,7 @@ Personal access tokens (PATs) are used to authenticate into Azure DevOps. PAT ne
 
 ## Solution
 
-* <code class="expression">space.vars.SITENAME</code> provides multiple ways to authenticate Integration User, one of the type is "Personal Access Token". Refer [Create Personal Access Token](../../../connectors/azure-devops.md) section to learn about how to create a Personal Access Token.
-* Personal Access Token should be created with required permissions. Permissions are vary based on entity type you want to synchronize. Refer [Personal Access Token Minimum Required Permission](../../../connectors/azure-devops.md#personal-access-token-minimum-required-permission) section under **User privileges** to learn about which permissions are required. 
+* <code class="expression">space.vars.SITENAME</code> provides multiple ways to authenticate Integration User, one of the type is "Personal Access Token". Refer [Create Personal Access Token](../../../connectors/azure-devops.md#create-personal-access-token) section to learn about how to create a Personal Access Token.
+* Personal Access Token should be created with required permissions. Permissions are vary based on entity type you want to synchronize. Refer [Personal Access Token Minimum Required Permission](../../../connectors/azure-devops.md#privileges-for-user) section under **User privileges** to learn about which permissions are required. 
 
 

@@ -222,3 +222,5 @@ You are free to choose other fields.
 </p>  
 
 * Once the additional configurations are completed successfully, update the mapping, activate the integration, and save it again.  
+
+

@@ -160,7 +160,7 @@ Configuring [system pre-requisites](../../integrate/integration-prerequisites.md
 * To specify conditions, use Criteria Configuration. Example: synchronize only Low Priority Bugs.  
 * Click configuration-criteria icon, select **Yes** in **Configure Criteria**, enter criteria query.  
 
->**Note**: Queries vary by system. See [ServiceNow Criteria Configuration](../../connectors/servicenow.md#criteria-configuration) and [Azure DevOps Criteria Configuration](../../connectors/azure-devops.md#criteria-configuration).  
+>**Note**: Queries vary by system. See [ServiceNow Criteria Configuration](../../connectors/servicenow.md#criteria-configuration) and [Azure DevOps Criteria Configuration](../../connectors/azure-devops.md#criteria-configuration).    
 
 * Select **In Database** from **Select criteria storage type** drop-down.
 
