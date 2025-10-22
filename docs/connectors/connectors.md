@@ -1,3 +1,4 @@
+<!-- 
 <style>
 .tile-grid {
   display: flex;
@@ -341,6 +342,41 @@ margin-bottom: 0.5em;
 </div>
 
 </div>
+
+-->
+
+<table data-view="cards">
+   <thead>
+      <tr>
+         <th></th>
+         <th data-hidden data-type="content-ref"></th>
+         <th data-hidden data-card-target data-type="content-ref"></th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td><img src="./../assets/connector/Aha.png" alt="Aha!">Aha!</td>
+         <td><a href="aha.md">Aha!</a></td>
+         <td><a href="aha.md">Aha!</a></td>
+      </tr>
+      <tr>
+         <td><img src="./../assets/connector/Aha.png" alt="Aha!">Aha!</td>
+         <td><a href="aha.md">Aha!</a></td>
+         <td><a href="aha.md">Aha!</a></td>
+      </tr>
+      <tr>
+         <td><img src="./../assets/connector/Aha.png" alt="Aha!">Aha!</td>
+         <td><a href="aha.md">Aha!</a></td>
+         <td><a href="aha.md">Aha!</a></td>
+      </tr>
+      <tr>
+         <td><img src="./../assets/connector/Aha.png" alt="Aha!">Aha!</td>
+         <td><a href="aha.md">Aha!</a></td>
+         <td><a href="aha.md">Aha!</a></td>
+      </tr>
+   </tbody>
+</table>
+
 
 <!--
 
