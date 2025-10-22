@@ -16,7 +16,7 @@ Given below are the systems supported currently by <code class="expression">spac
 | 10 | Broadcom Service Desk Manager* | alb-165 | Change Request, Incident, Problem, Issue | CA Service Desk Manager |
 | 11 | Bugzilla | 4.4, 4.4.1, 4.4.2, 5.0 and above<br/>Read only: 4.4.3 to 4.4.13 | Bug | |
 | 12 | Cherwell* | 10.1.0 | Incident | |
-| 13 | Codebeamer | 21.09-SP3, 21.09-SP9, 22.10 LTS, 2.0.x, 2.1.x, 2.2.x | All System and Custom Tracker items<br/><br/>Not Supported: SCM type entities (Working Sets, Baselines, SCM commits, repositories), timekeeping trackers (Worklogs), Non-ALM entities (Wiki pages, documents) | |
+| 13 | Codebeamer | 21.09-SP3, 21.09-SP9, 22.10 LTS, 2.x, 3.x | All System and Custom Tracker items<br/><br/>Not Supported: SCM type entities (Working Sets, Baselines, SCM commits, repositories), timekeeping trackers (Worklogs), Non-ALM entities (Wiki pages, documents) | |
 | 14 | Codebeamer X | 4.2.1 | All System and Custom Tracker items<br/><br/>Not Supported: SCM type entities (Working Sets, Baselines, SCM commits, repositories), timekeeping trackers (Worklogs), Non-ALM entities (Wiki pages, documents) | |
 | 15 | Database | All versions supported for MySQL, MS SQL Server/Azure SQL, Oracle, PostgreSQL, MariaDB | All tables or views in the database | |
 | 16 | Digital.ai Agility | Cloud (All) | Backlog Item, Defect, Epic, Goal, Issue, Request, Task, Test, TestSet, Theme, Project/Release, Iteration, Build Run, Changesets, Actuals | VersionOne |
