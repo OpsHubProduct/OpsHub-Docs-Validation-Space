@@ -357,8 +357,8 @@ margin-bottom: 0.5em;
    </thead>
    <tbody>
       <tr>
-         <td><img src="./../assets/connector/Aha.png" alt="Aha!"></td>
          <td><a href="aha.md">Aha!</a></td>
+         <td><img src="./../assets/connector/Aha.png" alt="Aha!"></td>
          <td><a href="aha.md">Aha!</a></td>
       </tr>
       <tr>
@@ -367,12 +367,12 @@ margin-bottom: 0.5em;
          <td><a href="aras.md">Aras Innovator</a></td>
       </tr>
       <tr>
-         <td><img src="./../assets/connector/azure.png" alt="Aha!">Aha!</td>
-         <td><a href="aha.md">Aha!</a></td>
-         <td><a href="aha.md">Aha!</a></td>
+         <td><img src="./../assets/connector/azure.png" alt="Aha!"></td>
+         <td><a href="aha.md">Azure DevOps</a></td>
+         <td><a href="aha.md">Azure DevOps</a></td>
       </tr>
       <tr>
-         <td><img src="./../assets/connector/OpenText_ALM.png" alt="Aha!">Aha!</td>
+         <td><img width="50" src="./../assets/connector/OpenText_ALM.png" alt="Aha!">Aha!</td>
          <td><a href="aha.md">Aha!</a></td>
          <td><a href="aha.md">Aha!</a></td>
       </tr>
