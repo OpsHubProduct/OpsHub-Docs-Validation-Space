@@ -350,15 +350,15 @@ margin-bottom: 0.5em;
 <table data-view="cards">
    <thead>
       <tr>
-         <th data-hidden></th>
-         <th data-type="content-ref"></th>
-         <th data-card-target data-type="content-ref"></th>
+         <th></th>
+         <th data-hidden data-type="content-ref"></th>
+         <th data-hidden data-card-target data-type="content-ref"></th>
       </tr>
    </thead>
    <tbody>
       <tr>
-         <td><a href="aha.md">Aha!</a></td>
          <td><img src="./../assets/connector/Aha.png" alt="Aha!"></td>
+         <td><a href="aha.md">Aha!</a></td>
          <td><a href="aha.md">Aha!</a></td>
       </tr>
       <tr>
@@ -367,9 +367,9 @@ margin-bottom: 0.5em;
          <td><a href="aras.md">Aras Innovator</a></td>
       </tr>
       <tr>
-         <td><img src="./../assets/connector/azure.png" alt="Aha!"></td>
-         <td><a href="aha.md">Azure DevOps</a></td>
-         <td><a href="aha.md">Azure DevOps</a></td>
+         <td><img src="./../assets/connector/azure.png" alt="Azure DevOps"></td>
+         <td><a href="azure-devops.md">Azure DevOps</a></td>
+         <td><a href="azure-devops.md">Azure DevOps</a></td>
       </tr>
       <tr>
          <td><img width="50" src="./../assets/connector/OpenText_ALM.png" alt="Aha!">Aha!</td>
