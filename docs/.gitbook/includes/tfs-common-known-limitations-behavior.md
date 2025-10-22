@@ -47,8 +47,8 @@
 ## Service Principal - Client Secret & Service Principal - Client Certificate
 
 * When these authentication modes are selected, the supported entity types are: Work Items, Build, Pipeline, Areas, Iterations, Test Entities (Test Plan, Test Suite, Test Run, Test Result), Shared Parameter, Git Commit Information.
-  * Reason: When these authentication modes are selected, the supported entity types are: Work Items, Build, Pipeline, Areas, Iterations, Test Entities (Test Plan, Test Suite, Test Run, Test Result), Shared Parameter, Git Commit Information.
-  * > **Note**: Entities not yet supported with Service Principal authentication: Pull Request, Query, Dashboard, Widget, User, Group, and Team
+   * Reason: At present, only these entities use REST APIs. Other entities make use of both REST APIs and the Object Model.
+   * >**Note**: Entities not yet supported with Service Principal authentication: Pull Request, Query, Dashboard, Widget, User, Group, and Team.
 * The User Mention functionality can be used to mention User, but it does not work for Service Principal.
   * Reason: Azure DevOps does not allow to mention **Service Principal** on UI.
   * > **Note**: When Azure DevOps is configured as the target system, it is recommended that the default user is mapped instead of the Service Principal for **User Mention**. If the Service Principal is mapped, it will not result in failure. However, an email will be sent by Azure DevOps, saying "**ServicePrincipalName** cannot be mentioned. The identity is not configured to receive notifications.
