@@ -350,8 +350,8 @@ margin-bottom: 0.5em;
 <table data-view="cards">
    <thead>
       <tr>
-         <th></th>
-         <th data-hidden data-type="content-ref"></th>
+         <th data-hidden></th>
+         <th data-type="content-ref"></th>
          <th data-card-target data-type="content-ref"></th>
       </tr>
    </thead>
