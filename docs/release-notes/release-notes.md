@@ -28,7 +28,7 @@
 ## Aras Innovator
 * Resolved an issue where the system returned the error code incompatible_hash_use_md5 with the message: "Incompatible password hash algorithm. Please use MD5."
   * **Use case:** Aras expects user passwords to be submitted in either MD5 hash or plain text formats. However, on the machine where OpsHub Integration Manager was deployed, FIPS (Federal Information Processing Standards) was enabled. This encryption converted plain text passwords to "SHA256 Hash" before they reached the Aras server, resulting in compatibility issues.
-  * **Action:** To resolve this error, refer to the [troubleshooting guide](Incompatible_password_hash_algorithm) for appropriate configuration steps.
+  * **Action:** To resolve this error, refer to the [troubleshooting guide](../help-center/troubleshooting/errors/common/incompatible-password-hash-algorithm.md) for appropriate configuration steps.
 
 ## Azure DevOps Server
 * Resolved an issue where the getEntityRevisions method did not function correctly for Test entities when the Azure DevOps Server version was lower than 2020.
