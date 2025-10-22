@@ -15,14 +15,7 @@ These are the common privileges for **user**. To know specific privileges requir
   * In case of **Personal Access Token** authentication, please check [Personal Access Token Permission](tfs-prerequisites.md#personal-access-token-minimum-required-permission) section for the required permission details. Personal Access Token is supported for Team foundation Server On-Premise (TFS instance with **HTTPS** installation only) with version 2017 and above and Azure DevOps.
   * For On-Premises deployment, either Basic authentication or PAT authentication needs to be enabled on server. Please refer to [Internet Information Services(IIS) Configurations](tfs-prerequisites.md#internet-information-services-iis-configurations) to learn more about enabling the Basic/PAT authentication in IIS.
 * In case user want to synchronize User type fields of Azure DevOps with any other system with default <code class="expression">space.vars.SITENAME</code> generated mapping, it is necsessary that all users have their preferred e-mail address set in Azure DevOps.
-*   The
-
-    user for both the source and target systems requires a minimum access level of **Basic + Test Plans** to synchronize both query-based and requirement-based suites. Additionally, the
-
-    user of the target system must also have at least **Basic** access to synchronize new tags. Refer to the [Access Level](https://docs.microsoft.com/en-us/azure/devops/organizations/security/access-levels?view=azure-devops) documentation to know more about this access level or subscription for the
-
-user. Otherwise, Test Suite synchronization will be resulted in to job error/sync failure as "You are not authorized to access this API. Please contact your project administrator".
-
+*   The user for both the source and target systems requires a minimum access level of **Basic + Test Plans** to synchronize both query-based and requirement-based suites. Additionally, the user of the target system must also have at least **Basic** access to synchronize new tags. Refer to the [Access Level](https://docs.microsoft.com/en-us/azure/devops/organizations/security/access-levels?view=azure-devops) documentation to know more about this access level or subscription for the user. Otherwise, Test Suite synchronization will be resulted in to job error/sync failure as "You are not authorized to access this API. Please contact your project administrator".
 * If your Azure DevOps is configured with SSO, then the above mentioned privileges and permissions are sufficient.
 * If Bypass Rules is set to **Yes** in the system configuration, make sure the user or Service Principal has the **Bypass rules on work item updates permission** set to Allow at the project level in Azure DevOps.
 
@@ -84,7 +77,8 @@ Refer [Create Personal Access Token](../../connectors/azure-devops.md#create-per
 ### Service Principal Privileges
 
 * It is applicable when the authentication mode is set to **Service Principal - Client Secret** or **Service Principal - Client Certificate**.
-* These authentication types are only supported for **on-cloud deployment** for which the available entity types are **Work Items** & **Build**.
+* When these authentication modes are selected, the supported entity types are: Work Items, Build, Pipeline, Areas, Iterations, Test Entities (Test Plan, Test Suite, Test Run, Test Result), Shared Parameter, Git Commit Information.
+>**Note**: Entities not yet supported with Service Principal authentication: Pull Request, Query, Dashboard, Widget, User, Group, and Team.
 * Azure DevOps collection must be connected to Microsoft Entra (Azure Active Directory) for which Service Principal is being used.
 * Refer to [Secret key & Certificate](../../connectors/azure-devops.md#secret-key--certificate-in-microsoft-entra-azure-active-directory) section to generate **Secret key** or to upload **Certificate** in Microsoft Entra (Azure Active Directory). 
 
