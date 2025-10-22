@@ -13,6 +13,8 @@
 | **Entity Type**            | **Azure DevOps Services** | **Azure DevOps Server (version >= 2020)** | **Azure DevOps Server (version < 2020)** |
 | -------------------------- | ------------------------- | ----------------------------------------- | ---------------------------------------- |
 | **Work Items**             | ❌                         | ❌                                         | ✅                                        |
+| **Test entities (Test Suite, Test Plan, Test Run and Test Result)** | ❌                         | ❌                                         | ✅                                        |
+| **Area and Iteration'**    | ❌                         | ❌                                         | ✅                                        |
 | **Git Commit Information** | ❌                         | ❌                                         | ✅                                        |
 | **Pipeline**               | ❌                         | ❌                                         | ✅                                        |
 | **Build**                  | ❌                         | ❌                                         | ❌                                        |
