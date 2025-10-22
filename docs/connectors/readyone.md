@@ -48,7 +48,7 @@ Before the user continues with the integration, he/she must first configure Read
 | **Version**                    | Provide version for ReadyOne Instance. Check [Get ReadyOne Version](#get-readyone-version) in the Appendix section to learn how to get ReadyOne version              |
 | **ReadyOne Instance URL**     | Provide URL for ReadyOne Instance. Example:- <hostname>/InnovatorServer/Server/InnovatorServer.aspx                                                                  |
 | **ReadyOne User Name**        | Provide username of the user dedicated for <code class="expression">space.vars.SITENAME</code>. Please ensure that user has the necessary permissions. Refer to [User privileges](#user-privileges)          |
-| **ReadyOne User Password**    | Provide password of user dedicated for <code class="expression">space.vars.SITENAME</code>.                                                                                                                    |
+| **ReadyOne User Password**    | Provide password of user dedicated for <code class="expression">space.vars.SITENAME</code> - use plain text if FIPS is disabled, or MD5-hashed if FIPS is enabled. |
 | **ReadyOne Database name**    | Provide ReadyOne Database name to which the connection needs to be done. Refer to [Get Database Name](#get-database-name) to learn how to get Database name          |
 | **ReadyOne Web Service URL**  | Provide URL for the hosted OpsHubArasService. Refer to [Hosting opshub Aras service](#hosting-opshub-readyone-service)                                                 |
 | **Base URL for Remote Link**  | Provide different Instance URL of the ReadyOne Instance. This URL is used for generating the Remote Link. <br>If empty, the Server URL will be used.                |
