@@ -172,6 +172,7 @@
       * Errors
           * [Aras](docs/help-center/troubleshooting/errors/aras-error-solutions.md)
               * [OH-Aras-1502](docs/help-center/troubleshooting/errors/aras/oh-aras-1502.md)
+              * [OH-Aras-1000](docs/help-center/troubleshooting/errors/aras/oh-aras-1000.md)
           * [Rally](docs/help-center/troubleshooting/errors/rally-error-solutions.md)
               * [OH-RallyDev-0056](docs/help-center/troubleshooting/errors/rally/oh-rallydev-0056.md)
           * [Clarity](docs/help-center/troubleshooting/errors/clarity-error-solutions.md)
@@ -192,6 +193,7 @@
               * [OpsHub-012074](docs/help-center/troubleshooting/errors/common/opshub-012074.md)  
               * [OH-Connector-06200](docs/help-center/troubleshooting/errors/common/oh-connector-06200.md)  
               * [OH-Connector-06201](docs/help-center/troubleshooting/errors/common/opshub-020404.md)  
+              * [Incompatible-Password-Hash-Algorithm](docs/help-center/troubleshooting/errors/common/incompatible-password-hash-algorithm.md)
           * [Enterprise Architect](docs/help-center/troubleshooting/errors/ea-error-solutions.md)
               * [OH-EA-0002](docs/help-center/troubleshooting/errors/ea/oh-ea-0002.md)
           * [IBM Rational Doors Next Generation](docs/help-center/troubleshooting/errors/ibm-rational-doors-next-generation-error-solutions.md)
