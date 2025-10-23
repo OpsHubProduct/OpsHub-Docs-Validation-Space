@@ -66,7 +66,7 @@ This site provides complete and up-to-date documentation to help you install, co
       <tr>
          <td align="center"><mark style="color:#233C5D"><strong>Supported Connector</strong></mark></td>
          <td data-object-fit="contain"><a href="docs/assets/Site_Images/Supported_Connectors.png">Supported Connectors</a></td>
-         <td><a href="docs/supported-connectors">Supported Connectors</a></td>
+         <td><a href="docs/supported-connectors/systems-supported.md">Supported Connectors</a></td>
       </tr>
       <tr>
          <td align="center"><mark style="color:#233C5D"><strong>Connector Documentation</strong></mark></td>
@@ -95,3 +95,4 @@ This site provides complete and up-to-date documentation to help you install, co
       </tr>
    </tbody>
 </table>  
+
