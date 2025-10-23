@@ -1,6 +1,8 @@
-<div data-full-width="true">
-<figure><img src="./docs/assets/Site_Images/Background.png" alt=""><figcaption></figcaption></figure>
-
+---
+cover: ./docs/assets/Site_Images/Background.png
+coverY: 0
+layout: landing
+---
 
 {% columns fullWidth="true" %}
 {% column width="70%" valign="middle" %}
@@ -17,13 +19,11 @@ This site provides complete and up-to-date documentation to help you install, co
 {% endcolumn %}
 {% endcolumns %}
 
-</div>
 
-<div data-full-width="true">
 
 ***
 
-</div>
+
 
 <table data-view="cards" data-full-width="true">
    <thead>
