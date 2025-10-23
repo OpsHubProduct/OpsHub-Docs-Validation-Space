@@ -1,6 +1,6 @@
 ---
 icon: hand-wave
-cover: ./docs/assets/Site_Images/Background.png
+cover: ./docs/assets/Site_Images/Background2.png
 coverY: 333.8585655832626
 layout:
   width: wide
@@ -94,7 +94,4 @@ This site provides complete and up-to-date documentation to help you install, co
          <td><a href="https://www.opshub.com/contact-us/">Contact Us</a></td>
       </tr>
    </tbody>
-</table>
-
-[//]: # (Official documentation source for <code class="expression">space.vars.SITENAME</code> – includes setup guides, advanced configurations, API references, and troubleshooting content, maintained for GitBook sync.)
-    
+</table>  
