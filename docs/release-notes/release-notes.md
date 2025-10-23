@@ -6,7 +6,7 @@
 * Enhanced support for post synchronization with a separate workflow to improve flexibility, maintainability.
   * Please refer to the [Advance Integration configuration](../integrate/integration-configuration.md#workflow-association) for more detailed information.
   * **Recommendation**: After upgrading <code class="expression">space.vars.SITENAME</code>, The synchronization will continue to work without any issues with the existing workflow. However, configuring a dedicated post-sync workflow is recommended to improve flexibility, maintainability, and long-term support alignment.
-    * For updating the existing customized workflow, refer to the [post migration](../manage/upgrade/post-migration-checklist.md#separate-workflow-for-post-synchronization.md) checklist.
+    * For updating the existing customized workflow, refer to the [post migration](../manage/upgrade/post-migration-checklist.md#separate-workflow-for-post-synchronization) checklist.
 * Optimized the read operations from Excel files used in Excel lookup within the mapping configuration in <code class="expression">space.vars.SITENAME</code>.
 
 ## HubSpot
