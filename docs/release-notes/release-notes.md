@@ -1,4 +1,4 @@
-{{#ifeq: <code class="expression">space.vars.SITENAME</code> | OpsHub Integration Manager |
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}
 
 # Enhancement
 
@@ -22,9 +22,11 @@
 * Resolved an issue where a processing failure occurred with the following message: "OH-OIM-0011: Error in loading Source Adapter, due to: OH-ConnLoader-0003: Connector for system name: <Jira System Name> could not be instantiated due to OH-JIRA-0173: Error occurred with status code: 403 in JIRA." This error occurred when the Service Management API was invoked.
   * **Use case:** This scenario was triggered when either the service account's access to Service Management projects was revoked or the Service Management plugin license had expired in Jira. If an integration included a Service Management project and a link relationship was configured with Jira as the target system, the system attempted to fetch data using the Service Management API, resulting in the error.
 
-|
+{% endif %}  
+
+{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}  
 
 # Enhancement
 * Added support for retrieving link updates without altering any other fields in Azure DevOps Server (2020 and later) and Azure DevOps Services.
 
-}}
+{% endif %}
