@@ -39,12 +39,12 @@
 
 * As you kickstart the integration, the user must first configure HubSpot system in <code class="expression">space.vars.SITENAME</code>. Click [System Configuration](../integrate/system-configuration.md) to learn step-by-step process to configure a system. Refer to the following screenshot:
 
-<p align="center"><img src="../assets/HubSpotSystemConfig.png" width="1500" /></p>
+<p align="center"><img src="../assets/HubSpotSystemConfig.png" width="1300" /></p>
 
 * If Authentication Type is Oauth Token,following will be the form:
 
 <p align="center">
-  <img src="../assets/FullForm.png" width="1100"/>
+  <img src="../assets/FullForm.png" width="1300"/>
 </p>
 
 **HubSpot System form details**
@@ -56,9 +56,9 @@
 | **User Email** | Always | Provide the user email of a dedicated user who will be used for communicating with HubSpot API. This user should have the required privileges to use the HubSpot API. For more details on the required privileges, refer to [User privileges](#user-privileges) section. |
 | **Authentication Type** | Always | Select the authentication type you would like to use for communicating with HubSpot API. |
 | **Access Token** | Authentication type is Access Token | Provide the HubSpot private app access token for the specified user. This token must have sufficient permissions to enable communication with the HubSpot API. |
-| **Client ID** | Authentication type is OAuth 2.0 | Provide the HubSpot public app's Client ID. This token must have sufficient permissions to enable communication with the HubSpot API. Refer to [OAuth 2.0 Authorization Token Generation in HubSpot](#oauth-2-0-authorization-token-generation-in-hubspot) section to know how to get the Client ID. |
-| **Client Secret** | Authentication type is OAuth 2.0 | Provide the HubSpot public app's Client Secret to connect with the HubSpot API. Refer to [OAuth 2.0 Authorization Token Generation in HubSpot](#oauth-2-0-authorization-token-generation-in-hubspot) section to know how to get the Client Secret. |
-| **Authorization Code** | Authentication type is OAuth 2.0 | Provide the HubSpot public app's Authorization Code to connect with the HubSpot API. Refer to [OAuth 2.0 Authorization Token Generation in HubSpot](#oauth-2-0-authorization-token-generation-in-hubspot) section to know how to get the Authorization Code. If the scopes or permissions of the app are changed at any point, you must regenerate the Authorization Code again. |
+| **Client ID** | Authentication type is OAuth 2.0 | Provide the HubSpot public app's Client ID. This token must have sufficient permissions to enable communication with the HubSpot API. Refer to [OAuth 2.0 Authorization Token Generation in HubSpot](#oauth-2.0-authorization-token-generation-in-hubspot) section to know how to get the Client ID. |
+| **Client Secret** | Authentication type is OAuth 2.0 | Provide the HubSpot public app's Client Secret to connect with the HubSpot API. Refer to [OAuth 2.0 Authorization Token Generation in HubSpot](#oauth-2.0-authorization-token-generation-in-hubspot) section to know how to get the Client Secret. |
+| **Authorization Code** | Authentication type is OAuth 2.0 | Provide the HubSpot public app's Authorization Code to connect with the HubSpot API. Refer to [OAuth 2.0 Authorization Token Generation in HubSpot](#oauth-2.0-authorization-token-generation-in-hubspot) section to know how to get the Authorization Code. If the scopes or permissions of the app are changed at any point, you must regenerate the Authorization Code again. |
 | **Application Id** | Always | Provide the Application ID set up for the specified dedicated user to connect with the HubSpot API. Refer to [Prerequisites](#prerequisites) section to know how to get the Application Id. |
 | **Base URL for Remote Link** | Always | Provide a different instance URL of the HubSpot instance. This URL will be used for generating the Remote Link. <br> >**Note**: If "Base URL for Remote Link" is empty, it will use Instance/Server URL to generate Remote Link if configured on Integration.</p> |
                                     |
@@ -247,7 +247,7 @@ Set the **Query** as per <code class="expression">space.vars.SITENAME</code>'s N
 
 3. Click **Create a Public App**.
 
-4. Provide the App's Name (e.g., "{{SITENAME}} Integration").
+4. Provide the App's Name (e.g., "<code class="expression">space.vars.SITENAME</code> Integration").
 
 <p align="center">
   <img src="../assets/HubSpotPublicApp2.png" width="900" />
@@ -271,7 +271,7 @@ Set the **Query** as per <code class="expression">space.vars.SITENAME</code>'s N
 
 9. Copy the Application ID, Client ID and Client Secret.  
    * To know more details about this public app, refer to [https://developers.hubspot.com/docs/apps/legacy-apps/public-apps/overview](https://developers.hubspot.com/docs/apps/legacy-apps/public-apps/overview).  
-   * This token will be used in the **Oath Token** field during system configuration in {{SITENAME}}.
+   * This token will be used in the **Oath Token** field during system configuration in <code class="expression">space.vars.SITENAME</code>.
 
 ---
 
