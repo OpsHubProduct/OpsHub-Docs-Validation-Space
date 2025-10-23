@@ -51,17 +51,17 @@ This site provides complete and up-to-date documentation to help you install, co
       <tr>
          <td align="center"><mark style="color:#233C5D"><strong>Getting Started</strong></mark></td>
          <td data-object-fit="contain"><mark style="color:#edf4fd"><a href="docs/assets/Site_Images/Getting_Started.png">Getting Started</a></mark></td>
-         <td><a href="/getting-started">getting-started</a></td>
+         <td><a href="docs/getting-started/README.md">getting-started</a></td>
       </tr>
       <tr>
          <td align="center"><mark style="color:#233C5D"><strong>Manage</strong></mark></td>
          <td data-object-fit="contain"><a href="docs/assets/Site_Images/Manage.png">Manage</a></td>
-         <td><a href="/manage">Manage</a></td>
+         <td><a href="docs/manage/README.md">Manage</a></td>
       </tr>
       <tr>
          <td align="center"><mark style="color:#233C5D"><strong>Help Center</strong></mark></td>
          <td data-object-fit="contain"><a href="docs/assets/Site_Images/Help _Center.png">Help Center</a></td>
-         <td><a href="docs/help-center">Help Center</a></td>
+         <td><a href="docs/help-center/README.md">Help Center</a></td>
       </tr>
       <tr>
          <td align="center"><mark style="color:#233C5D"><strong>Supported Connector</strong></mark></td>
@@ -76,7 +76,7 @@ This site provides complete and up-to-date documentation to help you install, co
       <tr>
          <td align="center"><mark style="color:#233C5D"><strong>Connector SDK</strong></mark></td>
          <td data-object-fit="contain"><a href="docs/assets/Site_Images/Connector_SDK.png">Connector SDK</a></td>
-         <td><a href="docs/connector-sdk">Connector SDK</a></td>
+         <td><a href="docs/connector-sdk/README.md">Connector SDK</a></td>
       </tr>
       <tr>
          <td align="center"><mark style="color:#233C5D"><strong>Release Note</strong></mark></td>
@@ -86,7 +86,7 @@ This site provides complete and up-to-date documentation to help you install, co
       <tr>
          <td align="center"><mark style="color:#233C5D"><strong>Knowledge Resources</strong></mark></td>
          <td data-object-fit="contain"><a href="docs/assets/Site_Images/Knowledge_Resources.png">Knowledge Resources</a></td>
-         <td><a href="docs/knowledge-resources">Knowledge Resource</a></td>
+         <td><a href="docs/knowledge-resources/README.md">Knowledge Resource</a></td>
       </tr>
       <tr>
          <td align="center"><mark style="color:#233C5D"><strong>Contact Us</strong></mark></td>
