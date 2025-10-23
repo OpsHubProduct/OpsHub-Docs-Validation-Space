@@ -1,4 +1,4 @@
-{{#ifeq: <code class="expression">space.vars.SITENAME</code> | OpsHub Integration Manager |
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}
 
 # New Version(s)
 * Codebeamer: 3.x
@@ -55,6 +55,4 @@
 * Resolved an issue where an error occurred while loading field metadata, resulting in the following exception: "com.opshub.eai.jira.exceptions.OIMJiraApiException: OH-JIRA-0173: Error occurred with status code: 413 in JIRA".
   * **Use case:** When the initial response returned more than 50 records, the subsequent request exceeded Jira Service Management's query size limits, resulting in an HTTP 413 error: "The request could not be satisfied." due to invalid pagination parameters in the API query.
 
-  |
-
-  }}
+{% endif %}
