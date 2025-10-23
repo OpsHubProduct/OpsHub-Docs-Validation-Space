@@ -20,7 +20,7 @@ layout:
 {% columns fullWidth="true" %}
 {% column width="70%" valign="middle" %}
 
-<span><mark style="color:#DE413A;"><strong>WELCOME TO THE</strong></mark></span>
+### <mark style="color:#DE413A;"><strong>WELCOME TO THE</strong></mark>
 
 # **OPSHUB INTEGRATION MANAGER DOCUMENTATION**
 This site provides complete and up-to-date documentation to help you install, configure, and operate <code class="expression">space.vars.SITENAME</code>(<code class="expression">space.vars.PRODUCT_SHORTNAME</code>) effectively. Whether you're setting up your first integration, developing custom connectors, or troubleshooting issues, this documentation is structured to guide you through every step.
