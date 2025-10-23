@@ -1,4 +1,5 @@
 ---
+icon: hand-wave
 cover: ./docs/assets/Site_Images/Background.png
 coverY: 333.8585655832626
 layout:
