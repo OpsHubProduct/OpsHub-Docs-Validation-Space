@@ -1,7 +1,20 @@
 ---
 cover: ./docs/assets/Site_Images/Background.png
 coverY: 333.8585655832626
-layout: landing
+layout:
+  width: wide
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: false
+  outline:
+    visible: false
+  pagination:
+    visible: false
+  metadata:
+    visible: true
 ---
 
 {% columns fullWidth="true" %}
