@@ -290,3 +290,18 @@ In HubSpot, each property (field) of an entity (like Contacts, Companies, Deals,
 | Deal Name        | dealname          |
 | Lifecycle Stage  | lifecyclestage    |
 | Company Size     | company_size      |
+
+
+## 
+
+# Important Note
+
+* If the scopes or permissions of the app are changed at any point, you must follow the entire **Authorization Code Flow** again.  
+  This means generating a new Install URL, approving the app, and retrieving a fresh `code` parameter to update in the OpsHub system form.
+
+* The `code` used once by anyone, the same code **cannot be reused**.  
+  You must **regenerate a new code** and update it in the system form.
+
+* **Additionally**, one HubSpot application can be linked to **only one user's usecase**.  
+  If another user requires access, they must create or authorize a **separate HubSpot application**.
+
