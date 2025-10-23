@@ -8,15 +8,15 @@
    <tbody>
       <tr>
         <td align="center"><mark style="color:#555555"><strong>Aha!</strong></mark></td>
-        <td><a href="main-page.md">main-page.md</a></td>
+        <td><a href="aha.md">Aha!</a></td>
       </tr>
       <tr>
         <td align="center"><mark style="color:#555555"><strong>Aras Innovator</strong></mark></td>
-        <td><a href="main-page.md">main-page.md</a></td>
+        <td><a href="aras.md">Aras</a></td>
       </tr>
       <tr>
         <td align="center"><mark style="color:#555555"><strong>Azure DevOps</strong></mark></td>
-        <td><a href="main-page.md">main-page.md</a></td>
+        <td><a href="azure-devops.md">Azure DevOps</a></td>
       </tr>
 <tr>
   <td align="center"><mark style="color:#555555"><strong>Blueprint</strong></mark></td>
