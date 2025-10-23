@@ -343,7 +343,7 @@ Refer to respective section links for Commit Hooks setup: [SVN](../../connectors
 
 ### Backup Location
 
-Removed entity type mappings are saved at the following path:\
+Removed entity type mappings are saved at the following path:
 &#xNAN;**`<OpsHub Installation Dir>/AppData/LinkEntityTypeMapping`**
 
 # Migrating <code class="expression">space.vars.SITENAME</code> version to 7.199 or above
@@ -402,3 +402,28 @@ Removed entity type mappings are saved at the following path:\
   * Earlier, <code class="expression">space.vars.SITENAME</code> displayed all three — ***tests***, ***testExecution***, and ***testplans*** — in the mapping screen of Test Plan entity.  
   * Going forward, only the supported link types (***tests*** and ***testExecution***) will be shown.  
   * **Note:** ***testplans*** is not a supported link type for the **Test Plan** entity in Jira as well.
+
+# Separate Workflow for Post Synchronization
+
+## Migrating OpsHub Integration Manager version to 7.207 or above
+
+**Applicable When**
+* Integration configurations are using a customized workflow.  
+* It is an optional post-migration step. The synchronization will continue to work without any issues with the existing workflow. However, configuring a dedicated post-sync workflow is recommended to improve flexibility, maintainability, and long-term support alignment.
+
+**Actions**
+Update the custom workflow as described below:  
+
+* Identify the post-sync step (which updates the Remote Entity ID and Remote Entity Link to the source entity after syncing the source entity to the target system).  
+
+* If the post-sync step is not customized:  
+  * Remove it from the integration sync workflow and configure the 'Default Post Synchronization Workflow' in the integrations that use the corresponding custom workflow.  
+
+* If the post-sync step is customized:  
+  * Move it out of the customized integration sync workflow and configure it as a separate, dedicated post-sync workflow.  
+
+* To create or update separate workflows for synchronization and post-synchronization, refer to the default workflows available in OpsHub Integration Manager at: `http://<serverIP>:8989/OIM/#/home/configure-integrations/workflows`
+
+**Reason**
+* From now on, updating the Remote Entity ID and Remote Entity Link to the source entity will be handled by a dedicated post-sync workflow.
+
