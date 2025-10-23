@@ -405,7 +405,7 @@ Removed entity type mappings are saved at the following path:
 
 # Separate Workflow for Post Synchronization
 
-## Migrating OpsHub Integration Manager version to 7.207 or above
+## Migrating <code class="expression">space.vars.SITENAME</code> version to 7.207 or above
 
 **Applicable When**
 * Integration configurations are using a customized workflow.  
@@ -422,7 +422,7 @@ Update the custom workflow as described below:
 * If the post-sync step is customized:  
   * Move it out of the customized integration sync workflow and configure it as a separate, dedicated post-sync workflow.  
 
-* To create or update separate workflows for synchronization and post-synchronization, refer to the default workflows available in OpsHub Integration Manager at: `http://<serverIP>:8989/OIM/#/home/configure-integrations/workflows`
+* To create or update separate workflows for synchronization and post-synchronization, refer to the default workflows available in <code class="expression">space.vars.SITENAME</code> at: `http://<serverIP>:8989/OIM/#/home/configure-integrations/workflows`
 
 **Reason**
 * From now on, updating the Remote Entity ID and Remote Entity Link to the source entity will be handled by a dedicated post-sync workflow.
