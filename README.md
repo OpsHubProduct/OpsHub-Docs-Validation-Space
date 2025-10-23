@@ -19,7 +19,11 @@ This site provides complete and up-to-date documentation to help you install, co
 
 </div>
 
+<div data-full-width="true">
+
 ***
+
+</div>
 
 <table data-view="cards" data-full-width="true">
    <thead>
