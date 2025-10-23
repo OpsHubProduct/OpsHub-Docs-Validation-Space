@@ -1,6 +1,6 @@
 # Table of contents
 * [Welcome](README.md)
-* Getting Started
+## Getting Started
    * [Getting OpsHub Integration Manager](docs/getting-started/download.md)
    * [Prerequisites](docs/getting-started/prerequisites.md)
    * [Installation](docs/getting-started/installation.md)
@@ -264,7 +264,6 @@
   * [Contact Us](docs/help-center/contact-us.md)     
 * [Supported Connector Versions](docs/supported-connectors/systems-supported.md)
 * [Connector Guide](docs/connectors/connectors.md)
-  * [Aha](docs/connectors/aha.md)
   * [Aras Innovator](docs/connectors/aras.md)
   * [Azure DevOps Server/Services/Version Control](docs/connectors/azure-devops.md)
       * [Service Troubleshooting](docs/connectors/service-troubleshooting.md) 
