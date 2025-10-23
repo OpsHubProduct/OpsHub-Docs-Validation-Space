@@ -1,4 +1,4 @@
-{{#ifeq: <code class="expression">space.vars.SITENAME</code> | OpsHub Integration Manager |
+{% if "OpsHub Integration Manager" === space.vars.SITENAME %}  
 
 # Enhancement
 
@@ -42,9 +42,11 @@
 * Resolved an issue where an error occurred while fetching lookup values (e.g., Assignment Group) when the name of a lookup value was empty.  
 >**Note**:  Going forward, if an empty value is detected in the end system, it will be displayed as `<No name> (sys_id)` in <code class="expression">space.vars.SITENAME</code> when loading lookup values.
 
-| 
+{% endif %}  
+
+{% if "OpsHub Migrator for Microsoft Azure DevOps" === space.vars.SITENAME %}  
 
 # Major Bugs
 * Resolved an issue where a global error occurred due to work item type conversion when using Azure DevOps Server/Services as the source system.
 
-}}
+{% endif %}  
