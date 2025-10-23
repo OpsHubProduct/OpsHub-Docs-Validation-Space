@@ -49,14 +49,19 @@
 
 **HubSpot System form details**
 
-| **Field Name**            | **Description**                                                                                                                                                 |
-|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **System Name**          | Provide the system's name                                                                                                                                       |
-| **API URL**              | Provide server URL of the HubSpot instance. This URL will be used for communicating with HubSpot system API. The example format of the URL would be: https://api.hubapi.com. |
-| **User Email**           | Provide the user email of a dedicated user who will be used for communicating with HubSpot API. This user should have the required privileges. Refer to [user-privileges](#user-privileges). |
-| **Access Token**         | Provide the HubSpot private app access token for the specified user. This token must have sufficient permissions to enable communication with the HubSpot API.  |
-| **Application Id**       | Provide the Application ID set up for the specified dedicated user to connect with the HubSpot API. Refer to [prerequisites](#prerequisites) for how to get it. |
-| **Base URL for Remote Link** | Provide a different instance URL of the HubSpot instance. This URL will be used for generating the Remote Link.                                          |
+| **Field Name** | **When is the field visible** | **Description** |
+|----------------|-------------------------------|-----------------|
+| **System Name** | Always | Provide a name to the HubSpot system. |
+| **API Url** | Always | Provide server URL of the HubSpot instance. This URL will be used for communicating with HubSpot system API. The example format of the URL would be: `https://api.hubapi.com`. |
+| **User Email** | Always | Provide the user email of a dedicated user who will be used for communicating with HubSpot API. This user should have the required privileges to use the HubSpot API. For more details on the required privileges, refer to [User privileges](#user-privileges) section. |
+| **Authentication Type** | Always | Select the authentication type you would like to use for communicating with HubSpot API. |
+| **Access Token** | Authentication type is Access Token | Provide the HubSpot private app access token for the specified user. This token must have sufficient permissions to enable communication with the HubSpot API. |
+| **Client ID** | Authentication type is OAuth 2.0 | Provide the HubSpot public app's Client ID. This token must have sufficient permissions to enable communication with the HubSpot API. Refer to [OAuth 2.0 Authorization Token Generation in HubSpot](#oauth-2-0-authorization-token-generation-in-hubspot) section to know how to get the Client ID. |
+| **Client Secret** | Authentication type is OAuth 2.0 | Provide the HubSpot public app's Client Secret to connect with the HubSpot API. Refer to [OAuth 2.0 Authorization Token Generation in HubSpot](#oauth-2-0-authorization-token-generation-in-hubspot) section to know how to get the Client Secret. |
+| **Authorization Code** | Authentication type is OAuth 2.0 | Provide the HubSpot public app's Authorization Code to connect with the HubSpot API. Refer to [OAuth 2.0 Authorization Token Generation in HubSpot](#oauth-2-0-authorization-token-generation-in-hubspot) section to know how to get the Authorization Code. If the scopes or permissions of the app are changed at any point, you must regenerate the Authorization Code again. |
+| **Application Id** | Always | Provide the Application ID set up for the specified dedicated user to connect with the HubSpot API. Refer to [Prerequisites](#prerequisites) section to know how to get the Application Id. |
+| **Base URL for Remote Link** | Always | Provide a different instance URL of the HubSpot instance. This URL will be used for generating the Remote Link. <br> >**Note**: If "Base URL for Remote Link" is empty, it will use Instance/Server URL to generate Remote Link if configured on Integration.</p> |
+                                    |
 
 # Mapping Configuration
 
