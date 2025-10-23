@@ -2,13 +2,14 @@
 
 [//]: # (<figure><img src=".gitbook/assets/ Background.png" alt=""><figcaption></figcaption></figure>)
 
-<div style="background-image: url('./docs/assets/Site_Images/Background.png'">
+<div style="background-image: url('./docs/assets/Site_Images/Background.png')">
 
 {% columns fullWidth="true" %}
-{% column width="70%" valign="middle" %}  
+{% column width="70%" valign="middle" %}
 
 #### <mark style="color:#DE413A">WELCOME TO THE</mark>
-## <span style="text-transform: uppercase;"> **<code class="expression">space.vars.SITENAME</code> DOCUMENTATION**</span>
+
+## **OPSHUB INTEGRATION MANAGER DOCUMENTATION**
 This site provides complete and up-to-date documentation to help you install, configure, and operate <code class="expression">space.vars.SITENAME</code>(<code class="expression">space.vars.PRODUCT_SHORTNAME</code>) effectively. Whether you're setting up your first integration, developing custom connectors, or troubleshooting issues, this documentation is structured to guide you through every step.
 {% endcolumn %}  
 
