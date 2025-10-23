@@ -1,8 +1,5 @@
-# Oim-Documentation
+<figure><img src="./docs/assets/Site_Images/Background.png" alt=""><figcaption></figcaption>
 
-[//]: # (<figure><img src=".gitbook/assets/ Background.png" alt=""><figcaption></figcaption></figure>)
-
-<div style="background-image: url('./docs/assets/Site_Images/Background.png')">
 
 {% columns fullWidth="true" %}
 {% column width="70%" valign="middle" %}
@@ -19,7 +16,8 @@ This site provides complete and up-to-date documentation to help you install, co
 {% endcolumn %}
 {% endcolumns %}
 
-</div>
+</figure>
+
 ***
 
 <table data-view="cards" data-full-width="true">
