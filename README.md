@@ -2,22 +2,26 @@
 
 [//]: # (<figure><img src=".gitbook/assets/ Background.png" alt=""><figcaption></figcaption></figure>)
 
+<div style="background-image: url('./docs/assets/Site_Images/Background.png'">
+
 {% columns fullWidth="true" %}
-{% column width="70%" valign="middle" %}
+{% column width="70%" valign="middle" %}  
+
 #### <mark style="color:#DE413A">WELCOME TO THE</mark>
 ## <span style="text-transform: uppercase;"> **<code class="expression">space.vars.SITENAME</code> DOCUMENTATION**</span>
 This site provides complete and up-to-date documentation to help you install, configure, and operate <code class="expression">space.vars.SITENAME</code>(<code class="expression">space.vars.PRODUCT_SHORTNAME</code>) effectively. Whether you're setting up your first integration, developing custom connectors, or troubleshooting issues, this documentation is structured to guide you through every step.
-{% endcolumn %}
+{% endcolumn %}  
 
 {% column width="30%" valign="middle" %}
-<figure><img src="./docs/assets/Site_Images/SideLogo.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="./docs/assets/Site_Images/SideLogo.png" alt="" width="239"><figcaption></figcaption></figure>
 
 {% endcolumn %}
 {% endcolumns %}
 
+</div>
 ***
 
-<table data-view="cards">
+<table data-view="cards" data-full-width="true">
    <thead>
       <tr>
          <th align="center"></th>
@@ -28,8 +32,8 @@ This site provides complete and up-to-date documentation to help you install, co
    <tbody>
       <tr>
          <td align="center"><mark style="color:#233C5D"><strong>Getting Started</strong></mark></td>
-         <td data-object-fit="contain"><a href="docs/assets/Site_Images/Getting_Started.png">Getting Started</a></td>
-         <td><a href="docs/getting-started">getting-started</a></td>
+         <td data-object-fit="contain"><mark style="color:#edf4fd"><a href="docs/assets/Site_Images/Getting_Started.png">Getting Started</a></mark></td>
+         <td><a href="docs/getting-started/">getting-started</a></td>
       </tr>
       <tr>
          <td align="center"><mark style="color:#233C5D"><strong>Manage</strong></mark></td>
