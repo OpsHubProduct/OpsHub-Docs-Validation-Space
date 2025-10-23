@@ -94,7 +94,9 @@ Click [Mapping Configuration](../integrate/mapping-configuration.md) to learn th
 * All the fields of type reference i.e. the fields that refer to some other ServiceNow Quick Connect entity will be treated as look-ups in <code class="expression">space.vars.SITENAME</code>.
 * For such reference fields, you can define value mapping using either name or number.
 * A maximum of 1000 lookup values will be loaded for a reference field. If you are not able to find your value in the look-up values loaded, you can map values using advanced mapping.
-* Look-up values will be loaded only if the entity being referred by a field has a name or number columns.
+* Look-up values will be loaded if the entity referred to by a field has either a name or a number column.  
+  * If neither a name nor a number is present, the look-up value will be displayed as `<No name> (sys_id)`.  
+  * If lookups cannot be loaded due to any reason, you can still do advance mapping to map the fields.
 * If lookups cannot be loaded due to any reason, you can still do advanced mapping to map the fields.
 * If you want to do a direct mapping, i.e., if values in ServiceNow Quick Connect and other systems are same, then you need to use utility. Currently, OIMCoreUtility getEntityFieldValue is being used, which will give the display name corresponding to the internal id of the look-up value.
 

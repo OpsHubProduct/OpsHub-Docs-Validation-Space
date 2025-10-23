@@ -406,10 +406,24 @@ Click the **Configure Advance** icon > Go to **Advance Configuration** pop-up > 
   <img src="../assets/Integration_Configuration_Image_11a.png" width="600" />
 </p>
 
-<code class="expression">space.vars.SITENAME</code> provides default workflow, which comes with default installation. If you want a customized workflow, please contact your sales/support point of contact.
+<code class="expression">space.vars.SITENAME</code> provides default workflow, which comes with default installation. provides default workflows as part of the installation. These include the Sync, Post Sync, and Reconcile workflows. 
 
+### Sync Workflow:
+* Handles synchronization of changes from the source system to the target system.
+
+### Post Sync Workflow:
+* Handles updating the 'Remote Entity ID' and 'Remote Entity Link' to the source entity after it has been synchronized to the target system.
+* A default value for the post-sync workflow is automatically populated at the time of integration creation.
+* Unsetting this input has the following behavior:
+	* When the integration is configured using the default sync workflow, this input cannot be unset.
+	* When the integration is configured using a custom sync workflow, this input can be unset during update. However, during creation, unsetting is restricted because the default sync workflow does not include a post-sync step. As a result, any workflows derived from it also require a separate post-sync workflow to be configured.
+* If the customized sync workflow does not include handling for the post-synchronization step. In this case, updates of 'Remote Entity ID' and 'Remote Entity Link' on the source entity will not be performed.
+
+### Skip Synchronization of Events:
 * Select **Create** option if you don't want to synchronize new entities created in the source system.
 * Select **Update** option if you don't want to synchronize those entities that are updated in the source system.
+
+If you want a customized workflow, please contact your sales/support point of contact.
 
 Click the **Integrate** button to complete the integration process.
 

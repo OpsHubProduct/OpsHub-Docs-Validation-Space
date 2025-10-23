@@ -1,4 +1,3 @@
-
 > 👉 **Looking for older version steps?**  
 > Refer to the [Pre-Migration Checklist](https://docs.myopshub.com/oim/index.php/Pre-Migration_Checklist). for `<code class="expression">space.vars.SITENAME</code>` versions prior to **7.121**.
 
@@ -232,4 +231,21 @@ DELETE FROM reportsdb.ReportsDBVersion WHERE version='6.11.02.00.00';
 
 **Reason:**
 - Relationship link names are renamed after upgrade on <code class="expression">space.vars.SITENAME</code>. So failed-entity are required to be resolved first.
+
+---
+
+# Migrating <code class="expression">space.vars.SITENAME</code> 's version to 7.205 or above
+
+## Improved Change Identification in Gerrit
+
+**Applicable When**  
+* You are using **Gerrit** as one of the endpoints in your integration.
+
+**Actions**  
+* Please contact **support@opshub.com** for upgrade assistance.
+
+**Reason**  
+* In earlier versions, Gerrit sometimes could not uniquely identify changes across repositories or branches, which could lead to errors.  
+* From **7.205 onwards**, the <code class="expression">space.vars.SITENAME</code> uses an improved ID format to ensure changes are always uniquely identified, avoiding such issues.
+
 
