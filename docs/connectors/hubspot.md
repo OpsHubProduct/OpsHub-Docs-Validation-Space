@@ -170,7 +170,7 @@ Set the **Query** as per <code class="expression">space.vars.SITENAME</code>'s N
 
 # Appendix
 
-## Add User to HubSpot private app
+## Add User to HubSpot private/public app
 
 1. Log in to HubSpot using a user account with **Super Admin** or **User & Team management** permissions.
 
@@ -210,7 +210,7 @@ Set the **Query** as per <code class="expression">space.vars.SITENAME</code>'s N
 
 <p align="center"><img src="../assets/HubSpotCreatePrivateApp.png" width="1000"  /></p>
 
-5. Under **Scopes**, provide required scopes mentioned in [Privileges](#privileges).
+5. Under **Scopes**, provide required scopes mentioned in [User privileges]](#user-privileges).
 
 <p align="center"><img src="../assets/HubSpotPrivateAppScopesAndName.png" width="1000"  /></p>
 
@@ -231,7 +231,7 @@ Set the **Query** as per <code class="expression">space.vars.SITENAME</code>'s N
 <p align="center"><img src="../assets/HubSpotPrivateAppId.png" width="900" /></p>
 
 
-## Managing Permission Scopes in HubSpot Private App
+## Managing Permission Scopes in HubSpot Private/Public App
 
 1. Log in to HubSpot using a user with **Super Admin** permissions.
 2. Go to **Settings → Account → Integrations → Private Apps**.
