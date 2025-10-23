@@ -33,12 +33,12 @@ This site provides complete and up-to-date documentation to help you install, co
       <tr>
          <td align="center"><mark style="color:#233C5D"><strong>Getting Started</strong></mark></td>
          <td data-object-fit="contain"><mark style="color:#edf4fd"><a href="docs/assets/Site_Images/Getting_Started.png">Getting Started</a></mark></td>
-         <td><a href="docs/getting-started/">getting-started</a></td>
+         <td><a href="#getting-started">getting-started</a></td>
       </tr>
       <tr>
          <td align="center"><mark style="color:#233C5D"><strong>Manage</strong></mark></td>
          <td data-object-fit="contain"><a href="docs/assets/Site_Images/Manage.png">Manage</a></td>
-         <td><a href="docs/manage">Manage</a></td>
+         <td><a href="#manage">Manage</a></td>
       </tr>
       <tr>
          <td align="center"><mark style="color:#233C5D"><strong>Help Center</strong></mark></td>
