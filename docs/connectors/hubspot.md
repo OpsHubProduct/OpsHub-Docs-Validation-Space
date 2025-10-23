@@ -60,7 +60,7 @@
 | **Client Secret** | Authentication type is OAuth 2.0 | Provide the HubSpot public app's Client Secret to connect with the HubSpot API. Refer to [OAuth 2.0 Authorization Token Generation in HubSpot](#oauth-2.0-authorization-token-generation-in-hubspot) section to know how to get the Client Secret. |
 | **Authorization Code** | Authentication type is OAuth 2.0 | Provide the HubSpot public app's Authorization Code to connect with the HubSpot API. Refer to [OAuth 2.0 Authorization Token Generation in HubSpot](#oauth-2.0-authorization-token-generation-in-hubspot) section to know how to get the Authorization Code. If the scopes or permissions of the app are changed at any point, you must regenerate the Authorization Code again. |
 | **Application Id** | Always | Provide the Application ID set up for the specified dedicated user to connect with the HubSpot API. Refer to [Prerequisites](#prerequisites) section to know how to get the Application Id. |
-| **Base URL for Remote Link** | Always | Provide a different instance URL of the HubSpot instance. This URL will be used for generating the Remote Link. <br> >**Note**: If "Base URL for Remote Link" is empty, it will use Instance/Server URL to generate Remote Link if configured on Integration.</p> |
+| **Base URL for Remote Link** | Always | Provide a different instance URL of the HubSpot instance. This URL will be used for generating the Remote Link. <br> **Note**: If "Base URL for Remote Link" is empty, it will use Instance/Server URL to generate Remote Link if configured on Integration.</p> |
                                     |
 
 # Mapping Configuration
