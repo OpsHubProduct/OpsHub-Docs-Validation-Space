@@ -4,11 +4,13 @@
 * Create one user in HubSpot that is dedicated for <code class="expression">space.vars.SITENAME</code>. This user shouldn't perform any other action from HubSpot's user interface. This user is referred as 'Integration User' in the documentation.
   * For this user to perform operations in HubSpot, various permission scopes are required, as outlined below. To know more about the permission scopes refer to [Manage Scopes in HubSpot](https://developers.hubspot.com/docs/guides/apps/authentication/scopes).
   * To know more about the User permissions in HubSpot refer to [HubSpot user permission guide](https://knowledge.hubspot.com/user-management/hubspot-user-permissions-guide).
-* Using the user created above, create a **Private App** in HubSpot to generate the **Access Token** and obtain the **Application Id** which is required in the system configuration form. Refer to [Create Private App in HubSpot](create-private-app-in-hubspot) to know how to create private app in HubSpot.
+* User can use Access-Key based authentication or OAuth 2.0 authentication mode to communicate with API for HubSpot
+  * If you want to use **Access Token** based authentication then using the user created above, create a **Private App** in HubSpot to generate the **Access Token** and obtain the **Application Id** which is required in the system configuration form. Refer to [Create Private App in HubSpot](#create-private-app-in-hubspot) to know how to create private app in HubSpot.
+  * If you want to use **OAuth 2.0 Access** based authentication then using the user created above, create a **Public App** in HubSpot to generate the **Oauth 2.0 Token** and obtain the **Application Id** which is required in the system configuration form. Refer to [Create Public App in HubSpot](#create-public-app-in-hubspot) to know how to create public app in HubSpot.
 
 ## Required Scope/Permission
-* When configuring a Private App to work with HubSpot, it’s important to assign only the necessary scopes based on the operations plan to perform as per business need. These scopes control what data can access or modify using private App.
-* To **add or remove scopes** in private app, refer to [Managing Permission Scopes in HubSpot Private App ](#managing-permission-scopes-in-hubspot-private-app) section.
+* When configuring a Private App/Public App to work with HubSpot, it’s important to assign only the necessary scopes based on the operations plan to perform as per business need. These scopes control what data can access or modify using private App.
+* To **add or remove scopes** in private app, refer to [Managing Permission Scopes in HubSpot Private/Public App](#managing-permission-scopes-in-hubspot-private-public-app) section.
 > **Note** :If required scopes are missing or insufficient, the integration may fail. Always ensure the Private App has the necessary permissions before starting the integration setup.
 
 ### For Read
@@ -38,6 +40,12 @@
 * As you kickstart the integration, the user must first configure HubSpot system in <code class="expression">space.vars.SITENAME</code>. Click [System Configuration](../integrate/system-configuration.md) to learn step-by-step process to configure a system. Refer to the following screenshot:
 
 <p align="center"><img src="../assets/HubSpotSystemConfig.png" width="1500" /></p>
+
+* If Authentication Type is Oauth Token,following will be the form:
+
+<p align="center">
+  <img src="../assets/FullForm.png" width="1100"/>
+</p>
 
 **HubSpot System form details**
 
