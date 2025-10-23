@@ -292,7 +292,62 @@ In HubSpot, each property (field) of an entity (like Contacts, Companies, Deals,
 | Company Size     | company_size      |
 
 
-## 
+## OAuth 2.0 Authorization Token Generation in HubSpot
+
+### Prerequisites
+
+This authentication guide will show how to enable OAuth 2.0 Authentication in HubSpot with Opshub.
+
+Before you can start using OAuth with HubSpot, you’ll need to have:
+
+* A **developer account**  
+* An **app (legacy public app only)** associated with your developer account. Refer to [Create Public App in HubSpot](#create-public-app-in-hubspot) to know how to create public app in HubSpot.  
+* A **HubSpot account** to install your app in (you can use an existing account or create a test account)  
+* You must be a **Super Admin** to install an app in a HubSpot account  
+
+When you create a system form in HubSpot, you will be given two options for authentication type:
+
+1. **Access Token**  
+2. **OAuth**
+
+<p align="center">
+  <img src="../assets/AuthCodeSelection.png" width="900" />
+</p>
+
+
+After selecting **OAuth**, you will be prompted to enter the following details:
+
+* **Client ID**  
+* **Client Secret**  
+* **Authorization Code**
+
+<p align="center">
+  <img src="../assets/FullForm.png" width="800" />
+</p>
+
+To obtain the required details for OAuth setup:
+
+1. Go to your **Public App Settings** in the HubSpot developer account.  
+2. In the **Auth** section, you will find the following values:  
+   * **Client ID**  
+   * **Client Secret**  
+3. To get the **Authorization Code**:  
+   * Add a redirect URL → the base URL of your HubSpot instance (e.g., `https://app.hubspot.com`) inside your public app at HubSpot instance.  
+   * Assign the required scopes/permissions to your app based on your needs. See: [Scopes Documentation](https://developers.hubspot.com/docs/apps/legacy-apps/authentication/scopes).  
+   * After this, an **Install URL** will be automatically generated.  
+   * Open this Install URL in your browser.  
+   * You will be redirected to another URL. From this URL, copy the value of the `code` parameter.  
+
+<p align="center">
+  <img src="../assets/HubspotAuthCode.png" width="900" />
+</p>
+
+> **Example:**  
+> `https://developers.hubspot.com/?code=na1-ac35-b935-463b-97ab-d755cfaf9e0a`
+
+4. Take this `code` value and enter it into the OpsHub system form along with the Client ID and Client Secret.  
+5. To know more on HubSpot OAuth, refer to [https://developers.hubspot.com/docs/apps/legacy-apps/authentication/working-with-oauth](https://developers.hubspot.com/docs/apps/legacy-apps/authentication/working-with-oauth)
+
 
 # Important Note
 
