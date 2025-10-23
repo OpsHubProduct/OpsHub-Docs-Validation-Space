@@ -1,4 +1,5 @@
-<figure><img src="./docs/assets/Site_Images/Background.png" alt=""><figcaption></figcaption>
+<div data-full-width="true">
+<figure><img src="./docs/assets/Site_Images/Background.png" alt=""><figcaption></figcaption></figure>
 
 
 {% columns fullWidth="true" %}
@@ -16,7 +17,7 @@ This site provides complete and up-to-date documentation to help you install, co
 {% endcolumn %}
 {% endcolumns %}
 
-</figure>
+</div>
 
 ***
 
