@@ -51,7 +51,9 @@ layout:
         <tr>
             <td>4</td>
             <td>Azure DevOps Server Version Control</td>
-            <td>{% include "../.gitbook/includes/tfs-tfvc-supported-versions.md" %}</td>
+            <td>
+                {% include "../.gitbook/includes/tfs-tfvc-supported-versions.md" %}   
+            </td>
             <td>{% include "../.gitbook/includes/tfvc-supported-entities.md" %}</td>
             <td>Team Foundation Server Version Control</td>
         </tr>
