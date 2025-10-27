@@ -542,7 +542,6 @@ layout:
     </tbody>
 </table>
 
-
 - (*) Professional services required for version specific certification.  
 - (**) Professional services recommended due to modelling complexity.
 
