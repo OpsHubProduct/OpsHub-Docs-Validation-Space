@@ -544,6 +544,5 @@ Given below are the systems supported currently by <code class="expression">spac
     </tbody>
 </table>
 
- (*) Professional services required for version specific certification.  
-<br> (**) Professional services recommended due to modelling complexity.
+(*) Professional services required for version specific certification. <br> (**) Professional services recommended due to modelling complexity.
 
