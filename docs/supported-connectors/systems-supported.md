@@ -1,11 +1,10 @@
 <table data-full-width="true">
     <thead>
-        <tr>
-            <th width="5%">No.</th>
-            <th width="20%">System</th>
-            <th width="25%">Versions Supported</th>
-            <th width="35%">Entities Supported</th>
-            <th width="15%">Formerly Known as</th>
+        <tr style="background-color: #f0f0f0;"> <th width="2%" style="color: #007FFF;">No.</th>
+            <th width="18%" style="color: #007FFF;">System</th>
+            <th width="25%" style="color: #007FFF;">Versions Supported</th>
+            <th width="35%" style="color: #007FFF;">Entities Supported</th>
+            <th width="12%" style="color: #007FFF;">Formerly Known as</th>
         </tr>
     </thead>
     <tbody>
