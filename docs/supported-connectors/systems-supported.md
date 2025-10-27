@@ -1,10 +1,11 @@
 <table data-full-width="true">
     <thead>
-        <tr style="background-color: #f0f0f0;"> <th width="2%" style="color: #007FFF;">No.</th>
-            <th width="15%" style="color: #007FFF;">System</th>
-            <th width="25%" style="color: #007FFF;">Versions Supported</th>
-            <th width="40%" style="color: #007FFF;">Entities Supported</th>
-            <th width="12%" style="color: #007FFF;">Formerly Known as</th>
+        <tr>
+            <th width="50"><mark style="color:#007FFF;">No.</mark></th>
+            <th width="150"><mark style="color:#007FFF;">System</mark></th>
+            <th><mark style="color:#007FFF;">Versions Supported</mark></th>
+            <th><mark style="color:#007FFF;">Entities Supported</mark></th>
+            <th width="100"><mark style="color:#007FFF;">Formerly Known as</mark></th>
         </tr>
     </thead>
     <tbody>
@@ -25,8 +26,8 @@
         <tr>
             <td>3</td>
             <td>Azure DevOps Server</td>
-            <td>{% include "../.gitbook/includes/tfs-tfvc-supported-versions.md" %}</td>
-            <td>{% include "../.gitbook/includes/tfs-supported-entities.md" %}</td>
+            <td> {% include "../.gitbook/includes/tfs-tfvc-supported-versions.md" %}  </td>
+            <td> {% include "../.gitbook/includes/tfs-supported-entities.md" %} </td>
             <td>Team Foundation Server (TFS)</td>
         </tr>
         <tr>
