@@ -6,7 +6,7 @@ layout:
   description:
     visible: false
   tableOfContents:
-    visible: true
+    visible: false
   outline:
     visible: false
   pagination:
@@ -14,10 +14,6 @@ layout:
   metadata:
     visible: false
 ---
-
-# Supported Systems
-
-Given below are the systems supported currently by <code class="expression">space.vars.SITENAME</code>:
 
 # Supported Systems
 
