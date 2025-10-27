@@ -1,20 +1,25 @@
 ---
 layout:
-    width: wide
-    tableOfContents:
-      visible: false
-    outline:
-      visible: false
-    pagination:
-      visible: false
-    metadata:
-      visible: false
+  width: wide
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: false
+  pagination:
+    visible: false
+  metadata:
+    visible: false
 ---
 
-<table data-full-width="true">
+
+<table>
     <thead>
         <tr>
-            <th width="10%" data-type="number"><mark style="color:#007FFF;">No.</mark></th>
+            <th width="50" data-type="number"><mark style="color:#007FFF;">No.</mark></th>
             <th width="150"><mark style="color:#007FFF;">System</mark></th>
             <th><mark style="color:#007FFF;">Versions Supported</mark></th>
             <th><mark style="color:#007FFF;">Entities Supported</mark></th>
