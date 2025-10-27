@@ -1,7 +1,7 @@
 <table data-full-width="true">
     <thead>
         <tr>
-            <th width="50"><mark style="color:#007FFF;">No.</mark></th>
+            <th width="10%" data-type="number"><mark style="color:#007FFF;">No.</mark></th>
             <th width="150"><mark style="color:#007FFF;">System</mark></th>
             <th><mark style="color:#007FFF;">Versions Supported</mark></th>
             <th><mark style="color:#007FFF;">Entities Supported</mark></th>
