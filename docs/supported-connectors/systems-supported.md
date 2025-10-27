@@ -19,8 +19,8 @@ layout:
 
 Given below are the systems supported currently by <code class="expression">space.vars.SITENAME</code>:
 
-| No.| System|    Versions Supported       |    Entities Supported                        |           Formerly Known as            |
-|----|-------|-----------------------------|----------------------------------------------|----------------------------------------|
+|#.| System|    Versions Supported       |    Entities Supported                                |           Formerly Known as      |
+|--|-------|-----------------------------|------------------------------------------------------|----------------------------------|
 | 1 | Aha! | All | Epic, Feature, Release, Requirement, To-do, Note | |
 | 2 | Aras Innovator | All | All System Item Types (excluding Item Types of Relationship and Core Type) and All Custom Item Types (excluding Item Types of Relationship Type) | |
 | 3 | Azure DevOps Server | {% include "../.gitbook/includes/tfs-tfvc-supported-versions.md" %} | {% include "../.gitbook/includes/tfs-supported-entities.md" %} | Team Foundation Server (TFS) |
