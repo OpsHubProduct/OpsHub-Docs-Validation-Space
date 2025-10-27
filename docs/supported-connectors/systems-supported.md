@@ -22,11 +22,11 @@ Given below are the systems supported currently by <code class="expression">spac
 <table>
     <thead>
         <tr>
-            <th width="70" data-type="number">No.</th>
-            <th width="200">System</th>
-            <th width="300">Versions Supported</th>
+            <th width="50" data-type="number">No.</th>
+            <th width="220">System</th>
+            <th width="330">Versions Supported</th>
             <th>Entities Supported</th>
-            <th width="170">Formerly Known as</th>
+            <th width="140">Formerly Known as</th>
         </tr>
     </thead>
     <tbody>
