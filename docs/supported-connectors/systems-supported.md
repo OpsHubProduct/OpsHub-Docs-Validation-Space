@@ -15,7 +15,6 @@ layout:
     visible: false
 ---
 
-
 <table>
     <thead>
         <tr>
