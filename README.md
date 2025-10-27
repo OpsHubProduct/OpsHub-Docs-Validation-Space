@@ -52,12 +52,12 @@ This site provides complete and up-to-date documentation to help you install, co
          <td><a href="docs/getting-started/README.md">getting-started</a></td>
       </tr>
       <tr>
-         <td align="center"><mark style="color:#233C5D"><strong>Manage</strong></mark></td>
+         <td align="center"><span style="font-size:22px; color:#233C5D; font-weight:600;">Manage</span></td>
          <td><a href="docs/assets/Site_Images/Manage.png">Manage</a></td>
          <td><a href="docs/manage/README.md">Manage</a></td>
       </tr>
       <tr>
-         <td align="center"><mark style="color:#233C5D"><strong>Help Center</strong></mark></td>
+         <td align="center"><mark style="color:#233C5D">**Help Center**</mark></td>
          <td><a href="docs/assets/Site_Images/Help _Center.png">Help Center</a></td>
          <td><a href="docs/help-center/README.md">Help Center</a></td>
       </tr>
