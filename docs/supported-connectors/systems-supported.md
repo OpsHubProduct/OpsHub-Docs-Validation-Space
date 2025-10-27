@@ -23,7 +23,7 @@ layout:
             <th width="200">System</th>
             <th width="300">Versions Supported</th>
             <th>Entities Supported</th>
-            <th width="150">Formerly Known as</th>
+            <th width="170">Formerly Known as</th>
         </tr>
     </thead>
     <tbody>
@@ -544,3 +544,4 @@ layout:
 
 - (*) Professional services required for version specific certification.  
 - (**) Professional services recommended due to modelling complexity.
+
