@@ -19,11 +19,11 @@ layout:
 <table>
     <thead>
         <tr>
-            <th width="50" data-type="number"><mark style="color:#007FFF;">No.</mark></th>
-            <th width="150"><mark style="color:#007FFF;">System</mark></th>
-            <th><mark style="color:#007FFF;">Versions Supported</mark></th>
-            <th><mark style="color:#007FFF;">Entities Supported</mark></th>
-            <th width="100"><mark style="color:#007FFF;">Formerly Known as</mark></th>
+            <th width="50" data-type="number">No.</th>
+            <th width="150">System</th>
+            <th>Versions Supported</th>
+            <th>Entities Supported</th>
+            <th width="100">Formerly Known as</th>
         </tr>
     </thead>
     <tbody>
