@@ -1,8 +1,3 @@
-
-# Supported Systems
-
-Given below are the systems supported currently by <code class="expression">space.vars.SITENAME</code>:
-
 ---
 layout:
   width: wide
@@ -19,6 +14,10 @@ layout:
   metadata:
     visible: false
 ---
+
+# Supported Systems
+
+Given below are the systems supported currently by <code class="expression">space.vars.SITENAME</code>:
 
 <table>
     <thead>
