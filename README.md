@@ -42,7 +42,7 @@ This site provides complete and up-to-date documentation to help you install, co
 <table data-view="cards" data-full-width="true">
    <thead>
       <tr>
-         <th align="center"></th>
+         <th data-hidden align="center"></th>
          <th data-hidden data-card-cover data-type="image">Cover image</th>
          <th data-hidden data-card-target data-type="content-ref"></th>
       </tr>
