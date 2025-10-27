@@ -1,3 +1,7 @@
+--- 
+layout: docs 
+---
+
 <table data-full-width="true">
     <thead>
         <tr>
