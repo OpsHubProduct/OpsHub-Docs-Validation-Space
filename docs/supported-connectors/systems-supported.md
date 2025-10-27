@@ -1,5 +1,14 @@
---- 
-layout: docs 
+---
+layout:
+    width: wide
+    tableOfContents:
+      visible: false
+    outline:
+      visible: false
+    pagination:
+      visible: false
+    metadata:
+      visible: false
 ---
 
 <table data-full-width="true">
