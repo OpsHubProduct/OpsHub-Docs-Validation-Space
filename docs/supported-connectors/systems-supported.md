@@ -25,7 +25,7 @@ Given below are the systems supported currently by <code class="expression">spac
             <th width="50" data-type="number">No.</th>
             <th width="180">System</th>
             <th width="250">Versions Supported</th>
-            <th width="350">Entities Supported</th>
+            <th>Entities Supported</th>
             <th width="160">Formerly Known as</th>
         </tr>
     </thead>
