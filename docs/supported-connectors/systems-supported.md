@@ -48,7 +48,9 @@ Given below are the systems supported currently by <code class="expression">spac
             <td>3</td>
             <td>Azure DevOps Server</td>
             <td> 
-              {% include "../.gitbook/includes/tfs-tfvc-supported-versions.md" %} 
+                <div markdown="1">
+                    {% include "../.gitbook/includes/tfs-tfvc-supported-versions.md" %}
+                </div>
             </td>
             <td> 
               {% include "../.gitbook/includes/tfs-supported-entities.md" %} 
