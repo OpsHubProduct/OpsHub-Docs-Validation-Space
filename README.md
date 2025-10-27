@@ -23,7 +23,7 @@ layout:
 
 ### <mark style="color:#DE413A;"><strong>WELCOME TO THE</strong></mark>
 
-# **OPSHUB INTEGRATION MANAGER DOCUMENTATION**
+# **<code class="expression">space.vars.CAPS_SITENAME</code> DOCUMENTATION**
 This site provides complete and up-to-date documentation to help you install, configure, and operate <code class="expression">space.vars.SITENAME</code>(<code class="expression">space.vars.PRODUCT_SHORTNAME</code>) effectively. Whether you're setting up your first integration, developing custom connectors, or troubleshooting issues, this documentation is structured to guide you through every step.
 {% endcolumn %}  
 
@@ -42,16 +42,17 @@ This site provides complete and up-to-date documentation to help you install, co
 <table data-view="cards" data-full-width="true">
    <thead>
       <tr>
+         <th align="center"></th>
          <th data-hidden data-card-cover data-type="image">Cover image</th>
          <th data-hidden data-card-target data-type="content-ref"></th>
       </tr>
    </thead>
    <tbody>
       <tr>
-         <td data-object-fit="contain"><mark style="color:#edf4fd"><a href="docs/assets/Site_Images/Getting_Started.png">Getting Started</a></mark></td>
+         <td align="center"><mark style="color:#233C5D"><strong>Getting Started</strong></mark></td>
+         <td data-object-fit="contain"><mark style="color:#edf4fd"><a href="docs/assets/Site_Images/Getting_Started1.png">Getting Started</a></mark></td>
          <td><a href="docs/getting-started/README.md">getting-started</a></td>
-      </tr> 
-<!--
+      </tr>
       <tr>
          <td align="center"><mark style="color:#233C5D"><strong>Manage</strong></mark></td>
          <td data-object-fit="contain"><a href="docs/assets/Site_Images/Manage.png">Manage</a></td>
@@ -92,7 +93,6 @@ This site provides complete and up-to-date documentation to help you install, co
          <td data-object-fit="contain"><a href="docs/assets/Site_Images/Contact_US.png">Contact US</a></td>
          <td><a href="https://www.opshub.com/contact-us/">Contact Us</a></td>
       </tr>
--->
    </tbody>
 </table>  
 
