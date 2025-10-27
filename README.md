@@ -47,7 +47,7 @@ This site provides complete and up-to-date documentation to help you install, co
    </thead>
    <tbody>
       <tr>
-         <td align="center"><h4><mark style="color:#233C5D">Getting Started</mark></h4></td>
+         <td align="center"><h3><mark style="color:#233C5D">Getting Started</mark></h3></td>
          <td><a href="docs/assets/Site_Images/Getting_Started.png">Getting Started</a></td>
          <td><a href="docs/getting-started/README.md">getting-started</a></td>
       </tr>
