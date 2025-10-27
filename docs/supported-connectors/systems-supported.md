@@ -23,10 +23,10 @@ Given below are the systems supported currently by <code class="expression">spac
     <thead>
         <tr>
             <th width="50" data-type="number">No.</th>
-            <th width="220">System</th>
-            <th width="330">Versions Supported</th>
+            <th width="180">System</th>
+            <th width="350">Versions Supported</th>
             <th>Entities Supported</th>
-            <th width="140">Formerly Known as</th>
+            <th width="160">Formerly Known as</th>
         </tr>
     </thead>
     <tbody>
@@ -48,7 +48,7 @@ Given below are the systems supported currently by <code class="expression">spac
             <td>3</td>
             <td>Azure DevOps Server</td>
             <td> 2010, 2012, 2013, 2015 (up to Update 3), 2017, 2017 Update 2, 2018, 2019, 2020, 2022  </td>
-            <td> Work items such as Bug, Requirement, Task, Test Case, User Story, Shared Steps and All Custom Entity Types <br><br>Test Entities such as Test Plan, Test Result, Test Run, Test Suite <br><br>Iteration, Area Path, User Group, Team and User: above 2010<br><br>Git Commit Information (only read): 2016 and above<br><br>Dashboard, Query, Widget: 2017 and above <br><br>Pull Request (only read), Pipeline** : 2018 and above<br>Build* (only read): 2019 and above </td>
+            <td> Work items such as Bug, Requirement, Task, Test Case, User Story, Shared Steps and All Custom Entity Types <br>Test Entities such as Test Plan, Test Result, Test Run, Test Suite <br>Iteration, Area Path, User Group, Team and User: above 2010<br>Git Commit Information (only read): 2016 and above<br>Dashboard, Query, Widget: 2017 and above <br>Pull Request (only read), Pipeline** : 2018 and above <br>Build* (only read): 2019 and above </td>
             <td>Team Foundation Server (TFS)</td>
         </tr>
         <tr>
@@ -62,7 +62,7 @@ Given below are the systems supported currently by <code class="expression">spac
             <td>5</td>
             <td>Azure DevOps Services</td>
             <td>All</td>
-            <td> Work items such as Bug, Requirement, Task, Test Case, User Story, Shared Steps and All custom workitem types <br><br>Test entities such as Test Plan, Test Result, Test Run, Test Suite<br>Iteration, Area Path, Group, Team, User, Dashboard, Query, Widget and Pipeline**  <br><br> Git Commit Information(only read), Pull Request(only read), Build* (only read)</td>
+            <td> Work items such as Bug, Requirement, Task, Test Case, User Story, Shared Steps and All custom workitem types <br>Test entities such as Test Plan, Test Result, Test Run, Test Suite<br>Iteration, Area Path, Group, Team, User, Dashboard, Query, Widget and Pipeline**  <br> Git Commit Information(only read), Pull Request(only read), Build* (only read)</td>
             <td>Visual Studio Team Services (VSTS)</td>
         </tr>
         <tr>
