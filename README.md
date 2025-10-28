@@ -18,6 +18,7 @@ layout:
     visible: false
 ---
 
+<!--
 {% columns fullWidth="true" %}
 {% column width="70%" valign="middle" %}  
 
@@ -36,7 +37,7 @@ This site provides complete and up-to-date documentation to help you install, co
 
 
 ***
-
+--> 
 <table data-view="cards">
    <thead>
       <tr>
