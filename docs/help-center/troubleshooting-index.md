@@ -8,27 +8,27 @@
   <tbody>
     <tr>
       <td align="center">💠 <strong>System Information</strong></td>
-      <td><a href="docs/help-center/troubleshooting/system-information.md">System Information</a></td>
+      <td><a href="troubleshooting/system-information.md">System Information</a></td>
     </tr>
     <tr>
       <td align="center">🛠️ <strong>Manage Integration Failures</strong></td>
-      <td><a href="docs/help-center/troubleshooting/manage-integration-failures.md">Manage Integration Failures</a></td>
+      <td><a href="troubleshooting/manage-integration-failures.md">Manage Integration Failures</a></td>
     </tr>
     <tr>
       <td align="center">📨 <strong>Configure Failure Notification</strong></td>
-      <td><a href="docs/help-center/troubleshooting/configure-post-failure-notification.md">Configure Failure Notification</a></td>
+      <td><a href="troubleshooting/configure-post-failure-notification.md">Configure Failure Notification</a></td>
     </tr>
     <tr>
       <td align="center">📈 <strong>Integration Sync Report</strong></td>
-      <td><a href="docs/help-center/troubleshooting/integration-sync-report.md">Integration Sync Report</a></td>
+      <td><a href="troubleshooting/integration-sync-report.md">Integration Sync Report</a></td>
     </tr>
     <tr>
       <td align="center">🧾 <strong>Integration Sync Logs</strong></td>
-      <td><a href="docs/help-center/troubleshooting/integration-sync-logs.md">Integration Sync Logs</a></td>
+      <td><a href="troubleshooting/integration-sync-logs.md">Integration Sync Logs</a></td>
     </tr>
     <tr>
       <td align="center">❗ <strong>Errors</strong></td>
-      <td><a href="docs/help-center/troubleshooting/errors/errors-index.md">Errors</a></td>
+      <td><a href="troubleshooting/errors/errors-index.md">Errors</a></td>
     </tr>
   </tbody>
 </table>
