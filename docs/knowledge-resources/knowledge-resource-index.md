@@ -16,7 +16,7 @@
     </tr>
     <tr>
       <td align="center">📺 <strong>Webinars</strong></td>
-      <td><a href="=webinars.md">Webinars</a></td>
+      <td><a href="webinars.md">Webinars</a></td>
     </tr>
   </tbody>
 </table>
