@@ -1,6 +1,6 @@
 # Table of contents
 * [Welcome](README.md)
-* Getting Started
+* [Getting Started](docs/getting-started/getting-started.md)
    * [Getting OpsHub Integration Manager](docs/getting-started/download.md)
    * [Prerequisites](docs/getting-started/prerequisites.md)
    * [Installation](docs/getting-started/installation.md)
@@ -11,7 +11,7 @@
       * [Docker Deployment](docs/getting-started/docker/docker.md)
   * [Logging In](docs/getting-started/logging-in.md)
   * [Start/Stop OpsHub Integration Manager](docs/getting-started/start-or-stop-service.md)
-* Integrate
+* [Integrate](docs/integrate/integrate.md)
     * [Prerequisites](docs/integrate/integration-prerequisites.md)
     * [Overview](docs/integrate/overview-of-integration.md)
     * [Integration Setup](docs/integrate/configure-integrations.md)
@@ -324,7 +324,7 @@
   * [Verisium Manager](docs/connectors/vManager.md)
   * [Windchill](docs/connectors/windchill-rv-s.md)
   * [Zendesk](docs/connectors/zendesk.md)
-* Connector SDK
+* [Connector SDK](docs/connector-sdk/connector-sdk-index.md)
     * [Getting Started](docs/connector-sdk/getting-started.md)
       * [SDK Best Practices](docs/connector-sdk/sdk-best-practices.md)
       * [APIs Required for Each Feature](docs/connector-sdk/apis-required-for-each-feature.md)
@@ -368,8 +368,8 @@
     * [Register Connectors](docs/connector-sdk/register-connectors.md)
     * [Developer Notes](docs/connector-sdk/developer-notes.md)   
 * [Release Notes](docs/release-notes/release-notes.md)
-* Knowledge Resources
-    *  Integration Combination Examples
+* [Knowledge Resources](docs/knowledge-resources/knowledge-resource-index.md)
+    *  [Integration Combination Examples](docs/knowledge-resources/integration-combination-examples/integration-combination-examples.md)
         * [Azure DevOps Server (TFS) – Micro Focus ALM Integration](docs/knowledge-resources/integration-combination-examples/azure-devops-server-and-micro-focus-alm-integration.md)
         * [Azure DevOps Services (VSTS) – Micro Focus ALM Integration](docs/knowledge-resources/integration-combination-examples/azure-devops-services-and-micro-focus-alm-integration.md)
         * [IBM DOORS – Jira Integration](docs/knowledge-resources/integration-combination-examples/ibm-doors-and-jira-integration.md)
