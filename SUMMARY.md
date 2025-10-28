@@ -11,7 +11,7 @@
       * [Docker Deployment](docs/getting-started/docker/docker.md)
   * [Logging In](docs/getting-started/logging-in.md)
   * [Start/Stop OpsHub Integration Manager](docs/getting-started/start-or-stop-service.md)
-* Integrate
+* [Integrate](docs/integrate/integrate.md)
     * [Prerequisites](docs/integrate/integration-prerequisites.md)
     * [Overview](docs/integrate/overview-of-integration.md)
     * [Integration Setup](docs/integrate/configure-integrations.md)
