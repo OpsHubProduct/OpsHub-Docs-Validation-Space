@@ -368,8 +368,8 @@
     * [Register Connectors](docs/connector-sdk/register-connectors.md)
     * [Developer Notes](docs/connector-sdk/developer-notes.md)   
 * [Release Notes](docs/release-notes/release-notes.md)
-* Knowledge Resources
-    *  Integration Combination Examples
+* [Knowledge Resources](docs/knowledge-resources/knowledge-resource-index.md)
+    *  [Integration Combination Examples](docs/knowledge-resources/integration-combination-examples/integration-combination-examples.md)
         * [Azure DevOps Server (TFS) – Micro Focus ALM Integration](docs/knowledge-resources/integration-combination-examples/azure-devops-server-and-micro-focus-alm-integration.md)
         * [Azure DevOps Services (VSTS) – Micro Focus ALM Integration](docs/knowledge-resources/integration-combination-examples/azure-devops-services-and-micro-focus-alm-integration.md)
         * [IBM DOORS – Jira Integration](docs/knowledge-resources/integration-combination-examples/ibm-doors-and-jira-integration.md)
