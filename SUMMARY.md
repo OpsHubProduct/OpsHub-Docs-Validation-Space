@@ -324,7 +324,7 @@
   * [Verisium Manager](docs/connectors/vManager.md)
   * [Windchill](docs/connectors/windchill-rv-s.md)
   * [Zendesk](docs/connectors/zendesk.md)
-* Connector SDK
+* [Connector SDK](docs/connector-sdk/connector-sdk-index.md)
     * [Getting Started](docs/connector-sdk/getting-started.md)
       * [SDK Best Practices](docs/connector-sdk/sdk-best-practices.md)
       * [APIs Required for Each Feature](docs/connector-sdk/apis-required-for-each-feature.md)
