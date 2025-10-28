@@ -8,7 +8,7 @@
   <tbody>
     <tr>
       <td align="center">🤝 <strong>Integration Combination Examples</strong></td>
-      <td><a href="integration-combination-examples.md">Integration Combination Examples</a></td>
+      <td><a href="integration-combination-examples/integration-combination-examples.md">Integration Combination Examples</a></td>
     </tr>
     <tr>
       <td align="center">🎥 <strong>Videos</strong></td>
