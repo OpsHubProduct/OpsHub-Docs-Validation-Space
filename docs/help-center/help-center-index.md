@@ -8,15 +8,15 @@
   <tbody>
     <tr>
       <td align="center">📚 <strong>FAQs</strong></td>
-      <td><a href="docs/help-center/faqs.md">FAQs</a></td>
+      <td><a href="faqs.md">FAQs</a></td>
     </tr>
     <tr>
       <td align="center">🛠️ <strong>Troubleshooting</strong></td>
-      <td><a href="docs/help-center/troubleshooting.md">Troubleshooting</a></td>
+      <td><a href="troubleshooting.md">Troubleshooting</a></td>
     </tr>
     <tr>
       <td align="center">✉️ <strong>Contact Us</strong></td>
-      <td><a href="docs/help-center/contact-us.md">Contact Us</a></td>
+      <td><a href="contact-us.md">Contact Us</a></td>
     </tr>
   </tbody>
 </table>
