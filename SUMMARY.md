@@ -76,8 +76,8 @@
           * [Pre Migration Checklists](docs/manage/upgrade/pre-migration-checklist.md)
           * [Post Migration Checklists](docs/manage/upgrade/post-migration-checklist.md)
         *  [Taking Application Backup](docs/manage/upgrade/taking-application-backup.md)
-* Help Center
-    * FAQs
+* [Help Center](docs/help-center/help-center-index.md)
+    * [FAQs](docs/help-center/faqs.md)
         * [General](docs/help-center/faqs/general-faqs.md)
           * [What are the security aspects of on-premise deployment?](docs/help-center/faqs/general/security-aspects.md)  
           * [How to know which system/entity/version are supported ?](docs/help-center/faqs/general/supported-system-entity-version.md)  
@@ -163,13 +163,13 @@
           * [How to upgrade/migrate the application?](docs/help-center/faqs/installer/how-to-upgrade-oim.md)  
         * [Enterprise Architect](docs/help-center/faqs/enterprise-architect-faqs.md)
           * [An excessive number of EA connections causes slowness in the system and high RAM usage](docs/help-center/faqs/enterprise-architect/an-excessive-number-of-ea-connections-causes-slowness-in-the-system-and-high-ram-usage.md)  
-  * Troubleshooting
+  * [Troubleshooting](docs/help-center/troubleshooting-index.md)
       * [System Information](docs/help-center/troubleshooting/system-information.md)  
       * [Manage Integration Failures](docs/help-center/troubleshooting/manage-integration-failures.md)  
       * [Configure Failure Notification](docs/help-center/troubleshooting/configure-post-failure-notification.md)  
       * [Integration Sync Report](docs/help-center/troubleshooting/integration-sync-report.md)  
       * [Integration Sync Logs](docs/help-center/troubleshooting/integration-sync-logs.md)
-      * Errors
+      * [Errors](docs/help-center/troubleshooting/errors/errors-index.md)
           * [Aras](docs/help-center/troubleshooting/errors/aras-error-solutions.md)
               * [OH-Aras-1502](docs/help-center/troubleshooting/errors/aras/oh-aras-1502.md)
               * [OH-Aras-1000](docs/help-center/troubleshooting/errors/aras/oh-aras-1000.md)
