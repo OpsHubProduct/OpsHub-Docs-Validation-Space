@@ -8,19 +8,19 @@
   <tbody>
     <tr>
       <td align="center">🚀 <strong>Getting Started</strong></td>
-      <td><a href="docs/connector-sdk/getting-started.md">Getting Started</a></td>
+      <td><a href="getting-started.md">Getting Started</a></td>
     </tr>
     <tr>
       <td align="center">🧩 <strong>Build Your Own Connector</strong></td>
-      <td><a href="docs/connector-sdk/sdk-connector-apis.md">Build Your Own Connector</a></td>
+      <td><a href="sdk-connector-apis.md">Build Your Own Connector</a></td>
     </tr>
     <tr>
       <td align="center">🔗 <strong>Register Connectors</strong></td>
-      <td><a href="docs/connector-sdk/register-connectors.md">Register Connectors</a></td>
+      <td><a href="register-connectors.md">Register Connectors</a></td>
     </tr>
     <tr>
       <td align="center">💡 <strong>Developer Notes</strong></td>
-      <td><a href="docs/connector-sdk/developer-notes.md">Developer Notes</a></td>
+      <td><a href="developer-notes.md">Developer Notes</a></td>
     </tr>
   </tbody>
 </table>
