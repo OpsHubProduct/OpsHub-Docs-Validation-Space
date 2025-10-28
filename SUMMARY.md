@@ -1,6 +1,6 @@
 # Table of contents
 * [Welcome](README.md)
-* Getting Started
+* [Getting Started](docs/getting-started/getting-started.md)
    * [Getting OpsHub Integration Manager](docs/getting-started/download.md)
    * [Prerequisites](docs/getting-started/prerequisites.md)
    * [Installation](docs/getting-started/installation.md)
